@@ -2,7 +2,7 @@ meta_info:
   slug: clases-de-programacion-santiago-chile # <--- URL 4geeksacademy.com/us/landing/example
 
   # This will show on social media when shared
-  title: "Clases de programación en Santiago de Chile, aprende a programar en 9 o 16 sem y consigue trabajo como programador."
+  title: "Clases de programación en Santiago de Chile, aprende a programar en 10 o 16 sem y consigue trabajo como programador."
   description: "El más galardonado curso de programacion en Santiago. Con 4Geeks te convertiras en programador en unos pocos meses."
   image: "/images/bg/main-bg.jpg"
   keywords: "Clase de programación, Clase de python, clase de javascript, Clase de informática, Coding Bootcamp, 4Geeks Academy"
@@ -163,6 +163,7 @@ components:
     layout: two_column_right
     background: "veryLightBlue2" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
     image:
+      style: '{ "background-size": "contain", "height":"200px", "min-height":"auto", "background-position": "center"}'
       src: "/images/why-4geeks/python-image.png"
     heading:
       text:
@@ -182,24 +183,18 @@ components:
       font_size: ["16px"]
       path: ""
     programs:
-    - title: "Full Stack Developer"
-      sub_title: "Nivel 1"
+    - title: "Front End Developmer"
+      sub_title: ""
       icon: "fullstack_2"
       description: |
-        Aprende desde cero, empezando por lo básico: HTML + CSS3 + Javascript.
-        
-        Aprende las habilidades más solicitadas con instructores apasionados y un plan de estudios práctico para ayudarte a encontrar un trabajo de programación como desarrollador Jr.
-      
+        En el programa de Frontend en 4Geeks Academy, te sumergirás en el mundo del desarrollo web y adquirirás las habilidades necesarias para destacarte en esta área tan demandada en la industria tecnológica. Aprenderás a crear interfaces interactivas y atractivas utilizando tecnologías como HTML, CSS, JavaScript, React y mucho más.
       text_link: Postula
-      link: "#"
-    - title: "NodeJs Back End Development"
-      sub_title: "Nivel 2"
-      icon: "software_2"
+      link: "#leadform_bottom"
+
+    - title: "Full Stack Developer"
+      sub_title: ""
+      icon: "fullstack"
       description: |
-        Este programa de estudio te permitirá trabajar y desarrollar el back-end de software y aplicaciones web, utilizando uno de los lenguajes de programacion más demandados en el mundo, Javascript.
-
-        Aprenderás a crear tu ambiente de trabajo y realizar las configuraciones pertinentes para poder trabajar con el stack más solicitado de NodeJs
-      
+        En el programa de Full-Stack en 4Geeks Academy, te prepararás para convertirte en un desarrollador versátil capaz de trabajar tanto en el frontend como en el backend de aplicaciones web. Aprenderás a utilizar tecnologías como HTML, CSS, JavaScript, Node.js, MongoDB, React y mucho más para crear aplicaciones completas y funcionales.
       text_link: Postula
-      link: "#"
-
+      link: "#leadform_bottom"

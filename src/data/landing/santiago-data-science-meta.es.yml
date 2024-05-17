@@ -40,7 +40,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 # jumbotron on the top (cannot be commented out)
 header_data:
   background: "#FFF1D1"
-  tagline: Conviértete en Data Scientist
+  tagline: Conviértete en Data Science Junior
   sub_heading: "Construye tu camino"
   badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
   image_filter: brightness(0.3)
@@ -51,10 +51,10 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-    - Accede a oportunidades profesionales como Junior Data Scientist sin necesidad de experiencia previa
-    - Disfruta de un horario part-time adaptado a tu ritmo de vida
+    - Disfruta de un horario part-time adaptado a tu ritmo de vida.
+    - Accede a oportunidades profesionales como Junior Data Scientist sin necesidad de experiencia previa.
+    - El salario promedio para un Data Scientist Junior en Chile oscila entre $800.000 y $1.200.000 CLP al mes.
     - Industrias como banca, finanzas, comercio online y telecomunicaciones buscan profesionales de Data Science y Machine Learning.
-    - El salario promedio para un Junior Data Scientist en Chile oscila entre $800.000 y $1.200.000 CLP al mes
 
 follow_bar:
   position: "top" # top, bottom, hidden
@@ -65,7 +65,7 @@ follow_bar:
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:
     text: "Escribir por WhatsApp"
-    path: "https://api.whatsapp.com/send/?phone=56920065786&text&type=phone_number&app_absent=0&utm_source=GADS&utm_medium=GADS&utm_campaign=GADS&utm_id=GADS&utm_term=GADS&utm_content=GADS"
+    path: "https://api.whatsapp.com/send/?phone=56972848039&text&type=phone_number&app_absent=0&[…]utm_campaign=GADS&utm_id=GADS&utm_term=GADS&utm_content=GADS"
   phone: 
     text: ""
 
@@ -118,10 +118,10 @@ program_details:
   heading: "Ciencia de Datos y Machine Learning"
   sub_heading: "Comienza con Python, Ciencia de Datos, Aprendizaje Automático, Deep Learning y el mantenimiento de un entorno de producción en Inteligencia Artificial."
 
-why_4geeks:
-  position: 7
-  heading: "¿Por qué 4Geeks?"
-  sub_heading: " "
+# why_4geeks:
+#   position: 7
+#   heading: "¿Por qué 4Geeks?"
+#   sub_heading: " "
 
 who_is_hiring:
   position: 15

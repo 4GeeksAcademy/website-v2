@@ -26,7 +26,7 @@ form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
-  heading: "Obtén más información"
+  heading: "Obtener Información"
   motivation: "Completa el siguiente formulario y uno de nuestros asesores te enviará un correo electrónico a la brevedad con todos los detalles sobre nuestro bootcamp de programación."
   button_label: Solicitar más información
   redirect: null #you can redirect to another url or entirely diffrent website
@@ -38,8 +38,8 @@ apply_schollarship: # form that is displayed at the end of the landing
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  tagline: Front-End Developer Bootcamp
-  sub_heading: "¡Conviértete en desarrollador Front-End en 12 semanas!"
+  tagline: ¿Por qué estudiar programación Front-End?
+  sub_heading: "El salario promedio de un Front-End Developer Junior es entre 650.000 CLP y 800.000 CLP aproximadamente. Nuestro programa no solo te capacitará para convertirte en desarrollador Front-End, sino que también te enseñará las tecnologías más buscadas y mejor pagadas del mercado actual, como: HTML, CSS, JavaScript, React, API REST, entre otras."
   # background: "#FFF1D1"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   background_image: "../../../static/images/locations/satiago-background.webp"
@@ -51,9 +51,9 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-    - Mentorías/Tutorías personalizadas ilimitadas y de por vida
-    - Comunidad internacional +5000 personas
-    - Aprende los lenguajes más demandados para el front de una web
+    - "CRECIMIENTO LABORAL: Todos los sectores de la economía necesitarán Desarrolladores Front-End en los próximos años y se prevé que estos puestos seguirán aumentando con el tiempo."
+    - "TRABAJO REMOTO: Al convertirte en Front-End Developer podrás trabajar de forma remota o desde cualquier parte del mundo para empresas extranjeras."
+    - "MAYORES INGRESOS: Trabajar como Desarrollador Front-End aumentará tus ingresos."
 
 follow_bar:
   position: "top" # top, bottom, hidden
@@ -130,10 +130,10 @@ rating_reviews:
       rating: 5
       url: ""
 
-alumni_projects:
-  position: 14
-  heading: "Proyectos hechos por nuestros alumnos"
-  sub_heading: ""
+# alumni_projects:
+#   position: 14
+#   heading: "Proyectos hechos por nuestros alumnos"
+#   sub_heading: ""
 
 who_is_hiring:
   position: 15
@@ -164,7 +164,7 @@ components:
         Nuestro programa no solo te capacitará para convertirte en desarrollador Front-End, sino que también te enseñará las tecnologías más buscadas y mejor pagadas del mercado actual. 
         como : JavaScript, HTML, CSS, librerías, Frameworks, etc.
     button:
-      text: "Obtén información"
+      text: "Obtener información"
       color: white
       hover_color: "white"
       background: "black"
@@ -245,7 +245,7 @@ components:
         - heading: "Mentorías ilimitadas"
           text: "Recibirás asesoramiento de carrera personalizado y apoyo en la búsqueda de empleo, con acceso ilimitado y de por vida a recursos y a una comunidad en la que estamos allí para impulsar tu éxito profesional."
           icon: "circle" #string with icon for example ['check', 'cicle', etc]
-        - heading: "Programa de Contenido"
+        - heading: "Tecnologías Demandadas"
           text: "Nuestro Bootcamp está enfocado en las tecnologías más demandadas del mercado, lo que te da un sólido punto de partida para ingresar al mundo laboral."
           icon: "circle" #string with icon for example ['check', 'cicle', etc]
 
@@ -268,7 +268,7 @@ components:
       text: "Testimonio de Joshua Bravo, quien pasó de ser un asistente de cocina a programador gracias a su dedicación en el bootcamp de 4Geeks Academy. Su experiencia es un testimonio vivo de cómo la dedicación y el aprendizaje en este bootcamp lo llevaron a convertirse en un profesional altamente capacitado."
       font_size: ["16px"]
     button:
-      text: "OBTÉN MÁS INFORMACIÓN"
+      text: "Obtener Información"
       path: "#leadform_bottom"
       color: "white"
       background: "black"

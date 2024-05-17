@@ -60,13 +60,13 @@ features:
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "Solicita más información \nsobre nuestros programas y la academia"
-    text_mobile: "Solicita más información \nsobre nuestros programas y la academia"
+    text: "Si gustas, nos puedes contactar por WhatsApp al "
+    text_mobile: "Si gustas, nos puedes contactar por WhatsApp al "
     # devices:   XL      LG    MD      SM    XS
     font_size: ["22px", "22px", "22px", "20px", "18px"]
   button:
-    text: "Más información"
-    path: "#leadform_header"
+    text: "Escribir por WhatsApp"
+    path: "https://api.whatsapp.com/send/?phone=56972848039&text&type=phone_number&app_absent=0&utm_source=GADS&utm_medium=GADS&utm_campaign=GADS&utm_id=GADS&utm_term=GADS&utm_content=GADS"
   phone:
     text: "llama"
 
@@ -132,10 +132,10 @@ rating_reviews:
       rating: 5
       url: ""
 
-alumni_projects:
-  position: 14
-  heading: "Proyectos que podrás crear luego de haberte graduado"
-  sub_heading: ""
+# alumni_projects:
+#   position: 14
+#   heading: "Proyectos que podrás crear luego de haberte graduado"
+#   sub_heading: ""
 
 who_is_hiring:
   position: 15
@@ -173,7 +173,7 @@ components:
 
       - icon: "fullstack_2"
         title: "Frontend"
-        content: "Especialízate en el desarrollo de la interfaz de usuario de aplicaciones web, con lenguajes como HTML, CSS y JavaScript."
+        content: "Especialízate en el desarrollo de la interfaz de usuario con tecnologías como JavaSCript y React."
 
       - icon: "applied-ai"
         title: "IA para Profesionales"

@@ -89,7 +89,7 @@ follow_bar:
     font_size: ["22px", "22px", "22px", "18px", "4.3vw"]
   button:
     text: "Escribir por WhatsApp"
-    path: "https://api.whatsapp.com/send/?phone=56920065786&text&type=phone_number&app_absent=0&utm_source=GADS&utm_medium=GADS&utm_campaign=GADS&utm_id=GADS&utm_term=GADS&utm_content=GADS"
+    path: "https://api.whatsapp.com/send/?phone=56972848039&text&type=phone_number&app_absent=0&utm_source=GADS&utm_medium=GADS&utm_campaign=GADS&utm_id=GADS&utm_term=GADS&utm_content=GADS"
   phone: 
     text: ""
 
@@ -145,7 +145,7 @@ components:
       sub_title: "10 semanas"
       icon: "fullstack_2"
       description: |
-        programa intensivo de 10 semanas, con clases de lunes a viernes durante todo el día, para vivir una experiencia inmersiva en el mundo del código.
+        Programa intensivo de 10 semanas, con clases de lunes a viernes durante todo el día, para vivir una experiencia inmersiva en el mundo del código.
       text_link: Obtener más información
       link: "#leadform_header"
 

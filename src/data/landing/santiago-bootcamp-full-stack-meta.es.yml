@@ -52,9 +52,9 @@ features:
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
     - No se requiere experiencia previa
-    - Horario part-time 
+    - Horario part-time y full time.
     - Mentorías y career support de por vida
-    - Aprende las tecnologías más demandadas por la industria, como Python, React, Javascript y Node.js.
+    - Aprende las tecnologías más demandadas por la industria, como Python, React y JavaScript.
 
 follow_bar:
   position: "top" # top, bottom, hidden
@@ -117,10 +117,10 @@ program_details:
   heading: "DETALLES DEL PROGRAMA"
   sub_heading: "Únete a la comunidad global de desarrolladores que han transformado sus carreras con 4Geeks Academy"
 
-why_4geeks:
-  position: 7
-  heading: "¿Por qué 4Geeks?"
-  sub_heading: " "
+# why_4geeks:
+#   position: 7
+#   heading: "¿Por qué 4Geeks?"
+#   sub_heading: " "
 
 who_is_hiring:
   position: 15
@@ -170,6 +170,7 @@ components:
     layout: two_column_left
     background: "veryLightBlue2" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
     image:
+      style: '{"backgroundSize": "contain", "background-position": "center", "min-height": "250px", "height": "250px"}'
       src: "/images/why-4geeks/python-image.png"
     heading:
       # style: '{"padding": "0 20px", "line-height": "50px"}'
@@ -240,23 +241,35 @@ components:
     content:
       text: "Descubre la inspiradora historia de Joshua Bravo, quien pasó de ser un asistente de cocina a programador gracias a su decisión de formar parte de 4Geeks Academy. Su experiencia es un testimonio vivo de cómo la dedicación y el aprendizaje en este bootcamp lo llevaron a convertirse en un profesional altamente capacitado."
       font_size: ["16px"]
-    button:
-      text: "Experiencias de Éxito"
-      path: "#why_4geeks"
-      color: "white"
-      background: "black"
-      hover: "lightBlue"
+    # button:
+    #   text: "Experiencias de Éxito"
+    #   path: "#why_4geeks"
+    #   color: "white"
+    #   background: "black"
+    #   hover: "lightBlue"
 
-choose_your_program:
-  position: 5
-  title: Nuestra Modalidad
-  paragraph: Programa de Machine Learning y Data Science en Modalidad Part Time y Full Time
-  programs:  
-  - title: "Part Time"
-    sub_title: "16 semanas"
-    icon: "fullstack"
-    description: |
-      De cero a tener tu primer trabajo como Data Scientist, con una duración de 16 semanas, con clases en vivo 3 veces por semana, compatible con horario laboral o de estudios. 
-    text_link: Obtener más información
-    link: "#leadform_header" # moves to start position
+  - name: "choose-your-program"
+    layout: choose_your_program
+    position: 7
+    heading:
+      text: Nuestros Programas
+    content:
+      text: Contamos con programas que combinan clases prácticas dictadas por expertos
+      font_size: ["16px"]
+      path: ""
+    programs:
+    - title: "Full Stack Developer - Full Time"
+      sub_title: "Full-Time ¡Sumérgete en el mundo de la programación!"
+      icon: "fullstack"
+      description: "En el programa Full Stack Developer, modalidad Full Time, podrás adentrarte de lleno en el mundo de la programación con un horario completo de lunes a viernes. Aprenderás las habilidades necesarias para destacarte en la industria tecnológica y comenzar una exitosa carrera en el desarrollo de software."
+      text_link: "¡Postúlate ahora!"
+      link: "#leadform_bottom"
+
+    - title: "Full Stack Developer - Part Time"
+      sub_title: "Part-Time ¡No renuncies a tu vida!"
+      icon: "fullstack_2"
+      description: |
+        Nuestro programa Part-Time en Chile te permite adentrarte en el mundo de la programación sin tener que renunciar a tu vida actual. Con clases programadas de forma que puedas compaginarlas con tu trabajo u otras responsabilidades, este programa intensivo te brinda la oportunidad de consolidar tus conocimientos, trabajar en proyectos y prepararte para la siguiente clase.
+      text_link: "¡Postúlate ahora!"
+      link: "#leadform_bottom"
   

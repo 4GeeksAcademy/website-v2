@@ -121,7 +121,7 @@ components:
       sub_title: "10 semanas"
       icon: "fullstack_2"
       description: |
-        programa intensivo de 10 semanas, con clases de lunes a viernes durante todo el día, para vivir una experiencia inmersiva en el mundo del código.
+        Programa intensivo de 10 semanas, con clases de lunes a viernes durante todo el día, para vivir una experiencia inmersiva en el mundo del código.
       text_link: Obtener más información
       link: "#leadform_header"
 
@@ -155,9 +155,10 @@ components:
           
   - name: python_y_javascript
     position: 3
-    layout: two_column_left
+    layout: two_column_right
     background: "veryLightBlue2" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
     image:
+      style: '{"backgroundSize": "contain", "background-position": "center", "min-height": "250px", "height": "250px"}'
       src: "/images/why-4geeks/python-image.png"
     heading:
       text:

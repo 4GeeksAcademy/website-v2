@@ -145,14 +145,14 @@ details:
       slug: "text-generation"
       duration: "2 semanas"
       step: 3
-    - module_name: "Generación de imagenes"
+    - module_name: "Generación de Imágenes"
       title: "Generación de Imágenes e Implementación de IA"
       description: "Revisión de capacidades de modelos populares para generación de imágenes como Stable Diffusion, Dall-E, Entre otras, A demás de cómo redactar buenos prompts para modelos de generación de imágenes."
       projects: "Desarrollo de una estrategia de Inteligencia Artificial y creación de prompts útiles para generar imágenes en casos de uso específicos."
       slug: "img-generation"
       duration: "1 semana"
       step: 4
-    - module_name: "Herramientas y Futuro de las IAs"
+    - module_name: "IA: Herramientas y Futuro"
       title: "Herramientas y el Futuro de las IAs"
       description: "Evaluación de herramientas de Inteligencia Artificial, proyectos prácticos utilizando herramientas populares."
       projects: "Graduación del curso, preguntas finales, tareas y próximos pasos..."

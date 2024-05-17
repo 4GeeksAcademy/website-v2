@@ -65,7 +65,7 @@ follow_bar:
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:
     text: "Escribir por WhatsApp"
-    path: "https://api.whatsapp.com/send/?phone=56920065786&text&type=phone_number&app_absent=0&utm_source=GADS&utm_medium=GADS&utm_campaign=GADS&utm_id=GADS&utm_term=GADS&utm_content=GADS"
+    path: "https://api.whatsapp.com/send/?phone=56972848039&text&type=phone_number&app_absent=0&utm_source=GADS&utm_medium=GADS&utm_campaign=GADS&utm_id=GADS&utm_term=GADS&utm_content=GADS"
   phone: 
     text: ""
 
@@ -117,10 +117,10 @@ program_details:
   heading: "Ciencia de Datos y Machine Learning"
   sub_heading: "Comienza con Python, Ciencia de Datos, Aprendizaje Automático, Deep Learning y el mantenimiento de un entorno de producción en Inteligencia Artificial."
 
-why_4geeks:
-  position: 7
-  heading: "¿Por qué 4Geeks?"
-  sub_heading: " "
+# why_4geeks:
+#   position: 7
+#   heading: "¿Por qué 4Geeks?"
+#   sub_heading: " "
 
 who_is_hiring:
   position: 15
@@ -199,20 +199,20 @@ components:
     image:
       style: '{ "border" : "3px solid black" }' 
       shadow: true 
-      src: "../../../static/images/testimonials/joshua-bravo-testimonial.jpg"
-    video: "https://www.youtube.com/watch?v=rtpfwwfE0yY"
+      src: "../../../static/images/testimonials/fidel-vera-testimonio-ds.jpg"
+    video: "https://www.youtube.com/watch?v=zfLGOolXHWQ"
     heading:
       text:
-        "De ayudante de cocina al mundo tecnológico, El camino de Joshua hacia una carrera en la industria de la tecnología"
+        "Fidel Vera De Estudiante a Profesional en Data Science"
         #xl      lg     md     sm    xs
       font_size: ["40px", "34px", "34px", "25px", "20px"]
     content:
-      #style: '{}'
-      #text: "De asistente de cocina a programador gracias a 4Geeks Academy. Su dedicación y formación lo convirtieron en un profesional altamente capacitado."
-      #font_size: ["16px"]
+      style: '{}'
+      text: "Fidel Vera, siempre interesado en el potencial de los datos, encontró en 4Geeks Academy la plataforma perfecta para convertir su afición en una carrera profesional sólida. El bootcamp de Data Science de 4Geeks Academy le brindó las herramientas y el conocimiento necesarios para desenvolverse con éxito en este campo tan demandado."
+      font_size: ["16px"]
     button:
-      text: "Experiencias de Éxito"
-      path: "#why_4geeks"
+      text: "Obtener Información"
+      path: "#leadform_bottom"
       color: "white"
       background: "black"
       hover: "lightBlue"
