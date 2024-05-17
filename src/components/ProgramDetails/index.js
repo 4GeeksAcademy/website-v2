@@ -102,7 +102,7 @@ const ProgramDetails = (props) => {
           gridColumn_tablet="8/16"
           padding="15px"
           margin_tablet="100px 0 0 0"
-          background={Colors.veryLightBlue}
+          background={Colors.verylightGray3}
           margin="13px 20px 40px 20px"
         >
           {list.map((item, index) => {
@@ -235,8 +235,9 @@ const ProgramDetails = (props) => {
               display_xs="none"
               display_tablet="flex"
             >
-              {weeks.map((sm, index) => (
+              {weeks.map((sm) => (
                 <H4
+                  key={sm}
                   margin="0 5px"
                   fontSize="15px"
                   lineHeight="22px"
