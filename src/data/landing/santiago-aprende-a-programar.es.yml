@@ -20,7 +20,7 @@ meta_info:
 
 navbar:
   logoUrl: "#"
-  buttonText: "Más información"
+  buttonText: "¡Postúlate ahora!"
   # url accepts: relative(/apply), absolute(https://google.com) or id(#componentName)
   buttonUrl: "#leadform_bottom" # [#top, #bottom or another #componentId]
 
@@ -66,7 +66,7 @@ follow_bar:
     # devices:    XL      LG      MD      SM       XS
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:
-    text: "Más Información"
+    text: "¡Postúlate ahora!"
     path: "#leadform_header"
   phone:
     text: "Llama "
@@ -117,7 +117,7 @@ about4Geeks:
     - title: "Mentorias 1:1 ilimitadas"
     - title: "Preparación para Entrevistas personalizada"
   paragraph: ""
-  button_text: "Más información"
+  button_text: "¡Postúlate ahora!"
   button_link: "#leadform_bottom"
   image: "../../../static/images/bg/community.png"
   image_mobile: "../../../static/images/bg/community.png"
@@ -182,7 +182,7 @@ components:
         
         Aprende las habilidades más solicitadas con instructores apasionados y un plan de estudios práctico para ayudarte a encontrar un trabajo de programación como desarrollador Jr.
       
-      text_link: "Más información"
+      text_link: "¡Postúlate ahora!"
       link: "#leadform_bottom"
     - title: "NodeJs Back End Development"
       sub_title: "Nivel 2"
@@ -190,7 +190,7 @@ components:
       description: |
         Este programa de estudio te permitirá trabajar y desarrollar el back-end de software y aplicaciones web, utilizando uno de los lenguajes de programacion más demandados en el mundo, Javascript.
         Aprenderás a crear tu ambiente de trabajo y realizar las configuraciones pertinentes para poder trabajar con el stack más solicitado de NodeJs
-      text_link: "Más información"
+      text_link: "¡Postúlate ahora!"
       link: "#leadform_bottom"
 
   - name: python_y_javascript
