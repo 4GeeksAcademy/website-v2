@@ -39,7 +39,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 # jumbotron on the top (cannot be commented out)
 header_data:
   tagline: Bootcamp Front-End Developer
-  sub_heading: "El salario promedio de un Front-End Developer Junior es entre 650.000 CLP y 800.000 CLP aproximadamente. Nuestro programa no solo te capacitará para convertirte en desarrollador Front-End, sino que también te enseñará las tecnologías más buscadas y mejor pagadas del mercado actual, como: HTML, CSS, JavaScript, React, API REST, entre otras."
+  sub_heading: "¡Conviértete en desarrollador en 12 semanas!"
   # background: "#FFF1D1"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   background_image: "../../../static/images/locations/satiago-background.webp"
@@ -51,9 +51,11 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-    - "CRECIMIENTO LABORAL: Todos los sectores de la economía necesitarán Desarrolladores Front-End en los próximos años y se prevé que estos puestos seguirán aumentando con el tiempo."
-    - "TRABAJO REMOTO: Al convertirte en Front-End Developer podrás trabajar de forma remota o desde cualquier parte del mundo para empresas extranjeras."
-    - "MAYORES INGRESOS: Trabajar como Desarrollador Front-End aumentará tus ingresos."
+    - Comunidad internacional +5000 personas.
+    - Mentorías/Tutorías personalizadas ilimitadas y de por vida.
+    - Clases personalizadas (Ratio Profesor/Alumno promedio 1 a 7).
+    - No vienes a aprender a programar, ¡vienes a convertirte en Developer!.
+    - Aprende los lenguajes de programación más demandados por las empresas.
 
 follow_bar:
   position: "top" # top, bottom, hidden
@@ -159,10 +161,7 @@ components:
       text: "¿Por qué Estudiar programación Front-End?"
     sub_heading:
       text: |
-        El salario promedio de un Front-End Developer Junior es de unos 600.000 CLP y 800.000 CLP aproximadamente.
-
-        Nuestro programa no solo te capacitará para convertirte en desarrollador Front-End, sino que también te enseñará las tecnologías más buscadas y mejor pagadas del mercado actual. 
-        como : JavaScript, HTML, CSS, librerías, Frameworks, etc.
+        El salario promedio de un Front-End Developer Junior es entre 650.000 CLP y 800.000 CLP aproximadamente. Nuestro programa no solo te capacitará para convertirte en desarrollador Front-End, sino que también te enseñará las tecnologías más buscadas y mejor pagadas del mercado actual, como: HTML, CSS, JavaScript, React, API REST, entre otras.
     button:
       text: "Obtener información"
       color: white
@@ -175,14 +174,14 @@ components:
       path: ""
     bullets:
       items:
-        - heading: "Crecimiento laboral: "
+        - heading: "CRECIMIENTO LABORAL: "
           text: "Todos los sectores de la economía necesitarán Desarrolladores Front-End en los próximos años y se prevé que estos puestos seguirán aumentando con el tiempo."
           icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - heading: "Trabajo remoto: "
+        - heading: "TTRABAJO REMOTO: "
           text: "Al convertirte en Front-End Developer podrás trabajar de forma remota o desde cualquier parte del mundo para empresas extranjeras."
           icon: "check" #string with icon for example ['check', 'cicle', etc]
         - heading: "Mayores ingresos: "
-          text: "Trabajar como Desarrollador Front-End aumentará tus ingresos de inmediato."
+          text: "Trabajar como Desarrollador Front-End aumentará tus ingresos."
           icon: "check" #string with icon for example ['check', 'cicle', etc]
 
   - name: how-it-works
