@@ -105,7 +105,7 @@ export default ({
               fontSize_tablet="35px"
               textTransform={title ? "" : "uppercase"}
               lineHeight="38.4px"
-              fontWeight="900"
+              fontWeight="400"
               color={Colors.darkGray}
               textAlign={title ? "center" : "left"}
             >
