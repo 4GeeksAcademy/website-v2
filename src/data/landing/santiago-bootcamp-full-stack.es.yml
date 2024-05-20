@@ -40,7 +40,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 # jumbotron on the top (cannot be commented out)
 header_data:
   background: "#FFF1D1"
-  tagline: Full-stack software developer bootcamp
+  tagline: Bootcamp Full Stack Development
   sub_heading: "Desde cero hasta conseguir tu primer trabajo como programador, aprende todo lo necesario, recibe soporte de por vida y consigue un empleo después de 18 semanas de estudio."
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
@@ -51,10 +51,10 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-    - No se requiere experiencia previa
-    - Horario part-time 
-    - Mentorías y career support de por vida
-    - El salario promedio de un Full-stack Developer en Chile suele estar entre $10,000,000 CLP al año.
+    - Horario part-time.
+    - No se requiere experiencia previa.
+    - Mentorías y career support de por vida.
+    - El salario promedio de un Full-stack Developer en Chile suele estar entre 700.000  y 900.000 CLP al mes.
 
 follow_bar:
   position: "top" # top, bottom, hidden
@@ -176,6 +176,7 @@ components:
     layout: two_column_left
     background: "veryLightBlue2" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
     image:
+      style: '{"backgroundSize": "contain", "background-position": "center", "min-height": "250px", "height": "250px"}'
       src: "/images/why-4geeks/python-image.png"
     heading:
       # style: '{"padding": "0 20px", "line-height": "50px"}'

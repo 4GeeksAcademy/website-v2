@@ -7,22 +7,22 @@ meta_info:
   keywords: ""
   redirects: ["/porque-4geeks"]
 
-seo_title: Coding bootcamp
+seo_title: "Coding bootcamp"
 
 header:
   title: "Empoderamos Talentos, impulsando sus carreras profesionales con programación"
   paragraph: ""
   image: "../../../static/images/why-4geeks/why-4geeks-header.png"
-  image_alt: ""
+  image_alt: "Impulsando Carreras con Programación"
 
 badges:
   paragraph: "4Geeks Academy cuenta con premios y reconocimientos que validan su excelencia"
 
 community_banner:
-  title: "Una comunidad hecha para programadores "
+  title: "Una comunidad hecha para programadores"
   paragraph: "En 4Geeks Academy siempre habrá alguien con el que podrás navegar en tu  camino para crecer en la industria tecnologica: mentores, instructores, compañeros, socios comerciales. Estamos constantemente fortaleciendo nuestro ecosistema para aprender y evolucionar juntos, usando tecnología, usando código."
   image: "../../../static/images/why-4geeks/why-4geeks-world.png"
-  image_alt: ""
+  image_alt: "Una comunidad hecha para programadores"
   image_paragraph: "¡No conocemos fronteras, nuestra comunidad es fuerte en inglés y en español, en América y Europa y sigue creciendo!"
   list:
     - title: "Comunidad global de + 2100 personas"

@@ -20,6 +20,7 @@ export default ({ icon, title, content, color, content_style }) => {
       alignItems="center"
       alignItems_tablet="start"
       borderRadius="4px"
+      margin=" 7px"
     >
       {icon && (
         <Icon

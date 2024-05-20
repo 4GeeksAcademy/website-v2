@@ -70,8 +70,8 @@ short_badges:
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "Diversos planes de financiamiento. \n Plan de pago a 12 cuotas."
-    text_mobile: "Diversos planes de financiamiento. \n Hasta 12 cuotas."
+    text: "Diversos planes de financiamiento. \n Plan de pago a 18 cuotas."
+    text_mobile: "Diversos planes de financiamiento. \n Hasta 18 cuotas."
     # devices:    XL      LG      MD      SM       XS
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:
@@ -148,23 +148,33 @@ components:
       font_size: ["18px", "18px", "18px", "18px", "18px"]
     button:
       text: "¡Aplica hoy!"
-      color: null
+      color: white
+      hover_color: "white"
+      background: "black"
       path: "#leadform_header"
     content:
-      text: |
-        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">20% de descuento sobre los (3) tres programas vigentes:</strong></h2>
-        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">Full Stack Developer*</strong></h2>
-        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">Node.js</strong></h2>
-        <h2 style="margin-bottom:3px"><strong style="font-weight: bold;">Data Science y Machine Learning</strong></h2>
-        <h2 style="margin-bottom:3px"><strong style="font-weight: italic;">*Beneficios extra disponibles</strong></h2>
+      text: ""
       font_size: ["16px"]
+    bullets:
+      items:
+        - heading: "20% de descuento sobre los (3) tres programas vigentes:"
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "Full Stack Developer"
+          icon: "circle" #string with icon for example ['check', 'cicle', etc]
+        - heading: "Node.js"
+          icon: "circle" #string with icon for example ['check', 'cicle', etc]
+        - heading: "Data Science y Machine Learning"
+          icon: "circle" #string with icon for example ['check', 'cicle', etc]
+        - heading: "Beneficios extra disponibles"
+          icon: "circle" #string with icon for example ['check', 'cicle', etc]
+
   - name: top_coding_bootcamp
     position: 5
     layout: two_column_left
     proportions: [4, 8]
     background: "#e6e6e6"
     image:
-      style: '{ "backgroundSize": "contain" }'
+      style: '{ "backgroundSize": "contain", "height": "250px", "minHeight": "250px" }'
       src: "/images/badges/Course-Report-Badge-2024.webp"
       link: "https://www.coursereport.com/schools/4geeks-academy"
     heading:

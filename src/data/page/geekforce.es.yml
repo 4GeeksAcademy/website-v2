@@ -4,16 +4,16 @@ meta_info:
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   description: "Soporte de por vida a tu carrera profesional, mantenimiento y generación de nuevas oportunidades laborales."
   image: null
-  keywords: ""
+  keywords: null
   redirects: []
 
 seo_title: "geekforce"
 header:
   title: "<strong style='color:black; font-family: Archivo-Black;'>Geek</strong>
-  <strong style = 'color:rgba(255, 183, 24, 1); font-family: Archivo-Black;'>FORCE</strong> <br>
-  <strong style='font-family: Archivo;'> es el proceso colectivo de apoyo profesional en la Academia</strong>"
+    <strong style = 'color:rgba(255, 183, 24, 1); font-family: Archivo-Black;'>FORCE</strong> <br>
+    <strong style='font-family: Archivo;'> es el proceso colectivo de apoyo profesional en la Academia</strong>"
   image: "../../../static/images/bg/companies-bg.jpg"
-  image_alt: ""
+  image_alt: "GeekForce - bootcamp de programacion con apoyo profesional de por vida"
   paragraph: "La 'fuerza' significa empoderamiento profesional y es una membresía de por vida. Brinda asistencia para la colocación laboral del estudiante y para que se prepare para conseguir un trabajo en tecnología."
   image_logo: "/images/geekforce.png"
 
@@ -54,7 +54,7 @@ list:
     image: "../../../static/images/Group-6617.webp"
     position: "right"
     text: "Iniciar una carrera en tecnología implica evaluar su situación actual y tomar decisiones informadas sobre el futuro. Requiere evaluación de usted mismo, su contexto y ACCIÓN. Puede hacer esto solo; o puede confiar en la experiencia de un mentor que puede brindarle
-    perspectiva, información y acceso a los recursos adecuados. En 4Geeks ajustamos las sesiones según tu calendario, también le damos la oportunidad de tenerlos en línea o en persona. En cualquier caso, te aseguramos que tienes la oportunidad de una mentoría constante siempre que la necesites." 
+      perspectiva, información y acceso a los recursos adecuados. En 4Geeks ajustamos las sesiones según tu calendario, también le damos la oportunidad de tenerlos en línea o en persona. En cualquier caso, te aseguramos que tienes la oportunidad de una mentoría constante siempre que la necesites." 
   
 # benefits:
 #   - p:
