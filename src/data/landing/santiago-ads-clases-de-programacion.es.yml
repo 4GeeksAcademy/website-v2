@@ -183,7 +183,7 @@ components:
       font_size: ["16px"]
       path: ""
     programs:
-    - title: "Front End Developmer"
+    - title: "Front-End Developer"
       sub_title: ""
       icon: "fullstack_2"
       description: |
