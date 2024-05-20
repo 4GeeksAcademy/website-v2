@@ -4,7 +4,7 @@ meta_info:
   description: "cluster english"
   visibility: "unlisted" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   image: null
-  keywords: ""
+  keywords: null
   redirects: []
 
 seo_title: "blog"
@@ -12,7 +12,7 @@ header:
   title: "Blog"
   paragraph: "Resources and news for both potential and current software builders."
   image: "../../../static/images/blog/Blog-header.png"
-  image_alt: ""
+  image_alt: "4Geeks Academy Blog"
 
 sidebar:
   title: "Post Related"

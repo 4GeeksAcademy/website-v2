@@ -4,7 +4,7 @@ meta_info:
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   description: "Find resources and news for both potential and current software builders. Basic knowledge, trends, career advice and much more in 4geeks Academy blog."
   image: null
-  keywords: "4Geeks Academy Blog"
+  keywords: null
   redirects: []
 
 banner:
@@ -17,7 +17,7 @@ header:
   title: "Blog"
   paragraph: "Resources and news for both potential and current software builders."
   image: "../../../static/images/blog/Blog-header.png"
-  image_alt: ""
+  image_alt: "4Geeks Academy Blog"
 
 question: "What are you looking for?"
 topics:

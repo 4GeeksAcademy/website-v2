@@ -4,9 +4,9 @@ meta_info:
   description: "Become a successful web developer with the Frontend program at 4Geeks Academy! Acquire skills in HTML, CSS, and JavaScript."
   image: "/images/og-preview/full-stack.es.png"
   bc_slug: "front-end"
-  visibility: "unlisted"
-  keywords: "front-end"
-  show_in_apply: true
+  visibility: "hidden"
+  keywords: null
+  show_in_apply: false
   redirects: []
   related_clusters: ["desarrollador-full-stack"]
 
@@ -14,7 +14,7 @@ apply_form:
   label: Curso de Desarrollo Frontend
 
 
-seo_title: "Curso de Desarrollo Frontend"
+seo_title: "Front-end Developer Bootcamp"
 header:
   title: "Curso de Desarrollo Frontend"
   image: "../../../static/images/bg/program-bg.png"
