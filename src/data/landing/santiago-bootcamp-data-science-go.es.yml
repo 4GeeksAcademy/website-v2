@@ -1,9 +1,9 @@
 meta_info:
-  slug: santiago-bootcamp-datascience # <--- URL 4geeksacademy.com/us/landing/example
+  slug: bootcamp-datascience-santiago-go # <--- URL 4geeksacademy.com/us/landing/example
 
   # This will show on social media when shared
-  title: "Clases de Data Science en Santiago de Chile, aprende ciencia de datos en 15 semanas y consigue trabajo como científico de datos."
-  description: "El Bootcamp de Data Science y Machine Learning más premiado en Santiago, Con 4Geeks, te convertirás en experto."
+  title: "Bootcamp de Data Science en Santiago de Chile, aprende ciencia de datos en 15 semanas y consigue trabajo como científico de datos."
+  description: "El mundo actual está impulsado por datos, no te quedes atras e inscribete en nuestro bootcamp de DataScience e ingresa al campo laboral"
   image: "/images/bg/main-bg.jpg"
   keywords: "Clase de programación, Clase de python, clase de javascript, Clase de informática, Coding Bootcamp, 4Geeks Academy"
   visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
@@ -19,7 +19,7 @@ meta_info:
   tag: request_more_info # comma separated, "request_more_info" is the default value
 
 navbar:
-  buttonText: "Postular"
+  buttonText: "Más información"
   buttonUrl: "#leadform_bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
   logoUrl: "#"
 
@@ -40,8 +40,8 @@ apply_schollarship: # form that is displayed at the end of the landing
 # jumbotron on the top (cannot be commented out)
 header_data:
   background: "#FFF1D1"
-  tagline: Aprende Data Science y Machine Learning 
-  sub_heading: "Descubre por qué nuestro bootcamp es la clave para tu éxito en Data Science y Machine Learning"
+  tagline: Conviértete en un Experto en Data Science
+  sub_heading: "Aprende con los mejores y domina el mundo de los datos en Santiago"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
 
@@ -51,10 +51,10 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-    - Accede a oportunidades profesionales como Junior Data Scientist sin necesidad de experiencia previa
-    - Disfruta de un horario part-time adaptado a tu ritmo de vida
-    - Industrias como banca, finanzas, comercio online y telecomunicaciones buscan profesionales de Data Science y Machine Learning.
-    - El salario promedio para un Junior Data Scientist en Chile oscila entre $800.000 y $1.200.000 CLP al mes
+    - Mentorias 1-1 ilimitadas
+    - Aprenderás con proyectos que simulan desafíos reales del mundo de Data Science.
+    - GeekForce ofrece una red de apoyo profesional, para ayudarte a conseguir trabajo.
+    - Ofrecemos opciones de estudio part-time para que puedas compaginar el bootcamp con tu vida laboral y personal.
 
 follow_bar:
   position: "top" # top, bottom, hidden
@@ -65,7 +65,7 @@ follow_bar:
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:
     text: "Escribir por WhatsApp"
-    path: "https://api.whatsapp.com/send/?phone=56920065786&text&type=phone_number&app_absent=0&utm_source=GADS&utm_medium=GADS&utm_campaign=GADS&utm_id=GADS&utm_term=GADS&utm_content=GADS"
+    path: "https://api.whatsapp.com/send/?phone=56972848039&text&type=phone_number&app_absent=0&utm_source=GADS&utm_medium=GADS&utm_campaign=GADS&utm_id=GADS&utm_term=GADS&utm_content=GADS"
   phone: 
     text: ""
 
@@ -140,36 +140,32 @@ components:
       src: "/images/landing/hombre-con-laptop.png"
       shadow: false
     section_heading: 
-      text: "Diseñado para hacerte exitoso en el mundo del Data Science"
+      text: "Diseñado para convertirte en un Científico de datos"
       style: '{ "font-size": "30px" }'
     heading: 
-      # text: "¡Únete a nosotros para impulsar tu carrera en tecnología!"
+      text: "Nuestro programa de estudio está enfocado en las necesidades actuales de la industria"
     sub_heading:
-      text: ""
+      text: "Aprende las habilidades más demandadas en Data Science con un currículo diseñado por expertos que te preparará para los desafíos reales del mercado laboral."
     button: 
-      text: "Descubre por qué somos tu mejor elección"
+      text: "Más información"
       color: white
       hover_color: "white"
       background: "black"
-      path: "https://4geeksacademy.com/es/geeks-vs-otros"
+      path: "#leadform_header"
     content: 
       text: ""
       font_size: ["16px"]
       path: ""
     bullets:
       items:
-      - heading: "TODAS LAS MENTORIAS QUE NECESITAS"
-        text: "En línea y en persona, por el resto de tu vida, incluso para codificación de dudas laborales"
-        icon: "circle" 
-      - heading: "TIEMPO DE RESPUESTA"
-        text: "No te quedes atascado con tu código, no te llevará más de 30 minutos para que un instructor te ayude."
-        icon: "circle" 
-      - heading: "1:7 PROPORCIÓN PROFESOR: ESTUDIANTE"
-        text: "Encontrarás más profesores en 4Geeks que el promedio de la industria."
-        icon: "circle" 
-      - heading: "SOPORTE PROFESIONAL A LA MEDIDA"
-        text: "Proporcionamos ayuda para la colocación laboral y preparación para el empleo en tecnología."
-        icon: "circle" 
+      - heading: "Dominio de herramientas analíticas"
+        icon: "check" 
+      - heading: "Técnicas de Machine Learning"
+        icon: "check" 
+      - heading: "Visualización de datos"
+        icon: "check" 
+      - heading: "Procesamiento de grandes volúmenes de información"
+        icon: "check" 
 
   - name: python_y_javascript
     position: 2
@@ -178,25 +174,26 @@ components:
     image:
       src: "/images/why-4geeks/python-image.png"
     heading:
-      text: "Programa de Data Science y Machine Learning"
+      text: "Sube de nivel con las habilidades más buscadas en la industria"
         #           xl      lg      md      sm      xs
-      font_size: ["38px", "38px", "38px", "38px", "38px"]
+      font_size: ["45px", "45px", "30px", "28px", "25px"]
     sub_heading:
-      text: "Conviértete en un Ingeniero de IA y Machine Learning"
+      text: "El campo de Data Science está en auge y ofrece oportunidades excepcionales para aquellos con las habilidades adecuadas.  Según el Bureau of Labor Statistics de Estados Unidos, se espera que el empleo de científicos de datos crezca un 35% para el año 2032, mucho más rápido que el promedio de todas las ocupaciones."
     content:
       style: '{}'
-      text: "Aprende Python, SQL, Looker, Streamlit y Estadísticas para convertirte en un Analista de Datos profesional capaz de contribuir a equipos basados en datos."
+      text: ""
       font_size: ["16px"]
     bullets:
       items:
-      - heading: "Modelado predictivo: "
-        text: "Aprende a desarrollar modelos de aprendizaje supervisado y no supervisado."
+      - heading: "Python Versatilidad, Desarrollo Web y Machine Learning"
+        text: "Python se destaca como el tercer lenguaje de programación más popular según la encuesta de Stack Overflow en 2023. "
         icon: "circle" #string with icon for example ['check', 'cicle', etc]
-      - heading: "Desarrollo completo de proyectos de IA: "
-        text: "Domina el ciclo de vida completo de desarrollo y despliegue de proyectos de IA."
+      - heading: "Python vs Ruby on Rails"
+        text: "En el último año, se han publicado más de 120,000 ofertas de trabajo que requieren experiencia en Python en plataformas como Indeed y LinkedIn, en comparación con aproximadamente 4,600 para Ruby on Rails."
         icon: "circle" #string with icon for example ['check', 'cicle', etc]
+
   - name: some_id
-    position: 7
+    position: 4
     layout: two_column_right
     background: "#fbfbfb"
     image:
@@ -206,20 +203,20 @@ components:
     video: "https://www.youtube.com/watch?v=zfLGOolXHWQ"
     heading:
       text:
-        "Un Ejemplo de Superación y Éxito en el Campo de la Data Science"
+        "Fidel Vera De Estudiante a Profesional en Data Science"
         #xl      lg     md     sm    xs
       font_size: ["40px", "34px", "34px", "25px", "20px"]
     content:
       style: '{}'
-      text: "Fidel Vera, impulsado por su curiosidad por el potencial de la ciencia de datos, tomó la decisión de invertir en su futuro profesional inscribiéndose en el bootcamp de Data Science de 4Geeks Academy. Esta experiencia le brindó las bases sólidas y la confianza necesaria para convertirse en un experto en este campo tan demandado."
+      text: "Fidel Vera, siempre interesado en el potencial de los datos, encontró en 4Geeks Academy la plataforma perfecta para convertir su afición en una carrera profesional sólida. El bootcamp de Data Science de 4Geeks Academy le brindó las herramientas y el conocimiento necesarios para desenvolverse con éxito en este campo tan demandado."
       font_size: ["16px"]
     button:
-      text: "Postúlate ahora"
+      text: "Obtener Información"
       path: "#leadform_bottom"
       color: "white"
       background: "black"
       hover: "lightBlue"
-      
+
 choose_your_program:
   position: 5
   title: Nuestra Modalidad
@@ -233,3 +230,43 @@ choose_your_program:
     text_link: Obtener más información
     link: "#leadform_header" # moves to start position
   
+  # - name: new_design_with_bullets
+  #   position: 1
+  #   layout: two_column_right 
+  #   swipable: False
+  #   background: "#fbfbfb"
+  #   image:
+  #     style: '{"backgroundSize": "contain;"}'
+  #     src: "/images/landing/hombre-con-laptop.png"
+  #     shadow: false
+  #   section_heading: 
+  #     text: "Diseñado para hacerte exitoso en el mundo de la programación"
+  #     style: '{ "font-size": "30px" }'
+  #   heading: 
+  #     text: "¡Únete a nosotros para impulsar tu carrera en tecnología!"
+  #   sub_heading:
+  #     text: ""
+  #   button: 
+  #     text: "Descubre por qué somos tu mejor elección"
+  #     color: white
+  #     hover_color: "white"
+  #     background: "black"
+  #     path: "https://4geeksacademy.com/es/geeks-vs-otros"
+  #   content: 
+  #     text: ""
+  #     font_size: ["16px"]
+  #     path: ""
+  #   bullets:
+  #     items:
+  #     - heading: "TODAS LAS MENTORIAS QUE NECESITAS"
+  #       text: "En línea y en persona, por el resto de tu vida, incluso para codificación de dudas laborales"
+  #       icon: "circle" 
+  #     - heading: "TIEMPO DE RESPUESTA"
+  #       text: "No te quedes atascado con tu código, no te llevará más de 15 minutos para que un instructor te ayude."
+  #       icon: "circle" 
+  #     - heading: "1:7 PROPORCIÓN PROFESOR: ESTUDIANTE"
+  #       text: "Encontrarás más profesores en 4Geeks que el promedio de la industria."
+  #       icon: "circle" 
+  #     - heading: "SOPORTE PROFESIONAL A LA MEDIDA"
+  #       text: "Proporcionamos ayuda para la colocación laboral y preparación para el empleo en tecnología."
+  #       icon: "circle" 

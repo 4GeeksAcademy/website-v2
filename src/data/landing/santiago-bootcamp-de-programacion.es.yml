@@ -52,7 +52,7 @@ features:
   text: '<span style="margin-top: 10px; display: block; color: black;"> <strong style="font-weight: bold; color:black;">Conviértete en Full Stack Developer Junior</strong> trabajando en proyectos reales y con mentores profesionales</span>'
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-    - De cero a programador en 9 o 18 semanas
+    - De cero a programador en 10 o 18 semanas
     - Mentorías y Apoyo Laboral de por vida
     - Modalidad Full Time y Part Time disponible
     - Un desarrollador Jr puede ganar desde $700.000 CLP al mes
@@ -105,10 +105,10 @@ geeks_vs_others:
   paragraph: "Top bootcamp en el mundo y #1 en Chile"
   total_rows: 5
 
-why_4geeks:
-  position: 8
-  heading: "Por qué 4Geeks"
-  sub_heading: " "
+# why_4geeks:
+#   position: 8
+#   heading: "Por qué 4Geeks"
+#   sub_heading: " "
 
 who_is_hiring:
   position: 9
@@ -184,8 +184,8 @@ components:
     position: 2
     layout: two_column_right
     background: "veryLightBlue2" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9 .
-    style: '{"magin": "20px"}'
     image:
+      style: '{"backgroundSize": "contain", "background-position": "center", "min-height": "250px", "height": "250px"}'
       src: "/images/why-4geeks/python-image.png"
     heading:
       text:
@@ -220,3 +220,31 @@ components:
       color: "white"
       background: "black"
       hover: "lightBlue"
+
+  - name: "choose-your-program"
+    layout: choose_your_program
+    position: 8
+    heading:
+      text: Nuestros Programas
+    content:
+      text: Contamos con programas que combinan clases prácticas dictadas por expertos
+      font_size: ["16px"]
+      path: ""
+    programs:
+    - title: "Full Stack Developer - Full Time"
+      sub_title: "Full-Time ¡Sumérgete en el mundo de la programación!"
+      icon: "fullstack"
+      description: |
+        En el programa Full Stack Developer, modalidad Full Time, podrás adentrarte de lleno en el mundo de la programación con un horario completo de lunes a viernes. Aprenderás las habilidades necesarias para destacarte en la industria tecnológica y comenzar una exitosa carrera en el desarrollo de software.
+        <br> <img src="/images/geekforce-logo-new.png" style="width: 150px; height: auto; object-fit: contain;" alt="Logo de GeekForce">
+      text_link: "¡Postúlate ahora!"
+      link: "#leadform_bottom"
+
+    - title: "Full Stack Developer - Part Time"
+      sub_title: "Part-Time ¡No renuncies a tu vida!"
+      icon: "fullstack_2"
+      description: |
+        Nuestro programa Part-Time en Chile te permite adentrarte en el mundo de la programación sin tener que renunciar a tu vida actual. Con clases programadas de forma que puedas compaginarlas con tu trabajo u otras responsabilidades, este programa intensivo te brinda la oportunidad de consolidar tus conocimientos, trabajar en proyectos y prepararte para la siguiente clase.
+        <br> <img src="/images/geekpal-logo-new.png" style="width: 150px; height: auto; object-fit: contain;" alt="Logo de GeekPal">
+      text_link: "¡Postúlate ahora!"
+      link: "#leadform_bottom"

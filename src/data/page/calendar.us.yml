@@ -4,7 +4,7 @@ meta_info:
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   description: "Learn about 4Geeks Academy's upcoming cohorts and also our exciting workshops and events tailred for the local software development community"
   image: ""
-  keywords: "4Geeks Academy Events, 4Geeks Academy Workshops, 4Geeks Academy Events, Workshops, Events, Upcoming Cohorts, Upcoming Dates"
+  keywords: null
   redirects: ["/upcoming", "/dates", "/calendar", "/us/calendar"]
 
 seo_title: "Coding Bootcamp"
@@ -14,7 +14,7 @@ header:
   title: Upcoming Courses
   paragraph: "Filter the events or cohorts based what you are interested on"
   image: ""
-  image_alt: ""
+  image_alt: "Coding Bootcamp"
 events:
   title: "Upcoming Events"
   paragraph: ""

@@ -19,8 +19,7 @@ header:
   title: "Ingeniero de Software Senior"
   image: "../../../static/images/bg/apple-building.jpg"
   image_alt: "apple-building"
-  paragraph: "Trabaja en Grandes compañías, ganá mucho más y ayuda a construir el Ecosistema Tech del futuro.
-  "
+  paragraph: "Trabaja en Grandes compañías, ganá mucho más y ayuda a construir el Ecosistema Tech del futuro."
 button:
   syllabus_heading: "Descargar Detalles del Curso"
   syllabus_btn_label: "Descarga Instantánea"
@@ -100,7 +99,7 @@ details:
   about:
       title: "Sobre el  programa"
       sub_title: "Obtenga las habilidades para satisfacer la demanda global de solucionadores de problemas y pensadores lógicos que conducen al mundo a un cambio e impacto reales.
-      Desarrolle aplicaciones distribuidas en la nube altamente escalables utilizadas solo por Fortune 500. Consiga un trabajo de ingeniería de software real o cree el próximo unicornio tecnológico."
+        Desarrolle aplicaciones distribuidas en la nube altamente escalables utilizadas solo por Fortune 500. Consiga un trabajo de ingeniería de software real o cree el próximo unicornio tecnológico."
     
       list:
         - label: "Duración"
@@ -215,8 +214,7 @@ potential_companies:
 ## 4GEEKS VS OTHERS SECTION
 geeks_vs_others:
   heading: "¿Qué nos hace ser tanexitosos?
-  
-  sub_heading: Compara a 4Geeks con otros coding bootcamps"
+    sub_heading: Compara a 4Geeks con otros coding bootcamps"
   sub_heading_link: ""
 ## GEEK PAL AND GEEK FORCE BOXES
 geek_data:

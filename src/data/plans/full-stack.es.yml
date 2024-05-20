@@ -446,7 +446,7 @@ part_time:
     scholarship: "Financiado"
     payment_time: "Pago en 18 meses"
     price: "~168.000 CLP"
-    original_price: "3.450.000 CLP*"
+    warning_message: "Limited seats!"
     bullets:
       - "Financiamiento a medida de 6 a 18 meses"  
       - "Se debe realizar un pago anticipado correspondiente al 20% del valor del programa."
@@ -472,7 +472,6 @@ part_time:
     icons: 
       - "/images/quotanda-logo.png"
       - "/images/visa-mastercard.png"
-      - "/images/flevo-new.png"
 
   - slug: 'latam-probram-only-fs-pt'
     academies: ['bogota-colombia', 'buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']

@@ -70,7 +70,7 @@ partners:
 
 overlaped:
   heading: "Why learning Python and Javascript is essential"
-  paragraph: "Programming in Python and JavaScript offers some of the highest-paid career opportunities in the US. There are currently over 26 times more job opportunities in JavaScript compared to Ruby on Rails, and 10 times more jobs in Python compared to node.js. According to Indeed, Python and JavaScript developers enjoy average salaries exceeding $110k."
+  paragraph: "Programmers who are proficient in Python and JavaScript have access to some of the highest-paid career opportunities in the US. There are currently over 26 times more job opportunities in JavaScript compared to Ruby on Rails, and 10 times more jobs in Python compared to Node.js. According to Indeed, Python and JavaScript developers enjoy average salaries of $110k."
   button:
     text: "LEARN MORE"
     color: "blue"  
@@ -104,7 +104,7 @@ two_columns:
 
 
 badges:
-  paragraph: "Kickstart your career at 4Geeks Academy, where developers grow and thrive. Named best <a href='/us/coding-bootcamp'>coding bootcamp</a> 2023 by Course Report, best center for coding bootcamps 2023 by Premios de Excelencia Educativa in Spain, listed among the top 10 in the US by Newsweek, and rated 4.92/5 on Switchup. Licensed by the Florida Department of Education, USA."
+  paragraph: "Kickstart your career at 4Geeks Academy, where developers grow and thrive. Named among the world’s <a href='/us/coding-bootcamp'>best coding bootcamps of 2024 by Course Report, chosen <a href='/us/trends-and-tech/celebrating-forbes-doble-recognition'>best coding bootcamp for students on a budget in 2024 by Forbes</a>, and rated 4.92/5 on Switchup. Licensed by the Florida Department of Education, USA."
 upcoming:
   no_dates_message: "There are currently no upcoming dates for this program"
   actionMessage: "Let me know when dates are available"
@@ -143,9 +143,9 @@ details:
           content: "You can choose between English and Spanish for the syllabus and content. Live classes are taught in the language of your campus."
           icon: "contract-checked"
          
-  heading: Program Details Part-Time Full Stack Developer
+  heading: "Part-Time Full Stack Development Bootcamp"
   weeks: 18
-  sub_heading: "Hands-on learning through real-life projects. /n Master the 3 most used languages in the world: Master Python, JS and React."
+  sub_heading: "Hands-on learning through real-life projects. Master the 3 most used languages in the world: Master Python, JS and React."
   left_labels:
     description: "DESCRIPTION:"
     projects: "PROJECTS:"
@@ -183,7 +183,7 @@ details:
     - module_name: "ADVANCED APPS"
       title: "Advanced Application"
       description: "Python, Flask, REST API's, Databases, SQL, MVC Pattern, Publishing your website, etc."
-      projects: "During this phase you will have to design, code, test, and publish your own entire web application."
+      projects: "During this phase you will have to design, code, test, and publish your own complete web application."
       slug: "advanced-application"
       duration: "6 weeks"
       step: 8

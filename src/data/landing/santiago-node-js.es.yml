@@ -54,7 +54,7 @@ features:
     - Requiere saber Javascript
     - Horario part-time
     - Mentorías de por vida
-    - Financiamiento hasta 9 cuotas sin interés
+    - Paga desde 3 a 12 cuotas sin interés
 
 short_badges:
   - name: "Premios Tecnologia Siglo XXI"
@@ -77,13 +77,13 @@ short_badges:
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "Puedes llamarnos o enviarnos un mensaje por WhatsApp"
-    text_mobile: "Puedes llamarnos o enviarnos un mensaje por WhatsApp"
+    text: "Puedes enviarnos un mensaje por WhatsApp al"
+    text_mobile: "Puedes enviarnos un mensaje por WhatsApp al"
     # devices:    XL      LG      MD      SM       XS
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:
-    text: "Obtener más información"
-    path: "#leadform_header"
+    text: "Escribir por WhatsApp"
+    path: "https://api.whatsapp.com/send/?phone=56972848039&text&type=phone_number&app_absent=0&utm_source=GADS&utm_medium=GADS&utm_campaign=GADS&utm_id=GADS&utm_term=GADS&utm_content=GADS"
   phone:
     text: "Llama "
 

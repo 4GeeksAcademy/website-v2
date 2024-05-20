@@ -14,7 +14,7 @@ header:
     <strong style = 'color:rgba(255, 183, 24, 1); font-family: Archivo-Black;'>FORCE</strong> <br>
     <strong style='font-family: Archivo;'>the collective process of Career Support at the Academy</strong>
   image: "../../../static/images/bg/companies-bg.jpg"
-  image_alt: ""
+  image_alt: "GeekForce - Coding bootcamp with unlimited carreer support."
   paragraph: |
     The "force" stands For Career Empowerment and it is a lifetime membership. It provides you job placement assistance so you get ready to get a job in tech.
   image_logo: "/images/geekforce.png"

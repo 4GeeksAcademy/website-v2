@@ -2,7 +2,7 @@ meta_info:
   slug: curso-de-programacion-santiago # <--- URL 4geeksacademy.com/us/landing/example
 
   # This will show on social media when shared
-  title: "Curso de programación en Santiago de Chile, aprende a programar en 9 o 16 sem y consigue trabajo como programador."
+  title: "Curso de programación en Santiago de Chile, aprende a programar en 10 o 16 sem y consigue trabajo como programador."
   description: "La programación se ha convertido en un conocimiento esencial para tu éxito profesional, haz un curso de programación con 4Geeks Academy."
   image: "/images/bg/main-bg.jpg"
   keywords: "Curso de programación, Curso de python, Cursos de Programación, Curso de React y Javascript, Curso de Informática, Coding Bootcamp, 4Geeks Academy"
@@ -47,7 +47,7 @@ features:
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
     - No se requiere experiencia previa
-    - Horarios part-time y full-time. Online o Presencial
+    - Horarios part-time y full-time. 100% en vivo y online
     - Mentorias y career support de por vida
     - Un desarrollador Jr puede ganar hasta $900.000 CLP al mes
 
@@ -72,8 +72,8 @@ short_badges:
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "Financiamiento sin interés. \n Plan de pago a 9 cuotas."
-    text_mobile: "Financiamiento sin interés. \n Hasta 9 cuotas."
+    text: "Financiamiento sin interés. \n Plan de pago hasta 18 meses"
+    text_mobile: "Financiamiento sin interés. \n Plan de pago hasta 18 meses"
     # devices:    XL      LG      MD      SM       XS
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:
@@ -138,32 +138,33 @@ who_is_hiring:
   heading: "¿Quién contrata a nuestros alumnos?"
   sub_heading: "Nos encanta ver crecer a nuestros estudiantes, es por eso que nos esforzamos cada día por tener más aliados, para que puedas trabajar en empresas que te ayuden a seguir creciendo profesionalmente."
 
-alumni_projects:
-  position: 9
-  heading: "Así podría ser tu proyecto final del curso"
-  sub_heading: "Proyectos hechos por graduados de la academia"
+# alumni_projects:
+#   position: 9
+#   heading: "Así podría ser tu proyecto final del curso"
+#   sub_heading: "Proyectos hechos por graduados de la academia"
 
 # Possible layours: [two_column_left_image, two_column_right_image]
-components:
-  - name: top_coding_bootcamp
-    position: 12
-    layout: two_column_right
-    proportions: [4, 8]
-    image:
-      style: '{ "backgroundSize": "contain" }'
-      src: "/images/badges/switchup-badge-2023.png"
-      link: "https://www.switchup.org/bootcamps/4geeks-academy"
-    button:
-      text: "Leer testimoniales"
-      color: white
-      background: black
-      hover: white
-      path: "https://www.switchup.org/bootcamps/4geeks-academy"
-    heading:
-      text:
-        "Hemos sido nombrados uno de los TOP coding bootcamps en el mundo"
-        #xl      lg     md     sm    xs
-      font_size: ["40px", "40px", "40px", "40px", "40px"]
+
+# components:
+  # - name: top_coding_bootcamp
+  #   position: 12
+  #   layout: two_column_right
+  #   proportions: [4, 8]
+  #   image:
+  #     style: '{ "backgroundSize": "contain" }'
+  #     src: "/images/badges/switchup-badge-2023.png"
+  #     link: "https://www.switchup.org/bootcamps/4geeks-academy"
+  #   button:
+  #     text: "Leer testimoniales"
+  #     color: white
+  #     background: black
+  #     hover: white
+  #     path: "https://www.switchup.org/bootcamps/4geeks-academy"
+  #   heading:
+  #     text:
+  #       "Hemos sido nombrados uno de los TOP coding bootcamps en el mundo"
+  #       #xl      lg     md     sm    xs
+  #     font_size: ["40px", "40px", "40px", "40px", "40px"]
 
 
 # why_python:
