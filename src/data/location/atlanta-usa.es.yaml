@@ -109,7 +109,7 @@ images_box:
       alt: "Atlanta city"
     - path: "../../../static/images/ownpeoplecoding2.webp"
       alt: "4Geeks Own People Coding"
-    - path: "../../../static/images/locations/ownmancoding.jpg"
+    - path: "../../../static/images/locations/ownmancoding.webp"
       alt: "Remote-Coding-Bootcamp"
     - path: "../../../static/images/locations/miami-old.jpg"
       alt: "4Geeeks miami location"

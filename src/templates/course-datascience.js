@@ -24,13 +24,13 @@ import Overlaped from "../components/Overlaped";
 import JobGuaranteeSmall from "../components/JobGuaranteeSmall";
 import Loc from "../components/Loc";
 
-const Program = ({ data, pageContext, yml }) => {
+const DataScience = ({ data, pageContext, yml }) => {
   const { session } = React.useContext(SessionContext);
   const courseDetails = data.allCourseYaml.edges[0].node;
   const geek = data.allCourseYaml.edges[0].node;
   const [open, setOpen] = React.useState(false);
 
-  const defaultCourse = "datascience-ml";
+  const defaultCourse = "machine-learning";
   const program_type = yml.meta_info.slug.includes("full-time")
     ? "full_time"
     : "part_time";
@@ -236,6 +236,7 @@ const Program = ({ data, pageContext, yml }) => {
         actionMessage={courseDetails.upcoming?.actionMessage}
         defaultCourse={defaultCourse}
         locations={data.allLocationYaml.edges}
+        showMoreRedirect
       />
 
       <PricesAndPayment
@@ -484,6 +485,7 @@ export const query = graphql`
               src
               shadow
             }
+            video
             heading {
               text
               font_size
@@ -734,45 +736,6 @@ export const query = graphql`
         }
       }
     }
-    allAlumniProjectsYaml(filter: { fields: { lang: { eq: $lang } } }) {
-      edges {
-        node {
-          header {
-            tagline
-            sub_heading
-          }
-          projects {
-            project_name
-            slug
-            project_image {
-              childImageSharp {
-                gatsbyImageData(
-                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                  width: 800
-                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                )
-              }
-            }
-            project_content
-            project_video
-            live_link
-            github_repo
-            alumni {
-              first_name
-              last_name
-              job_title
-              github
-              linkedin
-              twitter
-            }
-          }
-          button_section {
-            button_text
-            button_link
-          }
-        }
-      }
-    }
     allCredentialsYaml(filter: { fields: { lang: { eq: $lang } } }) {
       edges {
         node {
@@ -864,4 +827,4 @@ export const query = graphql`
     }
   }
 `;
-export default BaseRender(Program);
+export default BaseRender(DataScience);

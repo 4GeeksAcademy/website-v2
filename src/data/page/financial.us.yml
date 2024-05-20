@@ -10,12 +10,13 @@ meta_info:
 ## BANNER - HEADER
 seo_title: "Bootcamp Financing"
 header:
-  title: FINANCING
-  paragraph: Indicate the following information to show you the financing options
+  title: Finance your future
+  paragraph: Finance your future with diverse education funding options, from scholarships to inclusive payment methods. Explore our platform for inclusive financing solutions tailored to your academic journey.
   tagline: CELEBRATE THE BEST PRICE IN TOWN
   sub_heading: We never stopped trying until we mastered a real premium but affordable program. Our philosophy is rooted in making coding education available to everyone.
-  image: "../../../static/images/bg/pricing-bg.jpg"
-  alt: ""
+  image: "../../../static/images/Group-6663.png"
+  alt: "financing"
+  button: See plans & prices
 
 ## FIRST SECTION AFTER THE BANNER
 intro:
@@ -54,7 +55,7 @@ syllabus_button_text: "Search"
 
 iconogram:
   heading:
-    text: "How your tuition is no longer a concern"
+    text: "Paying your tuition should not be a concern"
     font_size:
       - 38px
       - 38px
@@ -69,18 +70,21 @@ iconogram:
   text_link: "#"
   swipable: false
   icons:
-  - icon: "contract-money"
+  - icon: "bill"
     title: Payment Plans - No interest
     content: " No interest: you can pay in up to 6 months"
-  - icon: "handmoney-new"
+  - icon: "money"
+    color: "#0084FF"
     title: Loans - long term
     content: "long term: 3, 4 or 5 years loan"
-  - icon: "hand-puzzle"
+  - icon: "hands-group"
+    color: "#25BF6C"
     title: Scholarships and partnerships
     content: "We are working with several organizations to reduce your tuition fee."
-  - icon: "briefcase-new"
+  - icon: "contract-2"
+    color: "#BE8BFF"
     title: Income Sharing Agreement
-    content: "Only pay when you get a job above a thereshold"
+    content: "Pay only when you secure a well-paying job."
   button:
     text: "Conditions apply."
     color: ""
@@ -88,11 +92,24 @@ iconogram:
     background: ""
     hover_color: ""
 
+who_is_hiring:
+  title: Who is hiring our students?
+  paragraph: Don't miss out on the awesome allies of 4Geeks Academy! Here are just a few of them.
+  images:
+    - '/images/allies/miamitech-works-logo.png'
+    - '/images/allies/utec.png'
+    - '/images/allies/clark-uni-rounded-logo.png'
+    - '/images/allies/cinde.png'
+    - '/images/allies/idb.png'
+    - '/images/partner/agilia.png'
+    - '/images/partner/facebook-2.png'
+
 two_column:
   - image:
       style: '{ "backgroundSize": "contain" }'
-      src: /images/landing/Group-6626.webp
+      src: /images/landing/Group-6626-with-border.webp
     heading:
+      style: '{ "fontWeight": 400 }'
       text: $20 Million in scholarships
       font_size:
         - 38px
@@ -101,7 +118,7 @@ two_column:
         - 21px
         - 21px
     sub_heading:
-      text: 1.456 people have benefited from our scholarship programs, from all possible backgrounds, read here stories of the beneficiaries and projects.
+      text: Over 1,456 individuals, from diverse backgrounds, have benefited from our scholarship programs. Explore their stories and the projects they've contributed to.
       font_size:
         - 24px
         - 24px
@@ -124,9 +141,9 @@ two_column:
 
   - image:
       style: '{ "backgroundSize": "contain"}'
-      src: /images/landing/20-million-column.png
+      src: /images/landing/20-million-column-4geeks.png
     heading:
-      text: 62% of bootcamp applicants are rejected due to financial reasons.
+      text: In the past, 68% of bootcamp applicants could not enroll due to financial reasons.
       font_size:
         - 38px
         - 38px
@@ -134,7 +151,7 @@ two_column:
         - 21px
         - 21px
     sub_heading:
-      text: 4Geeks is committed to removing the cost as a possible factor to prevent talented individuals to become coders.
+      text: At 4Geeks, we're dedicated to breaking down the barriers that prevent aspiring coders from pursuing their goals. 
       font_size:
         - 24px
         - 24px
@@ -145,53 +162,54 @@ two_column:
       font_size:
         - 16px
       text: |
-        Thanks to a deep network of 2000+ partners and donors from  Government Institutions, none profit organizations and private companies enables our scholarship platform to be one of the biggest in the world.
+        Through our expansive network of 2000+ partners and donors, spanning government institutions, non-profit organizations, and private companies, our scholarship offerings rank among the largest globally. 
     button:
       text: JOIN THE PROGRAM
       color: white
-      background: black
+      background: "blue"
       hover_color: white
       path: "#prices_and_payment"
 
   - image:
       style: '{ "backgroundSize": "contain"}'
-      src: "/images/woman-glasses-laptop.png"
+      src: "/images/pretty-woman-in-a-computer.png"
     heading:
-      text: "Job guarantee commitment"
+      style: '{ "fontWeight": 400 }'
+      text: "Why are we offering a job guarantee?"
       font_size:
-        - 38px
-        - 38px
-        - 38px
+        - 35px
+        - 35px
+        - 35px
         - 21px
         - 21px
     sub_heading:
-      text: "Our Job Guarantee Program consists of 3 stages that are needed to be complete as part of your process. It’s three bootcamps in One:"
+      style: '{ "color": "#4D4D5C", "fontWeight": 400 }'
+      text: "We're challenging the traditional education model. It's not just about teaching the relevant skills; it's about the opportunities we’ll create for your career. Together"
       font_size:
-        - 24px
-        - 24px
-        - 24px
+        - 16px
+        - 16px
+        - 16px
         - 16px
         - 16px
     bullets:
       item_style: ""
       items:
-        - heading: "Become a Software Developer."
-          text: ""
+        - heading: ""
+          text: "We trust the effectiveness of the program"
           icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - heading: "Get career ready."
-          text: ""
+        - heading: ""
+          text: "We trust the industry"
           icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - heading: "Get a job!"
-          text: ""
+        - heading: ""
+          text: "We trust the process"
           icon: "check" #string with icon for example ['check', 'cicle', etc]
-    content:
-      font_size:
-        - 16px
-      text: The goal is to help you get a job within 180 days after graduation. You need to complete and meet the requirements in order to opt for the Money back if the job opportunity has not arrived within the time frame.
+        - heading: ""
+          text: "We trust you"
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
     button:
       text: "APPLY"
       color: "white"
-      background: "black"
+      background: "blue"
       hover_color: "white"
       path: "/us/apply"
 
@@ -222,22 +240,19 @@ partners:
   link_to: "/us/partners"
 
 we_trust_section:
-  title: Why trust us?
+  title: Numbers that support us
   text: |
-    A job guarantee seals our commitment to your success! With a proven track record of success, our program will continue to empower future graduates. 
-    <br>
-    <br>
-    The numbers speak for themselves
+    This is a proven sustainable program, it already works and will continue to work. 
   boxes:
     - icon: briefcase-2
       title: "82%"
       text: Job placement rate
     - icon: chart
       title: "60K"
-      text: Avg. Income at a new job
+      text: Avg. income at new job
     - icon: graduation-2
       title: "20MM"
-      text: Millions in scolarchips and counting
+      text: Funding for scholarships 
 
 ## PAYMENT GUIDE SECTION
 # payment_guide:

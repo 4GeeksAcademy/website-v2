@@ -1,36 +1,54 @@
 full_time: []
 part_time:
-  - slug: 'plan-2'
-    academies: ['orlando', 'downtown-miami', 'austin-usa', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
-    recomended: false
-    scholarship: "Financed"
-    payment_time: "Pay in 12 months"
-    price: "~$292p/m"
-    bullets: 
-      - "Several partners offering loans and payment plans"
-      - "You can get a partial scholarship and the remaining balance with a payment plan"
-    icons: 
-      - "/images/ascent_logo.jpg"
-      - "/images/climb-logo.png"
-      - "/images/quotanda-logo.png"
-      
   - slug: 'plan-4'
-    recomended: false
-    academies: ['orlando', 'downtown-miami', 'austin-usa', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
+    recomended: true
+    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
     scholarship: "Full Payment"
     payment_time: "Pay today"
-    price: "$4000"
+    price: "$3000"
     original_price: "$3500"
+    offer: "500$ OFF"
     bullets: 
       - "When you pay upfront you save interests and get a special $500 discount"
       - "Get ready to maximize your productivity with AI"
 
-  - slug: 'spain-upfront-ai-pt'
-    academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain', 'lisbon-portugal','milan-italy','rome-italy']
+  - slug: 'plan-2'
+    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
     recomended: false
+    scholarship: "Financed"
+    payment_time: "Pay in 12 months"
+    price: "~$266 p/m"
+    bullets: 
+      - "There is always a payment plan available to help you join 4Geeks Academy."
+      - "If you don't find anything that works for you here, please contact us so we can try to find other ways to help you."
+    icons: 
+      - "/images/ascent_logo.jpg"
+      - "/images/climb-logo.png"
+      - "/images/quotanda-logo.png"
+
+  - slug: 'plan-3'
+    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
+    recomended: false
+    scholarship: "Financed"
+    payment_time: "Pay in 24 months"
+    price: "~$145 p/m"
+    bullets: 
+      - "There is always a payment plan available to help you join 4Geeks Academy."
+      - "If you don't find anything that works for you here, please contact us so we can try to find other ways to help you."
+    icons: 
+      - "/images/ascent_logo.jpg"
+      - "/images/climb-logo.png"
+      - "/images/quotanda-logo.png"
+
+## Spain & Europe
+  - slug: 'spain-upfront-ai-pt'
+    academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
+    recomended: true
     scholarship: "Pay upfront"
     payment_time: "And get a discount"
     price: "€3000*"
+    original_price: "€3500"
+    offer: "500$ OFF"
     bullets:
       - "Pay with wire transfer, credit or debit card, Paypal, Bitcoin or Ethereum"
       - "*Discount up to €500. From €3500 to €3000"     
@@ -41,10 +59,12 @@ part_time:
 
   - slug: 'europe-upfront-ai-pt'
     academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany','munich-germany', 'lisbon-portugal','milan-italy','rome-italy']
-    recomended: false
+    recomended: true
     scholarship: "Pay upfront"
     payment_time: "And get a discount"
     price: "€3000*"
+    original_price: "€3500"
+    offer: "500$ OFF"
     bullets:
       - "Pay with wire transfer, credit or debit card, Paypal, Bitcoin or Ethereum"
       - "*Discount up to €500. From €3500 instead of €3000"     
@@ -52,51 +72,49 @@ part_time:
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
       - "/images/ethereum.png"    
-                       
-  - slug: 'chile-ai-ufront'
+
+## Chile
+
+  - slug: 'chile-ai-upfront'
     academies: ['santiago-chile']
     recomended: true
     scholarship: "Pay Upfront"
     payment_time: "And get a discount"
-    price: "1.500.000 CLP*"
+    price: "700.000 CLP*"
+    original_price: "1.000.000 CLP"
+    offer: "30% OFF"
     bullets:
       - "Pay with bank transfer, credit or debit card"    
-      - "*Price without discount applied"
+      - "*Discount of 300.000 CLP OFF"
     icons: 
       - "/images/visa-mastercard.png"   
 
-  - slug: 'chile-cs-pt'
+  - slug: 'chile-financed-ai'
     academies: ['santiago-chile']
     recomended: false
     scholarship: "Financed"
     payment_time: "12 months payment"
-    price: "~120.000 CLP"
+    price: Starting from 58.000 CLP"
+    warning_message: "Limited seats!"
     bullets:
       - "Tailor-made financing from 6 to 12 months"  
       - "An advance payment corresponding to 20% of the value of the program must be paid" 
+      - "If you don't find anything that works for you here, please contact us so we can try to find other ways to help you."  
     icons: 
+      - "/images/visa-mastercard.png"  
       - "/images//flevo-new.png"
 
-  - slug: 'latam-financed-ai'
-    academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia', 'caracas-venezuela']
-    recomended: true
-    scholarship: "Pay a little every month"
-    payment_time: "Focus on gaining skills. Pay monthly."
-    price: "Starting from $120/m"
-    bullets: 
-      - "There is always a payment plan available for you to join 4Geeks Academy"
-      - "If you don't find here what you are expecting, please contact us and we will try to find new ways to help"     
-      - "You need to choose if you are taking just the program, or if you also want to get our Career Support in full, or if you want to go all in and sign up with our Job Guaranteed Feature"  
-      - "Pay only for the Cybersecurity program if you are not interested yet in our career support program and our job guarantee"   
-    icons: 
-      - "/images//flevo-new.png" 
-
+## LATAM 
   - slug: 'latam-upfront-ai'
-    academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
-    recomended: false
-    scholarship: "Pay upfront and save"
-    payment_time: "Save $500"
-    price: "USD $1500"
+    academies: ['montevideo-uruguay','bogota-colombia','caracas-venezuela',  'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
+    recomended: true
+    scholarship: "Pay upfront and "
+    payment_time: "save $500"
+    price: "USD $1.399"
+    original_price: "USD $2.500"
+    offer: "44% OFF"
     bullets:
-      - "Save $500. From $2000 to $1500."
-      - "If you don't find here what you are expecting, please contact us and we will try to find new ways to help"     
+      - "save $500. From $2.500 to $1.399."
+      - "If you don't find here what you are expecting, please contact us and we will try to find new ways to help"
+    icons: 
+      - "/images/visa-mastercard.png"  

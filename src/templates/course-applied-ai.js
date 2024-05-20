@@ -11,7 +11,6 @@ import ProgramDetailsMobile from "../components/ProgramDetailsMobile";
 import PricesAndPayment from "../components/PricesAndPayment";
 import Modal from "../components/Modal";
 import LeadForm from "../components/LeadForm";
-import AlumniProjects from "../components/AlumniProjects";
 import Badges from "../components/Badges";
 import TechsWeTeach from "../components/TechsWeTeach";
 import { Circle } from "../components/BackgroundDrawing";
@@ -27,7 +26,7 @@ import Loc from "../components/Loc";
 import ScholarshipProjects from "../components/ScholarshipProjects";
 import TwoColumn from "../components/TwoColumn/index.js";
 
-const Program = ({ data, pageContext, yml }) => {
+const ApliedAi = ({ data, pageContext, yml }) => {
   const { session } = React.useContext(SessionContext);
   const courseDetails = data.allCourseYaml.edges[0].node;
   const [open, setOpen] = React.useState(false);
@@ -182,28 +181,6 @@ const Program = ({ data, pageContext, yml }) => {
           paragraph={yml.badges.paragraph}
         />
       </Header>
-      <ProgramDetails
-        details={courseDetails.details}
-        lang={pageContext.lang}
-        course={program_schedule}
-      />
-      <ProgramDetailsMobile
-        details={courseDetails.details}
-        lang={pageContext.lang}
-        course={program_schedule}
-      />
-
-      {/* OVERLAPED CREAR EN EL YML*/}
-      <Overlaped
-        heading={yml.overlaped?.heading}
-        content={yml.overlaped?.paragraph}
-        button={yml.overlaped?.button}
-        image={yml.overlaped?.image}
-      />
-
-      {/* GEEKSINFO IS A TWOCOLUMN WITH TITLE */}
-      <GeeksInfo lang={pageContext.lang} />
-
       {/* TWO COLUMN CREAR EN EL YML*/}
       <TwoColumn
         left={{ image: yml.two_columns?.image, video: yml.two_columns?.video }}
@@ -218,12 +195,50 @@ const Program = ({ data, pageContext, yml }) => {
         session={session}
       />
 
+      <ProgramDetails
+        details={courseDetails.details}
+        lang={pageContext.lang}
+        course={program_schedule}
+      />
+      <ProgramDetailsMobile
+        details={courseDetails.details}
+        lang={pageContext.lang}
+        course={program_schedule}
+      />
+
+      {/* OVERLAPED CREAR EN EL YML*/}
+      <Overlaped
+        heading={yml.overlaped?.heading}
+        headingStyle={{ fontSize: "26px" }}
+        content={yml.overlaped?.paragraph}
+        button={yml.overlaped?.button}
+        image={yml.overlaped?.image}
+      />
+
+      {/* GEEKSINFO IS A TWOCOLUMN WITH TITLE 
+      <GeeksInfo lang={pageContext.lang} /> */}
+
+      {/* TWO COLUMN CREAR EN EL YML*/}
+      <TwoColumn
+        right={{ image: yml.two_columns_second?.image }}
+        left={{
+          heading: yml.two_columns_second?.heading,
+          sub_heading: yml.two_columns_second?.sub_heading,
+          bullets: yml.two_columns_second?.bullets,
+          content: yml.two_columns_second?.content,
+          button: yml.two_columns_second?.button,
+        }}
+        proportions={yml.two_columns_second?.proportions}
+        session={session}
+      />
+
       <UpcomingDates
         lang={pageContext.lang}
         message={courseDetails.upcoming.no_dates_message}
         actionMessage={courseDetails.upcoming.actionMessage}
         defaultCourse={defaultCourse}
         locations={data.allLocationYaml.edges}
+        showMoreRedirect
       />
       <PricesAndPayment
         background={`linear-gradient(to bottom, ${Colors.white} 50%, ${Colors.lightYellow2} 50%)`}
@@ -465,6 +480,34 @@ export const query = graphql`
             }
             bullets {
               items {
+                text
+              }
+            }
+          }
+          two_columns_second {
+            proportions
+            image {
+              style
+              src
+              shadow
+            }
+            heading {
+              text
+              font_size
+            }
+            sub_heading {
+              text
+              font_size
+            }
+            button {
+              text
+              color
+              background
+              path
+            }
+            bullets {
+              items {
+                heading
                 text
               }
             }
@@ -775,4 +818,4 @@ export const query = graphql`
   }
 `;
 
-export default BaseRender(Program);
+export default BaseRender(ApliedAi);

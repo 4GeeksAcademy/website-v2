@@ -1,14 +1,10 @@
 import React from "react";
-import { useStaticQuery, graphql, Link } from "gatsby";
-import ReactPlayer from "../ReactPlayer";
 import { H2, Paragraph, H3 } from "../Heading";
 import Icon from "../Icon";
 import { Div } from "../Sections";
-import { Button, Colors, Img } from "../Styling";
-import { navigate } from "gatsby";
-import { transferQuerystrings, smartRedirecting } from "../../utils/utils";
+import { Colors } from "../Styling";
 
-const WeTrust = ({ we_trust }) => {
+const WeTrust = ({ we_trust, background, titleProps, paragraphProps }) => {
   return (
     <Div
       id="we-trust"
@@ -25,7 +21,7 @@ const WeTrust = ({ we_trust }) => {
         padding_lg="40px"
         padding_tablet="40px 40px"
         margin="0 auto"
-        background={Colors.lightBlue}
+        background={background || Colors.lightBlue}
         display="block"
         maxWidth="1280px"
       >
@@ -36,6 +32,7 @@ const WeTrust = ({ we_trust }) => {
             fontSize_tablet="32px"
             fontSize="21px"
             lineHeight=""
+            {...titleProps}
           >
             {we_trust.title}
           </H2>
@@ -46,6 +43,7 @@ const WeTrust = ({ we_trust }) => {
             fontSize_tablet="18px"
             fontSize="16px"
             dangerouslySetInnerHTML={{ __html: we_trust.text }}
+            {...paragraphProps}
           />
         </Div>
         <Div

@@ -11,7 +11,6 @@ import ProgramDetailsMobile from "../components/ProgramDetailsMobile";
 import PricesAndPayment from "../components/PricesAndPayment";
 import Modal from "../components/Modal";
 import LeadForm from "../components/LeadForm";
-import AlumniProjects from "../components/AlumniProjects";
 import Badges from "../components/Badges";
 import TechsWeTeach from "../components/TechsWeTeach";
 import { Circle } from "../components/BackgroundDrawing";
@@ -226,6 +225,7 @@ const Program = ({ data, pageContext, yml }) => {
         message={courseDetails.upcoming.no_dates_message}
         actionMessage={courseDetails.upcoming.actionMessage}
         locations={data.allLocationYaml.edges}
+        showMoreRedirect
       />
       <PricesAndPayment
         background={`linear-gradient(to bottom, ${Colors.white} 50%, ${Colors.lightYellow2} 50%)`}
