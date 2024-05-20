@@ -3,7 +3,7 @@ meta_info:
   title: "Frontend Development Course at 4Geeks Academy"
   description: "Become a successful web developer with the Frontend program at 4Geeks Academy! Acquire skills in HTML, CSS, and JavaScript."
   image: "/images/og-preview/full-stack.es.png"
-  bc_slug: "front-end"
+  bc_slug: "front-end-development"
   visibility: "hidden"
   keywords: null
   show_in_apply: false

@@ -3,7 +3,7 @@ meta_info:
   title: "Curso de Desarrollo Frontend en 4Geeks Academy chile"
   description: "¡Conviértete en un desarrollador web exitoso con el programa de Frontend en 4Geeks Academy! Adquiere habilidades en HTML, CSS y JavaScript."
   image: "/images/og-preview/full-stack.es.png"
-  bc_slug: "front-end"
+  bc_slug: "front-end-development"
   visibility: "hidden"
   keywords: null
   show_in_apply: false
