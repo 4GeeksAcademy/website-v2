@@ -12,8 +12,8 @@ const LandingFooter = ({ yml }) => {
   const { session } = React.useContext(SessionContext);
   let socials = session && session.location ? session.location.socials : [];
 
-// Año actual
-const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
+  // Año actual
+  const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
 
   return (
     <>
@@ -131,14 +131,14 @@ const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
           alignItems="center"
           height_tablet="100%"
         >
-            <H4
-              fontSize="13px"
-              lineHeight="22px"
-              textAlign_tablet="left"
-              color={Colors.darkGray}
-            >
-              @ 4Geeks Academy LLC {currentYear}
-            </H4>
+          <H4
+            fontSize="13px"
+            lineHeight="22px"
+            textAlign_tablet="left"
+            color={Colors.darkGray}
+          >
+            @ 4Geeks Academy LLC {currentYear}
+          </H4>
         </Div>
       </GridContainer>
     </>
