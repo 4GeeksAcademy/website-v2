@@ -91,3 +91,51 @@ part_time:
     price: "$8099"
     bullets: 
       - "You're saving $1000 USD"
+
+## Chile
+
+  - slug: 'chile-ds-gf-pt'
+    academies: ['santiago-chile']
+    recomended: true
+    scholarship: "Programa + Apoyo Profesional"
+    payment_time: "Paga por adelantado"
+    price: "3.375.000 CLP*"
+    original_price: "€4.500.000"
+    offer: "25% de descuento"
+    bullets:
+      - "Paga con transferencia bancaria, tarjeta de crédito o débito"
+      - "*Descuento de hasta 1.125.000 CLP. Desde 3.375.000 CLP en lugar de 4.500.000 CLP"
+      - "Siempre hay un plan de pago disponible para que te unas a 4Geeks Academy. Si no encuentras aquí lo que esperas, contáctanos y trataremos de encontrar nuevas formas de ayudarte."
+      - "Paga solo por el programa de Ciencia de Datos si aún no estás interesado en nuestro programa de apoyo profesional."
+    icons: 
+      - "/images/visa-mastercard.png"  
+      - "/images/flevo-new.png"
+
+  - slug: 'chile-ds-solo-pt'
+    academies: ['santiago-chile']
+    recomended: false
+    scholarship: "Solo Programa de Ciencia de Datos"
+    payment_time: "Enfócate en adquirir habilidades. Paga por adelantado."
+    price: "3.750.000 CLP*"
+    bullets:
+      - "Paga con transferencia bancaria, tarjeta de crédito o débito"
+      - "Siempre hay un plan de pago disponible para que te unas a 4Geeks Academy. Si no encuentras aquí lo que esperas, contáctanos y trataremos de encontrar nuevas formas de ayudarte."
+      - "Paga solo por el programa de Ciencia de Datos si aún no estás interesado en nuestro programa de apoyo profesional."
+    icons: 
+      - "/images/visa-mastercard.png"
+      - "/images/flevo-new.png"  
+
+  - slug: 'chile-ds-financed-pt'
+    academies: ['santiago-chile']
+    recomended: false
+    scholarship: "Financiado"
+    payment_time: "Programa + Apoyo Profesional. Paga mensualmente, A partir de :"
+    price: "~220.500 CLP por mes"
+    bullets:
+      - "Financiamiento a medida de 6 a 18 meses"
+      - "Se debe pagar un pago inicial correspondiente al 20% del valor del programa"
+      - "Si no encuentras aquí lo que esperas, contáctanos y trataremos de encontrar nuevas formas de ayudarte."
+    icons: 
+      - "/images/visa-mastercard.png"
+      - "/images/flevo-new.png"
+

@@ -4,7 +4,7 @@ meta_info:
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   description: "Conoce las próximas fechas: Cursos, Programas, Talleres y Eventos. Todos enfocado especificamente para la comunidad de desarrolladores."
   image: "/images/seo/calendar-es.png"
-  keywords: "4Geeks Academy Eventos, 4Geeks Academy Proximas Fechas, 4Geeks Academy Talleres, 4Geeks Academy Cursos"
+  keywords: null
   redirects: ["/calendario", "/es/calendario"]
 
 seo_title: "Coding Bootcamp"
@@ -14,7 +14,7 @@ header:
   title: Próximos programas y Eventos de 4GEEKS ACADEMY
   paragraph: "Ajusta los filtros a los eventos de los cursos que más te interesan"
   image: ""
-  image_alt: ""
+  image_alt: "Coding Bootcamp"
 
 events:
   title: "Próximos Eventos"
@@ -39,7 +39,7 @@ cohorts:
     duration_label: duracion
     duration_weeks: 18 semanas
     duration_part_time: 18 semanas
-    duration_full_time: 9 semanas
+    duration_full_time: 10 semanas
     button_text: aplicar
     button_link: "/es/aplica"
   footer:

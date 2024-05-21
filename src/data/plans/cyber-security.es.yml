@@ -218,7 +218,7 @@ part_time:
     recomended: false
     scholarship: "Financiado"
     payment_time: "Pago en 18 meses"
-    price: "~168.000 CLP"
+    price: "~158.000 CLP"
     warning_message: "¡Plazas limitadas!"
     bullets:
       - "Financiamiento a medida de 6 a 18 meses"  

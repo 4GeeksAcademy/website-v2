@@ -15,17 +15,17 @@ header:
   title: "4Geeks Informe de resultados de la Academia"
   paragraph: "Este informe está destinado a mostrar nuestros resultados, logros y lo que consideramos que debe mejorarse. Es nuestra historia y nuestra manera de hacerle saber que cada vez trabajamos más duro para mejorar."
   image: 
-  image_alt: ""
+  image_alt: "4Geeks Informe de resultados de la Academia"
 sections:
   - title: "Nuestra Declaración"
     ref: "our_statement"
     paragraph: "La industria de los Bootcamp de codificación ha crecido enormemente en los últimos años. Las grandes ciudades están reuniendo la mayoría de los números, y también están aumentando los nuevos centros tecnológicos (como Miami).
-la ocasión y creciendo para afrontar el desafío.
+      la ocasión y creciendo para afrontar el desafío.
 
-4Geeks Academy está autorizada por el Departamento de Educación de Florida; también tenemos una relación comercial duradera con Miami Dade College, y hemos sido galardonados y
-reconocidos muchas veces por nuestro plan de estudios, metodologías y resultados.
+      4Geeks Academy está autorizada por el Departamento de Educación de Florida; también tenemos una relación comercial duradera con Miami Dade College, y hemos sido galardonados y
+      reconocidos muchas veces por nuestro plan de estudios, metodologías y resultados.
 
-Desde 2017 hemos estado creciendo muy rápido. Hemos graduado a más de 2300 estudiantes en 6 campus diferentes y más de 15 programas en curso."
+      Desde 2017 hemos estado creciendo muy rápido. Hemos graduado a más de 2300 estudiantes en 6 campus diferentes y más de 15 programas en curso."
 
     stats: 
       - stat: "+ 4000"
@@ -45,15 +45,15 @@ Desde 2017 hemos estado creciendo muy rápido. Hemos graduado a más de 2300 est
     ref: "student_facts"
     paragraph: "Estos son los resultados de las operaciones 4GA (excluidos los programas lanzados junto con Miami Dade College) desde marzo de 2018 hasta marzo de 2020.
 
-Los programas incluidos son el Programa de desarrollo de software Full-Stack que se imparte a través de metodologías de medio tiempo y tiempo completo."
+      Los programas incluidos son el Programa de desarrollo de software Full-Stack que se imparte a través de metodologías de medio tiempo y tiempo completo."
 
     stats: 
       - stat: "210"
         content: "Estudiantes fueron considerados para este reporte"
       - stat: "80%"
         content: "Nuestros estudiantes eligen un 
-programa Part-Time. Solo el 20% persigue una
-Programa de tiempo completo."
+          programa Part-Time. Solo el 20% persigue una
+          Programa de tiempo completo."
     sub_sections:
       - title: "PART - TIME"
         content: "Fuimos fundados bajo una visión de PT y seguimos mostrando nuestra principal fortaleza con la Educación a tiempo parcial; la nueva forma de aprender y lograr (mejorar) una nueva carrera." 
