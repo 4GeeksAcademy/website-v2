@@ -315,6 +315,7 @@ const Home = (props) => {
           heading: yml.why_4geeks?.heading,
           sub_heading: yml.why_4geeks?.sub_heading,
           content: yml.why_4geeks?.content,
+          bullets: yml.why_4geeks?.bullets,
           button: {
             ...yml.why_4geeks?.button,
             text: applyButton || yml.why_4geeks?.button?.text,
@@ -470,6 +471,12 @@ export const query = graphql`
               color
               background
               path
+            }
+            bullets {
+              items {
+                heading
+                icon
+              }
             }
           }
           iconogram {

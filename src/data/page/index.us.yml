@@ -32,7 +32,7 @@ news:
 button:
   button_text: See Programs
   button_link: "#programs"
-  
+
 ## BADGES SECTION /components/Badges
 badges:
   title: ""
@@ -52,19 +52,18 @@ why_4geeks:
   image:
     style: '{ "backgroundSize": "contain", "background-position": "center", "min-height": "400px", "height": "400px"}'
     src: "/images/landing/hombre-con-laptop-2.png"
-    shadow: false  
+    shadow: false
   heading:
-    text: "Why 4Geeks"
+    text: "Be part of a vibrant community"
     style: '{ "fontWeight": 400, "marginBottom": "32px" }'
     font_size: ["35px", "35px", "35px", "35px", "35px"]
   sub_heading:
-    text: "Ready to unleash your potential with 4Geeks Academy's wide range of programs?"
+    text: "Join our international community of over 4000 students, teachers, partners, and alumni. Connect through various channels like Slack, GitHub, social media, and our exclusive platform 4Geeks.com. Where there’s a geek, there’s a way! What sets us apart:"
     font_size: ["21px", "21px", "21px", "21px", "21px"]
   content:
     text: |-
-      Whether you're looking to become a Full-Stack Developer, Data Scientist, or explore any of our other programs, 4Geeks Academy offers a variety of options to help you kickstart your tech career. With over 8 years of experience, a global presence, and worldwide recognition, we are here to guide you towards success in the tech industry!.
-      <br>
-      <span style="font-weight: 800;">Join the academy and transform your career!</span>
+      Belong to a community of like-minded people who genuinely support each other. Gain lifetime access to our online learning platform and mentorship services. We’ll always be here for you, even after you graduate. <br>
+      <a href="/us/geeks-vs-others">Compare 4Geeks</a> to other coding bootcamps.
     font_size: ["16px"]
   button:
     text: "Apply now"
@@ -79,7 +78,7 @@ why_4geeks:
 #   image:
 #     style: '{ "backgroundSize": "contain", "height": ["500px", "500px", "500px", "500px", "300px"], "minHeight": "auto" }'
 #     src: "/images/landing/feliz-empresario-laptop-2.png"
-#     shadow: false  
+#     shadow: false
 #   heading:
 #     text: "Finance your future"
 #     style: '{ "fontWeight": 400, "marginBottom": "32px" }'
@@ -89,7 +88,7 @@ why_4geeks:
 #     font_size: ["21px", "21px", "21px", "21px", "21px"]
 #   content:
 #     text: |
-#       We’re all about making our high-quality education affordable to everyone. 
+#       We’re all about making our high-quality education affordable to everyone.
 #       That's why we offer multiple options to help you fund our coding bootcamps stress-free. Whether it's an ISA, scholarship, payment plan or Job Guarantee we're here to guide you every step of the way.
 #     font_size: ["16px"]
 #   button:
@@ -116,21 +115,21 @@ iconogram:
     style: '{ "textAlign": "center", "fontSize": "40px", "fontWeight": 400 }'
   swipable: false
   icons:
-  - icon: "graduation-2"
-    content: "4500+ Graduates"
-    content_style: '{ "fontSize": "24px" }'
-  - icon: "group-2"
-    color: "#23C520"
-    content: "7 Campus"
-    content_style: '{ "fontSize": "24px" }'
-  - icon: "briefcase-new"
-    color: "#7D79FF"
-    content: "86% hired"
-    content_style: '{ "fontSize": "24px" }'
-  - icon: "star-2"
-    color: "#0084FF"
-    content: "4.85 rating"
-    content_style: '{ "fontSize": "24px" }'
+    - icon: "graduation-2"
+      content: "4500+ Graduates"
+      content_style: '{ "fontSize": "24px" }'
+    - icon: "group-2"
+      color: "#23C520"
+      content: "7 Campus"
+      content_style: '{ "fontSize": "24px" }'
+    - icon: "briefcase-new"
+      color: "#7D79FF"
+      content: "86% hired"
+      content_style: '{ "fontSize": "24px" }'
+    - icon: "star-2"
+      color: "#0084FF"
+      content: "4.85 rating"
+      content_style: '{ "fontSize": "24px" }'
 
 iconogram_two:
   heading:
@@ -149,21 +148,21 @@ iconogram_two:
   text_link: "#"
   swipable: false
   icons:
-  - icon: "bill"
-    title: Payment Plans
-    content: "You can pay in installments every 6 months with no interest."
-  - icon: "money"
-    color: "#0084FF"
-    title: Loans
-    content: "Choose from 3, 4, or 5-year loan options."
-  - icon: "hands-group"
-    color: "#25BF6C"
-    title: Scholarships
-    content: "We offer several full and partial scholarships."
-  - icon: "contract-2"
-    color: "#BE8BFF"
-    title: Contact US
-    content: "For assistance, contact us. We're here for you."
+    - icon: "bill"
+      title: Payment Plans
+      content: "You can pay in installments every 6 months with no interest."
+    - icon: "money"
+      color: "#0084FF"
+      title: Loans
+      content: "Choose from 3, 4, or 5-year loan options."
+    - icon: "hands-group"
+      color: "#25BF6C"
+      title: Scholarships
+      content: "We offer several full and partial scholarships."
+    - icon: "contract-2"
+      color: "#BE8BFF"
+      title: Contact US
+      content: "For assistance, contact us. We're here for you."
   button:
     text: "Conditions apply."
     color: ""
