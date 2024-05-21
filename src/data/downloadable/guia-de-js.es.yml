@@ -20,7 +20,7 @@ form:
   heading: "Descargar Guía" 
   motivation: "En breves minutos, después de haber completado el formulario, en tu correo electrónico habrás recibido la guía de JavaScript, donde tendrás los conceptos básicos para empezar a aprender programación web."
   button_label: Descargar la Guía Gratis
-  redirect: https://4geeksacademy.notion.site/Gu-a-de-JavaScript-c0e636ad30c9451492058555347babd2?pvs=74 #you can redirect to another url or entirely diffrent website
+  # redirect: https://4geeksacademy.notion.site/Gu-a-de-JavaScript-c0e636ad30c9451492058555347babd2?pvs=74 #you can redirect to another url or entirely diffrent website
 # jumbotron on the top (cannot be commented out)
 
 navbar:
