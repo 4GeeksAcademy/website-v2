@@ -12,6 +12,7 @@ import { Circle } from "../components/BackgroundDrawing";
 import { apply, tagManager } from "../actions";
 import PhoneInput from "../components/LeadForm/PhoneInput";
 import Modal from "../components/Modal_v2";
+import { isWindow } from "../utils/utils";
 
 const us = {
   "(In-person and from home available)": "(In-person and from home available)",
@@ -58,6 +59,10 @@ const Apply = (props) => {
     token: { value: null, valid: false },
   });
   const [consentValue, setConsentValue] = useState([]);
+
+  React.useEffect(() => {
+    if (isWindow) window.GATSBY_CAPTCHA_KEY = process.env.GATSBY_CAPTCHA_KEY;
+  }, []);
 
   const programs = data.allCourseYaml.edges
     .filter(
