@@ -168,7 +168,7 @@ two_column:
     button:
       text: ÚNETE AL PROGRAMA
       color: white
-      background: "#0084FF"
+      background: "blue"
       hover_color: white
       path: "#prices_and_payment"
 
@@ -211,7 +211,7 @@ two_column:
     button:
         text: "APLICAR"
         color: "white"
-        background: "#0084FF"
+        background: "blue"
         hover_color: "white"
         path: "/es/aplica"
 
