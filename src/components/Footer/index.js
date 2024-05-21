@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Container, Div, GridContainer } from "../Sections";
 import { Colors, RoundImage, Anchor, Button } from "../Styling";
 import { H3, H4 } from "../Heading";
@@ -48,12 +48,15 @@ const Footer = ({ yml }) => {
 
   const [formStatus, setFormStatus] = useState({
     status: "idle",
-    msg: "Resquest",
+    msg: "Request",
   });
   const [formData, setVal] = useState({
     email: { value: "", valid: false },
     consent: { value: true, valid: true },
   });
+
+  // Año actual
+  const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
 
   return (
     <>
@@ -426,7 +429,7 @@ const Footer = ({ yml }) => {
               textAlign_tablet="left"
               color={Colors.darkGray}
             >
-              @ 4Geeks Academy LLC 2019
+              @ 4Geeks Academy LLC {currentYear}
             </H4>
           </Div>
         </GridContainer>
