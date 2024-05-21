@@ -54,7 +54,7 @@ const ProgramDetails = (props) => {
 
   const { title, sub_title, list } = props.details.about;
   const subHeading = props.sub_heading || props.details.sub_heading;
-  const splitedSubHeading = subHeading.replaceAll('\n', '</br>');
+  const splitedSubHeading = subHeading.replaceAll("\n", "</br>");
 
   useEffect(() => {
     const inter = setInterval(() => {
