@@ -53,6 +53,8 @@ const ProgramDetails = (props) => {
   );
 
   const { title, sub_title, list } = props.details.about;
+  const subHeading = props.sub_heading || props.details.sub_heading;
+  const splitedSubHeading = subHeading.replaceAll('\n', '</br>');
 
   useEffect(() => {
     const inter = setInterval(() => {
@@ -151,9 +153,8 @@ const ProgramDetails = (props) => {
           lineHeight_xs="22px"
           fontSize_tablet="15px"
           fontSize_xs="18px"
-        >
-          {props.sub_heading || props.details.sub_heading}
-        </Paragraph>
+          dangerouslySetInnerHTML={{ __html: splitedSubHeading }}
+        />
       </Div>
 
       {props.withoutAnimation !== true && (
