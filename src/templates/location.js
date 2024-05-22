@@ -570,6 +570,7 @@ export const query = graphql`
             title
             description
             icon
+            text_link
           }
         }
       }
