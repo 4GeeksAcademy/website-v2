@@ -96,13 +96,31 @@ who_is_hiring:
   title: Who is hiring our students?
   paragraph: Don't miss out on the awesome allies of 4Geeks Academy! Here are just a few of them.
   images:
-    - '/images/allies/miamitech-works-logo.png'
-    - '/images/allies/utec.png'
-    - '/images/allies/clark-uni-rounded-logo.png'
-    - '/images/allies/cinde.png'
-    - '/images/allies/idb.png'
-    - '/images/partner/agilia.png'
-    - '/images/partner/facebook-2.png'
+    - '/images/partner/microsoft-2.png'
+    - '/images/coding/google-developers.png'
+    - '/images/partner/boats.jpg'
+    - '/images/partner/meta-logo.png'
+    - '/images/partner/ebay.png'
+    - '/images/partner/natgeo.png'
+    - '/images/partner/evernote.png'
+    - '/images/partner/telefonica.png'
+    - '/images/partner/twilio.png'
+    - '/images/partner/uber.png'
+    - '/images/partner/Neo9.png'
+    - '/images/partner/jooble.png'
+    - '/images/partner/kpmg-logo1.png'
+    - '/images/partner/ultimate.png'
+    - '/images/partner/tcg.png'
+    - '/images/partner/razz.png'
+    - '/images/partner/overseas.png'
+    - '/images/partner/ds9.png'
+    - '/images/partner/coinet.jpg'
+    - '/images/partner/strata.png'
+    - '/images/partner/mdc_ce.png'
+    - '/images/partner/beacon_council.jpg'
+    - '/images/partner/blackstone.png'
+    - '/images/partner/cemex.png'
+
 
 two_column:
   - image:
