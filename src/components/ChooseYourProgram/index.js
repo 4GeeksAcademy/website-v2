@@ -29,7 +29,6 @@ const ChooseYourProgram = ({
               description_mobile
               link
               icon
-              text_link
             }
             title
             paragraph
@@ -269,9 +268,7 @@ const ChooseYourProgram = ({
                               gap: "10px",
                             }}
                           >
-                            {program.text_link}
-                            {" "}
-                            <span>→</span>
+                            {program.text_link} <span>→</span>
                           </Button>
                         )}
                       </Link>

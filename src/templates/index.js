@@ -623,6 +623,7 @@ export const query = graphql`
             description
             description_mobile
             icon
+            text_link
           }
         }
       }
