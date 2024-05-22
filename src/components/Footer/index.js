@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState } from "react";
 import { Container, Div, GridContainer } from "../Sections";
 import { Colors, RoundImage, Anchor, Button } from "../Styling";
 import { H3, H4 } from "../Heading";
@@ -56,7 +56,7 @@ const Footer = ({ yml }) => {
   });
 
   // Año actual
-  const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
+  const currentYear = new Date().getFullYear();
 
   return (
     <>

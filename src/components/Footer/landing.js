@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Div, GridContainer } from "../Sections";
 import { Colors, RoundImage, Anchor } from "../Styling";
@@ -13,7 +13,7 @@ const LandingFooter = ({ yml }) => {
   let socials = session && session.location ? session.location.socials : [];
 
   // Año actual
-  const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
+  const currentYear = new Date().getFullYear();
 
   return (
     <>
