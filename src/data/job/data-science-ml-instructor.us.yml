@@ -1,0 +1,65 @@
+meta_info:
+  slug: "data-science-ml-instructor"
+  title: "Data Science and Machine Learning Instructor"
+  visibility: "visible"
+  description: "Join 4Geeks Academy and inspire the next generation of data scientists and machine learning experts."
+  template: "job"
+  open: true
+  image: "https://storage.googleapis.com/media-breathecode/59c3afdc064670e4d0062a42cd4bf954d1b9c93720500d4fdce265b4792538ab"
+  keywords: ""
+  redirects: []
+
+## BANNER INFO
+banner_heading: "Lead Data Science and Machine Learning Instructor"
+banner_sub_heading: ""
+banner_image: "/images/bg/pricing-bg.jpg"
+link_back: "/us/jobs"
+button_url: "https://marketing892162.typeform.com/to/GIY8BZUr"
+cities:
+  - Classes are Online/remote
+  - USA
+  - Spain
+  - Europe
+  - LATAM
+
+button_text: "APPLY NOW"
+
+## JOB MAIN SECTION INFO
+title: "What could be more important for a coding academy than having great teachers?"
+description: "At 4Geeks we want to have the best minds mentoring our students. That is why we are committed to supporting our teachers in their professional life, promoting their personal branding and projects in any space that the academy has available."
+
+content:
+  - label: "Description"
+    list:
+      - "The main instructor has all the major teaching responsibilities in the classroom."
+
+  - label: "Responsibilities"
+    list:
+      - "Organize the course around a set of diverse case studies."
+      - "Integrate computing into every aspect of the course."
+      - "Demonstrate the importance of critical thinking/skepticism through examples."
+      - "Demonstrate how to efficiently use computing in the data analysis process."
+      - "Leverage application-specific domain knowledge and interactive data visualization to guide the choice of statistical techniques."
+
+  - label: "Technical requirements"
+    list:
+      - "Experience analyzing data with the main objective of solving real-world problems."
+      - "Knowledge and understanding of statistical techniques to use them effectively."
+      - "Programming experience in Python, especially NumPy, pandas, scikit-learn, matplotlib, seaborn, plotly. Torch and TensorFlow are highly desired."
+      - "Experience in supervised learning algorithms like regressions, random forests or support vector machines."
+      - "Knowledge of unsupervised learning models like clustering and k-means."
+      - "Experience in deep learning models, specifically those used for image classification."
+      - "Knowledge or experience with tools like Git, AWS, GCP."
+      - "Knowledge of at least one BI tool like PowerBI or Tableau to create dashboards to tell stories with data."
+
+  - label: "Requirements"
+    list:
+      - "Master's or Ph.D. degree in Computer Science, Statistics, Mathematics, Data Science, or a related field with a focus on data analysis, machine learning, or artificial intelligence."
+      - "Strong proficiency in programming languages commonly used in data science and machine learning, such as Python and R, along with familiarity with relevant libraries and frameworks."
+      - "Demonstrated expertise in applying machine learning algorithms and statistical techniques to analyze complex datasets and solve real-world problems."
+      - "Prior teaching or training experience in data science, machine learning, or a related field, preferably at the university or professional level."
+      - "Excellent communication and presentation skills, with the ability to explain complex concepts clearly and effectively to students with varying levels of expertise."
+
+  - label: "Schedule"
+    list:
+      - "We are looking to hire a Data Science and Machine Learning Instructor to teach part-time, Monday, Wednesday, and Friday from 18:00 to 21:00 EST, or 18:30 to 21:30 CET remote."

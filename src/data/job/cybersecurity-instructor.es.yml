@@ -1,0 +1,60 @@
+meta_info:
+  slug: "instructor-principal-ciberseguridad"
+  title: "Instructor Principal de Ciberseguridad"
+  visibility: "visible"
+  description: "Únete a 4Geeks Academy y forma a la próxima generación de expertos en ciberseguridad."
+  template: "job"
+  open: true
+  image: "https://storage.googleapis.com/media-breathecode/59c3afdc064670e4d0062a42cd4bf954d1b9c93720500d4fdce265b4792538ab"
+  keywords: ""
+  redirects: []
+
+## BANNER INFO
+banner_heading: "Instructor Principal de Ciberseguridad"
+banner_sub_heading: ""
+banner_image: "/images/bg/pricing-bg.jpg"
+link_back: "/us/jobs"
+button_url: "https://marketing892162.typeform.com/to/GIY8BZUr"
+cities:
+  - Clases son Online/remotas
+  - EE.UU.
+  - España
+  - Europa
+  - LATAM
+
+button_text: "APLICA AHORA"
+
+## JOB MAIN SECTION INFO
+title: "¿Qué podría ser más importante para una academia de programación que tener excelentes maestros?"
+description: "En 4Geeks queremos tener las mejores mentes mentorando a nuestros estudiantes. Por eso estamos comprometidos a apoyar a nuestros profesores en su vida profesional, promoviendo su marca personal y proyectos en cualquier espacio disponible en la academia."
+
+content:
+  - label: "Descripción"
+    list:
+      - "El instructor principal tiene todas las responsabilidades mayores de enseñanza en el aula."
+
+  - label: "Responsabilidades"
+    list:
+      - "El Instructor Principal es responsable de dirigir las clases dentro del aula:"
+      - "Establecer el ritmo de la clase, poner la presión y los plazos a los estudiantes, y asegurarse de que su cohorte esté a tiempo."
+      - "Hacer cumplir el plan de estudios, seguirlo según la plataforma, día a día."
+      - "Preparar sus clases y asegurarse de que los proyectos, instrucciones y ejercicios estén correctamente explicados y seguidos por los estudiantes."
+      - "Identificar áreas de mejora en el plan de estudios, tutoriales, ejercicios o proyectos."
+      - "Asegurarse de que los estudiantes no estén atascados por un largo período de tiempo (minutos en lugar de horas o días)."
+      - "Liderar a los asistentes de enseñanza en ayudarle a responder preguntas y revisar los ejercicios."
+      - "Explicar conceptos y asesorar a los estudiantes según las recomendaciones de la academia todos los días."
+      - "Asegurarse de que los estudiantes se mantengan comprometidos y comprendan."
+      - "Informar al Gerente del Programa cuando ciertos estudiantes puedan comenzar a perder el compromiso."
+      - "Recoger la asistencia e informar inmediatamente cuando un estudiante haya faltado a dos clases seguidas."
+      - "Responder a las preguntas de los estudiantes en Slack (cuando sea posible)."
+      - "Delegar en el asistente de enseñanza el asesoramiento y las preguntas en situaciones particulares."
+      - "Dar retroalimentación sobre los proyectos entregados."
+      - "Asegurarse de que las clases estén siendo grabadas."
+
+  - label: "Requisitos técnicos"
+    list:
+      - "Título de licenciatura en Ciencias de la Computación, Tecnología de la Información, Ciberseguridad o un campo relacionado. Se prefiere título de máster."
+      - "Certificaciones profesionales en ciberseguridad como eJPT, CompTIA Security+, CISSP, Certified Ethical Hacker (CEH) o equivalentes son altamente deseables."
+      - "Experiencia comprobada trabajando en el campo de la ciberseguridad, con un fuerte entendimiento de los estándares, protocolos, herramientas y técnicas de la industria."
+      - "Experiencia previa en enseñanza o capacitación, preferiblemente en un entorno educativo secundario o postsecundario, es preferida."
+      - "Excelentes habilidades de comunicación y presentación, con la capacidad de transmitir conceptos técnicos complejos de manera clara y comprensible."

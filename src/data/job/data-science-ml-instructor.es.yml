@@ -1,0 +1,65 @@
+meta_info:
+  slug: "data-science-y-ml-instructor"
+  title: "Instructor de Ciencia de Datos y Aprendizaje Automático"
+  visibility: "visible"
+  description: "Únete a 4Geeks Academy e inspira a la próxima generación de científicos de datos y expertos en aprendizaje automático."
+  template: "job"
+  open: true
+  image: "https://storage.googleapis.com/media-breathecode/59c3afdc064670e4d0062a42cd4bf954d1b9c93720500d4fdce265b4792538ab"
+  keywords: ""
+  redirects: []
+
+## BANNER INFO
+banner_heading: "Instructor de Data Science y Machine Learning"
+banner_sub_heading: ""
+banner_image: "/images/bg/pricing-bg.jpg"
+link_back: "/us/jobs"
+button_url: "https://marketing892162.typeform.com/to/GIY8BZUr"
+cities:
+  - Clases son Online/remotas
+  - EE.UU.
+  - España
+  - Europa
+  - LATAM
+
+button_text: "APLICA AHORA"
+
+## JOB MAIN SECTION INFO
+title: "¿Qué podría ser más importante para una academia de programación que tener excelentes maestros?"
+description: "En 4Geeks queremos tener las mejores mentes mentorando a nuestros estudiantes. Por eso estamos comprometidos a apoyar a nuestros profesores en su vida profesional, promoviendo su marca personal y proyectos en cualquier espacio disponible en la academia."
+
+content:
+  - label: "Descripción"
+    list:
+      - "El instructor principal tiene todas las responsabilidades mayores de enseñanza en el aula."
+
+  - label: "Responsabilidades"
+    list:
+      - "Organizar el curso alrededor de un conjunto de estudios de caso diversos."
+      - "Integrar la computación en cada aspecto del curso."
+      - "Demostrar la importancia del pensamiento crítico/escepticismo a través de ejemplos."
+      - "Demostrar cómo usar eficientemente la computación en el proceso de análisis de datos."
+      - "Aprovechar el conocimiento específico de la aplicación y la visualización interactiva de datos para guiar la elección de técnicas estadísticas."
+
+  - label: "Requisitos técnicos"
+    list:
+      - "Experiencia analizando datos con el objetivo principal de resolver problemas del mundo real."
+      - "Conocimiento y comprensión de técnicas estadísticas para usarlas efectivamente."
+      - "Experiencia en programación en Python, especialmente con NumPy, pandas, scikit-learn, matplotlib, seaborn, plotly. Torch y TensorFlow son altamente deseados."
+      - "Experiencia en algoritmos de aprendizaje supervisado como regresiones, random forests o support vector machines."
+      - "Conocimiento de modelos de aprendizaje no supervisado como clustering y k-means."
+      - "Experiencia en modelos de aprendizaje profundo, específicamente aquellos utilizados para la clasificación de imágenes."
+      - "Conocimiento o experiencia con herramientas como Git, AWS, GCP."
+      - "Conocimiento de al menos una herramienta de BI como PowerBI o Tableau para crear dashboards y contar historias con datos."
+
+  - label: "Requisitos"
+    list:
+      - "Título de Máster o Doctorado en Ciencias de la Computación, Estadística, Matemáticas, Ciencia de Datos, o un campo relacionado con un enfoque en análisis de datos, aprendizaje automático o inteligencia artificial."
+      - "Alta competencia en lenguajes de programación comúnmente usados en ciencia de datos y aprendizaje automático, como Python y R, junto con familiaridad con bibliotecas y marcos relevantes."
+      - "Experiencia demostrada en la aplicación de algoritmos de aprendizaje automático y técnicas estadísticas para analizar conjuntos de datos complejos y resolver problemas del mundo real."
+      - "Experiencia previa en enseñanza o capacitación en ciencia de datos, aprendizaje automático, o un campo relacionado, preferiblemente a nivel universitario o profesional."
+      - "Excelentes habilidades de comunicación y presentación, con la capacidad de explicar conceptos complejos de manera clara y efectiva a estudiantes con diversos niveles de experiencia."
+
+  - label: "Horario"
+    list:
+      - "Estamos buscando contratar a un Instructor de Ciencia de Datos y Aprendizaje Automático para enseñar a tiempo parcial, lunes, miércoles y viernes de 18:00 a 21:00 EST, o de 18:30 a 21:30 CET de forma remota."
