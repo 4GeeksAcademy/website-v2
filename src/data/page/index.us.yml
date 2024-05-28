@@ -70,6 +70,16 @@ why_4geeks:
     color: "white"
     background: "blue"
     path: "/us/apply"
+  bullets:
+    items:
+    - heading: "Lifelong and readily available coding mentorship"
+      icon: "check"
+    - heading: "Unlimited and personalized career support"
+      icon: "check"
+    - heading: "Award-winning syllabus and methodology"
+      icon: "check"
+    - heading: "An extensive network of partners in tech"
+      icon: "check"
 
 ## TWO COLUMNS
 # two_columns:
