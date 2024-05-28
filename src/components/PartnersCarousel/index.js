@@ -91,6 +91,7 @@ const PartnersCarousel = ({ data }) => {
 
   const settings = {
     className: "slider variable-width",
+    dotsClass: "slick-dots-staff",
     variableWidth: true,
     dots: true,
     infinite: true,
@@ -104,7 +105,7 @@ const PartnersCarousel = ({ data }) => {
   };
 
   return (
-    <Div padding="30px 30px 45px 30px" width="100%" display="block">
+    <Div maxWidth="1280px" margin="0 auto 10px auto" padding="30px 30px 45px 30px" width="100%" display="block">
       <H2
         type="h2"
         fontSize="30px"

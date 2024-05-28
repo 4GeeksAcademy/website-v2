@@ -1,38 +1,26 @@
 import React, { useState, useRef } from "react";
 import { graphql } from "gatsby";
-import Link from "gatsby-link";
-import { navigate } from "gatsby";
 import {
-  Column,
-  Row,
   GridContainer,
   Header,
   Div,
   Grid,
 } from "../components/Sections";
-import { H1, H2, H3, H4, Paragraph } from "../components/Heading";
-import { Button, Colors, StyledBackgroundSection } from "../components/Styling";
-import Badges from "../components/Badges";
+import { H2, H4, Paragraph } from "../components/Heading";
+import { Button, Colors } from "../components/Styling";
 import OurPartners from "../components/OurPartners";
 import Icon from "../components/Icon";
 import BaseRender from "./_baseLayout";
 import { beHiringPartner } from "../actions";
-import { Circle } from "../components/BackgroundDrawing";
-import Modal from "../components/Modal";
-import { SessionContext } from "../session";
 import LeadForm from "../components/LeadForm/index.js";
 import PartnersCarousel from "../components/PartnersCarousel";
 import BenefitsAndCharts from "../components/BenefitsAndCharts";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
-function rand() {
-  return Math.round(Math.random() * 20) - 10;
-}
 
 const Partners = (props) => {
-  const { session } = React.useContext(SessionContext);
-  const { data, pageContext, yml, path } = props;
-  const [open, setOpen] = React.useState(false);
+  const { data, pageContext, yml } = props;
+  const [open, setOpen] = useState(false);
   const joinPartnersRef = useRef(null);
 
   const goToForm = (e) => {
@@ -73,6 +61,8 @@ const Partners = (props) => {
         padding_tablet="10rem 0 4rem"
         containerColumns_tablet="1fr repeat(12,1fr) 1fr"
         columns_tablet="2"
+        maxWidth="1280px"
+        margin="auto"
       >
         <Header
           hideArrowKey
@@ -84,8 +74,6 @@ const Partners = (props) => {
           padding="0 10px"
           margin="0"
           position="relative"
-
-          // height_tablet="350px"
         >
           <ButtonPartner />
         </Header>
@@ -109,13 +97,12 @@ const Partners = (props) => {
       </GridContainer>
       <PartnersCarousel data={partnersData.partners_carousel} />
       <GridContainer
-        // padding="10rem 0 4rem"
-        // padding_tablet="10rem 0 4rem"
         background={Colors.verylightGray}
         containerColumns_tablet="1fr repeat(12,1fr) 1fr"
         padding="70px 0"
         padding_tablet="70px 0"
-        // columns_tablet="1"
+        childMaxWidth="1280px"
+        childMargin="auto"
       >
         <H2
           type="h2"
@@ -174,15 +161,12 @@ const Partners = (props) => {
             height="2px"
             background="#ACACAC"
             style={{ opacity: "0.5" }}
-          ></Div>
+          />
         </GridContainer>
         <Grid
-          // gap="30px"
-          // gridTemplateColumns="repeat(auto-fill, minmax(40%, 1fr))"
           gridTemplateColumns_tablet="repeat(auto-fill, minmax(40%, 1fr))"
           columnCount_tablet="2"
           columnCount="0"
-          // style={{orphans: "1", widows: "1", columnGap: "1.25rem", boxSizing: "border-box"}}
           justifyContent="center"
           padding="0 6%"
         >
@@ -268,8 +252,6 @@ const Partners = (props) => {
           >
             {partnersData.coding.tagline}
           </H2>
-
-          {/*<Paragraph>{paragraph}</Paragraph>*/}
           <Paragraph
             fontFamily="Lato"
             fontWeight="normal"
@@ -291,8 +273,6 @@ const Partners = (props) => {
           padding="0 0 75px 0"
           margin="0"
           images={partnersData.coding.images}
-          // title={partnersData.coding.tagline}
-          // paragraph={partnersData.coding.sub_heading}
           showFeatured
           props={partnersData.coding}
         />
@@ -316,11 +296,6 @@ const Partners = (props) => {
           padding="0 10px"
           padding_tablet="0 0 0 12em"
           alignSelf="center"
-          // padding_tablet="4em"
-          // padding="4em"
-          // margin_tablet="0 0 40px 0"
-          // margin="0 0 40px 0"
-          // background={Colors.verylightGray}
         >
           <H2
             type="h2"
