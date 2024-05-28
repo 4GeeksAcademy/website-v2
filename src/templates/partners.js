@@ -1,11 +1,6 @@
 import React, { useState, useRef } from "react";
 import { graphql } from "gatsby";
-import {
-  GridContainer,
-  Header,
-  Div,
-  Grid,
-} from "../components/Sections";
+import { GridContainer, Header, Div, Grid } from "../components/Sections";
 import { H2, H4, Paragraph } from "../components/Heading";
 import { Button, Colors } from "../components/Styling";
 import OurPartners from "../components/OurPartners";
@@ -16,7 +11,6 @@ import LeadForm from "../components/LeadForm/index.js";
 import PartnersCarousel from "../components/PartnersCarousel";
 import BenefitsAndCharts from "../components/BenefitsAndCharts";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-
 
 const Partners = (props) => {
   const { data, pageContext, yml } = props;
@@ -157,11 +151,7 @@ const Partners = (props) => {
           margin_tablet="3% 0 4% 0"
           margin="10% 0"
         >
-          <Div
-            height="2px"
-            background="#ACACAC"
-            style={{ opacity: "0.5" }}
-          />
+          <Div height="2px" background="#ACACAC" style={{ opacity: "0.5" }} />
         </GridContainer>
         <Grid
           gridTemplateColumns_tablet="repeat(auto-fill, minmax(40%, 1fr))"

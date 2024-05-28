@@ -105,7 +105,13 @@ const PartnersCarousel = ({ data }) => {
   };
 
   return (
-    <Div maxWidth="1280px" margin="0 auto 10px auto" padding="30px 30px 45px 30px" width="100%" display="block">
+    <Div
+      maxWidth="1280px"
+      margin="0 auto 10px auto"
+      padding="30px 30px 45px 30px"
+      width="100%"
+      display="block"
+    >
       <H2
         type="h2"
         fontSize="30px"
