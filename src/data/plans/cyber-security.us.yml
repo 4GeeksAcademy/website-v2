@@ -6,11 +6,12 @@ part_time:
     academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
     scholarship: "Full Payment"
     payment_time: "Pay today"
-    price: "$9,999"
-    original_price: "$16,665"
+    price: "$9,000"
+    original_price: "$15,000"
     offer: "40% OFF"
     bullets:
-      - "You're saving $6,666 USD."
+      - "You're saving $6,000 USD."
+      - "We are extremely invested in making quality coding education accessible to everyone"
     icons:
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
