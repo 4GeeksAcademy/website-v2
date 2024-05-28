@@ -51,12 +51,12 @@ const Partners = (props) => {
   return (
     <>
       <GridContainer
-        padding="10rem 0 4rem"
+        margin="20px auto 0 auto"
+        margin_tablet="auto"
         padding_tablet="10rem 0 4rem"
         containerColumns_tablet="1fr repeat(12,1fr) 1fr"
         columns_tablet="2"
         maxWidth="1280px"
-        margin="auto"
       >
         <Header
           hideArrowKey
