@@ -381,7 +381,7 @@ part_time:
     scholarship: "Financed"
     payment_time: "18 months payment"
     price: "~168.000 CLP"
-    original_price: "3.450.000 CLP*"
+    warning_message: "Limited seats!"
     bullets:
       - "Tailor-made financing from 6 to 18 months"  
       - "An advance payment corresponding to 20% of the value of the program must be paid."
@@ -391,7 +391,7 @@ part_time:
 ## LATAM  
 
   - slug: 'latam-trabajo-garantizado-fs-pt'
-    academies: ['bogota-colombia', 'buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
+    academies: ['buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
     recomended: true
     scholarship: "Job Guaranteed"
     payment_time: "Get hired within 6 months of graduation or your money back"
@@ -404,12 +404,43 @@ part_time:
       - "We offer a number of full or partial scholarship options that you could be eligible for."  
       - "Feel free to contact us to explore the possibilities available to you! We're here to find a solution tailored to your needs."   
     icons: 
-      - "/images/quotanda-logo.png"
       - "/images/visa-mastercard.png"
-      - "/images/flevo-new.png"
 
   - slug: 'latam-probram-only-fs-pt'
-    academies: ['bogota-colombia', 'buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
+    academies: ['buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
+    recomended: false
+    scholarship: "Full-Stack Program Only"
+    payment_time: "Focus on learning to code. Pay upfront."
+    price: "$2.000 USD"
+    original_price: "USD $4.000 USD"
+    bullets: 
+      - "We’re fully committed to making our education accessible and offer multiple payment plans and financing options to hold up to our promise."
+      - "You can adapt your learning path to your financial considerations. Choose between joining the Full-stack program only, adding our career support services, or enrolling with a Job Guarantee."     
+      - "We offer a number of full or partial scholarship options that you could be eligible for." 
+      - "Pay only for the Full-Stack program if you are not interested yet in our career support program and our job guarantee"   
+    icons: 
+      - "/images/visa-mastercard.png"
+
+
+## COLOMBIA
+  - slug: 'colombia-trabajo-garantizado-fs-pt'
+    academies: ['bogota-colombia']
+    recomended: true
+    scholarship: "Job Guaranteed"
+    payment_time: "Get hired within 6 months of graduation or your money back"
+    price: "USD $3.500"
+    original_price: "USD $5.000"
+    offer: "40% OFF"
+    bullets:
+      - "We're fully committed to making our education accessible by offering multiple payment plans and financing options to fulfill our promise."
+      - "You can adapt your learning path to your financial considerations. Choose between joining the Full-stack program only, adding our career support services, or enrolling with a Job Guarantee."     
+      - "We offer a number of full or partial scholarship options that you could be eligible for."  
+      - "Feel free to contact us to explore the possibilities available to you! We're here to find a solution tailored to your needs."   
+    icons: 
+      - "/images/flevo-new.png"
+
+  - slug: 'colombia-probram-only-fs-pt'
+    academies: ['bogota-colombia']
     recomended: false
     scholarship: "Full-Stack Program Only"
     payment_time: "Focus on learning to code. Pay upfront."

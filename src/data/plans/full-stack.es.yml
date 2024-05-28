@@ -446,7 +446,7 @@ part_time:
     scholarship: "Financiado"
     payment_time: "Pago en 18 meses"
     price: "~168.000 CLP"
-    original_price: "3.450.000 CLP*"
+    warning_message: "Limited seats!"
     bullets:
       - "Financiamiento a medida de 6 a 18 meses"  
       - "Se debe realizar un pago anticipado correspondiente al 20% del valor del programa."
@@ -456,7 +456,7 @@ part_time:
 ## LATAM
 
   - slug: 'latam-trabajo-garantizado-fs-pt'
-    academies: ['bogota-colombia', 'buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
+    academies: ['buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
     recomended: true
     scholarship: "Trabajo Garantizado"
     payment_time: "Consigue un trabajo dentro de los 6 meses posteriores a la graduación o te devolvemos tu dinero"
@@ -472,10 +472,9 @@ part_time:
     icons: 
       - "/images/quotanda-logo.png"
       - "/images/visa-mastercard.png"
-      - "/images/flevo-new.png"
 
   - slug: 'latam-probram-only-fs-pt'
-    academies: ['bogota-colombia', 'buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
+    academies: ['buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
     recomended: false
     scholarship: "Solo Programa Full-Stack"
     payment_time: "Enfócate en aprender a programar. Paga por adelantado."
@@ -487,6 +486,43 @@ part_time:
       - "Ofrecemos varias opciones de becas completas o parciales para las cuales podrías ser elegible." 
       - "Paga solo por el programa Full-Stack si aún no estás interesado en nuestro programa de apoyo profesional y nuestra garantía de trabajo."   
     icons: 
+      - "/images/visa-mastercard.png"
+
+#### Colombia     
+  - slug: 'colombia-trabajo-garantizado-fs-pt'
+    academies: ['bogota-colombia']
+    recomended: true
+    scholarship: "Trabajo Garantizado"
+    payment_time: "Consigue un trabajo dentro de los 6 meses posteriores a la graduación o te devolvemos tu dinero"
+    price: "USD $3,500"
+    original_price: "USD $5,000"
+    offer: "40% DE DESCUENTO"
+    job_guarantee_price: "USD $5,000"
+    bullets:
+      - "Estamos totalmente comprometidos en hacer que nuestra educación sea accesible ofreciendo múltiples planes de pago y opciones de financiamiento para cumplir nuestra promesa."
+      - "Puedes adaptar tu camino de aprendizaje a tus consideraciones financieras. Elige entre unirte solo al programa Full-Stack, agregar nuestros servicios de apoyo profesional o inscribirte con una garantía de trabajo."     
+      - "Ofrecemos varias opciones de becas completas o parciales para las cuales podrías ser elegible."  
+      - "No dudes en contactarnos para explorar las posibilidades disponibles para ti. Estamos aquí para encontrar una solución adaptada a tus necesidades."   
+    icons: 
+      - "/images/quotanda-logo.png"
+      - "/images/visa-mastercard.png"
+      - "/images/partner/flevo-new.png" 
+
+  - slug: 'colombia-probram-only-fs-pt'
+    academies: ['bogota-colombia']
+    recomended: false
+    scholarship: "Solo Programa Full-Stack"
+    payment_time: "Enfócate en aprender a programar. Paga por adelantado."
+    price: "$2,000 USD"
+    original_price: "USD $4,000 USD"
+    bullets: 
+      - "Estamos totalmente comprometidos en hacer que nuestra educación sea accesible y ofrecemos múltiples planes de pago y opciones de financiamiento para cumplir nuestra promesa."
+      - "Puedes adaptar tu camino de aprendizaje a tus consideraciones financieras. Elige entre unirte solo al programa Full-Stack, agregar nuestros servicios de apoyo profesional o inscribirte con una garantía de trabajo."     
+      - "Ofrecemos varias opciones de becas completas o parciales para las cuales podrías ser elegible." 
+      - "Paga solo por el programa Full-Stack si aún no estás interesado en nuestro programa de apoyo profesional y nuestra garantía de trabajo."   
+    icons: 
+      - "/images/quotanda-logo.png"
+      - "/images/visa-mastercard.png"
       - "/images/partner/flevo-new.png" 
 
   # - slug: 'latam-solo-programa-pt'

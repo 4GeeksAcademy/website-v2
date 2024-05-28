@@ -3,7 +3,7 @@ meta_info:
 
   # This will show on social media when shared
   title: "Descubre las claves que te transformarán en un programador 3.0"
-  description: "Descubre las 3 claves fundamentales para construir una carrera sólida en programación"
+  description: "Descubre las claves fundamentales para construir una carrera sólida en programación"
   image: ""
   keywords: "Clase de programación, carrera enprogramación, Coding Bootcamp, 4Geeks Academy"
   visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
@@ -67,6 +67,7 @@ follow_bar:
     text: "Acceder al video "
     path: "#leadform_header"
   phone: 
+    number: ""
     text: ""
 
 short_badges:
@@ -258,18 +259,18 @@ components:
     video: "https://www.youtube.com/watch?v=rtpfwwfE0yY"
     heading:
       text:
-        "Título relación al video"
+        "Testimonio de Joshua Bravo sobre 4Geeks"
         #xl      lg     md     sm    xs
       font_size: ["40px", "34px", "34px", "25px", "20px"]
     content:
-      text: "text relación al video"
+      text: "Joshua Bravo comparte cómo logró superar desafíos y alcanzar sus metas gracias a nuestro programa. Su historia es un ejemplo de perseverancia y éxito que te motivará a seguir adelante."
       font_size: ["16px"]
-    button:
-      text: "Cta video"
-      path: "#leadform_bottom"
-      color: "white"
-      background: "black"
-      hover: "lightBlue"
+    # button:
+    #   text: "Ver Video"
+    #   path: "#leadform_bottom"
+    #   color: "white"
+    #   background: "black"
+    #   hover: "lightBlue"
 
 choose_your_program:
   position: 5

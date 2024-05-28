@@ -40,7 +40,7 @@ info:
   duration_label: duración
   duration_weeks: 18 semanas
   duration_part_time: 18 semanas
-  duration_full_time: 9 semanas
+  duration_full_time: 10 semanas
   button_text: aplicar
   button_link: "/es/aplica"
 footer:

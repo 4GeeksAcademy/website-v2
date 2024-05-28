@@ -4,7 +4,7 @@ meta_info:
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   description: "Apply to one of the top coding bootcamps in the world, online or in one of our locations: Miami, Santiago de Chile, Madrid, Costa Rica, Maracaibo and Caracas."
   image: "https://4geeks-academy-main.s3-us-west-2.amazonaws.com/PresentacionBienvenidaEstudiante1.jpg"
-  keywords: "apply, 4geeks academy, apply to 4geeks academy, apply to coding bootcamp, coding bootcamp, coding school, apply to coding school, apply to coding institution"
+  keywords: null
   redirects: ["/apply"]
 
 ## APPLY HEADING
@@ -12,7 +12,7 @@ seo_title: "coding bootcamp"
 header:
   title: "Apply to 4Geeks"
   image:
-  image_alt: ""
+  image_alt: "Apply to 4Geeks Academy, Coding Bootcamp"
   paragraph: "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et."
   button:
 

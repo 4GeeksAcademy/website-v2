@@ -7,13 +7,13 @@ meta_info:
   keywords: ""
   redirects: []
 
-seo_title: Coding Bootcamp
+seo_title: "Coding Bootcamp"
 
 header:
   title: "Empowering Talent with coding careers"
   paragraph: "We are specialists of code. 4Geeks is the place were developers grow and thrive."
   image: "../../../static/images/why-4geeks/why-4geeks-header.png"
-  image_alt: ""
+  image_alt: "Empowering Talent with coding"
 
 badges:
   paragraph: "We are licensed by the USA F. Dep. of Education, and we have been chosen as one of the top 35 coding bootcamps of the world."
@@ -22,7 +22,7 @@ community_banner:
   title: "A community built for developers "
   paragraph: "At 4Geeks Academy there will always be someone to navigate your path to grow in tech: mentors, instructors, peers, business partners. We are constantly strengthening our ecosystem to learn and evolve together, using technology, using code."
   image: "../../../static/images/why-4geeks/why-4geeks-world.png"
-  image_alt: ""
+  image_alt: "A community built for developers"
   image_paragraph: "We know no frontiers, our community is strong in English and in Spanish, in America and Europe and growing!"
   list:
     - title: "A global community of more than 2100 people"

@@ -4,7 +4,7 @@ meta_info:
   description: "Find out our success stories and what our students say about 4Geeks Academy Bootcamps"
   image: null
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
-  keywords: "Testimonials, success stories, 4Geeks Academy"
+  keywords: null
   redirects: []
 
 seo_title: "Meet The People That Changed Their Careers With Code"
@@ -12,7 +12,7 @@ header:
   title: "WHAT DO OUR STUDENTS SAY?"
   paragraph: "Learning to code can lead to different paths. Our graduates enrolled with one goal: to change their futures. Here are some of our alumni who made the decision to boost their careers."
   image: "../../../static/images/locations/caracas-loc-2.jpeg"
-  image_alt: ""
+  image_alt: "Meet The People That Changed Their Careers With Code"
 
 images:
   - name: "Facebook"
