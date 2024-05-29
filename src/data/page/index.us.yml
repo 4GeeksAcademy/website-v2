@@ -48,23 +48,23 @@ choose_program:
   paragraph: Find the path that’s right for you
 
 why_4geeks:
-  proportions: [6, 6]
+  proportions: [5, 7]
   image:
-    style: '{ "backgroundSize": "contain", "background-position": "center", "min-height": "400px", "height": "400px"}'
+    style: '{ "backgroundSize": "contain", "background-position": "center"}'
     src: "/images/landing/hombre-con-laptop-2.png"
     shadow: false
   heading:
     text: "Be part of a vibrant community"
-    style: '{ "fontWeight": 400, "marginBottom": "32px" }'
-    font_size: ["35px", "35px", "35px", "35px", "35px"]
+    style: '{ "fontWeight": 400}'
+    font_size: ["35px", "35px", "30px", "24px", "24px"]
   sub_heading:
     text: "Join our international community of over 4000 students, teachers, partners, and alumni. Connect through various channels like Slack, GitHub, social media, and our exclusive platform 4Geeks.com. Where there’s a geek, there’s a way! What sets us apart:"
-    font_size: ["21px", "21px", "21px", "21px", "21px"]
+    font_size: ["22px", "22px", "21px", "17px", "17px"]
   content:
     text: |-
       Belong to a community of like-minded people who genuinely support each other. Gain lifetime access to our online learning platform and mentorship services. We’ll always be here for you, even after you graduate. <br>
       <a href="/us/geeks-vs-others">Compare 4Geeks</a> to other coding bootcamps.
-    font_size: ["16px"]
+    font_size: ["17px", "17px", "16px", "14px", "14px"]
   button:
     text: "Apply now"
     color: "white"
