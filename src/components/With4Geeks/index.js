@@ -103,8 +103,10 @@ export default ({
               margin_xs="0px"
               fontSize="21px"
               fontSize_tablet="35px"
+              fontFamily="Lato"
               textTransform={title ? "" : "uppercase"}
               lineHeight="38.4px"
+              lineHeight_xs="24px"
               fontWeight="400"
               color={Colors.darkGray}
               textAlign={title ? "center" : "left"}
