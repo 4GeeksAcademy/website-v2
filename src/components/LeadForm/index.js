@@ -1,9 +1,10 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useRef } from "react";
 import { Alert, Input } from "../Form/index";
 import { Row, Column, Div, GridContainer } from "../Sections";
 import { H4, Paragraph } from "../Heading";
 import styled from "styled-components";
 import PropTypes from "prop-types";
+import ReCAPTCHA from "react-google-recaptcha";
 import { SessionContext } from "../../session";
 import { Button, Colors } from "../Styling";
 import { Break, Devices } from "../Responsive";
@@ -130,6 +131,7 @@ const clean = (fields, data) => {
       // i also make sure I don't delete the hidden fields
       key !== "course" &&
       key !== "utm_location" &&
+      key !== "token" &&
       cleanedData[key].type !== "hidden" &&
       //clean all the rest of the fields that are no supposed to be sent
       //according to the landing YML data
@@ -237,6 +239,7 @@ const LeadForm = ({
   );
   let yml = { ...page.node, ...form.node };
 
+  const captcha = useRef(null);
   const [formStatus, setFormStatus] = useState({ status: "idle", msg: "" });
   const [formData, setVal] = useState(_fields);
   const [consentValue, setConsentValue] = useState([]);
@@ -273,6 +276,13 @@ const LeadForm = ({
         )}`
       );
   });
+
+  const captchaChange = () => {
+    const captchaValue = captcha?.current?.getValue();
+    if (captchaValue)
+      setVal({ ...formData, token: { value: captchaValue, valid: true } });
+    else setVal({ ...formData, token: { value: null, valid: false } });
+  };
 
   return (
     <Form
@@ -568,6 +578,13 @@ const LeadForm = ({
                 {formStatus.msg}
               </Alert>
             )}
+            <Div width="fit-content" margin="10px auto 0 auto">
+              <ReCAPTCHA
+                ref={captcha}
+                sitekey={process.env.GATSBY_CAPTCHA_KEY}
+                onChange={captchaChange}
+              />
+            </Div>
             {layout === "block" && (
               <Div display="flex" padding="10px 0 0 0" width="100%">
                 <Button
@@ -582,11 +599,11 @@ const LeadForm = ({
                   background={buttonStyles?.background || Colors.blue}
                   //textAlign="center"
                   color={
-                    formStatus.status === "loading"
+                    formStatus.status === "loading" || !captcha?.current?.getValue()
                       ? Colors.darkGray
                       : Colors.white
                   }
-                  disabled={formStatus.status === "loading" ? true : false}
+                  disabled={formStatus.status === "loading" || !captcha?.current?.getValue() ? true : false}
                 >
                   {formStatus.status === "loading" ? "Loading..." : sendLabel}
                 </Button>
