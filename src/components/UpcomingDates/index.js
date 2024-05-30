@@ -400,7 +400,8 @@ const UpcomingDates = ({
                           {content.info.duration_label}
                         </H4>
                         <Paragraph textAlign="left">
-                          {cohort?.syllabus_version?.duration || content.info.duration_weeks}
+                          {cohort?.syllabus_version?.duration ||
+                            content.info.duration_weeks}
                         </Paragraph>
                       </Div>
 
@@ -444,7 +445,8 @@ const UpcomingDates = ({
                             {content.info.duration_label}
                           </H4>
                           <Paragraph textAlign="left">
-                            {cohort?.syllabus_version?.duration || content.info.duration_weeks}
+                            {cohort?.syllabus_version?.duration ||
+                              content.info.duration_weeks}
                           </Paragraph>
                         </Div>
                       </Div>
