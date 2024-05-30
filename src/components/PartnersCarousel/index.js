@@ -102,6 +102,12 @@ const PartnersCarousel = ({ data }) => {
     slidesToScroll: 1,
     arrows: false,
     pauseOnHover: true,
+    responsive: [{
+      breakpoint: 360,
+      settings: {
+        dots: false,
+      },
+    }]
   };
 
   return (
@@ -112,6 +118,8 @@ const PartnersCarousel = ({ data }) => {
       padding_lg="30px 0 50px 0"
       width="100%"
       display="block"
+      maxHeight="500px"
+      maxHeight_tablet="none"
     >
       <H2
         type="h2"
