@@ -13,18 +13,22 @@ syllabus_alias:
   - default_course: full-stack
     course_slug: desarrollador-full-stack
     name: Desarrollador de Software Full Stack
+    duration: "18 semanas"
 
   - default_course: machine-learning
     course_slug: curso-datascience-machine-learning
     name: Datascience
+    duration: "18 semanas"
 
   - default_course: cyber-security
     course_slug: curso-ciberseguridad
     name: Ciberseguridad
+    duration: "18 semanas"
 
   - default_course: applied-ai
     course_slug: curso-inteligencia-artificial
     name: IA Aplicada
+    duration: "18 semanas"
 
 email_form_content:
   heading: Indicanos tu mail para avisarte cuando haya una fecha disponible para este campus
