@@ -102,12 +102,14 @@ const PartnersCarousel = ({ data }) => {
     slidesToScroll: 1,
     arrows: false,
     pauseOnHover: true,
-    responsive: [{
-      breakpoint: 360,
-      settings: {
-        dots: false,
+    responsive: [
+      {
+        breakpoint: 360,
+        settings: {
+          dots: false,
+        },
       },
-    }]
+    ],
   };
 
   return (
