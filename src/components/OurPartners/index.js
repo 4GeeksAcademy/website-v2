@@ -375,6 +375,7 @@ const OurPartners = ({
     padding: `${padding || "75px 0"}`,
     borderBottom: borderBottom,
     width: width,
+    maxWidth: maxWidth,
   };
 
   if (variant === "carousel")
