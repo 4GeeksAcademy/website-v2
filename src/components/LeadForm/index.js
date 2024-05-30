@@ -599,11 +599,17 @@ const LeadForm = ({
                   background={buttonStyles?.background || Colors.blue}
                   //textAlign="center"
                   color={
-                    formStatus.status === "loading" || !captcha?.current?.getValue()
+                    formStatus.status === "loading" ||
+                    !captcha?.current?.getValue()
                       ? Colors.darkGray
                       : Colors.white
                   }
-                  disabled={formStatus.status === "loading" || !captcha?.current?.getValue() ? true : false}
+                  disabled={
+                    formStatus.status === "loading" ||
+                    !captcha?.current?.getValue()
+                      ? true
+                      : false
+                  }
                 >
                   {formStatus.status === "loading" ? "Loading..." : sendLabel}
                 </Button>
