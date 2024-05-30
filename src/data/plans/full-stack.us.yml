@@ -22,8 +22,8 @@ full_time:
     recomended: false
     scholarship: "Scholarship"
     payment_time: "There is nothing like this"
-    price: "$9,999"
-    original_price: "$16,665"
+    price: "$9,000"
+    original_price: "$15,000"
     warning_message: "Limited seats!"
     offer: "40% OFF"
     bullets:
@@ -170,11 +170,14 @@ part_time:
     academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
     scholarship: "Full Payment"
     payment_time: "Pay today"
-    price: "$9,999"
-    original_price: "$16,665"
+    price: "$9,000"
+    original_price: "$15,000"
     offer: "40% OFF"
     bullets:
-      - "You're saving $6,666 USD."
+      - "You are saving $6,000 right away!"
+      - "The tuition fee for a program like ours is $15,000"
+      - "You get to pay this also using one of our payment plans"
+      - "We are extremely invested in making quality coding education accessible to everyone"
       - "This discount applies to students who are not eligible for the Clark University Scholarship (typically employed or in stable work)."
 
   - slug: 'usa-clark-scholarship-pt'
@@ -182,11 +185,11 @@ part_time:
     recomended: false
     scholarship: "Scholarship"
     payment_time: "Pay today or with a Payment Plan for $100 p/mo"
-    price: "$5999"
-    original_price: "$16,665"
+    price: "$6,000"
+    original_price: "$15,000"
     warning_message: "Limited seats!"
     bullets: 
-      - "You're saving 40% + $4000 USD. Thanks to Clark University and the TechBoost Fund"
+      - "You're saving 40% + $3000 USD. Thanks to Clark University and the TechBoost Fund"
       - "You have to be underemployed or unemployed, and provide a valid US Work permit."
     icons: 
       - "/images/clarkuniversity.png"
