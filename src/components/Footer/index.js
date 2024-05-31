@@ -249,7 +249,11 @@ const Footer = ({ yml }) => {
                         : Colors.black
                     }
                     textColor={Colors.white}
-                    disabled={formStatus.status === "loading" || !formData.token.valid ? true : false}
+                    disabled={
+                      formStatus.status === "loading" || !formData.token.valid
+                        ? true
+                        : false
+                    }
                   >
                     {formStatus.status === "loading" ? (
                       "Loading..."
@@ -265,7 +269,11 @@ const Footer = ({ yml }) => {
                   </Button>
                 </Form>
               </Div>
-              <Div display={formData.email.valid ? 'block' : 'none'} width="fit-content" margin="10px auto 0 auto">
+              <Div
+                display={formData.email.valid ? "block" : "none"}
+                width="fit-content"
+                margin="10px auto 0 auto"
+              >
                 <ReCAPTCHA
                   ref={captcha}
                   sitekey={process.env.GATSBY_CAPTCHA_KEY}

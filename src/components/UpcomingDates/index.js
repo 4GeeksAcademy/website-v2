@@ -616,13 +616,17 @@ const UpcomingDates = ({
                             fontSize="14px"
                             variant="full"
                             color={
-                              formStatus.status === "loading" || !formData.token.valid
+                              formStatus.status === "loading" ||
+                              !formData.token.valid
                                 ? Colors.darkGray
                                 : Colors.blue
                             }
                             textColor={Colors.white}
                             disabled={
-                              formStatus.status === "loading" || !formData.token.valid ? true : false
+                              formStatus.status === "loading" ||
+                              !formData.token.valid
+                                ? true
+                                : false
                             }
                           >
                             {formStatus.status === "loading"
