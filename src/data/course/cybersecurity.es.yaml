@@ -264,7 +264,7 @@ details:
       step: 3
     - module_name: "DLP"
       title: "DLP y gestión de riesgos"
-      description: "Aprenderás sobre la prevensión de perdida de datos (DLP), como proteger los datos sensibles de tu organización mediante técnicas de clasificación de datos, control de acceso y protección de datos en tránsito y en reposo."
+      description: "Aprenderás sobre la prevención de pérdida de datos (DLP), como proteger los datos sensibles de tu organización mediante técnicas de clasificación de datos, control de acceso y protección de datos en tránsito y en reposo."
       projects: "Adquirirás los conocimientos para identificar y evaluar los riesgos de seguridad, implementar medidas de control, Prevención de amenazas y Protección contra ataques externos."
       slug: "dlp-and-risks"
       duration: "3 sem"
