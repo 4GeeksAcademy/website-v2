@@ -1,5 +1,6 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect, useContext, useRef } from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
+import ReCAPTCHA from "react-google-recaptcha";
 import { GridContainer, Div } from "../Sections";
 import { H2, H3, H4, Paragraph } from "../Heading";
 import { Colors, Button, Spinner } from "../Styling";
@@ -83,6 +84,7 @@ const UpcomingDates = ({
   `);
 
   const { session } = useContext(SessionContext);
+  const captcha = useRef(null);
 
   const [data, setData] = useState({
     cohorts: { catalog: [], all: [], filtered: [] },
@@ -97,8 +99,16 @@ const UpcomingDates = ({
   });
   const [formData, setVal] = useState({
     email: { value: "", valid: false },
+    token: { value: null, valid: false },
     consent: { value: true, valid: true },
   });
+
+  const captchaChange = () => {
+    const captchaValue = captcha?.current?.getValue();
+    if (captchaValue)
+      setVal({ ...formData, token: { value: captchaValue, valid: true } });
+    else setVal({ ...formData, token: { value: null, valid: false } });
+  };
 
   let content = dataQuery.allUpcomingDatesYaml.edges.find(
     ({ node }) => node.fields.lang === lang
@@ -123,7 +133,8 @@ const UpcomingDates = ({
           syllabus_slug_like: defaultCourse || undefined,
         });
 
-        const cohorts = response?.results || [];
+        // const cohorts = response?.results || [];
+        const cohorts = [];
         cohorts.forEach((cohort) => {
           const syllabus =
             syllabusAlias.find(
@@ -586,6 +597,13 @@ const UpcomingDates = ({
                             errorMsg="Please specify a valid email"
                             required
                           />
+                          <Div width="fit-content" margin="10px auto 0 auto">
+                            <ReCAPTCHA
+                              ref={captcha}
+                              sitekey={process.env.GATSBY_CAPTCHA_KEY}
+                              onChange={captchaChange}
+                            />
+                          </Div>
                           <Button
                             height="40px"
                             background={Colors.blue}
@@ -598,13 +616,13 @@ const UpcomingDates = ({
                             fontSize="14px"
                             variant="full"
                             color={
-                              formStatus.status === "loading"
+                              formStatus.status === "loading" || !formData.token.valid
                                 ? Colors.darkGray
                                 : Colors.blue
                             }
                             textColor={Colors.white}
                             disabled={
-                              formStatus.status === "loading" ? true : false
+                              formStatus.status === "loading" || !formData.token.valid ? true : false
                             }
                           >
                             {formStatus.status === "loading"
