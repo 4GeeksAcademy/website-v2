@@ -1,49 +1,50 @@
 meta_info:
-  slug: carrera-en-programacion-santiago # <--- URL 4geeksacademy.com/us/landing/example
+  slug: santiago-geekforce # <--- URL 4geeksacademy.com/us/landing/example
 
-  # This will show on social media when shared
-  title: "Descubre las claves que te transformarán en un programador 3.0"
-  description: "Descubre las claves fundamentales para construir una carrera sólida en programación"
-  image: ""
-  keywords: "Clase de programación, carrera enprogramación, Coding Bootcamp, 4Geeks Academy"
+# This will show on social media when shared
+  title: "Nuestros programas en chile"
+  description: "¡Desarrolla tus habilidades técnicas con Geekforce y alcanza tus metas profesionales! 🌟"
+  image: "/images/bg/pricing-bg.jpg"
+  keywords: ""
   visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   template: "landing_a" # <--- choose your landing template
-  # <--- URL redirections to avoid 404 errors
   redirects: []
 
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
-  utm_course: ["full-stack"]
+  utm_course: ["full-stack", "datascience-ml", "cybersecurity", "front-end-development", "applied-ai"]
   utm_location: ["santiago-chile"]
   automation: soft # comma separated, "soft" is the default value
   tag: request_more_info # comma separated, "request_more_info" is the default value
 
 navbar:
-  buttonText: "Acceder al video"
-  buttonUrl: "#leadform_header" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
-  logoUrl: ""
+  logoUrl: "#"
+  buttonText: "¡Postúlate ahora!" # this modifies the button text in the navbar
+  buttonUrl: "#leadform_bottom" #accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
 
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
-  heading: "Formulario para dejar los datos y acceder al vídeo "
-  motivation: "Completa el formulario y en minutos te enviaremos la información a tu correo electrónico."
-  button_label: Acceder al video
-  redirect: "/es/landing/santiago-geekforce"  #you can redirect to another url or entirely diffrent website
+  heading: "Rellena el formulario y optén más información"
+  motivation: "Una vez completado el formulario, alguien de nuestro equipo se pondrá en contacto contigo en breves minutos a través de un correo electrónico."
+  button_label: ¡Postúlate ahora!
+  redirect: null #you can redirect to another url or entirely diffrent website
+  course: true
 
 apply_schollarship: # form that is displayed at the end of the landing
-  # title: "Get more info about this award-winning development course"
-  imageSide: "right"
+  # title: "Apoyo Profesional Ilimitado"
+  imageSide: "left"
   image: "../../../static/images/landing/apply.png"
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  background: "#FFF1D1"
-  tagline: Descubre las claves que te transformarán en un programador 3.0
-  sub_heading: "Descubre en este vídeo de 5 minutos las 3 claves fundamentales para construir una carrera sólida en programación"
-  badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
-  image_filter: brightness(0.3)
+  tagline: Descubre tu potencial en 4Geeks Academy
+  sub_heading: "Conviértete en un experto en programación y potencia tu perfil profesional con nuestros programas especializados"
+  # background: "#FFFFFF"
+  background_image: "../../../static/images/bg/pricing-bg.jpg"
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+  image_filter: brightness(0.1)
 
 features:
   marginTop: 0px #<-- separation between tagline and the bullets
@@ -51,43 +52,45 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-    - Desafiarás y desmitificarás creencias arraigadas en el mundo de la programación.
-    - Obtendrás consejos prácticos para construir una carrera sólida en programación.
-    - Entenderás como es la mentalidad de un programador 3.0
-    # - Aprende las tecnologías más demandadas por la industria, como Python, React, Javascript y Node.js.
+    - Aprende a resolver problemas de manera efectiva
+    - Desarrolla habilidades de aprendizaje autodidacta
+    - Accede a mentorías personalizadas ilimitadas y de por vida
+    - Forma parte de una comunidad internacional de más de 5,000 personas
 
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "Rellena el formulario \n y accede al video"
-    text_mobile: "Rellena el formulario \n y accede al video"
-    # devices:    XL      LG      MD      SM       XS
-    font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
+    text: "¡Conviértete en un Programador 3.0 \n y contáctanos por WhatsApp para más información!"
+    text_mobile: "¡Conviértete en un Programador 3.0\n y contáctanos por WhatsApp para más información!"
+    # devices:   XL      LG    MD      SM    XS
+    font_size: ["22px", "22px", "22px", "20px", "18px"]
   button:
-    text: "Acceder al video "
-    path: "#leadform_header"
-  phone: 
-    number: ""
-    text: ""
+    text: "Escribir por WhatsApp"
+    path: "https://api.whatsapp.com/send/?phone=56972848039&text&type=phone_number&app_absent=0&utm_source=GADS&utm_medium=GADS&utm_campaign=GADS&utm_id=GADS&utm_term=GADS&utm_content=GADS"
+  phone:
+    text: "llama"
 
 short_badges:
+  - name: "Ebootcamp"
+    url: ""
+    image: "../../../static/images/badges/ebootcamp-top.png"
+    alt: "Top Coding Bootcamp"
   - name: "Premios Tecnologia Siglo XXI"
     url: ""
     image: "../../../static/images/awards/premios_tecnologia_sigloxxi.png"
     alt: "Mejor centro de Coding Bootcamp"
   - name: "Course Report"
     url: ""
-    image: "../../../static/images/badges/Course-Report-Badge-2023.png"
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
     alt: "Top Coding Bootcamps Course Report"
   - name: "Switchup"
     url: ""
     image: "../../../static/images/badges/switchup-badge-2023.png"
-    alt: "Best coding bootcamp Switchup 2023"   
+    alt: "Best coding bootcamp Switchup 2023"
   - name: "Florida Department of Education"
     url: ""
-    image: "../../../static/images/badges/licensed.png"
+    image: "../../../static/images/badges/licensed-inverted.png"
     alt: "Florida Department of Education"
-
 #
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
 #
@@ -131,43 +134,29 @@ who_is_hiring:
 
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
-
-  - name: two-colums-right
+  - name: some_id
     position: 1
-    layout: two_column_right 
-    swipable: False
+    proportions: [6, 6]
+    layout: two_column_right
     background: "#fbfbfb"
     image:
-      src: "/images/staff/alejandrosanchez.jpg"
-      style: '{"backgroundSize": "contain"}'
-      shadow: false
-    section_heading: 
-      text: "Historia de Alejandro Sánchez"
-      style: '{ "font-size": "30px"  }'
-    heading: 
-      text: ""
-    sub_heading:
-      text: "4Geeks Academy es una academia de programación, co-fundada por el experimentado programador Alejandro Sánchez, quien cuenta con 20 años de trayectoria en el mercado. 
-            A lo largo de su carrera, Alejandro ha experimentado en primera persona la crucial transición hacia ser un programador 3.0. Este cambio no solo implica adaptarse a una nueva era, sino también destacar y desplegar todo el potencial que uno posee.
-            Hemos recopilado un video exclusivo basado en su vasta experiencia, especialmente para ti. Sumérgete en este contenido que te guiará hacia el camino de destacar como un programador 3.0."
-    button: 
-      text: "Acceder al video"
-      color: white
-      hover_color: "white"
-      background: "black"
-      path: "#leadform_header"
-    content: 
-      text: ""
+      style: '{ "border" : "3px solid black"}' 
+      shadow: true 
+      src: "../../../static/images/landing/geek-force-video.webp"
+    video: "w8oiAxWAe3w"
+    heading:
+      text: "Esperanza nos habla sobre la importancia de ser un programador 3.0"
+        #xl      lg     md     sm    xs
+      font_size: ["40px", "34px", "34px", "25px", "20px"]
+    content:
+      text: "Descubre qué distingue a un programador 3.0: aquellos que trascienden el código, han profundizado en la abstracción de la programación y constantemente desafían sus límites para adquirir habilidades como desarrollador. Además, cultivan habilidades blandas que les permiten relacionarse de forma colaborativa y expresar ideas complejas de manera sencilla con sus compañeros de trabajo. ¡Así es como se destacan los programadores 3.0 en la industria tecnológica actual!"
       font_size: ["16px"]
-      path: ""
-    bullets:
-      items:
-      # - heading: "No se requiere experiencia previa"
-      #   icon: "check" 
-      # - heading: "Horario part-time adaptable a tu vida actual"
-      #   icon: "check" 
-      # - heading: "Mentorías y career support de por vida"
-      #   icon: "check" 
+    # button:
+    #   text: "Ver Video"
+    #   path: "#leadform_bottom"
+    #   color: "white"
+    #   background: "black"
+    #   hover: "lightBlue"
 
   - name: press-and-awards
     position: 2
@@ -180,13 +169,13 @@ components:
     heading:
       # style: '{"padding": "0 20px", "line-height": "50px"}'
       text:
-        "Prensa y Reconocimientos"
+        "Descubre cómo 4Geeks Academy puede impulsar tu carrera en tecnología"
         #           xl      lg      md      sm      xs
       font_size: ["45px", "45px", "30px", "28px", "25px"]
     sub_heading:
-      text: "En 4Geeks Academy, hemos acumulado más de 8 años de experiencia formando programadores y guiándolos hacia el éxito en el mundo laboral. No solo rompemos mitos, sino que creamos caminos hacía carreras exitosas en la programación."
+      text: "¡Hoy es el día perfecto para comenzar tu transformación en un programador 3.0! Inscríbete en nuestra academia y prepárate para adentrarte en el emocionante mundo laboral que te espera. En 4Geeks Academy te brindamos las herramientas, el apoyo y la formación necesaria para que te conviertas en un desarrollador completo y exitoso. ¡El futuro está en tus manos, atrévete a alcanzar tus metas en tecnología con nosotros!"
     button: 
-      text: "Acceder al video"
+      text: "!Postúlate!"
       color: white
       hover_color: "white"
       background: "black"
@@ -194,17 +183,17 @@ components:
     content:
       text: ""
       font_size: ["18px"]
-    bullets:
-      items:
-      - heading: "Más de 8 años de experiencia"
-        text: ""
-        icon: "check" 
-      - heading: "Más de 2500 graduados en total"
-        text: ""
-        icon: "check" 
-      - heading: "90% de los graduados encuentran trabajo dentro de los 6 meses posteriores a la graduación"
-        text: ""
-        icon: "check" 
+    # bullets:
+    #   items:
+    #   - heading: "Más de 8 años de experiencia"
+    #     text: ""
+    #     icon: "check" 
+    #   - heading: "Más de 2500 graduados en total"
+    #     text: ""
+    #     icon: "check" 
+    #   - heading: "90% de los graduados encuentran trabajo dentro de los 6 meses posteriores a la graduación"
+    #     text: ""
+    #     icon: "check" 
 
   # - name: new_design_with_bullets
   #   position: 3
@@ -246,31 +235,6 @@ components:
   #     - heading: "SOPORTE PROFESIONAL A LA MEDIDA"
   #       text: "Proporcionamos ayuda para la colocación laboral y preparación para el empleo en tecnología."
   #       icon: "circle" 
-
-
-  - name: some_id
-    position: 4
-    layout: two_column_right
-    background: "#fbfbfb"
-    image:
-      style: '{ "border" : "3px solid black" }' 
-      shadow: true 
-      src: "../../../static/images/testimonials/joshua-bravo-testimonial.jpg"
-    video: "https://www.youtube.com/watch?v=rtpfwwfE0yY"
-    heading:
-      text:
-        "Testimonio de Joshua Bravo sobre 4Geeks"
-        #xl      lg     md     sm    xs
-      font_size: ["40px", "34px", "34px", "25px", "20px"]
-    content:
-      text: "Joshua Bravo comparte cómo logró superar desafíos y alcanzar sus metas gracias a nuestro programa. Su historia es un ejemplo de perseverancia y éxito que te motivará a seguir adelante."
-      font_size: ["16px"]
-    # button:
-    #   text: "Ver Video"
-    #   path: "#leadform_bottom"
-    #   color: "white"
-    #   background: "black"
-    #   hover: "lightBlue"
 
 choose_your_program:
   position: 5
