@@ -12,7 +12,7 @@ meta_info:
 
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
-  utm_course: ["front-end-development"]
+  utm_course: ["front-end-development", "full-stack"]
   utm_location: ["santiago-chile"]
   automation: soft # comma separated, "soft" is the default value
   tag: request_more_info # comma separated, "request_more_info" is the default value
@@ -30,6 +30,7 @@ form:
   motivation: "Completa el siguiente formulario y uno de nuestros asesores te enviará un correo electrónico a la brevedad con todos los detalles sobre nuestro bootcamp de programación."
   button_label: Solicitar más información
   redirect: null #you can redirect to another url or entirely diffrent website
+  course: true
 
 apply_schollarship: # form that is displayed at the end of the landing
   # title: "Apoyo Profesional Ilimitado"

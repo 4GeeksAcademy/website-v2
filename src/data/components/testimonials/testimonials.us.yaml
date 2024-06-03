@@ -63,6 +63,27 @@ testimonials:
     short_content: "Full Stack Developer"
     content: "Taking a course like this benefits us in a lot of different ways. You know it's not just from a programming aspect, but it's a confident aspect that adds to you a lot of dimension in the sense that you're able to create something from nothing. "
 
+  - student_name: "Fidel Enrique Vera"
+    slug: "fidel-vera"
+    country:
+      iso: chile
+      name: Chile
+    featured: false
+    highlighted: false
+    testimonial_date: ""
+    rating: 5
+    student_thumb: "../../../../static/images/testimonials/fidel-vera-testimonial.jpg"
+    student_video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    hidden: false
+    linkedin_url: "https://www.linkedin.com/in/fverachourio/"
+    linkedin_text: "Linkedin Perfil"
+    linkedin_image: "../../../../static/images/linkedin.png"
+    source_url: ""
+    # source_url_text: ""
+    short_content: "Project Manager at No Country"
+    content: "I was one of the first graduates of machine learning and data science from 4Geeks in Chile. From the very beginning, it was a next-level experience because the bootcamp's standard is very high, and you start programming right from the start, which helped me decide to join the academy. The diverse projects focused on real-life problems have provided me with the practical level needed for the industry. Now that I've completed the program, I continue to deepen my learning with Python, MySQL, in the field of data science, and to stay true to being a Geek."
+
   - student_name: "Joshua Bravo"
     slug: "jos-bra"
     country:
@@ -406,6 +427,7 @@ testimonials:
       code - I didn't know where to start. Within 10 weeks I was able to grasp the core concepts 
       of being a developer. The staff and Mentors are awesome... enroll today if yoou want to go from 
       zero to hero in 10 weeks and start developing your own apps.
+
   - student_name: "Salvador Desravines"
     featured: false
     highlighted: false
@@ -425,6 +447,28 @@ testimonials:
       This program was definitely one of the hardest things I've done in my life. It was 16 weeks of 
       constant work and practice. All things in life worth having is not going to be easily obtained. 
       If you can stick with it and follow what the teachers are teaching you, you will succeed.
+      
+  - student_name: "Francisco Correa"
+    slug: "franc-corr"
+    country:
+      iso: chile
+      name: Chile
+    featured: false
+    highlighted: false
+    testimonial_date: ""
+    rating: 5
+    student_thumb: "../../../../static/images/testimonials/francisco-correa-testimonial.webp"
+    student_video: "" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    hidden: false
+    linkedin_url: "https://www.linkedin.com/in/francisco-javier-correa-fernandez/"
+    linkedin_text: "Linkedin Perfil"
+    linkedin_image: "../../../../static/images/linkedin.png"
+    source_url: ""
+    # source_url_text: ""
+    short_content: "Presales Consultant at TCS"
+    content: "My experience at 4Geeks has been incredible. Not only did they provide me with a quality education, but they also gave me the necessary tools to succeed in today's market. The academy's team was present at every stage of my learning, guiding and supporting me throughout. In a post-COVID world, where digital transformation is essential, the value of technological solutions has skyrocketed. Thanks to 4Geeks, I feel prepared to face the challenges and seize the opportunities that arise in this exciting field."
+
   - student_name: "Jorge Montes"
     featured: false
     highlighted: false
