@@ -23,14 +23,14 @@ full_time:
     recomended: false
     scholarship: "Beca"
     payment_time: "No hay nada como esto"
-    price: "$9,999"
-    original_price: "$16,665"
+    price: "$9,000"
+    original_price: "$15,000"
     warning_message: "¡Plazas limitadas!"
     offer: "40% DE DESCUENTO"
     bullets:
-      - "Estás ahorrando aproximadamente $6,666 USD"
+      - "Estás ahorrando aproximadamente $6,000 USD"
       - "El saldo restante se puede pagar a lo largo del tiempo, $100 al mes"
-      - "La matrícula regular es de $11,999. La matrícula promedio en los Estados Unidos es de $16k."
+      - "La matrícula regular es de $15,000. La matrícula promedio en los Estados Unidos es de $16k."
       - "Estamos totalmente comprometidos en hacer que nuestra educación sea accesible y ofrecemos múltiples planes de pago y opciones de financiamiento para cumplir nuestra promesa."
       - "Puedes adaptar tu camino de aprendizaje a tus necesidades financieras. Elige incluir o excluir nuestros servicios de apoyo profesional, o inscríbete con una Garantía de Empleo."
     icons:
@@ -239,11 +239,11 @@ part_time:
     academies: ['downtown-miami', 'orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'toronto-canada']
     scholarship: "Pago Completo"
     payment_time: "Pagar hoy"
-    price: "$9,999"
-    original_price: "$16,665"
+    price: "$9,000"
+    original_price: "$15,000"
     offer: "40% DE DESCUENTO"
     bullets:
-      - "Estás ahorrando $6,666 USD."
+      - "Estás ahorrando $6,000 USD."
       - "Este descuento se aplica a estudiantes que no son elegibles para la Beca de la Universidad Clark (generalmente empleados o con trabajo estable)."
 
   - slug: 'usa-clark-scholarship-pt'
@@ -251,11 +251,11 @@ part_time:
     recomended: false
     scholarship: "Beca"
     payment_time: "Paga hoy o con un Plan de Pagos de $100 al mes"
-    price: "$5999"
-    original_price: "$16,665"
+    price: "$6,000"
+    original_price: "$15,000"
     warning_message: "¡Cupos limitados!"
     bullets: 
-      - "Estás ahorrando $4000 USD. Gracias a la Universidad Clark y al Fondo TechBoost"
+      - "Estás ahorrando $9000 USD. Gracias a la Universidad Clark y al Fondo TechBoost"
       - "Debes estar subempleado o desempleado y proporcionar un permiso de trabajo válido en EE. UU."
     icons: 
       - "/images/clarkuniversity.png"
