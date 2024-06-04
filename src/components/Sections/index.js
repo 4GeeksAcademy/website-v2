@@ -927,6 +927,7 @@ export const GridContainer = ({
   maxWidth,
   childMaxWidth,
   childMargin,
+  childWidth,
   childHeight,
   displayChild,
   displayChild_tablet,
@@ -1018,6 +1019,7 @@ export const GridContainer = ({
         height={childHeight}
         margin={childMargin}
         maxWidth={childMaxWidth}
+        width={childWidth}
       >
         {children}
       </Grid>
