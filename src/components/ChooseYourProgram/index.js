@@ -254,8 +254,8 @@ const ChooseYourProgram = ({
                         ) : (
                           <Button
                             display="flex"
-                            background={Colors.blue}
-                            colorHover={Colors.blue}
+                            background={Colors.black}
+                            colorHover={Colors.black}
                             color={Colors.white}
                             justifyContent="center"
                             width="auto"
@@ -268,9 +268,7 @@ const ChooseYourProgram = ({
                               gap: "10px",
                             }}
                           >
-                            {applyButton || program.text_link}
-                            {"  "}
-                            <span>→</span>
+                            {program.text_link} <span>→</span>
                           </Button>
                         )}
                       </Link>

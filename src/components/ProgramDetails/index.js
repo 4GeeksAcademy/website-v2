@@ -53,6 +53,8 @@ const ProgramDetails = (props) => {
   );
 
   const { title, sub_title, list } = props.details.about;
+  const subHeading = props.sub_heading || props.details.sub_heading;
+  const splitedSubHeading = subHeading.replaceAll("\n", "</br>");
 
   useEffect(() => {
     const inter = setInterval(() => {
@@ -102,7 +104,7 @@ const ProgramDetails = (props) => {
           gridColumn_tablet="8/16"
           padding="15px"
           margin_tablet="100px 0 0 0"
-          background={Colors.veryLightBlue}
+          background={Colors.verylightGray3}
           margin="13px 20px 40px 20px"
         >
           {list.map((item, index) => {
@@ -151,9 +153,8 @@ const ProgramDetails = (props) => {
           lineHeight_xs="22px"
           fontSize_tablet="15px"
           fontSize_xs="18px"
-        >
-          {props.sub_heading || props.details.sub_heading}
-        </Paragraph>
+          dangerouslySetInnerHTML={{ __html: splitedSubHeading }}
+        />
       </Div>
 
       {props.withoutAnimation !== true && (
@@ -235,8 +236,9 @@ const ProgramDetails = (props) => {
               display_xs="none"
               display_tablet="flex"
             >
-              {weeks.map((sm, index) => (
+              {weeks.map((sm) => (
                 <H4
+                  key={sm}
                   margin="0 5px"
                   fontSize="15px"
                   lineHeight="22px"
