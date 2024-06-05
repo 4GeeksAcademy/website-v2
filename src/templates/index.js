@@ -331,7 +331,7 @@ const Home = (props) => {
           session={session}
         />
       </Div>
-      <Iconogram yml={yml.iconogram} background={Colors.veryLightBlue2}/>
+      <Iconogram yml={yml.iconogram} background={Colors.veryLightBlue2} />
 
       <With4Geeks
         lang={pageContext.lang}
