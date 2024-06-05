@@ -7,7 +7,7 @@ import Icon from "../Icon";
 // import Link from "gatsby-link";
 import Fragment from "../Fragment";
 
-const GeeksVsOthers = (props) => {
+const GeeksVsOthers = ({ title, paragraph, limit, link, lang, mainBackround, style }) => {
   const [selected, setSelected] = useState({ index: null, manual: false });
 
   const data = useStaticQuery(graphql`
@@ -43,13 +43,13 @@ const GeeksVsOthers = (props) => {
   `);
 
   let geeks = data.allGeeksVsOthersYaml.edges.find(
-    ({ node }) => node.fields.lang === props.lang
+    ({ node }) => node.fields.lang === lang
   );
   if (geeks) geeks = geeks.node;
 
   return (
-    <Fragment github="/components/geeks_vs_others">
-      {props.title && props.paragraph && (
+    <Fragment style={style} github="/components/geeks_vs_others">
+      {title && paragraph && (
         <GridContainer margin_tablet="0 0 38px 0" margin="0 0 24px 0">
           <Div
             display="flex"
@@ -67,11 +67,11 @@ const GeeksVsOthers = (props) => {
               lineHeight_tablet="38px"
               marginTop="30px"
             >
-              {props.title}
+              {title}
             </H2>
             <Paragraph fontSize_tablet="15px" fontSize="18px">
               {" "}
-              {props.paragraph}
+              {paragraph}
             </Paragraph>
           </Div>
         </GridContainer>
@@ -88,16 +88,17 @@ const GeeksVsOthers = (props) => {
         justifyContent="center"
       >
         <GridContainer
-          borderRadiusChild="3px"
-          borderRadiusChild_tablet="3px"
+          borderRadiusChild="4px"
+          borderRadiusChild_tablet="4px"
           overflowChild="auto"
-          containerColumns_tablet={`1fr repeat(10, 1fr) 1fr`}
-          gridColumn_tablet="2 / span 10"
+          containerColumns_tablet="1fr repeat(10, 1fr) 1fr"
+          gridColumn_tablet="1 / span 12"
           columns_tablet="9"
           columns="3"
-          backgroundChild={Colors.whitePink}
+          backgroundChild={mainBackround || Colors.whitePink}
           gridGap="0"
           padding_tabletChild="10px"
+          width="100%"
         >
           <Div
             gridColumn_tablet="1 / 4"
@@ -121,6 +122,7 @@ const GeeksVsOthers = (props) => {
             height="74px"
             alignItems="center"
             background={Colors.veryLightBlue}
+            borderRadius="4px"
             padding="0 25px 0 20px"
             padding_tablet="0 5px 0 40px"
           >
@@ -139,6 +141,7 @@ const GeeksVsOthers = (props) => {
             height="74px"
             alignItems="center"
             background={Colors.white}
+            borderRadius="4px"
             padding="0 25px 0 20px"
             padding_tablet="0 5px 0 40px"
           >
@@ -153,7 +156,7 @@ const GeeksVsOthers = (props) => {
             </H3>
           </Div>
 
-          {geeks.info.slice(0, props.limit || geeks.info.length).map((m, i) => {
+          {geeks.info.slice(0, limit || geeks.info.length).map((m, i) => {
             return (
               <React.Fragment key={i}>
                 <Div
@@ -181,7 +184,7 @@ const GeeksVsOthers = (props) => {
                 <Div
                   gridColumn_tablet="4 / 7"
                   borderBottom={
-                    i < geeks.info.length - 1 &&
+                    i <= geeks.info.length - 1 &&
                     "1px solid rgba(164, 164, 164, 0.4)"
                   }
                   height="74px"
@@ -229,7 +232,7 @@ const GeeksVsOthers = (props) => {
           })}
         </GridContainer>
       </Div>
-      {props.link && (
+      {link && (
         <GridContainer margin="0 0 36px 0" margin_tablet="0 0 76px 0">
           <Div justifyContent="center" margin="50px 0 0 0">
             <Link to={geeks.button.button_link}>
@@ -251,7 +254,7 @@ const GeeksVsOthers = (props) => {
         margin_xxs="30px 20px"
         gridGap="10px"
         display_md="none"
-        background={Colors.whitePink}
+        background={mainBackround || Colors.whitePink}
       >
         <H2
           fontSize="18px"
@@ -265,7 +268,7 @@ const GeeksVsOthers = (props) => {
         </H2>
 
         {geeks.info
-          .slice(0, props.limit || geeks.info.length)
+          .slice(0, limit || geeks.info.length)
           .map((item, index) => {
             return (
               <React.Fragment key={index}>
@@ -276,13 +279,13 @@ const GeeksVsOthers = (props) => {
                   //padding_xs="15px 0 0 0"
                   margin_xs="0 15px"
                   display_md="none"
-                  cursor={`pointer`}
+                  cursor="pointer"
                   onClick={() => {
                     selected.index === index
                       ? setSelected({ index: null, manual: true })
                       : setSelected({ index: index, manual: true });
                   }}
-                  justifyContent={`between`}
+                  justifyContent="between"
                   flexDirection={selected.index === index && "column"}
                   borderBottom={`1px solid ${Colors.gray2}`}
                   position="relative"

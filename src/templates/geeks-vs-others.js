@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { isCustomBarActive } from "../actions";
-import { Header, Column, Wrapper, Divider, Div } from "../components/Sections";
+import { Header } from "../components/Sections";
 import GeeksVsOthers from "../components/GeeksVsOthers";
 import BaseRender from "./_baseLayout";
 import { graphql } from "gatsby";
@@ -12,11 +12,12 @@ const View = (props) => {
   return (
     <>
       <Header
-        margin={isCustomBarActive(session) ? "120px 0 40px 0" : "70px 0 40px 0"}
+        margin="10px 0 0 0"
+        margin_md={isCustomBarActive(session) ? "120px 0 40px 0" : "70px 0 40px 0"}
         seo_title={yml.seo_title}
         title={yml.header.title}
         paragraph={yml.header.paragraph}
-      ></Header>
+      />
       <GeeksVsOthers lang={pageContext.lang} link={false} />
     </>
   );

@@ -7,6 +7,7 @@ import { Circle } from "../components/BackgroundDrawing";
 import Iconogram from "../components/Iconogram";
 import News from "../components/News";
 import Icon from "../components/Icon";
+import GeeksVsOthers from "../components/GeeksVsOthers";
 import BaseRender from "./_baseLayout";
 import { SessionContext } from "../session.js";
 import Loc from "../components/Loc";
@@ -332,6 +333,14 @@ const Home = (props) => {
         />
       </Div>
       <Iconogram yml={yml.iconogram} background={Colors.veryLightBlue2} />
+      <GeeksVsOthers
+        lang={pageContext.lang}
+        mainBackround={Colors.white}
+        limit={5}
+        style={{ background: Colors.veryLightBlue2 }}
+        link
+      />
+      
 
       <With4Geeks
         lang={pageContext.lang}

@@ -748,6 +748,7 @@ export const Header = ({
   height_tablet,
   background,
   margin,
+  margin_md,
   margin_tablet,
   margin_xxs,
   padding,
@@ -788,6 +789,7 @@ export const Header = ({
       position={position}
       margin={margin || "70px 0 0 0"}
       margin_tablet={margin_tablet}
+      margin_md={margin_md}
       margin_xxs={margin_xxs}
       padding={padding || "0 0"}
       padding_tablet={padding_tablet || "60px 40px"}
