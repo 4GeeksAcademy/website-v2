@@ -70,7 +70,8 @@ button:
   button_link: "#programs"
 ## BADGES SECTION
 badges:
-  paragraph: "Este es el lugar para impulsar tu carrera aprendiendo a programar. Estamos muy orgullosos de nuestros programas y metodología para capacitar a los desarrolladores en solo unos meses y ayudarlos a impulsar sus carreras profesionales."
+  title: "8 años ayudando a las personas a iniciar en la tecnología"
+  paragraph: "Estamos autorizados por el Departamento de Educación de Florida, Forbes nos ha nombrado una de las 5 mejores escuelas de programación y todos los listados independientes de las principales escuelas de programación nos han nombrado como el mejor Bootcamp del mundo a lo largo de los años."
 
 success_cases:
   title: Historias de éxito
@@ -114,6 +115,7 @@ iconogram:
       - 35px
     style: '{ "textAlign": "center", "fontSize": "40px", "fontWeight": 400 }'
   swipable: false
+  background: veryLightBlue2
   icons:
   - icon: "graduation-2"
     content: "4500+ Graduados"

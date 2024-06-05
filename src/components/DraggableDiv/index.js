@@ -3,6 +3,7 @@ import { Div } from "../Sections";
 
 const DraggableDiv = ({ children, ...props }) => {
   const ref = useRef();
+  const defaultSpeed = 1;
 
   const [isDown, setIsDown] = useState(false);
   const [startX, setStartX] = useState(0);
@@ -28,7 +29,7 @@ const DraggableDiv = ({ children, ...props }) => {
     e.preventDefault();
     const pageX = e.touches ? e.touches[0].pageX : e.pageX;
     const x = pageX - ref.current.offsetLeft;
-    const walk = (x - startX) * 3; //scroll-fast
+    const walk = (x - startX) * defaultSpeed; //scroll-fast
     ref.current.scrollLeft = scrollLeft - walk;
   };
 

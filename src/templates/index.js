@@ -287,44 +287,51 @@ const Home = (props) => {
           width="100%"
           className="badge-slider hideOverflowX__"
         >
-          <Badges
+          <News
             lang={pageContext.lang}
-            short_link={true}
-            short_text="15px"
-            margin="40px auto"
-            paragraph={yml.badges.paragraph}
-            bottom_paragraph
-            maxWidth="1280px"
-            paddingText_tablet="0 10% 5px 10%"
+            limit={yml.news.limit}
+            height="45px"
+            margin="0"
+            justifyContent="between"
           />
         </Div>
       </Div>
-
-      <Testimonials
-        lang={data.allTestimonialsYaml.edges}
-        background={Colors.verylightGray}
-        heading={yml.success_cases.title}
-        content={yml.success_cases.content}
-        margin="20px 0 0 0"
-        variant="carousel"
-      />
-
-      <TwoColumn
-        left={{ image: yml.why_4geeks?.image }}
-        right={{
-          heading: yml.why_4geeks?.heading,
-          sub_heading: yml.why_4geeks?.sub_heading,
-          content: yml.why_4geeks?.content,
-          bullets: yml.why_4geeks?.bullets,
-          button: {
-            ...yml.why_4geeks?.button,
-            text: applyButton || yml.why_4geeks?.button?.text,
-          },
-        }}
-        proportions={yml.why_4geeks?.proportions}
-        session={session}
-      />
-      <Iconogram yml={yml.iconogram} />
+      <Div
+        margin="70px auto 0 auto"
+        margin_tablet="30px auto 0 auto"
+        width="100%"
+        className="badge-slider hideOverflowX__"
+        background={Colors.veryLightBlue2}
+      >
+        <Badges
+          variant="squares"
+          lang={pageContext.lang}
+          short_text="15px"
+          margin="40px auto"
+          title={yml.badges.title}
+          paragraph={yml.badges.paragraph}
+          maxWidth="1280px"
+          paddingText_tablet="0 10% 5px 10%"
+        />
+      </Div>
+      <Div background={Colors.veryLightBlue2}>
+        <TwoColumn
+          left={{ image: yml.why_4geeks?.image }}
+          right={{
+            heading: yml.why_4geeks?.heading,
+            sub_heading: yml.why_4geeks?.sub_heading,
+            content: yml.why_4geeks?.content,
+            bullets: yml.why_4geeks?.bullets,
+            button: {
+              ...yml.why_4geeks?.button,
+              text: applyButton || yml.why_4geeks?.button?.text,
+            },
+          }}
+          proportions={yml.why_4geeks?.proportions}
+          session={session}
+        />
+      </Div>
+      <Iconogram yml={yml.iconogram} background={Colors.veryLightBlue2}/>
 
       <With4Geeks
         lang={pageContext.lang}
@@ -358,6 +365,14 @@ const Home = (props) => {
         proportions={yml.two_columns?.proportions}
         session={session}
       /> */}
+      <Testimonials
+        lang={data.allTestimonialsYaml.edges}
+        background={Colors.verylightGray}
+        heading={yml.success_cases.title}
+        content={yml.success_cases.content}
+        margin="20px 0 0 0"
+        variant="carousel"
+      />
 
       <Iconogram yml={yml.iconogram_two} />
 
@@ -486,6 +501,7 @@ export const query = graphql`
               style
             }
             swipable
+            background
             icons {
               icon
               color

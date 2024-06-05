@@ -35,8 +35,8 @@ button:
 
 ## BADGES SECTION /components/Badges
 badges:
-  title: ""
-  paragraph: "Our Official 4Geeks Completion Certificate is recognized by industry leaders, opening up new tech opportunities and boosting your career in the competitive tech field. Join us to unlock your full potential."
+  title: "8 Years helping people transition to tech"
+  paragraph: "We are Licensed by the Florida Department of Education, we have been named by Forbes as a top 5 Coding School and every major Coding School independent listing have been naming us as top worldwide Bootcamp over the years"
 
 success_cases:
   title: Success cases
@@ -124,6 +124,7 @@ iconogram:
       - 35px
     style: '{ "textAlign": "center", "fontSize": "40px", "fontWeight": 400 }'
   swipable: false
+  background: veryLightBlue2
   icons:
     - icon: "graduation-2"
       content: "4500+ Graduates"
