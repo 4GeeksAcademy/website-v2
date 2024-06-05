@@ -13,7 +13,9 @@ const View = (props) => {
     <>
       <Header
         margin="10px 0 0 0"
-        margin_md={isCustomBarActive(session) ? "120px 0 40px 0" : "70px 0 40px 0"}
+        margin_md={
+          isCustomBarActive(session) ? "120px 0 40px 0" : "70px 0 40px 0"
+        }
         seo_title={yml.seo_title}
         title={yml.header.title}
         paragraph={yml.header.paragraph}

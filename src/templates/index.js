@@ -340,7 +340,6 @@ const Home = (props) => {
         style={{ background: Colors.veryLightBlue2 }}
         link
       />
-      
 
       <With4Geeks
         lang={pageContext.lang}

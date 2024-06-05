@@ -7,7 +7,15 @@ import Icon from "../Icon";
 // import Link from "gatsby-link";
 import Fragment from "../Fragment";
 
-const GeeksVsOthers = ({ title, paragraph, limit, link, lang, mainBackround, style }) => {
+const GeeksVsOthers = ({
+  title,
+  paragraph,
+  limit,
+  link,
+  lang,
+  mainBackround,
+  style,
+}) => {
   const [selected, setSelected] = useState({ index: null, manual: false });
 
   const data = useStaticQuery(graphql`
@@ -267,111 +275,107 @@ const GeeksVsOthers = ({ title, paragraph, limit, link, lang, mainBackround, sty
           {geeks.titles.featured}
         </H2>
 
-        {geeks.info
-          .slice(0, limit || geeks.info.length)
-          .map((item, index) => {
-            return (
-              <React.Fragment key={index}>
-                <Div
-                  key={index}
-                  width="100%"
-                  height={selected.index === index ? "auto" : "50px"}
-                  //padding_xs="15px 0 0 0"
-                  margin_xs="0 15px"
-                  display_md="none"
-                  cursor="pointer"
-                  onClick={() => {
-                    selected.index === index
-                      ? setSelected({ index: null, manual: true })
-                      : setSelected({ index: index, manual: true });
-                  }}
-                  justifyContent="between"
-                  flexDirection={selected.index === index && "column"}
-                  borderBottom={`1px solid ${Colors.gray2}`}
-                  position="relative"
-                  alignItems="center"
+        {geeks.info.slice(0, limit || geeks.info.length).map((item, index) => {
+          return (
+            <React.Fragment key={index}>
+              <Div
+                key={index}
+                width="100%"
+                height={selected.index === index ? "auto" : "50px"}
+                //padding_xs="15px 0 0 0"
+                margin_xs="0 15px"
+                display_md="none"
+                cursor="pointer"
+                onClick={() => {
+                  selected.index === index
+                    ? setSelected({ index: null, manual: true })
+                    : setSelected({ index: index, manual: true });
+                }}
+                justifyContent="between"
+                flexDirection={selected.index === index && "column"}
+                borderBottom={`1px solid ${Colors.gray2}`}
+                position="relative"
+                alignItems="center"
+              >
+                <H3
+                  textAlign="left"
+                  fontSize="14px"
+                  fontWeight="700"
+                  lineHeight="22px"
+                  textTransform="uppercase"
+                  color={Colors.darkGray}
+                  padding={selected.index === index ? "14px 0 0 0" : "0px"}
+                  //style={{ position: "absolute", left: "0px", top: "15px" }}
                 >
-                  <H3
-                    textAlign="left"
-                    fontSize="14px"
-                    fontWeight="700"
-                    lineHeight="22px"
-                    textTransform="uppercase"
-                    color={Colors.darkGray}
-                    padding={selected.index === index ? "14px 0 0 0" : "0px"}
-                    //style={{ position: "absolute", left: "0px", top: "15px" }}
-                  >
-                    {item.features}
-                  </H3>
-                  <Div
-                    style={{ position: "absolute", right: "0px", top: "15px" }}
-                    transform={
-                      selected.index === index
-                        ? "rotate(90deg)"
-                        : "rotate(0deg)"
-                    }
-                  >
-                    <Icon icon="arrow-right" width="32px" height="16px" />
-                  </Div>
-                  {selected.index === index && (
-                    <Div flexDirection="row" margin="10px 0" width="100%">
-                      <Div
-                        flexDirection="column"
-                        width="50%"
-                        background={Colors.veryLightBlue}
-                        padding="8px"
-                      >
-                        <Paragraph
-                          textAlign="center"
-                          fontSize="10px"
-                          fontWeight="700"
-                          lineHeight="22px"
-                          color={Colors.darkGray}
-                        >
-                          {geeks.titles.at_geeks}
-                        </Paragraph>
-                        <Paragraph
-                          textAlign="center"
-                          fontSize="10px"
-                          fontWeight="700"
-                          lineHeight="22px"
-                          color={Colors.darkGray}
-                        >
-                          {item.at4_Geeks}
-                        </Paragraph>
-                      </Div>
-
-                      <Div
-                        flexDirection="column"
-                        width="50%"
-                        background={Colors.white}
-                        padding="8px"
-                      >
-                        <Paragraph
-                          textAlign="center"
-                          fontSize="10px"
-                          fontWeight="700"
-                          lineHeight="22px"
-                          color={Colors.darkGray}
-                        >
-                          {geeks.titles.average}
-                        </Paragraph>
-                        <Paragraph
-                          textAlign="center"
-                          fontSize="10px"
-                          fontWeight="700"
-                          lineHeight="22px"
-                          color={Colors.darkGray}
-                        >
-                          {item.industry_average}
-                        </Paragraph>
-                      </Div>
-                    </Div>
-                  )}
+                  {item.features}
+                </H3>
+                <Div
+                  style={{ position: "absolute", right: "0px", top: "15px" }}
+                  transform={
+                    selected.index === index ? "rotate(90deg)" : "rotate(0deg)"
+                  }
+                >
+                  <Icon icon="arrow-right" width="32px" height="16px" />
                 </Div>
-              </React.Fragment>
-            );
-          })}
+                {selected.index === index && (
+                  <Div flexDirection="row" margin="10px 0" width="100%">
+                    <Div
+                      flexDirection="column"
+                      width="50%"
+                      background={Colors.veryLightBlue}
+                      padding="8px"
+                    >
+                      <Paragraph
+                        textAlign="center"
+                        fontSize="10px"
+                        fontWeight="700"
+                        lineHeight="22px"
+                        color={Colors.darkGray}
+                      >
+                        {geeks.titles.at_geeks}
+                      </Paragraph>
+                      <Paragraph
+                        textAlign="center"
+                        fontSize="10px"
+                        fontWeight="700"
+                        lineHeight="22px"
+                        color={Colors.darkGray}
+                      >
+                        {item.at4_Geeks}
+                      </Paragraph>
+                    </Div>
+
+                    <Div
+                      flexDirection="column"
+                      width="50%"
+                      background={Colors.white}
+                      padding="8px"
+                    >
+                      <Paragraph
+                        textAlign="center"
+                        fontSize="10px"
+                        fontWeight="700"
+                        lineHeight="22px"
+                        color={Colors.darkGray}
+                      >
+                        {geeks.titles.average}
+                      </Paragraph>
+                      <Paragraph
+                        textAlign="center"
+                        fontSize="10px"
+                        fontWeight="700"
+                        lineHeight="22px"
+                        color={Colors.darkGray}
+                      >
+                        {item.industry_average}
+                      </Paragraph>
+                    </Div>
+                  </Div>
+                )}
+              </Div>
+            </React.Fragment>
+          );
+        })}
       </Div>
     </Fragment>
   );
