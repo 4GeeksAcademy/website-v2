@@ -896,6 +896,7 @@ export const GridContainer = ({
   borderRadiusChild_tablet,
   backgroundChild,
   containerGridGap,
+  columnGap,
   gridGap,
   gridGap_xxs,
   gridGap_tablet,
@@ -993,6 +994,7 @@ export const GridContainer = ({
         display_md={displayChild_md}
         overflow={overflowChild}
         background={backgroundChild}
+        columnGap={columnGap}
         gridGap={gridGap}
         gridGap_xxs={gridGap_xxs}
         gridGap_tablet={gridGap_tablet}

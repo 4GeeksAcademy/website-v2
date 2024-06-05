@@ -243,7 +243,7 @@ export const Paragraph = styled.p`
     margin: ${(props) => props.margin_xs};
     font-size: ${(props) => props.fontSize_xs};
     font-weight: ${(props) =>
-      props.isActive ? "bold" : props.fontWeight_xs || "400"};
+      props.isActive ? "bold" : props.fontWeight_xs};
     line-height: ${(props) => props.lineHeight_xs};
   }
   @media ${Devices.sm} {

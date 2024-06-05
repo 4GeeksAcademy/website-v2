@@ -315,7 +315,7 @@ const Home = (props) => {
           paddingText_tablet="0 10% 5px 10%"
         />
       </Div>
-      <Div background={Colors.veryLightBlue2}>
+      <Div background={Colors.veryLightBlue2} display="block">
         <TwoColumn
           left={{ image: yml.why_4geeks?.image }}
           right={{
@@ -338,7 +338,17 @@ const Home = (props) => {
         mainBackround={Colors.white}
         limit={5}
         style={{ background: Colors.veryLightBlue2 }}
+        title={yml.geeks_vs_others.heading}
+        paragraph={yml.geeks_vs_others.sub_heading}
         link
+      />
+      <Testimonials
+        lang={data.allTestimonialsYaml.edges}
+        background={Colors.veryLightBlue2}
+        heading={yml.success_cases.title}
+        content={yml.success_cases.content}
+        margin="0"
+        variant="carousel"
       />
 
       <With4Geeks
@@ -373,14 +383,6 @@ const Home = (props) => {
         proportions={yml.two_columns?.proportions}
         session={session}
       /> */}
-      <Testimonials
-        lang={data.allTestimonialsYaml.edges}
-        background={Colors.verylightGray}
-        heading={yml.success_cases.title}
-        content={yml.success_cases.content}
-        margin="20px 0 0 0"
-        variant="carousel"
-      />
 
       <Iconogram yml={yml.iconogram_two} />
 
@@ -501,6 +503,10 @@ export const query = graphql`
                 icon
               }
             }
+          }
+          geeks_vs_others {
+            heading
+            sub_heading
           }
           iconogram {
             heading {

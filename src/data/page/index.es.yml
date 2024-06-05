@@ -174,9 +174,8 @@ iconogram_two:
 
 ## 4GEEKS VS OTHERS SECTION
 geeks_vs_others:
-  heading: "¿Qué hace que este programa destaque?"
+  heading: "Compara 4Geeks con otros bootcamps"
   sub_heading: "En pocas palabras, la forma más simple de comparar coding bootcamps"
-  sub_heading_link: "geeks-vs-others"
 
 ## JOIN 4GEEKS SECTION DATA
 join_geeks:

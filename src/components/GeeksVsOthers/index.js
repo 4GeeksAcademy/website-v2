@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
-import { GridContainer, Div } from "../Sections";
+import { GridContainer, Div, HR } from "../Sections";
 import { H2, H3, Paragraph } from "../Heading";
 import { Colors } from "../Styling";
 import Icon from "../Icon";
@@ -56,33 +56,33 @@ const GeeksVsOthers = ({
   if (geeks) geeks = geeks.node;
 
   return (
-    <Fragment style={style} github="/components/geeks_vs_others">
+    <Div display="block" style={style} github="/components/geeks_vs_others">
       {title && paragraph && (
-        <GridContainer margin_tablet="0 0 38px 0" margin="0 0 24px 0">
-          <Div
-            display="flex"
-            flexDirection="column"
-            alignItems="center"
-            padding_tablet="0 4em"
-            padding="0 2em"
+        <Div
+          display="flex"
+          flexDirection="column"
+          alignItems="center"
+          padding_tablet="0 4em"
+          padding="0 2em"
+          margin_tablet="0 auto 38px auto"
+          margin="0 auto 24px auto"
+          maxWidth="1280px"
+        >
+          <H2
+            margin="0 0 15px 0"
+            fontSize="24px"
+            fontSize_tablet="32px"
+            fontWeight="400"
+            lineHeight="29px"
+            lineHeight_tablet="38px"
+            marginTop="30px"
           >
-            <H2
-              margin="0 0 15px 0"
-              fontSize="24px"
-              fontSize_tablet="32px"
-              fontWeight="700"
-              lineHeight="29px"
-              lineHeight_tablet="38px"
-              marginTop="30px"
-            >
-              {title}
-            </H2>
-            <Paragraph fontSize_tablet="15px" fontSize="18px">
-              {" "}
-              {paragraph}
-            </Paragraph>
-          </Div>
-        </GridContainer>
+            {title}
+          </H2>
+          <Paragraph color={Colors.darkGray} opacity="1" fontSize_tablet="21px" fontSize="18px">
+            {paragraph}
+          </Paragraph>
+        </Div>
       )}
 
       {/* 3 / span 10 */}
@@ -105,6 +105,7 @@ const GeeksVsOthers = ({
           columns="3"
           backgroundChild={mainBackround || Colors.whitePink}
           gridGap="0"
+          columnGap="16px"
           padding_tabletChild="10px"
           width="100%"
         >
@@ -113,12 +114,12 @@ const GeeksVsOthers = ({
             height="74px"
             alignItems="center"
             padding="0 5px 0 20px"
-            padding_tablet="0 5px 0 10px"
+            padding_tablet="0 16px"
           >
             <H3
               textAlign="left"
               fontSize="24px"
-              fontWeight="900"
+              fontWeight="400"
               lineHeight="28px"
               color={Colors.darkGray}
             >
@@ -129,17 +130,17 @@ const GeeksVsOthers = ({
             gridColumn_tablet="4 / 7"
             height="74px"
             alignItems="center"
-            background={Colors.veryLightBlue}
-            borderRadius="4px"
+            background={Colors.blue}
+            borderRadius="4px 4px 0 0"
             padding="0 25px 0 20px"
-            padding_tablet="0 5px 0 40px"
+            padding_tablet="0 16px"
           >
             <H3
               textAlign="left"
               fontSize="24px"
-              fontWeight="900"
+              fontWeight="400"
               lineHeight="28px"
-              color={Colors.darkGray}
+              color={Colors.white}
             >
               {geeks.titles.at_geeks}
             </H3>
@@ -151,12 +152,12 @@ const GeeksVsOthers = ({
             background={Colors.white}
             borderRadius="4px"
             padding="0 25px 0 20px"
-            padding_tablet="0 5px 0 40px"
+            padding_tablet="0 16px"
           >
             <H3
               textAlign="left"
               fontSize="24px"
-              fontWeight="900"
+              fontWeight="400"
               lineHeight="28px"
               color={Colors.darkGray}
             >
@@ -164,93 +165,93 @@ const GeeksVsOthers = ({
             </H3>
           </Div>
 
-          {geeks.info.slice(0, limit || geeks.info.length).map((m, i) => {
+          {geeks.info.slice(0, limit || geeks.info.length).map((m, i, arr) => {
             return (
               <React.Fragment key={i}>
                 <Div
                   gridColumn_tablet="1 / 4"
-                  borderBottom={
-                    i < geeks.info.length - 1 &&
-                    "1px solid rgba(164, 164, 164, 0.4)"
-                  }
-                  height="74px"
-                  alignItems="center"
                   padding="0 5px 0 20px"
-                  padding_tablet="0 5px 0 10px"
+                  padding_tablet="0 16px"
+                  display="block"
                 >
-                  <H3
-                    textAlign="left"
-                    fontSize="15px"
-                    fontWeight="700"
-                    lineHeight="22px"
-                    textTransform="uppercase"
-                    color={Colors.darkGray}
+                  <Div
+                    height="74px"
+                    alignItems="center"
                   >
-                    {m.features}
-                  </H3>
+                    <H3
+                      textAlign="left"
+                      fontSize="15px"
+                      fontWeight="400"
+                      lineHeight="22px"
+                      textTransform="uppercase"
+                      color={Colors.darkGray}
+                    >
+                      {m.features}
+                    </H3>
+                  </Div>
+                  {i < arr.length - 1 && (
+                    <HR height="1px" background="rgba(164, 164, 164, 0.4)" />
+                  )}
+                  
                 </Div>
                 <Div
                   gridColumn_tablet="4 / 7"
-                  borderBottom={
-                    i <= geeks.info.length - 1 &&
-                    "1px solid rgba(164, 164, 164, 0.4)"
-                  }
-                  height="74px"
-                  alignItems="center"
-                  background={Colors.veryLightBlue}
+                  borderRadius={i === arr.length - 1 && "0 0 4px 4px"}
+                  background={Colors.blue}
                   padding="0 25px 0 20px"
-                  padding_tablet="0 5px 0 40px"
+                  padding_tablet="0 16px"
+                  display="block"
                 >
-                  <H3
-                    textAlign="left"
-                    fontSize="15px"
-                    fontWeight="700"
-                    lineHeight="22px"
-                    textTransform="uppercase"
-                    color={Colors.darkGray}
+                  <Div
+                    height="74px"
+                    alignItems="center"
                   >
-                    {m.at4_Geeks}
-                  </H3>
+                    <H3
+                      textAlign="left"
+                      fontSize="15px"
+                      fontWeight="400"
+                      lineHeight="22px"
+                      textTransform="uppercase"
+                      color={Colors.white}
+                    >
+                      {m.at4_Geeks}
+                    </H3>
+                  </Div>
+                  {i < arr.length - 1 && (
+                    <HR height="1px" background="white" />
+                  )}
                 </Div>
                 <Div
                   gridColumn_tablet="7 / 10"
-                  borderBottom={
-                    i < geeks.info.length - 1 &&
-                    "1px solid rgba(164, 164, 164, 0.4)"
-                  }
-                  height="74px"
-                  alignItems="center"
                   background={Colors.white}
                   padding="0 25px 0 20px"
-                  padding_tablet="0 5px 0 40px"
+                  padding_tablet="0 16px"
+                  display="block"
                 >
-                  <H3
-                    textAlign="left"
-                    fontSize="15px"
-                    fontWeight="700"
-                    lineHeight="22px"
-                    textTransform="uppercase"
-                    color={Colors.darkGray}
+                  <Div
+                    height="74px"
+                    alignItems="center"
                   >
-                    {m.industry_average}
-                  </H3>
+                    <H3
+                      textAlign="left"
+                      fontSize="15px"
+                      fontWeight="400"
+                      lineHeight="22px"
+                      textTransform="uppercase"
+                      color={Colors.darkGray}
+                    >
+                      {m.industry_average}
+                    </H3>
+                  </Div>
+                  {i < arr.length - 1 && (
+                    <HR height="1px" background="rgba(164, 164, 164, 0.4)" />
+                  )}
                 </Div>
               </React.Fragment>
             );
           })}
         </GridContainer>
       </Div>
-      {link && (
-        <GridContainer margin="0 0 36px 0" margin_tablet="0 0 76px 0">
-          <Div justifyContent="center" margin="50px 0 0 0">
-            <Link to={geeks.button.button_link}>
-              <Paragraph color={Colors.blue}>
-                {geeks.button.button_text}
-              </Paragraph>
-            </Link>
-          </Div>
-        </GridContainer>
-      )}
 
       {/* MOBILE VERSION*/}
 
@@ -377,7 +378,16 @@ const GeeksVsOthers = ({
           );
         })}
       </Div>
-    </Fragment>
+      {link && (
+        <Div justifyContent="center" margin="50px 0 0 0" padding="0 0 25px 0">
+          <Link to={geeks.button.button_link}>
+            <Paragraph color={Colors.blue} fontWeight="700" fontWeight_tablet="700" fontSize="21px">
+              {geeks.button.button_text}
+            </Paragraph>
+          </Link>
+        </Div>
+      )}
+    </Div>
   );
 };
 
