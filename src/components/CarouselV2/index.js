@@ -8,7 +8,7 @@ const CarouselV2 = ({
   heading,
   content,
   children,
-  customSettings,
+  settings,
   headingProps,
   contentProps,
   ...rest
@@ -28,7 +28,7 @@ const CarouselV2 = ({
           slidesToShow: 5,
           infinite: true,
           slidesToScroll: 5,
-          ...customSettings,
+          ...settings,
         }}
         nextArrow={({ onClick }) => (
           <Button

@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef, useContext } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { graphql } from "gatsby";
 import { Link } from "gatsby";
 import {
@@ -31,7 +31,6 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
   const { session } = useContext(SessionContext);
   const [applyButtonText, setApplyButtonText] = useState("");
 
-  const sliderRef = useRef();
   const [open, setOpen] = useState(false);
   const handleOpen = () => {
     setOpen(true);

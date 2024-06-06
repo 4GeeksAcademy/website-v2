@@ -2,15 +2,16 @@ import React, { useRef } from "react";
 import { Div } from "../Sections";
 import { H3, Paragraph } from "../Heading";
 import Icon from "../Icon";
+import CarouselV2 from "../CarouselV2";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const TwoColumnCarousel = ({ title, text, background, children }) => {
+const TwoColumnCarousel = ({ title, text, background, children, settings }) => {
 
   const sliderRef = useRef();
 
-  const settings = {
+  const customSettings = {
     className: "slider variable-width",
     dots: true,
     infinite: true,
@@ -63,7 +64,7 @@ const TwoColumnCarousel = ({ title, text, background, children }) => {
           <Icon icon="longarrow-right" />
         </Div>
         <Div display="block" width="100%" maxWidth="1020px">
-          <Slider {...settings} ref={sliderRef}>
+          <Slider {...customSettings} ref={sliderRef}>
             {children}
           </Slider>
         </Div>

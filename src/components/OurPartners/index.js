@@ -248,7 +248,7 @@ const VariantCarousel = ({ title, paragraph, images, ...rest }) => {
       heading={title}
       content={paragraph}
       headingProps={{ fontWeight: "400", fontSize: "35px" }}
-      customSettings={{
+      settings={{
         slidesToShow: 4,
         slidesToScroll: 4,
         responsive: [
