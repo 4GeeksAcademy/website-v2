@@ -1,14 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import { Div } from "../Sections";
-import { H3, H4, Paragraph } from "../Heading";
 import { Colors } from "../Styling";
-import ReactPlayer from "../ReactPlayer";
-import Icon from "../Icon";
 import TestimonialCard from "../TestimonialCard";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import TestimonialCardSmall from "../TestimonialCardSmall";
 
-const SuccessStoriescomponent = ({ filterIndexes, lang }) => {
+const SuccessStoriescomponent = ({ filterIndexes, lang, variant }) => {
   const data = useStaticQuery(graphql`
     {
       allTestimonialsYaml {
@@ -72,7 +69,7 @@ const SuccessStoriescomponent = ({ filterIndexes, lang }) => {
   let position = 0;
 
   useEffect(() => {
-    filteredData.forEach((testim, ind, arr) => {
+    filteredData.forEach((_, ind, arr) => {
       arr[ind].isExpanded = false;
     });
     if (filterIndexes) {
@@ -87,6 +84,8 @@ const SuccessStoriescomponent = ({ filterIndexes, lang }) => {
       setTestimonials([...filteredData.filter((f) => f.hidden == false)]);
     }
   }, []);
+
+  const Card = variant === "small" ? TestimonialCardSmall : TestimonialCard;
 
   return (
     <>
@@ -113,8 +112,8 @@ const SuccessStoriescomponent = ({ filterIndexes, lang }) => {
             ? (position = 0)
             : (position += 1);
           return (
-            i < 9 && (
-              <TestimonialCard
+            i < 30 && (
+              <Card
                 key={i}
                 studentRating={m.rating}
                 image={m.student_thumb && m.student_thumb}

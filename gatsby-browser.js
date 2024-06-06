@@ -6,5 +6,5 @@ import Session from "./src/session.js";
 
 //Wraps every page in a component
 export const wrapPageElement = ({ element, props }) => (
-  <Session>{element}</Session>
+  <Session {...props}>{element}</Session>
 );

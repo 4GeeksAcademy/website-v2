@@ -4,7 +4,7 @@ meta_info:
   description: "Conoce los resultados, demografía, piedras angulares, equipo e historia de 4Geeks Academy"
   image: ""
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
-  keywords: "Sobre 4Geeks Academy"
+  keywords: null
   redirects: ["/la-academia", "/es/academia"]
 
 seo_title: "Sobre 4Geeks Academy"
@@ -12,29 +12,24 @@ header:
   title: "Empoderamos Talentos, impulsando sus carreras profesionales con programación"
   paragraph: "Somos especialistas en código. 4Geeks es el lugar donde los desarrolladores crecen y prosperan."
   image: "../../../static/images/the-academy/the-academy-header.png"
-  image_alt: ""
+  image_alt: "Sobre 4Geeks Academy"
 
 ## BADGES SECTION
 badges:
   paragraph: "4Geeks Academy es el lugar donde los desarrolladores crecen y prosperan.
-  
-  Estamos autorizados por el Departamento de Educación de Florida.
-  
-  Elegido como uno de los 35 mejores bootcamps del mundo según y también. bootcamp de codificación en Miami según SwitchUp.
-  
-  Reconocido como uno de los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek."
+    Estamos autorizados por el Departamento de Educación de Florida.
+    Elegido como uno de los 35 mejores bootcamps del mundo según y también. bootcamp de codificación en Miami según SwitchUp.
+    Reconocido como uno de los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek."
 
 what_is_4geeks:
   title: "¿Qué es 4Geeks?"
   paragraph: "Somos especialistas en código. 4Geeks es el lugar donde los desarrolladores crecen y prosperan.
-  
-  4Geeks Academy nació en 2015. Hoy 4Geeks tiene más de 7 campus repartidos por Estados Unidos, América Latina y Europa. Contamos con más de 1500 graduados y toneladas de cosas de las que estar orgullosos.
-  
-  Estamos muy orgullosos de nuestros programas y metodología para capacitar a los desarrolladores de software en solo unos meses y ayudarlos a impulsar sus carreras profesionales. En 4Geeks Academy ofrecemos una gran plataforma de aprendizaje y una excelente educación en codificación para nuestros estudiantes.
-  Nuestra misión es contribuir a reducir la tasa de desempleo, brindar accesibilidad a la tecnología y aumentar la cantidad de talento digital disponible mientras se desarrolla una comunidad global sólida de desarrolladores de software."
-  
+    4Geeks Academy nació en 2015. Hoy 4Geeks tiene más de 7 campus repartidos por Estados Unidos, América Latina y Europa. Contamos con más de 1500 graduados y toneladas de cosas de las que estar orgullosos.
+    Estamos muy orgullosos de nuestros programas y metodología para capacitar a los desarrolladores de software en solo unos meses y ayudarlos a impulsar sus carreras profesionales. En 4Geeks Academy ofrecemos una gran plataforma de aprendizaje y una excelente educación en codificación para nuestros estudiantes.
+    Nuestra misión es contribuir a reducir la tasa de desempleo, brindar accesibilidad a la tecnología y aumentar la cantidad de talento digital disponible mientras se desarrolla una comunidad global sólida de desarrolladores de software."
+    
   image: "../../../static/images/the-academy/what-is-4geeks.jpg"
-  image_alt: ""
+  image_alt: "¿Qué es 4Geeks Academy?"
 
 ## EDUCATION SECTION
 education:

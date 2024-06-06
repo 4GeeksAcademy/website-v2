@@ -2,7 +2,7 @@ meta_info:
   slug: clases-de-programacion-santiago # <--- URL 4geeksacademy.com/us/landing/example
 
   # This will show on social media when shared
-  title: "Clases de programación en Santiago de Chile, aprende a programar en 9 o 16 sem y consigue trabajo como programador."
+  title: "Clases de programación en Santiago de Chile, aprende a programar en 10 o 16 sem y consigue trabajo como programador."
   description: "El más galardonado curso de programacion en Santiago, Chile. Con 4Geeks te convertiras en programador en unos pocos meses."
   image: "/images/bg/main-bg.jpg"
   keywords: "Clase de programación, Clase de python, clase de javascript, Clase de informática, Coding Bootcamp, 4Geeks Academy"
@@ -152,10 +152,10 @@ components:
       link: "#leadform_header" # moves to start position
       
     - title: "Full Time"
-      sub_title: "9 semanas"
+      sub_title: "10 semanas"
       icon: "fullstack_2"
       description: |
-        Programa intensivo de 9 semanas, con clases de lunes a viernes durante todo el día, para vivir una experiencia inmersiva en el mundo del código.
+        Programa intensivo de 10 semanas, con clases de lunes a viernes durante todo el día, para vivir una experiencia inmersiva en el mundo del código.
 
         Precio: 3.800.000 CLP
         
@@ -196,6 +196,7 @@ components:
     layout: two_column_right
     background: "veryLightBlue2" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
     image:
+      style: '{ "background-size": "contain", "height":"200px", "min-height":"auto", "background-position": "center"}'
       src: "/images/why-4geeks/python-image.png"
     heading:
       text:

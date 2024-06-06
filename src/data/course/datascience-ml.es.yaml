@@ -142,10 +142,10 @@ details:
           icon: "contract-checked"
 
   heading: DETALLES DEL PROGRAMA
-  weeks: 18
+  weeks: 16
   facts:
     - label: "Duración"
-      value: "18 semanas"
+      value: "16 semanas"
     - label: "Compromiso"
       value: "20 hrs/sem. (Lun - Mie - Vie)"
     - label: "Certificado"
@@ -206,7 +206,7 @@ details:
       description: "Uno de los aspectos más importantes al desarrollar una Inteligencia Artificial es entender cómo preparar, desplegar y mantener una solución en un ambiente de producción. Te llevaremos de la mano durante todo el ciclo de desarrollo de software detrás de la solución. Machine Learning Operations (MLOps), así como privacidad, seguridad y ética. Tu proyecto final será desplegar tu aplicación de Machine Learning en producción."
       projects: "Construyendo arquitecturas de datos, desplegando I.A. en produccion localmente y en la nube, monitoreando y manteniendo los modelos."
       slug: "quality-deploy"
-      duration: "1 week"
+      duration: "1 sem"
       step: 1
     - module_name: "Projecto Final"
       title: "Elige un problema y resuélvelo con Machine Learning"

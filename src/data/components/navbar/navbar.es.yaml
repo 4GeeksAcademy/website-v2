@@ -32,13 +32,13 @@ navbar:
             - text: "Ver Programa"
               link: "/es/coding-bootcamps/curso-ciberseguridad"
 
-        - title: "Blockchain y Web3"
+        - title: "Inteligencia Artificial"
           level: "Desde cero"
-          icon: "blockchain"
-          paragraph: "Construye applicaciones en la Web3 utilizando Solidity y Etherium Blockchain. Obtén un trabajo como desarrolaldor de blockchain."
+          icon: "applied-ai"
+          paragraph: "Explora a detalle la inteligencia artificial y cómo aplicarla en diferentes industrias, roles y en tu trabajo."
           buttons:
-            - text: "Registro temprano"
-              link: "#"
+            - text: "Ver Programa"
+              link: "/es/coding-bootcamps/curso-inteligencia-artificial"
 
   - name: "Porqué 4Geeks"
     link: "/es/porque-4geeks"

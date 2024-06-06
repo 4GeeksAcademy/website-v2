@@ -37,6 +37,7 @@ button:
 custom_bar:
   active: true
   message: 'Desde $150 al mes. O paga cuando obtengas un trabajo! <a class="customBar-link" href="/es/aplica">Aplica</a>'
+  discounts: true
   button:
     label: "" # leave empty to hide button
     path: "/es/aplica" #string (can be inline path using #, relative path or absolute path)
@@ -56,6 +57,27 @@ news:
 upcoming:
   no_dates_message: "Actualmente no hay próximas fechas para este campus"
   actionMessage: "Avisenme fechas disponibles"
+
+our_partners:
+  tagline: Quienes contratan a nuestros estudiantes
+  images:
+    - name: "Microsoft"
+      follow: False
+      image: "../../../static/images/partner/microsoft.png"
+      featured: true
+      link: "https://microsoft.com"
+    - name: "Google Developers"
+      image: "../../../static/images/coding/google-developers.png"
+      featured: true
+    - name: "Boats Group"
+      image: "../../../static/images/partner/boats.jpg"
+      featured: false
+    - name: "Facebook"
+      image: "../../../static/images/partner/meta-logo.png"
+      featured: true
+    - name: "Ebay"
+      image: "../../../static/images/partner/ebay.png"
+      featured: false
 
 info_box:
   heading: "Encuéntranos en Miami"

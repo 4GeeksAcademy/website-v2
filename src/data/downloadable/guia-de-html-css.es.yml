@@ -1,0 +1,160 @@
+meta_info:
+  slug: guia-de-html-css # <--- URL 4geeksacademy.com/us/landing/example
+  # This will show on social media when shared
+  title: "Descarga nuestra Guía de HTML y CSS"
+  description: "Aprende etiquetas HTML y su estructura así como se complementa con CSS y JS, aprende lo más básico para empezar en programación web."
+  image: "/images/bg/follow-that-dream-digital-nomad.webp"
+  keywords: "html, css, etiquetas html, estructura html, selectores css, guia de html y css"
+  template: "landing_a" # <--- choose your landing template
+  redirects: [] # <--- URL redirections to avoid 404 errors
+  utm_location: ["online"]
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  automation: downloadable # optional, lead as "null" if you don't know, it can be more than one (comma separated)
+  tag: request_downloadable # mandatory: at lease one tag (comma separated)
+  current_download: "guia-html-css" 
+
+form:
+  # posible fields: "first_name", "last_name", "full_name", "phone", "email"
+  # always the first_name, email and phone will be mandatory if added.
+  fields: ["full_name", "phone", "email"]
+  heading: "Descargar Guía" 
+  motivation: "En breves minutos, después de haber completado el formulario, en tu correo electrónico habrás recibido la guía de HTML y CSS, tendrás acceso a todo lo que necesitas para empezar a aprender programación web."
+  button_label: Descargar la Guía Gratis
+  redirect: "" #you can redirect to another url or entirely diffrent website
+# jumbotron on the top (cannot be commented out)
+
+navbar:
+  logoUrl: "#" # relative(/apply), absolute(https://google.com) or id(#componentName)
+  buttonText: "Descargar Guía"
+  buttonUrl: "#leadform_bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+
+# jumbotron on the top (cannot be commented out)
+header_data:
+  background: "lightyellow"
+  tagline: "¡Descarga hoy la Guía de HTML y CSS gratis!"
+  tagline_color: "black"
+  sub_heading: ""
+  image_filter: brightness(1)
+
+
+features:
+  marginTop: 20px #<-- separation between tagline and the bullets
+
+  #                                         up   left down  right
+  styles: '{ "fontSize": "15px", "margin": "10px 0px 10px 0px" }'
+  text: "HTML y CSS son las bases de la web. Dominar las etiquetas HTML y los selectores CSS será parte de los primeros pasos que te lleven a convertirte en un excelente programador algún día. ¿A qué esperas? ¡Descarga hoy la guía de HTML y CSS GRATIS!"
+  # bullets: ""
+
+follow_bar:
+  position: "top" # top, bottom, hidden
+  content:
+    text: "Descarga ahora la guía \n de HTML y CSS"
+    text_mobile: "Descarga ahora la guía \n de HTML y CSS"
+    # devices:    XL      LG      MD      SM      XS
+    font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
+  button:
+    text: "Descarga Guía!"
+    path: "#leadform_header" #top, #bottom, #anotherComponentId
+    # ├──if path is empty("") it point to top per default ("#" -> points to top)
+    # └── path accepts: relative(/example/path), absolute(https://google.com) or id(#idName)
+  phone:
+    text: "Llama "
+    number: null # change only if need to customize
+
+#
+# ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
+#
+
+badges:
+  position: 2 # It's the position of the component that will be rendered first
+  heading: "4Geeks Academy cuenta con reconocimientos que validan su experiencia como una de las mejores academias de programación"
+
+who_is_hiring:
+  position: 9
+  limit: 3
+  heading: "¡Las oportunidades te esperan!"
+  sub_heading: "Muchas de las empresas líderes en el mundo buscan programadores web"
+
+apply_schollarship: # form that is displayed at the end of the landing
+  # title: "Apoyo Profesional Ilimitado"
+  imageSide: "right"
+  image: "../../../static/images/bg/main.png"
+
+# Possible layours: [two_column_left_image, two_column_right_image]
+components:
+  - name: guia_de_html_intro
+    position: 1
+    layout: two_column_left
+    background: "veryLightBlue2" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
+    image:
+      src: "/images/techs/laptop-html-css.webp"
+      style: '{"backgroundSize": "contain", "background-position": "center", "min-height": "300px", "height": "300px"}'
+    # video: "B01-eTfgqqc"
+    heading:
+      text: "Guía de HTML y CSS, aprende lo necesario sobre etiquetas HTML y su estructura"
+        #           xl      lg      md      sm      xs
+      font_size: ["35px", "35px", "35px", "30px", "28px"]
+    content:
+      text: "Actualmente la demanda de desarrolladores web calificados se está disparando. Las empresas de todos los tamaños confían en la web para llegar a sus clientes y necesitan profesionales capacitados para crear y mantener sus sitios web."
+      font_size: ["16px"]
+
+
+  - name: html_css_table_content
+    position: 3
+    layout: two_column_right
+    image:
+      src: "/images/woman-laptop-smile-bg.webp"
+      style: '{ "backgroundSize": "contain", "background-position": "center", "min-height": "350px", "height": "350px"}'
+      shadow: false
+    heading:
+      text:
+        "Domina los lenguajes básicos de la web. Descarga hoy la guía de HTML y CSS."
+        #           xl      lg      md      sm      xs
+      font_size: ["32px", "30px", "30px", "25px", "25px"]
+    sub_heading:
+      text:
+        "¿Estás listo para dar tus primeros pasos en el emocionante mundo del desarrollo web?"
+      font_size: ["15px"]
+    content:
+      text: "HTML y CSS son los pilares fundamentales para crear páginas web que funcionen y se vean increíbles en cualquier dispositivo. Con esta guía completa, aprenderás los conceptos esenciales de estos lenguajes y estarás en camino de convertirte en un desarrollador web exitoso."
+      font_size: ["16px"]
+    button:
+      text: "Descargar la guia"
+      color: "white"
+      background: "black"
+      path: "#leadform_bottom"
+
+  - name: some_id
+    position: 4
+    layout: two_column_left
+    background: "veryLightBlue2" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
+    image:
+      src: "/images/testimonials/pablo-review.jpg"
+      shadow: true
+    video: "OtJvrNwQw9E"
+    section_heading: 
+      text: "Diseñado para hacerte exitoso en el mundo de la programación"
+      style: '{ "font-size": "30px" }'
+    heading:
+      text:
+        "Descubre por qué 4Geeks Academy es tu mejor opción para aprender HTML, CSS y mucho más"
+        #xl      lg     md     sm    xs
+      font_size: ["35px", "30px", "30px", "25px", "20px"]
+    content:
+      text: "En 4Geeks Academy, te brindamos las herramientas y el apoyo que necesitas para convertirte en un desarrollador web exitoso. Nuestra metodología de aprendizaje efectiva, basada en proyectos y práctica constante, te permitirá dominar HTML y CSS de manera rápida y efectiva."
+      font_size: ["16px"]
+    button:
+      text: "Descarga la Guía Gratis"
+      color: "white"
+      background: "black"
+      path: "#leadform_header"
+
+  # - name: first_syllabus_form
+  #   position: 4
+  #   layout: syllabus
+  #   containerBackground: "white"
+  #   background: "white"
+  #   button:
+  #     text: "Descargar Gratis"
+  #   heading:
+  #     text: "Descargar Guía"

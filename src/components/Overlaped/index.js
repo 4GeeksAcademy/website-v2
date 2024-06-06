@@ -8,28 +8,14 @@ import Icon from "../Icon";
 import { DirectiveLocation } from "graphql";
 import { transferQuerystrings, smartRedirecting } from "../../utils/utils";
 
-const Overlaped = ({ heading, content, button, background, image }) => {
-  const data = useStaticQuery(graphql`
-    {
-      allOverlapedYaml {
-        edges {
-          node {
-            heading
-            content
-            button {
-              text
-              color
-              path
-            }
-            background
-            image {
-              src
-            }
-          }
-        }
-      }
-    }
-  `);
+const Overlaped = ({
+  heading,
+  content,
+  button,
+  background,
+  image,
+  headingStyle,
+}) => {
   return (
     <Div maxWidth_tablet="1280px" margin_tablet="50px auto" width="100%">
       <Grid
@@ -123,9 +109,12 @@ const Overlaped = ({ heading, content, button, background, image }) => {
           background={Colors.white}
           boxShadow="20px 15px 0px 0px rgba(0,0,0,1)"
         >
-          <H2 textAlign="start" lineHeight_tablet="36px" margin="0 0 12px 0">
-            {heading}
-          </H2>
+          <H2
+            textAlign="start"
+            lineHeight_tablet="36px"
+            margin="0 0 12px 0"
+            dangerouslySetInnerHTML={{ __html: heading }}
+          />
           {content && /<\/?[a-z0-9]+>/g.test(content) ? (
             <Paragraph
               textAlign="start"
@@ -164,6 +153,7 @@ const Overlaped = ({ heading, content, button, background, image }) => {
         display_tablet="none"
         position="relative"
         flexDirection="Column"
+        width="100%"
         //margin_sm="0 auto"
         //padding_xxs={ heading?.length > 4 ? "40px 20px 65% 20px" : "40px 20px 30% 20px" }
         margin_xxs={
@@ -214,18 +204,22 @@ const Overlaped = ({ heading, content, button, background, image }) => {
           position="absolute"
           top={heading?.length > 4 ? "40%" : "50%"}
           zIndex="1"
-          width_xxs="51%"
-          width_xs="59%"
-          width_sm="66%"
+          width_xxs="90%"
+          width_xs="88%"
+          width_sm="89%"
           width_tablet="100%"
           padding="20px"
-          margin="10px"
+          margin="5px"
+          margin_xs="10px"
           background={Colors.white}
           boxShadow="20px 15px 0px 0px rgba(0,0,0,1)"
         >
-          <H2 textAlign="start" lineHeight_xxs="36px" margin="0 0 12px 0">
-            {heading}
-          </H2>
+          <H2
+            textAlign="start"
+            lineHeight_xxs="36px"
+            margin="0 0 12px 0"
+            dangerouslySetInnerHTML={{ __html: heading }}
+          />
           {content && /<\/?[a-z0-9]+>/g.test(content) ? (
             <Paragraph
               textAlign="start"

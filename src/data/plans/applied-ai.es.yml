@@ -1,0 +1,121 @@
+full_time: []
+part_time:
+  - slug: 'plan-4'
+    recomended: true
+    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
+    scholarship: "Pago completo"
+    payment_time: "Paga hoy"
+    price: "$3000"
+    original_price: "$3500"
+    offer: "$500 DE DESCUENTO"
+    bullets: 
+      - "Al pagar por adelantado, ahorras intereses y obtienes un descuento especial de $500"
+      - "Prepárate para maximizar tu productividad con IA"
+
+  - slug: 'plan-2'
+    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
+    recomended: false
+    scholarship: "Financiado"
+    payment_time: "Paga en 12 meses"
+    price: "~$266 al mes"
+    bullets: 
+      - "Siempre hay un plan de pago disponible para ayudarte a unirte a 4Geeks Academy."
+      - "Si no encuentras algo que te funcione aquí, por favor contáctanos para que podamos intentar encontrar otras formas de ayudarte."
+    icons: 
+      - "/images/ascent_logo.jpg"
+      - "/images/climb-logo.png"
+      - "/images/quotanda-logo.png"
+
+  - slug: 'plan-3'
+    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
+    recomended: false
+    scholarship: "Financiado"
+    payment_time: "Paga en 24 meses"
+    price: "~$145 al mes"
+    bullets: 
+      - "Siempre hay un plan de pago disponible para ayudarte a unirte a 4Geeks Academy."
+      - "Si no encuentras algo que te funcione aquí, por favor contáctanos para que podamos intentar encontrar otras formas de ayudarte."
+    icons: 
+      - "/images/ascent_logo.jpg"
+      - "/images/climb-logo.png"
+      - "/images/quotanda-logo.png"
+
+## Spain 
+
+  - slug: 'spain-upfront-ai-pt'
+    academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
+    recomended: true
+    scholarship: "Pago completo"
+    payment_time: "Paga hoy"
+    price: "€3000*"
+    original_price: "€3500"
+    offer: "€500 DE DESCUENTO"
+    bullets:
+      - "Paga con transferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
+      - "*Descuento de hasta €500. De €3500 a €3000"     
+    icons: 
+      - "/images/visa-mastercard.png"    
+      - "/images/bitcoin_logo.png"  
+      - "/images/ethereum.png"    
+
+  - slug: 'europe-upfront-ai-pt'
+    academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany','munich-germany', 'lisbon-portugal','milan-italy','rome-italy']
+    recomended: true
+    scholarship: "Pago completo"
+    payment_time: "Paga hoy"
+    price: "€3000*"
+    original_price: "€3500"
+    offer: "€500 DE DESCUENTO"
+    bullets:
+      - "Paga con transferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
+      - "*Descuento de hasta €500. De €3500 a €3000"     
+    icons: 
+      - "/images/visa-mastercard.png"    
+      - "/images/bitcoin_logo.png"  
+      - "/images/ethereum.png"    
+
+## Chile
+                       
+  - slug: 'chile-ai-upfront'
+    academies: ['santiago-chile']
+    recomended: true
+    scholarship: "Paga por Adelantado"
+    payment_time: "Y obtén un descuento"
+    price: "700.000 CLP*"
+    original_price: "1.000.000 CLP"
+    offer: "30% de descuento"
+    bullets:
+      - "Paga con transferencia bancaria, tarjeta de crédito o débito"    
+      - "*Descuento de 300.000 CLP al pagar por adelantado"
+    icons: 
+      - "/images/visa-mastercard.png"   
+
+  - slug: 'chile-financed-ai'
+    academies: ['santiago-chile']
+    recomended: false
+    scholarship: "Financiado"
+    payment_time: "Pago en 12 meses"
+    price: "Desde 58.000 CLP"
+    warning_message: "¡Plazas limitadas!"
+    bullets:
+      - "Financiamiento a medida de 6 a 12 meses"  
+      - "Se debe pagar un pago inicial correspondiente al 20% del valor del programa" 
+      - "Si no encuentras aquí algo que te funcione, contáctanos para que podamos intentar encontrar otras formas de ayudarte."  
+    icons: 
+      - "/images/visa-mastercard.png"  
+
+## LATAM
+
+  - slug: 'latam-upfront-ai'
+    academies: ['montevideo-uruguay','bogota-colombia','caracas-venezuela',  'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
+    recomended: true
+    scholarship: "Paga por Adelantado y "
+    payment_time: "ahorra $500"
+    price: "USD $1.399"
+    original_price: "USD $2.500"
+    offer: "44% de descuento"
+    bullets:
+      - "Ahorra $500. De $2.500 a $1.399."
+      - "Si no encuentras aquí lo que esperas, contáctanos y trataremos de encontrar nuevas formas de ayudarte."
+    icons: 
+      - "/images/visa-mastercard.png"  

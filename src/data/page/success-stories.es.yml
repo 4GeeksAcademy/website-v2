@@ -4,7 +4,7 @@ meta_info:
   title: "Testimonios e historias de éxito de 4Geeks Academy"
   description: "Descubre nuestras historias de éxito y lo que dicen nuestros estudiantes sobre los Bootcamps de 4Geeks Academy"
   image: null
-  keywords: "Testimonios, historias de éxito, 4Geeks Academy"
+  keywords: null
   redirects: []
 
 seo_title: "Conoce a las personas que cambiaron sus carreras al aprender a programar"
@@ -12,7 +12,7 @@ header:
   title: "¿QUÉ DICEN NUESTROS ALUMNOS?"
   paragraph: "Aprender a codificar puede llevar a diferentes caminos. Nuestros graduados se inscribieron con un objetivo: cambiar su futuro. Estos son algunos de nuestros ex alumnos que tomaron la decisión de impulsar sus carreras."
   image: "../../../static/images/locations/caracas-loc-2.jpeg"
-  image_alt: ""
+  image_alt: "Personas que cambiaron sus carreras al Aprender a Programar"
 
 images:
   - name: "Facebook"

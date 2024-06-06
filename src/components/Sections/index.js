@@ -777,6 +777,9 @@ export const Header = ({
   zIndex,
   id,
 }) => {
+  const multilineTitle = title
+    .split("\n")
+    .map((l) => <span className="d-block">{l}</span>);
   return (
     <Grid
       background={background}
@@ -786,7 +789,6 @@ export const Header = ({
       margin={margin || "70px 0 0 0"}
       margin_tablet={margin_tablet}
       margin_xxs={margin_xxs}
-      //padding={padding_xxs || "60px 20px"}
       padding={padding || "0 0"}
       padding_tablet={padding_tablet || "60px 40px"}
       padding_md={padding_md || "60px 80px"}
@@ -796,7 +798,7 @@ export const Header = ({
       id={id}
     >
       <Grid
-        gridTemplateColumns_tablet={`repeat(12, 1fr)`}
+        gridTemplateColumns_tablet="repeat(12, 1fr)"
         gridArea_tablet="1/1/1/15"
         maxWidth="1280px"
         margin="auto"
@@ -808,45 +810,36 @@ export const Header = ({
           gridArea_tablet={svg_image ? "1/1/1/7" : null}
         >
           <H2
-            type="h2"
+            type="h1"
             textAlign_tablet={textAlign_tablet}
             margin="0 0 11px 0"
             padding={paddingTitle || "0 20px"}
             color="#606060"
             fontSize={fontSize_seo || "12px"}
-            //fontFamily={fontFamily_title}
           >
             {seo_title}
           </H2>
           <H1
-            type="h1"
+            type="h2"
             textAlign_tablet={textAlign_tablet}
             padding="0 20px"
-            padding_tablet={
-              paddingTitle_tablet
-                ? paddingTitle_tablet
-                : paddingTitle || "0 20px"
-            }
+            padding_tablet={paddingTitle_tablet || paddingTitle || "0 20px"}
             fontSize={fontSize_title || "40px"}
             fontSize_tablet={fontSizeTitle_tablet || "50px"}
             lineHeight={lineHeight || "50px"}
             lineHeight_tablet={lineHeight_tablet || "60px"}
             fontFamily={fontFamily_title}
             textTransform={uppercase && "uppercase"}
-            //fontSize={fontSize || "40px"}
-            //fontSize_tablet={fontSize_tablet || "50px"}
             zindex={zIndex}
           >
-            {hideArrowKey ? title : `< ${title} >`}
+            {multilineTitle}
           </H1>
           <Paragraph
-            padding={paddingParagraph || "0"}
             width="auto"
             letterSpacing="0.05em"
+            padding={paddingParagraph || "20px"}
             padding_tablet={
-              paddingParagraph_tablet
-                ? paddingParagraph_tablet
-                : paddingParagraph || 0
+              paddingParagraph_tablet || paddingParagraph || "0 20px"
             }
             textAlign_tablet={textAlign_tablet}
             margin={paragraphMargin || "26px 0"}
@@ -906,6 +899,7 @@ export const GridContainer = ({
   gridGap_tablet,
   gridTemplateRows,
   gridTemplateRows_tablet,
+  width,
   height,
   height_tablet,
   minHeight,
@@ -933,6 +927,7 @@ export const GridContainer = ({
   maxWidth,
   childMaxWidth,
   childMargin,
+  childWidth,
   childHeight,
   displayChild,
   displayChild_tablet,
@@ -968,6 +963,7 @@ export const GridContainer = ({
       justifyContent_tablet={justifyContent_tablet}
       position={position}
       borderTop={borderTop}
+      width={width}
       maxWidth={maxWidth}
       height={height}
       height_tablet={height_tablet}
@@ -1023,6 +1019,7 @@ export const GridContainer = ({
         height={childHeight}
         margin={childMargin}
         maxWidth={childMaxWidth}
+        width={childWidth}
       >
         {children}
       </Grid>

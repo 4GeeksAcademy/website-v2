@@ -28,7 +28,7 @@ const Graduates = ({ data, pageContext, yml }) => {
       />
       <AlumniProjects
         containerStyle={{ margin: "30px 0" }}
-        lang={data.allAlumniProjectsYaml.edges}
+        data={data.allAlumniProjectsYaml.edges[0]?.node}
         showThumbs="true"
         playerHeight="500px"
       />
@@ -156,6 +156,9 @@ export const query = graphql`
             tagline
             sub_heading
           }
+          project
+          made_by
+          description
           projects {
             project_name
             slug

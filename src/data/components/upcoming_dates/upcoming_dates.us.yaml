@@ -1,8 +1,41 @@
 title: "Next Dates"
 paragraph: ""
+conector: or
+to: to
+remote: Remote
+placeholder: Select one academy
 button:
   text: Select Location
   top_label: Location / Mode
+syllabus_alias:
+  # EVERYTHING must be in lower case except for the name
+  - default_course: full-stack
+    course_slug: part-time-full-stack-developer
+    name: Full Stack Software Developer
+    duration: "18 weeks"
+
+  - default_course: machine-learning
+    course_slug: datascience-machine-learning
+    name: Datascience
+    duration: "18 weeks"
+
+  - default_course: cyber-security
+    course_slug: cybersecurity
+    name: Cybersecurity
+    duration: "18 weeks"
+
+  - default_course: applied-ai
+    course_slug: applied-ai-course
+    name: Applied AI
+    duration: "18 weeks"
+
+email_form_content:
+  heading: Send your email to notify you when there is a date available for this campus
+  button_text: Let me know when there is a date
+  successful_text: Thanks for subscribing! We will notify you when there is a date available for this campus.
+
+online_bootcamp: "/us/coding-campus/online-coding-bootcamp"
+
 info:
   date:
   program_label: program

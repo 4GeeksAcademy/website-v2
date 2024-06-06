@@ -1,45 +1,47 @@
 meta_info:
-    slug: proximas-fechas
-    title: "Próximas fechas de programs, cohortes, talleres y eventos en 4Geeks Academy"
-    visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
-    description: "Conoce las próximas fechas: Cursos, Programas, Talleres y Eventos. Todos enfocado especificamente para la comunidad de desarrolladores."
-    image: "/images/seo/calendar-es.png"
-    keywords: "4Geeks Academy Eventos, 4Geeks Academy Proximas Fechas, 4Geeks Academy Talleres, 4Geeks Academy Cursos"
-    redirects: ["/calendario", "/es/calendario"]
+  slug: proximas-fechas
+  title: "Próximas fechas de programs, cohortes, talleres y eventos en 4Geeks Academy"
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  description: "Conoce las próximas fechas: Cursos, Programas, Talleres y Eventos. Todos enfocado especificamente para la comunidad de desarrolladores."
+  image: "/images/seo/calendar-es.png"
+  keywords: null
+  redirects: ["/calendario", "/es/calendario"]
 
 seo_title: "Coding Bootcamp"
 show_more: Mostrar más
 show_less: Mostrar menos
 header:
-    title: Próximos programas y Eventos de 4GEEKS ACADEMY
-    paragraph: "Ajusta los filtros a los eventos de los cursos que más te interesan"
-    image: ""
-    image_alt: ""
+  title: Próximos programas y Eventos de 4GEEKS ACADEMY
+  paragraph: "Ajusta los filtros a los eventos de los cursos que más te interesan"
+  image: ""
+  image_alt: "Coding Bootcamp"
 
 events:
-    title: "Próximos Eventos"
-    paragraph: ""
+  title: "Próximos Eventos"
+  paragraph: ""
 button:
-    apply_button_text: "APLICAR"
-    apply_button_link: "/es/aplica"
-    cohort_more_details_text: "DETALLES"
-    event_register_button_link: "DETALLES"
+  apply_button_text: "APLICAR"
+  apply_button_link: "/es/aplica"
+  cohort_more_details_text: "DETALLES"
+  event_register_button_link: "DETALLES"
 cohorts:
-    title: "Próximos Cohortes"
-    paragraph: ""
-    button:
-        text: Buscar por sede o modalidad
-        top_label: Sede / Modalidad
-    info:
-        date:
-        program_label: programas
-        location_label: sede
-        duration_label: duracion
-        duration_weeks: 18 semanas
-        duration_part_time: 18 semanas
-        duration_full_time: 9 semanas
-        button_text: aplicar
-        button_link: "/es/aplica"
-    footer:
-        button_text_open: Ver más Fechas
-        button_text_close:
+  no_dates_message: "Actualmente no hay próximas fechas para este programa"
+  actionMessage: "Avisadme de fechas disponibles"
+  title: "Próximos Cohortes"
+  paragraph: ""
+  button:
+    text: Buscar por sede o modalidad
+    top_label: Sede / Modalidad
+  info:
+    date:
+    program_label: programas
+    location_label: sede
+    duration_label: duracion
+    duration_weeks: 18 semanas
+    duration_part_time: 18 semanas
+    duration_full_time: 10 semanas
+    button_text: aplicar
+    button_link: "/es/aplica"
+  footer:
+    button_text_open: Ver más Fechas
+    button_text_close:

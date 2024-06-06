@@ -1,41 +1,55 @@
 full_time:
-  - slug: 'usa-clark-scholarship-ft'
-    academies: ['toronto-canada', downtown-miami', 'orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
+## USA - Full Time
+  - slug: 'usa-upfront-ft'
+    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
     recomended: true
+    scholarship: "Full Payment"
+    payment_time: "Pay today"
+    price: "$10,999"
+    original_price: "$18,300"
+    offer: "40% OFF"
+    bullets:
+      - "You're saving $7,301 USD"  
+      - "We're fully committed to making our education accessible and offer multiple payment plans and financing options to uphold our promise."
+      - "You can adapt your learning path to your financial needs. Choose to include or exclude our career support services, or enroll with a Job Guarantee."
+      - "We also provide several full or partial scholarship options that you may be eligible for. Contact us for further details."
+    icons:
+      - "/images/ethereum.png"
+      - "/images/bitcoin.png"
+
+  - slug: 'usa-clark-scholarship-ft'
+    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
+    recomended: false
     scholarship: "Scholarship"
     payment_time: "There is nothing like this"
-    price: "$7999"
-    bullets: 
-      - "You're saving $4000 USD"
-      - "Regular tuition is $11999. Avg tuition in the US is $15k."
+    price: "$9,999"
+    original_price: "$16,665"
+    warning_message: "Limited seats!"
+    offer: "40% OFF"
+    bullets:
+      - "You're saving ~$6,666 USD"
       - "Remaining balance could be paid over time $100 p/mo"
-    icons: 
-      - "images/clarkuniversity.png"
+      - "Regular tuition is $11,999. Avg tuition in the US is $16k."
+      - "We're fully committed to making our education accessible and offer multiple payment plans and financing options to uphold our promise."
+      - "You can adapt your learning path to your financial needs. Choose to include or exclude our career support services, or enroll with a Job Guarantee."
+    icons:
+      - "/images/clarkuniversity.png"
+
+
   - slug: 'usa-financed-ft'
-    academies: ['toronto-canada', downtown-miami', 'orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
+    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
     recomended: false
     scholarship: "Financed"
     payment_time: "24 months payment"
     price: "~$200 per month"
     bullets:
-      - "Several partners offering loans and payment plans"
-      - "You can get a partial scholarship and the remaining balance with a payment plan"
-    icons: 
+      - "We're fully committed to making our education accessible and offer multiple payment plans and financing options to uphold our promise."
+      - "You can adapt your learning path to your financial needs. Choose to include or exclude our career support services, or enroll with a Job Guarantee."
+      - "We also provide several full or partial scholarship options that you may be eligible for. Contact us for further details."
+    icons:
       - "/images/ascent_logo.jpg"
       - "/images/climb-logo.png"
       - "/images/quotanda-logo.png"
-  - slug: 'usa-isa-ft'
-    academies: ['toronto-canada', downtown-miami', 'orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
-    recomended: false
-    scholarship: "Income Share Agreement"
-    payment_time: "Pay only when you get a job. Ask for living stipends."
-    job_guarantee_price: "USD $4000"
-    price: "$0"
-    bullets: 
-      - "8.5% of your salary until paid in full, only if you get a job in tech."
-      - "Only start making payments after you find a Job"
-    icons: 
-      -  "/images/clarkuniversity.png"
 
   - slug: 'usa-fs-ft'
     academies: ['downtown-miami']
@@ -45,18 +59,27 @@ full_time:
     price: "$0"
     bullets:
       - "Focus on your career and not how to afford your education"
-      - "8.5% of your salary until paid in full (1.5x revenue cap), only if you get a job in tech."
+      - "We're fully committed to making our education accessible and offer multiple payment plans and financing options to uphold our promise."
+      - "You can adapt your learning path to your financial needs. Choose to include or exclude our career support services, or enroll with a Job Guarantee."
+      - "We also provide several full or partial scholarship options that you may be eligible for. Contact us for further details."
     icons: 
-      - "static/images/landing/miamitech-logo.png"  
-        
-  - slug: 'usa-upfront-ft'
-    academies: ['toronto-canada', downtown-miami', 'orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
-    recomended: false
-    scholarship: "Full Payment"
-    payment_time: "Pay today"
-    price: "$10999"
-    bullets: 
-      - "You're saving $1000 USD"
+      - "/images/landing/miamitech-logo.png"  
+
+  # - slug: 'usa-isa-ft'
+  #   academies: ['toronto-canada', 'downtown-miami', 'orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
+  #   recomended: false
+  #   scholarship: "Income Share Agreement"
+  #   payment_time: "Pay only when you get a job. Ask for living stipends."
+  #   job_guarantee_price: "USD $4000"
+  #   price: "$0"
+  #   bullets: 
+  #     - "8.5% of your salary until paid in full, only if you get a job in tech."
+  #     - "Only start making payments after you find a Job"
+  #   icons: 
+  #     -  "/images/clarkuniversity.png"
+
+
+## España & Europe
 
   - slug: 'spain-scholarships-fs-ft'
     academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
@@ -66,7 +89,8 @@ full_time:
     price: "From €150 /mo."
     bullets:
       - "Customized financing without interests. From 4 to 30 months."
-      - "Scholarships available up to €1,850. Pay €4,950 instead of €6,800. Scholarships subject to availability!"     
+      - "Scholarships available up to €1,850. Pay €4,950 instead of €6,800. Scholarships subject to availability!"
+      - "We also provide several full or partial scholarship options that you may be eligible for. Contact us for further details."
     icons: 
       - "/images/zank.png"
       - "/images/sequra.png"
@@ -80,36 +104,39 @@ full_time:
     price: "€4,550*"
     bullets:
       - "Pay using your bank account, credit or debit card, Paypal, Bitcoin or Etherium."
-      - "*Discounts up to €2,150. Pay €4,550 instead of €6,700. Discount subject to availability."     
+      - "Discounts up to €2,150. Pay €4,550 instead of €6,700. Discount subject to availability."     
     icons: 
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
       - "/images/ethereum.png"    
 
-  - slug: 'spain-isa-fs-ft'
-    academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
-    recomended: true
-    scholarship: "Income Share Agreement (ISA)"
-    payment_time: "Pay only after you find a job"
-    price: "0 €*"
-    bullets: 
-      - "Only pay while your job salary is above €16,000 / year."
-      - "*Pay using a small portion of your salary. NO INTEREST!"
-    icons: 
-      - "/images/bcas.png"   
+  # - slug: 'spain-isa-fs-ft'
+  #   academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
+  #   recomended: true
+  #   scholarship: "Income Share Agreement (ISA)"
+  #   payment_time: "Pay only after you find a job"
+  #   price: "0 €*"
+  #   bullets: 
+  #     - "Only pay while your job salary is above €16,000 / year."
+  #     - "*Pay using a small portion of your salary. NO INTEREST!"
+  #   icons: 
+  #     - "/images/bcas.png"   
+
+## Chile
 
   - slug: 'chile-contado-fs-ft'
     academies: ['santiago-chile']
     recomended: true
     scholarship: "Pay Upfront"
-    payment_time: "And get a discount"
-    price: "3.800.000 CLP"
+    payment_time: "Pay upfront and get 20% OFF!"
+    price: "3.040.000 CLP"
+    original_price: "3.800.000 CLP"
+    offer: "20% OFF"
     bullets:
-      - "Pay with bank transfer, credit or debit card"
-      - "*Price without discount applied"  
-      - "*Price varies according to the chosen modality and memberships included" 
-    icons: 
-      - "/images/visa-mastercard.png"    
+      - "Price without discount applied. Original price: 3.800.000 CLP."
+      - "Price varies according to the chosen modality and memberships included."
+    icons:
+      - "/images/visa-mastercard.png"
 
   - slug: 'chile-fs-ft'
     academies: ['santiago-chile']
@@ -118,68 +145,58 @@ full_time:
     payment_time: "18 months payment"
     price: "~184.000 CLP"
     bullets:
-      - "Tailor-made financing from 6 to 18 months"  
-      - "An advance payment corresponding to 20% of the value of the program must be paid" 
-    icons: 
-      - "/images//flevo-new.png"
+      - "Tailor-made financing from 6 to 18 months"
+      - "20% down payment required. The remaining balance can be financed over 18 months."
+    icons:
+      - "/images/flevo-new.png"
                        
-  - slug: 'chile-isa-fs-ft'
-    academies: ['santiago-chile']
-    recomended: false
-    scholarship: "Income Share Agreement (ISA)"
-    payment_time: ""
-    price: "0 CLP*"
-    bullets: 
-      - "*You pay 16% of your salary when you get a job until you paid in full"
-      - "Only if you get a job in tech" 
-    icons: 
-    - "/images/lumni.png"
-
-  - slug: 'venezuela-scholarship-pt'
-    academies: ['caracas-venezuela']
-    recomended: false
-    scholarship: "Paga de Contado"
-    payment_time: "Pay early and get 30% off."
-    price: "$1300*"
-    bullets: 
-      - "Pay early and save up to $500"
-      - "Pay with debit, credit or wire transfer."
-    # icons: 
-    #   - "/images/landing/uwm_pantone_2021_2.png"
-
-  - slug: 'venezuela-financed-pt'
-    academies: ['caracas-venezuela']
-    recomended: true
-    scholarship: "Financed"
-    payment_time: "12 months"
-    price: "~$200 / mo."
-    bullets: 
-      - "Financing in 2, 3 or up to 12 months."
-      - "Get interview with Flevo for fast financing approval."
-      - "Prices may vary depending on the length of your financing period."
-    icons: 
-      - "/images//flevo-new.png"
-
-  # - slug: 'venezuela-laptop-pt'
-  #   academies: ['caracas-venezuela']
+  # - slug: 'chile-isa-fs-ft'
+  #   academies: ['santiago-chile']
   #   recomended: false
-  #   scholarship: "Includes a new laptop"
-  #   payment_time: "Special offer with laptop included"
-  #   price: "~$1600"
+  #   scholarship: "Income Share Agreement (ISA)"
+  #   payment_time: ""
+  #   price: "0 CLP*"
   #   bullets: 
-  #     - "Pay early and save up to $500."
-  #     - "Keep the laptop once you finish the program."
-    # icons: 
-    #   - "/images/laptp.jpg"
+  #     - "*You pay 16% of your salary when you get a job until you paid in full"
+  #     - "Only if you get a job in tech" 
+  #   icons: 
+  #   - "/images/lumni.png"
 
 part_time:
 
+#USA Part-time
+  - slug: 'usa-upfront-pt'
+    recomended: true
+    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
+    scholarship: "Full Payment"
+    payment_time: "Pay today"
+    price: "$9,999"
+    original_price: "$16,665"
+    offer: "40% OFF"
+    bullets:
+      - "You're saving $6,666 USD."
+      - "This discount applies to students who are not eligible for the Clark University Scholarship (typically employed or in stable work)."
+
+  - slug: 'usa-clark-scholarship-pt'
+    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
+    recomended: false
+    scholarship: "Scholarship"
+    payment_time: "Pay today or with a Payment Plan for $100 p/mo"
+    price: "$5999"
+    original_price: "$16,665"
+    warning_message: "Limited seats!"
+    bullets: 
+      - "You're saving 40% + $4000 USD. Thanks to Clark University and the TechBoost Fund"
+      - "You have to be underemployed or unemployed, and provide a valid US Work permit."
+    icons: 
+      - "/images/clarkuniversity.png"
+
   - slug: 'usa-financed-pt'
-    academies: ['toronto-canada', downtown-miami', 'orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
+    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
     recomended: false
     scholarship: "Financed"
     payment_time: "You can pay in 3, 4 or 5 years"
-    price: "~$100 p/mo"
+    price: "~$150 p/mo"
     bullets: 
       - "Several partners offering loans and payment plans"
       - "You can get a partial scholarship and the remaining balance with a payment plan"
@@ -187,16 +204,32 @@ part_time:
       - "/images/ascent_logo.jpg"
       - "/images/climb-logo.png"
       - "/images/quotanda-logo.png"
+    
+  # - slug: 'usa-isa-pt'
+  #   academies: ['orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa','toronto-canada']
+  #   recomended: false
+  #   scholarship: "Income Share Agreement"
+  #   payment_time: "Start making payments only when you get a job"
+  #   price: "$0"
+  #   bullets: 
+  #     - "Focus on your career and not how to afford your education"
+  #     - "8.5% of your salary until paid in full (1.5x revenue cap), only if you get a job in tech."
+  #   icons: 
+  #     - "/images/miashare.png"    
+
+##  EUROPE Part-time
 
   - slug: 'north-europe-upfront-fs-pt'
     academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany','munich-germany']
-    recomended: false
+    recomended: true
     scholarship: "Pay upfront"
     payment_time: "And get a discount"
     price: "€4,750*"
+    original_price: "€6.800"
+    offer: "~30% OFF"
     bullets:
       - "Pay using your bank account, credit or debit card, Paypal, Bitcoin or Etherium."
-      - "*Discounts up to €2,050. Pay €4,750 instead of €6,800. Discount subject to availability."     
+      - "Discounts up to €2,050. Pay €4,750 instead of €6,800. Discount subject to availability."     
     icons: 
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
@@ -204,7 +237,7 @@ part_time:
 
   - slug: 'north-europe-scholarships-fs-pt'
     academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany','munich-germany']
-    recomended: true
+    recomended: false
     scholarship: "Scholarships available"
     payment_time: ""
     price: "From €150 /mo."
@@ -214,28 +247,76 @@ part_time:
     icons:
       - "/images/quotanda-logo.png"
 
-  - slug: 'spain-isa-fs-pt'
+  # - slug: 'north-europe-isa-fs-pt'
+  #   academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany', 'munich-germany']
+  #   recomended: false
+  #   scholarship: "Income Share Agreemen (ISA)"
+  #   payment_time: "Pay only when find a job"
+  #   price: "€0*"
+  #   bullets: 
+  #     - "You will only have to pay when your income is greater than €22000 per year"
+  #     - "*Pay a small part of your salary when you find a job"
+  #   icons: 
+  #     - "/images/stepex.png"
+
+  - slug: 'south-europe-upfront-fs-pt'
+    academies: ['lisbon-portugal', 'milan-italy', 'rome-italy']
+    recomended: true
+    scholarship: "Pay upfront"
+    payment_time: "And get a discount"
+    price: "€4,750*"
+    original_price: "€6,800"
+    offer: "Up to €2,050 OFF"
+    bullets:
+      - "Pay using your bank account, credit or debit card, Paypal, Bitcoin or Etherium."
+      - "Original price €6,800. Save up to €2,050 with our upfront payment discount."
+      - "Discount subject to availability. Contact us to confirm your eligibility."
+    icons:
+      - "/images/visa-mastercard.png"
+      - "/images/bitcoin_logo.png"
+      - "/images/ethereum.png"
+
+  - slug: 'south-europe-scholarships-fs-pt'
+    academies: ['lisbon-portugal','milan-italy','rome-italy']
+    recomended: false
+    scholarship: "Scholarships available"
+    payment_time: ""
+    price: "From €150 /mo."
+    bullets:
+      - "Customized financing without interests. From 4 to 30 months."
+      - "Scholarships available up to €1,850. Pay €4,950 instead of €6,800. Scholarships subject to availability!"     
+    icons: 
+      - "/images/quotanda-logo.png"
+
+  # - slug: 'south-europe-isa-fs-pt'
+  #   academies: ['lisbon-portugal','milan-italy','rome-italy']
+  #   recomended: false
+  #   scholarship: "Income Share Agreemen (ISA)"
+  #   payment_time: "Pay only when find a job"
+  #   price: "€0*"
+  #   bullets: 
+  #     - "You will only have to pay when your income is greater than €16000 per year"
+  #     - "*Pay a small part of your salary when you find a job"
+  #   icons: 
+  #     - "/images/stepex.png"     
+
+## Spain 
+
+  - slug: 'spain-upfront-fs-pt'
     academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
     recomended: false
-    scholarship: "Income Share Agreemen (ISA)"
-    payment_time: "Pay only when you work"
-    price: "€0*"
-    bullets: 
-      - "You will only have to pay when your income is greater than €16,000 per year"
-      - "*Pay a small part of your salary when you find a job. NO INTEREST!"
+    scholarship: "Pay upfront"
+    payment_time: "And get a discount"
+    price: "€4,750*"
+    original_price: "€ 6,800"
+    offer: "~30% OFF"
+    bullets:
+      - "Pay using your bank account, credit or debit card, Paypal, Bitcoin or Etherium."
+      - "Discounts up to €2,050. Pay €4,750 instead of €6,800. Discount subject to availability."     
     icons: 
-      - "/images/bcas.png" 
-
-  - slug: 'usa-upfront-pt'
-    recomended: false
-    academies: ['downtown-miami', 'orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'toronto-canada']
-    scholarship: "Full Payment"
-    payment_time: "Pay today"
-    price: "$8999"
-    original_price: "$9999"
-    bullets: 
-      - "You're saving $1000 USD"
-      - "Only if the Clark University Scholarship doesn't apply (unemployed or underemployed)"
+      - "/images/visa-mastercard.png"    
+      - "/images/bitcoin_logo.png"  
+      - "/images/ethereum.png" 
 
   - slug: 'spain-scholarships-fs-pt'
     academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
@@ -252,143 +333,34 @@ part_time:
       - "/images/nemuru.png"
       - "/images/quotanda-logo.png"
 
-  - slug: 'north-europe-isa-fs-pt'
-    academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany', 'munich-germany']
-    recomended: false
-    scholarship: "Income Share Agreemen (ISA)"
-    payment_time: "Pay only when find a job"
-    price: "€0*"
-    bullets: 
-      - "You will only have to pay when your income is greater than €22000 per year"
-      - "*Pay a small part of your salary when you find a job"
-    icons: 
-      - "/images/stepex.png"
-      
-  - slug: 'usa-clark-scholarship-pt'
-    academies: ['downtown-miami', 'orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'toronto-canada']
-    recomended: true
-    scholarship: "Scholarship"
-    payment_time: "Pay today or with a Payment Plan for $100 p/mo"
-    price: "$5999"
-    bullets: 
-      - "You're saving $4000 USD. Thanks to Clark University and the TechBoost Fund"
-      - "You have to be underemployed or unemployed, and provide a valid US Work permit."
-    icons: 
-      - "/images/clarkuniversity.png"
-    
-  - slug: 'usa-clark-scholarship-pt-miami'
-    academies: ['downtown-miami', 'orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'toronto-canada']
-    recomended: true
-    scholarship: "Scholarship"
-    payment_time: "Pay today or with a Payment Plan for $100 p/mo"
-    price: "$5999"
-    bullets: 
-      - "You're saving $4000 USD. Thanks to Clark University TechBoost Fund"
-      - "You have to be underemployed or unemployed, and provide a valid US Work permit."
-    icons: 
-      - "/images/clarkuniversity.png"
-
-  - slug: 'usa-isa-pt'
-    academies: ['orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa','toronto-canada']
-    recomended: false
-    scholarship: "Income Share Agreement"
-    payment_time: "Start making payments only when you get a job"
-    price: "$0"
-    bullets: 
-      - "Focus on your career and not how to afford your education"
-      - "8.5% of your salary until paid in full (1.5x revenue cap), only if you get a job in tech."
-    icons: 
-      - "/images/miashare.png"      
-
-  - slug: 'spain-upfront-fs-pt'
-    academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
-    recomended: false
-    scholarship: "Pay upfront"
-    payment_time: "And get a discount"
-    price: "€4,750*"
-    bullets:
-      - "Pay using your bank account, credit or debit card, Paypal, Bitcoin or Etherium."
-      - "*Discounts up to €2,050. Pay €4,750 instead of €6,800. Discount subject to availability."     
-    icons: 
-      - "/images/visa-mastercard.png"    
-      - "/images/bitcoin_logo.png"  
-      - "/images/ethereum.png" 
-      
-  - slug: 'venezuela-financed-pt'
-    academies: ['caracas-venezuela']
-    recomended: true
-    scholarship: "Financed"
-    payment_time: "12 months"
-    price: "~$200 / mo."
-    bullets: 
-      - "Financing in 2, 3 or up to 12 months."
-      - "Get interview with Flevo for fast financing approval."
-      - "Prices may vary depending on the length of your financing period."
-    icons: 
-      - "/images//flevo-new.png"
-
-  - slug: 'south-europe-scholarships-fs-pt'
-    academies: ['lisbon-portugal','milan-italy','rome-italy']
-    recomended: true
-    scholarship: "Scholarships available"
-    payment_time: ""
-    price: "From €150 /mo."
-    bullets:
-      - "Customized financing without interests. From 4 to 30 months."
-      - "Scholarships available up to €1,850. Pay €4,950 instead of €6,800. Scholarships subject to availability!"     
-    icons: 
-      - "/images/quotanda-logo.png"
-
-  - slug: 'south-europe-upfront-fs-pt'
-    academies: ['lisbon-portugal','milan-italy','rome-italy']
-    recomended: false
-    scholarship: "Pay upfront"
-    payment_time: "And get a discount"
-    price: "€4,750*"
-    bullets:
-      - "Pay using your bank account, credit or debit card, Paypal, Bitcoin or Etherium."
-      - "*Discounts up to €2,050. Pay €4,750 instead of €6,800. Discount subject to availability."     
-    icons: 
-      - "/images/visa-mastercard.png"    
-      - "/images/bitcoin_logo.png"  
-      - "/images/ethereum.png"
-
-  - slug: 'south-europe-isa-fs-pt'
-    academies: ['lisbon-portugal','milan-italy','rome-italy']
-    recomended: false
-    scholarship: "Income Share Agreemen (ISA)"
-    payment_time: "Pay only when find a job"
-    price: "€0*"
-    bullets: 
-      - "You will only have to pay when your income is greater than €16000 per year"
-      - "*Pay a small part of your salary when you find a job"
-    icons: 
-      - "/images/stepex.png"     
+  # - slug: 'spain-isa-fs-pt'
+  #   academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
+  #   recomended: false
+  #   scholarship: "Income Share Agreemen (ISA)"
+  #   payment_time: "Pay only when you work"
+  #   price: "€0*"
+  #   bullets: 
+  #     - "You will only have to pay when your income is greater than €16,000 per year"
+  #     - "*Pay a small part of your salary when you find a job. NO INTEREST!"
+  #   icons: 
+  #     - "/images/bcas.png" 
  
+## Chile part-time
+
   - slug: 'chile-geekforce-fs-pt'
     academies: ['santiago-chile']
-    recomended: false
-    scholarship: "Pay Upfront"
-    payment_time: "And get a discount"
-    price: "3.450.000 CLP*"
+    recomended: true
+    scholarship: "Full Stack + Career Support"
+    payment_time: "Pay Upfront and get a discount"
+    price: "2.760.000 CLP*"
+    original_price: "3.450.000 CLP*"
+    offer: "20% OFF"
     bullets:
       - "Pay with bank transfer, credit or debit card"    
-      - "*Price without discount applied"
-      - "*You will have access to the entire program and the entire 4Geeks Career Support System"
+      - "You will have access to the entire program and the entire 4Geeks Career Support System"
     icons: 
-      - "/images/visa-mastercard.png"   
-
-  - slug: 'chile-fs-pt'
-    academies: ['santiago-chile']
-    recomended: true
-    scholarship: "Financed"
-    payment_time: "18 months payment"
-    price: "~168.000 CLP"
-    bullets:
-      - "Tailor-made financing from 6 to 18 months"  
-      - "An advance payment corresponding to 20% of the value of the program must be paid" 
-    icons: 
-      - "/images//flevo-new.png"
+      - "/images/visa-mastercard.png"
+      - "/images/flevo-new.png"
 
   - slug: 'chile-solo-fs-pt'
     academies: ['santiago-chile']
@@ -399,53 +371,119 @@ part_time:
     bullets:
       - "You will have full and forever access to the Full-Stack program" 
       - "Does not include access to the entire 4Geeks Career Support System"   
-    # icons: 
-    
-  - slug: 'latam-trabajo-garantizado-fs-pt'
-    academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
+    icons:
+      - "/images/visa-mastercard.png"
+      - "/images/flevo-new.png"
+
+  - slug: 'chile-fs-pt'
+    academies: ['santiago-chile']
     recomended: false
+    scholarship: "Financed"
+    payment_time: "18 months payment"
+    price: "~168.000 CLP"
+    warning_message: "Limited seats!"
+    bullets:
+      - "Tailor-made financing from 6 to 18 months"  
+      - "An advance payment corresponding to 20% of the value of the program must be paid."
+    icons:
+      - "/images/flevo-new.png"
+
+## LATAM  
+
+  - slug: 'latam-trabajo-garantizado-fs-pt'
+    academies: ['buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
+    recomended: true
     scholarship: "Job Guaranteed"
     payment_time: "Get hired within 6 months of graduation or your money back"
-    price: "USD $4000"
-    job_guarantee_price: "USD $4000"
+    price: "USD $3.500"
+    original_price: "USD $5.000"
+    offer: "40% OFF"
     bullets:
-      - "We're fully committed to making our education accessible and offer multiple payment plans and financing options to hold up to our promise."
+      - "We're fully committed to making our education accessible by offering multiple payment plans and financing options to fulfill our promise."
       - "You can adapt your learning path to your financial considerations. Choose between joining the Full-stack program only, adding our career support services, or enrolling with a Job Guarantee."     
       - "We offer a number of full or partial scholarship options that you could be eligible for."  
       - "Feel free to contact us to explore the possibilities available to you! We're here to find a solution tailored to your needs."   
     icons: 
-      - "/images/quotanda-logo.png"
+      - "/images/visa-mastercard.png"
 
-  - slug: 'latam-solo-programa-pt'
-    academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
-    recomended: true
-    scholarship: "Only pay for the program"
-    payment_time: "Focus on gaining skills. Pay monthly."
-    price: "Starting from $90/m"
+  - slug: 'latam-probram-only-fs-pt'
+    academies: ['buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
+    recomended: false
+    scholarship: "Full-Stack Program Only"
+    payment_time: "Focus on learning to code. Pay upfront."
+    price: "$2.000 USD"
+    original_price: "USD $4.000 USD"
     bullets: 
-      - "We're fully committed to making our education accessible and offer multiple payment plans and financing options to hold up to our promise."
+      - "We’re fully committed to making our education accessible and offer multiple payment plans and financing options to hold up to our promise."
       - "You can adapt your learning path to your financial considerations. Choose between joining the Full-stack program only, adding our career support services, or enrolling with a Job Guarantee."     
-      - "We offer a number of full or partial scholarship options that you could be eligible for."  
+      - "We offer a number of full or partial scholarship options that you could be eligible for." 
       - "Pay only for the Full-Stack program if you are not interested yet in our career support program and our job guarantee"   
     icons: 
-      - "/images//flevo-new.png" 
+      - "/images/visa-mastercard.png"
 
-  - slug: 'latam-upfront-fs-pt'
-    academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
-    recomended: false
-    scholarship: "Full-stack program + Career Support"
-    payment_time: "Learn to code and get full support building your career"
-    price: "USD $3000"
+
+## COLOMBIA
+  - slug: 'colombia-trabajo-garantizado-fs-pt'
+    academies: ['bogota-colombia']
+    recomended: true
+    scholarship: "Job Guaranteed"
+    payment_time: "Get hired within 6 months of graduation or your money back"
+    price: "USD $3.500"
+    original_price: "USD $5.000"
+    offer: "40% OFF"
     bullets:
-      - "We're fully committed to making our education accessible and offer multiple payment plans and financing options to hold up to our promise."
+      - "We're fully committed to making our education accessible by offering multiple payment plans and financing options to fulfill our promise."
       - "You can adapt your learning path to your financial considerations. Choose between joining the Full-stack program only, adding our career support services, or enrolling with a Job Guarantee."     
       - "We offer a number of full or partial scholarship options that you could be eligible for."  
-      - "Additionally to the Full-Stack program, get a lifetime of career support from our specialized team and permanent access to our online community of graduates"   
+      - "Feel free to contact us to explore the possibilities available to you! We're here to find a solution tailored to your needs."   
     icons: 
-      - "/images//flevo-new.png"    
+      - "/images/flevo-new.png"
+
+  - slug: 'colombia-probram-only-fs-pt'
+    academies: ['bogota-colombia']
+    recomended: false
+    scholarship: "Full-Stack Program Only"
+    payment_time: "Focus on learning to code. Pay upfront."
+    price: "$2.000 USD"
+    original_price: "USD $4.000 USD"
+    bullets: 
+      - "We’re fully committed to making our education accessible and offer multiple payment plans and financing options to hold up to our promise."
+      - "You can adapt your learning path to your financial considerations. Choose between joining the Full-stack program only, adding our career support services, or enrolling with a Job Guarantee."     
+      - "We offer a number of full or partial scholarship options that you could be eligible for." 
+      - "Pay only for the Full-Stack program if you are not interested yet in our career support program and our job guarantee"   
+    icons: 
+      - "/images/partner/flevo-new.png" 
+
+  # - slug: 'latam-solo-programa-pt'
+  #   academies: ['bogota-colombia', 'buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
+  #   recomended: false
+  #   scholarship: "Only pay for the program"
+  #   payment_time: "Focus on gaining skills. Pay monthly."
+  #   price: "Starting from $90/m"
+  #   bullets: 
+  #     - "We're fully committed to making our education accessible and offer multiple payment plans and financing options to hold up to our promise."
+  #     - "You can adapt your learning path to your financial considerations. Choose between joining the Full-stack program only, adding our career support services, or enrolling with a Job Guarantee."     
+  #     - "We offer a number of full or partial scholarship options that you could be eligible for."  
+  #     - "Pay only for the Full-Stack program if you are not interested yet in our career support program and our job guarantee"   
+  #   icons: 
+  #     - "/images/flevo-new.png" 
+
+  # - slug: 'latam-upfront-fs-pt'
+  #   academies: ['bogota-colombia', 'buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
+  #   recomended: false
+  #   scholarship: "Full-stack program + Career Support"
+  #   payment_time: "Learn to code and get full support building your career"
+  #   price: "USD $3000"
+  #   bullets:
+  #     - "We're fully committed to making our education accessible and offer multiple payment plans and financing options to hold up to our promise."
+  #     - "You can adapt your learning path to your financial considerations. Choose between joining the Full-stack program only, adding our career support services, or enrolling with a Job Guarantee."     
+  #     - "We offer a number of full or partial scholarship options that you could be eligible for."  
+  #     - "Additionally to the Full-Stack program, get a lifetime of career support from our specialized team and permanent access to our online community of graduates"   
+  #   icons: 
+  #     - "/images/flevo-new.png"
 
   #- slug: 'latam-job-guarantee-fs-pt'
-    #academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
+    #academies: ['bogota-colombia', 'buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
     #recomended: false
     #scholarship: "Trabajo garantizado"
     #payment_time: "Consigues un trabajo o te devolvemos tu dinero"
@@ -456,34 +494,51 @@ part_time:
     #icons: 
     #  - "/images/quotanda-logo.png"
 
-  - slug: 'latam-probram-only-fs-pt'
-    academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
-    recomended: false
-    scholarship: "Full-Stack Program Only"
-    payment_time: "Focus on learning to code. Pay upfront."
-    price: "$2000"
-    bullets: 
-      - "We’re fully committed to making our education accessible and offer multiple payment plans and financing options to hold up to our promise."
-      - "You can adapt your learning path to your financial considerations. Choose between joining the Full-stack program only, adding our career support services, or enrolling with a Job Guarantee."     
-      - "We offer a number of full or partial scholarship options that you could be eligible for." 
-      - "Pay only for the Full-Stack program if you are not interested yet in our career support program and our job guarantee"   
-    icons: 
-      - "/images/partner/flevo-new.png" 
+## Venezuela
 
   - slug: 'venezuela-scholarship-pt'
     academies: ['caracas-venezuela']
-    recomended: false
+    recomended: true
     scholarship: "Pay upfront"
     payment_time: "Pay early and $250 off"
     price: "$1750*"
-    original_price: "$2000"
+    original_price: "$4000"
+    offer: "40% OFF"
     bullets: 
+      - "Pay with debit, credit or wire transfer."
+      - "You have to pay least 20 days before the start of the program."
       - "There is always a payment plan available for you to join 4Geeks Academy"
       - "If you don't find here what you are expecting, please contact us and we will try to find new ways to help"     
-      - "You have to pay least 20 days before the start of the program."
+    icons: 
+      - "/images/visa-mastercard.png"
+      - "/images/flevo-new.png"
+
+  - slug: 'venezuela-upfront-pt'
+    academies: ['caracas-venezuela']
+    recomended: false
+    scholarship: "Pay in 4 parts"
+    payment_time: "You can pay today or in 4 parts without interest"
+    price: "$2.000 USD"
+    original_price: "$4.000 USD"
+    bullets: 
       - "Pay with debit, credit or wire transfer."
-    # icons: 
-    #   - "/images/landing/uwm_pantone_2021_2.png"
+      - "There is always a payment plan available for you to join 4Geeks Academy"
+      - "If you don't find here what you are expecting, please contact us and we will try to find new ways to help"     
+    icons: 
+      - "/images/visa-mastercard.png"
+
+  # - slug: 'venezuela-financed-pt'
+  #   academies: ['caracas-venezuela']
+  #   recomended: false
+  #   scholarship: "Financed"
+  #   payment_time: "12 months"
+  #   price: "~$200 / mo."
+  #   bullets: 
+  #     - "Financing in 2, 3 or up to 12 months."
+  #     - "Get interview with Flevo for fast financing approval."
+  #     - "Prices may vary depending on the length of your financing period."
+  #   icons: 
+  #     - "/images/flevo-new.png"
 
   # - slug: 'venezuela-laptop-pt'
   #   academies: ['caracas-venezuela']
@@ -496,18 +551,5 @@ part_time:
   #     - "If you don't find here what you are expecting, please contact us and we will try to find new ways to help"     
   #     - "Pay with debit, credit or wire transfer."
   #     - "Keep the laptop once you finish the program."
-    # icons:
-    #   - "/images/laptp.jpg"
-
-  - slug: 'venezuela-upfront-pt'
-    academies: ['caracas-venezuela']
-    recomended: false
-    scholarship: "Pay in 4 parts"
-    payment_time: "You can pay today or in 4 parts without interest"
-    price: "~$2000"
-    bullets: 
-      - "There is always a payment plan available for you to join 4Geeks Academy"
-      - "If you don't find here what you are expecting, please contact us and we will try to find new ways to help"     
-      - "Pay with debit, credit or wire transfer."
     # icons:
     #   - "/images/laptp.jpg"

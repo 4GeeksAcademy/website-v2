@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { graphql, useStaticQuery } from "gatsby";
+import React, { useState } from "react";
 import { Div } from "../Sections";
 import { H3, H4, Paragraph } from "../Heading";
 import { Colors, Anchor } from "../Styling";
@@ -148,31 +147,7 @@ const TestimonialCard = ({
           </Div>
         )}
       </Div>
-      {!video &&
-        (description && /<\/?[a-z0-9]+>/g.test(description) ? (
-          <Paragraph
-            textAlign="left"
-            margin="12px 0 0 0"
-            fontSize="13px"
-            lineHeight="22px"
-            letterSpacing="0.05em"
-            fontWeight="300"
-            dangerouslySetInnerHTML={{ __html: description }}
-          />
-        ) : (
-          <Paragraph
-            textAlign="left"
-            margin="0 0 0 0"
-            fontSize="13px"
-            lineHeight="22px"
-            letterSpacing="0.05em"
-            fontWeight="300"
-          >
-            {description.length > 500 && !isExpanded
-              ? description.substring(0, 500) + "..."
-              : description}
-          </Paragraph>
-        ))}
+
       {video && (
         <>
           <Div padding_tablet="0" width="100%" style={{ breakInside: "avoid" }}>
@@ -190,6 +165,24 @@ const TestimonialCard = ({
           </Div>
         </>
       )}
+
+      {description && (
+        <Paragraph
+          textAlign="left"
+          margin="12px 0 0 0"
+          fontSize="13px"
+          lineHeight="22px"
+          letterSpacing="0.05em"
+          fontWeight="300"
+          dangerouslySetInnerHTML={{
+            __html:
+              description.length > 500 && !isExpanded
+                ? description.substring(0, 500) + "..."
+                : description,
+          }}
+        />
+      )}
+
       {description.length > 500 && (
         <Paragraph
           textAlign="left"

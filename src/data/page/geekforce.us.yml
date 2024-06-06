@@ -14,7 +14,7 @@ header:
     <strong style = 'color:rgba(255, 183, 24, 1); font-family: Archivo-Black;'>FORCE</strong> <br>
     <strong style='font-family: Archivo;'>the collective process of Career Support at the Academy</strong>
   image: "../../../static/images/bg/companies-bg.jpg"
-  image_alt: ""
+  image_alt: "GeekForce - Coding bootcamp with unlimited carreer support."
   paragraph: |
     The "force" stands For Career Empowerment and it is a lifetime membership. It provides you job placement assistance so you get ready to get a job in tech.
   image_logo: "/images/geekforce.png"
@@ -22,7 +22,7 @@ header:
 # Introduction Video here
 geekForce:
   - videoId: "ln3bQsV1BaQ"
-    image: ../../../static/images/staff/hernan-new.png
+    image: ../../../static/images/staff/hernan-new.webp
 
 # Banner of icons
 iconogram:
@@ -61,7 +61,7 @@ list:
       color: "black"
 
   - title: "Lifetime Mentoring"
-    image: "../../../static/images/Group-6617.png"
+    image: "../../../static/images/Group-6617.webp"
     position: "right"
     text: |
       Launching a career in tech involves assessing your current situation and making informed decisions about the future.

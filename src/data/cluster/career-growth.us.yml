@@ -4,7 +4,7 @@ meta_info:
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   description: "Unlock career growth opportunities with 4Geeks Academy. Learn the skills needed for today's in-demand tech jobs and open doors to new possibilities"
   image: ""
-  keywords: "Career Growth"
+  keywords: null
   redirects: []
 
 seo_title: "Career Growth"

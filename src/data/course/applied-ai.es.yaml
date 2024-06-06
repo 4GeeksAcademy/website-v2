@@ -1,22 +1,23 @@
 meta_info:
-  slug: applied-ai
+  slug: curso-inteligencia-artificial
   title: "Curso de Inteligencia Artificial Aplicada"
   description: "Explora a detalle la inteligencia artificial y cómo aplicarla en diferentes industrias, roles y en tu trabajo. Sin conocimientos previos requeridos."
   bc_slug: "applied-ai"
-  image: "/images/og-preview/datascience-ml.es.png"
+  template: "course-applied-ai"
+  image: "/images/og-preview/applied-ai-bg-es.jpg"
   visibility: "visible"
   keywords: ""
-  show_in_apply: false
+  show_in_apply: true
   redirects: ["/es/applied-ai"]
   related_clusters: ["trends-and-tech"]
 
 apply_form:
-  label: Curso de Inteligencia Artificial Aplicada
+  label: Inteligencia Artificial Aplicada (sin codificación)
 
 seo_title: "Curso de Inteligencia Artificial Aplicada"
 header:
-  title: "Aprende I.A. y como utilizarla en tu trabajo"
-  paragraph: "¡Conviértete un experto en AI y como aplicarla en las empresas, en diferentes roles y en tu trabajo!"
+  title: "Aprende I.A. y cómo utilizarla en tu trabajo"
+  paragraph: "¡Automatiza y delega tus tareas a un AI, en diferentes roles y en tu empresa!"
   image: "../../../static/images/bg/circles.jpg"
   image_alt: "círculos"
 
@@ -64,8 +65,8 @@ upcoming:
 #     Entrénate con expertos en Data Science, Machine Learning e Inteligencia Artificial. Aprende Data Science desde las bases, recolecta, manipula y modela datos. Crea modelos de Machine Learning e iníciate en el Deep Learning.\n
 #     Practica con escenarios típicos de empresas de la vida real y conoce algunas de las herramientas más utilizadas en la industria. \n
 overlaped:
-  heading: "Utilizar AI en tu trabajo es indispensable"
-  paragraph: "La inteligencia artificial te reemplazará en tú trabajo, sino que potenciará tu productividad hasta el punto de que en el futuro cercano solo contratarán a profesionales competentes en IA. Haz más con menos. No te quedes atrás."
+  heading: "El futuro del trabajo es la IA. ¿Estás listo para tomarlo?"
+  paragraph: "La inteligencia artificial (IA) está transformando el panorama laboral a un ritmo acelerado. No temas a este cambio, adóptalo. La IA no te reemplazará, sino que potenciará tus habilidades y te convertirá en un profesional altamente valioso."
   button:
     text: "MÁS INFORMACIÓN"
     color: "blue"  
@@ -78,7 +79,7 @@ details:
   about:
     title: "Sobre este programa"
     sub_title: |
-      Este curso de inteligencia artificial está diseñado para quienes búscan integrar la inteligencia artificial (IA) en sus trabajos y roles actuales. A lo largo de seis semanas, los participantes obtendrán una comprensión integral de la IA y sus aplicaciones prácticas en diversas industrias.
+      Este curso de inteligencia artificial está diseñado para quienes buscan integrar la inteligencia artificial (IA) en sus trabajos y roles actuales. A lo largo de seis semanas, los participantes obtendrán una comprensión integral de la IA y sus aplicaciones prácticas en diversas industrias.
       El curso abarca conceptos esenciales como definiciones de IA, beneficios en el entorno laboral y elementos clave como Contexto, Prompts y Modelos. Los participantes aprenderán a identificar oportunidades para implementar IA, superar desafíos, desarrollar estrategias efectivas de IA y crear comandos prácticos.
         
     list:
@@ -135,7 +136,7 @@ details:
       description: "Comparación entre la IA y los humanos en diversas tareas, cuándo utilizar la Inteligencia Artificial, ejemplos de prompts relacionados con los campos de los estudiantes, y consejos de Ingeniería de Prompts."
       projects: "Creación de flujos de trabajo para profesiones como profesores, lingüistas y desarrolladores."
       slug: "generation-estrategies"
-      duration: "1 semanas"
+      duration: "1 semana"
       step: 2
     - module_name: "Generación de Texto"
       title: "Generación de Texto"
@@ -144,19 +145,19 @@ details:
       slug: "text-generation"
       duration: "2 semanas"
       step: 3
-    - module_name: "Generación de imagenes"
+    - module_name: "Generación de Imágenes"
       title: "Generación de Imágenes e Implementación de IA"
-      description: "Revisión de capacidades de modelos populares para generación de imágenes como Stable Diffusion, Dall-E, Midjourney. Cómo redactar buenos prompts para modelos de generación de imágenes."
+      description: "Revisión de capacidades de modelos populares para generación de imágenes como Stable Diffusion, Dall-E, Entre otras, A demás de cómo redactar buenos prompts para modelos de generación de imágenes."
       projects: "Desarrollo de una estrategia de Inteligencia Artificial y creación de prompts útiles para generar imágenes en casos de uso específicos."
       slug: "img-generation"
       duration: "1 semana"
       step: 4
-    - module_name: "Herramientas y Futuo de las IAs"
+    - module_name: "IA: Herramientas y Futuro"
       title: "Herramientas y el Futuro de las IAs"
       description: "Evaluación de herramientas de Inteligencia Artificial, proyectos prácticos utilizando herramientas populares."
       projects: "Graduación del curso, preguntas finales, tareas y próximos pasos..."
       slug: "final-project"
-      duration: "1 semanas"
+      duration: "1 semana"
       step: 5
 
 
@@ -235,6 +236,25 @@ faq:
   read_more: "Ver más preguntas"
   link: "/faq"
 
+
+## TWO COLUMNS
+two_columns:
+  proportions: [5, 9]
+  image:
+    style: '{"backgroundSize": "cover", "background-position": "center", "min-height": "300px", "height": "300px"}'
+    src: "../../images/landing/two-womans-and-laptop.webp"
+    shadow: true
+  heading:
+    text: "¡Expande tus capacidades y aumenta tu eficiencia!"
+    font_size: ["30px", "30px", "30px", "26px", "24px"]
+  sub_heading:
+    text: "Aprende a aprovechar los modelos generativos basados en texto como ChatGPT, Claude y Llama3, junto con herramientas de generación de imágenes como Stable Diffusion, DALL-E y Midjourney."
+    font_size: ["16px", "16px", "16px", "16px", "16px"]
+  button:
+    text: "Aplicar al programa"
+    color: "white"
+    background: "black"
+    path: "#prices_and_payment"
 
 # button:
 #   syllabus_heading: "Descargar Syllabus"
