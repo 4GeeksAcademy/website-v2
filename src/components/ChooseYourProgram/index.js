@@ -123,7 +123,7 @@ const ChooseYourProgram = ({
                   display="flex"
                   padding=" 20px 20px"
                   margin_tablet="0px"
-                  border="1px solid black"
+                  border={!background && "1px solid black"}
                   borderRadius="4px"
                   flexDirection="column"
                   flexDirection_tablet="column"
@@ -235,7 +235,7 @@ const ChooseYourProgram = ({
                     </Div>
                   </Div>
 
-                  <Div margin="20px 0 0 0" width="100%" width_tablet="150px">
+                  <Div margin="10px auto 0 auto" width="100%" width_tablet="150px">
                     {!program.comming_soon ? (
                       <Link to={program.link} style={{ width: "100%" }}>
                         {landingTemplate ? (
@@ -254,10 +254,9 @@ const ChooseYourProgram = ({
                           </Button>
                         ) : (
                           <Button
-                            display="flex"
-                            background={Colors.black}
-                            colorHover={Colors.black}
-                            color={Colors.white}
+                            background="none"
+                            colorHover="none"
+                            color={Colors.blue}
                             justifyContent="center"
                             width="auto"
                             width_tablet="150px"
@@ -267,9 +266,10 @@ const ChooseYourProgram = ({
                               left: "24px",
                               right: "24px",
                               gap: "10px",
+                              margin: "auto",
                             }}
                           >
-                            {program.text_link} <span>→</span>
+                            {program.text_link}
                           </Button>
                         )}
                       </Link>
