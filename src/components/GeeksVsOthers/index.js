@@ -79,7 +79,12 @@ const GeeksVsOthers = ({
           >
             {title}
           </H2>
-          <Paragraph color={Colors.darkGray} opacity="1" fontSize_tablet="21px" fontSize="18px">
+          <Paragraph
+            color={Colors.darkGray}
+            opacity="1"
+            fontSize_tablet="21px"
+            fontSize="18px"
+          >
             {paragraph}
           </Paragraph>
         </Div>
@@ -174,10 +179,7 @@ const GeeksVsOthers = ({
                   padding_tablet="0 16px"
                   display="block"
                 >
-                  <Div
-                    height="74px"
-                    alignItems="center"
-                  >
+                  <Div height="74px" alignItems="center">
                     <H3
                       textAlign="left"
                       fontSize="15px"
@@ -192,7 +194,6 @@ const GeeksVsOthers = ({
                   {i < arr.length - 1 && (
                     <HR height="1px" background="rgba(164, 164, 164, 0.4)" />
                   )}
-                  
                 </Div>
                 <Div
                   gridColumn_tablet="4 / 7"
@@ -202,10 +203,7 @@ const GeeksVsOthers = ({
                   padding_tablet="0 16px"
                   display="block"
                 >
-                  <Div
-                    height="74px"
-                    alignItems="center"
-                  >
+                  <Div height="74px" alignItems="center">
                     <H3
                       textAlign="left"
                       fontSize="15px"
@@ -217,9 +215,7 @@ const GeeksVsOthers = ({
                       {m.at4_Geeks}
                     </H3>
                   </Div>
-                  {i < arr.length - 1 && (
-                    <HR height="1px" background="white" />
-                  )}
+                  {i < arr.length - 1 && <HR height="1px" background="white" />}
                 </Div>
                 <Div
                   gridColumn_tablet="7 / 10"
@@ -228,10 +224,7 @@ const GeeksVsOthers = ({
                   padding_tablet="0 16px"
                   display="block"
                 >
-                  <Div
-                    height="74px"
-                    alignItems="center"
-                  >
+                  <Div height="74px" alignItems="center">
                     <H3
                       textAlign="left"
                       fontSize="15px"
@@ -381,7 +374,12 @@ const GeeksVsOthers = ({
       {link && (
         <Div justifyContent="center" margin="50px 0 0 0" padding="0 0 25px 0">
           <Link to={geeks.button.button_link}>
-            <Paragraph color={Colors.blue} fontWeight="700" fontWeight_tablet="700" fontSize="21px">
+            <Paragraph
+              color={Colors.blue}
+              fontWeight="700"
+              fontWeight_tablet="700"
+              fontSize="21px"
+            >
               {geeks.button.button_text}
             </Paragraph>
           </Link>

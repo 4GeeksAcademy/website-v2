@@ -502,7 +502,11 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           </Paragraph>
         )}
       </Container>
-      <TwoColumnCarousel background="#FAFAFA" title={yml.successful_stories.title} text={yml.successful_stories.text}>
+      <TwoColumnCarousel
+        background="#FAFAFA"
+        title={yml.successful_stories.title}
+        text={yml.successful_stories.text}
+      >
         {testimonials.map((testimonial) => {
           return (
             <Div display="block" key={testimonial.student_name}>
@@ -517,8 +521,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
               >
                 <StyledBackgroundSection
                   image={
-                    testimonial.student_thumb.childImageSharp
-                      .gatsbyImageData
+                    testimonial.student_thumb.childImageSharp.gatsbyImageData
                   }
                   alt={testimonial.student_name}
                   width="300px"
@@ -542,9 +545,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
                           margin="0"
                           width="25px"
                         >
-                          <div
-                            className={`flag ${testimonial.country.iso}`}
-                          />
+                          <div className={`flag ${testimonial.country.iso}`} />
                         </Div>
                         <Paragraph
                           margin="0 0 0 5px"
@@ -580,11 +581,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
                     height="1px"
                     margin="5px 0"
                   />
-                  <Paragraph
-                    textAlign="left"
-                    opacity="1"
-                    color={Colors.black}
-                  >
+                  <Paragraph textAlign="left" opacity="1" color={Colors.black}>
                     {testimonial.content}
                   </Paragraph>
                 </Div>

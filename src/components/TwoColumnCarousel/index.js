@@ -8,7 +8,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const TwoColumnCarousel = ({ title, text, background, children, settings }) => {
-
   const sliderRef = useRef();
 
   const customSettings = {
