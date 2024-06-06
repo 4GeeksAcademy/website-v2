@@ -62,8 +62,7 @@ why_4geeks:
     font_size: ["22px", "22px", "21px", "17px", "17px"]
   content:
     text: |-
-      Belong to a community of like-minded people who genuinely support each other. Gain lifetime access to our online learning platform and mentorship services. We’ll always be here for you, even after you graduate. <br>
-      <a href="/us/geeks-vs-others">Compare 4Geeks</a> to other coding bootcamps.
+      Belong to a community of like-minded people who genuinely support each other. Gain lifetime access to our online learning platform and mentorship services. We’ll always be here for you, even after you graduate.
     font_size: ["17px", "17px", "16px", "14px", "14px"]
   button:
     text: "Apply now"

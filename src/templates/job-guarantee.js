@@ -8,7 +8,7 @@ import {
 } from "../actions";
 import BaseRender from "./_baseLayout";
 import { Container, Div, HR, GridContainer } from "../components/Sections";
-import { H1, H2, H3, H4, Paragraph } from "../components/Heading";
+import { H2, H4, Paragraph } from "../components/Heading";
 import {
   Anchor,
   Button,
@@ -23,10 +23,8 @@ import LeadForm from "../components/LeadForm";
 import { Circle } from "../components/BackgroundDrawing";
 import Icon from "../components/Icon";
 import ScholarshipSuccessCases from "../components/ScholarshipSuccessCases";
+import TwoColumnCarousel from "../components/TwoColumnCarousel";
 import TwoColumn from "../components/TwoColumn/index.js";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import WeTrust from "../components/WeTrust/index.js";
 
 const JobGuarantee = ({ data, pageContext, yml }) => {
@@ -88,7 +86,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
     <>
       <Div
         margin={isCustomBarActive(session) ? "40px 0 0 0" : "0"}
-        padding="90px 30px 0 30px"
+        padding="10px 30px 0 30px"
         padding_tablet="120px 130px 72px 130px"
         padding_lg="120px 0 72px 0"
         position="relative"
@@ -505,149 +503,97 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           </Paragraph>
         )}
       </Container>
-
-      <Div
-        background="#FAFAFA"
-        padding="30px"
-        padding_tablet="80px 130px"
-        padding_lg="80px 0px"
-        margin_lg="auto"
-        gap="10px"
-        display="block"
-        display_tablet="flex"
-        justifyContent="center"
-      >
-        <Div
-          height_md="299px"
-          flexDirection="column"
-          justifyContent_md="between"
-          width_tablet="300px"
-          width_md="395px"
-          width_lg="450px"
-          gap="10px"
-          margin="0 0 15px 0"
-          margin_tablet="0"
-        >
-          <Div display="block">
-            <H3 textAlign="left" margin="0 0 10px 0">
-              {yml.successful_stories.title}
-            </H3>
-            <Paragraph
-              color="#000"
-              opacity="1"
-              textAlign="left"
-              fontSize="18px"
-            >
-              {yml.successful_stories.text}
-            </Paragraph>
-          </Div>
-          <Icon icon="longarrow-right" />
-        </Div>
-        <Div
-          display="block"
-          width="100%"
-          width_tablet="400px"
-          width_md="fit-content"
-          minWidth_md="400px"
-          maxWidth_md="900px"
-          maxWidth_lg="906px"
-        >
-          <Slider {...settings} ref={sliderRef}>
-            {testimonials.map((testimonial) => {
-              return (
-                <Div
-                  display="block"
-                  // boxShadow_tablet="9px 8px 0px 0px rgba(0,0,0,1)"
-                >
-                  <Div
-                    background={Colors.veryLightBlue}
-                    margin="0"
-                    border="2px solid black"
-                    display="block"
-                    display_md="flex"
-                    height_tablet="548px"
-                    height_md="368px"
-                  >
-                    <StyledBackgroundSection
-                      image={
-                        testimonial.student_thumb.childImageSharp
-                          .gatsbyImageData
-                      }
-                      alt={testimonial.student_name}
-                      width="300px"
-                      width_tablet="100%"
-                      width_md="200px"
-                      height="340px"
-                      height_tablet="240px"
-                      height_md="100%"
-                      backgroundSize="contain"
-                      flexShrink="0"
-                    />
-                    <Div padding="10px" display="block">
-                      <H4 textAlign="left" fontWeight="700">
-                        {testimonial.student_name}
-                      </H4>
-                      <Div gap="10px" alignItems="center" margin="0 0 10px 0">
-                        {testimonial.country && (
-                          <Div>
-                            <Div
-                              className="react-tel-input"
-                              margin="0"
-                              width="25px"
-                            >
-                              <div
-                                className={`flag ${testimonial.country.iso}`}
-                              />
-                            </Div>
-                            <Paragraph
-                              margin="0 0 0 5px"
-                              textAlign="left"
-                              opacity="1"
-                              color={Colors.black}
-                            >
-                              {testimonial.country.name}
-                            </Paragraph>
-                          </Div>
-                        )}
-                        {testimonial.linkedin_url && (
-                          <Img
-                            src="/images/linkedin.png"
-                            onClick={() => {
-                              if (testimonial.linkedin_url.indexOf("http") > -1)
-                                window.open(testimonial.linkedin_url);
-                              else navigate(testimonial.linkedin_url);
-                            }}
-                            style={{
-                              cursor: "pointer",
-                            }}
-                            alt="Linkedin profile"
-                            height="20px"
-                            width="60px"
-                            backgroundSize="contain"
+      <TwoColumnCarousel background="#FAFAFA" title={yml.successful_stories.title} text={yml.successful_stories.text}>
+        {testimonials.map((testimonial) => {
+          return (
+            <Div display="block" key={testimonial.student_name}>
+              <Div
+                background={Colors.veryLightBlue}
+                margin="0"
+                border="2px solid black"
+                display="block"
+                display_md="flex"
+                height_tablet="548px"
+                height_md="368px"
+              >
+                <StyledBackgroundSection
+                  image={
+                    testimonial.student_thumb.childImageSharp
+                      .gatsbyImageData
+                  }
+                  alt={testimonial.student_name}
+                  width="300px"
+                  width_tablet="100%"
+                  width_md="200px"
+                  height="340px"
+                  height_tablet="240px"
+                  height_md="100%"
+                  backgroundSize="contain"
+                  flexShrink="0"
+                />
+                <Div padding="10px" display="block">
+                  <H4 textAlign="left" fontWeight="700">
+                    {testimonial.student_name}
+                  </H4>
+                  <Div gap="10px" alignItems="center" margin="0 0 10px 0">
+                    {testimonial.country && (
+                      <Div>
+                        <Div
+                          className="react-tel-input"
+                          margin="0"
+                          width="25px"
+                        >
+                          <div
+                            className={`flag ${testimonial.country.iso}`}
                           />
-                        )}
+                        </Div>
+                        <Paragraph
+                          margin="0 0 0 5px"
+                          textAlign="left"
+                          opacity="1"
+                          color={Colors.black}
+                        >
+                          {testimonial.country.name}
+                        </Paragraph>
                       </Div>
-                      <HR
-                        background="#A4A4A4"
-                        width="100%"
-                        height="1px"
-                        margin="5px 0"
+                    )}
+                    {testimonial.linkedin_url && (
+                      <Img
+                        src="/images/linkedin.png"
+                        onClick={() => {
+                          if (testimonial.linkedin_url.indexOf("http") > -1)
+                            window.open(testimonial.linkedin_url);
+                          else navigate(testimonial.linkedin_url);
+                        }}
+                        style={{
+                          cursor: "pointer",
+                        }}
+                        alt="Linkedin profile"
+                        height="20px"
+                        width="60px"
+                        backgroundSize="contain"
                       />
-                      <Paragraph
-                        textAlign="left"
-                        opacity="1"
-                        color={Colors.black}
-                      >
-                        {testimonial.content}
-                      </Paragraph>
-                    </Div>
+                    )}
                   </Div>
+                  <HR
+                    background="#A4A4A4"
+                    width="100%"
+                    height="1px"
+                    margin="5px 0"
+                  />
+                  <Paragraph
+                    textAlign="left"
+                    opacity="1"
+                    color={Colors.black}
+                  >
+                    {testimonial.content}
+                  </Paragraph>
                 </Div>
-              );
-            })}
-          </Slider>
-        </Div>
-      </Div>
+              </Div>
+            </Div>
+          );
+        })}
+      </TwoColumnCarousel>
       <ScholarshipSuccessCases
         content={data.allScholarshipSuccessCasesYaml.edges[0].node}
       />

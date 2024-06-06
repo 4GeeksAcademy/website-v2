@@ -39,8 +39,7 @@ why_4geeks:
     font_size: ["21px", "21px", "21px", "21px", "21px"]
   content:
     text: |-
-      Pertenecerás a una comunidad de personas afines que se apoyan genuinamente entre sí. Obtén acceso de por vida a nuestra plataforma de aprendizaje en línea y servicios de mentoría. Siempre estaremos aquí para ti, incluso después de graduarte.<br>
-      <a href="/us/geeks-vs-others">Compara 4Geeks</a> con otros bootcamps de progrmación.
+      Pertenecerás a una comunidad de personas afines que se apoyan genuinamente entre sí. Obtén acceso de por vida a nuestra plataforma de aprendizaje en línea y servicios de mentoría. Siempre estaremos aquí para ti, incluso después de graduarte.
 
     font_size: ["16px"]
   button:
