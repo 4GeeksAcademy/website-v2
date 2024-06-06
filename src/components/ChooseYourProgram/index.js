@@ -14,6 +14,7 @@ const ChooseYourProgram = ({
   chooseProgramRef,
   landingTemplate,
   id,
+  background,
 }) => {
   const { session } = useContext(SessionContext);
   const applyButton = session?.location?.button?.apply_button_text;
@@ -46,7 +47,7 @@ const ChooseYourProgram = ({
 
   if (info) info = info.node;
   return (
-    <Div id={id} ref={chooseProgramRef}>
+    <Div id={id} ref={chooseProgramRef} background={background}>
       <Grid
         gridTemplateColumns_md={
           landingTemplate ? "repeat(14, 1fr)" : "repeat(14, 1fr)"

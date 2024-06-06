@@ -76,6 +76,15 @@ success_cases:
   title: Historias de éxito
   content: 86% de nuestros alumnos han sido contratados
 
+two_column_carousel:
+  title: "Nosotros lo hacemos posible"
+  text: "Nuestro programa de Job Guarantee está dando excelentes resultados. Vea algunas de las historias de nuestros graduados:"
+  videos:
+    - src: "/images/landing/alissa-video.webp"
+      link: "EcqasocRKHo"
+    - src: "/images/landing/alissa-video.webp"
+      link: "EcqasocRKHo"
+
 ## CHOOSE YOUR PROGRAM /components/ChooseYourProgram
 choose_program:
   title: Elige tu programa

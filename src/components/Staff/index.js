@@ -114,7 +114,7 @@ const Staff = (props) => {
           <Carousel
             previousArrow
             nextArrow
-            customSettings={{
+            settings={{
               dotsClass: "slick-dots-staff",
               slidesToShow: 4,
               slidesToScroll: 3,

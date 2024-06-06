@@ -7,7 +7,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const TwoColumnCarousel = ({ title, text, background, children, settings }) => {
+const TwoColumnCarousel = ({ title, text, background, children, settings, carouselProps }) => {
   const sliderRef = useRef();
 
   const customSettings = {
@@ -19,7 +19,8 @@ const TwoColumnCarousel = ({ title, text, background, children, settings }) => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: false,
+    responsive: [],
+    ...settings,
   };
 
   return (
@@ -62,10 +63,13 @@ const TwoColumnCarousel = ({ title, text, background, children, settings }) => {
           </Div>
           <Icon icon="longarrow-right" />
         </Div>
-        <Div display="block" width="100%" maxWidth="1020px">
-          <Slider {...customSettings} ref={sliderRef}>
+        <Div display="block" width="100%" maxWidth="1020px" padding="0 0 20px 0" padding_tablet="0">
+          {/* <Slider {...customSettings} ref={sliderRef}>
             {children}
-          </Slider>
+          </Slider> */}
+          <CarouselV2 width="100%" settings={customSettings} carouselProps={carouselProps}>
+            {children}
+          </CarouselV2>
         </Div>
       </Div>
     </Div>

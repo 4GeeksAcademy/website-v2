@@ -13,6 +13,8 @@ import { SessionContext } from "../session.js";
 import Loc from "../components/Loc";
 import With4Geeks from "../components/With4Geeks";
 import PricesAndPayment from "../components/PricesAndPayment";
+import TwoColumnCarousel from "../components/TwoColumnCarousel";
+import ReactPlayer from "../components/ReactPlayer";
 import OurPartners from "../components/OurPartners";
 import ChooseYourProgram from "../components/ChooseYourProgram";
 import Testimonials from "../components/Testimonials";
@@ -350,7 +352,39 @@ const Home = (props) => {
         margin="0"
         variant="carousel"
       />
+      <TwoColumnCarousel
+        title={yml.two_column_carousel.title}
+        text={yml.two_column_carousel.text}
+        background={Colors.veryLightBlue2}
+        carouselProps={{
+          margin: "0px",
+          margin_tablet: "0px",
+        }}
+      >
+        {yml.two_column_carousel.videos.map((elem) => (
+          <Div key={elem.video} borderRadius="4px" border={`1px solid ${Colors.black}`}>
+            <ReactPlayer
+              margin_tablet="0px 0px"
+              thumb={elem.src}
+              id={elem.video}
+              width="100%"
+              width_tablet="100%"
+              style={{ height: "400px", width: "100%" }}
+              videoHeight="400px"
+            />
+          </Div>
+        ))}
+      </TwoColumnCarousel>
 
+      <ChooseYourProgram
+        chooseProgramRef={chooseProgramRef}
+        id="choose-program"
+        lang={pageContext.lang}
+        programs={data.allChooseYourProgramYaml.edges[0].node.programs}
+        title={yml.choose_program.title}
+        paragraph={yml.choose_program.paragraph}
+        background={Colors.veryLightBlue2}
+      />
       <With4Geeks
         lang={pageContext.lang}
         sessionLocation={
@@ -360,14 +394,6 @@ const Home = (props) => {
         }
         playerHeight="600px"
         title={yml.with_4geeks.title}
-      />
-      <ChooseYourProgram
-        chooseProgramRef={chooseProgramRef}
-        id="choose-program"
-        lang={pageContext.lang}
-        programs={data.allChooseYourProgramYaml.edges[0].node.programs}
-        title={yml.choose_program.title}
-        paragraph={yml.choose_program.paragraph}
       />
 
       {/* TWO COLUMN CREAR EN EL YML*/}
@@ -466,6 +492,14 @@ export const query = graphql`
           success_cases {
             title
             content
+          }
+          two_column_carousel {
+            title
+            text
+            videos {
+              src
+              video
+            }
           }
           choose_program {
             title
