@@ -220,6 +220,7 @@ const GeeksVsOthers = ({
                 <Div
                   gridColumn_tablet="7 / 10"
                   background={Colors.white}
+                  borderRadius={i === arr.length - 1 && "0 0 4px 4px"}
                   padding="0 25px 0 20px"
                   padding_tablet="0 16px"
                   display="block"
