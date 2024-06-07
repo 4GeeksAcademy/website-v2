@@ -385,6 +385,32 @@ const Home = (props) => {
         paragraph={yml.choose_program.paragraph}
         background={Colors.veryLightBlue2}
       />
+      {/* TWO COLUMN CREAR EN EL YML*/}
+      <Div display="block" background={Colors.veryLightBlue2}>
+        <H2
+          type="h2"
+          textAlign_tablet="center"
+          lineHeight="38px"
+          lineHeight_tablet="38px"
+          fontSize="36px"
+          fontWeight="400"
+        >
+          {yml.two_columns.section_heading.text}
+        </H2>
+        <TwoColumn
+          right={{ image: yml.two_columns?.image }}
+          left={{
+            heading: yml.two_columns?.heading,
+            sub_heading: yml.two_columns?.sub_heading,
+            button: yml.two_columns?.button,
+            content: yml.two_columns?.content,
+            justify: yml.two_columns?.justify,
+            boxes: yml.two_columns?.boxes,
+          }}
+          proportions={yml.two_columns?.proportions}
+          session={session}
+        />
+      </Div>
       <With4Geeks
         lang={pageContext.lang}
         sessionLocation={
@@ -396,19 +422,6 @@ const Home = (props) => {
         title={yml.with_4geeks.title}
       />
 
-      {/* TWO COLUMN CREAR EN EL YML*/}
-      {/* <TwoColumn
-        right={{ image: yml.two_columns?.image }}
-        left={{
-          heading: yml.two_columns?.heading,
-          sub_heading: yml.two_columns?.sub_heading,
-          button: yml.two_columns?.button,
-          content: yml.two_columns?.content,
-          justify: yml.two_columns?.justify,
-        }}
-        proportions={yml.two_columns?.proportions}
-        session={session}
-      /> */}
 
       <Iconogram yml={yml.iconogram_two} />
 
@@ -536,6 +549,38 @@ export const query = graphql`
                 heading
                 icon
               }
+            }
+          }
+          two_columns {
+            proportions
+            image {
+              style
+              src
+              shadow
+            }
+            section_heading {
+              text
+            }
+            heading {
+              text
+              font_size
+              style
+            }
+            content {
+              text
+              font_size
+              path
+            }
+            button {
+              text
+              color
+              background
+              path
+            }
+            boxes {
+              icon
+              title
+              text
             }
           }
           geeks_vs_others {

@@ -90,30 +90,36 @@ why_4geeks:
       icon: "check"
 
 ## TWO COLUMNS
-# two_columns:
-#   proportions: [6, 6]
-#   justify: "center"
-#   image:
-#     style: '{ "backgroundSize": "contain", "height": ["500px", "500px", "500px", "500px", "300px"], "minHeight": "auto" }'
-#     src: "/images/landing/feliz-empresario-laptop-2.png"
-#     shadow: false
-#   heading:
-#     text: "Finance your future"
-#     style: '{ "fontWeight": 400, "marginBottom": "32px" }'
-#     font_size: ["35px", "35px", "35px", "35px", "35px"]
-#   sub_heading:
-#     text: "We’re all about making our high-quality education affordable to everyone."
-#     font_size: ["21px", "21px", "21px", "21px", "21px"]
-#   content:
-#     text: |
-#       We’re all about making our high-quality education affordable to everyone.
-#       That's why we offer multiple options to help you fund our coding bootcamps stress-free. Whether it's an ISA, scholarship, payment plan or Job Guarantee we're here to guide you every step of the way.
-#     font_size: ["16px"]
-#   button:
-#     text: "See all financing options"
-#     color: "white"
-#     background: "#0084FF"
-#     path: "#prices_and_payment"
+two_columns:
+  proportions: [6, 6]
+  justify: "center"
+  image:
+    style: '{ "backgroundSize": "contain", "height": ["500px", "500px", "500px", "500px", "300px"], "minHeight": "auto" }'
+    src: "/images/landing/feliz-empresario-laptop-3.png"
+    shadow: false
+  section_heading:
+    text: "Finance your future"
+  heading:
+    text: "$20 Millions in scholarships"
+    style: '{ "fontWeight": 400, "marginBottom": "32px" }'
+    font_size: ["35px", "35px", "35px", "35px", "35px"]
+  content:
+    text: |
+      1.456 people have benefited from our scholarship programs, from all possible backgrounds, <a style="color: black; cursor:pointer; text-decoration: underline; opacity: 0.8;">read here</a> stories of the beneficiaries and projects.
+    font_size: ["21px"]
+    path: "/us/20-million"
+  button:
+    text: "See all financing options"
+    color: "white"
+    background: "blue"
+    path: "/us/financials#prices_and_payment"
+  boxes:
+    - icon: rocket-2
+      title: "14"
+      text: Projects completed
+    - icon: handsheart
+      title: "1465"
+      text: Beneficiaries so far
 
 ## 4GEEKS VS OTHERS SECTION
 geeks_vs_others:
