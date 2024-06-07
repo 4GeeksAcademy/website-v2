@@ -14,6 +14,7 @@ const ChooseYourProgram = ({
   chooseProgramRef,
   landingTemplate,
   id,
+  background,
 }) => {
   const { session } = useContext(SessionContext);
   const applyButton = session?.location?.button?.apply_button_text;
@@ -46,7 +47,7 @@ const ChooseYourProgram = ({
 
   if (info) info = info.node;
   return (
-    <Div id={id} ref={chooseProgramRef}>
+    <Div id={id} ref={chooseProgramRef} background={background}>
       <Grid
         gridTemplateColumns_md={
           landingTemplate ? "repeat(14, 1fr)" : "repeat(14, 1fr)"
@@ -122,7 +123,7 @@ const ChooseYourProgram = ({
                   display="flex"
                   padding=" 20px 20px"
                   margin_tablet="0px"
-                  border="1px solid black"
+                  border={!background && "1px solid black"}
                   borderRadius="4px"
                   flexDirection="column"
                   flexDirection_tablet="column"
@@ -234,7 +235,7 @@ const ChooseYourProgram = ({
                     </Div>
                   </Div>
 
-                  <Div margin="20px 0 0 0" width="100%" width_tablet="150px">
+                  <Div margin="10px auto 0 auto" width="100%" width_tablet="150px">
                     {!program.comming_soon ? (
                       <Link to={program.link} style={{ width: "100%" }}>
                         {landingTemplate ? (
@@ -253,10 +254,9 @@ const ChooseYourProgram = ({
                           </Button>
                         ) : (
                           <Button
-                            display="flex"
-                            background={Colors.blue}
-                            colorHover={Colors.blue}
-                            color={Colors.white}
+                            background="none"
+                            colorHover="none"
+                            color={Colors.blue}
                             justifyContent="center"
                             width="auto"
                             width_tablet="150px"
@@ -266,11 +266,10 @@ const ChooseYourProgram = ({
                               left: "24px",
                               right: "24px",
                               gap: "10px",
+                              margin: "auto",
                             }}
                           >
-                            {applyButton || program.text_link}
-                            {"  "}
-                            <span>→</span>
+                            {program.text_link}
                           </Button>
                         )}
                       </Link>

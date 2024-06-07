@@ -3,7 +3,7 @@ sub_heading: "Whether you decide to enroll in our online or in-person program, y
 title_image: "Online, Hybrid or In-person. "
 title: "Our programs are"
 highlighted_text:
-  - text: Online
+  - text: Online,
     color: "#0084FF"
   - text: Hybrid
     color: "#FFB718"

@@ -440,11 +440,6 @@ export const query = graphql`
             heading
             paragraph
           }
-          geeks_vs_others {
-            heading
-            sub_heading
-            sub_heading_link
-          }
           overlaped {
             heading
             paragraph

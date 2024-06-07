@@ -73,7 +73,7 @@ const Gallery = ({
           display="block"
         >
           <Carousel
-            customSettings={
+            settings={
               customSettingsCarousel || {
                 dotsClass: "slick-dots-staff",
                 slidesToShow: 3,

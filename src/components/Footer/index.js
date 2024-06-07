@@ -50,7 +50,7 @@ const Footer = ({ yml }) => {
 
   const [formStatus, setFormStatus] = useState({
     status: "idle",
-    msg: "Resquest",
+    msg: "Request",
   });
   const [formData, setVal] = useState({
     email: { value: "", valid: false },
@@ -64,6 +64,8 @@ const Footer = ({ yml }) => {
       setVal({ ...formData, token: { value: captchaValue, valid: true } });
     else setVal({ ...formData, token: { value: null, valid: false } });
   };
+  // Año actual
+  const currentYear = new Date().getFullYear();
 
   return (
     <>
@@ -451,7 +453,7 @@ const Footer = ({ yml }) => {
               textAlign_tablet="left"
               color={Colors.darkGray}
             >
-              @ 4Geeks Academy LLC 2019
+              @ 4Geeks Academy LLC {currentYear}
             </H4>
           </Div>
         </GridContainer>

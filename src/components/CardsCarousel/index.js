@@ -3,6 +3,7 @@ import { Link } from "gatsby";
 import { Button, Colors, Img } from "../Styling";
 import { Div } from "../Sections";
 import { H3, H2, H1, Paragraph } from "../Heading";
+import { smartRedirecting } from "../../utils/utils.js";
 import Icon from "../Icon";
 
 const CardsCarousel = ({
@@ -148,18 +149,16 @@ const CardsCarousel = ({
         ))}
       </Div>
 
-      {content && /<\/?[a-z0-9]+>/g.test(content.text) ? (
+      {content?.text &&  (
         <Paragraph
           padding="0 32px"
           margin="30px 0 0 0"
+          onClick={(e) => {
+            if (e.target.tagName === "A")
+              smartRedirecting(e, content.path);
+          }}
           dangerouslySetInnerHTML={{ __html: content.text }}
         />
-      ) : (
-        content && (
-          <Paragraph padding="0 32px" margin="30px 0 0 0">
-            {content.text}
-          </Paragraph>
-        )
       )}
       <Div padding="0 0 30px 0" justifyContent="center">
         {button && (

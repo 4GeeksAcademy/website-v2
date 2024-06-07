@@ -344,23 +344,6 @@ part_time:
       - "/images/flevo-new.png"    
 
 
-  - slug: 'colombia-upfront-ds-cs'
-    academies: ['bogota-colombia']
-    recomended: true
-    scholarship: "Data Science program + Career Support"
-    payment_time: "We help you build your professional profile"
-    price: "USD $3.600"
-    original_price: "USD $5.000"
-    offer: "28% OFF"
-    bullets:
-      - "There is always a payment plan available for you to join 4Geeks Academy"
-      - "If you don't find here what you are expecting, please contact us and we will try to find new ways to help"     
-      - "You need to choose if you are taking just the program, or if you also want to get our Career Support in full, or if you want to go all in and sign up with our Job Guaranteed Feature"  
-      - "Additionally to the Data Science program, get a lifetime of career support from our specialized team and permanent access to our online community of graduates"   
-    icons: 
-      - "/images/visa-mastercard.png"
-      - "/images/flevo-new.png"    
-
 ## Venezuela
 
   - slug: 'venezuela-full-payment-ds-pt'

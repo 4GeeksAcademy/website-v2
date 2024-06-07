@@ -50,6 +50,7 @@ const UpcomingDates = ({
               default_course
               course_slug
               name
+              duration
             }
             email_form_content {
               heading
@@ -149,6 +150,7 @@ const UpcomingDates = ({
           if (syllabus) {
             cohort.syllabus_version.name = syllabus.name;
             cohort.syllabus_version.courseSlug = syllabus.course_slug;
+            cohort.syllabus_version.duration = syllabus.duration;
           }
         });
 
@@ -409,7 +411,8 @@ const UpcomingDates = ({
                           {content.info.duration_label}
                         </H4>
                         <Paragraph textAlign="left">
-                          {content.info.duration_weeks}
+                          {cohort?.syllabus_version?.duration ||
+                            content.info.duration_weeks}
                         </Paragraph>
                       </Div>
 
@@ -453,7 +456,8 @@ const UpcomingDates = ({
                             {content.info.duration_label}
                           </H4>
                           <Paragraph textAlign="left">
-                            {content.info.duration_weeks}
+                            {cohort?.syllabus_version?.duration ||
+                              content.info.duration_weeks}
                           </Paragraph>
                         </Div>
                       </Div>

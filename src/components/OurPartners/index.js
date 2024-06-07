@@ -239,21 +239,70 @@ const Images_Featured = (props) => {
   );
 };
 
-const VariantCarousel = ({ title, paragraph, images, ...rest }) => {
+const SquareBoxPartner = ({ border, elem, width, height }) => {
+  let follow = elem.follow;
+  if (typeof elem.follow === "string" && elem.follow === "false")
+    follow = false;
+  return (
+    <Div
+      display="flex"
+      flexDirection="column"
+      justifyContent="center"
+      border={border}
+      background={Colors.white}
+      borderRadius="4px"
+      height={height}
+      width={width}
+      margin="auto"
+    >
+      {elem.link ? (
+        <a href={elem.link} rel={!follow ? "nofollow" : ""} target="__blank">
+          <GatsbyImage
+            style={{
+              cursor: "pointer",
+              margin: "auto",
+              width: "60%",
+            }}
+            height="112px"
+            objectFit="contain"
+            alt={elem.name}
+            image={getImage(elem.image.childImageSharp.gatsbyImageData)}
+          />
+        </a>
+      ) : (
+        <GatsbyImage
+          style={{
+            margin: "auto",
+            height: "112px",
+            width: "60%",
+          }}
+          objectFit="contain"
+          alt={elem.name}
+          image={getImage(elem.image.childImageSharp.gatsbyImageData)}
+        />
+      )}
+    </Div>
+  );
+};
+
+const VariantCarousel = ({ title, paragraph, images, background, multiLine, ...rest }) => {
+  const multiLineImages = multiLine ? images.reduce((rows, key, index) => (index % 2 == 0 ? rows.push([key]) 
+  : rows[rows.length-1].push(key)) && rows, []) : [];
+
   return (
     <CarouselV2
       margin="20px 0"
-      background="#FBFCFC"
+      background={background || "#FBFCFC"}
       padding="20px 0 40px 0"
       heading={title}
       content={paragraph}
       headingProps={{ fontWeight: "400", fontSize: "35px" }}
-      customSettings={{
+      settings={{
         slidesToShow: 4,
         slidesToScroll: 4,
         responsive: [
           {
-            breakpoint: 1024,
+            breakpoint: 1124,
             settings: {
               slidesToShow: 3,
               slidesToScroll: 3,
@@ -291,56 +340,32 @@ const VariantCarousel = ({ title, paragraph, images, ...rest }) => {
       }}
       {...rest}
     >
-      {images.map((elem) => {
-        let follow = elem.follow;
-        if (typeof elem.follow === "string" && elem.follow === "false")
-          follow = false;
-        return (
-          <Div key={elem.name}>
-            <Div
-              display="flex"
-              flexDirection="column"
-              justifyContent="center"
-              border="1px solid #C4C4C4"
-              borderRadius="4px"
-              height="236px"
-              width="260px !important"
-              margin="auto"
-            >
-              {elem.link ? (
-                <a
-                  href={elem.link}
-                  rel={!follow ? "nofollow" : ""}
-                  target="__blank"
-                >
-                  <GatsbyImage
-                    style={{
-                      cursor: "pointer",
-                      margin: "auto",
-                      width: "60%",
-                    }}
-                    height="112px"
-                    objectFit="contain"
-                    alt={elem.name}
-                    image={getImage(elem.image.childImageSharp.gatsbyImageData)}
-                  />
-                </a>
-              ) : (
-                <GatsbyImage
-                  style={{
-                    margin: "auto",
-                    height: "112px",
-                    width: "60%",
-                  }}
-                  objectFit="contain"
-                  alt={elem.name}
-                  image={getImage(elem.image.childImageSharp.gatsbyImageData)}
+      {multiLine ? 
+        multiLineImages.map((group, i) => (
+          <Div key={`${i}-partners`}>
+            <Div flexDirection="column" gap="16px">
+              {group.map((elem) => (
+                <SquareBoxPartner
+                  key={elem.name}
+                  elem={elem}
+                  border={!background && "1px solid #C4C4C4"}
+                  height="236px"
+                  width="260px !important"
                 />
-              )}
+              ))}
             </Div>
           </Div>
-        );
-      })}
+        ))
+        : images.map((elem) => (
+          <Div key={elem.name}>
+            <SquareBoxPartner
+              elem={elem}
+              border={!background && "1px solid #C4C4C4"}
+              height="236px"
+              width="260px !important"
+            />
+          </Div>
+      ))}
     </CarouselV2>
   );
 };
@@ -375,11 +400,19 @@ const OurPartners = ({
     padding: `${padding || "75px 0"}`,
     borderBottom: borderBottom,
     width: width,
+    maxWidth: maxWidth,
   };
 
   if (variant === "carousel")
     return (
-      <VariantCarousel images={images} title={title} paragraph={paragraph} />
+      <VariantCarousel
+        images={images}
+        title={title}
+        paragraph={paragraph}
+        background={background}
+        margin={margin}
+        {...rest}
+      />
     );
   //Renderized...
   return (

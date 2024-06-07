@@ -12,18 +12,22 @@ syllabus_alias:
   - default_course: full-stack
     course_slug: part-time-full-stack-developer
     name: Full Stack Software Developer
+    duration: "18 weeks"
 
   - default_course: machine-learning
     course_slug: datascience-machine-learning
     name: Datascience
+    duration: "18 weeks"
 
   - default_course: cyber-security
     course_slug: cybersecurity
     name: Cybersecurity
+    duration: "18 weeks"
 
   - default_course: applied-ai
     course_slug: applied-ai-course
     name: Applied AI
+    duration: "18 weeks"
 
 email_form_content:
   heading: Send your email to notify you when there is a date available for this campus

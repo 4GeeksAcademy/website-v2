@@ -8,6 +8,7 @@ programs:
     description: "Convierte en un programador que utiliza las tecnologias más búscadas, mentoria personalizada y un plan de estudios y career support para conseguir tu primer trabajo."
     description_mobile: "Online, presencial y flexible"
     link: "/es/coding-bootcamps/full-stack-part-time"
+    text_link: "Más Info"
 
   - title: "Data Science y Machine Learning"
     sub_title: "Desde cero"
@@ -15,7 +16,7 @@ programs:
     description: "Conviértete en un científico de datos, desarrolla modelos de predicción y uneté a una de las profesiones mejores pagadas del mundo."
     description_mobile: "Online, presencial y flexible"
     link: "/es/coding-bootcamps/curso-datascience-machine-learning"
-
+    text_link: "Más Info"
 
   - title: "Curso de Ciberseguridad"
     sub_title: "Para Windows y Linux"
@@ -23,6 +24,7 @@ programs:
     description_mobile: "En línea, presencial y flexible"
     icon: "cyber-security"
     link: "/es/coding-bootcamps/curso-inteligencia-artificial"
+    text_link: "Más Info"
 
   - title: "Inteligencia Artificial Aplicada"
     sub_title: "Sin código"
@@ -30,3 +32,4 @@ programs:
     description_mobile: "En línea, presencial y flexible"
     icon: "applied-ai"
     link: "/es/coding-bootcamps/curso-inteligencia-artificial"
+    text_link: "Más Info"
