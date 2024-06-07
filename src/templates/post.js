@@ -156,9 +156,8 @@ export default function Template(props) {
 
   React.useEffect(() => {
     tagManager("blog_post_rendered", {
-      email: _data.email,
-      cluster: post.frontmatter.cluster,
-      language: pageContext.lang,
+      cluster: post?.frontmatter?.cluster,
+      language: pageContext?.lang,
     });
   }, []);
 
