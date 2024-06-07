@@ -7,11 +7,14 @@ import { Circle } from "../components/BackgroundDrawing";
 import Iconogram from "../components/Iconogram";
 import News from "../components/News";
 import Icon from "../components/Icon";
+import GeeksVsOthers from "../components/GeeksVsOthers";
 import BaseRender from "./_baseLayout";
 import { SessionContext } from "../session.js";
 import Loc from "../components/Loc";
 import With4Geeks from "../components/With4Geeks";
 import PricesAndPayment from "../components/PricesAndPayment";
+import TwoColumnCarousel from "../components/TwoColumnCarousel";
+import ReactPlayer from "../components/ReactPlayer";
 import OurPartners from "../components/OurPartners";
 import ChooseYourProgram from "../components/ChooseYourProgram";
 import Testimonials from "../components/Testimonials";
@@ -286,46 +289,134 @@ const Home = (props) => {
           width="100%"
           className="badge-slider hideOverflowX__"
         >
-          <Badges
+          <News
             lang={pageContext.lang}
-            short_link={true}
-            short_text="15px"
-            margin="40px auto"
-            paragraph={yml.badges.paragraph}
-            bottom_paragraph
-            maxWidth="1280px"
-            paddingText_tablet="0 10% 5px 10%"
+            limit={yml.news.limit}
+            height="45px"
+            margin="0"
+            justifyContent="between"
           />
         </Div>
       </Div>
-
+      <Div
+        margin="70px auto 0 auto"
+        margin_tablet="30px auto 0 auto"
+        width="100%"
+        className="badge-slider hideOverflowX__"
+        background={Colors.veryLightBlue2}
+      >
+        <Badges
+          variant="squares"
+          lang={pageContext.lang}
+          short_text="15px"
+          margin="40px auto"
+          title={yml.badges.title}
+          paragraph={yml.badges.paragraph}
+          maxWidth="1280px"
+          paddingText_tablet="0 10% 5px 10%"
+        />
+      </Div>
+      <Div background={Colors.veryLightBlue2} display="block">
+        <TwoColumn
+          left={{ image: yml.why_4geeks?.image }}
+          right={{
+            heading: yml.why_4geeks?.heading,
+            sub_heading: yml.why_4geeks?.sub_heading,
+            content: yml.why_4geeks?.content,
+            bullets: yml.why_4geeks?.bullets,
+            button: {
+              ...yml.why_4geeks?.button,
+              text: applyButton || yml.why_4geeks?.button?.text,
+            },
+          }}
+          proportions={yml.why_4geeks?.proportions}
+          session={session}
+        />
+      </Div>
+      <Iconogram yml={yml.iconogram} background={Colors.veryLightBlue2} />
+      <GeeksVsOthers
+        lang={pageContext.lang}
+        mainBackround={Colors.white}
+        limit={5}
+        style={{ background: Colors.veryLightBlue2 }}
+        title={yml.geeks_vs_others.heading}
+        paragraph={yml.geeks_vs_others.sub_heading}
+        link
+      />
       <Testimonials
         lang={data.allTestimonialsYaml.edges}
-        background={Colors.verylightGray}
+        background={Colors.veryLightBlue2}
         heading={yml.success_cases.title}
         content={yml.success_cases.content}
-        margin="20px 0 0 0"
+        margin="0"
         variant="carousel"
       />
-
-      <TwoColumn
-        left={{ image: yml.why_4geeks?.image }}
-        right={{
-          heading: yml.why_4geeks?.heading,
-          sub_heading: yml.why_4geeks?.sub_heading,
-          content: yml.why_4geeks?.content,
-          button: {
-            ...yml.why_4geeks?.button,
-            text: applyButton || yml.why_4geeks?.button?.text,
-          },
+      <TwoColumnCarousel
+        title={yml.two_column_carousel.title}
+        text={yml.two_column_carousel.text}
+        background={Colors.veryLightBlue2}
+        carouselProps={{
+          margin: "0px",
+          margin_tablet: "0px",
         }}
-        proportions={yml.why_4geeks?.proportions}
-        session={session}
-      />
-      <Iconogram yml={yml.iconogram} />
+      >
+        {yml.two_column_carousel.videos.map((elem) => (
+          <Div key={elem.video} borderRadius="4px" border={`1px solid ${Colors.black}`}>
+            <ReactPlayer
+              margin_tablet="0px 0px"
+              thumb={elem.src}
+              id={elem.video}
+              width="100%"
+              width_tablet="100%"
+              style={{ height: "400px", width: "100%" }}
+              videoHeight="400px"
+            />
+          </Div>
+        ))}
+      </TwoColumnCarousel>
 
+      <ChooseYourProgram
+        chooseProgramRef={chooseProgramRef}
+        id="choose-program"
+        lang={pageContext.lang}
+        programs={data.allChooseYourProgramYaml.edges[0].node.programs}
+        title={yml.choose_program.title}
+        paragraph={yml.choose_program.paragraph}
+        background={Colors.veryLightBlue2}
+      />
+      {/* TWO COLUMN CREAR EN EL YML*/}
+      <Div display="block" background={Colors.veryLightBlue2}>
+        <H2
+          type="h2"
+          textAlign_tablet="center"
+          lineHeight="38px"
+          lineHeight_tablet="38px"
+          fontSize="36px"
+          fontWeight="400"
+        >
+          {yml.two_columns.section_heading.text}
+        </H2>
+        <TwoColumn
+          right={{ image: yml.two_columns?.image }}
+          left={{
+            heading: yml.two_columns?.heading,
+            sub_heading: yml.two_columns?.sub_heading,
+            button: yml.two_columns?.button,
+            content: yml.two_columns?.content,
+            justify: yml.two_columns?.justify,
+            boxes: yml.two_columns?.boxes,
+          }}
+          proportions={yml.two_columns?.proportions}
+          session={session}
+        />
+      </Div>
       <With4Geeks
         lang={pageContext.lang}
+        background={Colors.veryLightBlue2}
+        headerProps={{ 
+          margin: "0 5px 20px 5px",
+          margin_tablet: "0 auto 20px auto",
+         }}
         sessionLocation={
           session &&
           session.location &&
@@ -334,32 +425,10 @@ const Home = (props) => {
         playerHeight="600px"
         title={yml.with_4geeks.title}
       />
-      <ChooseYourProgram
-        chooseProgramRef={chooseProgramRef}
-        id="choose-program"
-        lang={pageContext.lang}
-        programs={data.allChooseYourProgramYaml.edges[0].node.programs}
-        title={yml.choose_program.title}
-        paragraph={yml.choose_program.paragraph}
-      />
-
-      {/* TWO COLUMN CREAR EN EL YML*/}
-      {/* <TwoColumn
-        right={{ image: yml.two_columns?.image }}
-        left={{
-          heading: yml.two_columns?.heading,
-          sub_heading: yml.two_columns?.sub_heading,
-          button: yml.two_columns?.button,
-          content: yml.two_columns?.content,
-          justify: yml.two_columns?.justify,
-        }}
-        proportions={yml.two_columns?.proportions}
-        session={session}
-      /> */}
-
-      <Iconogram yml={yml.iconogram_two} />
 
       <OurPartners
+        multiLine
+        background={Colors.veryLightBlue2}
         images={hiring.partners.images}
         margin="0"
         padding="50px 0"
@@ -375,13 +444,8 @@ const Home = (props) => {
             : hiring.partners.sub_heading
         }
       />
-      {/* <PricesAndPayment
-        lang={pageContext.lang}
-        locations={data.allLocationYaml.edges}
-        defaultCourse="full-stack"
-        defaultSchedule="part_time"
-      /> */}
       <Loc
+        background={Colors.veryLightBlue2}
         lang={pageContext.lang}
         allLocationYaml={data.allLocationYaml}
         hideHeading
@@ -440,6 +504,14 @@ export const query = graphql`
             title
             content
           }
+          two_column_carousel {
+            title
+            text
+            videos {
+              src
+              video
+            }
+          }
           choose_program {
             title
             paragraph
@@ -470,6 +542,48 @@ export const query = graphql`
               background
               path
             }
+            bullets {
+              items {
+                heading
+                icon
+              }
+            }
+          }
+          two_columns {
+            proportions
+            image {
+              style
+              src
+              shadow
+            }
+            section_heading {
+              text
+            }
+            heading {
+              text
+              font_size
+              style
+            }
+            content {
+              text
+              font_size
+              path
+            }
+            button {
+              text
+              color
+              background
+              path
+            }
+            boxes {
+              icon
+              title
+              text
+            }
+          }
+          geeks_vs_others {
+            heading
+            sub_heading
           }
           iconogram {
             heading {
@@ -478,38 +592,12 @@ export const query = graphql`
               style
             }
             swipable
+            background
             icons {
               icon
               color
               content
               content_style
-            }
-          }
-          iconogram_two {
-            swipable
-            heading {
-              text
-              style
-              font_size
-              style
-            }
-            sub_heading {
-              text
-              style
-              font_size
-            }
-            icons {
-              icon
-              color
-              title
-              content
-            }
-            button {
-              text
-              color
-              path
-              background
-              hover_color
             }
           }
           with_4geeks {
@@ -622,6 +710,7 @@ export const query = graphql`
             description
             description_mobile
             icon
+            text_link
           }
         }
       }
