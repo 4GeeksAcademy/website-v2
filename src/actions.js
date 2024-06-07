@@ -299,13 +299,14 @@ export const beHiringPartner = async (data, session) => {
       token,
       action
     );
-
-    setDataLayer({
+    // save conversion info to GTM
+    tagManager("partner_application", {
       email: _data.email,
       formentry_id: _data.id,
       attribution_id: _data.attribution_id?.toString(),
       referral_key: _data.referral_key,
     });
+
     return _data;
   }
   return true;

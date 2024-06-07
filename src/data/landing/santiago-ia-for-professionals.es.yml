@@ -39,7 +39,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  tagline: Aprende a utilizar inteligencia artificial en tu dia a dia y potencia tus resultados
+  tagline: Aprende a utilizar inteligencia artificial en tu día a día y potencia tus resultados
   tagline_color: "#FFFFFF"
   sub_heading: "Aprende a sacar provecho a las herramientas actuales y optimiza tus resultados en tiempo record"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
@@ -126,7 +126,7 @@ who_is_hiring:
   position: 15
   limit: 4
   heading: "¿Quién contrata a nuestros alumnos?"
-  sub_heading: "Nos encanta ver crecer a nuestros estudiantes, es por eso que nos esforzamos cada día por tener más aliados, para que puedas trabajar en empresas que te ayuden a seguir creciendo profesionalmente."
+  sub_heading: ""
 
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
@@ -136,7 +136,7 @@ components:
     swipable: False
     background: "#fbfbfb"
     image:
-      style: '{"backgroundSize": "contain;"}'
+      style: '{"backgroundSize": "contain", "background-position": "center"}'
       src: "/images/landing/hombre-con-laptop.png"
       shadow: false
     section_heading: 
@@ -147,7 +147,8 @@ components:
     sub_heading:
       text: "Obtén las habilidades claves para dominar las herramientas de Inteligencia Artificial"
     button: 
-      text: "Explora más sobre nuestro curso de Applied IA"
+      text: |-  
+        Curso de Inteligencia Artificial para Profesionales
       color: white
       hover_color: "white"
       background: "black"
@@ -177,11 +178,12 @@ components:
     layout: two_column_left
     background: "veryLightBlue2" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
     image:
+      style: '{ "backgroundSize": "contain", "height": "250px", "minHeight": "250px", "background-position": "center", "justify-content": "center" }'
       src: "/images/blog/blog_3.jpg"
-      shadow: true
+      shadow: false
     heading:
-      text: "Aumenta Tus Resultados con Inteligencia Artificial"
-      font_size: ["50px", "50px", "50px", "50px", "50px"]
+      text: "Aumenta Tus Resultados con Inteligencia Artificial en tu carrera laboral"
+      font_size: ["40px", "40px", "40px", "35px", "30px"]
     sub_heading:
       text: "Desarrolla habilidades clave en Inteligencia Artificial para impulsar tu éxito profesional"
     content:
@@ -191,43 +193,42 @@ components:
     bullets:
       items:
       - heading: "Aplicaciones Prácticas de IA"
-        text: "Descubre cómo aplicar la IA en diversas industrias como salud, marketing y más, abordando casos reales y desafíos específicos"
+        # text: "Descubre cómo aplicar la IA en diversas industrias como salud, marketing y más, abordando casos reales y desafíos específicos"
         icon: "circle"
       - heading: "Identificación y Aprovechamiento de Oportunidades en IA"
-        text: "Aprende a identificar y aprovechar oportunidades de implementación de IA en entornos laborales, maximizando su impacto en el rendimiento laboral"
+        # text: "Aprende a identificar y aprovechar oportunidades de implementación de IA en entornos laborales, maximizando su impacto en el rendimiento laboral"
         icon: "circle"
       - heading: "Aprovecha la IA para optimizar tus tareas"
-        text: "Tareas repetitivas pueden ser optimizadas por IAs para aprovecar el tiempo y maximizar resultados"
+        # text: "Tareas repetitivas pueden ser optimizadas por IAs para aprovecar el tiempo y maximizar resultados"
         icon: "circle"
       - heading: "Entendimiento de las Herramientas actuales"
-        text: "Al entenderlas herramientas podrás optener los mejores resultados de ellas, podrás pensar en como aplicarlas de una forma efectiva a tu entorno"
+        # text: "Al entenderlas herramientas podrás optener los mejores resultados de ellas, podrás pensar en como aplicarlas de una forma efectiva a tu entorno"
         icon: "circle"
 
 
-  # - name: some_id
-  #   position: 4
-  #   layout: two_column_right
-  #   background: "#fbfbfb"
-  #   image:
-  #     style: '{ "border" : "3px solid black" }' 
-  #     shadow: true 
-  #     src: "../../../static/images/testimonials/joshua-bravo-testimonial.jpg"
-  #   video: "https://www.youtube.com/watch?v=rtpfwwfE0yY"
-  #   heading:
-  #     text:
-  #       "De ayudante de cocina al mundo tecnológico, El camino de Joshua hacia una carrera en la industria de la tecnología"
-  #       #xl      lg     md     sm    xs
-  #     font_size: ["40px", "34px", "34px", "25px", "20px"]
-  #   content:
-  #     #style: '{}'
-  #     #text: "De asistente de cocina a programador gracias a 4Geeks Academy. Su dedicación y formación lo convirtieron en un profesional altamente capacitado."
-  #     #font_size: ["16px"]
-  #   button:
-  #     text: "Experiencias de Éxito"
-  #     path: "#why_4geeks"
-  #     color: "white"
-  #     background: "black"
-  #     hover: "lightBlue"
+  - name: some_id
+    position: 4
+    layout: two_column_right
+    background: "#fbfbfb"
+    image:
+      style: '{ "border" : "3px solid black" }' 
+      shadow: true 
+      src: "../../../static/images/landing/inteligencia-artificial-para-profesionales.jpg"
+    video: "https://www.youtube.com/watch?v=N_oJOAfge80"
+    heading:
+      text: "El programa de Inteligencia Artificial Aplicada para Profesionales"
+        #xl      lg     md     sm    xs
+      font_size: ["40px", "34px", "34px", "25px", "20px"]
+    content:
+      style: '{}'
+      text: "El programa de Applied AI para Profesionales en 4Geeks Academy te brinda la oportunidad de adquirir habilidades especializadas en Inteligencia Artificial aplicada a entornos profesionales."
+      font_size: ["16px"]
+    button:
+      text: "¡Postúlate ahora!"
+      path: "#leadform_bottom"
+      color: "white"
+      background: "black"
+      hover: "lightBlue"
 
 # choose_your_program:
 #   position: 5

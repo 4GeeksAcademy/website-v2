@@ -1,5 +1,4 @@
 import React from "react";
-import { useStaticQuery, graphql, Link } from "gatsby";
 import ReactPlayer from "../ReactPlayer";
 import { H2, Paragraph, H3 } from "../Heading";
 import Icon from "../Icon";
@@ -43,7 +42,7 @@ const Side = ({
     );
   if (image) {
     const imgStyles = image.style ? JSON.parse(image.style) : null;
-    const [img_h_xl, img_h_lg, img_h_md, img_h_sm, img_h_xs] =
+    const [img_h_lg, img_h_md, img_h_tablet, img_h_sm, img_h_xs] =
       imgStyles && imgStyles.height
         ? Array.isArray(imgStyles.height)
           ? imgStyles.height
@@ -61,11 +60,13 @@ const Side = ({
         style={imgStyles}
         alt="4Geeks Academy Section"
         margin="0px"
-        height_md={img_h_xl || "100%"}
-        minHeight="500px"
+        height_lg={img_h_lg || "100%"}
+        height_md={img_h_md || "100%"}
+        height_tablet={img_h_tablet || "100%"}
+        height_sm={img_h_sm}
+        height_xxs={img_h_xs || "270px"}
+        minHeight="auto"
         width={imgStyles ? imgStyles.width || "100%" : "100%"}
-        h_sm={img_h_sm}
-        height_xxs={img_h_xs || "500px"}
         backgroundSize={image.shadow ? "cover" : "contain"}
         position={side}
         //border={image.shadow && "3px solid black"}
@@ -75,7 +76,6 @@ const Side = ({
       <GatsbyImage
         height_xxs="450px"
         image={getImage(image.childImageSharp.gatsbyImageData)}
-        //bgSize={`contain`}
         alt="geekforce image"
       />
     );
@@ -88,9 +88,6 @@ const Side = ({
       ? sub_heading.font_size
       : [];
   const [c_xl, c_lg, c_md, c_sm, c_xs] = content ? content.font_size : [];
-
-  let subHeadingStyles = {};
-  if (sub_heading?.style) subHeadingStyles = JSON.parse(sub_heading.style);
 
   return (
     <Div
@@ -124,12 +121,14 @@ const Side = ({
           type="h2"
           textAlign_tablet="left"
           lineHeight="38px"
-          lineHeight_tablet="38px"
+          lineHeight_tablet="32px"
+          lineHeight_xxs="24px"
           fontSize={h_xs || "30px"}
-          fs_xl={h_xl}
           fontSize_xxs={h_xs || "21px"}
           fontSize_md={h_md || "30px"}
           fontSize_sm={h_sm}
+          fontSize_tablet={h_lg}
+          fontSize_lg={h_xl}
           margin="30px 0 20px 0"
           style={heading.style ? JSON.parse(heading.style) : null}
         >
@@ -139,16 +138,18 @@ const Side = ({
       {sub_heading && (
         <Paragraph
           textAlign_tablet="left"
-          fontFamily="Lato-Bold"
+          fontFamily="Lato"
           textAlign="left"
           margin="0"
           letterSpacing="0.06em"
-          fontSize={sh_xl || "16px"}
-          fontSize_sm={sh_sm || "16px"}
-          fonSize_md={sh_md}
+          fontSize={sh_xs || sh_xl || "16px"}
           fontSize_xs={sh_xs}
+          fontSize_sm={sh_sm || "18px"}
+          fontSize_tablet={sh_md}
+          fonSize_md={sh_lg}
           fontHeight="30px"
-          fontWeight={subHeadingStyles["font-weight"] || 700}
+          fontWeight="400"
+          lineHeight="23px"
           opacity="1"
           style={sub_heading.style ? JSON.parse(sub_heading.style) : null}
         >
@@ -173,7 +174,7 @@ const Side = ({
                 height="auto"
                 alignItems="center"
                 padding="16px 5px 0 0"
-                padding_tablet="16px 0 0 0"
+                padding_tablet="12px 0 0 0"
                 display="grid"
                 gridTemplateColumns="100%"
                 //gridAutoRows="auto"
@@ -202,7 +203,7 @@ const Side = ({
                       textAlign="left"
                       fontSize="15px"
                       fontWeight="900"
-                      lineHeight="19px"
+                      lineHeight="16px"
                       textTransform="uppercase"
                       padding="0 0 0 5px"
                     >
@@ -244,10 +245,13 @@ const Side = ({
           textAlign_tablet="left"
           margin="10px 0"
           opacity="1"
-          fontSize={c_xl || "16px"}
-          fontSize_sm={c_sm}
-          fonSize_md={c_md}
+          fontSize={c_xs || c_xl || "16px"}
           fontSize_xs={c_xs}
+          fontSize_sm={c_sm}
+          fontSize_tablet={c_md}
+          fontSize_md={c_lg}
+          fontSize_lg={c_xl}
+          lineHeight="20px"
           style={content.style ? JSON.parse(content.style) : null}
           dangerouslySetInnerHTML={{ __html: content.text }}
         />
@@ -260,10 +264,13 @@ const Side = ({
             textAlign_tablet="left"
             margin="10px 0"
             opacity="1"
-            fontSize={c_xl || "16px"}
-            fontSize_sm={c_sm}
-            fonSize_md={c_md}
+            fontSize={c_xs || c_xl || "16px"}
             fontSize_xs={c_xs}
+            fontSize_sm={c_sm}
+            fontSize_tablet={c_md}
+            fontSize_md={c_lg}
+            fontSize_lg={c_xl}
+            lineHeight="20px"
             style={content.style ? JSON.parse(content.style) : null}
             fontHeight="30px"
           >
@@ -284,9 +291,8 @@ const Side = ({
           fontSize="15px"
           textAlign="left"
           margin="2rem 0"
-          padding_xxs="0 .5rem"
-          padding_xs="0 .85rem"
-          //padding_tablet="32px .85rem 0 .85rem"
+          padding="10px 20px"
+          borderRadius="4px"
           onClick={() => {
             if (button.path && button.path.indexOf("http") > -1)
               window.open(transferQuerystrings(button.path, utm));
@@ -358,7 +364,7 @@ const Side = ({
   );
 };
 
-const TwoColumn = ({ left, right, proportions, session }) => {
+const TwoColumn = ({ left, right, proportions, session, alignment }) => {
   const [left_size, right_size] = proportions ? proportions : [];
   return (
     <Div
@@ -366,6 +372,7 @@ const TwoColumn = ({ left, right, proportions, session }) => {
       gap={left?.gap || right?.gap || "0px"}
       gap_tablet={left?.gap_tablet || right?.gap_tablet || "20px"}
       flexDirection_tablet="row"
+      alignItems_tablet={alignment}
       m_sm="0px auto 100px auto"
       margin_tablet="0 auto"
       margin_xxs="0"

@@ -1,22 +1,18 @@
 import React from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import { H2, H4, H3, Paragraph } from "../Heading";
-import { Div, GridContainer, Grid } from "../Sections";
-import { RoundImage, Colors, Img } from "../Styling";
+import { Div, Grid } from "../Sections";
+import { RoundImage, Colors } from "../Styling";
 import ReactPlayer from "../ReactPlayer";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Fragment from "../Fragment";
 
 export default ({
   lang,
-  playerHeight,
   title,
   subtitle,
   stories,
-  text,
-  text_link,
   paragraph,
-  background,
   sessionLocation,
 }) => {
   const data = useStaticQuery(graphql`
@@ -106,10 +102,12 @@ export default ({
               margin_tablet="0 0 15px 0"
               margin_xs="0px"
               fontSize="21px"
-              fontSize_tablet="32px"
+              fontSize_tablet="35px"
+              fontFamily="Lato"
               textTransform={title ? "" : "uppercase"}
               lineHeight="38.4px"
-              fontWeight="900"
+              lineHeight_xs="24px"
+              fontWeight="400"
               color={Colors.darkGray}
               textAlign={title ? "center" : "left"}
             >
@@ -153,16 +151,15 @@ export default ({
             {locationFiltered.slice(0, 3).map((element, index) => {
               return (
                 <Div
+                  key={`${element.name}_${index}`}
                   display="flex"
                   flexDirection="column"
                   flexDirection_tablet="column"
                   justifyContent="start"
-                  border="none"
-                  //padding="0 16px"
-                  key={`${element.name}_${index}`}
-                  style={{ borderRadius: `0px` }}
+                  borderRadius="4px"
                   minWidth="250px"
                   width="100%"
+                  border="1px solid #C4C4C4"
                 >
                   <Div
                     padding_xs="0 0 0 0px"
@@ -205,12 +202,11 @@ export default ({
                     style={{ padding: "20px 32px" }}
                     padding_tablet="20px 32px"
                     padding_xxs="20px 16px"
-                    display={`flex`}
+                    display="flex"
                     //height="100%"
                     height={stories ? "fit-content" : "100%"}
                     flexDirection="column"
                     gap="16px 0px"
-                    boxShadow="inset 0px 0px 5px 0px #0000001A"
                   >
                     {element.footer.image_link && (
                       <Link to={element.footer.image_link}>
@@ -246,7 +242,7 @@ export default ({
                         fontSize_tablet="28px"
                         fontSize_md="28px"
                         lineHeight_xs="21.6px"
-                        lineHeight_tablet="33.6px"
+                        lineHeight_tablet="30px"
                       >
                         {`“${element.title}”`}
                       </H3>
@@ -257,10 +253,10 @@ export default ({
                         textAlign="left"
                         margin="10px 0 10px 0"
                         fontWeight="400"
-                        fontSize_xs="14px"
+                        fontSize="14px"
                         fontSize_tablet="13px"
-                        lineHeight_xs="16.8px"
-                        lineHeight_tablet="26px"
+                        lineHeight="15px"
+                        lineHeight_tablet="15px"
                       >
                         {element.description}
                       </Paragraph>

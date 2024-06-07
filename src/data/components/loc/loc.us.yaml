@@ -1,8 +1,20 @@
 heading: "LOCATIONS: ONLINE OR IN-PERSON"
 sub_heading: "Whether you decide to enroll in our online or in-person program, you'll enjoy real-time, live interactions with our teachers, mentors, and fellow classmates. Engage in dynamic lectures, hands-on projects, and interactive exercises alongside your cohort, and gain all the knowledge you need to become a highly skilled professional."
 title_image: "Online, Hybrid or In-person. "
-sub_title_image: | 
-  <p>Immerse in a live classroom environment for cohort-based learning in real-time. <br /> Enjoy unlimited 1-1 mentorships and personalized career guidance.</p>
+title: "Our programs are"
+highlighted_text:
+  - text: Online,
+    color: "#0084FF"
+  - text: Hybrid
+    color: "#FFB718"
+  - text: or
+    color: "#000000"
+  - text: <br/>In-person
+    color: "#23C520"
+sub_title: ""
+sub_title_image: |
+  Immerse in a live classroom environment for cohort-based learning in real-time. <br /> Enjoy unlimited 1-1 mentorships and personalized career guidance.
+
 image: "/images/locations/locations_image.png"
 choose: "Choose a region"
 regions:

@@ -1,7 +1,7 @@
 meta_info:
   slug: cybersecurity
-  title: "Study Cyber Security at 4Geeks Academy"
-  description: "Become a Cybersecurity Specialist with no prior knowledge and protect the digital future."
+  title: "Cybersecurity Bootcamp at 4Geeks Academy"
+  description: "With cybersecurity bootcamp, you can speed up your timeline to become a cybersecurity specialist with no prior knowledge and protect the digital future."
   bc_slug: "cybersecurity"
   template: "course-cybersecurity"
   image: "/images/landing/4Geeks-Espana.jpg"
@@ -12,7 +12,7 @@ meta_info:
   related_clusters: ["trends-and-tech"]
 
 apply_form:
-  label: Cybersecurity Specialist
+  label: Cybersecurity
 
 seo_title: "Cybersecurity Bootcamp"
 
@@ -52,19 +52,21 @@ instructors:
     linkedin: "https://www.linkedin.com/in/daniela-maissi-43045510b/"
 
 badges:
-  paragraph: "Kickstart your career at 4Geeks Academy, where developers grow and thrive. Named the best <a href='/us/coding-bootcamp'>coding bootcamp</a> 2023 by Course Report, best center for coding bootcamps 2023 by Premios de Excelencia Educativa in Spain, listed among the top 10 in the US by Newsweek, and rated 4.92/5 on Switchup. Licensed by the Florida Department of Education, USA."
+  paragraph: "Kickstart your career at 4Geeks Academy, where developers grow and thrive. Listed among the world’s <a href='/us/coding-bootcamp'>best coding bootcamps</a> of 2024 by Course Report, the 5 best coding bootcamp in 2024 by Forbes, named best center for coding bootcamps 2023 by Premios de Excelencia Educativa in Spain, rated 4.92/5 on Switchup and more. Licensed by the Florida Department of Education, USA. "
 
 two_columns_first:
   proportions: [6, 6]
   image:
     style: '{"border" : "0px solid black", "backgroundSize": "contain", "background-position": "center" }'
-    src: "../../images/staff/chema-alonso.jpg"  
+    src: "../../images/staff/chema-alonso.webp"  
     shadow: false
   heading:
-    text: "Cybersecurity Bootcamp validated by Chema Alonso, Spain's foremost Hacker"
-    font_size: ["28px", "28px", "28px", "23px", "23px"]
+    text: "Our Cybersecurity Bootcamp is backed by Chema Alonso, the Most Recognized Hacker in Spain"
+    font_size: ["25px", "25px", "25px", "23px", "23px"]
   sub_heading:
-    text: "Chema Alonso's years of experience, coupled with his contribution and recognition in the industry, endorse this cybersecurity Bootcamp, ensuring quality, up-to-date content, and a perspective focused on ISO and NIST standards, as well as practical experience in data loss prevention (DLP) techniques, penetration testing, and includes: " 
+    text: |-
+      With over 20 years of experience and recognition from industry giants like Microsoft, Chema Alonso brings unparalleled expertise to our program. His endorsement ensures cutting-edge content, alignment with ISO and NIST standards, and practical insights into essential areas such as data loss prevention (DLP) techniques and penetration testing.
+      As part of our partnership, you'll gain access to:  
     font_size: ["16px", "16px", "16px", "16px", "16px"]
   button:
     text: "APPLY NOW"
@@ -73,10 +75,11 @@ two_columns_first:
     path: "#prices_and_payment"
   bullets:
     items:
-      - text: "Chat Room with the instructor and Chema Alonso."
+      - text: "Chema Alonso’s dedicated chat channel."
       - text: "4 Cybersecurity books from 0xWORD, Chema Alonso's publishing company."
-      - text: "Chema Alonso has endorsed the content and instructors of this bootcamp."  
-      - text: "Career guidance and assistance in securing employment in collaboration with Chema Alonso. And of course, our unlimited, lifetime mentoring."
+      - text: "Endorsement of the bootcamp's content and instructors by Chema Alonso."  
+      - text: "Career guidance and support in securing employment, in collaboration with Chema Alonso."
+      - text: "Unlimited, lifetime mentoring."  
 
 two_columns_second:
   proportions: [6, 6]
@@ -89,11 +92,8 @@ two_columns_second:
     font_size: ["28px", "28px", "28px", "23px", "23px"]
   sub_heading:
     text: |
-      No bootcamp in the world leaves you ready to certify in anything (EJPT, CEH, etc.), but if you wish to get certified after the bootcamp, you will have a large part of the study already done.
-
-      In the Cybersecurity bootcamp at 4Geeks Academy, you will develop the skills and knowledge necessary to face the threats of today's digital world.
-
-      Pentesting practices are based on the EJPT certification labs.
+      While no bootcamp guarantees 100% certification readiness for official cybersecurity certifications like EJPT and CEH, our program puts you on the fast track. As an example, our pen-testing practices are aligned with EJPT certification labs, equipping you with the hands-on experience that will help you excel. 
+      Join the Cybersecurity bootcamp at 4Geeks Academy and gain the essential knowledge and skills needed to become a cybersecurity professional, capable of defending against any digital threat.
     font_size: ["16px", "16px", "16px", "16px", "16px"]
   button:
     text: "APPLY NOW"
@@ -107,8 +107,9 @@ two_columns_second:
 overlaped:
   heading: "Cybersecurity Specialists are in High Demand"
   paragraph: |
-    <strong style="font-weight: 800;">Market on the Rise</strong>: Global cybersecurity spending surpassed a staggering $1 trillion in 2021, and is projected to reach a significant $314.28 billion by 2029.<br><br>
-    <strong style="font-weight: 800;">Unfilled Positions Galore</strong>: The cybersecurity workforce gap is vast, with a concerning 4 million unfilled positions in 2023. This translates to a surge in job opportunities, with the US alone witnessing a remarkable 74% increase in new cybersecurity jobs between 2022 and 2023.
+    <strong style="font-weight: 800;">Job Opportunities Galore</strong>: The demand for cybersecurity professionals continues to surge, with 3.5 million unfilled positions globally in 2023. <br>
+    According to <strong style="font-weight: 800;">the U.S. Bureau of Labor Statistics</strong>, in the U.S. alone, cybersecurity job openings are projected to grow by 32% between 2022 and 2032.<br><br>
+    <strong style="font-weight: 800;">A sector on the rise</strong>: Gartner's forecast report predicts the information security and risk management market will grow from $185 billion in 2023 to $287 billion in 2027.
   image:
     src: "/images/landing/feliz-empresario.png"
 
@@ -124,7 +125,7 @@ two_columns_info:
     text: "Be part of the next Generation of Cybersecurity Professionals"
     font_size: ["30px", "30px", "30px", "26px", "24px"]
   sub_heading:
-    text: ""
+    text: "Learn from Industry Leaders"
     font_size: ["16px", "16px", "16px", "16px", "16px"]
 
   bullets:
@@ -139,13 +140,15 @@ two_columns:
   proportions: [6, 6]
   image:
     style: '{"border" : "0px solid black", "backgroundSize": "contain", "background-position": "center" }'
-    src: "../../images/staff/daniela-maissi-bg.jpg"
+    src: "../../images/staff/chema-daniela.webp"
     shadow: false
   heading:
     text: "Become a Specialist with Our Cybersecurity Bootcamp"
     font_size: ["30px", "30px", "30px", "26px", "24px"]
   sub_heading:
-    text: "Gain the knowledge to protect systems against cyber threats. This intensive Bootcamp will provide you with the necessary skills to identify, analyze, and prevent attacks, using tools such as Nessus, Nmap, Wireshark, and Metasploit."
+    text: |-
+      Acquire cutting-edge knowledge to safeguard systems against cyber threats. Our intensive bootcamp equips you with essential skills to identify, analyze, and prevent attacks, utilizing tools such as Nessus, Nmap, Wireshark, and Metasploit.
+      Cybersecurity is a high-stakes industry, and we've partnered with the best. Besides being approved and co-taught by top international expert Chema Alonso, the syllabus was co-created with Daniela Maissi, an EC-Cybersecurity Council member and malware expert with over 5 years of experience and 12+ certifications in cloud computing, OSINT, and IT solutions.
     font_size: ["16px", "16px", "16px", "16px", "16px"]
   button:
     text: "Apply now"
@@ -154,10 +157,9 @@ two_columns:
     path: "#prices_and_payment"
   bullets:
     items:
-      - text: "This syllabus was co-created by Daniela Maissi, an ethical hacer from the EC-Council as Malware researcher and cybersecurity expert with over 5 years of experience and 12+ certifications in cloud computing, OSINT, and IT solutions."
-      - text: "Develop practical skills in data loss prevention (DLP) techniques"
-      - text: "Techniques for hardening Windows and Linux systems against cyber threats"
-#      - text: "This cybersecurity bootcamp is officially approved by Chema Alonso, guaranteeing top-tier education and industry expertise."
+      - text: "Gain practical skills in data loss prevention (DLP) to safeguard sensitive information and prevent data breaches."
+      - text: "Master penetration testing to identify vulnerabilities and enhance cybersecurity defenses against malicious actors."
+      - text: "Learn advanced techniques to fortify Windows, Linux, and other systems against cyber threats."
 
 upcoming:
   no_dates_message: "There are currently no upcoming dates for this program"
@@ -166,36 +168,35 @@ upcoming:
 ## PROGRAM DETAILS
 details:
   about:
-    title: "About This Program"
-    sub_title: |
-      You will gain a solid foundation in networking, Windows, Linux, and server administration, while also acquiring practical skills to secure these environments.
-      The program delves into cloud security, penetration testing (both offensive and defensive), and cyber threat intelligence analysis.
-      Learn to manage risks with data loss prevention (DLP) strategies and navigate compliance with international standards such as <strong>ISO 27001 and NIST.</strong>
+    title: "About the Program"
+    sub_title: |-
+      Gain a solid Windows, Linux, network, and server administration foundation, and the practical skills to secure these environments.
+      Learn to master cloud security, penetration testing (both offensive and defensive), and cyber threat intelligence analysis. 
+      Become proficient at managing risks using data loss prevention (DLP) strategies and <strong>navigating compliance with international standards such as ISO 27001 and NIST.</strong>
     list:
       - label: "Duration"
-        content: "14 weeks"
+        content: "16 weeks"
         icon: "calendar"
       - label: "Classes"
-        content: "3 Classes per week"
+        content: "3 live online classes per week"
         icon: "book"
       - label: "Class Size"
-        content: "Up to 10 people"
+        content: "Up to 16 people"
         icon: "laptop"
       - label: "Certificate"
-        content: "Official 4Geeks Completion Certificate, recognized by multiple institutions.
-"
+        content: "Official 4Geeks Completion Certificate, recognized by multiple institutions."
         link_text: ""
         link: ""
         icon: "certificate"
       - label: "Requirements"
-        content: "No prior experience needed"
+        content: "No previous experience is required"
         icon: "contract-checked"
 
   heading: PROGRAM DETAILS
   weeks: 14
   facts:
     - label: "Duration"
-      value: "14 weeks"
+      value: "16 weeks"
     - label: "Commitment"
       value: "20 hrs/week (Mon - Wed - Fri)"
     - label: "Certificate"
@@ -207,8 +208,8 @@ details:
     - label: "Schedule"
       value: "Online / Remote"
     - label: "Class Size"
-      value: "Up to 14 people"
-  sub_heading: "Enhance Your Cybersecurity Skills From Fundamentals to Advanced Techniques"
+      value: "Up to 16 people"
+  sub_heading: "Acquire fundamental to advanced cybersecurity skills"
   left_labels:
     description: "DESCRIPTION:"
     projects: "PROJECTS:"
@@ -217,64 +218,64 @@ details:
   details_modules:
     - module_name: "PreWork"
       title: "Introduction to Cybersecurity"
-      description: "We'll start with a 'prework', where you'll learn the basics of computer security, including major threats, vulnerabilities, and the importance of cybersecurity in today's world."
-      projects: "Introduction to cybersecurity, information technology [IT] technologies, and information security best practices, as well as an introduction to Packet Tracer, a visual simulation tool for packet tracing."
+      description: "Get started with 'pre work', where you'll learn the basics of computer security, including threats, vulnerabilities, and the importance of cybersecurity in today's world."
+      projects: "Introduction to cybersecurity, information technology [IT], and information security best practices, as well as an introduction to Packet Tracer, a visual simulation tool for packet tracing."
       slug: "security-intro"
       duration: "1 week"
       step: 1
     - module_name: "Fundamentals and Network Security"
-      title: "Networking Basics and Network Security"
+      title: "Networking Fundamentals and Security"
       description: |
-        You will delve into networking basics, such as the OSI model, TCP/IP, network architectures, and devices, including different network technologies and communication protocols.
-        \n You will become familiar with major threats and vulnerabilities in networks, such as common attacks, software and hardware vulnerabilities, and vulnerability exploitation.
+        Delve into networking basics, such as the OSI model, TCP/IP, network architectures and devices, network technologies and communication protocols.
+        \n Learn about major threats and vulnerabilities in networks,  common attacks, software and hardware vulnerabilities, and vulnerability exploitation.
       projects: |
-        In practice, you will dive into reference models, IP address management, network protocols, enterprise network architecture, and Virtual Box. \n
-        You will master tools like Nmap, Wireshark, and Nessus for analyzing and securing networks.
+        Dive into reference models, IP address management, network protocols, enterprise network architecture, and Virtual Box. \n
+        Master tools like Nmap, Wireshark, and Nessus to analyze and secure networks.
       slug: "cybersecurity-fundamentals"
       duration: "1 week"
       step: 1
     - module_name: "Linux and Server Administration"
       title: "Linux and Server Administration"
       description:
-        "You will delve into Linux concepts, securing your systems through hardening, file security, permissions, and Linux security tools.
-        You will also learn about server installation and configuration, user and group management, and services and processes on servers."
-      projects: "Preparation of the virtual environment, basic administration of users and groups, server security configuration, scheduling automated tasks, and monitoring and optimizing server performance."
+        "Delve into Linux concepts, and secure your systems through hardening, file security, permissions, and Linux security tools.
+        Learn about server installation and configuration, user and group management, and server- based services and processes."
+      projects: "Virtual environment preparation, basic administration of users and groups, server security configuration, scheduling automated tasks, and server performance monitoring and optimization."
       slug: "datacollection"
       duration: "2 weeks"
       step: 2
     - module_name: "Cyber Intelligence"
       title: "Threat and Vulnerability Management"
-      description: "You will understand the principles and techniques of cyber intelligence, learning to collect, analyze, and process information on cyber threats."
+      description: "Understand cyber intelligence principles and techniques. Learn to collect, analyze, and process information about cyber threats."
       projects: |
-        You will acquire skills to investigate cyber incidents, determine their origin and scope, and take appropriate measures to mitigate their impact \n by learning to implement and maintain an Information Security Management System (ISMS) in accordance with ISO 27001.
+        Investigate cyber incidents, determine their origin and scope, and take appropriate measures to mitigate their impact \n by learning to implement and maintain an Information Security Management System (ISMS) in accordance with ISO 27001.
       slug: "data-analysis"
       duration: "2 weeks"
       step: 3
     - module_name: "Pentesting"
       title: "Pentesting Fundamentals"
-      description: "You will acquire the basic knowledge of penetration testing, including different methodologies, tools, and techniques. You will learn to perform basic pentesting tests, such as vulnerability scanning, web application attacks, and network and system attacks, known as Blue Team (focused on defense) or Red Team (focused on attack)."
-      projects: "You will learn to monitor networks and systems, analyze security incidents, and develop response plans. You will become familiar with the Blue Team approach, which focuses on defense and response to attacks, and also acquire knowledge of the Red Team approach, which focuses on simulating advanced attacks."
+      description: "Acquire basic penetration testing knowledge, including different methodologies, tools, and techniques. Learn to perform basic pentesting, such as vulnerability scanning, web application attacks, and network and system attacks, known as Blue Team (focused on defense) or Red Team (focused on attack)."
+      projects: Learn how to monitor networks and systems, analyze security incidents, and develop response plans. Learn about the Blue Team approach, which focuses on defense and response to attacks, and the Red Team approach, which focuses on simulating advanced attacks."
       slug: "pentesting-module"
       duration: "3 weeks"
       step: 3
     - module_name: "DLP"
       title: "DLP and Risk Management"
-      description: "You will learn about data loss prevention (DLP), protecting your organization's sensitive data through data classification techniques, access control, and data protection in transit and at rest."
-      projects: "You will acquire knowledge to identify and assess security risks, implement control measures, prevent threats, and protect against external attacks."
+      description: "Learn about data loss prevention (DLP), protect your organization's sensitive data through data classification techniques, access control, and data protection in transit and at rest."
+      projects: "Identify and assess security risks, implement control measures, prevent threats, and protect against external attacks."
       slug: "dlp-and-risks"
       duration: "3 weeks"
       step: 3
     - module_name: "NIST"
       title: "National Institute of Standards"
-      description: "You will delve into the NIST Cybersecurity Framework, its components, and how to implement it in your organization."
-      projects: "Security planning, data backup and recovery, and continuity testing and exercises."
+      description: "Delve into the NIST Cybersecurity Framework, its components, and how to implement it in your organization."
+      projects: "Security planning, data backup and recovery, continuity testing and exercises."
       slug: "nist"
       duration: "3 weeks"
       step: 3
     - module_name: "LIFELONG LEARNING"
       title: "Lifelong Learning"
-      description: "Receive assistance from the academy before, during, and after graduation, with unlimited access to content and professional support (career support) for life. You will even receive help during the start of your new job, you will never be alone again!"
-      projects: "This program equips you with the knowledge and skills to launch a rewarding career in cybersecurity. The demand for cybersecurity professionals is expected to grow by 31% between 2020 and 2030, much faster than the average for all occupations."
+      description: "Receive assistance from mentors before, during, and after graduation. Gain unlimited access to cybersecurity content and our career support services."
+      projects: "Our program will equip you with the knowledge and skills to launch a rewarding career in cybersecurity. The demand for cybersecurity professionals is expected to grow by 31% between 2020 and 2030, much faster than the average for all occupations."
       slug: "lifelong-learning"
       duration: "Lifetime"
       step: 0.1

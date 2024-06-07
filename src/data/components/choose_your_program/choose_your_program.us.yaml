@@ -7,6 +7,7 @@ programs:
     description_mobile: "Online, face-to-face and flexible"
     icon: "fullstack_2"
     link: "/us/coding-bootcamps/part-time-full-stack-developer"
+    text_link: "Read More"
 
   - title: "Data Science and ML"
     sub_title: "With Python"
@@ -14,6 +15,7 @@ programs:
     description_mobile: "Online, face-to-face and flexible"
     icon: "machine_2"
     link: "/us/coding-bootcamps/datascience-machine-learning"
+    text_link: "Read More"
 
   - title: "CyberSecurity Bootcamp"
     sub_title: "For Windows & Linux"
@@ -21,11 +23,13 @@ programs:
     description_mobile: "Online, face-to-face and flexible"
     icon: "cyber-security"
     link: "/us/coding-bootcamps/cybersecurity"
+    text_link: "Read More"
 
   - title: "Applied AI"
     sub_title: "No code"
-    description: "Explore in detail artificial intelligence and how to apply it in different industries, roles, and your work."
+    description: "Explore how to leverage artificial intelligence to advance your career.  Learn best practices to use generative AI to your advantage and become more productive."
     description_mobile: "Online, face-to-face and flexible"
     icon: "applied-ai"
     link: "/us/coding-bootcamps/applied-ai-course"
+    text_link: "Read More"
 

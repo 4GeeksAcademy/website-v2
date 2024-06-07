@@ -1,4 +1,5 @@
 import React from "react";
+import { graphql, useStaticQuery } from "gatsby";
 import { Helmet } from "react-helmet";
 
 const SchemaOrg = ({
@@ -14,6 +15,39 @@ const SchemaOrg = ({
   seoTitle,
   context,
 }) => {
+  const dataQuery = useStaticQuery(graphql`
+    {
+      allFaqYaml {
+        edges {
+          node {
+            faq {
+              topic
+              questions {
+                locations
+                question
+                answer
+              }
+            }
+            fields {
+              lang
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  const faqs = dataQuery.allFaqYaml.edges
+    .find(({ node }) => node.fields.lang === context.lang)
+    ?.node.faq.flatMap((elem) => elem.questions);
+
+  const campusLocation = context.locations.find(
+    ({ node }) => node.meta_info.slug === context.slug
+  )?.node;
+  const faqsFilteredByLocation = faqs.filter((faq) =>
+    faq.locations?.includes(campusLocation?.breathecode_location_slug)
+  );
+
   const baseSchema = [
     {
       "@context": "https://schema.org",
@@ -23,6 +57,21 @@ const SchemaOrg = ({
     },
   ];
   const page = [...baseSchema];
+  const location = [
+    ...baseSchema,
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: faqsFilteredByLocation.map((faq) => ({
+        "@type": "Question",
+        name: faq.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: faq.answer,
+        },
+      })),
+    },
+  ];
   const blog = [
     ...baseSchema,
     {
@@ -69,6 +118,21 @@ const SchemaOrg = ({
     },
   ];
 
+  const faqSchema = [
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: faqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: faq.answer,
+        },
+      })),
+    },
+  ];
+
   const schemaWebsite = {
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -105,7 +169,7 @@ const SchemaOrg = ({
 
   const schemaType = {
     page,
-    location: page,
+    location,
     landing: page,
     course: schemaCourse,
   };
@@ -126,6 +190,9 @@ const SchemaOrg = ({
         ))}
       {context.filePath?.includes("data/blog/") && (
         <script type="application/ld+json">{JSON.stringify(blog)}</script>
+      )}
+      {context.defaultTemplate === "faq" && (
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       )}
     </Helmet>
   );

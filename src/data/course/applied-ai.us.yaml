@@ -4,7 +4,7 @@ meta_info:
   description: "Explore in detail artificial intelligence and how to apply it in different industries, roles, and your work. No previous knowledge required"
   bc_slug: "applied-ai"
   template: "course-applied-ai"
-  image: "/images/og-preview/datascience-ml.es.png"
+  image: "/images/og-preview/applied-ai-bg.jpg"
   visibility: "visibility"
   keywords: ""
   show_in_apply: true

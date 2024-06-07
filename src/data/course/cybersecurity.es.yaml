@@ -1,10 +1,10 @@
 meta_info:
   slug: curso-ciberseguridad
-  title: "Estudia ciberseguridad en el curso de 4Geeks Academy"
-  description: "Sin conocimientos previos, conviértete en especialista de ciberseguridad, únete al mundo tech y protege el futuro digital"
+  title: "Curso de Ciberseguridad en 4Geeks Academy"
+  description: "Sin conocimientos previos, haz un curso de ciberseguridad que te conviérte en especialista, consigue trabajo, únete al mundo tech y protege el futuro digital"
   bc_slug: "cybersecurity"
   template: "course-cybersecurity"
-  image: "/images/landing/4Geeks-Espana.jpg"
+  image: "/images/og-preview/cybersecurity-bg-es.jpg"
   visibility: "visible"
   show_in_apply: true
   keywords: ""
@@ -59,13 +59,13 @@ two_columns_first:
   proportions: [6, 6]
   image:
     style: '{"border" : "0px solid black", "backgroundSize": "contain", "background-position": "center" }'
-    src: "../../images/staff/chema-alonso.jpg"  
+    src: "../../images/staff/chema-alonso.webp"  
     shadow: false
   heading:
-    text: "Curso de Ciberseguridad validado por Chema Alonso el Hacker más Importante de España"
+    text: "Curso de Ciberseguridad validado por Chema Alonso el Hacker más Reconocido de España"
     font_size: ["28px", "28px", "28px", "23px", "23px"]
   sub_heading:
-    text: "Los años de experiencia de Chema Alonso, junto con su aporte y reconocimiento en la industria, respaldan este curso de ciberseguridad, asegurando calidad, un contenido actualizado y una perspectiva centrada en los estándares ISO y NIST, así como experiencia práctica en técnicas de prevención de pérdida de datos (DLP), pruebas de penetración y a demás incluye: " 
+    text: "Tanto los contenidos, como los docentes del bootcamp de ciberseguridad de 4Geeks Academy han sido validados por Chema Alonso, experto en ciberseguridad. Se trata de un curso de alta calidad, con contenido actualizado en el que aprenderás a trabajar con los estándares ISO y NIST, y adquirirás experiencia práctica en técnicas de prevención de pérdida de datos (DLP), pruebas de penetración, etc. Además incluye :"
     font_size: ["16px", "16px", "16px", "16px", "16px"]
   button:
     text: "Inscríbete ahora"
@@ -134,13 +134,13 @@ two_columns:
   proportions: [6, 6]
   image:
     style: '{"border" : "0px solid black", "backgroundSize": "contain", "background-position": "center" }'
-    src: "../../images/staff/daniela-maissi-bg.jpg"  
+    src: "../../images/staff/chema-daniela.webp"  
     shadow: false
   heading:
-    text: "Conviertete en un especialista con nuestro curso en Ciberseguridad"
+    text: "conviértete en un especialista con nuestro curso en Ciberseguridad"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "Adquiere los conocimientos para proteger sistemas contra amenazas cibernéticas. Este curso intensivo te brindará las habilidades necesarias para identificar, analizar y prevenir ataques, usando herramientas como Nessus, Nmap, Wireshark y Metasploit. " 
+    text: "Adquiere los conocimientos para proteger sistemas contra amenazas cibernéticas. Este curso intensivo te brindará las habilidades necesarias para identificar, analizar y prevenir ataques, usando herramientas como Nessus, Nmap, Wireshark y Metasploit. Este programa de estudios fue cocreado por Daniela Maissi, una hacker ética del EC-Council como investigadora de malware y hábil desarrolladora web experta en ciberseguridad con más de 5 años de experiencia y 12+ certificaciones en computación en la nube, OSINT y soluciones de TI." 
     font_size: ["16px", "16px", "16px", "16px", "16px"]
   button:
     text: "Inscríbete ahora"
@@ -149,10 +149,9 @@ two_columns:
     path: "#prices_and_payment"
   bullets:
     items:
-      - text: "Este programa de estudios fue cocreado por Daniela Maissi, una hacker ética del EC-Council como investigadora de malware y hábil desarrolladora web experta en ciberseguridad con más de 5 años de experiencia y 12+ certificaciones en computación en la nube, OSINT y soluciones de TI."
       - text: "Técnicas para fortalecer sistemas Windows y Linux contra amenazas cibernéticas"
       - text: "Desarrolla habilidades prácticas en técnicas de prevención de pérdida de datos (DLP)"
-#      - text: "Curso de ciberseguridad aprobado por Chema Alonso, garantizando educación de primer nivel y experiencia en la industria."  
+      - text: "Curso de ciberseguridad validado por Chema Alonso, garantizando educación de primer nivel y experiencia en la industria."  
 
 
 upcoming:
@@ -180,13 +179,13 @@ details:
         
       list:
         - label: "Duración"
-          content:  "14 semanas"
+          content:  "16 semanas"
           icon: "calendar"
         - label: "Clases"
           content: "3 Clases semanales"
           icon: "book"
         - label: "Tamaño de la clase"
-          content: "10 personas máx"
+          content: "16 personas máx"
           icon: "laptop"
         - label: "Certificado"
           content: "Nuestros certificados son reconocidos por múltiples instuticiones."
@@ -265,7 +264,7 @@ details:
       step: 3
     - module_name: "DLP"
       title: "DLP y gestión de riesgos"
-      description: "Aprenderás sobre la prevensión de perdida de datos (DLP), como proteger los datos sensibles de tu organización mediante técnicas de clasificación de datos, control de acceso y protección de datos en tránsito y en reposo."
+      description: "Aprenderás sobre la prevención de pérdida de datos (DLP), como proteger los datos sensibles de tu organización mediante técnicas de clasificación de datos, control de acceso y protección de datos en tránsito y en reposo."
       projects: "Adquirirás los conocimientos para identificar y evaluar los riesgos de seguridad, implementar medidas de control, Prevención de amenazas y Protección contra ataques externos."
       slug: "dlp-and-risks"
       duration: "3 sem"

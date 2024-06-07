@@ -70,10 +70,10 @@ info_box:
   heading: "Encuéntranos en Caracas"
   address: "Torre Jalisco, nivel E2, Municipio Baruta Distrito Capital, 1080, Miranda, Venezuela"
   contact_heading: "Contacts"
-  whatsapp: "+584241711725"
-  whatsapp_link: "https://api.whatsapp.com/send?phone=+584241711725&text=Hola+4Geeks&utm_source=web_site&utm_medium=web_site&utm_campaign=web_site&utm_id=web_site&utm_term=web_site&utm_content=Web_site"
-  phone: "+58424-1711725"
-  email: "info@4GeeksAcademy.com"
+  phone: Llámanos +58 412 2326485
+  whatsapp: +58 412 2326485
+  whatsapp_link: "https://wa.me/+5804122326485"
+  email: "latam@4geeksacademy.com"
   image: "../../../static/images/locations/caracas-map.png"
   alt: ""
 images_box:
@@ -86,7 +86,7 @@ images_box:
       alt: "Caracas Office Jalisco"
     - path: "../../../static/images/ownpeoplecoding2.webp"
       alt: "4Geeks Own People Coding"
-    - path: "../../../static/images/ownmancoding.jpg"
+    - path: "../../../static/images/ownmancoding.webp"
       alt: "Remote-Coding-Bootcamp"
     - path: "../../../static/images/locations/caracas-graduates.png"
       alt: "4Geeeks Caracas graduates"

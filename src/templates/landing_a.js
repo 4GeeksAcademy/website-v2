@@ -522,6 +522,7 @@ export const query = graphql`
             swipable
             background
             proportions
+            alignment
             layout
             video
             height
@@ -530,9 +531,11 @@ export const query = graphql`
             videoWidth
             justify
             filter_indexes
+            variant
             text_link
             icons {
               icon
+              color
               title
               content
             }
@@ -586,6 +589,7 @@ export const query = graphql`
               }
             }
             cards {
+              background
               image {
                 src
                 style
@@ -618,6 +622,14 @@ export const query = graphql`
           header_data {
             background
             tagline
+            tagline_color
+            form_styles {
+              background
+              color
+              button {
+                background
+              }
+            }
             sub_heading
             image_filter
             partner_logo_url {
@@ -836,6 +848,7 @@ export const query = graphql`
               src
               style
               link
+              shadow
             }
             programs {
               title
@@ -851,6 +864,7 @@ export const query = graphql`
               text
               color
               path
+              background
             }
             heading {
               text
@@ -1042,6 +1056,9 @@ export const query = graphql`
             tagline
             sub_heading
           }
+          project
+          made_by
+          description
           projects {
             project_name
             slug

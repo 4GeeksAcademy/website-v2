@@ -13,20 +13,54 @@ header_data:
   sub_heading: "Únete a miles de graduados que viven como programadores, trabajan en grandes empresas y forman parte de una de las comunidades de programación más grandes del mundo."
   bullets:
     - Tutoría de codificación de por vida, asistencia profesional interminable y una comunidad de desarrolladores impulsada por la tecnología.
-    - 'Trabajo Garantizado: Obtenga un trabajo hasta 6 meses después de graduarse o le devolvemos el dinero, <a href="https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/Condiciones%20y%20Requerimientos%20Job%20Guaranteed%20Program.pdf" style="text-decoration: none; color: #000000;"> condiciones aplican. </a>'
+    - 'Trabajo Garantizado: Obtenga un trabajo hasta 6 meses después de graduarse o le devolvemos el dinero, <a href="https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/Condiciones%20y%20Requerimientos%20Job%20Guaranteed%20Program.pdf" style="text-decoration: none; color: #000000; font-weight: 700;"> condiciones aplican. </a>'
     - Aprende en todas partes, todo el tiempo, tú eliges la metodología.
-  join_button_text: UNETE A UN PROGRAMA
+  join_button_text: Empezar un curso →
   join_button_path: "#choose-program"
   free_button_text: PRUEBA GRATIS
   #If it doesn't have a video it will show the image
   #It must be a video from videoaks 
   #TODO: Este es el video para poner en español https://ask.4geeks.com/f67qc0ewu
   video: ""
-  image: "../../../static/images/bg/more-new-main-home-bg.png"
+  image: "../../../static/images/bg/1250-sudents-bg.png"
 
 why_4geeks:
-  heading: Por qué 4Geeks
-  sub_heading: ""
+  proportions: [6, 6]
+  image:
+    style: '{ "backgroundSize": "contain", "background-position": "center", "min-height": "400px", "height": "400px"}'
+    src: "/images/landing/hombre-con-laptop-2.png"
+    shadow: false
+  heading:
+    text: "Sé parte de una comunidad vibrante"
+    style: '{ "fontWeight": 400, "marginBottom": "32px" }'
+    font_size: ["35px", "35px", "35px", "35px", "35px"]
+  sub_heading:
+    text: "Únete a nuestra comunidad internacional de más de 4000 estudiantes, profesores, socios y exalumnos. Conéctate a través de diversos canales como Slack, GitHub, redes sociales y nuestra plataforma exclusiva 4Geeks.com. ¡Donde hay un geek, hay un camino! Lo que nos diferencia:"
+    font_size: ["21px", "21px", "21px", "21px", "21px"]
+  content:
+    text: |-
+      Pertenecerás a una comunidad de personas afines que se apoyan genuinamente entre sí. Obtén acceso de por vida a nuestra plataforma de aprendizaje en línea y servicios de mentoría. Siempre estaremos aquí para ti, incluso después de graduarte.<br>
+      <a href="/us/geeks-vs-others">Compara 4Geeks</a> con otros bootcamps de progrmación.
+
+    font_size: ["16px"]
+  button:
+    text: "Aplica ahora"
+    color: "white"
+    background: "blue"
+    path: "/us/apply"
+  bullets:
+    items:
+    - heading: "Mentoría en codificación disponible de por vida"
+      icon: "check"
+    - heading: "Soporte profesional ilimitado y personalizado"
+      icon: "check"
+    - heading: "Plan de estudios y metodología galardonados"
+      icon: "check"
+    - heading: "Una extensa red de socios en tecnología"
+      icon: "check"
+
+with_4geeks:
+  title: Escúchalo de nuestros alumnos
 
 news:
   heading: "Lee sobre nosotros en las noticias..."
@@ -38,6 +72,10 @@ button:
 badges:
   paragraph: "Este es el lugar para impulsar tu carrera aprendiendo a programar. Estamos muy orgullosos de nuestros programas y metodología para capacitar a los desarrolladores en solo unos meses y ayudarlos a impulsar sus carreras profesionales."
 
+success_cases:
+  title: Historias de éxito
+  content: 86% de nuestros alumnos han sido contratados
+
 ## CHOOSE YOUR PROGRAM /components/ChooseYourProgram
 choose_program:
   title: Elige tu programa
@@ -47,21 +85,90 @@ choose_program:
 ## TWO COLUMNS
 two_columns:
   proportions: [6, 6]
+  justify: "start"
   image:
-    style: '{ "backgroundSize": "cover" }'
-    src: "/images/landing/feliz-empresario-laptop.png"
-    shadow: true  
+    style: '{ "backgroundSize": "contain", "marginBottom": "32px" }'
+    src: "/images/landing/feliz-empresario-laptop-2.png"
+    shadow: false  
   heading:
     text: "Invierte en tu futuro"
-    font_size: ["30px", "30px", "30px", "30px", "30px"]
+    style: '{ "fontWeight": 400 }'
+    font_size: ["35px", "35px", "50px", "35px", "35px"]
   sub_heading:
     text: "Nuestra prioridad es que nuestra educación de alta calidad sea accesible para todos. Por eso, ofrecemos múltiples opciones para que puedas financiar tus estudios en nuestros bootcamps de programación sin estrés. Ya sea a través de un ISA (Income Share Agreement), becas, planes de pago o la garantía de empleo, estamos aquí para guiarte en cada paso del camino."
-    font_size: ["16px", "16px", "16px", "16px", "16px"]
+    font_size: ["21px", "21px", "21px", "21px", "21px"]
   button:
-    text: "VER OPCIONES DE FINANCIACIÓN"
+    text: "Ver opciones de financiación"
     color: "white"
-    background: "black"
-    path: "/es/financiacion"
+    background: "blue"
+    path: "#prices_and_payment"
+
+iconogram:
+  heading:
+    text: "Números que nos respaldan"
+    font_size:
+      - 35px
+      - 35px
+      - 35px
+      - 35px
+      - 35px
+    style: '{ "textAlign": "center", "fontSize": "40px", "fontWeight": 400 }'
+  swipable: false
+  icons:
+  - icon: "graduation-2"
+    content: "4500+ Graduados"
+    content_style: '{ "fontSize": "24px" }'
+  - icon: "group-2"
+    color: "#23C520"
+    content: "7 Campuses"
+    content_style: '{ "fontSize": "24px" }'
+  - icon: "briefcase-new"
+    color: "#7D79FF"
+    content: "86% contratados"
+    content_style: '{ "fontSize": "24px" }'
+  - icon: "star-2"
+    color: "#0084FF"
+    content: "4.85 de valoración"
+    content_style: '{ "fontSize": "24px" }'
+
+iconogram_two:
+  heading:
+    text: "Paying your tuition should not be a concern"
+    font_size:
+      - 38px
+      - 38px
+      - 38px
+      - 21px
+      - 21px
+    style: '{ "textAlign": "center", "width": "60%" }'
+  sub_heading:
+    text: ""
+    font_size: ["16px", "16px", "16px", "16px", "16px"]
+    style: '{ "textAlign": "center", "width": "60%" }'
+  text_link: "#"
+  swipable: false
+  icons:
+  - icon: "bill"
+    title: Planes de pago
+    content: "Pague cuotas cada 6 meses, sin intereses."
+  - icon: "money"
+    color: "#0084FF"
+    title: Préstamos
+    content: "Elija entre opciones de préstamos a 3, 4 o 5 años."
+  - icon: "hands-group"
+    color: "#25BF6C"
+    title: Becas
+    content: "Ofrecemos varias becas completas y parciales."
+  - icon: "contract-2"
+    color: "#BE8BFF"
+    title: Contáctenos
+    content: "Para obtener ayuda, contáctenos. Estamos aquí <a href=\"para usted."
+  button:
+    text: "Conditions apply."
+    color: ""
+    path: "#prices_and_payment"
+    background: ""
+    hover_color: ""
 
 ## 4GEEKS VS OTHERS SECTION
 geeks_vs_others:

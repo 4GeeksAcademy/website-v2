@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { graphql, useStaticQuery } from "gatsby";
+import React, { useState } from "react";
 import { Div } from "../Sections";
 import { H3, H4, Paragraph } from "../Heading";
 import { Colors, Anchor } from "../Styling";

@@ -10,12 +10,13 @@ meta_info:
 ## BANNER - HEADER
 seo_title: "Financiación de Bootcamp"
 header:
-  title: FINANCIACIÓN
-  paragraph: Indicanos los siguientes datos para mostrarte tus opciones de financiación
+  title: Financia tu futuro
+  paragraph: Financia tu futuro con diversas opciones de financiación educativa, desde becas hasta métodos de pago inclusivos. Explore nuestra plataforma para encontrar soluciones de financiación inclusivas adaptadas a su trayectoria académica.
   tagline: CELEBRA EL MEJOR PRECIO DE LA CIUDAD
   sub_heading: Nunca dejamos de trabajar para construir un programa verdaderamente 'premium', pero asequible. Nuestra filosofía se basa en hacer que la educación en programación esté disponible para todas las personas.
-  image: "../../../static/images/bg/pricing-bg.jpg"
-  alt: ""
+  image: "../../../static/images/Group-6663.png"
+  alt: "financing"
+  button: Ver planes y precios
 
 ## FIRST SECTION AFTER THE BANNER
 intro:
@@ -30,7 +31,7 @@ intro:
     - "Tienes que elegir cuál Campus te conviene más."
     - "Hay opciones de financiación dependiendo de la sede. Por ejemplo, en Miami trabajamos con Skills Fund, Climb y Quotanda, pero en Madrid con Quotanda o Stuent Finance, y en Chile Lumni y Quotanda."
     - "Debemos preguntar o leer más sobre nuestro Plan de Paga Cuando Consigas Trabajo (ISA). Este Plan está habilitado solo para programas Full-Time. Por otro lado, tenemos un montón de 
-    partnerships con organiaciones que nos ayudan a ofrecer becas y Promociones especiales. Consulta porque siempre hay alguna disponible."
+      partnerships con organiaciones que nos ayudan a ofrecer becas y Promociones especiales. Consulta porque siempre hay alguna disponible."
     - "Ahora Aplica. El equipo de Admisiones de la sede que te interesa, te va a estar contactando pronto. Tu Carrera como programador está a un click de comenzar." 
 
 ## PRICES AND PAYMENTS SECTION
@@ -71,16 +72,19 @@ iconogram:
   text_link: "#"
   swipable: false
   icons:
-  - icon: "contract-money"
+  - icon: "bill"
     title: Planes de pago - Sin intereses
     content: " Sin intereses: puedes pagar en hasta 6 meses."
-  - icon: "handmoney-new"
+  - icon: "money"
+    color: "#0084FF"
     title: Financiamiento a largo plazo.
-    content: "long term: 3, 4 or 5 years loan"
-  - icon: "hand-puzzle"
+    content: "Largo plazo: 3, 4 o 5 años de préstamo"
+  - icon: "hands-group"
+    color: "#25BF6C"
     title: Becas y alianzas.
     content: "Nos hemos asociado con varias organizaciones para que tu matrícula sea más asequible."
-  - icon: "briefcase-new"
+  - icon: "contract-2"
+    color: "#BE8BFF"
     title: Acuerdo de participación en ingresos
     content: "Solo pagas si encuentras un trabajo con un salario superior a un determinado monto."
   button:
@@ -90,11 +94,41 @@ iconogram:
     background: ""
     hover_color: ""
 
+who_is_hiring:
+  title: ¿Quién esta contratando a nuestros estudiantes?
+  paragraph: ¡No te pierdas a los grandiosos aliados de 4GeeksAcademy! Aquí hay algunos de ellos.
+  images:
+    - '/images/partner/microsoft-2.png'
+    - '/images/coding/google-developers.png'
+    - '/images/partner/boats.jpg'
+    - '/images/partner/meta-logo.png'
+    - '/images/partner/ebay.png'
+    - '/images/partner/natgeo.png'
+    - '/images/partner/evernote.png'
+    - '/images/partner/telefonica.png'
+    - '/images/partner/twilio.png'
+    - '/images/partner/uber.png'
+    - '/images/partner/Neo9.png'
+    - '/images/partner/jooble.png'
+    - '/images/partner/kpmg-logo1.png'
+    - '/images/partner/ultimate.png'
+    - '/images/partner/tcg.png'
+    - '/images/partner/razz.png'
+    - '/images/partner/overseas.png'
+    - '/images/partner/ds9.png'
+    - '/images/partner/coinet.jpg'
+    - '/images/partner/strata.png'
+    - '/images/partner/mdc_ce.png'
+    - '/images/partner/beacon_council.jpg'
+    - '/images/partner/blackstone.png'
+    - '/images/partner/cemex.png'
+
 two_column:
   - image:
       style: '{ "backgroundSize": "contain" }'
-      src: /images/landing/Group-6626.webp
+      src: /images/landing/Group-6626-with-border.webp
     heading:
+      style: '{ "fontWeight": 400 }'
       text: $20 millones en becas
       font_size:
         - 38px
@@ -126,7 +160,7 @@ two_column:
 
   - image:
       style: '{ "backgroundSize": "contain" }'
-      src: /images/landing/20-million-column.png
+      src: /images/landing/20-million-column-4geeks.png
     heading:
       text: El 62% de los solicitantes de bootcamps son rechazados por razones financieras.
       font_size:
@@ -151,15 +185,16 @@ two_column:
     button:
       text: ÚNETE AL PROGRAMA
       color: white
-      background: black
+      background: "blue"
       hover_color: white
       path: "#prices_and_payment"
 
   - image:
       style: '{ "backgroundSize": "contain" }'
-      src: "/images/woman-glasses-laptop.png"
+      src: "/images/pretty-woman-in-a-computer.png"
     heading:
-      text: "Compromiso de garantía de empleo"
+      style: '{ "fontWeight": 400 }'
+      text: "¿Por qué ofrecemos garantía de empleo?"
       font_size:
         - 38px
         - 38px
@@ -167,33 +202,33 @@ two_column:
         - 21px
         - 21px
     sub_heading:
-      text: "Nuestro Programa de Garantía de Empleo consta de 3 etapas que son necesarias para completar como parte de su proceso. ¡Son tres bootcamps en uno!"
+      style: '{ "color": "#4D4D5C", "fontWeight": 400 }'
+      text: "Estamos desafiando el modelo educativo tradicional. No se trata sólo de enseñar las habilidades relevantes; se trata de las oportunidades que crearemos para su carrera. Juntos"
       font_size:
-        - 24px
-        - 24px
-        - 24px
+        - 16px
+        - 16px
+        - 16px
         - 16px
         - 16px
     bullets:
       item_style: ""
       items:
-        - heading: "Conviértete en Desarrollador de Software."
-          text: ""
+        - heading: ""
+          text: "Confiamos en la eficacia del programa"
           icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - heading: "Prepárate para tu carrera profesional."
-          text: ""
+        - heading: ""
+          text: "Confiamos en la industria"
           icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - heading: "¡Consigue un trabajo!."
-          text: ""
+        - heading: ""
+          text: "Confiamos en el proceso"
           icon: "check" #string with icon for example ['check', 'cicle', etc]
-    content:
-      font_size:
-        - 16px
-      text: Nuestro objetivo es ayudarte a conseguir un trabajo dentro de los 180 días posteriores a tu graduación. Debes completar y cumplir con los requisitos para optar por la devolución del dinero si la oportunidad laboral no ha llegado dentro del plazo.
+        - heading: ""
+          text: "Confiamos en ti"
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
     button:
         text: "APLICAR"
         color: "white"
-        background: "black"
+        background: "blue"
         hover_color: "white"
         path: "/es/aplica"
 
@@ -224,12 +259,9 @@ partners:
   link_to: "/us/partners"
 
 we_trust_section:
-  title: ¿Por qué deberías confiar en nosotros?
+  title: Los números que nos respaldan
   text: |
-    !Una garantía de trabajo sella nuestro compromiso con tu éxito! Con un historial comprobado de éxito, nuestro programa continuará empoderando a los futuros graduados.
-    <br>
-    <br>
-    Los números hablan por sí solos.
+    Este es un programa sostenible comprobado, funciona y seguirá funcionando.
   boxes:
     - icon: briefcase-2
       title: 82%

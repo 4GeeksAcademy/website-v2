@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { Container, Row, Column, Grid, Div, GridContainer } from "../Sections";
+import { Container, Div, GridContainer } from "../Sections";
 import { Colors, RoundImage, Anchor, Button } from "../Styling";
-import { H2, H3, H4, H5, Separator, Paragraph } from "../Heading";
+import { H3, H4 } from "../Heading";
 import { Devices } from "../Responsive";
 import Icon from "../Icon";
 import { newsletterSignup } from "../../actions";
@@ -48,12 +48,15 @@ const Footer = ({ yml }) => {
 
   const [formStatus, setFormStatus] = useState({
     status: "idle",
-    msg: "Resquest",
+    msg: "Request",
   });
   const [formData, setVal] = useState({
     email: { value: "", valid: false },
     consent: { value: true, valid: true },
   });
+
+  // Año actual
+  const currentYear = new Date().getFullYear();
 
   return (
     <>
@@ -306,24 +309,23 @@ const Footer = ({ yml }) => {
           );
         })}
       </GridContainer>
-      <GridContainer
+      <Div
         columns_tablet="12"
-        margin_tablet="27px 0 60px 0"
+        margin="auto"
+        margin_tablet="27px auto 60px auto"
         display="none"
-        display_tablet="grid"
+        display_tablet="flex"
+        maxWidth="1280px"
       >
-        <Div
-          gridArea_tablet="1/7/1/13"
-          justifyContent="end"
-          alignItems="center"
-        >
+        <Div margin="auto" justifyContent="center" alignItems="center">
           <H4
             fontSize="13px"
             lineHeight="22px"
             width="fit-content"
             color={Colors.darkGray}
           >
-            We accept:{" "}
+            {yml.we_accept}
+            {"  "}
           </H4>
           <RoundImage
             url="/images/bitcoin.png"
@@ -339,13 +341,14 @@ const Footer = ({ yml }) => {
             bsize="contain"
           />
         </Div>
-      </GridContainer>
+      </Div>
       <Container>
         <GridContainer
           columns_tablet="12"
           background={Colors.lightGray}
           padding="11px 17px 29px 17px"
           padding_tablet="31px 0"
+          width="100%"
         >
           <Div
             gridArea_tablet="1/6/1/13"
@@ -426,7 +429,7 @@ const Footer = ({ yml }) => {
               textAlign_tablet="left"
               color={Colors.darkGray}
             >
-              @ 4Geeks Academy LLC 2019
+              @ 4Geeks Academy LLC {currentYear}
             </H4>
           </Div>
         </GridContainer>

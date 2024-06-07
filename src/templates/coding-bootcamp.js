@@ -32,7 +32,7 @@ import ScrollSpy from "../components/ScrollSpy";
 import Card from "../components/Card";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
-const Program = ({ data, pageContext, yml }) => {
+const CodingBootcamp = ({ data, pageContext, yml }) => {
   const { session } = React.useContext(SessionContext);
   const pageDetails = data.allPageYaml.edges[0].node;
   const [open, setOpen] = React.useState(false);
@@ -817,45 +817,6 @@ export const query = graphql`
         }
       }
     }
-    allAlumniProjectsYaml(filter: { fields: { lang: { eq: $lang } } }) {
-      edges {
-        node {
-          header {
-            tagline
-            sub_heading
-          }
-          projects {
-            project_name
-            slug
-            project_image {
-              childImageSharp {
-                gatsbyImageData(
-                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                  width: 800
-                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                )
-              }
-            }
-            project_content
-            project_video
-            live_link
-            github_repo
-            alumni {
-              first_name
-              last_name
-              job_title
-              github
-              linkedin
-              twitter
-            }
-          }
-          button_section {
-            button_text
-            button_link
-          }
-        }
-      }
-    }
     allTestimonialsYaml(filter: { fields: { lang: { eq: $lang } } }) {
       edges {
         node {
@@ -1049,4 +1010,4 @@ export const query = graphql`
   }
 `;
 
-export default BaseRender(Program);
+export default BaseRender(CodingBootcamp);
