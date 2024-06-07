@@ -413,6 +413,11 @@ const Home = (props) => {
       </Div>
       <With4Geeks
         lang={pageContext.lang}
+        background={Colors.veryLightBlue2}
+        headerProps={{ 
+          margin: "0 5px 20px 5px",
+          margin_tablet: "0 auto 20px auto",
+         }}
         sessionLocation={
           session &&
           session.location &&
@@ -422,10 +427,9 @@ const Home = (props) => {
         title={yml.with_4geeks.title}
       />
 
-
-      <Iconogram yml={yml.iconogram_two} />
-
       <OurPartners
+        multiLine
+        background={Colors.veryLightBlue2}
         images={hiring.partners.images}
         margin="0"
         padding="50px 0"
@@ -441,13 +445,8 @@ const Home = (props) => {
             : hiring.partners.sub_heading
         }
       />
-      {/* <PricesAndPayment
-        lang={pageContext.lang}
-        locations={data.allLocationYaml.edges}
-        defaultCourse="full-stack"
-        defaultSchedule="part_time"
-      /> */}
       <Loc
+        background={Colors.veryLightBlue2}
         lang={pageContext.lang}
         allLocationYaml={data.allLocationYaml}
         hideHeading
@@ -600,33 +599,6 @@ export const query = graphql`
               color
               content
               content_style
-            }
-          }
-          iconogram_two {
-            swipable
-            heading {
-              text
-              style
-              font_size
-              style
-            }
-            sub_heading {
-              text
-              style
-              font_size
-            }
-            icons {
-              icon
-              color
-              title
-              content
-            }
-            button {
-              text
-              color
-              path
-              background
-              hover_color
             }
           }
           with_4geeks {

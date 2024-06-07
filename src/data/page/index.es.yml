@@ -153,45 +153,6 @@ iconogram:
     content: "4.85 de valoración"
     content_style: '{ "fontSize": "24px" }'
 
-iconogram_two:
-  heading:
-    text: "Paying your tuition should not be a concern"
-    font_size:
-      - 38px
-      - 38px
-      - 38px
-      - 21px
-      - 21px
-    style: '{ "textAlign": "center", "width": "60%" }'
-  sub_heading:
-    text: ""
-    font_size: ["16px", "16px", "16px", "16px", "16px"]
-    style: '{ "textAlign": "center", "width": "60%" }'
-  text_link: "#"
-  swipable: false
-  icons:
-  - icon: "bill"
-    title: Planes de pago
-    content: "Pague cuotas cada 6 meses, sin intereses."
-  - icon: "money"
-    color: "#0084FF"
-    title: Préstamos
-    content: "Elija entre opciones de préstamos a 3, 4 o 5 años."
-  - icon: "hands-group"
-    color: "#25BF6C"
-    title: Becas
-    content: "Ofrecemos varias becas completas y parciales."
-  - icon: "contract-2"
-    color: "#BE8BFF"
-    title: Contáctenos
-    content: "Para obtener ayuda, contáctenos. Estamos aquí <a href=\"para usted."
-  button:
-    text: "Conditions apply."
-    color: ""
-    path: "#prices_and_payment"
-    background: ""
-    hover_color: ""
-
 ## 4GEEKS VS OTHERS SECTION
 geeks_vs_others:
   heading: "Compara 4Geeks con otros bootcamps"

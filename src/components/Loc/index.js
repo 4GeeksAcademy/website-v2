@@ -5,7 +5,7 @@ import { GridContainer, Div } from "../Sections";
 import { Colors } from "../Styling";
 import Icon from "../Icon";
 
-const Loc = ({ lang, hideHeading, allLocationYaml }) => {
+const Loc = ({ lang, hideHeading, allLocationYaml, background }) => {
   const data = useStaticQuery(graphql`
     {
       allLocYaml {
@@ -153,12 +153,12 @@ const Loc = ({ lang, hideHeading, allLocationYaml }) => {
 
   const highlightedText = highlighted_text
     .map(
-      (elem, index) => `<span style="color:${elem.color};">${elem.text}</span>`
+      (elem) => `<span style="color:${elem.color};">${elem.text}</span>`
     )
     .join(" ");
 
   return (
-    <>
+    <Div padding="0 0 20px 0" display="block" background={background}>
       {heading && !hideHeading && (
         <GridContainer
           margin_tablet="35px auto"
@@ -192,7 +192,7 @@ const Loc = ({ lang, hideHeading, allLocationYaml }) => {
         flexDirection_sm="column"
         flexDirection_xs="column"
         flexDirection="column"
-        margin="0 auto 20px auto"
+        margin="0 auto"
         maxWidth="1280px"
         height="100%"
         maxHeight="none"
@@ -309,7 +309,7 @@ const Loc = ({ lang, hideHeading, allLocationYaml }) => {
           </Div>
         </Div>
       </Div>
-    </>
+    </Div>
   );
 };
 
