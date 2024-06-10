@@ -35,12 +35,21 @@ button:
 
 ## BADGES SECTION /components/Badges
 badges:
-  title: ""
-  paragraph: "Our Official 4Geeks Completion Certificate is recognized by industry leaders, opening up new tech opportunities and boosting your career in the competitive tech field. Join us to unlock your full potential."
+  title: "8 Years helping people transition to tech"
+  paragraph: "We are Licensed by the Florida Department of Education, we have been named by Forbes as a top 5 Coding School and every major Coding School independent listing have been naming us as top worldwide Bootcamp over the years"
 
 success_cases:
   title: Success cases
   content: 86% of our students has been hired
+
+two_column_carousel:
+  title: "We make it possible"
+  text: "Our job guarantee program is yielding great results. Check out some of our graduate’s stories:"
+  videos:
+    - src: "/images/landing/alissa-video.webp"
+      video: "EcqasocRKHo"
+    - src: "/images/landing/alissa-video.webp"
+      video: "EcqasocRKHo"
 
 ## CHOOSE YOUR PROGRAM /components/ChooseYourProgram
 choose_program:
@@ -62,8 +71,7 @@ why_4geeks:
     font_size: ["22px", "22px", "21px", "17px", "17px"]
   content:
     text: |-
-      Belong to a community of like-minded people who genuinely support each other. Gain lifetime access to our online learning platform and mentorship services. We’ll always be here for you, even after you graduate. <br>
-      <a href="/us/geeks-vs-others">Compare 4Geeks</a> to other coding bootcamps.
+      Belong to a community of like-minded people who genuinely support each other. Gain lifetime access to our online learning platform and mentorship services. We’ll always be here for you, even after you graduate.
     font_size: ["17px", "17px", "16px", "14px", "14px"]
   button:
     text: "Apply now"
@@ -82,40 +90,45 @@ why_4geeks:
       icon: "check"
 
 ## TWO COLUMNS
-# two_columns:
-#   proportions: [6, 6]
-#   justify: "center"
-#   image:
-#     style: '{ "backgroundSize": "contain", "height": ["500px", "500px", "500px", "500px", "300px"], "minHeight": "auto" }'
-#     src: "/images/landing/feliz-empresario-laptop-2.png"
-#     shadow: false
-#   heading:
-#     text: "Finance your future"
-#     style: '{ "fontWeight": 400, "marginBottom": "32px" }'
-#     font_size: ["35px", "35px", "35px", "35px", "35px"]
-#   sub_heading:
-#     text: "We’re all about making our high-quality education affordable to everyone."
-#     font_size: ["21px", "21px", "21px", "21px", "21px"]
-#   content:
-#     text: |
-#       We’re all about making our high-quality education affordable to everyone.
-#       That's why we offer multiple options to help you fund our coding bootcamps stress-free. Whether it's an ISA, scholarship, payment plan or Job Guarantee we're here to guide you every step of the way.
-#     font_size: ["16px"]
-#   button:
-#     text: "See all financing options"
-#     color: "white"
-#     background: "#0084FF"
-#     path: "#prices_and_payment"
+two_columns:
+  proportions: [6, 6]
+  justify: "center"
+  image:
+    style: '{ "backgroundSize": "contain", "height": ["500px", "500px", "500px", "500px", "300px"], "minHeight": "auto" }'
+    src: "/images/landing/feliz-empresario-laptop-3.png"
+    shadow: false
+  section_heading:
+    text: "Finance your future"
+  heading:
+    text: "$20 Millions in scholarships"
+    style: '{ "fontWeight": 400, "marginBottom": "32px" }'
+    font_size: ["35px", "35px", "35px", "35px", "35px"]
+  content:
+    text: |
+      1.456 people have benefited from our scholarship programs, from all possible backgrounds, <a style="color: black; cursor:pointer; text-decoration: underline; opacity: 0.8;">read here</a> stories of the beneficiaries and projects.
+    font_size: ["21px"]
+    path: "/us/20-million"
+  button:
+    text: "See all financing options"
+    color: "white"
+    background: "blue"
+    path: "/us/financials#prices_and_payment"
+  boxes:
+    - icon: rocket-2
+      title: "14"
+      text: Projects completed
+    - icon: handsheart
+      title: "1465"
+      text: Beneficiaries so far
 
 ## 4GEEKS VS OTHERS SECTION
 geeks_vs_others:
-  heading: "WHAT MAKES THIS CODING BOOTCAMP STAND OUT?"
+  heading: "Compare 4Geeks with other bootcamps"
   sub_heading: "In a nutshell, the simplest way to compare coding focused schools:"
-  sub_heading_link: "/geeks-vs-others"
 
 iconogram:
   heading:
-    text: "Numbers that support us"
+    text: "How have we built our credibility over the years?"
     font_size:
       - 35px
       - 35px
@@ -124,6 +137,7 @@ iconogram:
       - 35px
     style: '{ "textAlign": "center", "fontSize": "40px", "fontWeight": 400 }'
   swipable: false
+  background: veryLightBlue2
   icons:
     - icon: "graduation-2"
       content: "4500+ Graduates"
@@ -140,45 +154,6 @@ iconogram:
       color: "#0084FF"
       content: "4.85 rating"
       content_style: '{ "fontSize": "24px" }'
-
-iconogram_two:
-  heading:
-    text: "Paying your tuition should not be a concern"
-    font_size:
-      - 38px
-      - 38px
-      - 38px
-      - 21px
-      - 21px
-    style: '{ "textAlign": "center", "width": "60%" }'
-  sub_heading:
-    text: ""
-    font_size: ["16px", "16px", "16px", "16px", "16px"]
-    style: '{ "textAlign": "center", "width": "60%" }'
-  text_link: "#"
-  swipable: false
-  icons:
-    - icon: "bill"
-      title: Payment Plans
-      content: "You can pay in installments every 6 months with no interest."
-    - icon: "money"
-      color: "#0084FF"
-      title: Loans
-      content: "Choose from 3, 4, or 5-year loan options."
-    - icon: "hands-group"
-      color: "#25BF6C"
-      title: Scholarships
-      content: "We offer several full and partial scholarships."
-    - icon: "contract-2"
-      color: "#BE8BFF"
-      title: Contact US
-      content: "For assistance, contact us. We're here for you."
-  button:
-    text: "Conditions apply."
-    color: ""
-    path: "#prices_and_payment"
-    background: ""
-    hover_color: ""
 
 with_4geeks:
   title: Hear it from our students

@@ -1,38 +1,20 @@
 import React, { useState, useRef } from "react";
 import { graphql } from "gatsby";
-import Link from "gatsby-link";
-import { navigate } from "gatsby";
-import {
-  Column,
-  Row,
-  GridContainer,
-  Header,
-  Div,
-  Grid,
-} from "../components/Sections";
-import { H1, H2, H3, H4, Paragraph } from "../components/Heading";
-import { Button, Colors, StyledBackgroundSection } from "../components/Styling";
-import Badges from "../components/Badges";
+import { GridContainer, Header, Div, Grid } from "../components/Sections";
+import { H2, H4, Paragraph } from "../components/Heading";
+import { Button, Colors } from "../components/Styling";
 import OurPartners from "../components/OurPartners";
 import Icon from "../components/Icon";
 import BaseRender from "./_baseLayout";
 import { beHiringPartner } from "../actions";
-import { Circle } from "../components/BackgroundDrawing";
-import Modal from "../components/Modal";
-import { SessionContext } from "../session";
 import LeadForm from "../components/LeadForm/index.js";
 import PartnersCarousel from "../components/PartnersCarousel";
 import BenefitsAndCharts from "../components/BenefitsAndCharts";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
-function rand() {
-  return Math.round(Math.random() * 20) - 10;
-}
-
 const Partners = (props) => {
-  const { session } = React.useContext(SessionContext);
-  const { data, pageContext, yml, path } = props;
-  const [open, setOpen] = React.useState(false);
+  const { data, pageContext, yml } = props;
+  const [open, setOpen] = useState(false);
   const joinPartnersRef = useRef(null);
 
   const goToForm = (e) => {
@@ -61,6 +43,7 @@ const Partners = (props) => {
         margin="0 auto"
         margin_tablet="10px 24px 10px 0"
         textColor="white"
+        borderRadius="4px"
       >
         {yml.button_section.button_text}
       </Button>
@@ -69,10 +52,14 @@ const Partners = (props) => {
   return (
     <>
       <GridContainer
-        padding="10rem 0 4rem"
-        padding_tablet="10rem 0 4rem"
+        margin="20px auto 0 auto"
+        margin_tablet="auto"
+        padding_tablet="0"
+        padding_md="10rem 0 4rem"
         containerColumns_tablet="1fr repeat(12,1fr) 1fr"
         columns_tablet="2"
+        maxWidth="1280px"
+        gridColumn_tablet="1 / span 14"
       >
         <Header
           hideArrowKey
@@ -80,12 +67,12 @@ const Partners = (props) => {
           seo_title={yml.seo_title}
           title={yml.header.title}
           paragraph={yml.header.paragraph}
-          padding_tablet="0"
+          padding_tablet="60px 40px"
           padding="0 10px"
           margin="0"
+          paddingTitle="0"
+          paddingParagraph="0"
           position="relative"
-
-          // height_tablet="350px"
         >
           <ButtonPartner />
         </Header>
@@ -109,13 +96,14 @@ const Partners = (props) => {
       </GridContainer>
       <PartnersCarousel data={partnersData.partners_carousel} />
       <GridContainer
-        // padding="10rem 0 4rem"
-        // padding_tablet="10rem 0 4rem"
         background={Colors.verylightGray}
         containerColumns_tablet="1fr repeat(12,1fr) 1fr"
         padding="70px 0"
         padding_tablet="70px 0"
-        // columns_tablet="1"
+        childMaxWidth="1280px"
+        childMargin="auto"
+        gridColumn_tablet="1 / span 14"
+        childWidth="100%"
       >
         <H2
           type="h2"
@@ -167,24 +155,22 @@ const Partners = (props) => {
         <GridContainer
           padding_tablet="0"
           containerColumns_tablet="1fr repeat(12, 1fr) 1fr"
+          gridColumn_tablet="1 / span 14"
           margin_tablet="3% 0 4% 0"
           margin="10% 0"
         >
-          <Div
-            height="2px"
-            background="#ACACAC"
-            style={{ opacity: "0.5" }}
-          ></Div>
+          <Div height="2px" background="#ACACAC" style={{ opacity: "0.5" }} />
         </GridContainer>
         <Grid
-          // gap="30px"
-          // gridTemplateColumns="repeat(auto-fill, minmax(40%, 1fr))"
           gridTemplateColumns_tablet="repeat(auto-fill, minmax(40%, 1fr))"
           columnCount_tablet="2"
           columnCount="0"
-          // style={{orphans: "1", widows: "1", columnGap: "1.25rem", boxSizing: "border-box"}}
           justifyContent="center"
           padding="0 6%"
+          padding_tablet="0 40px"
+          padding_md="0 80px"
+          padding_lg="0"
+          width="100%"
         >
           {partnersData.work_together.features.map((item, i) => (
             <Div
@@ -268,8 +254,6 @@ const Partners = (props) => {
           >
             {partnersData.coding.tagline}
           </H2>
-
-          {/*<Paragraph>{paragraph}</Paragraph>*/}
           <Paragraph
             fontFamily="Lato"
             fontWeight="normal"
@@ -291,116 +275,107 @@ const Partners = (props) => {
           padding="0 0 75px 0"
           margin="0"
           images={partnersData.coding.images}
-          // title={partnersData.coding.tagline}
-          // paragraph={partnersData.coding.sub_heading}
           showFeatured
           props={partnersData.coding}
         />
       </Div>
 
-      <Div
-        display="flex"
-        margin="10px 0 60px 0"
-        flexDirection="column"
-        background={Colors.lightYellow}
-        gap="50px"
-        padding="52px 0"
-        flexDirection_tablet="row"
-      >
+      <Div background={Colors.lightYellow} margin="10px auto 60px auto">
         <Div
           display="flex"
+          margin="0 auto 0 auto"
           flexDirection="column"
-          width="100%"
-          width_tablet="50%"
-          alignItems="center"
-          padding="0 10px"
-          padding_tablet="0 0 0 12em"
-          alignSelf="center"
-          // padding_tablet="4em"
-          // padding="4em"
-          // margin_tablet="0 0 40px 0"
-          // margin="0 0 40px 0"
-          // background={Colors.verylightGray}
-        >
-          <H2
-            type="h2"
-            fontFamily="Lato"
-            fontWeight="900"
-            fontSize="30px"
-            textAlign="left"
-            letterSpacing="0.05em"
-            color="#3A3A3A"
-            width="100%"
-            margin="0 0 15px 0"
-            padding="0 10px"
-            textTransform="uppercase"
-            style={{ fontStyle: "normal" }}
-          >
-            {partnersData.partners_in_education.title}
-          </H2>
-
-          {partnersData.partners_in_education.description
-            .split("\n")
-            .map((m, i) => (
-              <Paragraph
-                key={i}
-                dangerouslySetInnerHTML={{ __html: m }}
-                margin="22px 0 0 0"
-                padding="0 10px"
-                padding_tablet="0"
-                color={Colors.darkGray}
-                textAlign="left"
-                fontSize="15px"
-                lineHeight="22px"
-              />
-            ))}
-        </Div>
-        <Grid
-          display="grid"
-          width="100%"
-          justifyItems="center"
-          width_tablet="50%"
+          maxWidth="1280px"
           gap="50px"
-          gridTemplateColumns_tablet="repeat(auto-fill, minmax(40%, 1fr))"
-          justifyContent="center"
-          padding="0 10% 0 6%"
+          padding="52px 0"
+          flexDirection_tablet="row"
         >
-          {partnersData.partners_in_education.image_list.map((l, index) => (
-            <Div
-              key={index}
-              width="235px"
-              height="175px"
-              background={Colors.white}
-              padding="25px"
+          <Div
+            display="flex"
+            flexDirection="column"
+            width="100%"
+            width_tablet="50%"
+            alignItems="center"
+            padding="0 10px"
+            // padding_tablet="0 0 0 12em"
+            alignSelf="center"
+          >
+            <H2
+              type="h2"
+              fontFamily="Lato"
+              fontWeight="900"
+              fontSize="30px"
+              textAlign="left"
+              letterSpacing="0.05em"
+              color="#3A3A3A"
+              width="100%"
+              margin="0 0 15px 0"
+              textTransform="uppercase"
+              style={{ fontStyle: "normal" }}
             >
-              <GatsbyImage
-                style={{
-                  height: "auto",
-                  minWidth: "150px",
-                  width: "150px",
-                  margin: "0 20px",
-                }}
-                imgStyle={{
-                  objectFit: "contain",
-                  WebkitUserDrag: "none",
-                }}
-                alt={l.alt}
-                image={getImage(l.image.childImageSharp.gatsbyImageData)}
-              />
-            </Div>
-          ))}
-        </Grid>
+              {partnersData.partners_in_education.title}
+            </H2>
+
+            {partnersData.partners_in_education.description
+              .split("\n")
+              .map((m, i) => (
+                <Paragraph
+                  key={i}
+                  dangerouslySetInnerHTML={{ __html: m }}
+                  margin="22px 0 0 0"
+                  padding="0 10px"
+                  padding_tablet="0"
+                  color={Colors.darkGray}
+                  textAlign="left"
+                  fontSize="15px"
+                  lineHeight="22px"
+                />
+              ))}
+          </Div>
+          <Grid
+            display="grid"
+            width="100%"
+            justifyItems="center"
+            width_tablet="50%"
+            gap="50px"
+            gridTemplateColumns_tablet="repeat(auto-fill, minmax(40%, 1fr))"
+            justifyContent="center"
+          >
+            {partnersData.partners_in_education.image_list.map((l, index) => (
+              <Div
+                key={index}
+                width="235px"
+                height="175px"
+                background={Colors.white}
+                padding="25px"
+              >
+                <GatsbyImage
+                  style={{
+                    height: "auto",
+                    minWidth: "150px",
+                    width: "150px",
+                    margin: "0 20px",
+                  }}
+                  imgStyle={{
+                    objectFit: "contain",
+                    WebkitUserDrag: "none",
+                  }}
+                  alt={l.alt}
+                  image={getImage(l.image.childImageSharp.gatsbyImageData)}
+                />
+              </Div>
+            ))}
+          </Grid>
+        </Div>
       </Div>
 
       <OurPartners
-        // marquee
-        margin="0 0 80px 0"
+        margin="0 auto 80px auto"
         borderBottom={`5px solid ${Colors.verylightGray}`}
         padding="0"
+        maxWidth="1280px"
         images={partnersData.financials.images}
         title={partnersData.financials.tagline}
-        // paragraph={partnersData.partners.sub_heading}
-        // showFeatured
         props={partnersData.financials}
       />
 
@@ -408,7 +383,9 @@ const Partners = (props) => {
         columns_tablet="12"
         padding="0 17px 40px 17px"
         padding_tablet="0"
-        margin_tablet="0 0 81px 0"
+        margin_tablet="0 auto 81px auto"
+        gridColumn_tablet="1 / span 14"
+        maxWidth="1280px"
       >
         <Div
           ref={joinPartnersRef}

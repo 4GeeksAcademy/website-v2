@@ -1,5 +1,6 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useRef } from "react";
 import { graphql, navigate } from "gatsby";
+import ReCAPTCHA from "react-google-recaptcha";
 import { Div, GridContainer, Header, Grid } from "../components/Sections";
 import { H3, Paragraph } from "../components/Heading";
 import { Colors, Button } from "../components/Styling";
@@ -11,6 +12,7 @@ import { Circle } from "../components/BackgroundDrawing";
 import { apply, tagManager } from "../actions";
 import PhoneInput from "../components/LeadForm/PhoneInput";
 import Modal from "../components/Modal_v2";
+import { isWindow } from "../utils/utils";
 
 const us = {
   "(In-person and from home available)": "(In-person and from home available)",
@@ -40,6 +42,7 @@ const formIsValid = (formData = null) => {
 
 const Apply = (props) => {
   const { data, pageContext, yml } = props;
+  const captcha = useRef(null);
   const { session } = useContext(SessionContext);
   const [formStatus, setFormStatus] = useState({
     status: "idle",
@@ -53,8 +56,13 @@ const Apply = (props) => {
     consents: { value: [], valid: true },
     referral_key: { value: null, valid: true },
     course: { value: null, valid: false },
+    token: { value: null, valid: false },
   });
   const [consentValue, setConsentValue] = useState([]);
+
+  React.useEffect(() => {
+    if (isWindow) window.GATSBY_CAPTCHA_KEY = process.env.GATSBY_CAPTCHA_KEY;
+  }, []);
 
   const programs = data.allCourseYaml.edges
     .filter(
@@ -183,6 +191,13 @@ const Apply = (props) => {
           msg: error.message || error,
         });
       });
+  };
+
+  const captchaChange = () => {
+    const captchaValue = captcha?.current?.getValue();
+    if (captchaValue)
+      setVal({ ...formData, token: { value: captchaValue, valid: true } });
+    else setVal({ ...formData, token: { value: null, valid: false } });
   };
   return (
     <>
@@ -640,10 +655,17 @@ const Apply = (props) => {
                         dangerouslySetInnerHTML={{
                           __html: consent.message,
                         }}
-                      ></Paragraph>
+                      />
                     </Div>
                   );
               })}
+            <Div width="fit-content" margin="10px auto 0 auto">
+              <ReCAPTCHA
+                ref={captcha}
+                sitekey={process.env.GATSBY_CAPTCHA_KEY}
+                onChange={captchaChange}
+              />
+            </Div>
             <Div
               flexDirection_tablet="column"
               flexDirection="column"
@@ -661,13 +683,17 @@ const Apply = (props) => {
                 margin_tablet="2rem 0 2rem auto"
                 transform="translateY(-15px)"
                 color={
-                  formStatus.status === "loading"
+                  formStatus.status === "loading" || !formData.token.valid
                     ? Colors.darkGray
                     : Colors.blue
                 }
                 textColor={Colors.white}
                 padding=".45rem 3rem"
-                disabled={formStatus.status === "loading" ? true : false}
+                disabled={
+                  formStatus.status === "loading" || !formData.token.valid
+                    ? true
+                    : false
+                }
               >
                 {formStatus.status === "loading"
                   ? "Loading..."
