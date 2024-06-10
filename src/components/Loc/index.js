@@ -152,9 +152,7 @@ const Loc = ({ lang, hideHeading, allLocationYaml, background }) => {
   };
 
   const highlightedText = highlighted_text
-    .map(
-      (elem) => `<span style="color:${elem.color};">${elem.text}</span>`
-    )
+    .map((elem) => `<span style="color:${elem.color};">${elem.text}</span>`)
     .join(" ");
 
   return (

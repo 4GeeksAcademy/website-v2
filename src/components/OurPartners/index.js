@@ -285,9 +285,23 @@ const SquareBoxPartner = ({ border, elem, width, height }) => {
   );
 };
 
-const VariantCarousel = ({ title, paragraph, images, background, multiLine, ...rest }) => {
-  const multiLineImages = multiLine ? images.reduce((rows, key, index) => (index % 2 == 0 ? rows.push([key]) 
-  : rows[rows.length-1].push(key)) && rows, []) : [];
+const VariantCarousel = ({
+  title,
+  paragraph,
+  images,
+  background,
+  multiLine,
+  ...rest
+}) => {
+  const multiLineImages = multiLine
+    ? images.reduce(
+        (rows, key, index) =>
+          (index % 2 == 0
+            ? rows.push([key])
+            : rows[rows.length - 1].push(key)) && rows,
+        []
+      )
+    : [];
 
   return (
     <CarouselV2
@@ -340,32 +354,32 @@ const VariantCarousel = ({ title, paragraph, images, background, multiLine, ...r
       }}
       {...rest}
     >
-      {multiLine ? 
-        multiLineImages.map((group, i) => (
-          <Div key={`${i}-partners`}>
-            <Div flexDirection="column" gap="16px">
-              {group.map((elem) => (
-                <SquareBoxPartner
-                  key={elem.name}
-                  elem={elem}
-                  border={!background && "1px solid #C4C4C4"}
-                  height="236px"
-                  width="260px !important"
-                />
-              ))}
+      {multiLine
+        ? multiLineImages.map((group, i) => (
+            <Div key={`${i}-partners`}>
+              <Div flexDirection="column" gap="16px">
+                {group.map((elem) => (
+                  <SquareBoxPartner
+                    key={elem.name}
+                    elem={elem}
+                    border={!background && "1px solid #C4C4C4"}
+                    height="236px"
+                    width="260px !important"
+                  />
+                ))}
+              </Div>
             </Div>
-          </Div>
-        ))
+          ))
         : images.map((elem) => (
-          <Div key={elem.name}>
-            <SquareBoxPartner
-              elem={elem}
-              border={!background && "1px solid #C4C4C4"}
-              height="236px"
-              width="260px !important"
-            />
-          </Div>
-      ))}
+            <Div key={elem.name}>
+              <SquareBoxPartner
+                elem={elem}
+                border={!background && "1px solid #C4C4C4"}
+                height="236px"
+                width="260px !important"
+              />
+            </Div>
+          ))}
     </CarouselV2>
   );
 };

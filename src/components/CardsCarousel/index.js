@@ -149,13 +149,12 @@ const CardsCarousel = ({
         ))}
       </Div>
 
-      {content?.text &&  (
+      {content?.text && (
         <Paragraph
           padding="0 32px"
           margin="30px 0 0 0"
           onClick={(e) => {
-            if (e.target.tagName === "A")
-              smartRedirecting(e, content.path);
+            if (e.target.tagName === "A") smartRedirecting(e, content.path);
           }}
           dangerouslySetInnerHTML={{ __html: content.text }}
         />

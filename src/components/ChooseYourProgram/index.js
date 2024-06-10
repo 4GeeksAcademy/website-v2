@@ -235,7 +235,11 @@ const ChooseYourProgram = ({
                     </Div>
                   </Div>
 
-                  <Div margin="10px auto 0 auto" width="100%" width_tablet="150px">
+                  <Div
+                    margin="10px auto 0 auto"
+                    width="100%"
+                    width_tablet="150px"
+                  >
                     {!program.comming_soon ? (
                       <Link to={program.link} style={{ width: "100%" }}>
                         {landingTemplate ? (
