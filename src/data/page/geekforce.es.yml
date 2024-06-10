@@ -18,8 +18,8 @@ header:
   image_logo: "/images/geekforce.png"
 
 geekForce:
-  - videoId: "ln3bQsV1BaQ"
-    image: ../../../static/images/staff/hernan-new.webp
+  - videoId: "https://www.youtube.com/watch?v=G9Ti9zadmoM"
+    image: ../../../static/images/landing/geek-force-video-II.webp
 
 iconogram:
   heading:
