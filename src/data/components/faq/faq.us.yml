@@ -19,12 +19,13 @@ faq:
         locations: ["atlanta-usa", "austin-usa", "barcelona-spain", "berlin-germany", "bogota-colombia", "buenosaires-argentina", "caracas-venezuela", "chicago-usa", "costa-rica", "downtown-miami", "dublin-ireland", "europe", "hamburg-germany", "houston-usa", "lapaz-bolivia", "lima-peru", "lisbon-portugal", "losangeles-usa", "madrid-spain", "malaga-spain", "mexicocity-mexico", "milan-italy", "montevideo-uruguay", "munich-germany", "newyork-usa", "online", "orlando", "panamacity-panama", "quito-ecuador", "rome-italy", "santiago-chile", "toronto-canada", "valencia-spain", "online", "online-spanish-usa"]
         templates: ["faq"]
         priority: 1
-        answer: "Absolutely! 4Geeks Academy is a licensed institution by the Commission for Independent Education of the Florida Department of Education. This ensures that our programs meet rigorous educational standards and provide you with a valuable credential upon completion."
+        answer: |-
+          Absolutely! 4Geeks Academy is a licensed institution by the Commission for Independent Education of the Florida Department of Education. This ensures that our programs meet rigorous educational standards and provide you with a valuable credential upon completion.
       - question: "Who is that face in the logo?"
         templates: ["faq"]
         priority: 0
         answer: |-
-          "Meet Rigoberto! He is the heart and spirit of everyone working at 4Geeks Academy."
+          Meet Rigoberto! He is the heart and spirit of everyone working at 4Geeks Academy.
 
   - topic: "Frequently Asked Questions about Enrollment"
     slug: "enrollment"
