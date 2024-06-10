@@ -12,7 +12,6 @@ import BaseRender from "./_baseLayout";
 import { SessionContext } from "../session.js";
 import Loc from "../components/Loc";
 import With4Geeks from "../components/With4Geeks";
-import PricesAndPayment from "../components/PricesAndPayment";
 import TwoColumnCarousel from "../components/TwoColumnCarousel";
 import ReactPlayer from "../components/ReactPlayer";
 import OurPartners from "../components/OurPartners";
@@ -253,7 +252,6 @@ const Home = (props) => {
                   margin_tablet="0"
                   margin_lg="0 auto"
                   margin_md="0 auto"
-                  margin="auto"
                   zIndex="2"
                 >
                   <iframe
