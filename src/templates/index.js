@@ -359,7 +359,11 @@ const Home = (props) => {
         }}
       >
         {yml.two_column_carousel.videos.map((elem) => (
-          <Div key={elem.video} borderRadius="4px" border={`1px solid ${Colors.black}`}>
+          <Div
+            key={elem.video}
+            borderRadius="4px"
+            border={`1px solid ${Colors.black}`}
+          >
             <ReactPlayer
               margin_tablet="0px 0px"
               thumb={elem.src}
@@ -411,10 +415,10 @@ const Home = (props) => {
       <With4Geeks
         lang={pageContext.lang}
         background={Colors.veryLightBlue2}
-        headerProps={{ 
+        headerProps={{
           margin: "0 5px 20px 5px",
           margin_tablet: "0 auto 20px auto",
-         }}
+        }}
         sessionLocation={
           session &&
           session.location &&
