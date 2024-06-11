@@ -14,6 +14,8 @@ export default ({
   stories,
   paragraph,
   sessionLocation,
+  background,
+  headerProps,
 }) => {
   const data = useStaticQuery(graphql`
     query With4Geeks {
@@ -78,7 +80,7 @@ export default ({
   else locationFiltered = stories || info.with;
 
   return (
-    <Fragment github="/components/with_4geeks">
+    <Div display="block" background={background} padding="0 0 20px 0">
       {(info?.header || title) && (
         <Grid
           margin="40px 5px 20px 5px"
@@ -89,6 +91,7 @@ export default ({
           padding_md="40px 80px"
           padding_lg="50px 0 0 0"
           padding="0 17px"
+          {...headerProps}
         >
           <Div
             display="flex"
@@ -159,7 +162,8 @@ export default ({
                   borderRadius="4px"
                   minWidth="250px"
                   width="100%"
-                  border="1px solid #C4C4C4"
+                  border={!background && "1px solid #C4C4C4"}
+                  background={Colors.white}
                 >
                   <Div
                     padding_xs="0 0 0 0px"
@@ -167,7 +171,7 @@ export default ({
                     width_tablet="100%"
                     height_tablet={element.video_height || "173px"}
                     height={element.video_height || "173px"}
-                    alignSelf={`baseline`}
+                    alignSelf="baseline"
                     style={{ borderRadius: `0px` }}
                   >
                     {element.video && element.image && (
@@ -183,7 +187,7 @@ export default ({
                         width="100%"
                         width_tablet="100%"
                         videoHeight={element.video_height}
-                        style={{ borderRadius: `0px` }}
+                        style={{ borderRadius: "0px" }}
                       />
                     )}
                     {!element.video && element.image && (
@@ -281,6 +285,6 @@ export default ({
           </Div>
         </Grid>
       )}
-    </Fragment>
+    </Div>
   );
 };

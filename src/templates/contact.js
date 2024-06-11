@@ -1,5 +1,6 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext, useRef } from "react";
 import { graphql, Link } from "gatsby";
+import ReCAPTCHA from "react-google-recaptcha";
 import BaseRender from "./_baseLayout";
 import { SessionContext } from "../session.js";
 import { contactUs } from "../actions.js";
@@ -14,6 +15,7 @@ import { HR, Grid, Div, Old_Grid } from "../components/Sections";
 
 const Contact = (props) => {
   const { data, pageContext, yml } = props;
+  const captcha = useRef(null);
   const { session } = useContext(SessionContext);
   const [alignment, setAlignment] = useState("left");
   const [formStatus, setFormStatus] = useState({
@@ -29,6 +31,7 @@ const Contact = (props) => {
     last_name: { value: "", valid: false },
     email: { value: "", valid: false },
     client_comments: { value: "", valid: false },
+    token: { value: null, valid: false },
   });
 
   const formIsValid = (formData = null) => {
@@ -37,6 +40,13 @@ const Contact = (props) => {
       if (!formData[key].valid) return false;
     }
     return true;
+  };
+
+  const captchaChange = () => {
+    const captchaValue = captcha?.current?.getValue();
+    if (captchaValue)
+      setVal({ ...formData, token: { value: captchaValue, valid: true } });
+    else setVal({ ...formData, token: { value: null, valid: false } });
   };
   return (
     <form
@@ -324,9 +334,16 @@ const Contact = (props) => {
                       errorMsg="Please leave us a comment"
                     />
                   </Div>
+                  <Div width="fit-content" margin="10px auto 0 auto">
+                    <ReCAPTCHA
+                      ref={captcha}
+                      sitekey={process.env.GATSBY_CAPTCHA_KEY}
+                      onChange={captchaChange}
+                    />
+                  </Div>
                   <Div
                     direction="rtl"
-                    textAlign={`-webkit-center`}
+                    textAlign="-webkit-center"
                     textAlign_md="right"
                     display="block"
                     justifyContent="flex-end"
@@ -349,7 +366,7 @@ const Contact = (props) => {
                       }
                       textColor={Colors.white}
                       background={
-                        formStatus.status === "loading"
+                        formStatus.status === "loading" || !formData.token.valid
                           ? Colors.darkGray
                           : Colors.blue
                       }

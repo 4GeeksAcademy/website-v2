@@ -8,9 +8,10 @@ const CarouselV2 = ({
   heading,
   content,
   children,
-  customSettings,
+  settings,
   headingProps,
   contentProps,
+  carouselProps,
   ...rest
 }) => {
   return (
@@ -23,12 +24,12 @@ const CarouselV2 = ({
           headingProps,
           contentProps,
         }}
-        customSettings={{
+        settings={{
           dotsClass: "slick-dots-staff",
           slidesToShow: 5,
           infinite: true,
           slidesToScroll: 5,
-          ...customSettings,
+          ...settings,
         }}
         nextArrow={({ onClick }) => (
           <Button
@@ -68,6 +69,7 @@ const CarouselV2 = ({
             <Icon width="100%" height="100%" icon="arrow-right" />
           </Button>
         )}
+        {...carouselProps}
       >
         {children}
       </Carousel>

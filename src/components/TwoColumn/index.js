@@ -253,6 +253,10 @@ const Side = ({
           fontSize_lg={c_xl}
           lineHeight="20px"
           style={content.style ? JSON.parse(content.style) : null}
+          onClick={(e) => {
+            if (e.target.tagName === "A" && content.path)
+              smartRedirecting(e, content.path);
+          }}
           dangerouslySetInnerHTML={{ __html: content.text }}
         />
       ) : (
@@ -273,6 +277,10 @@ const Side = ({
             lineHeight="20px"
             style={content.style ? JSON.parse(content.style) : null}
             fontHeight="30px"
+            onClick={(e) => {
+              if (e.target.tagName === "A" && content.path)
+                smartRedirecting(e, content.path);
+            }}
           >
             {p}
           </Paragraph>
