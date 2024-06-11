@@ -81,9 +81,23 @@ full_time:
 
 ## España & Europe
 
-  - slug: 'spain-scholarships-fs-ft'
+  - slug: 'spain-upfront-fs-ft'
     academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
     recomended: true
+    scholarship: "Pay Upfront"
+    payment_time: "Get a better price"
+    price: "€4,550*"
+    bullets:
+      - "Pay using your bank account, credit or debit card, Paypal, Bitcoin or Etherium."
+      - "Discounts up to €2,150. Pay €4,550 instead of €6,700. Discount subject to availability."     
+    icons: 
+      - "/images/visa-mastercard.png"    
+      - "/images/bitcoin_logo.png"  
+      - "/images/ethereum.png"    
+
+  - slug: 'spain-scholarships-fs-ft'
+    academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
+    recomended: false
     scholarship: "Scholarships Available"
     payment_time: ""
     price: "From €150 /mo."
@@ -96,19 +110,6 @@ full_time:
       - "/images/sequra.png"
       - "/images/nemuru.png"
 
-  - slug: 'spain-upfront-fs-ft'
-    academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
-    recomended: false
-    scholarship: "Pay Upfront"
-    payment_time: "Get a better price"
-    price: "€4,550*"
-    bullets:
-      - "Pay using your bank account, credit or debit card, Paypal, Bitcoin or Etherium."
-      - "Discounts up to €2,150. Pay €4,550 instead of €6,700. Discount subject to availability."     
-    icons: 
-      - "/images/visa-mastercard.png"    
-      - "/images/bitcoin_logo.png"  
-      - "/images/ethereum.png"    
 
   # - slug: 'spain-isa-fs-ft'
   #   academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
@@ -228,12 +229,12 @@ part_time:
     recomended: true
     scholarship: "Pay upfront"
     payment_time: "And get a discount"
-    price: "€4,750*"
+    price: "€4,800*"
     original_price: "€6.800"
     offer: "~30% OFF"
     bullets:
       - "Pay using your bank account, credit or debit card, Paypal, Bitcoin or Etherium."
-      - "Discounts up to €2,050. Pay €4,750 instead of €6,800. Discount subject to availability."     
+      - "Discounts up to €2,000. Pay €4,800 instead of €6,800. Discount subject to availability."     
     icons: 
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
@@ -268,12 +269,12 @@ part_time:
     recomended: true
     scholarship: "Pay upfront"
     payment_time: "And get a discount"
-    price: "€4,750*"
+    price: "€4,800*"
     original_price: "€6,800"
-    offer: "Up to €2,050 OFF"
+    offer: "~30 OFF"
     bullets:
       - "Pay using your bank account, credit or debit card, Paypal, Bitcoin or Etherium."
-      - "Original price €6,800. Save up to €2,050 with our upfront payment discount."
+      - "Original price €6,800. Save up to €2,000 with our upfront payment discount."
       - "Discount subject to availability. Contact us to confirm your eligibility."
     icons:
       - "/images/visa-mastercard.png"
@@ -308,15 +309,15 @@ part_time:
 
   - slug: 'spain-upfront-fs-pt'
     academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
-    recomended: false
+    recomended: true
     scholarship: "Pay upfront"
     payment_time: "And get a discount"
-    price: "€4,750*"
+    price: "€4,800*"
     original_price: "€ 6,800"
     offer: "~30% OFF"
     bullets:
       - "Pay using your bank account, credit or debit card, Paypal, Bitcoin or Etherium."
-      - "Discounts up to €2,050. Pay €4,750 instead of €6,800. Discount subject to availability."     
+      - "Discounts up to €2,000. Pay €4,800 instead of €6,800. Discount subject to availability."     
     icons: 
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
@@ -324,7 +325,7 @@ part_time:
 
   - slug: 'spain-scholarships-fs-pt'
     academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
-    recomended: true
+    recomended: false
     scholarship: "Scholarships available"
     payment_time: ""
     price: "From €150 /mo."

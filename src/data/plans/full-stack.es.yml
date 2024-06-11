@@ -81,10 +81,23 @@ full_time:
   #     - "/images/quotanda-logo.png"
 
 ## España & Europe
+  - slug: 'spain-upfront-fs-ft'
+    academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
+    recomended: true
+    scholarship: "Paga de contado"
+    payment_time: "Y obtén un descuento"
+    price: "4.800 €*"
+    bullets:
+      - "Paga con transferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
+      - "*Descuento de hasta 2.000 €. Desde 4.800 € en vez de 6.800 €. ¡Descuento sujeto a disponibilidad!"     
+    icons: 
+      - "/images/visa-mastercard.png"    
+      - "/images/bitcoin_logo.png"  
+      - "/images/ethereum.png"   
 
   - slug: 'spain-scholarships-fs-ft'
     academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
-    recomended: true
+    recomended: false
     scholarship: "Becas Disponibles"
     payment_time: ""
     price: "Desde €150 /mes."
@@ -95,21 +108,7 @@ full_time:
     icons: 
       - "/images/zank.png"
       - "/images/sequra.png"
-      - "/images/nemuru.png"
-
-  - slug: 'spain-upfront-fs-ft'
-    academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
-    recomended: false
-    scholarship: "Paga de contado"
-    payment_time: "Y obtén un descuento"
-    price: "4.750 €*"
-    bullets:
-      - "Paga con transferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
-      - "*Descuento de hasta 2.050 €. Desde 4.750 € en vez de 6.800 €. ¡Descuento sujeto a disponibilidad!"     
-    icons: 
-      - "/images/visa-mastercard.png"    
-      - "/images/bitcoin_logo.png"  
-      - "/images/ethereum.png"    
+      - "/images/nemuru.png" 
                        
   # - slug: 'spain-isa-fs-ft'
   #   academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
@@ -128,10 +127,10 @@ full_time:
     recomended: false
     scholarship: "Pago por adelantado"
     payment_time: "Y obtén un descuento"
-    price: "€4,750*"
+    price: "€4,800*"
     bullets:
       - "Paga usando tu cuenta bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum."
-      - "Descuentos de hasta €2,050. Paga €4,750 en lugar de €6,800. Descuento sujeto a disponibilidad."     
+      - "Descuentos de hasta €2,000. Paga €4,800 en lugar de €6,800. Descuento sujeto a disponibilidad."     
     icons: 
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
@@ -293,12 +292,12 @@ part_time:
     recomended: true
     scholarship: "Paga de contado"
     payment_time: "Y obtén un descuento"
-    price: "4.750 €*"
-    original_price: " €"
+    price: "4.800 €*"
+    original_price: "6.800 €"
     offer: "~30% de DESCUENTO"
     bullets:
       - "Paga con transferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
-      - "*Descuento de hasta 2.050 €. Desde 4.750 € en vez de 6.800 €. ¡Descuento sujeto a disponibilidad!"     
+      - "*Descuento de hasta 2.000 €. Desde 4.800 € en vez de 6.800 €. ¡Descuento sujeto a disponibilidad!"     
     icons:  
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
@@ -328,9 +327,24 @@ part_time:
   #   icons: 
   #     - "/images/stepex.png"     
 
-  - slug: 'south-europe-scholarships-fs-pt'
+  - slug: 'south-europe-upfront-fs-pt'
     academies: ['lisbon-portugal','milan-italy','rome-italy']
     recomended: true
+    scholarship: "Paga de contado"
+    payment_time: "Y obtén un descuento"
+    price: "4.800 €*"
+    original_price: "6.800 €*"
+    bullets:
+      - "Paga con transferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
+      - "*Descuento de hasta 2.000 €. Desde 4.800 € en vez de 6.800 €. ¡Descuento sujeto a disponibilidad!"     
+    icons:   
+      - "/images/visa-mastercard.png"    
+      - "/images/bitcoin_logo.png"  
+      - "/images/ethereum.png"
+
+  - slug: 'south-europe-scholarships-fs-pt'
+    academies: ['lisbon-portugal','milan-italy','rome-italy']
+    recomended: false
     scholarship: "Becas disponibles"
     payment_time: ""
     price: "Desde 150 € al mes"
@@ -339,20 +353,6 @@ part_time:
       - "Becas disponibles de hasta 1.850 €. Desde 4.950 € en vez de 6.800 €. ¡BECAS SUJETAS A DISPONIBILIDAD!"     
     icons: 
       - "/images/quotanda-logo.png"
-
-  - slug: 'south-europe-upfront-fs-pt'
-    academies: ['lisbon-portugal','milan-italy','rome-italy']
-    recomended: false
-    scholarship: "Paga de contado"
-    payment_time: "Y obtén un descuento"
-    price: "4.750 €*"
-    bullets:
-      - "Paga con transferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
-      - "*Descuento de hasta 2.050 €. Desde 4.750 € en vez de 6.800 €. ¡Descuento sujeto a disponibilidad!"     
-    icons:   
-      - "/images/visa-mastercard.png"    
-      - "/images/bitcoin_logo.png"  
-      - "/images/ethereum.png"
 
   # - slug: 'south-europe-isa-fs-pt'
   #   academies: ['lisbon-portugal','milan-italy','rome-italy']
@@ -370,15 +370,15 @@ part_time:
 
   - slug: 'spain-upfront-fs-pt'
     academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain']
-    recomended: false
+    recomended: true
     scholarship: "Paga de contado"
     payment_time: "Y obtén un descuento"
-    price: "4.750 €*"
-    original_price: "4.750 €*"
+    price: "4.800 €*"
+    original_price: "6.800 €*"
     offer: "~30% de DESCUENTO"
     bullets:
       - "Paga con transferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
-      - "*Descuento de hasta 2.050 €. Desde 4.750 € en vez de 6.800 €. ¡Descuento sujeto a disponibilidad!"     
+      - "*Descuento de hasta 2.000 €. Desde 4.800 € en vez de 6.800 €. ¡Descuento sujeto a disponibilidad!"     
     icons: 
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
@@ -386,7 +386,7 @@ part_time:
 
   - slug: 'spain-scholarships-fs-pt'
     academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain']
-    recomended: true
+    recomended: false
     scholarship: "Becas disponibles"
     payment_time: ""
     price: "Desde 150 € al mes"
