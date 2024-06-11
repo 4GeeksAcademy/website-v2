@@ -1,4 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import { Link } from "gatsby";
+import styled from "styled-components";
+import ReCAPTCHA from "react-google-recaptcha";
 import { Container, Div, GridContainer } from "../Sections";
 import { Colors, RoundImage, Anchor, Button } from "../Styling";
 import { H3, H4 } from "../Heading";
@@ -7,8 +10,6 @@ import Icon from "../Icon";
 import { newsletterSignup } from "../../actions";
 import { SessionContext } from "../../session";
 import { Input } from "../Form";
-import { Link } from "gatsby";
-import styled from "styled-components";
 
 const formIsValid = (formData = null) => {
   if (!formData) return null;
@@ -43,6 +44,7 @@ const Form = styled.form`
 `;
 
 const Footer = ({ yml }) => {
+  const captcha = useRef(null);
   const { session } = React.useContext(SessionContext);
   let socials = session && session.location ? session.location.socials : [];
 
@@ -52,9 +54,16 @@ const Footer = ({ yml }) => {
   });
   const [formData, setVal] = useState({
     email: { value: "", valid: false },
+    token: { value: null, valid: false },
     consent: { value: true, valid: true },
   });
 
+  const captchaChange = () => {
+    const captchaValue = captcha?.current?.getValue();
+    if (captchaValue)
+      setVal({ ...formData, token: { value: captchaValue, valid: true } });
+    else setVal({ ...formData, token: { value: null, valid: false } });
+  };
   // Año actual
   const currentYear = new Date().getFullYear();
 
@@ -237,12 +246,16 @@ const Footer = ({ yml }) => {
                     fontSize="22px"
                     variant="full"
                     color={
-                      formStatus.status === "loading"
+                      formStatus.status === "loading" || !formData.token.valid
                         ? Colors.darkGray
                         : Colors.black
                     }
                     textColor={Colors.white}
-                    disabled={formStatus.status === "loading" ? true : false}
+                    disabled={
+                      formStatus.status === "loading" || !formData.token.valid
+                        ? true
+                        : false
+                    }
                   >
                     {formStatus.status === "loading" ? (
                       "Loading..."
@@ -257,6 +270,17 @@ const Footer = ({ yml }) => {
                     )}
                   </Button>
                 </Form>
+              </Div>
+              <Div
+                display={formData.email.valid ? "block" : "none"}
+                width="fit-content"
+                margin="10px auto 0 auto"
+              >
+                <ReCAPTCHA
+                  ref={captcha}
+                  sitekey={process.env.GATSBY_CAPTCHA_KEY}
+                  onChange={captchaChange}
+                />
               </Div>
             </>
           )}
