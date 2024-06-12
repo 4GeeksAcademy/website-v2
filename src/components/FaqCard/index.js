@@ -13,7 +13,7 @@ const FaqCard = ({ faqs, topicSlug, locationSlug, minPriority }) => {
     if (!locationSlug) return true;
     if (
       Array.isArray(question.locations) &&
-      question.locations.includes(locationSlug)
+      (question.locations.includes(locationSlug) || question.locations.includes("all"))
     )
       return true;
     return false;
