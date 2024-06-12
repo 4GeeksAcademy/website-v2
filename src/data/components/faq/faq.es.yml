@@ -34,7 +34,7 @@ faq:
     questions:
       # Inscripción
       - question: "¿Cómo me inscribo?" #Todas las locaciones
-        locations: ["atlanta-usa", "austin-usa", "barcelona-spain", "berlin-germany", "bogota-colombia", "buenosaires-argentina", "caracas-venezuela", "chicago-usa", "costa-rica", "downtown-miami", "dublin-ireland", "europe", "hamburg-germany", "houston-usa", "lapaz-bolivia", "lima-peru", "lisbon-portugal", "losangeles-usa", "madrid-spain", "malaga-spain", "mexicocity-mexico", "milan-italy", "montevideo-uruguay", "munich-germany", "newyork-usa", "online", "orlando", "panamacity-panama", "quito-ecuador", "rome-italy", "santiago-chile", "toronto-canada", "valencia-spain", "online", "online-spanish-usa"]
+        locations: ["all"]
         templates: ["faq"]
         priority: 1
         answer: |-
@@ -59,7 +59,7 @@ faq:
 
       - question: "¿Necesito tener mi propia laptop/portátil/notebook?" #todas las locaciones
         templates: ["faq"]
-        locations: ["atlanta-usa", "austin-usa", "barcelona-spain", "berlin-germany", "bogota-colombia", "buenosaires-argentina", "caracas-venezuela", "chicago-usa", "costa-rica", "downtown-miami", "dublin-ireland", "europe", "hamburg-germany", "houston-usa", "lapaz-bolivia", "lima-peru", "lisbon-portugal", "losangeles-usa", "madrid-spain", "malaga-spain", "mexicocity-mexico", "milan-italy", "montevideo-uruguay", "munich-germany", "newyork-usa", "online", "orlando", "panamacity-panama", "quito-ecuador", "rome-italy", "santiago-chile", "toronto-canada", "valencia-spain", "online", "online-spanish-usa"]
+        locations: ["all"]
         priority: 1
         answer: |-
           Sí, tener tu propia laptop es esencial para nuestras clases. Aunque no exigimos un sistema operativo específico para la mayoría de los programas, se recomienda tener una laptop con Windows, macOS o Linux instalado.<br>
@@ -81,26 +81,26 @@ faq:
         locations: ["barcelona-spain", "berlin-germany", "dublin-ireland", "europe", "hamburg-germany", "lisbon-portugal", "madrid-spain", "malaga-spain", "milan-italy", "munich-germany", "rome-italy", "valencia-spain"]
         priority: 1
         answer: |-
-          Proporcionamos múltiples opciones de pago adaptadas a tus necesidades. Puedes optar por realizar un pago único por adelantado o financiar tu matrícula hasta por 24 meses. Para determinar la mejor opción para ti, programa una llamada con nuestro equipo de admisiones o visita nuestra <a class="faq-link" href="/es/financiacion">página de financiación</a>. Para más detalles sobre cómo pagar, visita <a class="faq-link" href="https://4geeksacademy.com/es/aprender-a-programar/como-pagar-bootcamp-de-programacion">aquí</a>.
+          En europa y españa proporcionamos múltiples opciones de pago adaptadas a tus necesidades. Puedes optar por realizar un pago único por adelantado o financiar tu matrícula hasta por 24 meses. Para determinar la mejor opción para ti, programa una llamada con nuestro equipo de admisiones o visita nuestra <a class="faq-link" href="/es/financiacion">página de financiación</a>. Para más detalles sobre cómo pagar, visita <a class="faq-link" href="https://4geeksacademy.com/es/aprender-a-programar/como-pagar-bootcamp-de-programacion">aquí</a>.
 
       #Chile
       - question: "¿Cómo pago mi matrícula?" #Chile
         locations: ["santiago-chile"]
         priority: 1
         answer: |-
-          Proporcionamos múltiples opciones de pago adaptadas a tus necesidades. Puedes optar por realizar un pago único por adelantado o financiar tu matrícula hasta por 18 meses. Para determinar la mejor opción para ti, programa una llamada con nuestro equipo de admisiones o visita nuestra <a class="faq-link" href="/es/financiacion">página de financiación</a>. Para más detalles sobre cómo pagar, visita <a class="faq-link" href="https://4geeksacademy.com/es/aprender-a-programar/como-pagar-bootcamp-de-programacion">aquí</a>.
+          En chile proporcionamos múltiples opciones de pago adaptadas a tus necesidades. Puedes optar por realizar un pago único por adelantado o financiar tu matrícula hasta por 18 meses. Para determinar la mejor opción para ti, programa una llamada con nuestro equipo de admisiones o visita nuestra <a class="faq-link" href="/es/financiacion">página de financiación</a>. Para más detalles sobre cómo pagar, visita <a class="faq-link" href="https://4geeksacademy.com/es/aprender-a-programar/como-pagar-bootcamp-de-programacion">aquí</a>.
 
       # LATAM
       - question: "¿Cómo pago mi matrícula?" #LATAM
         locations: ["bogota-colombia", "buenosaires-argentina", "caracas-venezuela", "costa-rica", "lapaz-bolivia", "lima-peru", "mexicocity-mexico", "montevideo-uruguay", "panamacity-panama", "quito-ecuador"]
         priority: 1
         answer: |-
-          4Geeks Academy ofrece opciones de pago flexibles, incluyendo pagos únicos y financiamiento hasta por 24 meses. ¡Nos adaptamos a tus necesidades! Para más detalles, visita nuestra <a class="faq-link" href="/es/financiacion">página de financiación</a>. También puedes encontrar más información sobre cómo pagar <a class="faq-link" href="https://4geeksacademy.com/es/  aprender-a-programar/como-pagar-bootcamp-de-programacion">aquí</a>.
+          En Latinoamérica 4Geeks Academy ofrece opciones de pago flexibles, incluyendo pagos únicos y financiamiento hasta por 24 meses. ¡Nos adaptamos a tus necesidades! Para más detalles, visita nuestra <a class="faq-link" href="/es/financiacion">página de financiación</a>. También puedes encontrar más información sobre cómo pagar <a class="faq-link" href="https://4geeksacademy.com/es/  aprender-a-programar/como-pagar-bootcamp-de-programacion">aquí</a>.
       ## // ¿Cómo pago mi matrícula? //
 
       ## ¿4Geeks academy Ofrece  apoyo profesional?
       - question: "¿4Geeks Academy ofrece apoyo profesional?" #todas las locaciones
-        locations: ["atlanta-usa", "austin-usa", "barcelona-spain", "berlin-germany", "bogota-colombia", "buenosaires-argentina", "caracas-venezuela", "chicago-usa", "costa-rica", "downtown-miami", "dublin-ireland", "europe", "hamburg-germany", "houston-usa", "lapaz-bolivia", "lima-peru", "lisbon-portugal", "losangeles-usa", "madrid-spain", "malaga-spain", "mexicocity-mexico", "milan-italy", "montevideo-uruguay", "munich-germany", "newyork-usa", "online", "online-spanish-usa", "orlando", "panamacity-panama", "quito-ecuador", "rome-italy", "santiago-chile", "toronto-canada", "valencia-spain"]
+        locations: ["all"]
         templates: ["faq"]
         priority: 1
         answer: |-
@@ -116,7 +116,7 @@ faq:
         templates: ["faq"]
         priority: 1
         answer: |-
-          Nuestro plan de pagos extendido te permite distribuir los pagos de tu matrícula durante un período de hasta 2 años, lo que te permite pagar gradualmente durante y después del curso. Para inscribirte, se requiere un depósito inicial de $500, y el saldo restante se divide por igual durante el número acordado de meses, <span style="font-weight: 700;">sin cargos de interés</span>
+          Nuestro plan de pago extendido en estados unidos te permite distribuir los pagos de tu matrícula durante un período de hasta 2 años, lo que te permite pagar gradualmente durante y después del curso. Para inscribirte, se requiere un depósito inicial de $500, y el saldo restante se divide por igual durante el número acordado de meses, <span style="font-weight: 700;">sin cargos de interés</span>
 
       - question: "¿Plan de pago extendido? ¿Cómo funciona? ¿Qué significa eso?" #Europe + LATAM
         locations: ["barcelona-spain", "berlin-germany", "dublin-ireland", "europe", "hamburg-germany", "lisbon-portugal", "madrid-spain", "malaga-spain", "milan-italy", "munich-germany", "rome-italy", "valencia-spain", "bogota-colombia", "buenosaires-argentina", "caracas-venezuela", "costa-rica", "lapaz-bolivia", "lima-peru", "mexicocity-mexico", "montevideo-uruguay", "panamacity-panama", "quito-ecuador"]
@@ -128,7 +128,7 @@ faq:
         locations: ["santiago-chile"]
         priority: 1
         answer: |-
-          El Plan de Pagos Extendido está diseñado específicamente para satisfacer las necesidades de nuestros estudiantes en Chile. Puedes solicitar un plan que dure 6, 12, 18 o 24 meses, lo que te permite pagar de manera gradual. Simplemente paga el depósito requerido y firma un contrato que detalle el calendario de pagos que mejor se adapte a tu estilo de vida. Para obtener más detalles sobre el plan, haz clic <a rel="noopener noreferrer nofollow" href="https://quotanda.com/en/4geeks/">aquí</a>. Para más detalles, visita nuestra <a class="faq-link" href="https://4geeksacademy.com/es/financiacion">página de financiación</a>.
+          El Plan de Pagos Extendido está diseñado específicamente para satisfacer las necesidades de nuestros estudiantes en Chile. Puedes solicitar un plan que dure 6, 12, 18 o 24 meses, lo que te permite pagar de manera gradual. Simplemente paga el depósito requerido y firma un contrato que detalle el calendario de pagos que mejor se adapte a tu estilo de vida chileno. Para obtener más detalles sobre el plan, haz clic <a rel="noopener noreferrer nofollow" href="https://quotanda.com/en/4geeks/">aquí</a>. Para más detalles, visita nuestra <a class="faq-link" href="https://4geeksacademy.com/es/financiacion">página de financiación</a>.
       ##  // ¿Plan de pago extendido? ¿Cómo funciona? ¿Qué significa eso?  //
 
       ##  ¿Puedo pagar después de conseguir un trabajo?
@@ -144,7 +144,7 @@ faq:
       #   locations: ["atlanta-usa", "austin-usa", "chicago-usa", "downtown-miami", "houston-usa", "losangeles-usa", "newyork-usa", "orlando", "online", "online-spanish-usa"]
       #   priority: 1
       #   answer: |-
-      #     ¡Sí! Con nuestro Acuerdo de Participación en Ingresos (ISA), solo pagarás $1,000 por adelantado por el bootcamp. La matrícula restante se paga solo después de que consigas un trabajo que te reporte más de $35,000 al año. Si no eres contratado, no pagarás nada. Además, si pierdes tu trabajo por cualquier razón, tus pagos se pausarán hasta que vuelvas a estar empleado.
+      #     ¡Sí! Con nuestro Acuerdo de Participación en Ingresos (ISA) en Estados Unidos, solo pagarás $1,000 por adelantado por el bootcamp. La matrícula restante se paga solo después de que consigas un trabajo que te reporte más de $35,000 al año. Si no eres contratado, no pagarás nada. Además, si pierdes tu trabajo por cualquier razón, tus pagos se pausarán hasta que vuelvas a estar empleado.
 
       ## ¿Puedo pagar después de conseguir un trabajo?
 
@@ -160,7 +160,7 @@ faq:
         locations: ["atlanta-usa", "austin-usa", "chicago-usa", "downtown-miami", "houston-usa", "losangeles-usa", "newyork-usa", "orlando", "online", "online-spanish-usa"]
         priority: 1
         answer: |-
-          ¡Sí, absolutamente! La mentoría es fundamental en lo que hacemos. Como estudiante de 4Geeks, disfrutarás de acceso ilimitado a mentoría de por vida. Esto incluye sesiones uno a uno, sesiones grupales, acceso a un canal de soporte de Slack con más de 5,000 desarrolladores en todo el mundo y participación en talleres técnicos.
+          ¡Sí, absolutamente! La mentoría es fundamental en lo que hacemos. Como estudiante de 4Geeks en Estados Unidos, disfrutarás de acceso ilimitado a mentoría de por vida. Esto incluye sesiones uno a uno, sesiones grupales, acceso a un canal de soporte de Slack con más de 5,000 desarrolladores en todo el mundo y participación en talleres técnicos.
       ##  // ¿4Geeks Academy Ofrece  mentorías? //
 
       ## ¿Necesito experiencia previa?
@@ -171,7 +171,7 @@ faq:
           No necesitas experiencia previa para unirte a nuestros bootcamps. Creemos en hacer que nuestros cursos sean accesibles para cualquier persona que quiera cambiar sus vidas, independientemente de su experiencia anterior o conocimientos previos. Hemos desarrollado internamente herramientas de aprendizaje interactivas, en tiempo real y galardonadas con contenido, planes de estudio y un marco para ayudar a todos a aprender de manera eficiente, independientemente de su experiencia previa. Nuestra experiencia previa nivelará a los estudiantes y ofrecerá desafíos de manera incremental, junto con videos, tutoría de inteligencia artificial, mentorías ilimitadas y documentación para apoyar su viaje de aprendizaje. ¡Explora nuestro <a class="faq-link" href="https://4geeksacademy.com/es/blog-en-espanol/curso-programacion">curso de programación</a> para comenzar tu viaje hacia una nueva carrera en tecnología!
 
       - question: "¿Necesito experiencia previa?" #all locations
-        locations: ["atlanta-usa", "austin-usa", "barcelona-spain", "berlin-germany", "bogota-colombia", "buenosaires-argentina", "caracas-venezuela", "chicago-usa", "costa-rica", "downtown-miami", "dublin-ireland", "europe", "hamburg-germany", "houston-usa", "lapaz-bolivia", "lima-peru", "lisbon-portugal", "losangeles-usa", "madrid-spain", "malaga-spain", "mexicocity-mexico", "milan-italy", "montevideo-uruguay", "munich-germany", "newyork-usa", "online", "online-spanish-usa", "orlando", "panamacity-panama", "quito-ecuador", "rome-italy", "santiago-chile", "toronto-canada", "valencia-spain"]
+        locations: ["all"]
         priority: 1
         answer: |-
           No, no necesitas experiencia previa para unirte. Nuestro plan de estudios está diseñado para llevarte de 0 a especialista. Comenzamos desde lo básico, así que si no tienes experiencia previa en tecnología, ¡no hay problema! Descubre más sobre cómo empezar tu viaje en nuestra <a class="faq-link" href="https://4geeksacademy.com/es/blog-en-espanol/bootcamp-de-programacion">bootcamp de programación</a>.
@@ -181,7 +181,7 @@ faq:
     slug: "programs"
     questions:
       - question: "¿GeekForce o GeekPal, cuál elegir?" #all locations
-        locations: ["atlanta-usa", "austin-usa", "barcelona-spain", "berlin-germany", "bogota-colombia", "buenosaires-argentina", "caracas-venezuela", "chicago-usa", "costa-rica", "downtown-miami", "dublin-ireland", "europe", "hamburg-germany", "houston-usa", "lapaz-bolivia", "lima-peru", "lisbon-portugal", "losangeles-usa", "madrid-spain", "malaga-spain", "mexicocity-mexico", "milan-italy", "montevideo-uruguay", "munich-germany", "newyork-usa", "online", "online-spanish-usa", "orlando", "panamacity-panama", "quito-ecuador", "rome-italy", "santiago-chile", "toronto-canada", "valencia-spain"]
+        locations: ["all"]
         templates: ["faq"]
         priority: 1
         answer: |-
@@ -191,7 +191,7 @@ faq:
           Recuerda, ambos servicios son ilimitados y de por vida, por lo que siempre puedes cambiar o usar ambos a medida que evolucionen tus necesidades a lo largo de tu carrera.
 
       - question: "¿Cuántas horas a la semana necesito tener disponibles?"
-        locations: ["atlanta-usa", "austin-usa", "barcelona-spain", "berlin-germany", "bogota-colombia", "buenosaires-argentina", "caracas-venezuela", "chicago-usa", "costa-rica", "downtown-miami", "dublin-ireland", "europe", "hamburg-germany", "houston-usa", "lapaz-bolivia", "lima-peru", "lisbon-portugal", "losangeles-usa", "madrid-spain", "malaga-spain", "mexicocity-mexico", "milan-italy", "montevideo-uruguay", "munich-germany", "newyork-usa", "online", "orlando", "panamacity-panama", "quito-ecuador", "rome-italy", "santiago-chile", "toronto-canada", "valencia-spain"]
+        locations: ["all"]
         templates: ["faq"]
         priority: 1
         answer: |
@@ -254,7 +254,7 @@ faq:
         locations: ["atlanta-usa", "austin-usa", "chicago-usa", "downtown-miami", "houston-usa", "losangeles-usa", "newyork-usa", "orlando", "online", "online-spanish-usa"]
         priority: 1
         answer: |-
-          En 4Geeks Academy ofrecemos opciones de horarios flexibles para adaptarnos a tus necesidades:
+          En Estados Unidos y online ofrecemos opciones de horarios flexibles para adaptarnos a tus necesidades:
           Horario de Medio Tiempo:
           <ul>
               <li><strong>Lunes, Miércoles y Viernes:</strong> de 18:30 a 21:30 hrs.</li>
@@ -269,7 +269,7 @@ faq:
         locations: ["santiago-chile"]
         priority: 1
         answer: |-
-          lunes, miércoles y viernes de 18:30 a 21:30 hrs o martes y jueves de 18:30 a 21:30 hrs y sábado de 9:00 a 12:00 hrs.
+          En santiago de chile y online las clases son lunes, miércoles y viernes de 18:30 a 21:30 hrs o martes y jueves de 18:30 a 21:30 hrs y sábado de 9:00 a 12:00 hrs.
           - Tiempo completo:
             De lunes a viernes de 9:00 a 18:00 hrs.
 
@@ -287,7 +287,7 @@ faq:
       # cual es el horario LATAM 
 
       # Colombia
-      - question: "¿Cuál es el horario?" #colombia
+      - question: "¿Cuál es el horario de clases en Colombia?" #colombia
         locations: ["bogota-colombia"]
         priority: 1
         answer: |-
@@ -296,7 +296,7 @@ faq:
           7:30pm a 10:30pm 
 
       # Argentina
-      - question: "¿Cuál es el horario?" #argentina
+      - question: "¿Cuál es el horario de clases en Argentina?" #argentina
         locations: ["buenosaires-argentina"]
         priority: 1
         answer: |-
@@ -305,7 +305,7 @@ faq:
           9:30pm a 12:30am
 
       # Venezuela
-      - question: "¿Cuál es el horario?" #caracas
+      - question: "¿Cuál es el horario de clases en Venezuela?" #caracas
         locations: ["caracas-venezuela"]
         priority: 1
         answer: |-
@@ -314,7 +314,7 @@ faq:
           8:30pm a 11:30pm
 
       # Costa Rica
-      - question: "¿Cuál es el horario?" #costa rica
+      - question: "¿Cuál es el horario de clases en Costa Rica?" #costa rica
         locations: ["costa-rica"]
         priority: 1
         answer: |-
@@ -323,7 +323,7 @@ faq:
           6:30pm a 9:30pm
 
       # Bolivia
-      - question: "¿Cuál es el horario?" #bolivia
+      - question: "¿Cuál es el horario de clases en Bolivia?" #bolivia
         locations: ["lapaz-bolivia"]
         priority: 1
         answer: |-
@@ -332,7 +332,7 @@ faq:
           8:30pm a 11:30pm
 
       # Perú
-      - question: "¿Cuál es el horario?" #lima
+      - question: "¿Cuál es el horario de clases en Perú?" #lima
         locations: ["lima-peru"]
         priority: 1
         answer: |-
@@ -341,7 +341,7 @@ faq:
           7:30pm a 10:30pm
 
       # México
-      - question: "¿Cuál es el horario?" #mexico
+      - question: "¿Cuál es el horariode clases en México?" #mexico
         locations: ["mexicocity-mexico"]
         priority: 1
         answer: |-
@@ -350,7 +350,7 @@ faq:
           6:30pm a 9:30pm
 
       # Uruguay
-      - question: "¿Cuál es el horario?" #Latam
+      - question: "¿Cuál es el horario de clases en Uruguay?"
         locations: ["montevideo-uruguay"]
         priority: 1
         answer: |-
@@ -359,7 +359,7 @@ faq:
           9:30pm a 12:30am
 
       # Panamá
-      - question: "¿Cuál es el horario?" #Latam
+      - question: "¿Cuál es el horario de clases en Panamá?" #
         locations: ["panamacity-panama"]
         priority: 1
         answer: |-
@@ -368,7 +368,7 @@ faq:
           7:30pm a 10:30pm
 
       # Ecuador
-      - question: "¿Cuál es el horario?" #Latam
+      - question: "¿Cuál es el horario de clases en Ecuador?" #Latam
         locations: ["quito-ecuador"]
         priority: 1
         answer: |-
@@ -379,7 +379,7 @@ faq:
 
       # Consiguiendo un trabajo después del programa
       - question: "¿Consigo un trabajo después de completar el programa?" # Todas las ubicaciones
-        locations: ["atlanta-usa", "austin-usa", "barcelona-spain", "berlin-germany", "bogota-colombia", "buenosaires-argentina", "caracas-venezuela", "chicago-usa", "costa-rica", "downtown-miami", "dublin-ireland", "europe", "hamburg-germany", "houston-usa", "lapaz-bolivia", "lima-peru", "lisbon-portugal", "losangeles-usa", "madrid-spain", "malaga-spain", "mexicocity-mexico", "milan-italy", "montevideo-uruguay", "munich-germany", "newyork-usa", "online", "orlando", "panamacity-panama", "quito-ecuador", "rome-italy", "santiago-chile", "toronto-canada", "valencia-spain"]
+        locations: ["all"]
         templates: ["faq"]
         priority: 1
         answer: |-
