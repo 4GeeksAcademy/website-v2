@@ -14,7 +14,6 @@ full_time:
     icons:
       - "/images/ascent_logo.jpg"
       - "/images/climb-logo.png"
-      - "/images/quotanda-logo.png"
 
   - slug: 'plan-1'
     academies: ['downtown-miami', 'orlando']
@@ -42,7 +41,6 @@ full_time:
     icons: 
       - "/images/ascent_logo.jpg"
       - "/images/climb-logo.png"
-      - "/images/quotanda-logo.png"
 
 
 part_time:
@@ -164,7 +162,7 @@ part_time:
       - "Financiación a tu medida, con o sin intereses, desde 4 hasta 30 meses"
       - "Becas disponibles de hasta 2.400 €. Desde 5.400 € en vez de 7.800 €"     
     icons: 
-      - "/images/quotanda-logo.png"
+      - "/images/bcas.png"
           
   # - slug: 'north-europe-isa-ds-pt'
   #   academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany', 'munich-germany']
@@ -204,7 +202,7 @@ part_time:
       - "Financiación a tu medida, con o sin intereses, desde 4 hasta 30 meses"
       - "Becas disponibles de hasta 2.400 €. Desde 5.400 € en vez de 7.800 €"     
     icons: 
-      - "/images/quotanda-logo.png"
+      - "/images/bcas.png"
 
   # - slug: 'south-europe-isa-ds-pt'
   #   academies: ['lisbon-portugal','milan-italy','rome-italy']

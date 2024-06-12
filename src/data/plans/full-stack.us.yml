@@ -49,7 +49,6 @@ full_time:
     icons:
       - "/images/ascent_logo.jpg"
       - "/images/climb-logo.png"
-      - "/images/quotanda-logo.png"
 
   - slug: 'usa-fs-ft'
     academies: ['downtown-miami']
@@ -193,7 +192,6 @@ part_time:
     icons: 
       - "/images/ascent_logo.jpg"
       - "/images/climb-logo.png"
-      - "/images/quotanda-logo.png"
 
   - slug: 'usa-clark-scholarship-pt'
     academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
@@ -250,7 +248,7 @@ part_time:
       - "Customized financing without interests. From 4 to 30 months."
       - "Scholarships available up to €1,850. Pay €4,950 instead of €6,800. Scholarships subject to availability!"     
     icons:
-      - "/images/quotanda-logo.png"
+      - "/images/bcas.png"
 
   # - slug: 'north-europe-isa-fs-pt'
   #   academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany', 'munich-germany']
@@ -291,7 +289,7 @@ part_time:
       - "Customized financing without interests. From 4 to 30 months."
       - "Scholarships available up to €1,850. Pay €4,950 instead of €6,800. Scholarships subject to availability!"     
     icons: 
-      - "/images/quotanda-logo.png"
+      - "/images/bcas.png"
 
   # - slug: 'south-europe-isa-fs-pt'
   #   academies: ['lisbon-portugal','milan-italy','rome-italy']
@@ -336,7 +334,7 @@ part_time:
       - "/images/zank.png"
       - "/images/sequra.png"
       - "/images/nemuru.png"
-      - "/images/quotanda-logo.png"
+      - "/images/bcas.png"
 
   # - slug: 'spain-isa-fs-pt'
   #   academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']

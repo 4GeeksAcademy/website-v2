@@ -49,7 +49,7 @@ full_time:
     icons:
       - "/images/ascent_logo.jpg"
       - "/images/climb-logo.png"
-      - "/images/quotanda-logo.png"
+      - "/images/bcas.png"
 
   - slug: 'usa-fs-ft'
     academies: ['downtown-miami']
@@ -146,7 +146,7 @@ full_time:
       - "Financiamiento personalizado sin intereses. De 4 a 30 meses."
       - "Becas disponibles de hasta €1,850. Paga €4,950 en lugar de €6,800. ¡Becas sujetas a disponibilidad!"     
     icons:
-      - "/images/quotanda-logo.png"
+      - "/images/bcas.png"
 
   - slug: 'south-europe-upfront-fs-pt'
     academies: ['lisbon-portugal', 'milan-italy', 'rome-italy']
@@ -175,7 +175,7 @@ full_time:
       - "Financiamiento personalizado sin intereses. De 4 a 30 meses."
       - "Becas disponibles de hasta €1,850. Paga €4,950 en lugar de €6,800. ¡Becas sujetas a disponibilidad!"     
     icons: 
-      - "/images/quotanda-logo.png"
+      - "/images/bcas.png"
 
 ## Chile 
 
@@ -257,7 +257,7 @@ part_time:
     icons: 
       - "/images/ascent_logo.jpg"
       - "/images/climb-logo.png"
-      - "/images/quotanda-logo.png"
+      - "/images/bcas.png"
 
   - slug: 'usa-clark-scholarship-pt'
     academies: ['downtown-miami', 'orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'toronto-canada']
@@ -313,7 +313,7 @@ part_time:
       - "Financiación a tu medida, con o sin intereses, desde 4 hasta 48 meses"
       - "Becas disponibles de hasta 1.850 €. Desde 4.950 € en vez de 6.800 €. ¡BECAS SUJETAS A DISPONIBILIDAD!"     
     icons: 
-      - "/images/quotanda-logo.png"
+      - "/images/bcas.png"
                        
   # - slug: 'north-europe-isa-fs-pt'
   #   academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany', 'munich-germany']
@@ -352,7 +352,7 @@ part_time:
       - "Financiación a tu medida, con o sin intereses, desde 4 hasta 48 meses"
       - "Becas disponibles de hasta 1.850 €. Desde 4.950 € en vez de 6.800 €. ¡BECAS SUJETAS A DISPONIBILIDAD!"     
     icons: 
-      - "/images/quotanda-logo.png"
+      - "/images/bcas.png"
 
   # - slug: 'south-europe-isa-fs-pt'
   #   academies: ['lisbon-portugal','milan-italy','rome-italy']
@@ -397,7 +397,7 @@ part_time:
       - "/images/zank.png"
       - "/images/sequra.png"
       - "/images/nemuru.png"
-      - "/images/quotanda-logo.png"
+      - "/images/bcas.png"
 
   # - slug: 'spain-isa-fs-pt'
   #   academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain']

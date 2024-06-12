@@ -62,7 +62,7 @@ part_time:
       - "/images/zank.png"
       - "/images/sequra.png"
       - "/images/nemuru.png"
-      - "/images/quotanda-logo.png" 
+      - "/images/bcas.png" 
 
   # - slug: 'spain-isa-cs-pt'
   #   academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
@@ -102,7 +102,7 @@ part_time:
       - "Tailor-made financing plans, with or without interest, from 4 to 30 installments"
       - "Scholarships available up to €2400. From €5400 instead of €7800"     
     icons: 
-      - "/images/quotanda-logo.png"
+      - "/images/bcas.png"
                        
   # - slug: 'north-europe-isa-cs-pt'
   #   academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany', 'munich-germany']
@@ -142,7 +142,7 @@ part_time:
       - "Tailor-made financing plans, with or without interest, from 4 to 30 installments"
       - "Scholarships available up to €2400. From €5400 instead of €7800"     
     icons: 
-      - "/images/quotanda-logo.png"
+      - "/images/bcas.png"
 
   # - slug: 'south-europe-isa-cs-pt'
   #   academies: ['lisbon-portugal','milan-italy','rome-italy']

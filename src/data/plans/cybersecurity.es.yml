@@ -45,7 +45,7 @@ part_time:
       - "/images/zank.png"
       - "/images/sequra.png"
       - "/images/nemuru.png"
-      - "/images/quotanda-logo.png"
+      - "/images/bcas.png"
 
   - slug: 'spain-upfront-cs-pt'
     academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain']
@@ -101,7 +101,7 @@ part_time:
       - "/images/zank.png"
       - "/images/sequra.png"
       - "/images/nemuru.png"
-      - "/images/quotanda-logo.png" 
+      - "/images/bcas.png" 
 
   - slug: 'north-europe-upfront-cs-pt'
     academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany','munich-germany']
@@ -129,7 +129,7 @@ part_time:
       - "Planes de financiamiento a medida, con o sin interés, de 4 a 30 cuotas"
       - "Becas disponibles de hasta €2400. Desde €5400 en lugar de €7800"     
     icons: 
-      - "/images/quotanda-logo.png"
+      - "/images/bcas.png"
                        
   # - slug: 'north-europe-isa-cs-pt'
   #   academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany', 'munich-germany']
@@ -169,7 +169,7 @@ part_time:
       - "Planes de financiamiento a medida, con o sin intereses, de 4 a 30 cuotas"
       - "Becas disponibles de hasta €2400. De €5400 en lugar de €7800"     
     icons: 
-      - "/images/quotanda-logo.png"
+      - "/images/bcas.png"
 
   # - slug: 'south-europe-isa-cs-pt'
   #   academies: ['lisbon-portugal','milan-italy','rome-italy']
