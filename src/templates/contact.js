@@ -62,7 +62,10 @@ const Contact = (props) => {
         } else {
           setFormStatus({ status: "loading", msg: "Loading..." });
           const token = await captcha.current.executeAsync();
-          contactUs({ ...formData, token: { value: token, valid: true } }, session)
+          contactUs(
+            { ...formData, token: { value: token, valid: true } },
+            session
+          )
             .then((data) => {
               if (data.error !== false && data.error !== undefined) {
                 setFormStatus({ status: "error", msg: "Fix errors" });

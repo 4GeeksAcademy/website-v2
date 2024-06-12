@@ -450,7 +450,7 @@ const Apply = (props) => {
                   }
                 }
               } catch (e) {
-                console.log('e');
+                console.log("e");
                 console.log(e);
               }
             }}
@@ -698,11 +698,7 @@ const Apply = (props) => {
                 }
                 textColor={Colors.white}
                 padding=".45rem 3rem"
-                disabled={
-                  formStatus.status === "loading"
-                    ? true
-                    : false
-                }
+                disabled={formStatus.status === "loading" ? true : false}
               >
                 {formStatus.status === "loading"
                   ? "Loading..."

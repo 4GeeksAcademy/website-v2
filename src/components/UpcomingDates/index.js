@@ -552,8 +552,15 @@ const UpcomingDates = ({
                                 status: "loading",
                                 msg: "Loading...",
                               });
-                              const token = await captcha.current.executeAsync();
-                              newsletterSignup({ ...formData, token: { value: token, valid: true } }, session)
+                              const token =
+                                await captcha.current.executeAsync();
+                              newsletterSignup(
+                                {
+                                  ...formData,
+                                  token: { value: token, valid: true },
+                                },
+                                session
+                              )
                                 .then((data) => {
                                   if (
                                     data.error !== false &&
@@ -626,9 +633,7 @@ const UpcomingDates = ({
                             }
                             textColor={Colors.white}
                             disabled={
-                              formStatus.status === "loading"
-                                ? true
-                                : false
+                              formStatus.status === "loading" ? true : false
                             }
                           >
                             {formStatus.status === "loading"

@@ -321,7 +321,10 @@ const LeadForm = ({
         } else {
           setFormStatus({ status: "loading", msg: yml.messages.loading });
           const token = await captcha.current.executeAsync();
-          formHandler({ ...cleanedData, token: { value: token, valid: true } }, session)
+          formHandler(
+            { ...cleanedData, token: { value: token, valid: true } },
+            session
+          )
             .then((data) => {
               if (data && data.error !== false && data.error !== undefined) {
                 setFormStatus({ status: "error", msg: data.error });
@@ -604,11 +607,7 @@ const LeadForm = ({
                       ? Colors.darkGray
                       : Colors.white
                   }
-                  disabled={
-                    formStatus.status === "loading"
-                      ? true
-                      : false
-                  }
+                  disabled={formStatus.status === "loading" ? true : false}
                 >
                   {formStatus.status === "loading" ? "Loading..." : sendLabel}
                 </Button>

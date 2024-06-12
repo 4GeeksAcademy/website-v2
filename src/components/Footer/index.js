@@ -193,7 +193,10 @@ const Footer = ({ yml }) => {
                     } else {
                       setFormStatus({ status: "loading", msg: "Loading..." });
                       const token = await captcha.current.executeAsync();
-                      newsletterSignup({ ...formData, token: { value: token, valid: true } }, session)
+                      newsletterSignup(
+                        { ...formData, token: { value: token, valid: true } },
+                        session
+                      )
                         .then((data) => {
                           if (
                             data.error !== false &&
@@ -251,11 +254,7 @@ const Footer = ({ yml }) => {
                         : Colors.black
                     }
                     textColor={Colors.white}
-                    disabled={
-                      formStatus.status === "loading"
-                        ? true
-                        : false
-                    }
+                    disabled={formStatus.status === "loading" ? true : false}
                   >
                     {formStatus.status === "loading" ? (
                       "Loading..."
@@ -271,10 +270,7 @@ const Footer = ({ yml }) => {
                   </Button>
                 </Form>
               </Div>
-              <Div
-                width="fit-content"
-                margin="10px auto 0 auto"
-              >
+              <Div width="fit-content" margin="10px auto 0 auto">
                 <ReCAPTCHA
                   ref={captcha}
                   sitekey={process.env.GATSBY_CAPTCHA_KEY}
