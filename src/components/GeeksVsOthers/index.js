@@ -1,13 +1,21 @@
 import React, { useState } from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
-import { GridContainer, Div } from "../Sections";
+import { GridContainer, Div, HR } from "../Sections";
 import { H2, H3, Paragraph } from "../Heading";
 import { Colors } from "../Styling";
 import Icon from "../Icon";
 // import Link from "gatsby-link";
 import Fragment from "../Fragment";
 
-const GeeksVsOthers = (props) => {
+const GeeksVsOthers = ({
+  title,
+  paragraph,
+  limit,
+  link,
+  lang,
+  mainBackround,
+  style,
+}) => {
   const [selected, setSelected] = useState({ index: null, manual: false });
 
   const data = useStaticQuery(graphql`
@@ -43,38 +51,43 @@ const GeeksVsOthers = (props) => {
   `);
 
   let geeks = data.allGeeksVsOthersYaml.edges.find(
-    ({ node }) => node.fields.lang === props.lang
+    ({ node }) => node.fields.lang === lang
   );
   if (geeks) geeks = geeks.node;
 
   return (
-    <Fragment github="/components/geeks_vs_others">
-      {props.title && props.paragraph && (
-        <GridContainer margin_tablet="0 0 38px 0" margin="0 0 24px 0">
-          <Div
-            display="flex"
-            flexDirection="column"
-            alignItems="center"
-            padding_tablet="0 4em"
-            padding="0 2em"
+    <Div display="block" style={style} github="/components/geeks_vs_others">
+      {title && paragraph && (
+        <Div
+          display="flex"
+          flexDirection="column"
+          alignItems="center"
+          padding_tablet="0 4em"
+          padding="0 2em"
+          margin_tablet="0 auto 38px auto"
+          margin="0 auto 24px auto"
+          maxWidth="1280px"
+        >
+          <H2
+            margin="0 0 15px 0"
+            fontSize="24px"
+            fontSize_tablet="32px"
+            fontWeight="400"
+            lineHeight="29px"
+            lineHeight_tablet="38px"
+            marginTop="30px"
           >
-            <H2
-              margin="0 0 15px 0"
-              fontSize="24px"
-              fontSize_tablet="32px"
-              fontWeight="700"
-              lineHeight="29px"
-              lineHeight_tablet="38px"
-              marginTop="30px"
-            >
-              {props.title}
-            </H2>
-            <Paragraph fontSize_tablet="15px" fontSize="18px">
-              {" "}
-              {props.paragraph}
-            </Paragraph>
-          </Div>
-        </GridContainer>
+            {title}
+          </H2>
+          <Paragraph
+            color={Colors.darkGray}
+            opacity="1"
+            fontSize_tablet="21px"
+            fontSize="18px"
+          >
+            {paragraph}
+          </Paragraph>
+        </Div>
       )}
 
       {/* 3 / span 10 */}
@@ -88,28 +101,30 @@ const GeeksVsOthers = (props) => {
         justifyContent="center"
       >
         <GridContainer
-          borderRadiusChild="3px"
-          borderRadiusChild_tablet="3px"
+          borderRadiusChild="4px"
+          borderRadiusChild_tablet="4px"
           overflowChild="auto"
-          containerColumns_tablet={`1fr repeat(10, 1fr) 1fr`}
-          gridColumn_tablet="2 / span 10"
+          containerColumns_tablet="1fr repeat(10, 1fr) 1fr"
+          gridColumn_tablet="1 / span 12"
           columns_tablet="9"
           columns="3"
-          backgroundChild={Colors.whitePink}
+          backgroundChild={mainBackround || Colors.whitePink}
           gridGap="0"
+          columnGap="16px"
           padding_tabletChild="10px"
+          width="100%"
         >
           <Div
             gridColumn_tablet="1 / 4"
             height="74px"
             alignItems="center"
             padding="0 5px 0 20px"
-            padding_tablet="0 5px 0 10px"
+            padding_tablet="0 16px"
           >
             <H3
               textAlign="left"
               fontSize="24px"
-              fontWeight="900"
+              fontWeight="400"
               lineHeight="28px"
               color={Colors.darkGray}
             >
@@ -120,16 +135,17 @@ const GeeksVsOthers = (props) => {
             gridColumn_tablet="4 / 7"
             height="74px"
             alignItems="center"
-            background={Colors.veryLightBlue}
+            background={Colors.blue}
+            borderRadius="4px 4px 0 0"
             padding="0 25px 0 20px"
-            padding_tablet="0 5px 0 40px"
+            padding_tablet="0 16px"
           >
             <H3
               textAlign="left"
               fontSize="24px"
-              fontWeight="900"
+              fontWeight="400"
               lineHeight="28px"
-              color={Colors.darkGray}
+              color={Colors.white}
             >
               {geeks.titles.at_geeks}
             </H3>
@@ -139,13 +155,14 @@ const GeeksVsOthers = (props) => {
             height="74px"
             alignItems="center"
             background={Colors.white}
+            borderRadius="4px"
             padding="0 25px 0 20px"
-            padding_tablet="0 5px 0 40px"
+            padding_tablet="0 16px"
           >
             <H3
               textAlign="left"
               fontSize="24px"
-              fontWeight="900"
+              fontWeight="400"
               lineHeight="28px"
               color={Colors.darkGray}
             >
@@ -153,93 +170,82 @@ const GeeksVsOthers = (props) => {
             </H3>
           </Div>
 
-          {geeks.info.slice(0, props.limit || geeks.info.length).map((m, i) => {
+          {geeks.info.slice(0, limit || geeks.info.length).map((m, i, arr) => {
             return (
               <React.Fragment key={i}>
                 <Div
                   gridColumn_tablet="1 / 4"
-                  borderBottom={
-                    i < geeks.info.length - 1 &&
-                    "1px solid rgba(164, 164, 164, 0.4)"
-                  }
-                  height="74px"
-                  alignItems="center"
                   padding="0 5px 0 20px"
-                  padding_tablet="0 5px 0 10px"
+                  padding_tablet="0 16px"
+                  display="block"
                 >
-                  <H3
-                    textAlign="left"
-                    fontSize="15px"
-                    fontWeight="700"
-                    lineHeight="22px"
-                    textTransform="uppercase"
-                    color={Colors.darkGray}
-                  >
-                    {m.features}
-                  </H3>
+                  <Div height="74px" alignItems="center">
+                    <H3
+                      textAlign="left"
+                      fontSize="15px"
+                      fontWeight="400"
+                      lineHeight="22px"
+                      textTransform="uppercase"
+                      color={Colors.darkGray}
+                    >
+                      {m.features}
+                    </H3>
+                  </Div>
+                  {i < arr.length - 1 && (
+                    <HR height="1px" background="rgba(164, 164, 164, 0.4)" />
+                  )}
                 </Div>
                 <Div
                   gridColumn_tablet="4 / 7"
-                  borderBottom={
-                    i < geeks.info.length - 1 &&
-                    "1px solid rgba(164, 164, 164, 0.4)"
-                  }
-                  height="74px"
-                  alignItems="center"
-                  background={Colors.veryLightBlue}
+                  borderRadius={i === arr.length - 1 && "0 0 4px 4px"}
+                  background={Colors.blue}
                   padding="0 25px 0 20px"
-                  padding_tablet="0 5px 0 40px"
+                  padding_tablet="0 16px"
+                  display="block"
                 >
-                  <H3
-                    textAlign="left"
-                    fontSize="15px"
-                    fontWeight="700"
-                    lineHeight="22px"
-                    textTransform="uppercase"
-                    color={Colors.darkGray}
-                  >
-                    {m.at4_Geeks}
-                  </H3>
+                  <Div height="74px" alignItems="center">
+                    <H3
+                      textAlign="left"
+                      fontSize="15px"
+                      fontWeight="400"
+                      lineHeight="22px"
+                      textTransform="uppercase"
+                      color={Colors.white}
+                    >
+                      {m.at4_Geeks}
+                    </H3>
+                  </Div>
+                  {i < arr.length - 1 && <HR height="1px" background="white" />}
                 </Div>
                 <Div
                   gridColumn_tablet="7 / 10"
-                  borderBottom={
-                    i < geeks.info.length - 1 &&
-                    "1px solid rgba(164, 164, 164, 0.4)"
-                  }
-                  height="74px"
-                  alignItems="center"
                   background={Colors.white}
+                  borderRadius={i === arr.length - 1 && "0 0 4px 4px"}
                   padding="0 25px 0 20px"
-                  padding_tablet="0 5px 0 40px"
+                  padding_tablet="0 16px"
+                  display="block"
                 >
-                  <H3
-                    textAlign="left"
-                    fontSize="15px"
-                    fontWeight="700"
-                    lineHeight="22px"
-                    textTransform="uppercase"
-                    color={Colors.darkGray}
-                  >
-                    {m.industry_average}
-                  </H3>
+                  <Div height="74px" alignItems="center">
+                    <H3
+                      textAlign="left"
+                      fontSize="15px"
+                      fontWeight="400"
+                      lineHeight="22px"
+                      textTransform="uppercase"
+                      color={Colors.darkGray}
+                    >
+                      {m.industry_average}
+                    </H3>
+                  </Div>
+                  {i < arr.length - 1 && (
+                    <HR height="1px" background="rgba(164, 164, 164, 0.4)" />
+                  )}
                 </Div>
               </React.Fragment>
             );
           })}
         </GridContainer>
       </Div>
-      {props.link && (
-        <GridContainer margin="0 0 36px 0" margin_tablet="0 0 76px 0">
-          <Div justifyContent="center" margin="50px 0 0 0">
-            <Link to={geeks.button.button_link}>
-              <Paragraph color={Colors.blue}>
-                {geeks.button.button_text}
-              </Paragraph>
-            </Link>
-          </Div>
-        </GridContainer>
-      )}
 
       {/* MOBILE VERSION*/}
 
@@ -251,7 +257,7 @@ const GeeksVsOthers = (props) => {
         margin_xxs="30px 20px"
         gridGap="10px"
         display_md="none"
-        background={Colors.whitePink}
+        background={mainBackround || Colors.whitePink}
       >
         <H2
           fontSize="18px"
@@ -264,113 +270,123 @@ const GeeksVsOthers = (props) => {
           {geeks.titles.featured}
         </H2>
 
-        {geeks.info
-          .slice(0, props.limit || geeks.info.length)
-          .map((item, index) => {
-            return (
-              <React.Fragment key={index}>
-                <Div
-                  key={index}
-                  width="100%"
-                  height={selected.index === index ? "auto" : "50px"}
-                  //padding_xs="15px 0 0 0"
-                  margin_xs="0 15px"
-                  display_md="none"
-                  cursor={`pointer`}
-                  onClick={() => {
-                    selected.index === index
-                      ? setSelected({ index: null, manual: true })
-                      : setSelected({ index: index, manual: true });
-                  }}
-                  justifyContent={`between`}
-                  flexDirection={selected.index === index && "column"}
-                  borderBottom={`1px solid ${Colors.gray2}`}
-                  position="relative"
-                  alignItems="center"
+        {geeks.info.slice(0, limit || geeks.info.length).map((item, index) => {
+          return (
+            <React.Fragment key={index}>
+              <Div
+                key={index}
+                width="100%"
+                height={selected.index === index ? "auto" : "50px"}
+                //padding_xs="15px 0 0 0"
+                margin_xs="0 15px"
+                display_md="none"
+                cursor="pointer"
+                onClick={() => {
+                  selected.index === index
+                    ? setSelected({ index: null, manual: true })
+                    : setSelected({ index: index, manual: true });
+                }}
+                justifyContent="between"
+                flexDirection={selected.index === index && "column"}
+                borderBottom={`1px solid ${Colors.gray2}`}
+                position="relative"
+                alignItems="center"
+              >
+                <H3
+                  textAlign="left"
+                  fontSize="14px"
+                  fontWeight="700"
+                  lineHeight="22px"
+                  textTransform="uppercase"
+                  color={Colors.darkGray}
+                  padding={selected.index === index ? "14px 0 0 0" : "0px"}
+                  //style={{ position: "absolute", left: "0px", top: "15px" }}
                 >
-                  <H3
-                    textAlign="left"
-                    fontSize="14px"
-                    fontWeight="700"
-                    lineHeight="22px"
-                    textTransform="uppercase"
-                    color={Colors.darkGray}
-                    padding={selected.index === index ? "14px 0 0 0" : "0px"}
-                    //style={{ position: "absolute", left: "0px", top: "15px" }}
-                  >
-                    {item.features}
-                  </H3>
-                  <Div
-                    style={{ position: "absolute", right: "0px", top: "15px" }}
-                    transform={
-                      selected.index === index
-                        ? "rotate(90deg)"
-                        : "rotate(0deg)"
-                    }
-                  >
-                    <Icon icon="arrow-right" width="32px" height="16px" />
-                  </Div>
-                  {selected.index === index && (
-                    <Div flexDirection="row" margin="10px 0" width="100%">
-                      <Div
-                        flexDirection="column"
-                        width="50%"
-                        background={Colors.veryLightBlue}
-                        padding="8px"
-                      >
-                        <Paragraph
-                          textAlign="center"
-                          fontSize="10px"
-                          fontWeight="700"
-                          lineHeight="22px"
-                          color={Colors.darkGray}
-                        >
-                          {geeks.titles.at_geeks}
-                        </Paragraph>
-                        <Paragraph
-                          textAlign="center"
-                          fontSize="10px"
-                          fontWeight="700"
-                          lineHeight="22px"
-                          color={Colors.darkGray}
-                        >
-                          {item.at4_Geeks}
-                        </Paragraph>
-                      </Div>
-
-                      <Div
-                        flexDirection="column"
-                        width="50%"
-                        background={Colors.white}
-                        padding="8px"
-                      >
-                        <Paragraph
-                          textAlign="center"
-                          fontSize="10px"
-                          fontWeight="700"
-                          lineHeight="22px"
-                          color={Colors.darkGray}
-                        >
-                          {geeks.titles.average}
-                        </Paragraph>
-                        <Paragraph
-                          textAlign="center"
-                          fontSize="10px"
-                          fontWeight="700"
-                          lineHeight="22px"
-                          color={Colors.darkGray}
-                        >
-                          {item.industry_average}
-                        </Paragraph>
-                      </Div>
-                    </Div>
-                  )}
+                  {item.features}
+                </H3>
+                <Div
+                  style={{ position: "absolute", right: "0px", top: "15px" }}
+                  transform={
+                    selected.index === index ? "rotate(90deg)" : "rotate(0deg)"
+                  }
+                >
+                  <Icon icon="arrow-right" width="32px" height="16px" />
                 </Div>
-              </React.Fragment>
-            );
-          })}
+                {selected.index === index && (
+                  <Div flexDirection="row" margin="10px 0" width="100%">
+                    <Div
+                      flexDirection="column"
+                      width="50%"
+                      background={Colors.veryLightBlue}
+                      padding="8px"
+                    >
+                      <Paragraph
+                        textAlign="center"
+                        fontSize="10px"
+                        fontWeight="700"
+                        lineHeight="22px"
+                        color={Colors.darkGray}
+                      >
+                        {geeks.titles.at_geeks}
+                      </Paragraph>
+                      <Paragraph
+                        textAlign="center"
+                        fontSize="10px"
+                        fontWeight="700"
+                        lineHeight="22px"
+                        color={Colors.darkGray}
+                      >
+                        {item.at4_Geeks}
+                      </Paragraph>
+                    </Div>
+
+                    <Div
+                      flexDirection="column"
+                      width="50%"
+                      background={Colors.white}
+                      padding="8px"
+                    >
+                      <Paragraph
+                        textAlign="center"
+                        fontSize="10px"
+                        fontWeight="700"
+                        lineHeight="22px"
+                        color={Colors.darkGray}
+                      >
+                        {geeks.titles.average}
+                      </Paragraph>
+                      <Paragraph
+                        textAlign="center"
+                        fontSize="10px"
+                        fontWeight="700"
+                        lineHeight="22px"
+                        color={Colors.darkGray}
+                      >
+                        {item.industry_average}
+                      </Paragraph>
+                    </Div>
+                  </Div>
+                )}
+              </Div>
+            </React.Fragment>
+          );
+        })}
       </Div>
-    </Fragment>
+      {link && (
+        <Div justifyContent="center" margin="50px 0 0 0" padding="0 0 25px 0">
+          <Link to={geeks.button.button_link}>
+            <Paragraph
+              color={Colors.blue}
+              fontWeight="700"
+              fontWeight_tablet="700"
+              fontSize="21px"
+            >
+              {geeks.button.button_text}
+            </Paragraph>
+          </Link>
+        </Div>
+      )}
+    </Div>
   );
 };
 
