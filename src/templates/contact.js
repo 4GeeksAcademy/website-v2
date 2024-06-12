@@ -31,7 +31,6 @@ const Contact = (props) => {
     last_name: { value: "", valid: false },
     email: { value: "", valid: false },
     client_comments: { value: "", valid: false },
-    token: { value: null, valid: false },
   });
 
   const formIsValid = (formData = null) => {
@@ -50,7 +49,7 @@ const Contact = (props) => {
   };
   return (
     <form
-      onSubmit={(e) => {
+      onSubmit={async (e) => {
         e.preventDefault();
         if (formStatus.status === "error") {
           setFormStatus({ status: "idle", msg: "Resquest" });
@@ -62,7 +61,8 @@ const Contact = (props) => {
           });
         } else {
           setFormStatus({ status: "loading", msg: "Loading..." });
-          contactUs(formData, session)
+          const token = await captcha.current.executeAsync();
+          contactUs({ ...formData, token: { value: token, valid: true } }, session)
             .then((data) => {
               if (data.error !== false && data.error !== undefined) {
                 setFormStatus({ status: "error", msg: "Fix errors" });
@@ -338,7 +338,7 @@ const Contact = (props) => {
                     <ReCAPTCHA
                       ref={captcha}
                       sitekey={process.env.GATSBY_CAPTCHA_KEY}
-                      onChange={captchaChange}
+                      size="invisible"
                     />
                   </Div>
                   <Div
@@ -366,7 +366,7 @@ const Contact = (props) => {
                       }
                       textColor={Colors.white}
                       background={
-                        formStatus.status === "loading" || !formData.token.valid
+                        formStatus.status === "loading"
                           ? Colors.darkGray
                           : Colors.blue
                       }

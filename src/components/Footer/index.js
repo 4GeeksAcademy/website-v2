@@ -54,7 +54,6 @@ const Footer = ({ yml }) => {
   });
   const [formData, setVal] = useState({
     email: { value: "", valid: false },
-    token: { value: null, valid: false },
     consent: { value: true, valid: true },
   });
 
@@ -181,7 +180,7 @@ const Footer = ({ yml }) => {
               </H4>
               <Div justifyContent="center" width="100%">
                 <Form
-                  onSubmit={(e) => {
+                  onSubmit={async (e) => {
                     e.preventDefault();
                     if (formStatus.status === "error") {
                       setFormStatus({ status: "idle", msg: "Resquest" });
@@ -193,7 +192,8 @@ const Footer = ({ yml }) => {
                       });
                     } else {
                       setFormStatus({ status: "loading", msg: "Loading..." });
-                      newsletterSignup(formData, session)
+                      const token = await captcha.current.executeAsync();
+                      newsletterSignup({ ...formData, token: { value: token, valid: true } }, session)
                         .then((data) => {
                           if (
                             data.error !== false &&
@@ -246,13 +246,13 @@ const Footer = ({ yml }) => {
                     fontSize="22px"
                     variant="full"
                     color={
-                      formStatus.status === "loading" || !formData.token.valid
+                      formStatus.status === "loading"
                         ? Colors.darkGray
                         : Colors.black
                     }
                     textColor={Colors.white}
                     disabled={
-                      formStatus.status === "loading" || !formData.token.valid
+                      formStatus.status === "loading"
                         ? true
                         : false
                     }
@@ -272,14 +272,13 @@ const Footer = ({ yml }) => {
                 </Form>
               </Div>
               <Div
-                display={formData.email.valid ? "block" : "none"}
                 width="fit-content"
                 margin="10px auto 0 auto"
               >
                 <ReCAPTCHA
                   ref={captcha}
                   sitekey={process.env.GATSBY_CAPTCHA_KEY}
-                  onChange={captchaChange}
+                  size="invisible"
                 />
               </Div>
             </>

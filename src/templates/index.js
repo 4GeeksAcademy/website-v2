@@ -86,27 +86,29 @@ const Home = (props) => {
           position="relative"
           gridColumn_tablet="1/15"
         >
-          <Div
-            position="absolute"
-            zIndex="5"
-            left_tablet={indexVideo || sessionVideo ? "40%" : "50%"}
-            left="50%"
-            left_xxs="65%"
-            left_xs="74%"
-            top_tablet={indexVideo || sessionVideo ? "1%" : "25%"}
-            top="90px"
-            top_xxs="20px"
-            top_xs="100px"
-            width_xxs="80px"
-            width_sm="100px"
-            height_xxs="80px"
-            width_tablet="160px"
-            height_tablet="152px"
-            width="100px"
-            height="100px"
-          >
-            <Icon icon="logo-badge" width="100%" height="100%" />
-          </Div>
+          {(indexVideo || sessionVideo) && (
+            <Div
+              position="absolute"
+              zIndex="5"
+              left_tablet="40%"
+              left="50%"
+              left_xxs="65%"
+              left_xs="74%"
+              top_tablet="1%"
+              top="90px"
+              top_xxs="20px"
+              top_xs="100px"
+              width_xxs="80px"
+              width_sm="100px"
+              height_xxs="80px"
+              width_tablet="160px"
+              height_tablet="152px"
+              width="100px"
+              height="100px"
+            >
+              <Icon icon="logo-badge" width="100%" height="100%" />
+            </Div>
+          )}
           <Div
             flexDirection="column"
             alignItems="start"
