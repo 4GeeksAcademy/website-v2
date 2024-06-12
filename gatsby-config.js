@@ -51,12 +51,13 @@ module.exports = {
         exclude: ["error", "warn"], // <- will be removed all console calls except these
       },
     },
-    {
-      resolve: "gatsby-plugin-load-script",
-      options: {
-        src: `https://www.google.com/recaptcha/api.js?render=${process.env.GATSBY_CAPTCHA_KEY}`,
-      },
-    },
+    // {
+    //   resolve: "gatsby-plugin-load-script",
+    //   options: {
+    //     src: `https://www.google.com/recaptcha/api.js?render=${process.env.GATSBY_CAPTCHA_KEY}`,
+    //     // src: `https://www.google.com/recaptcha/enterprise.js?render=${process.env.GATSBY_CAPTCHA_KEY}`,
+    //   },
+    // },
     {
       resolve: `gatsby-transformer-remark`,
       options: {
