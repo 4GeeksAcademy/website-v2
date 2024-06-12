@@ -30,7 +30,6 @@ form:
   motivation: "Completa el siguiente formulario y uno de nuestros asesores te enviará un correo electrónico a la brevedad con todos los detalles sobre nuestro bootcamp de programación."
   button_label: Solicitar más información
   redirect: null #you can redirect to another url or entirely diffrent website
-  course: true
 
 apply_schollarship: # form that is displayed at the end of the landing
   # title: "Apoyo Profesional Ilimitado"
