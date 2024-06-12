@@ -8,7 +8,7 @@ import LazyLoad from "react-lazyload";
 import twitterUser from "../utils/twitter";
 // import Icon from '../components/Icon'
 // import {TwitterFollowButton} from 'react-twitter-embed';
-import { isCustomBarActive } from "../actions";
+import { isCustomBarActive, tagManager } from "../actions";
 import { SessionContext } from "../session";
 import CallToAction from "../components/CallToAction";
 import "../assets/css/single-post.css";
@@ -153,6 +153,13 @@ export default function Template(props) {
       }
     });
   }
+
+  React.useEffect(() => {
+    tagManager("blog_post_rendered", {
+      cluster: post?.frontmatter?.cluster,
+      language: pageContext?.lang,
+    });
+  }, []);
 
   return (
     <>

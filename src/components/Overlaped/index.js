@@ -153,6 +153,7 @@ const Overlaped = ({
         display_tablet="none"
         position="relative"
         flexDirection="Column"
+        width="100%"
         //margin_sm="0 auto"
         //padding_xxs={ heading?.length > 4 ? "40px 20px 65% 20px" : "40px 20px 30% 20px" }
         margin_xxs={

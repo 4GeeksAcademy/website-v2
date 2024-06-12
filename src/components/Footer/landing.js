@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Div, GridContainer } from "../Sections";
 import { Colors, RoundImage, Anchor } from "../Styling";
@@ -11,6 +11,9 @@ import Icon from "../Icon";
 const LandingFooter = ({ yml }) => {
   const { session } = React.useContext(SessionContext);
   let socials = session && session.location ? session.location.socials : [];
+
+  // Año actual
+  const currentYear = new Date().getFullYear();
 
   return (
     <>
@@ -134,7 +137,7 @@ const LandingFooter = ({ yml }) => {
             textAlign_tablet="left"
             color={Colors.darkGray}
           >
-            @ 4Geeks Academy LLC 2019
+            @ 4Geeks Academy LLC {currentYear}
           </H4>
         </Div>
       </GridContainer>

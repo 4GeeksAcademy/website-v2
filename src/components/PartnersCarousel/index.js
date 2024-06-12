@@ -91,6 +91,7 @@ const PartnersCarousel = ({ data }) => {
 
   const settings = {
     className: "slider variable-width",
+    dotsClass: "slick-dots-staff",
     variableWidth: true,
     dots: true,
     infinite: true,
@@ -101,10 +102,27 @@ const PartnersCarousel = ({ data }) => {
     slidesToScroll: 1,
     arrows: false,
     pauseOnHover: true,
+    responsive: [
+      {
+        breakpoint: 360,
+        settings: {
+          dots: false,
+        },
+      },
+    ],
   };
 
   return (
-    <Div padding="30px 30px 45px 30px" width="100%" display="block">
+    <Div
+      maxWidth="1280px"
+      margin="0 auto 10px auto"
+      padding="30px 30px 50px 30px"
+      padding_lg="30px 0 50px 0"
+      width="100%"
+      display="block"
+      maxHeight="500px"
+      maxHeight_tablet="none"
+    >
       <H2
         type="h2"
         fontSize="30px"

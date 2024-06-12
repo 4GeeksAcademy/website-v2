@@ -153,8 +153,8 @@ const TestimonialCard = ({
           <Div padding_tablet="0" width="100%" style={{ breakInside: "avoid" }}>
             <ReactPlayer
               margin_tablet="0px 0px"
-              With_Modal={true}
-              className={"react-player-testimonials-small"}
+              With_Modal
+              className="react-player-testimonials-small"
               thumb={image}
               id={video && video}
               width="100%"

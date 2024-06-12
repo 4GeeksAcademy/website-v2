@@ -17,23 +17,23 @@ full_time:
       - "/images/ethereum.png"
       - "/images/bitcoin.png"
 
-  - slug: 'usa-clark-scholarship-ft'
-    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
-    recomended: false
-    scholarship: "Scholarship"
-    payment_time: "There is nothing like this"
-    price: "$9,999"
-    original_price: "$16,665"
-    warning_message: "Limited seats!"
-    offer: "40% OFF"
-    bullets:
-      - "You're saving ~$6,666 USD"
-      - "Remaining balance could be paid over time $100 p/mo"
-      - "Regular tuition is $11,999. Avg tuition in the US is $16k."
-      - "We're fully committed to making our education accessible and offer multiple payment plans and financing options to uphold our promise."
-      - "You can adapt your learning path to your financial needs. Choose to include or exclude our career support services, or enroll with a Job Guarantee."
-    icons:
-      - "/images/clarkuniversity.png"
+  # - slug: 'usa-clark-scholarship-ft'
+  #   academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
+  #   recomended: false
+  #   scholarship: "Scholarship"
+  #   payment_time: "There is nothing like this"
+  #   price: "$9,000"
+  #   original_price: "$15,000"
+  #   warning_message: "Limited seats!"
+  #   offer: "40% OFF"
+  #   bullets:
+  #     - "You're saving ~$6,666 USD"
+  #     - "Remaining balance could be paid over time $100 p/mo"
+  #     - "Regular tuition is $11,999. Avg tuition in the US is $16k."
+  #     - "We're fully committed to making our education accessible and offer multiple payment plans and financing options to uphold our promise."
+  #     - "You can adapt your learning path to your financial needs. Choose to include or exclude our career support services, or enroll with a Job Guarantee."
+  #   icons:
+  #     - "/images/clarkuniversity.png"
 
 
   - slug: 'usa-financed-ft'
@@ -170,26 +170,15 @@ part_time:
     academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
     scholarship: "Full Payment"
     payment_time: "Pay today"
-    price: "$9,999"
-    original_price: "$16,665"
+    price: "$9,000"
+    original_price: "$15,000"
     offer: "40% OFF"
     bullets:
-      - "You're saving $6,666 USD."
-      - "This discount applies to students who are not eligible for the Clark University Scholarship (typically employed or in stable work)."
-
-  - slug: 'usa-clark-scholarship-pt'
-    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
-    recomended: false
-    scholarship: "Scholarship"
-    payment_time: "Pay today or with a Payment Plan for $100 p/mo"
-    price: "$5999"
-    original_price: "$16,665"
-    warning_message: "Limited seats!"
-    bullets: 
-      - "You're saving 40% + $4000 USD. Thanks to Clark University and the TechBoost Fund"
-      - "You have to be underemployed or unemployed, and provide a valid US Work permit."
-    icons: 
-      - "/images/clarkuniversity.png"
+      - "You are saving $6,000 right away!"
+      - "The tuition fee for a program like ours is $15,000"
+      - "You get to pay this also using one of our payment plans"
+      - "We are extremely invested in making quality coding education accessible to everyone"
+      - "There are plenty of partial scholarships available, please ask us how to get access to them."
 
   - slug: 'usa-financed-pt'
     academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
@@ -204,7 +193,22 @@ part_time:
       - "/images/ascent_logo.jpg"
       - "/images/climb-logo.png"
       - "/images/quotanda-logo.png"
-    
+
+  - slug: 'usa-clark-scholarship-pt'
+    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
+    recomended: false
+    scholarship: "Scholarship"
+    payment_time: "You can be saving more than the $5k already discounted."
+    price: ""
+    original_price: "$15,000"
+    warning_message: "Limited seats!"
+    bullets: 
+      - "You are saving more than $5,000"
+      - "Partial scholarships available. Give us a call or apply below and we'll guide you through it."
+      - "You have to be underemployed or unemployed, and provide a valid US Work permit."
+    icons: 
+      # - "/images/clarkuniversity.png"
+
   # - slug: 'usa-isa-pt'
   #   academies: ['orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa','toronto-canada']
   #   recomended: false
