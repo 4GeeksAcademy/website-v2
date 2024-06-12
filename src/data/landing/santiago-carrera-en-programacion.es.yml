@@ -3,9 +3,9 @@ meta_info:
 
   # This will show on social media when shared
   title: "Descubre las claves que te transformarán en un programador 3.0"
-  description: "Descubre las claves fundamentales para construir una carrera sólida en programación"
+  description: "para borrar"
   image: ""
-  keywords: "Clase de programación, carrera enprogramación, Coding Bootcamp, 4Geeks Academy"
+  keywords: ""
   visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   template: "landing_a" # <--- choose your landing template
   # <--- URL redirections to avoid 404 errors
