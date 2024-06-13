@@ -87,7 +87,9 @@ const Side = ({
     sub_heading && Array.isArray(sub_heading.font_size)
       ? sub_heading.font_size
       : [];
-  const [c_xl, c_lg, c_md, c_sm, c_xs] = content?.font_size ? content.font_size : [];
+  const [c_xl, c_lg, c_md, c_sm, c_xs] = content?.font_size
+    ? content.font_size
+    : [];
 
   return (
     <Div
@@ -144,7 +146,7 @@ const Side = ({
           letterSpacing="2px"
           fontSize={sh_xs || sh_xl}
           fontSize_xs={sh_xs}
-          fontSize_sm={sh_sm }
+          fontSize_sm={sh_sm}
           fontSize_tablet={sh_md}
           fonSize_md={sh_lg}
           fontWeight="400"
@@ -171,11 +173,7 @@ const Side = ({
                 }
               >
                 {bullet.heading && (
-                  <Div
-                    display="flex"
-                    flexDirection="row"
-                    gap="5px"
-                  >
+                  <Div display="flex" flexDirection="row" gap="5px">
                     <Icon
                       icon={bullet.icon || "check"}
                       width="13px"

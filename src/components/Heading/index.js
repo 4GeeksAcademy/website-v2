@@ -198,10 +198,10 @@ Separator.defaultProps = {
 };
 
 const paragraphSizes = {
-  "l": "21px",
-  "md": "16px",
-  "sm": "14px"
-}
+  l: "21px",
+  md: "16px",
+  sm: "14px",
+};
 
 export const Paragraph = styled.p`
   display: ${(props) => props.display};
@@ -246,7 +246,8 @@ export const Paragraph = styled.p`
     padding: ${(props) => props.padding_xs};
     display: ${(props) => props.display_xs};
     margin: ${(props) => props.margin_xs};
-    font-size: ${(props) => paragraphSizes[props.fontSize_xs] || props.fontSize_xs};
+    font-size: ${(props) =>
+      paragraphSizes[props.fontSize_xs] || props.fontSize_xs};
     font-weight: ${(props) => (props.isActive ? "bold" : props.fontWeight_xs)};
     line-height: ${(props) => props.lineHeight_xs};
   }
@@ -262,7 +263,8 @@ export const Paragraph = styled.p`
     justify-content: ${(props) => props.justifyContent_tablet};
     width: ${(props) => props.width_tablet};
     max-width: ${(props) => props.maxWidth_tablet};
-    font-size: ${(props) => paragraphSizes[props.fontSize_tablet] || props.fontSize_tablet};
+    font-size: ${(props) =>
+      paragraphSizes[props.fontSize_tablet] || props.fontSize_tablet};
     font-weight: ${(props) =>
       props.isActive ? "bold" : props.fontWeight_tablet || "400"};
     text-align: ${(props) => props.textAlign_tablet};
@@ -282,7 +284,8 @@ export const Paragraph = styled.p`
     max-width: ${(props) => props.maxWidth_md};
   }
   @media ${Devices.lg} {
-    font-size: ${(props) => paragraphSizes[props.fontSize_lg] || props.fontSize_lg};
+    font-size: ${(props) =>
+      paragraphSizes[props.fontSize_lg] || props.fontSize_lg};
   }
   @media ${Devices.xl} {
   }
