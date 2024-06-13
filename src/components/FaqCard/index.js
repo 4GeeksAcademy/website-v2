@@ -5,7 +5,7 @@ import Card from "../Card";
 import { Div } from "../Sections";
 import { H3, H4, Paragraph } from "../Heading";
 
-const FaqCard = ({ faqs, topicSlug, locationSlug, minPriority }) => {
+const FaqCard = ({ faqs, topicSlug, locationSlug, minPriority, template }) => {
   const [buttonToggle, setButtonToggle] = useState(false);
   const [toggleIndex, setToggleIndex] = useState();
 
@@ -17,6 +17,13 @@ const FaqCard = ({ faqs, topicSlug, locationSlug, minPriority }) => {
     )
       return true;
     return false;
+  };
+
+  const filterByTemplate = (question) => {
+    if (!template) return true;
+    return (
+      Array.isArray(question.templates) && question.templates.includes(template)
+    );
   };
 
   const filterByPriority = (question) => {
@@ -31,6 +38,7 @@ const FaqCard = ({ faqs, topicSlug, locationSlug, minPriority }) => {
   filteredTopics.forEach((element) => {
     element.questions = element.questions
       .filter(filterByLocation)
+      .filter(filterByTemplate)
       .filter(filterByPriority);
   });
 
