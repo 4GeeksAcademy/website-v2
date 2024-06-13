@@ -26,6 +26,7 @@ const Why = (props) => {
         title={yml.header.title}
         paragraph={yml.header.paragraph}
         image={yml.header.image.childImageSharp.fluid}
+        fontSize_paragraph="21px"
         padding="70px 0 70px 0"
         padding_tablet="70px 0 70px 0"
         margin={isCustomBarActive(session) ? "130px 0 0 0" : "70px 0 0 0"}

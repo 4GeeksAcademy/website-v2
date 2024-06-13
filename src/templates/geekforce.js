@@ -9,17 +9,13 @@ import Icon from "../components/Icon";
 import { Colors } from "../components/Styling";
 import ReactPlayer from "../components/ReactPlayer";
 import OurPartners from "../components/OurPartners";
-import IconsBanner from "../components/IconsBanner";
 import Overlaped from "../components/Overlaped";
 import {
   Div,
   Grid,
-  HR,
-  GridContainerWithImage,
-  GridContainer,
 } from "../components/Sections";
-import { H1, H2, H3, Paragraph } from "../components/Heading";
-import { Button, RoundImage, Img } from "../components/Styling";
+import { H2, H3, Paragraph } from "../components/Heading";
+import { Img } from "../components/Styling";
 import { StyledBackgroundSection } from "../components/Styling";
 import Iconogram from "../components/Iconogram";
 
@@ -196,11 +192,9 @@ const GeekForce = (props) => {
                 <React.Fragment key={i}>
                   {item.videoId === "" ? (
                     <StyledBackgroundSection
-                      height={`280px`}
-                      // width={`85%`}
-                      //borderRadius={`3px`}
+                      height="280px"
                       image={item.image.childImageSharp.gatsbyImageData}
-                      bgSize={`contain`}
+                      bgSize="contain"
                       alt="geekforce image"
                     />
                   ) : (
@@ -210,7 +204,7 @@ const GeekForce = (props) => {
                       thumb={item.image}
                       //imageSize="maxresdefault"
                       videoHeight="280px"
-                      bgSize={`contain`}
+                      bgSize="contain"
                       style={{
                         width: "100%",
                         height: "280px",
@@ -287,7 +281,7 @@ const GeekForce = (props) => {
                               >
                                 <Div display="" inline>
                                   <Icon
-                                    icon={"check"}
+                                    icon="check"
                                     width="13px"
                                     display="inline"
                                     color={Colors.blue}
@@ -313,8 +307,6 @@ const GeekForce = (props) => {
                                   letterSpacing="0.05em"
                                   textAlign="left"
                                   margin="0 0 20px 0"
-                                  fontSize="15px"
-                                  lineHeight="22px"
                                   dangerouslySetInnerHTML={{
                                     __html: sub?.text,
                                   }}
@@ -327,10 +319,8 @@ const GeekForce = (props) => {
                         <>
                           <Paragraph
                             letterSpacing="0.05em"
-                            fontSize="15px"
                             textAlign="left"
                             margin="0 0 20px 0"
-                            lineHeight="22px"
                             dangerouslySetInnerHTML={{ __html: m?.text }}
                           />
                         </>
@@ -394,7 +384,7 @@ const GeekForce = (props) => {
                         height_lg="450px"
                         width="100%"
                         image={m.image.childImageSharp.gatsbyImageData}
-                        bgSize={`contain`}
+                        bgSize="contain"
                         alt="geekforce image"
                       />
                     </Div>

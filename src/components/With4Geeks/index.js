@@ -96,7 +96,6 @@ export default ({
             display="flex"
             flexDirection="column"
             alignItems="left"
-            padding_tablet="0px 16px"
             padding="0px"
             gridColumn="1/15"
           >
@@ -231,12 +230,9 @@ export default ({
                       <H3
                         textAlign="left"
                         width="100%"
+                        fontWeight="400"
+                        fontFamily="Archivo"
                         margin="0"
-                        fontSize_xs="18px"
-                        fontSize_tablet="28px"
-                        fontSize_md="28px"
-                        lineHeight_xs="21.6px"
-                        lineHeight_tablet="30px"
                       >
                         {`“${element.title}”`}
                       </H3>

@@ -102,8 +102,8 @@ const FaqCard = ({ faqs, topicSlug, locationSlug, minPriority, template }) => {
                           type="h4"
                           textAlign="left"
                           fontSize="13px"
-                          align={`left`}
-                          align_sm={`left`}
+                          align="left"
+                          align_sm="left"
                           color={Colors.black}
                           paddingRight="5%"
                           textTransform="uppercase"

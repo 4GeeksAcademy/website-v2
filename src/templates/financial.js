@@ -68,6 +68,7 @@ const Financial = (props) => {
             margin="20px 0"
             type="h2"
             fontFamily="Archivo-Black"
+            color={Colors.black}
             textAlign="left"
             fontSize="40px"
             fontSize_tablet="50px"

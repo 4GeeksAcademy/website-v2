@@ -83,7 +83,7 @@ const Programs = ({ data, pageContext, yml }) => {
             height={`350px`}
             borderRadius={`3px`}
             image={yml.header.image}
-            bgSize={`contain`}
+            bgSize="contain"
             alt={yml.header.image_alt}
           />
         </Div>

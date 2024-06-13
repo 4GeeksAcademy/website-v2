@@ -322,7 +322,7 @@ const Outcomes = ({ data, pageContext, yml }) => {
                                           m.image.childImageSharp
                                             .gatsbyImageData
                                         }
-                                        bgSize={`contain`}
+                                        bgSize="contain"
                                       />
 
                                       <Paragraph

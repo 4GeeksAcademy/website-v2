@@ -1,12 +1,9 @@
 import React from "react";
-import { Link, useStaticQuery, graphql, navigate } from "gatsby";
-import PropTypes from "prop-types";
+import { Link, navigate } from "gatsby";
 import { Button, Colors, Img, StyledBackgroundSection } from "../Styling";
 import { Grid, Div } from "../Sections";
-import { H4, H3, H2, H1, Paragraph } from "../Heading";
-import Icon from "../Icon";
-import { DirectiveLocation } from "graphql";
-import { transferQuerystrings, smartRedirecting } from "../../utils/utils";
+import { H2, Paragraph } from "../Heading";
+import { transferQuerystrings } from "../../utils/utils";
 
 const Overlaped = ({
   heading,
@@ -39,7 +36,7 @@ const Overlaped = ({
               height_tablet="533px"
               margin="0px"
               image={image}
-              bgSize={`contain`}
+              bgSize="contain"
               justify_content="flex-start"
               alt="geekforce image"
             />
@@ -111,7 +108,6 @@ const Overlaped = ({
         >
           <H2
             textAlign="start"
-            lineHeight_tablet="36px"
             margin="0 0 12px 0"
             dangerouslySetInnerHTML={{ __html: heading }}
           />
@@ -154,8 +150,6 @@ const Overlaped = ({
         position="relative"
         flexDirection="Column"
         width="100%"
-        //margin_sm="0 auto"
-        //padding_xxs={ heading?.length > 4 ? "40px 20px 65% 20px" : "40px 20px 30% 20px" }
         margin_xxs={
           heading?.length > 20 ? "40px 20px 65% 20px" : "40px 20px 45% 20px"
         } // Modify the bottom margin if the floating box of the overlapped element overlaps the other component.
@@ -172,7 +166,6 @@ const Overlaped = ({
             width_sm="385px"
             height_xxs="450px"
             image={image}
-            //bgSize={`contain`}
             alt="geekforce image"
           />
         )}
@@ -216,7 +209,6 @@ const Overlaped = ({
         >
           <H2
             textAlign="start"
-            lineHeight_xxs="36px"
             margin="0 0 12px 0"
             dangerouslySetInnerHTML={{ __html: heading }}
           />

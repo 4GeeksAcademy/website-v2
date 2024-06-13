@@ -67,6 +67,7 @@ const Partners = (props) => {
           seo_title={yml.seo_title}
           title={yml.header.title}
           paragraph={yml.header.paragraph}
+          fontSize_paragraph="21px"
           padding_tablet="60px 40px"
           padding="0 10px"
           margin="0"
@@ -191,8 +192,8 @@ const Partners = (props) => {
                   type="h4"
                   textAlign="left"
                   fontSize="14px"
-                  align={`left`}
-                  align_sm={`left`}
+                  align="left"
+                  align_sm="left"
                   color={Colors.black}
                   textTransform="uppercase"
                   fontWeight="700"
@@ -255,14 +256,10 @@ const Partners = (props) => {
             {partnersData.coding.tagline}
           </H2>
           <Paragraph
-            fontFamily="Lato"
-            fontWeight="normal"
-            fontSize="15px"
-            lineHeight="22px"
             padding="0 10px"
             padding_tablet="0 24%"
             letterSpacing="0.05em"
-            color="#3A3A3A"
+            color={Colors.darkGray}
             width="100%"
             margin="0 0 15px 0"
             style={{ fontStyle: "normal" }}
@@ -302,12 +299,9 @@ const Partners = (props) => {
           >
             <H2
               type="h2"
-              fontFamily="Lato"
-              fontWeight="900"
-              fontSize="30px"
               textAlign="left"
               letterSpacing="0.05em"
-              color="#3A3A3A"
+              color={Colors.darkGray}
               width="100%"
               margin="0 0 15px 0"
               textTransform="uppercase"
@@ -327,8 +321,6 @@ const Partners = (props) => {
                   padding_tablet="0"
                   color={Colors.darkGray}
                   textAlign="left"
-                  fontSize="15px"
-                  lineHeight="22px"
                 />
               ))}
           </Div>

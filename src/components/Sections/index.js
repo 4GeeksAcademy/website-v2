@@ -819,7 +819,7 @@ export const Header = ({
             margin="0 0 11px 0"
             padding={paddingTitle || "0 20px"}
             color={Colors.darkGray2}
-            fontSize={fontSize_seo || "12px"}
+            fontSize={fontSize_seo}
           >
             {seo_title}
           </H1>

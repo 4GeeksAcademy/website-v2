@@ -415,7 +415,7 @@ H2.defaultProps = {
 };
 H3.defaultProps = {
   fontSize: "21px",
-  lineHeight: "26px",
+  lineHeight: "22.85px",
 };
 H4.defaultProps = {
   fontSize: "15px",
