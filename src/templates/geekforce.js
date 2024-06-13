@@ -10,10 +10,7 @@ import { Colors } from "../components/Styling";
 import ReactPlayer from "../components/ReactPlayer";
 import OurPartners from "../components/OurPartners";
 import Overlaped from "../components/Overlaped";
-import {
-  Div,
-  Grid,
-} from "../components/Sections";
+import { Div, Grid } from "../components/Sections";
 import { H2, H3, Paragraph } from "../components/Heading";
 import { Img } from "../components/Styling";
 import { StyledBackgroundSection } from "../components/Styling";
