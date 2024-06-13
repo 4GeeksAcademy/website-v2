@@ -1,11 +1,10 @@
 import React from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
-import { H2, H4, H3, Paragraph } from "../Heading";
+import { H2, H4, H3, Paragraph, SubTitle } from "../Heading";
 import { Div, Grid } from "../Sections";
 import { RoundImage, Colors } from "../Styling";
 import ReactPlayer from "../ReactPlayer";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import Fragment from "../Fragment";
 
 export default ({
   lang,
@@ -104,28 +103,20 @@ export default ({
             <H2
               margin_tablet="0 0 15px 0"
               margin_xs="0px"
-              fontSize="21px"
-              fontSize_tablet="35px"
-              fontFamily="Lato"
               textTransform={title ? "" : "uppercase"}
-              lineHeight="38.4px"
-              lineHeight_xs="24px"
-              fontWeight="400"
               color={Colors.darkGray}
               textAlign={title ? "center" : "left"}
             >
               {title || info?.header?.title}
             </H2>
             {paragraph && (
-              <Paragraph
-                fontSize="15px"
-                lineHeight="22px"
+              <SubTitle
                 letterSpacing="0.05em"
                 padding="0"
                 padding_tablet="0 12% 4% 12%"
               >
                 {subtitle || info.header.paragraph}
-              </Paragraph>
+              </SubTitle>
             )}
           </Div>
         </Grid>
@@ -258,9 +249,7 @@ export default ({
                         margin="10px 0 10px 0"
                         fontWeight="400"
                         fontSize="14px"
-                        fontSize_tablet="13px"
                         lineHeight="15px"
-                        lineHeight_tablet="15px"
                       >
                         {element.description}
                       </Paragraph>

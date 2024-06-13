@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import { GridContainer, Div, HR } from "../Sections";
-import { H2, H3, Paragraph } from "../Heading";
+import { H2, H3, Paragraph, SubTitle } from "../Heading";
 import { Colors } from "../Styling";
 import Icon from "../Icon";
-// import Link from "gatsby-link";
-import Fragment from "../Fragment";
 
 const GeeksVsOthers = ({
   title,
@@ -70,8 +68,6 @@ const GeeksVsOthers = ({
         >
           <H2
             margin="0 0 15px 0"
-            fontSize="24px"
-            fontSize_tablet="32px"
             fontWeight="400"
             lineHeight="29px"
             lineHeight_tablet="38px"
@@ -79,14 +75,11 @@ const GeeksVsOthers = ({
           >
             {title}
           </H2>
-          <Paragraph
+          <SubTitle
             color={Colors.darkGray}
-            opacity="1"
-            fontSize_tablet="21px"
-            fontSize="18px"
           >
             {paragraph}
-          </Paragraph>
+          </SubTitle>
         </Div>
       )}
 
@@ -123,7 +116,6 @@ const GeeksVsOthers = ({
           >
             <H3
               textAlign="left"
-              fontSize="24px"
               fontWeight="400"
               lineHeight="28px"
               color={Colors.darkGray}
@@ -142,7 +134,6 @@ const GeeksVsOthers = ({
           >
             <H3
               textAlign="left"
-              fontSize="24px"
               fontWeight="400"
               lineHeight="28px"
               color={Colors.white}
@@ -161,7 +152,6 @@ const GeeksVsOthers = ({
           >
             <H3
               textAlign="left"
-              fontSize="24px"
               fontWeight="400"
               lineHeight="28px"
               color={Colors.darkGray}
@@ -180,16 +170,15 @@ const GeeksVsOthers = ({
                   display="block"
                 >
                   <Div height="74px" alignItems="center">
-                    <H3
+                    <Paragraph
                       textAlign="left"
-                      fontSize="15px"
                       fontWeight="400"
                       lineHeight="22px"
                       textTransform="uppercase"
                       color={Colors.darkGray}
                     >
                       {m.features}
-                    </H3>
+                    </Paragraph>
                   </Div>
                   {i < arr.length - 1 && (
                     <HR height="1px" background="rgba(164, 164, 164, 0.4)" />
@@ -204,16 +193,15 @@ const GeeksVsOthers = ({
                   display="block"
                 >
                   <Div height="74px" alignItems="center">
-                    <H3
+                    <Paragraph
                       textAlign="left"
-                      fontSize="15px"
                       fontWeight="400"
                       lineHeight="22px"
                       textTransform="uppercase"
                       color={Colors.white}
                     >
                       {m.at4_Geeks}
-                    </H3>
+                    </Paragraph>
                   </Div>
                   {i < arr.length - 1 && <HR height="1px" background="white" />}
                 </Div>
@@ -226,16 +214,15 @@ const GeeksVsOthers = ({
                   display="block"
                 >
                   <Div height="74px" alignItems="center">
-                    <H3
+                    <Paragraph
                       textAlign="left"
-                      fontSize="15px"
                       fontWeight="400"
                       lineHeight="22px"
                       textTransform="uppercase"
                       color={Colors.darkGray}
                     >
                       {m.industry_average}
-                    </H3>
+                    </Paragraph>
                   </Div>
                   {i < arr.length - 1 && (
                     <HR height="1px" background="rgba(164, 164, 164, 0.4)" />

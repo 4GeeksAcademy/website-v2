@@ -160,8 +160,6 @@ const Home = (props) => {
                       textAlign="left"
                       padding_tablet="0 20% 0 0"
                       color={Colors.black}
-                      lineHeight="19px"
-                      opacity="1"
                       dangerouslySetInnerHTML={{ __html: bullet }}
                     />
                   </Div>
@@ -390,10 +388,6 @@ const Home = (props) => {
         <H2
           type="h2"
           textAlign_tablet="center"
-          lineHeight="38px"
-          lineHeight_tablet="38px"
-          fontSize="36px"
-          fontWeight="400"
         >
           {yml.two_columns.section_heading.text}
         </H2>
@@ -586,7 +580,6 @@ export const query = graphql`
           iconogram {
             heading {
               text
-              font_size
               style
             }
             swipable

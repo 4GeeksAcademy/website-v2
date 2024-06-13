@@ -54,6 +54,7 @@ export const Colors = {
   green: "#20630d",
   darkGray: "#3A3A3A",
   darkGray2: "#606060",
+  darkGray3: "#4D4D5C",
   borderGray: "#ececec",
   yellow: "#FFC718",
   lightYellow: "rgba(255, 183, 24, 0.1)",

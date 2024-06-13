@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { Div } from "../Sections";
-import { H3, Paragraph } from "../Heading";
+import { H2, Paragraph, SubTitle } from "../Heading";
 import Icon from "../Icon";
 import CarouselV2 from "../CarouselV2";
 import Slider from "react-slick";
@@ -56,17 +56,15 @@ const TwoColumnCarousel = ({
           margin_tablet="0"
         >
           <Div display="block">
-            <H3 textAlign="left" margin="0 0 10px 0">
+            <H2 textAlign="left" margin="0 0 10px 0">
               {title}
-            </H3>
-            <Paragraph
-              color="#000"
-              opacity="1"
+            </H2>
+            <SubTitle
               textAlign="left"
-              fontSize="18px"
+              fontFamily="Archivo"
             >
               {text}
-            </Paragraph>
+            </SubTitle>
           </Div>
           <Icon icon="longarrow-right" />
         </Div>

@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Link, useStaticQuery, graphql } from "gatsby";
 import { Button, Colors } from "../Styling";
 import { Grid, Div } from "../Sections";
-import { H4, H3, H2, Paragraph } from "../Heading";
+import { H4, H3, H2, Paragraph, SubTitle } from "../Heading";
 import { SessionContext } from "../../session.js";
 import Icon from "../Icon";
 
@@ -79,24 +79,15 @@ const ChooseYourProgram = ({
           width="100%"
           zIndex="1"
         >
-          <H2
-            fontWeight="400"
-            fontSize="24px"
-            fontSize_tablet="35px"
-            lineHeight_tablet="36px"
-            lineHeight_xs="28.8px"
-          >
+          <H2>
             {title || info.title}
           </H2>
-          <Paragraph
+          <SubTitle
             margin="10px 0px"
             padding_xs="0 20px"
-            fontWeight="400"
-            fontSize="21px"
-            lineHeight="22px"
           >
             {paragraph || info.paragraph}
-          </Paragraph>
+          </SubTitle>
         </Div>
         <Grid
           gridColumn_tablet={landingTemplate ? "1 / 15" : "1 / 15"}
@@ -151,8 +142,8 @@ const ChooseYourProgram = ({
                         <H4
                           textTransform="uppercase"
                           textAlign="left"
-                          fontSize="15px"
-                          lineHeight="19px"
+                          fontSize="14px"
+                          lineHeight="16.8px"
                           letterSpacing="0.05em"
                           color={Colors.darkGray}
                           margin="0 0 5px 0"
@@ -163,8 +154,6 @@ const ChooseYourProgram = ({
                           <Link key={index} to={program.link}>
                             <H3
                               textAlign="left"
-                              fontSize="22px"
-                              lineHeight="26px"
                             >
                               {title}
                             </H3>

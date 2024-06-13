@@ -2,7 +2,7 @@ import React from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import { Div, GridContainer } from "../Sections";
 import DraggableDiv from "../DraggableDiv";
-import { Paragraph, H2, H3 } from "../Heading";
+import { Paragraph, H2, SubTitle } from "../Heading";
 import { Colors } from "../Styling";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
@@ -56,12 +56,8 @@ const SquaresVariant = ({
           )}
           {paragraph && (
             <Div margin="15px 0">
-              <H3
-                fontFamily="Lato-Light"
-                lineHeight="22px"
-                fontWeight="400"
+              <SubTitle
                 color={Colors.darkGray}
-                opacity="1"
                 dangerouslySetInnerHTML={{ __html: paragraph }}
               />
             </Div>

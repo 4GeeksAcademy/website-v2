@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { H2, Paragraph } from "../Heading";
+import { H2, SubTitle } from "../Heading";
 import { Button } from "../Styling";
 import { Div } from "../Sections";
 import Icon from "../Icon";
@@ -150,17 +150,15 @@ const Carousel = ({
           margin="0 0 30px 0"
         >
           {content?.heading && (
-            <H2 lineHeight="36px" {...content.headingProps}>
+            <H2 {...content.headingProps}>
               {content?.heading}
             </H2>
           )}
 
           {content?.content && (
             <Div flexDirection="column" margin="0 0 10px 0">
-              <Paragraph
+              <SubTitle
                 margin="0 0 0 0"
-                fontSize="16px"
-                lineHeight="20px"
                 dangerouslySetInnerHTML={{ __html: content.content }}
                 {...content.contentProps}
               />

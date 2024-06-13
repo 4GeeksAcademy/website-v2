@@ -22,13 +22,8 @@ const Iconogram = ({ yml, index }) => {
       {heading.text && (
         <H2
           type="h2"
-          lineHeight="35px"
-          lineHeight_tablet="28px"
-          fontSize_tablet="35px"
-          fontSize="24px"
           maxWidth="1280px"
           margin="30px auto"
-          fontWeight="400"
           style={
             heading?.style
               ? { ...JSON.parse(heading.style) }
@@ -44,7 +39,6 @@ const Iconogram = ({ yml, index }) => {
           padding_tablet={heading.text ? "0 10%" : "20px 10%"}
           padding_md={heading.text ? "0 10%" : "20px 10%"}
           margin="15px auto"
-          fontSize="16px"
           maxWidth="1280px"
           dangerouslySetInnerHTML={{ __html: sub_heading.text }}
           style={sub_heading?.style ? { ...JSON.parse(sub_heading.style) } : {}}
@@ -55,7 +49,6 @@ const Iconogram = ({ yml, index }) => {
           padding_tablet={heading.text ? "0 10%" : "20px 10%"}
           padding_md={heading.text ? "0 10%" : "20px 10%"}
           margin="15px auto"
-          fontSize="16px"
           maxWidth="1280px"
           style={sub_heading?.style ? { ...JSON.parse(sub_heading.style) } : {}}
         >

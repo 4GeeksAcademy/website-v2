@@ -127,13 +127,7 @@ geeks_vs_others:
 iconogram:
   heading:
     text: "How have we built our credibility over the years?"
-    font_size:
-      - 35px
-      - 35px
-      - 35px
-      - 35px
-      - 35px
-    style: '{ "textAlign": "center", "fontSize": "40px", "fontWeight": 400 }'
+    style: '{ "textAlign": "center" }'
   swipable: false
   background: veryLightBlue2
   icons:

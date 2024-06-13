@@ -127,13 +127,7 @@ two_columns:
 iconogram:
   heading:
     text: "¿Cómo hemos construido nuestra credibilidad a lo largo de los años?"
-    font_size:
-      - 35px
-      - 35px
-      - 35px
-      - 35px
-      - 35px
-    style: '{ "textAlign": "center", "fontSize": "40px", "fontWeight": 400 }'
+    style: '{ "textAlign": "center" }'
   swipable: false
   background: veryLightBlue2
   icons:

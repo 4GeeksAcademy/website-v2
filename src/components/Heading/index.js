@@ -114,13 +114,13 @@ export const H2 = styled(BaseHeading)`
   z-index: ${(props) => props.zIndex};
   letter-spacing: 0.05em;
   text-align: ${(props) => props.textAlign};
+  font-family: ${(props) => props.fontFamily};
   @media ${Devices.xxs} {
     text-align: ${(props) => props.textAlign_xxs};
   }
   @media ${Devices.tablet} {
     text-align: ${(props) => props.textAlign_tablet};
   }
-  font-family: ${(props) => props.fontFamily};
 `;
 export const H3 = styled(BaseHeading)`
   font-weight: ${(props) => props.fontWeight || "700"};
@@ -293,6 +293,8 @@ export const Paragraph = styled.p`
   }
 `;
 
+export const SubTitle = styled(Paragraph)``;
+
 export const Title = (props) => {
   const variants = {
     default: {
@@ -380,9 +382,18 @@ Title.defaultProps = {
 Paragraph.defaultProps = {
   fontFamily: "Lato, sans-serif",
   fontSize: "16px",
-  lineHeight: "24px",
+  lineHeight: "22.85px",
   textAlign: "center",
   color: `${Colors.darkGray}`,
+};
+
+SubTitle.defaultProps = {
+  fontFamily: "Archivo",
+  fontSize: "21px",
+  lineHeight: "22.85px",
+  textAlign: "center",
+  fontWeight: "400",
+  color: `${Colors.darkGray3}`,
 };
 Separator.defaultProps = {
   width: "50px",
@@ -397,8 +408,9 @@ H1.defaultProps = {
 };
 H2.defaultProps = {
   fontSize: "35px",
-  lineHeight: "24px",
-  fontWeight: "700",
+  lineHeight: "38.08px",
+  fontWeight: "400",
+  fontFamily: "Archivo",
 };
 H3.defaultProps = {
   fontSize: "21px",

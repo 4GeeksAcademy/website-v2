@@ -122,9 +122,6 @@ const Side = ({
         <H2
           type="h2"
           textAlign_tablet="left"
-          lineHeight="38px"
-          lineHeight_tablet="32px"
-          lineHeight_xxs="24px"
           fontSize={h_xs}
           fontSize_xxs={h_xs}
           fontSize_md={h_md}
@@ -149,7 +146,6 @@ const Side = ({
           fontSize_sm={sh_sm}
           fontSize_tablet={sh_md}
           fonSize_md={sh_lg}
-          fontWeight="400"
           style={sub_heading.style ? JSON.parse(sub_heading.style) : null}
         >
           {sub_heading.text}
@@ -160,6 +156,7 @@ const Side = ({
         <Div
           flexDirection="column"
           margin={sub_heading ? "16px 0 16px 0" : "0 0 16px 0"}
+          gap="5px"
         >
           {bullets.items?.map((bullet, index) => {
             return (
@@ -168,6 +165,7 @@ const Side = ({
                 height="auto"
                 alignItems="center"
                 margin="12px 0 0 0"
+                display="block"
                 style={
                   bullets.item_style ? JSON.parse(bullets.item_style) : null
                 }
