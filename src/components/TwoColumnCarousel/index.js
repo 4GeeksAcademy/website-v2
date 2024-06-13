@@ -59,10 +59,7 @@ const TwoColumnCarousel = ({
             <H2 textAlign="left" margin="0 0 10px 0">
               {title}
             </H2>
-            <SubTitle
-              textAlign="left"
-              fontFamily="Archivo"
-            >
+            <SubTitle textAlign="left" fontFamily="Archivo">
               {text}
             </SubTitle>
           </Div>

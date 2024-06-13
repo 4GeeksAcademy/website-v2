@@ -150,9 +150,7 @@ const Carousel = ({
           margin="0 0 30px 0"
         >
           {content?.heading && (
-            <H2 {...content.headingProps}>
-              {content?.heading}
-            </H2>
+            <H2 {...content.headingProps}>{content?.heading}</H2>
           )}
 
           {content?.content && (

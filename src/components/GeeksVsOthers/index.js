@@ -75,11 +75,7 @@ const GeeksVsOthers = ({
           >
             {title}
           </H2>
-          <SubTitle
-            color={Colors.darkGray}
-          >
-            {paragraph}
-          </SubTitle>
+          <SubTitle color={Colors.darkGray}>{paragraph}</SubTitle>
         </Div>
       )}
 

@@ -79,13 +79,8 @@ const ChooseYourProgram = ({
           width="100%"
           zIndex="1"
         >
-          <H2>
-            {title || info.title}
-          </H2>
-          <SubTitle
-            margin="10px 0px"
-            padding_xs="0 20px"
-          >
+          <H2>{title || info.title}</H2>
+          <SubTitle margin="10px 0px" padding_xs="0 20px">
             {paragraph || info.paragraph}
           </SubTitle>
         </Div>
@@ -152,11 +147,7 @@ const ChooseYourProgram = ({
                         </H4>
                         {program.title.split("\n").map((title, index) => (
                           <Link key={index} to={program.link}>
-                            <H3
-                              textAlign="left"
-                            >
-                              {title}
-                            </H3>
+                            <H3 textAlign="left">{title}</H3>
                           </Link>
                         ))}
                       </Div>

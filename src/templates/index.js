@@ -385,10 +385,7 @@ const Home = (props) => {
       />
       {/* TWO COLUMN CREAR EN EL YML*/}
       <Div display="block" background={Colors.veryLightBlue2}>
-        <H2
-          type="h2"
-          textAlign_tablet="center"
-        >
+        <H2 type="h2" textAlign_tablet="center">
           {yml.two_columns.section_heading.text}
         </H2>
         <TwoColumn
