@@ -62,6 +62,27 @@ testimonials:
     short_content: "Desarrollador web en Residencia de mayores Azahar"
     content: "Lo que más me gustó de 4Geeks fue que me ha cambiado la vida. 4Geeks ha sido solo cosas positivas ya que vengo de un perfil completamente diferente, era técnico ortopedico y ahora soy fullstack, lo cual me ha traído tranquilidad y estabilidad."
 
+  - student_name: "Fidel Enrique Vera"
+    slug: "fidel-vera"
+    country:
+      iso: chile
+      name: Chile
+    featured: false
+    highlighted: false
+    testimonial_date: ""
+    rating: 5
+    student_thumb: "../../../../static/images/testimonials/fidel-vera-testimonial.jpg"
+    student_video: "https://www.youtube.com/watch?v=zfLGOolXHWQ" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    hidden: false
+    linkedin_url: "https://www.linkedin.com/in/fverachourio/"
+    linkedin_text: "Linkedin Perfil"
+    linkedin_image: "../../../../static/images/linkedin.png"
+    source_url: ""
+    # source_url_text: ""
+    short_content: "Gerente de proyectos en No Country "
+    content: "Fui uno de los primeros egresados de machine learning y data science de 4Geeks en chile, desde el principio fue una experiencia de otro nivel porque el nivel del bootcamp es muy alto y empiezas a programar desde el principio lo que me ayudó a tomar la decisión de ingresar en la academia, los diversos proyectos enfocados en problemas de la vida real me han aportado el nivel practico necesario para la industria y ahora que finalicé continuo ahondando en mi aprendizaje con Python, MySQL, en el área del data science y seguir siendo un Geek."
+
   - student_name: "Azul Botaya"
     slug: "azu-bota"
     country:
@@ -425,6 +446,27 @@ testimonials:
       Se enfocan en problemas duros y te ayudan en todo momento. Los instructores senio son impresionantes en cuanto a conocimiento y capacidades. 
       Si tienes una entrevista de trabajo, te ayudan con test, con entrevistas simuladas y te preparan de la mejor manera. 
       Una vez graduado, si quieres seguir practicando o conseguir un nuevo trabajo, ellos te van a ayudar.
+
+  - student_name: "Francisco Correa"
+    slug: "franc-corr"
+    country:
+      iso: chile
+      name: Chile
+    featured: false
+    highlighted: false
+    testimonial_date: ""
+    rating: 5
+    student_thumb: "../../../../static/images/testimonials/francisco-correa-testimonial.webp"
+    student_video: "https://www.youtube.com/watch?v=XQITU1uLTfs" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    hidden: false
+    linkedin_url: "https://www.linkedin.com/in/francisco-javier-correa-fernandez/"
+    linkedin_text: "Linkedin Perfil"
+    linkedin_image: "../../../../static/images/linkedin.png"
+    source_url: ""
+    # source_url_text: ""
+    short_content: "Consultor de preventas en TCS"
+    content: "Mi experiencia en 4Geeks ha sido increíble. No solo me brindaron una educación de calidad, sino que me dieron las herramientas necesarias para triunfar en el mercado actual. El equipo de la academia estuvo presente en cada etapa de mi aprendizaje, guiándome y apoyándome en todo momento. En un mundo post-COVID, donde la transformación digital es esencial, el valor de las soluciones tecnológicas se ha disparado. Gracias a 4Geeks, me siento preparado para enfrentar los desafíos y aprovechar las oportunidades que se presenten en este emocionante campo."
 
   - student_name: Hernan García
     slug: "her-gar"

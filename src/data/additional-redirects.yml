@@ -80,11 +80,6 @@ redirects:
     #redirectInBrowser: true
     isPermanent: true # if permanent google will erase the original url from its results 
     
-  - fromPath: "/us/trends-and-tech/4geeks-academy-history"
-    toPath: "/"
-    #redirectInBrowser: true
-    isPermanent: true # if permanent google will erase the original url from its results 
-    
   - fromPath: "/us/aprender-a-programar/facilidades-y-dificultades-para-aprender-a-programar"
     toPath: "/es/aprender-a-programar/facilidades-y-dificultades-para-aprender-a-programar"
     #redirectInBrowser: true
