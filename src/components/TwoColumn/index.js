@@ -87,7 +87,7 @@ const Side = ({
     sub_heading && Array.isArray(sub_heading.font_size)
       ? sub_heading.font_size
       : [];
-  const [c_xl, c_lg, c_md, c_sm, c_xs] = content ? content.font_size : [];
+  const [c_xl, c_lg, c_md, c_sm, c_xs] = content?.font_size ? content.font_size : [];
 
   return (
     <Div
@@ -123,9 +123,9 @@ const Side = ({
           lineHeight="38px"
           lineHeight_tablet="32px"
           lineHeight_xxs="24px"
-          fontSize={h_xs || "30px"}
-          fontSize_xxs={h_xs || "21px"}
-          fontSize_md={h_md || "30px"}
+          fontSize={h_xs}
+          fontSize_xxs={h_xs}
+          fontSize_md={h_md}
           fontSize_sm={h_sm}
           fontSize_tablet={h_lg}
           fontSize_lg={h_xl}
@@ -141,16 +141,13 @@ const Side = ({
           fontFamily="Lato"
           textAlign="left"
           margin="0"
-          letterSpacing="0.06em"
-          fontSize={sh_xs || sh_xl || "16px"}
+          letterSpacing="2px"
+          fontSize={sh_xs || sh_xl}
           fontSize_xs={sh_xs}
-          fontSize_sm={sh_sm || "18px"}
+          fontSize_sm={sh_sm }
           fontSize_tablet={sh_md}
           fonSize_md={sh_lg}
-          fontHeight="30px"
           fontWeight="400"
-          lineHeight="23px"
-          opacity="1"
           style={sub_heading.style ? JSON.parse(sub_heading.style) : null}
         >
           {sub_heading.text}
@@ -159,79 +156,62 @@ const Side = ({
 
       {Array.isArray(bullets?.items) && (
         <Div
-          display="grid"
-          gridAutoFlow="dense"
-          gridTemplateColumns="repeat(auto-fill, minmax(40%, 100%))"
-          gridAutoRows="auto" //"minmax(100px, auto);"
+          flexDirection="column"
           margin={sub_heading ? "16px 0 16px 0" : "0 0 16px 0"}
-          gridGap="24px"
         >
           {bullets.items?.map((bullet, index) => {
             return (
               <Div
                 key={index}
-                gridColumn_tablet="1/1"
                 height="auto"
                 alignItems="center"
-                padding="16px 5px 0 0"
-                padding_tablet="12px 0 0 0"
-                display="grid"
-                gridTemplateColumns="100%"
-                //gridAutoRows="auto"
-                gridGap="0"
+                margin="12px 0 0 0"
                 style={
                   bullets.item_style ? JSON.parse(bullets.item_style) : null
                 }
               >
-                <Div
-                  display="flex"
-                  flexDirection="row"
-                  alignSelf="left"
-                  padding="0 8px 0 0"
-                >
-                  <Icon
-                    icon={bullet.icon || "check"}
-                    width="13px"
-                    display="inline"
-                    color={Colors.blue}
-                    fill={Colors.yellow}
-                    style={{ strokeWidth: "2px" }}
-                  />
-                  {bullet.heading ? (
-                    <H2
-                      type="h3"
+                {bullet.heading && (
+                  <Div
+                    display="flex"
+                    flexDirection="row"
+                    gap="5px"
+                  >
+                    <Icon
+                      icon={bullet.icon || "check"}
+                      width="13px"
+                      display="inline"
+                      color={Colors.blue}
+                      fill={Colors.yellow}
+                      style={{ strokeWidth: "2px" }}
+                    />
+                    <H3
+                      as="h3"
                       textAlign="left"
-                      fontSize="15px"
+                      fontSize="16px"
                       fontWeight="900"
                       lineHeight="16px"
                       textTransform="uppercase"
-                      padding="0 0 0 5px"
                     >
                       {bullet.heading}
-                    </H2>
-                  ) : (
-                    <Paragraph
-                      textAlign="left"
-                      fontSize="16px"
-                      letterSpacing="0.06em"
-                      fontWeight="400"
-                      lineHeight="22px"
-                      margin="0px 0px 0px 5px"
-                    >
+                    </H3>
+                  </Div>
+                )}
+                {bullet.text && (
+                  <Div margin="12px 0 0 0" alignItems="center" gap="5px">
+                    {!bullet.heading && (
+                      <Icon
+                        icon={bullet.icon || "check"}
+                        width="13px"
+                        display="inline"
+                        color={Colors.blue}
+                        fill={Colors.yellow}
+                        style={{ strokeWidth: "2px" }}
+                      />
+                    )}
+                    <Paragraph textAlign="left" letterSpacing="2px">
                       {bullet.text}
                     </Paragraph>
-                  )}
-                </Div>
-                {bullet.heading && (
-                  <Paragraph
-                    textAlign="left"
-                    fontSize="15px"
-                    fontWeight="400"
-                    lineHeight="22px"
-                    margin="12px 0 0 0"
-                  >
-                    {bullet.text}
-                  </Paragraph>
+                  </Div>
                 )}
               </Div>
             );
@@ -241,17 +221,16 @@ const Side = ({
 
       {content && /<\/?[a-z0-9]+>/g.test(content.text) ? (
         <Paragraph
+          letterSpacing="2px"
           textAlign="left"
           textAlign_tablet="left"
           margin="10px 0"
-          opacity="1"
-          fontSize={c_xs || c_xl || "16px"}
+          fontSize={c_xs || c_xl}
           fontSize_xs={c_xs}
           fontSize_sm={c_sm}
           fontSize_tablet={c_md}
           fontSize_md={c_lg}
           fontSize_lg={c_xl}
-          lineHeight="20px"
           style={content.style ? JSON.parse(content.style) : null}
           onClick={(e) => {
             if (e.target.tagName === "A" && content.path)
@@ -267,16 +246,14 @@ const Side = ({
             textAlign="left"
             textAlign_tablet="left"
             margin="10px 0"
-            opacity="1"
-            fontSize={c_xs || c_xl || "16px"}
+            letterSpacing="2px"
+            fontSize={c_xs || c_xl}
             fontSize_xs={c_xs}
             fontSize_sm={c_sm}
             fontSize_tablet={c_md}
             fontSize_md={c_lg}
             fontSize_lg={c_xl}
-            lineHeight="20px"
             style={content.style ? JSON.parse(content.style) : null}
-            fontHeight="30px"
             onClick={(e) => {
               if (e.target.tagName === "A" && content.path)
                 smartRedirecting(e, content.path);

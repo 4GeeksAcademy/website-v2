@@ -49,13 +49,13 @@ why_4geeks:
     path: "/us/apply"
   bullets:
     items:
-    - heading: "Mentoría en codificación disponible de por vida"
+    - text: "Mentoría en codificación disponible de por vida"
       icon: "check"
-    - heading: "Soporte profesional ilimitado y personalizado"
+    - text: "Soporte profesional ilimitado y personalizado"
       icon: "check"
-    - heading: "Plan de estudios y metodología galardonados"
+    - text: "Plan de estudios y metodología galardonados"
       icon: "check"
-    - heading: "Una extensa red de socios en tecnología"
+    - text: "Una extensa red de socios en tecnología"
       icon: "check"
 
 with_4geeks:

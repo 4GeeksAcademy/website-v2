@@ -65,14 +65,12 @@ why_4geeks:
   heading:
     text: "Be part of a vibrant community"
     style: '{ "fontWeight": 400}'
-    font_size: ["35px", "35px", "30px", "24px", "24px"]
   sub_heading:
     text: "Join our international community of over 4000 students, teachers, partners, and alumni. Connect through various channels like Slack, GitHub, social media, and our exclusive platform 4Geeks.com. Where there’s a geek, there’s a way! What sets us apart:"
-    font_size: ["22px", "22px", "21px", "17px", "17px"]
+    font_size: ["21px", "21px", "21px", "21px", "21px"]
   content:
     text: |-
       Belong to a community of like-minded people who genuinely support each other. Gain lifetime access to our online learning platform and mentorship services. We’ll always be here for you, even after you graduate.
-    font_size: ["17px", "17px", "16px", "14px", "14px"]
   button:
     text: "Apply now"
     color: "white"
@@ -80,13 +78,13 @@ why_4geeks:
     path: "/us/apply"
   bullets:
     items:
-    - heading: "Lifelong and readily available coding mentorship"
+    - text: "Lifelong and readily available coding mentorship"
       icon: "check"
-    - heading: "Unlimited and personalized career support"
+    - text: "Unlimited and personalized career support"
       icon: "check"
-    - heading: "Award-winning syllabus and methodology"
+    - text: "Award-winning syllabus and methodology"
       icon: "check"
-    - heading: "An extensive network of partners in tech"
+    - text: "An extensive network of partners in tech"
       icon: "check"
 
 ## TWO COLUMNS

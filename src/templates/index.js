@@ -160,7 +160,6 @@ const Home = (props) => {
                       textAlign="left"
                       padding_tablet="0 20% 0 0"
                       color={Colors.black}
-                      fontSize="16px"
                       lineHeight="19px"
                       opacity="1"
                       dangerouslySetInnerHTML={{ __html: bullet }}
@@ -527,16 +526,13 @@ export const query = graphql`
             }
             heading {
               text
-              font_size
               style
             }
             sub_heading {
               text
-              font_size
             }
             content {
               text
-              font_size
             }
             button {
               text
@@ -546,7 +542,7 @@ export const query = graphql`
             }
             bullets {
               items {
-                heading
+                text
                 icon
               }
             }
