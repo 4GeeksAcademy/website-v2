@@ -104,7 +104,6 @@ export default ({
               margin_tablet="0 0 15px 0"
               margin_xs="0px"
               textTransform={title ? "" : "uppercase"}
-              color={Colors.darkGray}
               textAlign={title ? "center" : "left"}
             >
               {title || info?.header?.title}

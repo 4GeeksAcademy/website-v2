@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
-import { H2, H3, Paragraph } from "../Heading";
+import { H2, H3, Paragraph, SubTitle } from "../Heading";
 import { GridContainer, Div } from "../Sections";
 import { Colors } from "../Styling";
 import Icon from "../Icon";
@@ -166,17 +166,12 @@ const Loc = ({ lang, hideHeading, allLocationYaml, background }) => {
           maxWidth="1280px"
         >
           <Div display="flex" flexDirection="column" alignItems="center">
-            <H2
-              margin="0 0 25px 0"
-              fontSize="26px"
-              lineHeight="31.2px"
-              // fontWeight="900"
-            >
+            <H2 margin="0 0 25px 0">
               {heading}
             </H2>
-            <Paragraph fontSize="16px" lineHeight="24px" color={Colors.black}>
+            <SubTitle>
               {sub_heading}
-            </Paragraph>
+            </SubTitle>
           </Div>
         </GridContainer>
       )}

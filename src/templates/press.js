@@ -112,7 +112,7 @@ const Press = (props) => {
         fontSize_title="40px"
         fontSizeTitle_tablet="60px"
         fontFamily_title="Archivo-Black"
-        fontSize_paragraph="24px"
+        fontSize_paragraph="21px"
         gridTemplateColumns_tablet="repeat(14, 1fr)"
         maxWidth="1280px"
         uppercase

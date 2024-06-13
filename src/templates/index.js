@@ -69,7 +69,7 @@ const Home = (props) => {
     <>
       <Div
         flexDirection="column"
-        margin_tablet={
+        margin_md={
           isContentBarActive ? "120px auto 108px auto" : "72px auto 108px auto"
         }
         maxWidth="1280px"
@@ -86,27 +86,22 @@ const Home = (props) => {
           position="relative"
           gridColumn_tablet="1/15"
         >
-          <Div
-            position="absolute"
-            zIndex="5"
-            left_tablet={indexVideo || sessionVideo ? "40%" : "50%"}
-            left="50%"
-            left_xxs="65%"
-            left_xs="74%"
-            top_tablet={indexVideo || sessionVideo ? "1%" : "25%"}
-            top="90px"
-            top_xxs="20px"
-            top_xs="100px"
-            width_xxs="80px"
-            width_sm="100px"
-            height_xxs="80px"
-            width_tablet="160px"
-            height_tablet="152px"
-            width="100px"
-            height="100px"
-          >
-            <Icon icon="logo-badge" width="100%" height="100%" />
-          </Div>
+          {(indexVideo || sessionVideo) && (
+            <Div
+              position="absolute"
+              zIndex="5"
+              left="74%"
+              left_tablet="47%"
+              top="0px"
+              top_tablet="1%"
+              width="70px"
+              height="70px"
+              width_tablet="160px"
+              height_tablet="152px"
+            >
+              <Icon icon="logo-badge" width="100%" height="100%" />
+            </Div>
+          )}
           <Div
             flexDirection="column"
             alignItems="start"
@@ -125,8 +120,8 @@ const Home = (props) => {
                 type="h1"
                 textAlign="left"
                 textShadow="none"
-                fontSize="16px"
-                lineHeight="18px"
+                fontSize="21px"
+                lineHeight="22.85px"
                 fontWeight="400"
                 color={Colors.black}
               >
@@ -137,12 +132,13 @@ const Home = (props) => {
                 textAlign_tablet="start"
                 textAlign_xxs="start"
                 fontSize="40px"
-                fontSize_tablet="50px"
+                fontSize_tablet="55px"
                 margin="20px 0 0 0"
                 lineHeight_xxs="45px"
                 lineHeight_tablet="60px"
                 width_tablet="100%"
                 fontFamily="Archivo-Black"
+                color={Colors.black}
               >
                 {`${yml.header_data.title}`}
               </H2>

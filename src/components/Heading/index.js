@@ -401,9 +401,9 @@ Separator.defaultProps = {
   border: `2px solid black`,
 };
 H1.defaultProps = {
-  fontSize: "13px",
-  lineHeight: "16px",
-  fontWeight: "700",
+  fontSize: "21px",
+  lineHeight: "22.85px",
+  fontWeight: "400",
   letterSpacing: "0.05em",
 };
 H2.defaultProps = {
@@ -411,6 +411,7 @@ H2.defaultProps = {
   lineHeight: "38.08px",
   fontWeight: "400",
   fontFamily: "Archivo",
+  color: Colors.darkBlue,
 };
 H3.defaultProps = {
   fontSize: "21px",

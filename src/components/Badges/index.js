@@ -57,7 +57,6 @@ const SquaresVariant = ({
           {paragraph && (
             <Div margin="15px 0">
               <SubTitle
-                color={Colors.darkGray}
                 dangerouslySetInnerHTML={{ __html: paragraph }}
               />
             </Div>

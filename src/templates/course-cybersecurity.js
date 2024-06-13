@@ -90,7 +90,7 @@ const Cybersecurity = ({ data, pageContext, yml }) => {
         fontSizeTitle_tablet="40px"
         lineHeight_table="44px"
         fontFamily_title="Archivo-Black"
-        fontSize_paragraph="24px"
+        fontSize_paragraph="21px"
         gridTemplateColumns_tablet="repeat(14, 1fr)"
         maxWidth="1366px"
         uppercase

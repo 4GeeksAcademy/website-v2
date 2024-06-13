@@ -1,7 +1,7 @@
 import React from "react";
 import { Div, GridContainer, Grid } from "../Sections";
 import { Colors } from "../Styling";
-import { H1, H2, Paragraph } from "../Heading";
+import { H1, H2, Paragraph, SubTitle } from "../Heading";
 import { Link } from "gatsby";
 import { smartRedirecting } from "../../utils/utils.js";
 import Fragment from "../Fragment";
@@ -30,12 +30,7 @@ const Title_Paragraph = (props) => {
           {/*<H2 margin="0 0 15px 0" fontSize="15px" lineHeight="19px" fontWeight="900">{title}</H2>*/}
           <H2
             type="h2"
-            fontFamily="Lato"
-            fontWeight="900"
-            fontSize="32px"
-            lineHeight="40px"
             letterSpacing="0.05em"
-            color="#3A3A3A"
             width="100%"
             margin="0 0 23px 0"
             textTransform="uppercase"
@@ -45,21 +40,17 @@ const Title_Paragraph = (props) => {
           </H2>
 
           {/*<Paragraph>{paragraph}</Paragraph>*/}
-          <Paragraph
-            fontFamily="Lato"
-            fontWeight="normal"
-            fontSize={props.fontSize || "16px"}
-            lineHeight="22px"
+          <SubTitle
+            fontSize={props.fontSize}
             padding="0"
             padding_tablet="0px 10%"
             letterSpacing="0.06em"
-            color="#3A3A3A"
             width="100%"
             margin="0 0 15px 0"
             style={{ fontStyle: "normal" }}
           >
             {props.paragraph}
-          </Paragraph>
+          </SubTitle>
         </Div>
       </Grid>
     </>

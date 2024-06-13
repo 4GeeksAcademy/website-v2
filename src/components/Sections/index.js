@@ -358,6 +358,7 @@ export const Div = styled.div`
   margin: ${(props) => props.margin};
   border: ${(props) => props.border};
   border-radius: ${(props) => props.borderRadius};
+  color: ${(props) => props.color};
   background-color: ${(props) => props.backgroundColor};
   background: ${(props) =>
     props.isActive ? props.backgroundActive : props.background};
@@ -401,6 +402,7 @@ export const Div = styled.div`
   &:hover {
     background: ${(props) => props.backgroundHover};
     border-bottom: ${(props) => props.borderBottomHover};
+    color: ${(props) => props.colorHover};
   }
   @media ${Devices.xxs} {
     column-count: ${(props) => props.columnCount_xxs};
@@ -811,17 +813,17 @@ export const Header = ({
           gridColumn_tablet={svg_image ? null : "1 / 13"}
           gridArea_tablet={svg_image ? "1/1/1/7" : null}
         >
-          <H2
+          <H1
             type="h1"
             textAlign_tablet={textAlign_tablet}
             margin="0 0 11px 0"
             padding={paddingTitle || "0 20px"}
-            color="#606060"
+            color={Colors.darkGray2}
             fontSize={fontSize_seo || "12px"}
           >
             {seo_title}
-          </H2>
-          <H1
+          </H1>
+          <H2
             type="h2"
             textAlign_tablet={textAlign_tablet}
             padding="0 20px"
@@ -835,7 +837,7 @@ export const Header = ({
             zindex={zIndex}
           >
             {multilineTitle}
-          </H1>
+          </H2>
           <Paragraph
             width="auto"
             letterSpacing="0.05em"
