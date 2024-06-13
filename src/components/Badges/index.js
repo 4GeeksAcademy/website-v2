@@ -56,9 +56,7 @@ const SquaresVariant = ({
           )}
           {paragraph && (
             <Div margin="15px 0">
-              <SubTitle
-                dangerouslySetInnerHTML={{ __html: paragraph }}
-              />
+              <SubTitle dangerouslySetInnerHTML={{ __html: paragraph }} />
             </Div>
           )}
           <Div width="100%" style={{ overflowX: "auto" }}>

@@ -166,12 +166,8 @@ const Loc = ({ lang, hideHeading, allLocationYaml, background }) => {
           maxWidth="1280px"
         >
           <Div display="flex" flexDirection="column" alignItems="center">
-            <H2 margin="0 0 25px 0">
-              {heading}
-            </H2>
-            <SubTitle>
-              {sub_heading}
-            </SubTitle>
+            <H2 margin="0 0 25px 0">{heading}</H2>
+            <SubTitle>{sub_heading}</SubTitle>
           </Div>
         </GridContainer>
       )}
