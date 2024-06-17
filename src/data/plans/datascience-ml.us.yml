@@ -129,7 +129,7 @@ part_time:
     price: "€5,409*"
     original_price: "€7,500"
     bullets:
-      - "From €200 per month"
+      - "Pay in monthly installments. Starting at €200"
       - "Customized financing, with or without interest, from 4 to 48 months (conditions apply)"
       - "Scholarships available up to €2,091. Pay from €5,409 instead of €7,500. Scholarships subject to availability!"     
     icons: 
@@ -175,6 +175,7 @@ part_time:
     price: "€5,409*"
     original_price: "€7,500"
     bullets:
+      - "Pay in monthly installments. Starting at €200"
       - "Customized financing, with or without interest, from 4 to 48 months (conditions apply)"
       - "Scholarships available up to €2,091. Pay from €5,409 instead of €7,500. Scholarships subject to availability!"      
     icons: 
@@ -217,7 +218,7 @@ part_time:
     price: "€5,409*"
     original_price: "€7,500"
     bullets:
-      - "From €200 per month"
+      - "Pay in monthly installments. Starting at €200"
       - "Customized financing, with or without interest, from 4 to 48 months (conditions apply)"
       - "Scholarships available up to €2,091. Pay from €5,409 instead of €7,500. Scholarships subject to availability!"  
     icons: 

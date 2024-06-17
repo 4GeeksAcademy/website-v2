@@ -85,10 +85,10 @@ full_time:
     recomended: true
     scholarship: "Pay Upfront"
     payment_time: "Get a better price"
-    price: "€4,550*"
+    price: "€4,750*"
     bullets:
       - "Pay using your bank account, credit or debit card, Paypal, Bitcoin or Etherium."
-      - "Discounts up to €2,150. Pay €4,550 instead of €6,700. Discount subject to availability."     
+      - "Discounts up to €2,050. Pay €4,750 instead of €6,800. Discount subject to availability."     
     icons: 
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
@@ -245,7 +245,7 @@ part_time:
     price: "€4,900*"
     original_price: "€ 6,800"
     bullets:
-      - "From €150 per month"
+      - "Pay in monthly installments. Starting at €150"
       - "Customized financing, with or without interest, from 4 to 48 months (conditions apply)"
       - "Scholarships available up to €1,900. Pay from €4,900* instead of €6,800. SCHOLARSHIPS SUBJECT TO AVAILABILITY!"         
     icons: 
@@ -288,7 +288,7 @@ part_time:
     price: "€4,900*"
     original_price: "€ 6,800"
     bullets:
-      - "From €150 per month"
+      - "Pay in monthly installments. Starting at €150"
       - "Customized financing, with or without interest, from 4 to 48 months (conditions apply)"
       - "Scholarships available up to €1,900. Pay from €4,900* instead of €6,800. SCHOLARSHIPS SUBJECT TO AVAILABILITY!"
     icons: 
@@ -334,7 +334,7 @@ part_time:
     price: "€4,900*"
     original_price: "€ 6,800"
     bullets:
-      - "From €150 per month"
+      - "Pay in monthly installments. Starting at €150"
       - "Customized financing, with or without interest, from 4 to 48 months (conditions apply)"
       - "Scholarships available up to €1,900. Pay from €4,900* instead of €6,800. SCHOLARSHIPS SUBJECT TO AVAILABILITY!"        
     icons:  
