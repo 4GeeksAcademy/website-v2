@@ -43,7 +43,7 @@ part_time:
     offer: "Launch Offer!"
     bullets:
       - "From €200 per month"
-      - "Customized financing, with or without interest, from 4 to 24 months"
+      - "Customized financing, with or without interest, from 4 to 48 months (conditions apply)"
       - "Scholarships available up to €2,300. Pay from €5,500 instead of €7,800. Scholarships subject to availability!"    
     icons: 
       - "/images/zank.png"
@@ -88,7 +88,7 @@ part_time:
     offer: "Launch Offer!"
     bullets:
       - "From €200 per month"
-      - "Customized financing, with or without interest, from 4 to 24 months"
+      - "Customized financing, with or without interest, from 4 to 48 months (conditions apply)"
       - "Scholarships available up to €2,300. Pay from €5,500 instead of €7,800. Scholarships subject to availability!"    
     icons: 
       - "/images/zank.png"
@@ -133,7 +133,7 @@ part_time:
     offer: "Launch Offer!"
     bullets:
       - "From €200 per month"
-      - "Customized financing, with or without interest, from 4 to 24 months"
+      - "Customized financing, with or without interest, from 4 to 48 months (conditions apply)"
       - "Scholarships available up to €2,300. Pay from €5,500 instead of €7,800. Scholarships subject to availability!"    
     icons: 
       - "/images/zank.png"

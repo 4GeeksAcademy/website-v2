@@ -246,7 +246,7 @@ part_time:
     original_price: "€ 6,800"
     bullets:
       - "From €150 per month"
-      - "Customized financing, with or without interest, from 4 to 24 months"
+      - "Customized financing, with or without interest, from 4 to 48 months (conditions apply)"
       - "Scholarships available up to €1,900. Pay from €4,900* instead of €6,800. SCHOLARSHIPS SUBJECT TO AVAILABILITY!"         
     icons: 
       - "/images/bcas.png"
@@ -289,7 +289,7 @@ part_time:
     original_price: "€ 6,800"
     bullets:
       - "From €150 per month"
-      - "Customized financing, with or without interest, from 4 to 24 months"
+      - "Customized financing, with or without interest, from 4 to 48 months (conditions apply)"
       - "Scholarships available up to €1,900. Pay from €4,900* instead of €6,800. SCHOLARSHIPS SUBJECT TO AVAILABILITY!"
     icons: 
       - "/images/bcas.png"
@@ -335,7 +335,7 @@ part_time:
     original_price: "€ 6,800"
     bullets:
       - "From €150 per month"
-      - "Customized financing, with or without interest, from 4 to 24 months"
+      - "Customized financing, with or without interest, from 4 to 48 months (conditions apply)"
       - "Scholarships available up to €1,900. Pay from €4,900* instead of €6,800. SCHOLARSHIPS SUBJECT TO AVAILABILITY!"        
     icons:  
       - "/images/zank.png"

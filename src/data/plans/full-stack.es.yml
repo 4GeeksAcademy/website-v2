@@ -312,7 +312,7 @@ part_time:
     original_price: "€ 6.800"
     bullets:
       - "Desde 150 € al mes"
-      - "Financiación a tu medida, con o sin intereses, desde 4 hasta 24 meses"
+      - "Financiación a tu medida, con o sin intereses, desde 4 hasta 48 meses (condiciones aplican)"
       - "Becas disponibles de hasta 1.900 €. Paga desde 4.900 €* en vez de 6.800 €. ¡BECAS SUJETAS A DISPONIBILIDAD!"         
     icons: 
       - "/images/bcas.png"
@@ -355,7 +355,7 @@ part_time:
     original_price: "€ 6.800"
     bullets:
       - "Desde 150 € al mes"
-      - "Financiación a tu medida, con o sin intereses, desde 4 hasta 24 meses"
+      - "Financiación a tu medida, con o sin intereses, desde 4 hasta 48 meses (condiciones aplican)"
       - "Becas disponibles de hasta 1.900 €. Paga desde 4.900 €* en vez de 6.800 €. ¡BECAS SUJETAS A DISPONIBILIDAD!"
     icons: 
       - "/images/bcas.png"
@@ -400,7 +400,7 @@ part_time:
     original_price: "€ 6.800"
     bullets:
       - "Desde 150 € al mes"
-      - "Financiación a tu medida, con o sin intereses, desde 4 hasta 24 meses"
+      - "Financiación a tu medida, con o sin intereses, desde 4 hasta 48 meses (condiciones aplican)"
       - "Becas disponibles de hasta 1.900 €. Paga desde 4.900 €* en vez de 6.800 €. ¡BECAS SUJETAS A DISPONIBILIDAD!"        
     icons:  
       - "/images/zank.png"

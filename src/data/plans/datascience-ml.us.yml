@@ -130,7 +130,7 @@ part_time:
     original_price: "€7,500"
     bullets:
       - "From €200 per month"
-      - "Customized financing, with or without interest, from 4 to 24 months"
+      - "Customized financing, with or without interest, from 4 to 48 months (conditions apply)"
       - "Scholarships available up to €2,091. Pay from €5,409 instead of €7,500. Scholarships subject to availability!"     
     icons: 
       - "/images/zank.png"
@@ -175,14 +175,14 @@ part_time:
     price: "€5,409*"
     original_price: "€7,500"
     bullets:
-      - "Customized financing, with or without interest, from 4 to 24 months"
+      - "Customized financing, with or without interest, from 4 to 48 months (conditions apply)"
       - "Scholarships available up to €2,091. Pay from €5,409 instead of €7,500. Scholarships subject to availability!"      
     icons: 
       - "/images/bcas.png"
           
   - slug: 'north-europe-isa-ds-pt'
     academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany', 'munich-germany']
-    recomended: true
+    recomended: false
     scholarship: "Income Share Agreement (ISA)"
     payment_time: "Pay only when you work"
     price: "€0*"
@@ -218,14 +218,14 @@ part_time:
     original_price: "€7,500"
     bullets:
       - "From €200 per month"
-      - "Customized financing, with or without interest, from 4 to 24 months"
+      - "Customized financing, with or without interest, from 4 to 48 months (conditions apply)"
       - "Scholarships available up to €2,091. Pay from €5,409 instead of €7,500. Scholarships subject to availability!"  
     icons: 
       - "/images/bcas.png"
 
   - slug: 'south-europe-isa-ds-pt'
     academies: ['lisbon-portugal','milan-italy','rome-italy']
-    recomended: true
+    recomended: false
     scholarship: "Income Share Agreement (ISA)"
     payment_time: "Pay only when you work"
     price: "€0*"
