@@ -40,11 +40,13 @@ header_data:
 
 features:
   marginTop: 20px #<-- separation between tagline and the bullets
-
   #                                         up   left down  right
   styles: '{ "fontSize": "15px", "margin": "10px 0px 10px 0px" }'
-  text: "HTML y CSS son las bases de la web. Dominar las etiquetas HTML y los selectores CSS será parte de los primeros pasos que te lleven a convertirte en un excelente programador algún día. ¿A qué esperas? ¡Descarga hoy la guía de HTML y CSS GRATIS!"
-  # bullets: ""
+  text: ""
+  bullets:
+  - Desafiarás y desmitificarás creencias arraigadas en el mundo de la programación.
+  - Obtendrás consejos prácticos para construir una carrera sólida en programación.
+  - Entenderás como es la mentalidad de un programador 3.0
 
 follow_bar:
   position: "top" # top, bottom, hidden
