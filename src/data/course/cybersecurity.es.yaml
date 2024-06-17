@@ -112,7 +112,7 @@ two_columns_info:
   proportions: [6, 6]
   image:
     style: '{"border" : "0px sólido negro", "backgroundSize": "contain", "background-position": "center" }'
-    src: "../../images/landing/grupo-ventanas.png"
+    src: "../../images/landing/grupo-ventanas.webp"
     shadow: false
   heading:
     text: "Sé parte de la próxima generación de profesionales en ciberseguridad"
