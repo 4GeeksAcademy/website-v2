@@ -1,11 +1,8 @@
 import React, { useRef } from "react";
 import { Div } from "../Sections";
-import { H2, Paragraph, SubTitle } from "../Heading";
+import { H2, SubTitle } from "../Heading";
 import Icon from "../Icon";
 import CarouselV2 from "../CarouselV2";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 const TwoColumnCarousel = ({
   title,
@@ -15,7 +12,6 @@ const TwoColumnCarousel = ({
   settings,
   carouselProps,
 }) => {
-  const sliderRef = useRef();
 
   const customSettings = {
     className: "slider variable-width",
@@ -31,11 +27,13 @@ const TwoColumnCarousel = ({
   };
 
   return (
-    <Div background={background}>
+    <Div
+      background={background}
+      padding="40px"
+      padding_tablet="40px 130px"
+      padding_lg="40px 0px"
+    >
       <Div
-        padding="30px"
-        padding_tablet="80px 130px"
-        padding_lg="80px 0px"
         margin="auto"
         width="100%"
         maxWidth="1280px"
@@ -72,9 +70,6 @@ const TwoColumnCarousel = ({
           padding="0 0 20px 0"
           padding_tablet="0"
         >
-          {/* <Slider {...customSettings} ref={sliderRef}>
-            {children}
-          </Slider> */}
           <CarouselV2
             width="100%"
             settings={customSettings}

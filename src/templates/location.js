@@ -87,7 +87,7 @@ const Location = ({ data, pageContext, yml }) => {
           <H1 type="h1" textAlign="left" margin="0 0 11px 0" color="#606060">
             {yml.seo_title}
           </H1>
-          <H2 textAlign="left" fontSize="50px" lineHeight="60px">
+          <H2 textAlign="left" fontSize="50px" lineHeight="60px" color={Colors.black}>
             {`${yml.header.tagline}`}
           </H2>
           <H3 textAlign="left" type="h3" margin="15px 0 25px 0">

@@ -393,7 +393,7 @@ SubTitle.defaultProps = {
   lineHeight: "22.85px",
   textAlign: "center",
   fontWeight: "400",
-  color: `${Colors.darkGray3}`,
+  color: `${Colors.darkGray}`,
 };
 Separator.defaultProps = {
   width: "50px",

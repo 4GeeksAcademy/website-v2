@@ -294,7 +294,7 @@ const Home = (props) => {
         margin_tablet="30px auto 0 auto"
         width="100%"
         className="badge-slider hideOverflowX__"
-        background={Colors.veryLightBlue2}
+        background={Colors.veryLightBlue3}
       >
         <Badges
           variant="squares"
@@ -307,7 +307,7 @@ const Home = (props) => {
           paddingText_tablet="0 10% 5px 10%"
         />
       </Div>
-      <Div background={Colors.veryLightBlue2} display="block">
+      <Div background={Colors.veryLightBlue3} display="block">
         <TwoColumn
           left={{ image: yml.why_4geeks?.image }}
           right={{
@@ -324,19 +324,19 @@ const Home = (props) => {
           session={session}
         />
       </Div>
-      <Iconogram yml={yml.iconogram} background={Colors.veryLightBlue2} />
+      <Iconogram yml={yml.iconogram} background={Colors.veryLightBlue3} />
       <GeeksVsOthers
         lang={pageContext.lang}
         mainBackround={Colors.white}
         limit={5}
-        style={{ background: Colors.veryLightBlue2 }}
+        style={{ background: Colors.veryLightBlue3 }}
         title={yml.geeks_vs_others.heading}
         paragraph={yml.geeks_vs_others.sub_heading}
         link
       />
       <Testimonials
         lang={data.allTestimonialsYaml.edges}
-        background={Colors.veryLightBlue2}
+        background={Colors.veryLightBlue3}
         heading={yml.success_cases.title}
         content={yml.success_cases.content}
         margin="0"
@@ -345,7 +345,7 @@ const Home = (props) => {
       <TwoColumnCarousel
         title={yml.two_column_carousel.title}
         text={yml.two_column_carousel.text}
-        background={Colors.veryLightBlue2}
+        background={Colors.veryLightBlue3}
         carouselProps={{
           margin: "0px",
           margin_tablet: "0px",
@@ -377,10 +377,10 @@ const Home = (props) => {
         programs={data.allChooseYourProgramYaml.edges[0].node.programs}
         title={yml.choose_program.title}
         paragraph={yml.choose_program.paragraph}
-        background={Colors.veryLightBlue2}
+        background={Colors.veryLightBlue3}
       />
       {/* TWO COLUMN CREAR EN EL YML*/}
-      <Div display="block" background={Colors.veryLightBlue2}>
+      <Div display="block" background={Colors.veryLightBlue3}>
         <H2 type="h2" textAlign_tablet="center">
           {yml.two_columns.section_heading.text}
         </H2>
@@ -400,7 +400,7 @@ const Home = (props) => {
       </Div>
       <With4Geeks
         lang={pageContext.lang}
-        background={Colors.veryLightBlue2}
+        background={Colors.veryLightBlue3}
         headerProps={{
           margin: "0 5px 20px 5px",
           margin_tablet: "0 auto 20px auto",
@@ -416,7 +416,7 @@ const Home = (props) => {
 
       <OurPartners
         multiLine
-        background={Colors.veryLightBlue2}
+        background={Colors.veryLightBlue3}
         images={hiring.partners.images}
         margin="0"
         padding="50px 0"
@@ -433,7 +433,7 @@ const Home = (props) => {
         }
       />
       <Loc
-        background={Colors.veryLightBlue2}
+        background={Colors.veryLightBlue3}
         lang={pageContext.lang}
         allLocationYaml={data.allLocationYaml}
         hideHeading

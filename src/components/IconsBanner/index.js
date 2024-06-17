@@ -40,9 +40,7 @@ export default ({ icon, title, content, color, content_style }) => {
         {title && (
           <H3
             textAlign="left"
-            fontSize="16px"
             fontFamily="Archivo-Black"
-            // lineHeight="20px"
             margin="0"
           >
             {title}
@@ -50,11 +48,9 @@ export default ({ icon, title, content, color, content_style }) => {
         )}
         {content && (
           <Paragraph
-            lineHeight="24px"
             textAlign="left"
             color="#000"
             opacity="1"
-            fontSize="14px"
             style={content_style ? JSON.parse(content_style) : {}}
           >
             {content}

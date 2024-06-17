@@ -707,7 +707,7 @@ const Apply = (props) => {
               title={yml.left.form_section.modal.title}
               padding="20px 10px"
             >
-              <Paragraph fontSize="14px" lineHeight="24px">
+              <Paragraph>
                 {yml.left.form_section.modal.text}
               </Paragraph>
               <Div justifyContent="between">
@@ -767,9 +767,6 @@ const Apply = (props) => {
                 textAlign="left"
                 margin="20px 0"
                 key={i}
-                fontSize="15px"
-                lineHeight="19px"
-                fontWeight="400"
               >
                 {m}
               </Paragraph>

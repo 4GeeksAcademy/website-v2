@@ -538,7 +538,7 @@ export const Div = styled.div`
     grid-area: ${(props) => props.gridArea_md};
     display: ${(props) => props.display_md};
     flex-direction: ${(props) => props.flexDirection_md};
-    gap: ${(props) => (props) => props.gap_md};
+    gap: ${(props) => props.gap_md};
     flex-wrap: ${(props) => props.flexWrap_md};
     justify-content: ${(props) =>
       justifyContentOptions[props.justifyContent_md]};
@@ -835,6 +835,7 @@ export const Header = ({
             fontFamily={fontFamily_title}
             textTransform={uppercase && "uppercase"}
             zindex={zIndex}
+            color={Colors.black}
           >
             {multilineTitle}
           </H2>

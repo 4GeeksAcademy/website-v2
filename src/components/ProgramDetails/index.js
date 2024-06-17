@@ -263,8 +263,6 @@ const ProgramDetails = (props) => {
                     textAlign="left"
                     textTransform="uppercase"
                     margin="0 0 10px 0"
-                    fontSize_xs="18px"
-                    fontSize_tavlet="22px"
                   >
                     {props.details.details_modules[selected.index].title}
                   </H3>
@@ -275,10 +273,6 @@ const ProgramDetails = (props) => {
                         key={i}
                         textAlign="left"
                         color={Colors.darkGray}
-                        fontSize_tablet="18px"
-                        fontSize_xs="14px"
-                        lineHeight_tablet="19px"
-                        lineHeight_xs="17px"
                         margin="0 0 10px 0"
                       >
                         {detail}
@@ -310,8 +304,6 @@ const ProgramDetails = (props) => {
                       textAlign="left"
                       textTransform="uppercase"
                       margin="0 0 10px 0"
-                      fontSize_xs="18px"
-                      fontSize_tavlet="22px"
                     >
                       {strings[lang]["Projects"]}
                     </H3>
@@ -322,10 +314,6 @@ const ProgramDetails = (props) => {
                           key={i}
                           textAlign="left"
                           color={Colors.darkGray}
-                          fontSize_tablet="18px"
-                          fontSize_xs="14px"
-                          lineHeight_tablet="19px"
-                          lineHeight_xs="17px"
                           margin="0 0 10px 0"
                         >
                           {detail}
@@ -347,16 +335,12 @@ const ProgramDetails = (props) => {
                       textAlign="left"
                       textTransform="uppercase"
                       margin="0 0 10px 0"
-                      fontSize_xs="18px"
-                      fontSize_tavlet="22px"
                     >
                       {strings[lang]["Duration"]}
                     </H3>
                     <Paragraph
                       textAlign="left"
                       color={Colors.darkGray}
-                      fontSize="18px"
-                      lineHeight="19px"
                       margin="0 0 10px 0"
                     >
                       {props.details.details_modules[selected.index].duration}

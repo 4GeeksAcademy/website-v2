@@ -23,7 +23,7 @@ const Iconogram = ({ yml, index }) => {
         <H2
           type="h2"
           maxWidth="1280px"
-          margin="30px auto"
+          margin="0 auto"
           style={
             heading?.style
               ? { ...JSON.parse(heading.style) }
@@ -33,7 +33,7 @@ const Iconogram = ({ yml, index }) => {
           {heading.text}
         </H2>
       )}
-      {/<\/?[a-z0-9]+>/g.test(sub_heading?.text) ? (
+      {/<\/?[a-z0-9]+>/g.test(sub_heading?.text) && (
         <Paragraph
           padding_xs={heading.text ? "0 10%" : "20px 10%"}
           padding_tablet={heading.text ? "0 10%" : "20px 10%"}
@@ -43,18 +43,7 @@ const Iconogram = ({ yml, index }) => {
           dangerouslySetInnerHTML={{ __html: sub_heading.text }}
           style={sub_heading?.style ? { ...JSON.parse(sub_heading.style) } : {}}
         />
-      ) : sub_heading && sub_heading?.text !== "" ? (
-        <Paragraph
-          padding_xs={heading.text ? "0 10%" : "20px 10%"}
-          padding_tablet={heading.text ? "0 10%" : "20px 10%"}
-          padding_md={heading.text ? "0 10%" : "20px 10%"}
-          margin="15px auto"
-          maxWidth="1280px"
-          style={sub_heading?.style ? { ...JSON.parse(sub_heading.style) } : {}}
-        >
-          {sub_heading.text}
-        </Paragraph>
-      ) : null}
+      )}
       <Div
         display="flex"
         flexDirection="column"
@@ -63,13 +52,10 @@ const Iconogram = ({ yml, index }) => {
         flexWrap_xs="wrap"
         flexWrap_tablet="nowrap"
         justifyContent="center"
-        // gap="45px"
         gap_tablet={icons.length > 4 ? "0px" : "3%"}
-        //gap_md="10%"
         maxWidth="1280px"
-        margin="20px auto 0 auto"
-        padding_tablet="0 40px 10px 40px"
-        padding_lg="0 0 10px 0"
+        margin="0 auto "
+        padding="32px 0 10px 0"
         className={swipable && "badge-slider hideOverflowX__"}
       >
         {Array.isArray(icons) &&

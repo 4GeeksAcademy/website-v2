@@ -122,22 +122,14 @@ const PricingCard = ({
               </Div>
               <Div display="block">
                 <Paragraph
-                  lineHeight="17px"
-                  fontWeight_xs="700"
-                  fontSize="14px"
                   color={Colors.black}
-                  opacity="1"
                   textAlign="left"
                   margin="0 0 5px 0"
                 >
                   {scholarship}
                 </Paragraph>
                 <Paragraph
-                  lineHeight="17px"
-                  fontWeight="400"
-                  fontSize="14px"
                   color={Colors.black}
-                  opacity="1"
                   textAlign="left"
                 >
                   {payment_time}
@@ -220,7 +212,7 @@ const PricingCard = ({
           width="100%"
           borderRadius="4px"
         >
-          <H3 textAlign="center" margin="0 0 15px 0" fontSize="21px">
+          <H3 textAlign="center" margin="0 0 15px 0">
             {info.plan_details}
           </H3>
           {data.bullets &&
@@ -850,9 +842,6 @@ const PricesAndPayment = (props) => {
                   <Paragraph
                     textAlign="left"
                     color={Colors.black}
-                    opacity="1"
-                    fontSize="14px"
-                    lineHeight="17px"
                   >
                     {info.job_guarantee.description}
                   </Paragraph>
@@ -874,8 +863,6 @@ const PricesAndPayment = (props) => {
                   <H3
                     textAlign="center"
                     margin="0 0 16px 0"
-                    fontSize="21px"
-                    lineHeight="25px"
                   >
                     {info.plan_details}
                   </H3>
@@ -892,11 +879,7 @@ const PricesAndPayment = (props) => {
                           fill={Colors.blue}
                         />
                         <Paragraph
-                          lineHeight="19px"
-                          fontWeight="500"
-                          fontSize="16px"
                           color={Colors.black}
-                          opacity="1"
                           textAlign="left"
                         >
                           {bullet}

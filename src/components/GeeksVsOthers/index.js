@@ -54,7 +54,7 @@ const GeeksVsOthers = ({
   if (geeks) geeks = geeks.node;
 
   return (
-    <Div display="block" style={style} github="/components/geeks_vs_others">
+    <Div padding="40px 0" display="block" style={style}>
       {title && paragraph && (
         <Div
           display="flex"

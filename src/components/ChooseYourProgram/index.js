@@ -17,7 +17,6 @@ const ChooseYourProgram = ({
   background,
 }) => {
   const { session } = useContext(SessionContext);
-  const applyButton = session?.location?.button?.apply_button_text;
   const data = useStaticQuery(graphql`
     {
       allChooseYourProgramYaml {
@@ -47,7 +46,14 @@ const ChooseYourProgram = ({
 
   if (info) info = info.node;
   return (
-    <Div id={id} ref={chooseProgramRef} background={background}>
+    <Div
+      id={id}
+      ref={chooseProgramRef}
+      background={background}
+      // padding_lg="10px 0 50px 0"
+      // padding_tablet="10px 40px 50px 40px"
+      padding="40px"
+    >
       <Grid
         gridTemplateColumns_md={
           landingTemplate ? "repeat(14, 1fr)" : "repeat(14, 1fr)"
@@ -58,19 +64,12 @@ const ChooseYourProgram = ({
         gridTemplateColumns_xs="1fr" //{landingTemplate && "1fr"}
         gridAutoRows_tablet="auto" //"minmax(100px, auto)"
         background_tablet={landingTemplate ? Colors.white : "transparent"}
-        padding_lg="10px 0 50px 0"
-        padding_md="10px 80px 50px 80px"
-        padding_tablet="10px 40px 50px 40px"
-        padding="0 20px 40px 20px "
         maxWidth_tablet="1280px"
-        margin_tablet="0 auto 50px auto"
-        margin_lg="0 auto 50px auto"
+        margin_tablet="0 auto"
+        margin_lg="0 auto"
       >
         <Div
-          margin_tablet="50px 0 30px 0"
-          margin_xs="30px 0 0 0"
-          padding_tablet="0 20px"
-          paddin_xs="0px 20px"
+          margin_tablet="0 0 32px 0"
           gridColumn_tablet="2 / 14"
           gridColumn_xs="5 / 11"
           textAlign="center"
@@ -85,9 +84,9 @@ const ChooseYourProgram = ({
           </SubTitle>
         </Div>
         <Grid
-          gridColumn_tablet={landingTemplate ? "1 / 15" : "1 / 15"}
           padding_tablet={landingTemplate ? "0 17px" : "0"}
           padding_md="0"
+          gridColumn_tablet="1 / 15"
           gridColumn_md="1 / 15"
           gridRow_tablet="2 / 4"
           gridTemplateColumns_md={
@@ -98,8 +97,6 @@ const ChooseYourProgram = ({
           }
           zIndex="1"
           margin="0px auto"
-          margin_tablet={!landingTemplate && "0 0 0 0"}
-          margin_md="0"
         >
           {Array.isArray(programs) &&
             programs.map((program, index) => {
@@ -107,33 +104,25 @@ const ChooseYourProgram = ({
                 <Div
                   key={`${index}-program`}
                   display="flex"
-                  padding=" 20px 20px"
-                  margin_tablet="0px"
+                  padding="20px"
                   border={!background && "1px solid black"}
                   borderRadius="4px"
                   flexDirection="column"
-                  flexDirection_tablet="column"
                   justifyContent="between"
                   background="#ffffff"
-                  style={{ position: "relative" }}
-                  flexWrap_sm="nowrap"
-                  flexWrap="wrap"
+                  // flexWrap_sm="nowrap"
+                  // flexWrap="wrap"
                   zIndex="1"
-                  width_md="100%"
-                  width_tablet="100%"
                   width="100%"
                 >
                   <Div display="block">
                     <Div
-                      placeSelf_tablet={landingTemplate && "flex-start"}
                       display="flex"
-                      justifyContent="space-between"
-                      margin_xs="10px 0 0 0"
-                      margin_tablet="0"
+                      justifyContent="between"
+                      gap="5px"
                       width="100%"
-                      width_tablet="100%"
                     >
-                      <Div display="inline" width="75%" padding="0 5px 0 0">
+                      <Div display="block">
                         <H4
                           textTransform="uppercase"
                           textAlign="left"
@@ -151,7 +140,7 @@ const ChooseYourProgram = ({
                           </Link>
                         ))}
                       </Div>
-                      <Div display="flex" justifyContent_sm="end" width="25%">
+                      <Div>
                         <Icon
                           className="choose-your-program-icon"
                           icon={program.icon}
@@ -188,10 +177,8 @@ const ChooseYourProgram = ({
                               display_tablet="inline"
                               display_xs="inline"
                               textAlign="left"
-                              fontSize="15px"
+                              fontSize="14px"
                               lineHeight="22px"
-                              fontWeight="400"
-                              opacity="1"
                               margin={index == 0 && "10px 0px 10px 0"}
                               dangerouslySetInnerHTML={{ __html: paragraph }}
                             />

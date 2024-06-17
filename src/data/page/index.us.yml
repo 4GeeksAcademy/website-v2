@@ -129,7 +129,7 @@ iconogram:
     text: "How have we built our credibility over the years?"
     style: '{ "textAlign": "center" }'
   swipable: false
-  background: veryLightBlue2
+  background: veryLightBlue3
   icons:
     - icon: "graduation-2"
       content: "4500+ Graduates"

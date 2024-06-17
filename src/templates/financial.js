@@ -79,9 +79,7 @@ const Financial = (props) => {
           <Paragraph
             color={Colors.black}
             textAlign="left"
-            opacity="1"
-            fontSize="24px"
-            lineHeight="28px"
+            fontSize="21px"
           >
             {header.paragraph}
           </Paragraph>
@@ -305,13 +303,11 @@ export const query = graphql`
             swipable
             heading {
               text
-              font_size
               style
             }
             sub_heading {
               text
               style
-              font_size
             }
             icons {
               icon

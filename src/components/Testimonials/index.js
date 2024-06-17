@@ -20,7 +20,7 @@ const VariantCarousel = ({
       heading={props.heading || testimonialsArray.heading}
       content={props.content}
       background={props.background}
-      padding="20px 0 40px 0"
+      padding="40px 0"
       settings={{
         slidesToShow: 4,
         slidesToScroll: 4,
@@ -76,7 +76,7 @@ const VariantCarousel = ({
               width_tablet="300px"
               height="230px"
               padding="20px 24px 30px 20px"
-              border="1px solid #C4C4C4"
+              border={!props.background && "1px solid #C4C4C4"}
               borderRadius="4px"
               flexDirection="column"
               justifyContent="between"
