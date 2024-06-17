@@ -128,10 +128,7 @@ const PricingCard = ({
                 >
                   {scholarship}
                 </Paragraph>
-                <Paragraph
-                  color={Colors.black}
-                  textAlign="left"
-                >
+                <Paragraph color={Colors.black} textAlign="left">
                   {payment_time}
                 </Paragraph>
               </Div>
@@ -839,10 +836,7 @@ const PricesAndPayment = (props) => {
                       {info.job_guarantee.title}
                     </H4>
                   </Div>
-                  <Paragraph
-                    textAlign="left"
-                    color={Colors.black}
-                  >
+                  <Paragraph textAlign="left" color={Colors.black}>
                     {info.job_guarantee.description}
                   </Paragraph>
                 </Div>
@@ -860,10 +854,7 @@ const PricesAndPayment = (props) => {
                   gridColumn_tablet="1/11"
                   gridRow_tablet="2"
                 >
-                  <H3
-                    textAlign="center"
-                    margin="0 0 16px 0"
-                  >
+                  <H3 textAlign="center" margin="0 0 16px 0">
                     {info.plan_details}
                   </H3>
                   <hr style={{ border: "1px solid #ebebeb", width: "60%" }} />
@@ -878,10 +869,7 @@ const PricesAndPayment = (props) => {
                           color={Colors.blue}
                           fill={Colors.blue}
                         />
-                        <Paragraph
-                          color={Colors.black}
-                          textAlign="left"
-                        >
+                        <Paragraph color={Colors.black} textAlign="left">
                           {bullet}
                         </Paragraph>
                       </Div>

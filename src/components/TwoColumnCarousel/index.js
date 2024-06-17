@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import { Div } from "../Sections";
 import { H2, SubTitle } from "../Heading";
 import Icon from "../Icon";
@@ -12,7 +12,6 @@ const TwoColumnCarousel = ({
   settings,
   carouselProps,
 }) => {
-
   const customSettings = {
     className: "slider variable-width",
     dots: true,

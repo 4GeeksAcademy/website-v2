@@ -38,11 +38,7 @@ export default ({ icon, title, content, color, content_style }) => {
         display_tablet="block"
       >
         {title && (
-          <H3
-            textAlign="left"
-            fontFamily="Archivo-Black"
-            margin="0"
-          >
+          <H3 textAlign="left" fontFamily="Archivo-Black" margin="0">
             {title}
           </H3>
         )}

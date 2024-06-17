@@ -76,11 +76,7 @@ const Financial = (props) => {
           >
             {header.title}
           </H2>
-          <Paragraph
-            color={Colors.black}
-            textAlign="left"
-            fontSize="21px"
-          >
+          <Paragraph color={Colors.black} textAlign="left" fontSize="21px">
             {header.paragraph}
           </Paragraph>
           <Button
