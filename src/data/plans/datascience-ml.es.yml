@@ -99,11 +99,11 @@ part_time:
     scholarship: "Paga de contado"
     payment_time: "Y obtén un descuento"
     price: "€5.200*"
-    original_price: "€7.800"
-    offer: "33,33% de descuento"
+    original_price: "€7.500"
+    offer: "30% de descuento"
     bullets:
       - "Paga con trasnferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
-      - "*Descuento de hasta 2.600 €. Desde 5.200 € en vez de 7.800 €. ¡Descuento sujeto a disponibilidad!"     
+      - "*Descuento de hasta 2.300 €*. Paga desde 5.200 € en vez de 7.500 €. ¡Descuento sujeto a disponibilidad!"     
     icons: 
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
@@ -112,29 +112,32 @@ part_time:
   - slug: 'spain-scholarships-ds-pt'
     academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain']
     recomended: false
-    scholarship: "Becas disponibles"
-    payment_time: ""
-    price: "~200 € al mes"
+    scholarship: "Financiado. Desde 200 €* al mes"
+    payment_time: "Aplica a una beca (plazas con becas limitadas)."
+    price: "5.409 €*"
+    original_price: "€ 7.500"
     bullets:
-      - "Financiación a tu medida, con o sin intereses, desde 4 hasta 30 meses"
-      - "Becas disponibles de hasta 2.400 €. Desde 5.400 € en vez de 7.800 €. ¡Becas sujetas a disponibilidad!"     
+      - "Desde 200 € al mes"
+      - "Financiación a tu medida, con o sin intereses, desde 4 hasta 24 meses"
+      - "Becas disponibles de hasta 2.091 €. Paga desde 5.409 € en vez de 7.500 €. ¡Becas sujetas a disponibilidad!"     
     icons: 
       - "/images/zank.png"
       - "/images/sequra.png"
       - "/images/nemuru.png"
-      - "/images/quotanda-logo.png" 
+      - "/images/bcas.png" 
 
-  # - slug: 'spain-isa-ds-pt'
-  #   academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain']
-  #   recomended: true
-  #   scholarship: "Acuerdo de Ingresos Comparsidos (ISA)"
-  #   payment_time: "Paga sólo cuando trabajes"
-  #   price: "0 €*"
-  #   bullets: 
-  #     - "Solo tendrás que pagar cuando tus ingresos sean superiores a 16.000 € al año"
-  #     - "*Paga una pequeña parte de tu salario cuando encuentres trabajo. ¡SIN INTERESES!"
-  #   icons: 
-  #     - "/images/bcas.png"
+  - slug: 'spain-isa-ds-pt'
+    academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain']
+    recomended: false
+    scholarship: "Acuerdo de Ingresos Comparsidos (ISA)"
+    payment_time: "Paga sólo cuando trabajes"
+    price: "0 €*"
+    bullets: 
+      - "Solo tendrás que pagar cuando tus ingresos sean superiores a 16.000 € al año"
+      - "*Paga una pequeña parte de tu salario cuando encuentres trabajo - ¡BECAS SUJETAS A DISPONIBILIDAD!"
+      - "Para obtener el ISA debes cumplir con algunos requisitos académicos"
+    icons: 
+      - "/images/bcas.png"
 
   - slug: 'north-europe-upfront-ds-pt'
     academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany','munich-germany']
@@ -142,11 +145,11 @@ part_time:
     scholarship: "Paga de contado"
     payment_time: "Y obtén un descuento"
     price: "€5.200*"
-    original_price: "€7.800"
-    offer: "33,33% de descuento"
+    original_price: "€7.500"
+    offer: "30% de descuento"
     bullets:
       - "Paga con trasnferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
-      - "*Descuento de hasta 2.600 €. Desde 5.200 € en vez de 7.800 €"     
+      - "*Descuento de hasta 2.300 €*. Paga desde 5.200 € en vez de 7.500 €. ¡Descuento sujeto a disponibilidad!"
     icons: 
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
@@ -155,26 +158,29 @@ part_time:
   - slug: 'north-europe-scholarships-ds-pt'
     academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany','munich-germany']
     recomended: false
-    scholarship: "Becas disponibles"
-    payment_time: ""
-    price: "~200 € al mes"
+    scholarship: "Financiado. Desde 200 €* al mes"
+    payment_time: "Aplica a una beca (plazas con becas limitadas)."
+    price: "5.409 €*"
+    original_price: "€ 7.500"
     bullets:
-      - "Financiación a tu medida, con o sin intereses, desde 4 hasta 30 meses"
-      - "Becas disponibles de hasta 2.400 €. Desde 5.400 € en vez de 7.800 €"     
+      - "Desde 200 € al mes"
+      - "Financiación a tu medida, con o sin intereses, desde 4 hasta 24 meses"
+      - "Becas disponibles de hasta 2.091 €. Paga desde 5.409 € en vez de 7.500 €. ¡Becas sujetas a disponibilidad!"      
     icons: 
       - "/images/bcas.png"
           
-  # - slug: 'north-europe-isa-ds-pt'
-  #   academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany', 'munich-germany']
-  #   recomended: true
-  #   scholarship: "Acuerdo de Ingresos Compartidos (ISA)"
-  #   payment_time: "Paga sólo cuando trabajes"
-  #   price: "0 €*"
-  #   bullets: 
-  #     - "Solo tendrás que pagar cuando tus ingresos sean superiores a 22.000 € al año"
-  #     - "*Paga una pequeña parte de tu salario cuando encuentres trabajo"
-  #   icons: 
-  #     - "/images/stepex.png"     
+  - slug: 'north-europe-isa-ds-pt'
+    academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany', 'munich-germany']
+    recomended: true
+    scholarship: "Acuerdo de Ingresos Compartidos (ISA)"
+    payment_time: "Paga sólo cuando trabajes"
+    price: "0 €*"
+    bullets: 
+      - "Solo tendrás que pagar cuando tus ingresos sean superiores a 16.000 € al año"
+      - "*Paga una pequeña parte de tu salario cuando encuentres trabajo - ¡BECAS SUJETAS A DISPONIBILIDAD!"
+      - "Para obtener el ISA debes cumplir con algunos requisitos académicos"
+    icons: 
+      - "/images/bcas.png"     
 
   - slug: 'south-europe-upfront-ds-pt'
     academies: ['lisbon-portugal','milan-italy','rome-italy']
@@ -182,11 +188,11 @@ part_time:
     scholarship: "Paga de contado"
     payment_time: "Y obtén un descuento"
     price: "€5.200*"
-    original_price: "€7.800"
-    offer: "33,33% de descuento"
+    original_price: "€7.500"
+    offer: "30% de descuento"
     bullets:
-      - "Paga con transferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
-      - "*Descuento de hasta 2.600 €. Desde 5.200 € en vez de 7.800 €"     
+      - "Paga con trasnferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
+      - "*Descuento de hasta 2.300 €*. Paga desde 5.200 € en vez de 7.500 €. ¡Descuento sujeto a disponibilidad!" 
     icons: 
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
@@ -195,26 +201,29 @@ part_time:
   - slug: 'south-europe-scholarships-ds-pt'
     academies: ['lisbon-portugal','milan-italy','rome-italy']
     recomended: false
-    scholarship: "Becas disponibles"
-    payment_time: ""
-    price: "~200 € al mes"
+    scholarship: "Financiado. Desde 200 €* al mes"
+    payment_time: "Aplica a una beca (plazas con becas limitadas)."
+    price: "5.409 €*"
+    original_price: "€ 7.500"
     bullets:
-      - "Financiación a tu medida, con o sin intereses, desde 4 hasta 30 meses"
-      - "Becas disponibles de hasta 2.400 €. Desde 5.400 € en vez de 7.800 €"     
+      - "Desde 200 € al mes"
+      - "Financiación a tu medida, con o sin intereses, desde 4 hasta 24 meses"
+      - "Becas disponibles de hasta 2.091 €. Paga desde 5.409 € en vez de 7.500 €. ¡Becas sujetas a disponibilidad!"  
     icons: 
       - "/images/bcas.png"
 
-  # - slug: 'south-europe-isa-ds-pt'
-  #   academies: ['lisbon-portugal','milan-italy','rome-italy']
-  #   recomended: true
-  #   scholarship: "Acuerdo de Ingresos Compartidos (ISA)"
-  #   payment_time: "Paga sólo cuando trabajes"
-  #   price: "0 €*"
-  #   bullets: 
-  #     - "Solo tendrás que pagar cuando tus ingresos sean superiores a 16.000 € al año"
-  #     - "*Paga una pequeña parte de tu salario cuando encuentres trabajo"
-  #   icons: 
-  #     - "/images/stepex.png"     
+  - slug: 'south-europe-isa-ds-pt'
+    academies: ['lisbon-portugal','milan-italy','rome-italy']
+    recomended: false
+    scholarship: "Acuerdo de Ingresos Compartidos (ISA)"
+    payment_time: "Paga sólo cuando trabajes"
+    price: "0 €*"
+    bullets: 
+      - "Solo tendrás que pagar cuando tus ingresos sean superiores a 16.000 € al año"
+      - "*Paga una pequeña parte de tu salario cuando encuentres trabajo - ¡BECAS SUJETAS A DISPONIBILIDAD!"
+      - "Para obtener el ISA debes cumplir con algunos requisitos académicos"
+    icons: 
+      - "/images/bcas.png"     
 
 ## Chile
 

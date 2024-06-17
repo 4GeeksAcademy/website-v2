@@ -33,14 +33,31 @@ part_time:
       - "/images/quotanda-logo.png"
     
 ## Spain & Europe
-  - slug: 'spain-upfront-cs-pt'
+  - slug: 'spain-scholarships-cs-pt'
     academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
     recomended: true
+    scholarship: "Financed. From €200* per month"
+    payment_time: "Apply for a scholarship (limited scholarship slots available)."
+    price: "€5,500*"
+    original_price: "€7,800"
+    offer: "Launch Offer!"
+    bullets:
+      - "From €200 per month"
+      - "Customized financing, with or without interest, from 4 to 24 months"
+      - "Scholarships available up to €2,300. Pay from €5,500 instead of €7,800. Scholarships subject to availability!"    
+    icons: 
+      - "/images/zank.png"
+      - "/images/sequra.png"
+      - "/images/nemuru.png"
+      - "/images/bcas.png" 
+
+  - slug: 'spain-upfront-cs-pt'
+    academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
+    recomended: false
     scholarship: "Pay upfront"
     payment_time: "And get a discount"
-    price: "€5.200*"
+    price: "€5.500*"
     original_price: "€7.800"
-    offer: "33,33% OFF"
     bullets:
       - "Pay with wire transfer, credit or debit card, Paypal, Bitcoin or Ethereum"
       - "*Discount up to €2600. From €5200 instead of €7800. Scholarships subject to availability."     
@@ -48,21 +65,6 @@ part_time:
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
       - "/images/ethereum.png"   
-
-  - slug: 'spain-scholarships-cs-pt'
-    academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
-    recomended: false
-    scholarship: "Scholarships available"
-    payment_time: ""
-    price: "~€200 / mo."
-    bullets:
-      - "Tailor-made financing plans, with or without interest, from 4 to 30 installments"
-      - "Scholarships available up to €2400. From €5400 instead of €7800. Scholarships subject to availability!"     
-    icons: 
-      - "/images/zank.png"
-      - "/images/sequra.png"
-      - "/images/nemuru.png"
-      - "/images/bcas.png" 
 
   # - slug: 'spain-isa-cs-pt'
   #   academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
@@ -76,33 +78,38 @@ part_time:
   #   icons: 
   #     - "/images/bcas.png" 
 
-  - slug: 'north-europe-upfront-cs-pt'
+  - slug: 'north-europe-scholarships-cs-pt'
     academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany','munich-germany']
     recomended: true
+    scholarship: "Financed. From €200* per month"
+    payment_time: "Apply for a scholarship (limited scholarship slots available)."
+    price: "€5,500*"
+    original_price: "€7,800"
+    offer: "Launch Offer!"
+    bullets:
+      - "From €200 per month"
+      - "Customized financing, with or without interest, from 4 to 24 months"
+      - "Scholarships available up to €2,300. Pay from €5,500 instead of €7,800. Scholarships subject to availability!"    
+    icons: 
+      - "/images/zank.png"
+      - "/images/sequra.png"
+      - "/images/nemuru.png"
+      - "/images/bcas.png" 
+
+  - slug: 'north-europe-upfront-cs-pt'
+    academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany','munich-germany']
+    recomended: false
     scholarship: "Pay upfront"
     payment_time: "And get a discount"
-    price: "€5.200*"
+    price: "€5.500*"
     original_price: "€7.800"
-    offer: "33,33% OFF"
     bullets:
       - "Pay with wire transfer, credit or debit card, Paypal, Bitcoin or Ethereum"
-      - "*Discount up to €2600. From €5200 instead of €7800"     
+      - "*Discount up to €2600. From €5200 instead of €7800. Scholarships subject to availability."   
     icons: 
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
       - "/images/ethereum.png"    
-
-  - slug: 'north-europe-scholarships-cs-pt'
-    academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany','munich-germany']
-    recomended: false
-    scholarship: "Scholarships available"
-    payment_time: ""
-    price: "~€200 / mo."
-    bullets:
-      - "Tailor-made financing plans, with or without interest, from 4 to 30 installments"
-      - "Scholarships available up to €2400. From €5400 instead of €7800"     
-    icons: 
-      - "/images/bcas.png"
                        
   # - slug: 'north-europe-isa-cs-pt'
   #   academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany', 'munich-germany']
@@ -114,35 +121,40 @@ part_time:
   #     - "You will only have to pay when your income is greater than €22000 per year"
   #     - "*Pay a small part of your salary when you find a job"
   #   icons: 
-  #     - "/images/stepex.png"     
+  #     - "/images/bcas.png"     
+
+  - slug: 'south-europe-scholarships-cs-pt'
+    academies: ['lisbon-portugal','milan-italy','rome-italy']
+    recomended: true
+    scholarship: "Financed. From €200* per month"
+    payment_time: "Apply for a scholarship (limited scholarship slots available)."
+    price: "€5,500*"
+    original_price: "€7,800"
+    offer: "Launch Offer!"
+    bullets:
+      - "From €200 per month"
+      - "Customized financing, with or without interest, from 4 to 24 months"
+      - "Scholarships available up to €2,300. Pay from €5,500 instead of €7,800. Scholarships subject to availability!"    
+    icons: 
+      - "/images/zank.png"
+      - "/images/sequra.png"
+      - "/images/nemuru.png"
+      - "/images/bcas.png" 
 
   - slug: 'south-europe-upfront-cs-pt'
     academies: ['lisbon-portugal','milan-italy','rome-italy']
-    recomended: true
+    recomended: false
     scholarship: "Pay upfront"
     payment_time: "And get a discount"
-    price: "€5.200*"
+    price: "€5.500*"
     original_price: "€7.800"
-    offer: "33,33% OFF"
     bullets:
       - "Pay with wire transfer, credit or debit card, Paypal, Bitcoin or Ethereum"
-      - "*Discount up to €2600. From €5200 instead of €7800"     
+      - "*Discount up to €2600. From €5200 instead of €7800. Scholarships subject to availability."      
     icons: 
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
       - "/images/ethereum.png"
-
-  - slug: 'south-europe-scholarships-cs-pt'
-    academies: ['lisbon-portugal','milan-italy','rome-italy']
-    recomended: false
-    scholarship: "Scholarships available"
-    payment_time: ""
-    price: "~€200 / mo."
-    bullets:
-      - "Tailor-made financing plans, with or without interest, from 4 to 30 installments"
-      - "Scholarships available up to €2400. From €5400 instead of €7800"     
-    icons: 
-      - "/images/bcas.png"
 
   # - slug: 'south-europe-isa-cs-pt'
   #   academies: ['lisbon-portugal','milan-italy','rome-italy']
@@ -154,7 +166,7 @@ part_time:
   #     - "You will only have to pay when your income is greater than €16000 per year"
   #     - "*Pay a small part of your salary when you find a job"
   #   icons: 
-  #     - "/images/stepex.png"
+  #     - "/images/bcas.png"
 
 ## Chile 
 
