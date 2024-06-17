@@ -25,7 +25,7 @@ const Faq = (props) => {
         padding_lg="0 26%"
         github={`/page/faq.${pageContext.lang}.yml`}
       >
-        <FaqCard faqs={data.allFaqYaml.edges[0].node.faq} />
+        <FaqCard faqs={data.allFaqYaml.edges[0].node.faq} template="faq" />
       </GridContainer>
       <Divider height="50px" />
     </>
@@ -65,6 +65,9 @@ export const query = graphql`
             topic
             questions {
               question
+              locations
+              templates
+              priority
               answer
             }
           }

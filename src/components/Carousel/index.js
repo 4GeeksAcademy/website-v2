@@ -80,7 +80,7 @@ const Carousel = ({
   margin_tablet,
   margin,
   maxWidth,
-  customSettings,
+  settings,
   previousArrow,
   nextArrow,
   className,
@@ -89,7 +89,7 @@ const Carousel = ({
 }) => {
   const sliderRef = useRef();
 
-  const settings = {
+  const customSettings = {
     dots: true,
     infinite: false,
     speed: 500,
@@ -127,7 +127,7 @@ const Carousel = ({
         },
       },
     ],
-    ...customSettings,
+    ...settings,
   };
 
   return (
@@ -169,7 +169,7 @@ const Carousel = ({
         </Div>
       )}
       <Div className="main-scroll-div" position="relative" display="block">
-        <Slider {...settings} ref={sliderRef}>
+        <Slider {...customSettings} ref={sliderRef}>
           {children}
         </Slider>
       </Div>

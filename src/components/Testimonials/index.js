@@ -23,7 +23,7 @@ const VariantCarousel = ({
       padding="20px 0 40px 0"
       headingProps={{ fontWeight: "400", fontSize: "35px" }}
       contentProps={{ color: "#000", opacity: "1", fontSize: "21px" }}
-      customSettings={{
+      settings={{
         slidesToShow: 4,
         slidesToScroll: 4,
         responsive: [

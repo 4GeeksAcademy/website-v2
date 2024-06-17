@@ -748,6 +748,7 @@ export const Header = ({
   height_tablet,
   background,
   margin,
+  margin_md,
   margin_tablet,
   margin_xxs,
   padding,
@@ -788,6 +789,7 @@ export const Header = ({
       position={position}
       margin={margin || "70px 0 0 0"}
       margin_tablet={margin_tablet}
+      margin_md={margin_md}
       margin_xxs={margin_xxs}
       padding={padding || "0 0"}
       padding_tablet={padding_tablet || "60px 40px"}
@@ -894,6 +896,7 @@ export const GridContainer = ({
   borderRadiusChild_tablet,
   backgroundChild,
   containerGridGap,
+  columnGap,
   gridGap,
   gridGap_xxs,
   gridGap_tablet,
@@ -927,6 +930,7 @@ export const GridContainer = ({
   maxWidth,
   childMaxWidth,
   childMargin,
+  childWidth,
   childHeight,
   displayChild,
   displayChild_tablet,
@@ -990,6 +994,7 @@ export const GridContainer = ({
         display_md={displayChild_md}
         overflow={overflowChild}
         background={backgroundChild}
+        columnGap={columnGap}
         gridGap={gridGap}
         gridGap_xxs={gridGap_xxs}
         gridGap_tablet={gridGap_tablet}
@@ -1018,6 +1023,7 @@ export const GridContainer = ({
         height={childHeight}
         margin={childMargin}
         maxWidth={childMaxWidth}
+        width={childWidth}
       >
         {children}
       </Grid>
