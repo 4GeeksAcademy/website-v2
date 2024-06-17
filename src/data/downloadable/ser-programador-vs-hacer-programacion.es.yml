@@ -4,12 +4,12 @@ meta_info:
   title: "Descubre las claves que te transformarán en un programador 3.0"
   description: "Descubre las claves fundamentales para construir una carrera sólida en programación"
   image: "/images/bg/follow-that-dream-digital-nomad.webp"
-  keywords: "html, css, etiquetas html, estructura html, selectores css, guia de html y css"
+  keywords: ""
   template: "landing_a" # <--- choose your landing template
   redirects: [] # <--- URL redirections to avoid 404 errors
   utm_location: ["santiago-chile"]
-  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
-  automation: soft # optional, lead as "null" if you don't know, it can be more than one (comma separated)
+  visibility: "unlisted" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  automation: downloadable-programador # optional, lead as "null" if you don't know, it can be more than one (comma separated)
   tag: request_more_info # mandatory: at lease one tag (comma separated)
   current_download: "guia-html-css" 
 
@@ -25,16 +25,17 @@ form:
 
 navbar:
   logoUrl: "#" # relative(/apply), absolute(https://google.com) or id(#componentName)
-  buttonText: "Descargar Guía"
+  buttonText: "ACCEDER AL VIDEO"
   buttonUrl: "#leadform_bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  background: "lightyellow"
-  tagline: "¡Descarga hoy la Guía de HTML y CSS gratis!"
-  tagline_color: "black"
-  sub_heading: ""
-  image_filter: brightness(1)
+  background: "#FFF1D1"
+  tagline: Descubre las claves que te transformarán en un programador 3.0
+  sub_heading: "Descubre en este vídeo de 5 minutos las 3 claves fundamentales para construir una carrera sólida en programación"
+  badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
+  image_filter: brightness(0.3)
 
 
 features:
@@ -48,113 +49,183 @@ features:
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "Descarga ahora la guía \n de HTML y CSS"
-    text_mobile: "Descarga ahora la guía \n de HTML y CSS"
-    # devices:    XL      LG      MD      SM      XS
+    text: "Completa el formulario \n y accede al video"
+    text_mobile: "Rellena el formulario \n y accede al video"
+    # devices:    XL      LG      MD      SM       XS
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:
-    text: "Descarga Guía!"
-    path: "#leadform_header" #top, #bottom, #anotherComponentId
-    # ├──if path is empty("") it point to top per default ("#" -> points to top)
-    # └── path accepts: relative(/example/path), absolute(https://google.com) or id(#idName)
-  phone:
-    text: "Llama "
-    number: null # change only if need to customize
+    text: "Acceder al video "
+    path: "#leadform_header"
+  phone: 
+    number: ""
+    text: ""
 
 #
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
 #
 
-badges:
-  position: 2 # It's the position of the component that will be rendered first
-  heading: "4Geeks Academy cuenta con reconocimientos que validan su experiencia como una de las mejores academias de programación"
+why_4geeks:
+  position: 7
+  heading: "¿Por qué 4Geeks?"
+  sub_heading: " "
 
 who_is_hiring:
-  position: 9
-  limit: 3
-  heading: "¡Las oportunidades te esperan!"
-  sub_heading: "Muchas de las empresas líderes en el mundo buscan programadores web"
-
-apply_schollarship: # form that is displayed at the end of the landing
-  # title: "Apoyo Profesional Ilimitado"
-  imageSide: "right"
-  image: "../../../static/images/bg/main.png"
+  position: 15
+  limit: 4
+  heading: "¿En qué empresas encuentran empleo nuestros graduados?"
+  sub_heading: ""
 
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
-  - name: guia_de_html_intro
+
+  - name: two-colums-right
     position: 1
+    layout: two_column_right 
+    swipable: False
+    background: "#fbfbfb"
+    image:
+      src: "/images/staff/alejandrosanchez.jpg"
+      style: '{"backgroundSize": "contain"}'
+      shadow: false
+    section_heading: 
+      text: "Historia de Alejandro Sánchez"
+      style: '{ "font-size": "30px"  }'
+    heading: 
+      text: ""
+    sub_heading:
+      text: "4Geeks Academy es una academia de programación, co-fundada por el experimentado programador Alejandro Sánchez, quien cuenta con 20 años de trayectoria en el mercado. 
+            A lo largo de su carrera, Alejandro ha experimentado en primera persona la crucial transición hacia ser un programador 3.0. Este cambio no solo implica adaptarse a una nueva era, sino también destacar y desplegar todo el potencial que uno posee.
+            Hemos recopilado un video exclusivo basado en su vasta experiencia, especialmente para ti. Sumérgete en este contenido que te guiará hacia el camino de destacar como un programador 3.0."
+    button: 
+      text: "Acceder al video"
+      color: white
+      hover_color: "white"
+      background: "black"
+      path: "#leadform_header"
+    content: 
+      text: ""
+      font_size: ["16px"]
+      path: ""
+      items:
+      # - heading: "No se requiere experiencia previa"
+      #   icon: "check" 
+      # - heading: "Horario part-time adaptable a tu vida actual"
+      #   icon: "check" 
+      # - heading: "Mentorías y career support de por vida"
+      #   icon: "check" 
+
+  - name: press-and-awards
+    position: 2
     layout: two_column_left
     background: "veryLightBlue2" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
     image:
-      src: "/images/techs/laptop-html-css.webp"
-      style: '{"backgroundSize": "contain", "background-position": "center", "min-height": "300px", "height": "300px"}'
-    # video: "B01-eTfgqqc"
+      src: "/images/blog/desarrollador-full-stack-chileno.jpg"
+      style: '{ "font-size": "30px", "background-position": "center"  }'
+      shadow: true
     heading:
-      text: "Guía de HTML y CSS, aprende lo necesario sobre etiquetas HTML y su estructura"
-        #           xl      lg      md      sm      xs
-      font_size: ["35px", "35px", "35px", "30px", "28px"]
-    content:
-      text: "Actualmente la demanda de desarrolladores web calificados se está disparando. Las empresas de todos los tamaños confían en la web para llegar a sus clientes y necesitan profesionales capacitados para crear y mantener sus sitios web."
-      font_size: ["16px"]
-
-
-  - name: html_css_table_content
-    position: 3
-    layout: two_column_right
-    image:
-      src: "/images/woman-laptop-smile-bg.webp"
-      style: '{ "backgroundSize": "contain", "background-position": "center", "min-height": "350px", "height": "350px"}'
-      shadow: false
-    heading:
+      # style: '{"padding": "0 20px", "line-height": "50px"}'
       text:
-        "Domina los lenguajes básicos de la web. Descarga hoy la guía de HTML y CSS."
+        "Prensa y Reconocimientos"
         #           xl      lg      md      sm      xs
-      font_size: ["32px", "30px", "30px", "25px", "25px"]
+      font_size: ["45px", "45px", "30px", "28px", "25px"]
     sub_heading:
-      text:
-        "¿Estás listo para dar tus primeros pasos en el emocionante mundo del desarrollo web?"
-      font_size: ["15px"]
-    content:
-      text: "HTML y CSS son los pilares fundamentales para crear páginas web que funcionen y se vean increíbles en cualquier dispositivo. Con esta guía completa, aprenderás los conceptos esenciales de estos lenguajes y estarás en camino de convertirte en un desarrollador web exitoso."
-      font_size: ["16px"]
-    button:
-      text: "Descargar la guia"
-      color: "white"
+      text: "En 4Geeks Academy, hemos acumulado más de 8 años de experiencia formando programadores y guiándolos hacia el éxito en el mundo laboral. No solo rompemos mitos, sino que creamos caminos hacía carreras exitosas en la programación."
+    button: 
+      text: "Acceder al video"
+      color: white
+      hover_color: "white"
       background: "black"
-      path: "#leadform_bottom"
+      path: "#leadform_header"
+    content:
+      text: ""
+      font_size: ["18px"]
+      items:
+      - heading: "Más de 8 años de experiencia"
+        text: ""
+        icon: "check" 
+      - heading: "Más de 2500 graduados en total"
+        text: ""
+        icon: "check" 
+      - heading: "90% de los graduados encuentran trabajo dentro de los 6 meses posteriores a la graduación"
+        text: ""
+        icon: "check" 
+
+  # - name: new_design_with_bullets
+  #   position: 3
+  #   layout: two_column_right 
+  #   swipable: False
+  #   background: "#fbfbfb"
+  #   image:
+  #     style: '{"backgroundSize": "contain;"}'
+  #     src: "/images/landing/hombre-con-laptop.png"
+  #     shadow: false
+  #   section_heading: 
+  #     text: "Diseñado para hacerte exitoso en el mundo de la programación"
+  #     style: '{ "font-size": "30px" }'
+  #   heading: 
+  #     text: "Desbloquea tu potencial"
+  #   sub_heading:
+  #     text: ""
+  #   button: 
+  #     text: "OBTENER MÁS INFORMACIÓN"
+  #     color: white
+  #     hover_color: "white"
+  #     background: "black"
+  #     path: "#leadform_header"
+  #   content: 
+  #     text: ""
+  #     font_size: ["16px"]
+  #     path: ""
+  #   bullets:
+  #     items:
+  #     - heading: "TODAS LAS MENTORIAS QUE NECESITAS"
+  #       text: "En línea y en persona, por el resto de tu vida, incluso para codificación de dudas laborales"
+  #       icon: "circle" 
+  #     - heading: "TIEMPO DE RESPUESTA"
+  #       text: "No te quedes atascado con tu código, no te llevará más de 30 minutos para que un instructor te ayude."
+  #       icon: "circle" 
+  #     - heading: "1:7 PROPORCIÓN PROFESOR: ESTUDIANTE"
+  #       text: "Encontrarás más profesores en 4Geeks que el promedio de la industria."
+  #       icon: "circle" 
+  #     - heading: "SOPORTE PROFESIONAL A LA MEDIDA"
+  #       text: "Proporcionamos ayuda para la colocación laboral y preparación para el empleo en tecnología."
+  #       icon: "circle" 
+
 
   - name: some_id
     position: 4
-    layout: two_column_left
-    background: "veryLightBlue2" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
+    layout: two_column_right
+    background: "#fbfbfb"
     image:
-      src: "/images/testimonials/pablo-review.jpg"
-      shadow: true
-    video: "OtJvrNwQw9E"
-    section_heading: 
-      text: "Diseñado para hacerte exitoso en el mundo de la programación"
-      style: '{ "font-size": "30px" }'
+      style: '{ "border" : "3px solid black" }' 
+      shadow: true 
+      src: "../../../static/images/testimonials/joshua-bravo-testimonial.jpg"
+    video: "https://www.youtube.com/watch?v=rtpfwwfE0yY"
     heading:
       text:
-        "Descubre por qué 4Geeks Academy es tu mejor opción para aprender HTML, CSS y mucho más"
+        "Testimonio de Joshua Bravo sobre 4Geeks"
         #xl      lg     md     sm    xs
-      font_size: ["35px", "30px", "30px", "25px", "20px"]
+      font_size: ["40px", "34px", "34px", "25px", "20px"]
     content:
-      text: "En 4Geeks Academy, te brindamos las herramientas y el apoyo que necesitas para convertirte en un desarrollador web exitoso. Nuestra metodología de aprendizaje efectiva, basada en proyectos y práctica constante, te permitirá dominar HTML y CSS de manera rápida y efectiva."
+      text: "Joshua Bravo comparte cómo logró superar desafíos y alcanzar sus metas gracias a nuestro programa. Su historia es un ejemplo de perseverancia y éxito que te motivará a seguir adelante."
       font_size: ["16px"]
-    button:
-      text: "Descarga la Guía Gratis"
-      color: "white"
-      background: "black"
-      path: "#leadform_header"
+    # button:
+    #   text: "Ver Video"
+    #   path: "#leadform_bottom"
+    #   color: "white"
+    #   background: "black"
+    #   hover: "lightBlue"
 
-  # - name: first_syllabus_form
-  #   position: 4
-  #   layout: syllabus
-  #   containerBackground: "white"
-  #   background: "white"
-  #   button:
-  #     text: "Descargar Gratis"
-  #   heading:
-  #     text: "Descargar Guía"
+choose_your_program:
+  position: 5
+  title: Nuestra Modalidad
+  paragraph: Programa de Machine Learning y Data Science en Modalidad Part Time y Full Time
+  programs:  
+  - title: "Part Time"
+    sub_title: "16 semanas"
+    icon: "fullstack"
+    description: |
+      De cero a tener tu primer trabajo como Data Scientist, con una duración de 16 semanas, con clases en vivo 3 veces por semana, compatible con horario laboral o de estudios. 
+    text_link: Obtener más información
+    link: "#leadform_header" # moves to start position
+  

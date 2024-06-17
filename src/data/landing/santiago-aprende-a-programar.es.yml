@@ -32,7 +32,6 @@ form:
   motivation: "Llena el formulario y te enviaremos la información en menos de 5 min"
   button_label: Obtener malla y más información
   redirect: "/es/gracias/?lang=es" #you can redirect to another url or entirely diffrent website
-  course: true
 
 apply_schollarship: # form that is displayed at the end of the landing
   # title: "Apoyo Profesional Ilimitado"
