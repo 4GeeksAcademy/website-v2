@@ -348,9 +348,7 @@ const Outcomes = ({ data, pageContext, yml }) => {
                                                 key={i}
                                               >
                                                 <Charts dataArray={c.data} />
-                                                <H4
-                                                  textTransform="uppercase"
-                                                >
+                                                <H4 textTransform="uppercase">
                                                   {c.title}
                                                 </H4>
                                               </Div>
