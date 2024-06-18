@@ -131,7 +131,6 @@ const clean = (fields, data) => {
       // i also make sure I don't delete the hidden fields
       key !== "course" &&
       key !== "utm_location" &&
-      key !== "token" &&
       cleanedData[key].type !== "hidden" &&
       //clean all the rest of the fields that are no supposed to be sent
       //according to the landing YML data
@@ -298,7 +297,7 @@ const LeadForm = ({
       marginTop_xs={marginTop_xs}
       d_sm={d_sm}
       style={style}
-      onSubmit={(e) => {
+      onSubmit={async (e) => {
         e.preventDefault();
 
         if (formStatus.status === "error")
@@ -321,7 +320,11 @@ const LeadForm = ({
           setFormStatus({ status: "error", msg: locationSelector.error });
         } else {
           setFormStatus({ status: "loading", msg: yml.messages.loading });
-          formHandler(cleanedData, session)
+          const token = await captcha.current.executeAsync();
+          formHandler(
+            { ...cleanedData, token: { value: token, valid: true } },
+            session
+          )
             .then((data) => {
               if (data && data.error !== false && data.error !== undefined) {
                 setFormStatus({ status: "error", msg: data.error });
@@ -582,7 +585,8 @@ const LeadForm = ({
               <ReCAPTCHA
                 ref={captcha}
                 sitekey={process.env.GATSBY_CAPTCHA_KEY}
-                onChange={captchaChange}
+                // onChange={captchaChange}
+                size="invisible"
               />
             </Div>
             {layout === "block" && (
@@ -599,17 +603,11 @@ const LeadForm = ({
                   background={buttonStyles?.background || Colors.blue}
                   //textAlign="center"
                   color={
-                    formStatus.status === "loading" ||
-                    !captcha?.current?.getValue()
+                    formStatus.status === "loading"
                       ? Colors.darkGray
                       : Colors.white
                   }
-                  disabled={
-                    formStatus.status === "loading" ||
-                    !captcha?.current?.getValue()
-                      ? true
-                      : false
-                  }
+                  disabled={formStatus.status === "loading" ? true : false}
                 >
                   {formStatus.status === "loading" ? "Loading..." : sendLabel}
                 </Button>
