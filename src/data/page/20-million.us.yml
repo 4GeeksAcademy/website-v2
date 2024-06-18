@@ -24,7 +24,7 @@ two_column_left:
     - 6
   image:
     style: '{ "backgroundSize": "contain" }'
-    src: /images/landing/20-million-column.png
+    src: /images/landing/20-millions-image.webp
   heading:
     text: Our mission is to make high-quality coding education affordable.
     font_size:

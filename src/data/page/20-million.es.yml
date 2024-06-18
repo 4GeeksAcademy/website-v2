@@ -22,7 +22,7 @@ two_column_left:
     - 6
   image:
     style: '{ "backgroundSize": "contain" }'
-    src: /images/landing/20-million-column.png
+    src: /images/landing/20-millions-image.webp
   heading:
     text: Nuestra misión es hacer que la educación de programación de alta calidad sea asequible.
     font_size:
