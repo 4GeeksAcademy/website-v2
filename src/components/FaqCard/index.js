@@ -128,13 +128,11 @@ const FaqCard = ({ faqs, topicSlug, locationSlug, minPriority, template }) => {
                             <Paragraph
                               textAlign="left"
                               letterSpacing="0.05em"
-                              lineHeight="22px"
                               fontWeight="normal"
                               dangerouslySetInnerHTML={{ __html: faq.answer }}
-                              margin={`20px 0 0 0`}
+                              margin="20px 0 0 0"
                               align_sm="left"
-                              fontFamily="Lato, sans-serif"
-                            ></Paragraph>
+                            />
                           )}
                       </Div>
                     </Div>

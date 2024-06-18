@@ -8,7 +8,7 @@ import {
 } from "../actions";
 import BaseRender from "./_baseLayout";
 import { Container, Div, HR, GridContainer } from "../components/Sections";
-import { H2, H4, Paragraph } from "../components/Heading";
+import { H2, H4, Paragraph, SubTitle } from "../components/Heading";
 import {
   Anchor,
   Button,
@@ -261,7 +261,8 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
         />
         <Container display="block">
           <H2
-            type="h1"
+            type="h2"
+            color={Colors.black}
             textAlign="center"
             fontSize="36px"
             fontSize_tablet="80px"
@@ -273,21 +274,17 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           >
             {yml.header.title}
           </H2>
-          <Paragraph
-            color="black"
-            opacity="1"
+          <SubTitle
+            color={Colors.black}
             margin="15px auto"
             padding="0"
             width="auto"
             letterSpacing="0.05em"
             textAlign="center"
-            fontSize_tablet="24px"
-            fontSize="18px"
-            lineHeight="28px"
             maxWidth="760px"
           >
             {yml.header.paragraph}
-          </Paragraph>
+          </SubTitle>
           <Div
             flexDirection_tablet="row"
             flexDirection="column"
@@ -393,9 +390,9 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
       >
         <Div display="block" margin="0px auto 40px 0" padding="0 20px">
           <H2 margin="0 0 15px 0">{yml.how_it_works.title}</H2>
-          <Paragraph color="#000" opacity="1" fontSize="18px">
+          <SubTitle>
             {yml.how_it_works.text}
-          </Paragraph>
+          </SubTitle>
         </Div>
         <Div
           margin="auto"
@@ -488,9 +485,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
         {yml.how_it_works.link && (
           <Paragraph
             margin="30px 0 0 0"
-            fontSize="18px"
             color={Colors.black}
-            opacity="1"
             textDecoration="underline"
           >
             <Anchor
@@ -550,7 +545,6 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
                         <Paragraph
                           margin="0 0 0 5px"
                           textAlign="left"
-                          opacity="1"
                           color={Colors.black}
                         >
                           {testimonial.country.name}

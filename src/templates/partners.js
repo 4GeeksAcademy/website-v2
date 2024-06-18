@@ -240,26 +240,22 @@ const Partners = (props) => {
           margin="0 0 40px 0"
           background={Colors.verylightGray}
         >
-          <H2
-            type="h2"
-            fontFamily="Lato"
-            fontWeight="900"
-            fontSize="15px"
+          <H3
+            type="h3"
+            fontSize="16px"
             lineHeight="19px"
             letterSpacing="0.05em"
-            color="#3A3A3A"
             width="100%"
             margin="0 0 15px 0"
             textTransform="uppercase"
             style={{ fontStyle: "normal" }}
           >
             {partnersData.coding.tagline}
-          </H2>
+          </H3>
           <Paragraph
             padding="0 10px"
             padding_tablet="0 24%"
             letterSpacing="0.05em"
-            color={Colors.darkGray}
             width="100%"
             margin="0 0 15px 0"
             style={{ fontStyle: "normal" }}

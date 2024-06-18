@@ -4,7 +4,8 @@ import BaseRender from "./_baseLayout";
 
 // components
 import { Div, GridContainer } from "../components/Sections";
-import { H1, H2, H4, Paragraph } from "../components/Heading";
+import { H1, H2, H3, Paragraph } from "../components/Heading";
+import { Colors } from "../components/Styling";
 
 const Cookies = (props) => {
   const { data, pageContext, yml } = props;
@@ -25,7 +26,7 @@ const Cookies = (props) => {
             lineHeight="16px"
             fontWeight="700"
             letterSpacing="0.05em"
-            color="#606060"
+            color={Colors.darkGray2}
           >
             {yml.seo_title}
           </H1>
@@ -34,6 +35,7 @@ const Cookies = (props) => {
             zIndex="5"
             fontSize="50px"
             lineHeight="60px"
+            color={Colors.black}
             margin="16px 0px 19px 0px"
           >
             {yml.header.tagline}
@@ -42,9 +44,8 @@ const Cookies = (props) => {
             {yml.sections.map((section, i) => {
               return (
                 <React.Fragment key={i}>
-                  <H4
+                  <H3
                     type="h3"
-                    fontSize="22px"
                     key={i}
                     fontWeight="bold"
                     borderBottom="1px solid #C4C4C4"
@@ -52,7 +53,7 @@ const Cookies = (props) => {
                     padding="74px 0 20px 0"
                   >
                     {section.title}
-                  </H4>
+                  </H3>
                   {section.text.split("\n").map((m, i) => (
                     <Paragraph
                       letterSpacing="0.05em"
@@ -62,7 +63,7 @@ const Cookies = (props) => {
                       align_sm="left"
                       margin="15px 0"
                       dangerouslySetInnerHTML={{ __html: m }}
-                    ></Paragraph>
+                    />
                   ))}
                 </React.Fragment>
               );
@@ -72,7 +73,7 @@ const Cookies = (props) => {
             letterSpacing="0.05em"
             margin="45px 0 0 0"
             dangerouslySetInnerHTML={{ __html: yml.date_release }}
-          ></Paragraph>
+          />
         </Div>
       </GridContainer>
     </>

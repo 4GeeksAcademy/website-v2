@@ -2,7 +2,7 @@ import React from "react";
 import styled, { css } from "styled-components";
 import PropTypes from "prop-types";
 import { Colors, StyledBackgroundSection } from "../Styling";
-import { H1, H2, Paragraph } from "../Heading";
+import { H1, H2, Paragraph, SubTitle } from "../Heading";
 import { Break } from "../Responsive";
 import { Devices } from "../Responsive";
 import Fragment from "../Fragment";
@@ -839,7 +839,7 @@ export const Header = ({
           >
             {multilineTitle}
           </H2>
-          <Paragraph
+          <SubTitle
             width="auto"
             letterSpacing="0.05em"
             padding={paddingParagraph || "20px"}
@@ -854,7 +854,7 @@ export const Header = ({
             color={Colors.black}
           >
             {paragraph}
-          </Paragraph>
+          </SubTitle>
           {children}
         </Div>
         {svg_image ? (

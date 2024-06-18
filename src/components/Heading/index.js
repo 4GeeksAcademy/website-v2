@@ -418,7 +418,7 @@ H3.defaultProps = {
   lineHeight: "22.85px",
 };
 H4.defaultProps = {
-  fontSize: "15px",
+  fontSize: "16px",
   lineHeight: "26px",
   letterSpacing: "0.05em",
 };

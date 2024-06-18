@@ -43,13 +43,11 @@ const BenefitsAndCharts = (props) => {
         maxWidth={props.maxWidth || "1280px"}
       >
         <Div flexDirection="column" flex="1" flex_tablet="1">
-          <H2 type="h2" textAlign="left" lineHeight="30px">
+          <H2 type="h2" textAlign="left">
             {data.benefits_and_charts.title}
           </H2>
           <Paragraph
             textAlign="left"
-            fontSize="15px"
-            color="#3A3A3A"
             padding="20px 0 30px 0"
             padding_tablet="20px 0 30px 0"
             letterSpacing="0.05em"
@@ -91,16 +89,15 @@ const BenefitsAndCharts = (props) => {
                       fill={Colors.yellow}
                     />
                   </Div>
-                  <H2
+                  <H3
                     type="h3"
                     padding="20px 0"
                     textAlign="left"
-                    fontSize="15px"
+                    fontSize="16px"
                     fontWeight="400"
-                    lineHeight="22px"
                   >
                     {p}
-                  </H2>
+                  </H3>
                 </Div>
               ))}
             </Div>
@@ -135,7 +132,7 @@ const BenefitsAndCharts = (props) => {
             <H3
               type="h3"
               textAlign="left"
-              fontSize="15px"
+              fontSize="16px"
               textTransform="uppercase"
               letterSpacing="0.05em"
             >
@@ -161,9 +158,6 @@ const BenefitsAndCharts = (props) => {
                 </Div>
                 <Paragraph
                   textAlign="left"
-                  fontSize="15px"
-                  fontWeight="400"
-                  lineHeight="22px"
                 >
                   {chart.description}
                 </Paragraph>
