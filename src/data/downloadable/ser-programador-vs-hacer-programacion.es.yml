@@ -11,7 +11,7 @@ meta_info:
   visibility: "unlisted" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   automation: downloadable-programador # optional, lead as "null" if you don't know, it can be more than one (comma separated)
   tag: request_more_info # mandatory: at lease one tag (comma separated)
-  current_download: "guia-html-css" 
+  current_download: "programador-programacion" 
 
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
