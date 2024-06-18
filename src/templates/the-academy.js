@@ -4,7 +4,7 @@ import { GridContainer, Div, Grid, Header } from "../components/Sections";
 import { H2, H3, Paragraph } from "../components/Heading";
 import { Colors, StyledBackgroundSection } from "../components/Styling";
 import { isCustomBarActive } from "../actions";
-import session, { SessionContext } from "../session";
+import { SessionContext } from "../session";
 import Badges from "../components/Badges";
 import OurPartners from "../components/OurPartners";
 import Credentials from "../components/Credentials";
@@ -26,10 +26,9 @@ const Why = (props) => {
         title={yml.header.title}
         paragraph={yml.header.paragraph}
         image={yml.header.image.childImageSharp.fluid}
-        fontSize_paragraph="21px"
         padding="70px 0 70px 0"
         padding_tablet="70px 0 70px 0"
-        margin={isCustomBarActive(session) ? "130px 0 0 0" : "70px 0 0 0"}
+        margin_md={isCustomBarActive(session) ? "130px 0 0 0" : "70px 0 0 0"}
         position="relative"
       >
         <Circle
@@ -128,13 +127,13 @@ const Why = (props) => {
           padding_tablet="56px 0 0 0"
         >
           <StyledBackgroundSection
-            height={`390px`}
+            height="390px"
             width="100%"
             image={
               yml.what_is_4geeks.image &&
               yml.what_is_4geeks.image.childImageSharp.gatsbyImageData
             }
-            bgSize={`cover`}
+            bgSize="cover"
             alt={yml.what_is_4geeks.image_alt}
           />
         </Div>

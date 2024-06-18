@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import { graphql } from "gatsby";
 import { GridContainer, Header, Div, Grid } from "../components/Sections";
-import { H2, H4, Paragraph } from "../components/Heading";
+import { H2, H3, H4, Paragraph } from "../components/Heading";
 import { Button, Colors } from "../components/Styling";
 import OurPartners from "../components/OurPartners";
 import Icon from "../components/Icon";
