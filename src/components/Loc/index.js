@@ -156,7 +156,7 @@ const Loc = ({ lang, hideHeading, allLocationYaml, background }) => {
     .join(" ");
 
   return (
-    <Div padding="0 0 20px 0" display="block" background={background}>
+    <Div padding="40px 0" display="block" background={background}>
       {heading && !hideHeading && (
         <GridContainer
           margin_tablet="35px auto"
@@ -173,7 +173,7 @@ const Loc = ({ lang, hideHeading, allLocationYaml, background }) => {
       )}
       <Div
         id="locations-container"
-        padding_xxs="0 20px"
+        padding="0 20px"
         padding_lg="0px"
         padding_tablet="0 40px"
         flexDirection_md="row"

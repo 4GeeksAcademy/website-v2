@@ -380,7 +380,7 @@ const Home = (props) => {
         background={Colors.veryLightBlue3}
       />
       {/* TWO COLUMN CREAR EN EL YML*/}
-      <Div display="block" background={Colors.veryLightBlue3}>
+      <Div display="block" background={Colors.veryLightBlue3} padding="40px 0">
         <H2 type="h2" textAlign_tablet="center">
           {yml.two_columns.section_heading.text}
         </H2>
@@ -401,10 +401,6 @@ const Home = (props) => {
       <With4Geeks
         lang={pageContext.lang}
         background={Colors.veryLightBlue3}
-        headerProps={{
-          margin: "0 5px 20px 5px",
-          margin_tablet: "0 auto 20px auto",
-        }}
         sessionLocation={
           session &&
           session.location &&
@@ -418,13 +414,8 @@ const Home = (props) => {
         multiLine
         background={Colors.veryLightBlue3}
         images={hiring.partners.images}
-        margin="0"
-        padding="50px 0"
-        marquee
-        paddingFeatured="0 0 50px 0"
         featuredImages={landingHiring?.featured}
         variant="carousel"
-        withoutLine
         title={landingHiring ? landingHiring.heading : hiring.partners.tagline}
         paragraph={
           landingHiring

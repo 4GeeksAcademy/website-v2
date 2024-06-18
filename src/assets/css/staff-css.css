@@ -145,5 +145,5 @@
 }
 .slick-dots-staff li.slick-active button:before {
   opacity: 1;
-  color: black;
+  color: #0084FF;
 }

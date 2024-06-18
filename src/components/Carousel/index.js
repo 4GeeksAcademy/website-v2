@@ -137,7 +137,7 @@ const Carousel = ({
       padding_md={padding_md || "0px"}
       padding_lg={padding_lg || "0px"}
       padding_tablet={padding_tablet || "0px"}
-      margin_tablet={margin_tablet || "30px auto"}
+      margin_tablet={margin_tablet || "auto"}
       margin={margin || "0 0 36px 0"}
       maxWidth={maxWidth}
       {...rest}
@@ -147,7 +147,7 @@ const Carousel = ({
           flexDirection="column"
           alignItems="center"
           gap="32px"
-          margin="0 0 30px 0"
+          margin="0 0 32px 0"
         >
           {content?.heading && (
             <H2 {...content.headingProps}>{content?.heading}</H2>
@@ -156,7 +156,7 @@ const Carousel = ({
           {content?.content && (
             <Div flexDirection="column" margin="0 0 10px 0">
               <SubTitle
-                margin="0 0 0 0"
+                padding="0 20px"
                 dangerouslySetInnerHTML={{ __html: content.content }}
                 {...content.contentProps}
               />

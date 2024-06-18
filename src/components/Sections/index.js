@@ -477,7 +477,7 @@ export const Div = styled.div`
         : null};
     align-self: ${(props) => props.alignSelf_tablet};
     order: ${(props) => props.order_tablet};
-    gap: ${(props) => (props) => props.gap_tablet};
+    gap: ${(props) => props.gap_tablet};
     column-count: ${(props) => props.columnCount_tablet};
     place-self: ${(props) => props.placeSelf_tablet};
     background: ${(props) => props.background_tablet};
@@ -789,7 +789,7 @@ export const Header = ({
       height={height}
       height_tablet={height_tablet}
       position={position}
-      margin={margin || "70px 0 0 0"}
+      margin={margin}
       margin_tablet={margin_tablet}
       margin_md={margin_md}
       margin_xxs={margin_xxs}

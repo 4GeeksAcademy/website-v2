@@ -71,7 +71,7 @@ const Cybersecurity = ({ data, pageContext, yml }) => {
   return (
     <>
       <Header
-        margin={
+        margin_md={
           isCustomBarActive(session) ? "120px auto 0 auto" : "90px auto 0 auto"
         }
         paragraphMargin="26px 20px"

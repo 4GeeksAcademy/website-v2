@@ -1,5 +1,5 @@
-import React from "react";
-import { Button } from "../Styling";
+import React, { useState } from "react";
+import { Button, Colors } from "../Styling";
 import { Div } from "../Sections";
 import Icon from "../Icon";
 import Carousel from "../Carousel";
@@ -14,6 +14,11 @@ const CarouselV2 = ({
   carouselProps,
   ...rest
 }) => {
+  const [index, setIndex] = useState(0);
+  React.useEffect(() => {
+    console.log('index');
+    console.log(index);
+  }, [index]);
   return (
     <Div position="relative" display="block" {...rest}>
       <Carousel
@@ -27,8 +32,11 @@ const CarouselV2 = ({
         settings={{
           dotsClass: "slick-dots-staff",
           slidesToShow: 5,
-          infinite: true,
+          infinite: false,
           slidesToScroll: 5,
+          afterChange: (i) => {
+            setIndex(i);
+          },
           ...settings,
         }}
         nextArrow={({ onClick }) => (
@@ -66,7 +74,12 @@ const CarouselV2 = ({
             onClick={onClick}
             style={{ height: "25px", transform: "rotate(180deg)" }}
           >
-            <Icon width="100%" height="100%" icon="arrow-right" />
+            <Icon
+              width="100%"
+              height="100%"
+              icon="arrow-right"
+              color={ index === 0 ? Colors.lightGray : Colors.black }
+            />
           </Button>
         )}
         {...carouselProps}

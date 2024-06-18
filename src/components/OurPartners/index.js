@@ -296,12 +296,10 @@ const VariantCarousel = ({
 
   return (
     <CarouselV2
-      margin="20px 0"
       background={background || "#FBFCFC"}
-      padding="20px 0 40px 0"
+      padding="40px 0"
       heading={title}
       content={paragraph}
-      headingProps={{ fontWeight: "400", fontSize: "35px" }}
       settings={{
         slidesToShow: 4,
         slidesToScroll: 4,
@@ -348,7 +346,7 @@ const VariantCarousel = ({
       {multiLine
         ? multiLineImages.map((group, i) => (
             <Div key={`${i}-partners`}>
-              <Div flexDirection="column" gap="16px">
+              <Div flexDirection="column" gap="24px">
                 {group.map((elem) => (
                   <SquareBoxPartner
                     key={elem.name}

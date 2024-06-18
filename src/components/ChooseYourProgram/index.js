@@ -1,9 +1,8 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Link, useStaticQuery, graphql } from "gatsby";
 import { Button, Colors } from "../Styling";
-import { Grid, Div } from "../Sections";
+import { Div } from "../Sections";
 import { H4, H3, H2, Paragraph, SubTitle } from "../Heading";
-import { SessionContext } from "../../session.js";
 import Icon from "../Icon";
 
 const ChooseYourProgram = ({
@@ -16,7 +15,6 @@ const ChooseYourProgram = ({
   id,
   background,
 }) => {
-  const { session } = useContext(SessionContext);
   const data = useStaticQuery(graphql`
     {
       allChooseYourProgramYaml {
@@ -50,30 +48,18 @@ const ChooseYourProgram = ({
       id={id}
       ref={chooseProgramRef}
       background={background}
-      // padding_lg="10px 0 50px 0"
-      // padding_tablet="10px 40px 50px 40px"
       padding="40px"
     >
-      <Grid
-        gridTemplateColumns_md={
-          landingTemplate ? "repeat(14, 1fr)" : "repeat(14, 1fr)"
-        }
-        gridTemplateColumns_tablet={
-          landingTemplate ? "4fr repeat(12, 1fr) 4fr" : "repeat(14, 1fr)"
-        }
-        gridTemplateColumns_xs="1fr" //{landingTemplate && "1fr"}
-        gridAutoRows_tablet="auto" //"minmax(100px, auto)"
+      <Div
+        display="block"
         background_tablet={landingTemplate ? Colors.white : "transparent"}
         maxWidth_tablet="1280px"
         margin_tablet="0 auto"
         margin_lg="0 auto"
       >
         <Div
-          margin_tablet="0 0 32px 0"
-          gridColumn_tablet="2 / 14"
-          gridColumn_xs="5 / 11"
+          margin="0 0 32px 0"
           textAlign="center"
-          gridRow_tablet="1 / 1"
           flexDirection="column"
           width="100%"
           zIndex="1"
@@ -83,18 +69,10 @@ const ChooseYourProgram = ({
             {paragraph || info.paragraph}
           </SubTitle>
         </Div>
-        <Grid
-          padding_tablet={landingTemplate ? "0 17px" : "0"}
-          padding_md="0"
-          gridColumn_tablet="1 / 15"
-          gridColumn_md="1 / 15"
-          gridRow_tablet="2 / 4"
-          gridTemplateColumns_md={
-            landingTemplate ? "repeat(2, 4fr)" : "repeat(4fr)"
-          }
-          gridTemplateColumns_tablet={
-            landingTemplate ? "repeat(2, 4fr)" : "repeat(4 , 25%)"
-          }
+        <Div
+          gap="15px"
+          flexWrap="wrap"
+          flexWrap_md="nowrap"
           zIndex="1"
           margin="0px auto"
         >
@@ -110,8 +88,6 @@ const ChooseYourProgram = ({
                   flexDirection="column"
                   justifyContent="between"
                   background="#ffffff"
-                  // flexWrap_sm="nowrap"
-                  // flexWrap="wrap"
                   zIndex="1"
                   width="100%"
                 >
@@ -140,13 +116,12 @@ const ChooseYourProgram = ({
                           </Link>
                         ))}
                       </Div>
-                      <Div>
+                      <Div maxWidth="68px">
                         <Icon
                           className="choose-your-program-icon"
                           icon={program.icon}
-                          padding="0 0 0 20px"
                           height="75px"
-                          width="68px"
+                          width="100%"
                         />
                       </Div>
                     </Div>
@@ -156,16 +131,12 @@ const ChooseYourProgram = ({
                       width="100%"
                       alignContent="flex-start"
                       margin_tablet={
-                        landingTemplate ? "10px 0 50px 0" : "10px 0 0 0"
+                        landingTemplate ? "0 0 50px 0" : "0"
                       }
                       margin_xs={
-                        landingTemplate ? "10px 0 50px 0" : "10px 0 0 0"
+                        landingTemplate ? "0 0 50px 0" : "0"
                       }
-                      padding={
-                        landingTemplate
-                          ? "10px 0px 20px 0px"
-                          : "10px 0px 15px 0px"
-                      }
+                      padding="20px 0px 30px 0px"
                     >
                       {program.description &&
                         program.description
@@ -179,7 +150,6 @@ const ChooseYourProgram = ({
                               textAlign="left"
                               fontSize="14px"
                               lineHeight="22px"
-                              margin={index == 0 && "10px 0px 10px 0"}
                               dangerouslySetInnerHTML={{ __html: paragraph }}
                             />
                           ))}
@@ -194,7 +164,6 @@ const ChooseYourProgram = ({
                           lineHeight="19px"
                           fontWeight="400"
                           opacity="1"
-                          margin="10px 0px 25px 0"
                         >
                           {program.description_mobile}
                         </Paragraph>
@@ -232,13 +201,7 @@ const ChooseYourProgram = ({
                             width="auto"
                             width_tablet="150px"
                             borderRadius="4px"
-                            style={{
-                              bottom: "24px",
-                              left: "24px",
-                              right: "24px",
-                              gap: "10px",
-                              margin: "auto",
-                            }}
+                            margin="auto"
                           >
                             {program.text_link}
                           </Button>
@@ -267,8 +230,8 @@ const ChooseYourProgram = ({
                 </Div>
               );
             })}
-        </Grid>
-      </Grid>
+        </Div>
+      </Div>
     </Div>
   );
 };
