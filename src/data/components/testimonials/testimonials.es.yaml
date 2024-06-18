@@ -42,6 +42,27 @@ testimonials:
     student_thumb: "../../../../static/images/testimonials/florencia-viera.jpeg"
     linkedin_image: "../../../../static/images/linkedin.png"
 
+  - student_name: "Diego Gómez González"
+    slug: "diego-gomez"
+    country:
+      iso: España
+      name: España
+    featured: false
+    highlighted: false
+    testimonial_date: ""
+    rating: 5
+    student_thumb: "../../../../static/images/testimonials/diego-gomez-testimonial.webp"
+    student_video: "https://www.youtube.com/watch?v=9Vm_xD49MaU" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    hidden: false
+    linkedin_url: "https://www.linkedin.com/in/diego-g%C3%B3mez-gonz%C3%A1lez-372017199/"
+    linkedin_text: "Linkedin Perfil"
+    linkedin_image: "../../../../static/images/linkedin.png"
+    source_url: ""
+    # source_url_text: ""
+    short_content: "Software Developer en ForoGeeks"
+    content: "4Geeks ha sido la experiencia que me ha aportado todo lo que me faltaba después de tener un grado superior, para mí ha sido el fin de mis estudios y mi entrada al mundo laboral, me ha ayudado a conectar muchas cosas del Front a demás de las mentorías ilimitadas que considero que es un servicio que vale la pena."
+
   - student_name: "Alan Gaston Sosa"
     slug: "gaston-alan"
     country:
@@ -52,7 +73,7 @@ testimonials:
     testimonial_date: ""
     rating: 5
     student_thumb: "../../../../static/images/testimonials/alan-gaston-sosa.webp"
-    student_video: "https://www.linkedin.com/in/gaston-sosa-458658269/" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    student_video: "https://www.youtube.com/watch?v=V8LPdbQJ2hM" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     hidden: false
     linkedin_url: "https://www.linkedin.com/in/gaston-sosa-458658269/"
@@ -61,7 +82,7 @@ testimonials:
     source_url: ""
     # source_url_text: ""
     short_content: "Desarrollador JavaScript Jr."
-    content: "Antes de entrar a la academia me dedicaba a la fotografia "
+    content: "Antes de entrar a la academia siempre me gustó el diseño gráfico y la fotografía, mientras trabajaba como repartidor me daba cuenta sobre lo mucho que me gustaba la tecnología y la flexibilidad de estas áreas bien sean remotas o en el horario, recomiendo y he recomendado 4Geeks Academy."
 
   - student_name: "Diego Fernández"
     slug: "diego-fer"

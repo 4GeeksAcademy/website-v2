@@ -63,6 +63,27 @@ testimonials:
     short_content: "Full Stack Developer"
     content: "Taking a course like this benefits us in a lot of different ways. You know it's not just from a programming aspect, but it's a confident aspect that adds to you a lot of dimension in the sense that you're able to create something from nothing. "
 
+  - student_name: "Diego Gómez González"
+    slug: "diego-gomez"
+    country:
+      iso: Spain
+      name: Spain
+    featured: false
+    highlighted: false
+    testimonial_date: ""
+    rating: 5
+    student_thumb: "../../../../static/images/testimonials/diego-gomez-testimonial.webp"
+    # student_video: "https://www.youtube.com/watch?v=9Vm_xD49MaU" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    hidden: false
+    linkedin_url: "https://www.linkedin.com/in/diego-g%C3%B3mez-gonz%C3%A1lez-372017199/"
+    linkedin_text: "LinkedIn Profile"
+    linkedin_image: "../../../../static/images/linkedin.png"
+    source_url: ""
+    # source_url_text: ""
+    short_content: "Software Developer at ForoGeeks"
+    content: "4Geeks has been the experience that provided me with everything I was missing after having a higher degree. For me, it was the end of my studies and my entry into the labor market. It helped me connect many things on the Frontend, in addition to the unlimited mentoring, which I consider a service that is worth it."
+
   - student_name: "Fidel Enrique Vera"
     slug: "fidel-vera"
     country:
@@ -209,6 +230,27 @@ testimonials:
     # source_url_text: ""
     short_content: "Web Developer at Everwell Parts, Inc."
     content: "Just give it a try, you'll learn because the 4Geeks system nudges you in that direction. 4Geeks is the best choice for a career change and learning how to program."
+
+  - student_name: "Alan Gaston Sosa"
+    slug: "gaston-alan"
+    country:
+      iso: Spain
+      name: Spain
+    featured: false
+    highlighted: false
+    testimonial_date: ""
+    rating: 5
+    student_thumb: "../../../../static/images/testimonials/alan-gaston-sosa.webp"
+    # student_video: "https://www.youtube.com/watch?v=V8LPdbQJ2hM" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    hidden: false
+    linkedin_url: "https://www.linkedin.com/in/gaston-sosa-458658269/"
+    linkedin_text: "LinkedIn Profile"
+    linkedin_image: "../../../../static/images/linkedin.png"
+    source_url: ""
+    # source_url_text: ""
+    short_content: "Junior JavaScript Developer"
+    content: "Before joining the academy, I always liked graphic design and photography. While working as a delivery driver, I realized how much I liked technology and the flexibility of these areas, whether remote or on schedule. I recommend and have recommended 4Geeks Academy."
 
   - student_name: "Olson Dimache"
     slug: "ols-di"
@@ -508,6 +550,27 @@ testimonials:
     short_content: "Third-Party Risk Management at GitHub"
     content: |
       I was a lawyer for 6 years and I decided to change my career. I attended 4Geeks Academy, a coding bootcamp, that was last year (2018), I graduated in August, and after graduating in October, I was able to get a job as a web developer. I had no background whatsoever in coding. I didn't know anything about anything computer-technology wise, so that's an encouragement because it's possible!
+
+  - student_name: "Diego Fernández"
+    slug: "diego-fer"
+    country:
+      iso: Spain
+      name: Spain
+    featured: false
+    highlighted: false
+    testimonial_date: ""
+    rating: 5
+    student_thumb: "../../../../static/images/testimonials/diego-fernandez-testimonial.webp"
+    # student_video: "https://www.youtube.com/watch?v=V8LPdbQJ2hM" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    hidden: false
+    linkedin_url: "https://www.linkedin.com/in/fergodie/"
+    linkedin_text: "LinkedIn Profile"
+    linkedin_image: "../../../../static/images/linkedin.png"
+    source_url: ""
+    # source_url_text: ""
+    short_content: "Warehouse Manager"
+    content: "I started studying programming on my own, but I only got so far and always had in mind to join an academy. I came to 4Geeks Academy on the recommendation of a friend and it has surprised me a lot—the attention, the community, the mentoring, and more. I encourage everyone who wants to study a career in the tech industry."
 
   - student_name: "Javier Murillo"  
     featured: false  
