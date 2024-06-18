@@ -30,7 +30,7 @@ form:
   heading: "Formulario para dejar los datos y acceder al vídeo "
   motivation: "Completa el formulario y en minutos te enviaremos la información a tu correo electrónico."
   button_label: Acceder al video
-  redirect: "/es/landing/santiago-geekforce"  #you can redirect to another url or entirely diffrent website
+  redirect: "https://ask2.4geeks.com/fgh2m23c7"  #you can redirect to another url or entirely diffrent website
 
 apply_schollarship: # form that is displayed at the end of the landing
   # title: "Get more info about this award-winning development course"
