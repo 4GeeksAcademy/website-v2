@@ -34,12 +34,55 @@ testimonials:
     linkedin_url: "https://www.linkedin.com/in/joao-henrique-xavier/"
     student_thumb: "../../../../static/images/testimonials/joao-xavier.jpeg"
     linkedin_image: "../../../../static/images/linkedin.png"
+
   - student_name: Florencia Viera
     include_in_marquee: true
     short_content: "Web Developer en Lightning Fruit"
     linkedin_url: "https://www.linkedin.com/in/floviera"
     student_thumb: "../../../../static/images/testimonials/florencia-viera.jpeg"
     linkedin_image: "../../../../static/images/linkedin.png"
+
+  - student_name: "Alan Gaston Sosa"
+    slug: "gaston-alan"
+    country:
+      iso: España
+      name: España
+    featured: false
+    highlighted: false
+    testimonial_date: ""
+    rating: 5
+    student_thumb: "../../../../static/images/testimonials/alan-gaston-sosa.webp"
+    student_video: "https://www.linkedin.com/in/gaston-sosa-458658269/" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    hidden: false
+    linkedin_url: "https://www.linkedin.com/in/gaston-sosa-458658269/"
+    linkedin_text: "Linkedin Perfil"
+    linkedin_image: "../../../../static/images/linkedin.png"
+    source_url: ""
+    # source_url_text: ""
+    short_content: "Desarrollador JavaScript Jr."
+    content: "Antes de entrar a la academia me dedicaba a la fotografia "
+
+  - student_name: "Diego Fernández"
+    slug: "diego-fer"
+    country:
+      iso: España
+      name: España
+    featured: false
+    highlighted: false
+    testimonial_date: ""
+    rating: 5
+    student_thumb: "../../../../static/images/testimonials/diego-fernandez-testimonial.webp"
+    student_video: "https://www.youtube.com/watch?v=V8LPdbQJ2hM" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    hidden: false
+    linkedin_url: "https://www.linkedin.com/in/fergodie/"
+    linkedin_text: "Linkedin Perfil"
+    linkedin_image: "../../../../static/images/linkedin.png"
+    source_url: ""
+    # source_url_text: ""
+    short_content: "Gerente de almacén"
+    content: "Empecé a estudiar programación por mi cuenta, pero llegaba solo hasta cierto punto y siempre tuve en mente ingresar en una academia, llegué a 4Geeks Academy por recomendación de un amigo y me ha sorprendido bastante, la atención, la comunidad, las mentorías y demás. Animo a todos que quieran estudiar una carrera de la industria tech."
 
   - student_name: "Rita Lopez Cobo"
     slug: "rita-lopz"
@@ -538,7 +581,7 @@ testimonials:
       iso: us
       name: United States of America
     rating: 5
-    student_thumb: "../../../../static/images/testimonials/Leslie-.jpg"
+    student_thumb: "../../../../static/images/testimonials/leslie-herrera-testimonial.jpg"
     linkedin_url: "https://www.linkedin.com/in/dereemii/"
     linkedin_text: "Linkedin Perfil"
     linkedin_image: ""
