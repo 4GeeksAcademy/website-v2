@@ -251,7 +251,7 @@ const Outcomes = ({ data, pageContext, yml }) => {
                     <GridContainer
                       justifyContent="between"
                       gridGap_tablet="30px"
-                      containerColumns_tablet={`0fr repeat(12, 1fr) 1fr`}
+                      containerColumns_tablet="0fr repeat(12, 1fr) 1fr"
                       columns_tablet={
                         Array.isArray(section.stats) && section.stats.length
                       }
@@ -314,8 +314,8 @@ const Outcomes = ({ data, pageContext, yml }) => {
                                     <React.Fragment key={i}>
                                       <StyledBackgroundSection
                                         margin="30px 0"
-                                        minHeight={`100px`}
-                                        height={`255px`}
+                                        minHeight="100px"
+                                        height="255px"
                                         width="100%"
                                         image={
                                           m.image &&
@@ -386,7 +386,7 @@ const Outcomes = ({ data, pageContext, yml }) => {
                 top: `${isCustomBarActive(session) ? "150px" : "90px"}`,
               }}
               borderRadius="3px"
-              border={`1px solid #e5e5e5`}
+              border="1px solid #e5e5e5"
               width="266px"
               height="fit-content"
             >
