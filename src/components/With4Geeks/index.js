@@ -79,11 +79,7 @@ export default ({
   else locationFiltered = stories || info.with;
 
   return (
-    <Div
-      display="block"
-      background={background}
-      padding="40px 0"
-    >
+    <Div display="block" background={background} padding="40px 0">
       {(info?.header || title) && (
         <Div
           maxWidth="1280px"

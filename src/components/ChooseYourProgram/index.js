@@ -44,12 +44,7 @@ const ChooseYourProgram = ({
 
   if (info) info = info.node;
   return (
-    <Div
-      id={id}
-      ref={chooseProgramRef}
-      background={background}
-      padding="40px"
-    >
+    <Div id={id} ref={chooseProgramRef} background={background} padding="40px">
       <Div
         display="block"
         background_tablet={landingTemplate ? Colors.white : "transparent"}
@@ -130,12 +125,8 @@ const ChooseYourProgram = ({
                       flexDirection="column"
                       width="100%"
                       alignContent="flex-start"
-                      margin_tablet={
-                        landingTemplate ? "0 0 50px 0" : "0"
-                      }
-                      margin_xs={
-                        landingTemplate ? "0 0 50px 0" : "0"
-                      }
+                      margin_tablet={landingTemplate ? "0 0 50px 0" : "0"}
+                      margin_xs={landingTemplate ? "0 0 50px 0" : "0"}
                       padding="20px 0px 30px 0px"
                     >
                       {program.description &&

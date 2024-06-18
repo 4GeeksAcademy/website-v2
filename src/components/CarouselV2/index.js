@@ -16,7 +16,7 @@ const CarouselV2 = ({
 }) => {
   const [index, setIndex] = useState(0);
   React.useEffect(() => {
-    console.log('index');
+    console.log("index");
     console.log(index);
   }, [index]);
   return (
@@ -78,7 +78,7 @@ const CarouselV2 = ({
               width="100%"
               height="100%"
               icon="arrow-right"
-              color={ index === 0 ? Colors.lightGray : Colors.black }
+              color={index === 0 ? Colors.lightGray : Colors.black}
             />
           </Button>
         )}
