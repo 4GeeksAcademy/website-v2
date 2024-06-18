@@ -37,7 +37,6 @@ header_data:
   badge: "../../../static/images/badges/Course-Report-Badge-2023.png"
   image_filter: brightness(0.3)
 
-
 features:
   marginTop: 20px #<-- separation between tagline and the bullets
   #                                         up   left down  right
