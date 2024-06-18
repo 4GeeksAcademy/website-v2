@@ -26,10 +26,7 @@ const WeTrust = ({ we_trust, background, titleProps, paragraphProps }) => {
         maxWidth="1280px"
       >
         <Div display="block" padding="0 0 32px 0">
-          <H2
-            textAlign="left"
-            {...titleProps}
-          >
+          <H2 textAlign="left" {...titleProps}>
             {we_trust.title}
           </H2>
           <SubTitle

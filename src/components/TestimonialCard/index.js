@@ -99,11 +99,7 @@ const TestimonialCard = ({
           />
           {stories ? ( //Where the component is called (true/false)
             <Div flexDirection="column" margin="0 0 0 9px">
-              <H3
-                fontSize="16px"
-                textAlign="left"
-                fontFamily="Lato-Black"
-              >
+              <H3 fontSize="16px" textAlign="left" fontFamily="Lato-Black">
                 {name}
               </H3>
               <H4

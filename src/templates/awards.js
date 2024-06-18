@@ -1,14 +1,9 @@
 import React from "react";
 import { graphql } from "gatsby";
-import {
-  Div,
-} from "../components/Sections";
+import { Div } from "../components/Sections";
 import { H1, H2, Paragraph, SubTitle } from "../components/Heading";
 import TestimonialCard from "../components/TestimonialCard";
-import {
-  Colors,
-  Img,
-} from "../components/Styling";
+import { Colors, Img } from "../components/Styling";
 import BaseRender from "./_baseLayout";
 
 const SVGBubblesLeft = () => (
@@ -327,7 +322,12 @@ const Awards = ({ data, pageContext, yml }) => {
           margin="0 auto"
           padding_xxs="60px 0px"
         >
-          <H1 type="h1" textAlign="center" margin="0 0 11px 0" color={Colors.darkGray2}>
+          <H1
+            type="h1"
+            textAlign="center"
+            margin="0 0 11px 0"
+            color={Colors.darkGray2}
+          >
             {yml.seo_title}
           </H1>
           <H2

@@ -390,9 +390,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
       >
         <Div display="block" margin="0px auto 40px 0" padding="0 20px">
           <H2 margin="0 0 15px 0">{yml.how_it_works.title}</H2>
-          <SubTitle>
-            {yml.how_it_works.text}
-          </SubTitle>
+          <SubTitle>{yml.how_it_works.text}</SubTitle>
         </Div>
         <Div
           margin="auto"

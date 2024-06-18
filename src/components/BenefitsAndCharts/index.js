@@ -156,11 +156,7 @@ const BenefitsAndCharts = (props) => {
                 >
                   <Icon icon={chart.icon} width="65px" />
                 </Div>
-                <Paragraph
-                  textAlign="left"
-                >
-                  {chart.description}
-                </Paragraph>
+                <Paragraph textAlign="left">{chart.description}</Paragraph>
               </Div>
             ))}
           </Div>

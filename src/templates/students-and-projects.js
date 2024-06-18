@@ -45,10 +45,7 @@ const StudentAndProjects = (props) => {
                 padding_tablet="70px 0 0 0"
                 gridArea_tablet={i % 2 != 0 ? "1/1/1/6" : "1/7/1/13"}
               >
-                <H3
-                  type="h3"
-                  textAlign="left"
-                >
+                <H3 type="h3" textAlign="left">
                   {l.project_name}
                 </H3>
                 {l.alumni.map((alumni, index) => {
