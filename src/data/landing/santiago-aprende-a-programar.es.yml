@@ -31,7 +31,7 @@ form:
   heading: "Conoce más información"
   motivation: "Llena el formulario y te enviaremos la información en menos de 5 min"
   button_label: Obtener malla y más información
-  redirect: "/es/gracias/?lang=es" #you can redirect to another url or entirely diffrent website
+  redirect: "https://ask2.4geeks.com/fgh2m23c7" #you can redirect to another url or entirely diffrent website
 
 apply_schollarship: # form that is displayed at the end of the landing
   # title: "Apoyo Profesional Ilimitado"
