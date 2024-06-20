@@ -89,11 +89,11 @@ const Home = (props) => {
           {(indexVideo || sessionVideo) && <Div
               position="absolute"
               zIndex="5"
-              left_tablet={"40%"}
+              left_tablet={"50%"}
               left="50%"
               left_xxs="65%"
               left_xs="74%"
-              top_tablet={"50%"}
+              top_tablet={"3%"}
               top="90px"
               top_xxs="20px"
               top_xs="100px"
