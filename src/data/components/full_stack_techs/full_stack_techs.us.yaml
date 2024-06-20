@@ -4,7 +4,7 @@ There are currently over 26 times more job opportunities in JavaScript compared 
 According to Indeed, Python and JavaScript developers enjoy average salaries exceeding $110k."
 button:
   label: Learn more about why we teach python at 4Geeks
-  url: "/why-we-teach-python-4geeks"
+  url: "/us/python-bootcamp/why-we-teach-python-4geeks"
 image: "../../../../static/images/techs/python-js.png"
 tech_list: 
   - image: "../../../../static/images/techs/bootstrap.png"

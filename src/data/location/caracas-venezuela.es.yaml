@@ -6,15 +6,7 @@ meta_info:
   template: "location"
   image: "/images/og-preview/caracas-venezuela.es.png"
   keywords: "Coding Bootcamp Caracas, Curso Informatica Caracas, Curso Programacion Caracas"
-  redirects:
-    [
-      "/venezuela",
-      "/es/location/impact-hub-caracas",
-      "/es/coding-campus/bootcamp-programacion-venezuela",
-      "/es/location/caracas-venezuela",
-      "/es/coding-campus/bootcamp-programacion-caracas",
-      "/es/coding-campus/bootcamp-programacion-caracas-venezuela"
-    ]
+  redirects: [ "/venezuela"]
   region: "latam"
   dialCode: "58"
   related_clusters: ["desarrollador-full-stack"]
@@ -57,7 +49,7 @@ badges:
     4Geeks Academy es el lugar donde los desarrolladores crecen y prosperan. 
     Estamos autorizados por el Departamento de Educación de Florida. 
     Elegido como uno de los 35 mejores cursos de programacion del mundo y 
-    el mejor <a href="https://4geeksacademy.com/es/curso-de-programacion-desde-cero/?lang=es" rel="nofollow">curso de programacion</a> en Miami según SwitchUp. 
+    el mejor <a href="https://4geeksacademy.com/es/curso-de-programacion-desde-cero" rel="nofollow">curso de programacion</a> en Miami según SwitchUp. 
     4Geeks Academy ha sido reconocida como uno de los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek. 
     Una comunidad construida para desarrolladores.
 news:

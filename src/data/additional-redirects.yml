@@ -35,38 +35,13 @@ redirects:
     #redirectInBrowser: true
     isPermanent: true # if permanent google will erase the original url from its results 
     
-  - fromPath: "/us/coding-bootcamps/choosing-coding-bootcamp"
-    toPath: "/us/trends-and-tech/choosing-coding-bootcamp"
-    #redirectInBrowser: true
-    isPermanent: true # if permanent google will erase the original url from its results  
-    
-  - fromPath: "/us/coding-bootcamps/web-salaries-2017-coding-bootcamp"
-    toPath: "/us/full-stack-developer/web-salaries-2017-coding-bootcamp"
-    #redirectInBrowser: true
-    isPermanent: true # if permanent google will erase the original url from its results 
-    
   - fromPath: "/us/coding-bootcamps/part-time-bootcamps"
     toPath: "/us/coding-bootcamp/part-time-bootcamps"
     #redirectInBrowser: true
     isPermanent: true # if permanent google will erase the original url from its results 
     
-  - fromPath: "/us/coding-bootcamps/coding-bootcamp-syllabus-matters"
-    toPath: "/us/trends-and-tech/coding-bootcamp-syllabus-matters"
-    #redirectInBrowser: true
-    isPermanent: true # if permanent google will erase the original url from its results 
-    
-  - fromPath: "/us/coding-bootcamps/wyncode-ironhack-and-4geeks-academy-comparison"
-    toPath: "/us/trends-and-tech/wyncode-ironhack-and-4geeks-academy-comparison"
-    #redirectInBrowser: true
-    isPermanent: true # if permanent google will erase the original url from its results 
-    
   - fromPath: "/us/software-engineer-salary/todo-lo-que-necesitas-saber-sobre-inteligencia-artificial"
     toPath: "/es/software-engineer-salary/todo-lo-que-necesitas-saber-sobre-inteligencia-artificial"
-    #redirectInBrowser: true
-    isPermanent: true # if permanent google will erase the original url from its results 
-    
-  - fromPath: "/us/coding-bootcamps/why-we-teach-python-4geeks"
-    toPath: "/us/python-bootcamp/why-we-teach-python-4geeks"
     #redirectInBrowser: true
     isPermanent: true # if permanent google will erase the original url from its results 
     
@@ -140,11 +115,6 @@ redirects:
     #redirectInBrowser: true
     isPermanent: true # if permanent google will erase the original url from its results 
 
-  - fromPath: "/es/desarrollo-profesional/sindrome-del-impostor"
-    toPath: "/es/tendencias-y-tecnologia/sindrome-del-impostor"
-    #redirectInBrowser: true
-    isPermanent: true # if permanent google will erase the original url from its results 
-
   - fromPath: "/us/learn-to-code/hacks-learn-to-code"
     toPath: "/us/trends-and-tech/hacks-learn-to-code"
     #redirectInBrowser: true
@@ -170,11 +140,6 @@ redirects:
     #redirectInBrowser: true
     isPermanent: true # if permanent google will erase the original url from its results 
 
-  - fromPath: "/us/coding-campus/coding-bootcamp-argentina"
-    toPath: "/us/coding-campus/coding-bootcamp-argentina-buenos-aires/"
-    #redirectInBrowser: true
-    isPermanent: true # if permanent google will erase the original url from its results 
-    
   - fromPath: "/es/full-stack-developer/desarrollador-full-stack"
     toPath: "/es/desarrollador-full-stack/desarrollador-full-stack"
     #redirectInBrowser: true

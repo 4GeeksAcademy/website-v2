@@ -5,7 +5,7 @@ There are more 26X job opportunities in Javascript vs. Ruby on Rails, and
 According to Indeed, the average salary for Python or JavaScript developers exceeds $110k"
 button:
   label: Learn more about why we teach python at 4Geeks
-  url: "/why-we-teach-python-4geeks"
+  url: "/us/python-bootcamp/why-we-teach-python-4geeks"
 image: "../../../../static/images/techs/python-js.png"
 tech_list: 
   - image: "../../../../static/images/techs/bootstrap.png"
