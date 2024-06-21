@@ -56,7 +56,6 @@ const Apply = (props) => {
     consents: { value: [], valid: true },
     referral_key: { value: null, valid: true },
     course: { value: null, valid: false },
-    token: { value: null, valid: false },
   });
   const [consentValue, setConsentValue] = useState([]);
 
@@ -159,11 +158,12 @@ const Apply = (props) => {
   );
   if (privacy) privacy = privacy.node;
 
-  const submitForm = () => {
+  const submitForm = (payload) => {
     setFormStatus({ status: "loading", msg: "Loading..." });
     apply(
       {
         ...formData,
+        ...payload,
         course: formData.course.value,
         location: formData.location.value,
       },
@@ -429,23 +429,29 @@ const Apply = (props) => {
           flexDirection="column"
         >
           <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              if (formStatus.status === "error")
-                setFormStatus({ status: "idle", msg: "Resquest" });
+            onSubmit={async (e) => {
+              try {
+                e.preventDefault();
+                if (formStatus.status === "error")
+                  setFormStatus({ status: "idle", msg: "Resquest" });
 
-              const valid = formIsValid(formData);
-              if (valid !== true) {
-                setFormStatus({
-                  status: "error",
-                  msg: "There are some errors in your form: " + valid,
-                });
-              } else {
-                if (showPhoneWarning && regionVal !== "online") {
-                  setShowModal(true);
+                const valid = formIsValid(formData);
+                if (valid !== true) {
+                  setFormStatus({
+                    status: "error",
+                    msg: `${yml.left.form_section.errors.default} ${valid}`,
+                  });
                 } else {
-                  submitForm();
+                  if (showPhoneWarning && regionVal !== "online") {
+                    setShowModal(true);
+                  } else {
+                    const token = await captcha.current.executeAsync();
+                    submitForm({ token });
+                  }
                 }
+              } catch (e) {
+                console.log("e");
+                console.log(e);
               }
             }}
           >
@@ -538,7 +544,7 @@ const Apply = (props) => {
                 //   (el) => el.value === formData.location.value
                 // )}
                 placeholder={yml.left.regions_title}
-                inputId={"dropdown_region_selector"}
+                inputId="dropdown_region_selector"
                 onChange={(value) => {
                   setRegionVal(value.value);
                   setVal({
@@ -663,7 +669,7 @@ const Apply = (props) => {
               <ReCAPTCHA
                 ref={captcha}
                 sitekey={process.env.GATSBY_CAPTCHA_KEY}
-                onChange={captchaChange}
+                size="invisible"
               />
             </Div>
             <Div
@@ -681,19 +687,18 @@ const Apply = (props) => {
                 type="submit"
                 margin="2rem auto"
                 margin_tablet="2rem 0 2rem auto"
-                transform="translateY(-15px)"
+                width="100%"
+                textAlign="center"
+                display="block"
+                borderRadius="4px"
                 color={
-                  formStatus.status === "loading" || !formData.token.valid
+                  formStatus.status === "loading"
                     ? Colors.darkGray
                     : Colors.blue
                 }
                 textColor={Colors.white}
                 padding=".45rem 3rem"
-                disabled={
-                  formStatus.status === "loading" || !formData.token.valid
-                    ? true
-                    : false
-                }
+                disabled={formStatus.status === "loading" ? true : false}
               >
                 {formStatus.status === "loading"
                   ? "Loading..."
@@ -820,6 +825,9 @@ export const query = graphql`
               email
               phone
               phone_warning
+              errors {
+                default
+              }
               modal {
                 title
                 text
