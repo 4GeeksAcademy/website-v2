@@ -15,7 +15,7 @@ const TwoColumnCarousel = ({
   const customSettings = {
     className: "slider variable-width",
     dots: true,
-    infinite: true,
+    infinite: false,
     autoplay: false,
     autoplaySpeed: 6000,
     speed: 500,
