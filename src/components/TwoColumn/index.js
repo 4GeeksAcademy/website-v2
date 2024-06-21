@@ -203,9 +203,7 @@ const Side = ({
                         style={{ strokeWidth: "2px" }}
                       />
                     )}
-                    <Paragraph textAlign="left">
-                      {bullet.text}
-                    </Paragraph>
+                    <Paragraph textAlign="left">{bullet.text}</Paragraph>
                   </Div>
                 )}
               </Div>
