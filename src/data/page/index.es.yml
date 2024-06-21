@@ -32,7 +32,7 @@ why_4geeks:
     shadow: false
   heading:
     text: "Sé parte de una comunidad vibrante"
-    style: '{ "fontWeight": 400, "marginBottom": "32px" }'
+    style: '{ "fontWeight": 400, "marginBottom": "32px", "marginTop": "0px" }'
   sub_heading:
     text: "Únete a nuestra comunidad internacional de más de 4000 estudiantes, profesores, socios y exalumnos. Conéctate a través de diversos canales como Slack, GitHub, redes sociales y nuestra plataforma exclusiva 4Geeks.com. ¡Donde hay un geek, hay un camino! Lo que nos diferencia:"
   content:

@@ -98,7 +98,7 @@ two_columns:
     text: "Finance your future"
   heading:
     text: "$20 Millions in scholarships"
-    style: '{ "fontWeight": 400, "marginBottom": "32px" }'
+    style: '{ "fontWeight": 400, "marginBottom": "32px", "marginTop": "0px" }'
   content:
     text: |
       1.456 people have benefited from our scholarship programs, from all possible backgrounds, <a style="color: black; cursor:pointer; text-decoration: underline; opacity: 0.8;">read here</a> stories of the beneficiaries and projects.

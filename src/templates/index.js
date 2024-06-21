@@ -394,6 +394,7 @@ const Home = (props) => {
             content: yml.two_columns?.content,
             justify: yml.two_columns?.justify,
             boxes: yml.two_columns?.boxes,
+            padding_tablet: "0",
           }}
           proportions={yml.two_columns?.proportions}
           session={session}
