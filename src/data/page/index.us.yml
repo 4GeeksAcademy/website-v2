@@ -57,7 +57,7 @@ choose_program:
   paragraph: Find the path that’s right for you
 
 why_4geeks:
-  proportions: [5, 7]
+  proportions: [6, 6]
   image:
     style: '{ "backgroundSize": "contain", "background-position": "center"}'
     src: "/images/landing/hombre-con-laptop-2.png"
