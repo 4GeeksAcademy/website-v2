@@ -53,14 +53,13 @@ const ChooseYourProgram = ({
         margin_lg="0 auto"
       >
         <Div
-          margin="0 0 32px 0"
           textAlign="center"
           flexDirection="column"
           width="100%"
           zIndex="1"
         >
-          <H2>{title || info.title}</H2>
-          <SubTitle margin="10px 0px" padding_xs="0 20px">
+          <H2 padding="0 0 32px 0">{title || info.title}</H2>
+          <SubTitle padding="0 0 32px 0">
             {paragraph || info.paragraph}
           </SubTitle>
         </Div>

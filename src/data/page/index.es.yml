@@ -105,11 +105,9 @@ two_columns:
   heading:
     text: "$20 Millones en becas"
     style: '{ "fontWeight": 400, "marginBottom": "32px" }'
-    font_size: ["35px", "35px", "35px", "35px", "35px"]
   content:
     text: |
       1.456 personas se han beneficiado de nuestros programas de becas, de todos los orígenes posibles, <a style="color: black; cursor:pointer; text-decoration: underline; opacity: 0.8;">lea aquí</a> historias de los beneficiarios y proyectos.
-    font_size: ["21px"]
     path: /es/financiacion
   button:
     text: "Opciones de financiamiento"

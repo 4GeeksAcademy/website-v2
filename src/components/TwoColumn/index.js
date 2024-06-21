@@ -140,7 +140,6 @@ const Side = ({
           fontFamily="Lato"
           textAlign="left"
           margin="0"
-          letterSpacing="2px"
           fontSize={sh_xs || sh_xl}
           fontSize_xs={sh_xs}
           fontSize_sm={sh_sm}
@@ -204,7 +203,7 @@ const Side = ({
                         style={{ strokeWidth: "2px" }}
                       />
                     )}
-                    <Paragraph textAlign="left" letterSpacing="2px">
+                    <Paragraph textAlign="left">
                       {bullet.text}
                     </Paragraph>
                   </Div>
@@ -217,7 +216,6 @@ const Side = ({
 
       {content && /<\/?[a-z0-9]+>/g.test(content.text) ? (
         <Paragraph
-          letterSpacing="2px"
           textAlign="left"
           textAlign_tablet="left"
           margin="10px 0"
@@ -242,7 +240,6 @@ const Side = ({
             textAlign="left"
             textAlign_tablet="left"
             margin="10px 0"
-            letterSpacing="2px"
             fontSize={c_xs || c_xl}
             fontSize_xs={c_xs}
             fontSize_sm={c_sm}

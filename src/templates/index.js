@@ -538,12 +538,10 @@ export const query = graphql`
             }
             heading {
               text
-              font_size
               style
             }
             content {
               text
-              font_size
               path
             }
             button {
