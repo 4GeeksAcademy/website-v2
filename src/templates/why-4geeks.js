@@ -51,7 +51,11 @@ const Why4Geeks = (props) => {
           padding_tablet="70px 0 0 0"
           gridColumn_tablet="1 / 7"
         >
-          <H1 textAlign_tablet="left" margin="0 0 11px 0" color={Colors.darkGray2}>
+          <H1
+            textAlign_tablet="left"
+            margin="0 0 11px 0"
+            color={Colors.darkGray2}
+          >
             {yml.seo_title}
           </H1>
           <H2

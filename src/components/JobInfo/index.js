@@ -101,4 +101,3 @@ const JobInfo = ({ lang }) => {
 };
 
 export default JobInfo;
-

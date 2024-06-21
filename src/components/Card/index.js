@@ -135,10 +135,7 @@ export const GeekCard = ({ heading, bullets, image, to, icon }) => {
                 paddingLeft="5px"
                 alignSelf="center"
               >
-                <Paragraph
-                  align_sm="left"
-                  color={Colors.gray}
-                >
+                <Paragraph align_sm="left" color={Colors.gray}>
                   {pal}
                 </Paragraph>
               </Column>

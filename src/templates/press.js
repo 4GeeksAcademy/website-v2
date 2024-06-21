@@ -6,10 +6,7 @@ import { SessionContext } from "../session";
 // components
 import News from "../components/News";
 import TestimonialCard from "../components/TestimonialCard";
-import {
-  Colors,
-  Img,
-} from "../components/Styling";
+import { Colors, Img } from "../components/Styling";
 import { Div, Header } from "../components/Sections";
 
 const Press = (props) => {

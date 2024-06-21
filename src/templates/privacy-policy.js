@@ -17,7 +17,9 @@ const Privacy = (props) => {
       <GridContainer
         github="/components/privacy"
         columns_tablet="12"
-        margin_tablet={isCustomBarActive(session) ? "160px 0 0 0" : "120px 0 0 0"}
+        margin_tablet={
+          isCustomBarActive(session) ? "160px 0 0 0" : "120px 0 0 0"
+        }
       >
         <Div flexDirection="column" gridColumn_tablet=" 2 / 12">
           <H1

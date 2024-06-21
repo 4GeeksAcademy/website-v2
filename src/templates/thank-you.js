@@ -267,10 +267,7 @@ const ThankYou = (props) => {
 
                 {/* Comentario acerca del post */}
                 <Div>
-                  <Paragraph
-                    textAlign="left"
-                    margin="0 0 15px 0"
-                  >
+                  <Paragraph textAlign="left" margin="0 0 15px 0">
                     {item.node.frontmatter.excerpt}
                   </Paragraph>
                 </Div>

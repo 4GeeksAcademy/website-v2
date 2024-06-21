@@ -42,13 +42,7 @@ const SquaresVariant = ({
           maxWidth={maxWidth}
           childMaxWidth="1280px"
         >
-          {title && (
-            <H2
-              type="h2"
-            >
-              {title}
-            </H2>
-          )}
+          {title && <H2 type="h2">{title}</H2>}
           {paragraph && (
             <Div margin="15px 0">
               <SubTitle dangerouslySetInnerHTML={{ __html: paragraph }} />
