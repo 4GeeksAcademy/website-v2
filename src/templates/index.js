@@ -290,8 +290,9 @@ const Home = (props) => {
         </Div>
       </Div>
       <Div
-        margin="70px auto 0 auto"
-        margin_tablet="30px auto 0 auto"
+        margin="0 auto"
+        padding="80px 0 40px 0"
+        margin_tablet="0 auto"
         width="100%"
         className="badge-slider hideOverflowX__"
         background={Colors.veryLightBlue3}
@@ -300,7 +301,7 @@ const Home = (props) => {
           variant="squares"
           lang={pageContext.lang}
           short_text="15px"
-          margin="40px auto"
+          margin="0 auto"
           title={yml.badges.title}
           paragraph={yml.badges.paragraph}
           maxWidth="1280px"
