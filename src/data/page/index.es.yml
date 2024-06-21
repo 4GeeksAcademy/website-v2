@@ -33,15 +33,11 @@ why_4geeks:
   heading:
     text: "Sé parte de una comunidad vibrante"
     style: '{ "fontWeight": 400, "marginBottom": "32px" }'
-    font_size: ["35px", "35px", "35px", "35px", "35px"]
   sub_heading:
     text: "Únete a nuestra comunidad internacional de más de 4000 estudiantes, profesores, socios y exalumnos. Conéctate a través de diversos canales como Slack, GitHub, redes sociales y nuestra plataforma exclusiva 4Geeks.com. ¡Donde hay un geek, hay un camino! Lo que nos diferencia:"
-    font_size: ["21px", "21px", "21px", "21px", "21px"]
   content:
     text: |-
       Pertenecerás a una comunidad de personas afines que se apoyan genuinamente entre sí. Obtén acceso de por vida a nuestra plataforma de aprendizaje en línea y servicios de mentoría. Siempre estaremos aquí para ti, incluso después de graduarte.
-
-    font_size: ["16px"]
   button:
     text: "Aplica ahora"
     color: "white"

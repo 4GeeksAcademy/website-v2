@@ -67,7 +67,6 @@ why_4geeks:
     style: '{ "fontWeight": 400}'
   sub_heading:
     text: "Join our international community of over 4000 students, teachers, partners, and alumni. Connect through various channels like Slack, GitHub, social media, and our exclusive platform 4Geeks.com. Where there’s a geek, there’s a way! What sets us apart:"
-    font_size: ["21px", "21px", "21px", "21px", "21px"]
   content:
     text: |-
       Belong to a community of like-minded people who genuinely support each other. Gain lifetime access to our online learning platform and mentorship services. We’ll always be here for you, even after you graduate.
