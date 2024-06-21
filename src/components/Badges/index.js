@@ -45,11 +45,6 @@ const SquaresVariant = ({
           {title && (
             <H2
               type="h2"
-              lineHeight="35px"
-              lineHeight_tablet="28px"
-              // fontSize="24px"
-              // fontSize_tablet="35px"
-              fontWeight="400"
             >
               {title}
             </H2>

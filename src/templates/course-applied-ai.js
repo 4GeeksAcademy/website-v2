@@ -1,25 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { Link, graphql } from "gatsby";
 import BaseRender from "./_baseLayout";
-import { Header, Div, GridContainer } from "../components/Sections";
+import { Header, Div } from "../components/Sections";
 import { Button, Colors, Img } from "../components/Styling";
 import { requestSyllabus, isCustomBarActive } from "../actions";
 import { SessionContext } from "../session";
-import AboutTheProgram from "../components/AboutTheProgram";
 import ProgramDetails from "../components/ProgramDetails";
 import ProgramDetailsMobile from "../components/ProgramDetailsMobile";
 import PricesAndPayment from "../components/PricesAndPayment";
 import Modal from "../components/Modal";
 import LeadForm from "../components/LeadForm";
 import Badges from "../components/Badges";
-import TechsWeTeach from "../components/TechsWeTeach";
-import { Circle } from "../components/BackgroundDrawing";
 import UpcomingDates from "../components/UpcomingDates";
-import JobGuaranteeSmall from "../components/JobGuaranteeSmall";
-import GeeksInfo from "../components/GeeksInfo";
-import Testimonials from "../components/Testimonials";
 import OurPartners from "../components/OurPartners";
-import RelatedPosts from "../components/RelatedPosts";
 import Icon from "../components/Icon";
 import Overlaped from "../components/Overlaped";
 import Loc from "../components/Loc";
@@ -64,7 +57,7 @@ const ApliedAi = ({ data, pageContext, yml }) => {
   return (
     <>
       <Header
-        margin={
+        margin_md={
           isCustomBarActive(session) ? "120px auto 0 auto" : "90px auto 0 auto"
         }
         paragraphMargin="26px 20px"

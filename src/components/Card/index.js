@@ -136,10 +136,6 @@ export const GeekCard = ({ heading, bullets, image, to, icon }) => {
                 alignSelf="center"
               >
                 <Paragraph
-                  fs_sm="14px"
-                  fs_md="16px"
-                  fs_lg="16px"
-                  fontSize="16px"
                   align_sm="left"
                   color={Colors.gray}
                 >
