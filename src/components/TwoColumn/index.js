@@ -199,7 +199,7 @@ const Side = ({
                   />
                   {bullet.heading ? (
                     <H2
-                      type="h3"
+                      type="p"
                       textAlign="left"
                       fontSize="15px"
                       fontWeight="900"
