@@ -30,11 +30,12 @@ navbar:
 
 # jumbotron on the top (cannot be commented out)
 header_data:
+  background: "lightyellow"
   tagline: "¡Descarga gratis la Guía de JavaScript!"
   sub_heading: ""
-  partner_logo_url: "../../../static/images/techs/javascript-logo.png"
-  background_image: "../../../static/images/program-bg.png"
-  image_filter: brightness(0.1)
+  partner_logo_url: "../../../static/images/techs/javascript-logo-black.png"
+  tagline_color: "black"
+  color: "black"
 
 
 features:
@@ -85,7 +86,7 @@ components:
   - name: guia_de_js_intro
     position: 1
     layout: two_column_left
-    background: "lightYellow2" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
+    background: "lightBlue" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
     image:
       src: "/images/techs/laptop-javascript.webp"
       style: '{"backgroundSize": "contain", "background-position": "center", "min-height": "300px", "height": "300px"}'

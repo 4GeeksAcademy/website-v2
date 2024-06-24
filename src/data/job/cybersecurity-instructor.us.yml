@@ -1,0 +1,60 @@
+meta_info:
+  slug: "teacher-cybersecurity"
+  title: "Lead Teacher Cybersecurity"
+  visibility: "visible"
+  description: "Join 4Geeks Academy and train the next generation of cybersecurity experts."
+  template: "job"
+  open: true
+  image: "https://storage.googleapis.com/media-breathecode/59c3afdc064670e4d0062a42cd4bf954d1b9c93720500d4fdce265b4792538ab"
+  keywords: ""
+  redirects: []
+
+## BANNER INFO
+banner_heading: "Lead Teacher Cybersecurity"
+banner_sub_heading: ""
+banner_image: "/images/bg/pricing-bg.jpg"
+link_back: "/us/jobs"
+button_url: "https://marketing892162.typeform.com/to/h9j7KnXc"
+cities:
+  - Classes are Online/remote
+  - USA
+  - Spain
+  - Europe
+  - LATAM
+
+button_text: "APPLY NOW"
+
+## JOB MAIN SECTION INFO
+title: "What could be more important for a coding academy than having great teachers?"
+description: "At 4Geeks, we want to have the best minds mentoring our students. That is why we are committed to supporting our teachers in their professional life, promoting their personal branding and projects in any space that the academy has available."
+
+content:
+  - label: "Description"
+    list:
+      - "The main instructor has all the major teaching responsibilities in the classroom."
+
+  - label: "Responsibilities"
+    list:
+      - "The Lead Teacher is responsible for leading the classes within the classroom:"
+      - "Set the rhythm of the class, put the pressure and deadlines on the students, and make sure your cohort is on schedule."
+      - "Enforce the syllabus, follow it according to the platform, day by day."
+      - "Prepare your classes and make sure the projects, instructions, and exercises are properly explained and followed by the students."
+      - "Identify areas of improvement on the syllabus, tutorials, exercises, or projects."
+      - "Make sure students are not stuck for a long period of time (minutes instead of hours or days)."
+      - "Lead the teacher assistants in helping you with answering questions and reviewing the exercises."
+      - "Explain concepts and coach students according to the academy recommendations every day."
+      - "Ensure students stay engaged and understand."
+      - "Report to the Program Manager when particular students may start losing engagement."
+      - "Collect attendance and report immediately when a student has missed two classes in a row."
+      - "Answer student’s questions on Slack (when possible)."
+      - "Delegate coaching and questions to the TA in particular situations."
+      - "Give feedback about the projects being delivered."
+      - "Ensure the classes are being recorded."
+
+  - label: "Technical requirements"
+    list:
+      - "Bachelor's degree in Computer Science, Information Technology, Cybersecurity, or a related field. Master's degree preferred."
+      - "Professional certifications in cybersecurity such as eJPT, CompTIA Security+, CISSP, Certified Ethical Hacker (CEH), or equivalent are highly desirable."
+      - "Proven experience working in the cybersecurity field, with a strong understanding of industry standards, protocols, tools, and techniques."
+      - "Prior teaching or training experience, preferably in a secondary or post-secondary educational setting, is preferred."
+      - "Excellent communication and presentation skills, with the ability to convey complex technical concepts clearly and understandably."

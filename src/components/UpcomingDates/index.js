@@ -133,8 +133,7 @@ const UpcomingDates = ({
           syllabus_slug_like: defaultCourse || undefined,
         });
 
-        // const cohorts = response?.results || [];
-        const cohorts = [];
+        const cohorts = response?.results || [];
         cohorts.forEach((cohort) => {
           const syllabus =
             syllabusAlias.find(

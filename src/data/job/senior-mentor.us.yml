@@ -6,11 +6,11 @@ meta_info:
   template: "job" # js component that will be handling the rendering
   open: true #if true, this job will be accepting candidates
   image: "https://storage.googleapis.com/media-breathecode/59c3afdc064670e4d0062a42cd4bf954d1b9c93720500d4fdce265b4792538ab"
-  keywords: "coding mentor jobs, coding teacher jobs, 4geeks Academy jobs, 4Geeks Academy Jobs, 4Geeks jobs, coding instructor"
+  keywords: ""
   redirects: []
 
 ## BANNER INFO
-banner_heading: "Lead Instructor"
+banner_heading: "Lead Full-Stack Instructor"
 banner_sub_heading: ""
 banner_image: "/images/bg/pricing-bg.jpg"
 link_back: "/us/jobs"

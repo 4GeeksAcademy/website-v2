@@ -90,7 +90,7 @@ const Home = (props) => {
             <Div
               position="absolute"
               zIndex="5"
-              left_tablet="40%"
+              left_tablet="50%"
               left="50%"
               left_xxs="65%"
               left_xs="74%"

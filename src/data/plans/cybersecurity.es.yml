@@ -35,27 +35,31 @@ part_time:
   - slug: 'spain-scholarships-cs-pt'
     academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain']
     recomended: true
-    scholarship: "Becas disponibles"
-    payment_time: ""
-    price: "~200 € al mes"
+    scholarship: "Financiado. Desde 200 €* al mes"
+    payment_time: "Aplica a una beca (plazas con becas limitadas)."
+    price: "€ 5.500*"
+    original_price: "€ 7.800"
+    offer: "Oferta de Lanzamiento"
     bullets:
-      - "Financiación a tu medida, con o sin intereses, desde 4 hasta 30 meses"
-      - "Becas disponibles de hasta 2.400 €. Desde 5.400 € en vez de 7.800 €. ¡Becas sujetas a disponibilidad!"     
+      - "Cuotas mensuales a partir de 200 €*"
+      - "Financiación a tu medida, con o sin intereses, desde 4 hasta 48 meses (condiciones aplican)"
+      - "Becas disponibles de hasta 2.300 €. Paga desde 5.500 € en vez de 7.800 €. ¡Becas sujetas a disponibilidad!"     
     icons: 
       - "/images/zank.png"
       - "/images/sequra.png"
       - "/images/nemuru.png"
-      - "/images/quotanda-logo.png"
+      - "/images/bcas.png"
 
   - slug: 'spain-upfront-cs-pt'
     academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain']
     recomended: false
     scholarship: "Paga de contado"
     payment_time: "Y obtén un descuento"
-    price: "5.200 €*"
+    price: "€ 5.500*"
+    original_price: "€ 7.800"
     bullets:
       - "Paga con trasnferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
-      - "*Descuento de hasta 2.600 €. Desde 5.200 € en vez de 7.800 €. ¡Descuento sujeto a disponibilidad!"     
+      - "*Descuento de hasta 2.300 €. Paga desde 5.500 € en vez de 7.800 €. ¡Descuento sujeto a disponibilidad!"     
     icons: 
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
@@ -72,64 +76,39 @@ part_time:
   #     - "*Paga una pequeña parte de tu salario cuando encuentres trabajo. ¡SIN INTERESES!"
   #   icons: 
   #     - "/images/bcas.png" 
-  - slug: 'spain-upfront-cs-pt'
-    academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
-    recomended: true
-    scholarship: "Pago completo"
-    payment_time: "Paga hoy"
-    price: "€5.200*"
-    original_price: "€7.800"
-    offer: "33,33% DE DESCUENTO"
-    bullets:
-      - "Paga con transferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
-      - "*Descuento de hasta €2600. De €5200 en lugar de €7800. Becas sujetas a disponibilidad."     
-    icons: 
-      - "/images/visa-mastercard.png"    
-      - "/images/bitcoin_logo.png"  
-      - "/images/ethereum.png"   
 
-  - slug: 'spain-scholarships-cs-pt'
-    academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
-    recomended: false
-    scholarship: "Becas disponibles"
-    payment_time: ""
-    price: "~€200 al mes"
+  - slug: 'north-europe-scholarships-cs-pt'
+    academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany','munich-germany']
+    recomended: true
+    scholarship: "Financiado. Desde 200 €* al mes"
+    payment_time: "Aplica a una beca (plazas con becas limitadas)."
+    price: "€ 5.500*"
+    original_price: "€ 7.800"
+    offer: "Oferta de Lanzamiento"
     bullets:
-      - "Planes de financiamiento a medida, con o sin intereses, de 4 a 30 cuotas"
-      - "Becas disponibles de hasta €2400. De €5400 en lugar de €7800. Becas sujetas a disponibilidad."     
+      - "Cuotas mensuales a partir de 200 €*"
+      - "Financiación a tu medida, con o sin intereses, desde 4 hasta 48 meses (condiciones aplican)"
+      - "Becas disponibles de hasta 2.300 €. Paga desde 5.500 € en vez de 7.800 €. ¡Becas sujetas a disponibilidad!"     
     icons: 
       - "/images/zank.png"
       - "/images/sequra.png"
       - "/images/nemuru.png"
-      - "/images/quotanda-logo.png" 
+      - "/images/bcas.png"
 
   - slug: 'north-europe-upfront-cs-pt'
     academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany','munich-germany']
-    recomended: true
-    scholarship: "Paga por adelantado"
+    recomended: false
+    scholarship: "Paga de contado"
     payment_time: "Y obtén un descuento"
-    price: "€5.200*"
-    original_price: "€7.800"
-    offer: "33,33% de descuento"
+    price: "€ 5.500*"
+    original_price: "€ 7.800"
     bullets:
-      - "Paga con transferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
-      - "*Descuento de hasta €2600. Desde €5200 en lugar de €7800"     
+      - "Paga con trasnferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
+      - "*Descuento de hasta 2.300 €. Paga desde 5.500 € en vez de 7.800 €. ¡Descuento sujeto a disponibilidad!"      
     icons: 
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
       - "/images/ethereum.png"    
-
-  - slug: 'north-europe-scholarships-cs-pt'
-    academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany','munich-germany']
-    recomended: false
-    scholarship: "Becas disponibles"
-    payment_time: ""
-    price: "~€200 / mes"
-    bullets:
-      - "Planes de financiamiento a medida, con o sin interés, de 4 a 30 cuotas"
-      - "Becas disponibles de hasta €2400. Desde €5400 en lugar de €7800"     
-    icons: 
-      - "/images/quotanda-logo.png"
                        
   # - slug: 'north-europe-isa-cs-pt'
   #   academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany', 'munich-germany']
@@ -138,38 +117,43 @@ part_time:
   #   payment_time: "Paga sólo cuando trabajes"
   #   price: "0 €*"
   #   bullets: 
-  #     - "Solo tendrás que pagar cuando tus ingresos sean superiores a 22.000 € al año"
+  #     - "Solo tendrás que pagar cuando tus ingresos sean superiores a 16.000 € al año"
   #     - "*Paga una pequeña parte de tu salario cuando encuentres trabajo"
   #   icons: 
   #     - "/images/stepex.png"     
 
-  - slug: 'south-europe-upfront-cs-pt'
+  - slug: 'south-europe-scholarships-cs-pt'
     academies: ['lisbon-portugal','milan-italy','rome-italy']
     recomended: true
-    scholarship: "Pago completo"
-    payment_time: "Paga hoy"
-    price: "€5.200*"
-    original_price: "€7.800"
-    offer: "33,33% DE DESCUENTO"
+    scholarship: "Financiado. Desde 200 €* al mes"
+    payment_time: "Aplica a una beca (plazas con becas limitadas)."
+    price: "€ 5.500*"
+    original_price: "€ 7.800"
+    offer: "Oferta de Lanzamiento"
     bullets:
-      - "Paga con transferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
-      - "*Descuento de hasta €2600. De €5200 en lugar de €7800"     
+      - "Cuotas mensuales a partir de 200 €*"
+      - "Financiación a tu medida, con o sin intereses, desde 4 hasta 48 meses (condiciones aplican)"
+      - "Becas disponibles de hasta 2.300 €. Paga desde 5.500 € en vez de 7.800 €. ¡Becas sujetas a disponibilidad!"     
+    icons: 
+      - "/images/zank.png"
+      - "/images/sequra.png"
+      - "/images/nemuru.png"
+      - "/images/bcas.png"
+
+  - slug: 'south-europe-upfront-cs-pt'
+    academies: ['lisbon-portugal','milan-italy','rome-italy']
+    recomended: false
+    scholarship: "Paga de contado"
+    payment_time: "Y obtén un descuento"
+    price: "€ 5.500*"
+    original_price: "€ 7.800"
+    bullets:
+      - "Paga con trasnferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
+      - "*Descuento de hasta 2.300 €. Paga desde 5.500 € en vez de 7.800 €. ¡Descuento sujeto a disponibilidad!"      
     icons: 
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
       - "/images/ethereum.png"
-
-  - slug: 'south-europe-scholarships-cs-pt'
-    academies: ['lisbon-portugal','milan-italy','rome-italy']
-    recomended: false
-    scholarship: "Becas disponibles"
-    payment_time: ""
-    price: "~€200 al mes"
-    bullets:
-      - "Planes de financiamiento a medida, con o sin intereses, de 4 a 30 cuotas"
-      - "Becas disponibles de hasta €2400. De €5400 en lugar de €7800"     
-    icons: 
-      - "/images/quotanda-logo.png"
 
   # - slug: 'south-europe-isa-cs-pt'
   #   academies: ['lisbon-portugal','milan-italy','rome-italy']
