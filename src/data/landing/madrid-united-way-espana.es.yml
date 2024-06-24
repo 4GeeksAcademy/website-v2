@@ -99,7 +99,7 @@ components:
     swipable: False
     background: "#FFFFFF"
     image:
-      src: "/images/landing/grupo-ventanas.png"
+      src: "/images/landing/grupo-ventanas.webp"
       shadow: false
     section_heading: 
       text: "Diseñado para hacerte exitoso en el mundo de la programación"

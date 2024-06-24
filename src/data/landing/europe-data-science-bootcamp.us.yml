@@ -85,7 +85,7 @@ short_badges:
 apply_schollarship: # form that is displayed at the end of the landing
   # title: "Apoyo Profesional Ilimitado"
   imageSide: "right"
-  image: "../../../static/images/landing/grupo-ventanas.png"
+  image: "../../../static/images/landing/grupo-ventanas.webp"
 
 #
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
