@@ -49,7 +49,6 @@ full_time:
     icons:
       - "/images/ascent_logo.jpg"
       - "/images/climb-logo.png"
-      - "/images/quotanda-logo.png"
 
   - slug: 'usa-fs-ft'
     academies: ['downtown-miami']
@@ -81,9 +80,23 @@ full_time:
 
 ## España & Europe
 
-  - slug: 'spain-scholarships-fs-ft'
+  - slug: 'spain-upfront-fs-ft'
     academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
     recomended: true
+    scholarship: "Pay Upfront"
+    payment_time: "Get a better price"
+    price: "€4,750*"
+    bullets:
+      - "Pay using your bank account, credit or debit card, Paypal, Bitcoin or Etherium."
+      - "Discounts up to €2,050. Pay €4,750 instead of €6,800. Discount subject to availability."     
+    icons: 
+      - "/images/visa-mastercard.png"    
+      - "/images/bitcoin_logo.png"  
+      - "/images/ethereum.png"    
+
+  - slug: 'spain-scholarships-fs-ft'
+    academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
+    recomended: false
     scholarship: "Scholarships Available"
     payment_time: ""
     price: "From €150 /mo."
@@ -96,31 +109,17 @@ full_time:
       - "/images/sequra.png"
       - "/images/nemuru.png"
 
-  - slug: 'spain-upfront-fs-ft'
+  - slug: 'spain-isa-fs-ft'
     academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
-    recomended: false
-    scholarship: "Pay Upfront"
-    payment_time: "Get a better price"
-    price: "€4,550*"
-    bullets:
-      - "Pay using your bank account, credit or debit card, Paypal, Bitcoin or Etherium."
-      - "Discounts up to €2,150. Pay €4,550 instead of €6,700. Discount subject to availability."     
+    recomended: true
+    scholarship: "Income Share Agreement (ISA)"
+    payment_time: "Pay only after you find a job"
+    price: "0 €*"
+    bullets: 
+      - "Only pay while your job salary is above €16,000 / year."
+      - "*Pay using a small portion of your salary. NO INTEREST!"
     icons: 
-      - "/images/visa-mastercard.png"    
-      - "/images/bitcoin_logo.png"  
-      - "/images/ethereum.png"    
-
-  # - slug: 'spain-isa-fs-ft'
-  #   academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
-  #   recomended: true
-  #   scholarship: "Income Share Agreement (ISA)"
-  #   payment_time: "Pay only after you find a job"
-  #   price: "0 €*"
-  #   bullets: 
-  #     - "Only pay while your job salary is above €16,000 / year."
-  #     - "*Pay using a small portion of your salary. NO INTEREST!"
-  #   icons: 
-  #     - "/images/bcas.png"   
+      - "/images/bcas.png"   
 
 ## Chile
 
@@ -192,7 +191,6 @@ part_time:
     icons: 
       - "/images/ascent_logo.jpg"
       - "/images/climb-logo.png"
-      - "/images/quotanda-logo.png"
 
   - slug: 'usa-clark-scholarship-pt'
     academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
@@ -229,12 +227,12 @@ part_time:
     scholarship: "Pay upfront"
     payment_time: "And get a discount"
     price: "€4,750*"
-    original_price: "€6.800"
-    offer: "~30% OFF"
+    original_price: "€ 6,800"
+    offer: "~30% DISCOUNT"
     bullets:
-      - "Pay using your bank account, credit or debit card, Paypal, Bitcoin or Etherium."
-      - "Discounts up to €2,050. Pay €4,750 instead of €6,800. Discount subject to availability."     
-    icons: 
+      - "Pay by bank transfer, credit or debit card, Paypal, Bitcoin, or Ethereum"
+      - "*Discount up to €2,050. Pay €4,750 instead of €6,800. Discount subject to availability!"    
+    icons:  
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
       - "/images/ethereum.png"    
@@ -242,113 +240,122 @@ part_time:
   - slug: 'north-europe-scholarships-fs-pt'
     academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany','munich-germany']
     recomended: false
-    scholarship: "Scholarships available"
-    payment_time: ""
-    price: "From €150 /mo."
+    scholarship: "Financed. From €150* per month"
+    payment_time: "Apply for a scholarship (limited scholarship slots available)."
+    price: "€4,900*"
+    original_price: "€ 6,800"
     bullets:
-      - "Customized financing without interests. From 4 to 30 months."
-      - "Scholarships available up to €1,850. Pay €4,950 instead of €6,800. Scholarships subject to availability!"     
-    icons:
-      - "/images/quotanda-logo.png"
-
-  # - slug: 'north-europe-isa-fs-pt'
-  #   academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany', 'munich-germany']
-  #   recomended: false
-  #   scholarship: "Income Share Agreemen (ISA)"
-  #   payment_time: "Pay only when find a job"
-  #   price: "€0*"
-  #   bullets: 
-  #     - "You will only have to pay when your income is greater than €22000 per year"
-  #     - "*Pay a small part of your salary when you find a job"
-  #   icons: 
-  #     - "/images/stepex.png"
+      - "Pay in monthly installments. Starting at €150"
+      - "Customized financing, with or without interest, from 4 to 48 months (conditions apply)"
+      - "Scholarships available up to €1,900. Pay from €4,900* instead of €6,800. SCHOLARSHIPS SUBJECT TO AVAILABILITY!"         
+    icons: 
+      - "/images/bcas.png"
+                       
+  - slug: 'north-europe-isa-fs-pt'
+    academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany', 'munich-germany']
+    recomended: false
+    scholarship: "Income Share Agreement (ISA)"
+    payment_time: "Pay only when you work"
+    price: "€0*"
+    bullets: 
+      - "You only have to pay when your income exceeds €16,000 per year"
+      - "*Pay a small part of your salary when you find a job - SCHOLARSHIPS SUBJECT TO AVAILABILITY!"
+      - "To obtain the ISA you must meet some academic requirements"
+    icons: 
+      - "/images/bcas.png"
 
   - slug: 'south-europe-upfront-fs-pt'
-    academies: ['lisbon-portugal', 'milan-italy', 'rome-italy']
+    academies: ['lisbon-portugal','milan-italy','rome-italy']
     recomended: true
     scholarship: "Pay upfront"
     payment_time: "And get a discount"
     price: "€4,750*"
-    original_price: "€6,800"
-    offer: "Up to €2,050 OFF"
+    original_price: "€ 6,800"
+    offer: "~30% DISCOUNT"
     bullets:
-      - "Pay using your bank account, credit or debit card, Paypal, Bitcoin or Etherium."
-      - "Original price €6,800. Save up to €2,050 with our upfront payment discount."
-      - "Discount subject to availability. Contact us to confirm your eligibility."
-    icons:
-      - "/images/visa-mastercard.png"
-      - "/images/bitcoin_logo.png"
+      - "Pay by bank transfer, credit or debit card, Paypal, Bitcoin, or Ethereum"
+      - "*Discount up to €2,050. Pay €4,750 instead of €6,800. Discount subject to availability!" 
+    icons:   
+      - "/images/visa-mastercard.png"    
+      - "/images/bitcoin_logo.png"  
       - "/images/ethereum.png"
 
   - slug: 'south-europe-scholarships-fs-pt'
     academies: ['lisbon-portugal','milan-italy','rome-italy']
     recomended: false
-    scholarship: "Scholarships available"
-    payment_time: ""
-    price: "From €150 /mo."
+    scholarship: "Financed. From €150* per month"
+    payment_time: "Apply for a scholarship (limited scholarship slots available)."
+    price: "€4,900*"
+    original_price: "€ 6,800"
     bullets:
-      - "Customized financing without interests. From 4 to 30 months."
-      - "Scholarships available up to €1,850. Pay €4,950 instead of €6,800. Scholarships subject to availability!"     
+      - "Pay in monthly installments. Starting at €150"
+      - "Customized financing, with or without interest, from 4 to 48 months (conditions apply)"
+      - "Scholarships available up to €1,900. Pay from €4,900* instead of €6,800. SCHOLARSHIPS SUBJECT TO AVAILABILITY!"
     icons: 
-      - "/images/quotanda-logo.png"
+      - "/images/bcas.png"
 
-  # - slug: 'south-europe-isa-fs-pt'
-  #   academies: ['lisbon-portugal','milan-italy','rome-italy']
-  #   recomended: false
-  #   scholarship: "Income Share Agreemen (ISA)"
-  #   payment_time: "Pay only when find a job"
-  #   price: "€0*"
-  #   bullets: 
-  #     - "You will only have to pay when your income is greater than €16000 per year"
-  #     - "*Pay a small part of your salary when you find a job"
-  #   icons: 
-  #     - "/images/stepex.png"     
+  - slug: 'south-europe-isa-fs-pt'
+    academies: ['lisbon-portugal','milan-italy','rome-italy']
+    recomended: false
+    scholarship: "Income Share Agreement (ISA)"
+    payment_time: "Pay only when you work"
+    price: "€0*"
+    bullets: 
+      - "You only have to pay when your income exceeds €16,000 per year"
+      - "*Pay a small part of your salary when you find a job - SCHOLARSHIPS SUBJECT TO AVAILABILITY!"
+      - "To obtain the ISA you must meet some academic requirements"
+    icons: 
+      - "/images/bcas.png"
+
 
 ## Spain 
 
   - slug: 'spain-upfront-fs-pt'
-    academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
-    recomended: false
+    academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain']
+    recomended: true
     scholarship: "Pay upfront"
     payment_time: "And get a discount"
     price: "€4,750*"
     original_price: "€ 6,800"
-    offer: "~30% OFF"
+    offer: "~30% DISCOUNT"
     bullets:
-      - "Pay using your bank account, credit or debit card, Paypal, Bitcoin or Etherium."
-      - "Discounts up to €2,050. Pay €4,750 instead of €6,800. Discount subject to availability."     
+      - "Pay by bank transfer, credit or debit card, Paypal, Bitcoin, or Ethereum"
+      - "*Discount up to €2,050. Pay €4,750 instead of €6,800. Discount subject to availability!"      
     icons: 
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
-      - "/images/ethereum.png" 
+      - "/images/ethereum.png"
 
   - slug: 'spain-scholarships-fs-pt'
-    academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
-    recomended: true
-    scholarship: "Scholarships available"
-    payment_time: ""
-    price: "From €150 /mo."
+    academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain']
+    recomended: false
+    scholarship: "Financed. From €150* per month"
+    payment_time: "Apply for a scholarship (limited scholarship slots available)."
+    price: "€4,900*"
+    original_price: "€ 6,800"
     bullets:
-      - "Customized financing without interests. From 4 to 30 months."
-      - "Scholarships available up to €1,850. Pay €4,950 instead of €6,800. Scholarships subject to availability!"     
+      - "Pay in monthly installments. Starting at €150"
+      - "Customized financing, with or without interest, from 4 to 48 months (conditions apply)"
+      - "Scholarships available up to €1,900. Pay from €4,900* instead of €6,800. SCHOLARSHIPS SUBJECT TO AVAILABILITY!"        
     icons:  
       - "/images/zank.png"
       - "/images/sequra.png"
       - "/images/nemuru.png"
-      - "/images/quotanda-logo.png"
+      - "/images/bcas.png"
 
-  # - slug: 'spain-isa-fs-pt'
-  #   academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
-  #   recomended: false
-  #   scholarship: "Income Share Agreemen (ISA)"
-  #   payment_time: "Pay only when you work"
-  #   price: "€0*"
-  #   bullets: 
-  #     - "You will only have to pay when your income is greater than €16,000 per year"
-  #     - "*Pay a small part of your salary when you find a job. NO INTEREST!"
-  #   icons: 
-  #     - "/images/bcas.png" 
- 
+  - slug: 'spain-isa-fs-pt'
+    academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain']
+    recomended: false
+    scholarship: "Income Share Agreement (ISA)"
+    payment_time: "Pay only when you work"
+    price: "€0*"
+    bullets: 
+      - "You only have to pay when your income exceeds €16,000 per year"
+      - "*Pay a small part of your salary when you find a job - SCHOLARSHIPS SUBJECT TO AVAILABILITY!"
+      - "To obtain the ISA you must meet some academic requirements"
+    icons: 
+      - "/images/bcas.png"
+
 ## Chile part-time
 
   - slug: 'chile-geekforce-fs-pt'

@@ -1,7 +1,7 @@
 meta_info:
   slug: "redactor-no-tecnico"
   title: "Redactor No-Técnico"
-  visibility: "visible"
+  visibility: "hidden"
   description: "Trabaja como escritor no-técnico en 4Geeks. Ayúdanos a crear contenido claro y atractivo acerca de la industria de ed-tech y de 4GeeksAcademy"
   template: "job" # js component that will be handling the rendering
   open: false #if true, this job will be accepting candidates

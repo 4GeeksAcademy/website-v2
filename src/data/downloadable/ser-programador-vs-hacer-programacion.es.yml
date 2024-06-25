@@ -1,41 +1,33 @@
 meta_info:
-  slug: carrera-en-programacion-santiago # <--- URL 4geeksacademy.com/us/landing/example
-
+  slug: ser-programador-vs-hacer-programacion # <--- URL 4geeksacademy.com/us/landing/example
   # This will show on social media when shared
   title: "Descubre las claves que te transformarán en un programador 3.0"
   description: "Descubre las claves fundamentales para construir una carrera sólida en programación"
-  image: ""
-  keywords: "Clase de programación, carrera enprogramación, Coding Bootcamp, 4Geeks Academy"
-  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  image: "/images/bg/follow-that-dream-digital-nomad.webp"
+  keywords: ""
   template: "landing_a" # <--- choose your landing template
-  # <--- URL redirections to avoid 404 errors
-  redirects: []
-
-  # Set a particular course or location to the landing page
-  # this UTM fields will be also included in the CRM contact
-  utm_course: ["full-stack"]
+  redirects: [] # <--- URL redirections to avoid 404 errors
   utm_location: ["santiago-chile"]
-  automation: soft # comma separated, "soft" is the default value
-  tag: request_more_info # comma separated, "request_more_info" is the default value
-
-navbar:
-  buttonText: "Acceder al video"
-  buttonUrl: "#leadform_header" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
-  logoUrl: ""
+  visibility: "unlisted" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  automation: downloadable-programador # optional, lead as "null" if you don't know, it can be more than one (comma separated)
+  tag: request_more_info # mandatory: at lease one tag (comma separated)
+  current_download: "programador-programacion" 
 
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
-  heading: "Formulario para dejar los datos y acceder al vídeo "
+  heading: "Deja tus datos y accede al vídeo" 
   motivation: "Completa el formulario y en minutos te enviaremos la información a tu correo electrónico."
   button_label: Acceder al video
-  redirect: "/es/gracias"  #you can redirect to another url or entirely diffrent website
+  redirect: "https://ask2.4geeks.com/fgh2m23c7" #you can redirect to another url or entirely diffrent website
+# jumbotron on the top (cannot be commented out)
 
-apply_schollarship: # form that is displayed at the end of the landing
-  # title: "Get more info about this award-winning development course"
-  imageSide: "right"
-  image: "../../../static/images/landing/apply.png"
+navbar:
+  logoUrl: "#" # relative(/apply), absolute(https://google.com) or id(#componentName)
+  buttonText: "ACCEDER AL VIDEO"
+  buttonUrl: "#leadform_bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+
 
 # jumbotron on the top (cannot be commented out)
 header_data:
@@ -46,20 +38,19 @@ header_data:
   image_filter: brightness(0.3)
 
 features:
-  marginTop: 0px #<-- separation between tagline and the bullets
-
+  marginTop: 20px #<-- separation between tagline and the bullets
   #                                         up   left down  right
-  styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
+  styles: '{ "fontSize": "15px", "margin": "10px 0px 10px 0px" }'
+  text: ""
   bullets:
-    - Desafiarás y desmitificarás creencias arraigadas en el mundo de la programación.
-    - Obtendrás consejos prácticos para construir una carrera sólida en programación.
-    - Entenderás como es la mentalidad de un programador 3.0
-    # - Aprende las tecnologías más demandadas por la industria, como Python, React, Javascript y Node.js.
+  - Desafiarás y desmitificarás creencias arraigadas en el mundo de la programación.
+  - Obtendrás consejos prácticos para construir una carrera sólida en programación.
+  - Entenderás como es la mentalidad de un programador 3.0
 
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "Rellena el formulario \n y accede al video"
+    text: "Completa el formulario \n y accede al video"
     text_mobile: "Rellena el formulario \n y accede al video"
     # devices:    XL      LG      MD      SM       XS
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
@@ -70,53 +61,9 @@ follow_bar:
     number: ""
     text: ""
 
-short_badges:
-  - name: "Premios Tecnologia Siglo XXI"
-    url: ""
-    image: "../../../static/images/awards/premios_tecnologia_sigloxxi.png"
-    alt: "Mejor centro de Coding Bootcamp"
-  - name: "Course Report"
-    url: ""
-    image: "../../../static/images/badges/Course-Report-Badge-2023.png"
-    alt: "Top Coding Bootcamps Course Report"
-  - name: "Switchup"
-    url: ""
-    image: "../../../static/images/badges/switchup-badge-2023.png"
-    alt: "Best coding bootcamp Switchup 2023"   
-  - name: "Florida Department of Education"
-    url: ""
-    image: "../../../static/images/badges/licensed.png"
-    alt: "Florida Department of Education"
-
 #
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
 #
-
-rating_reviews:
-  # position: 6
-  # heading: "Lee acerca de nosotros"
-  # rating_list:
-  #   - alt: "Career Karma"
-  #     image: "../../../static/images/badges/career-karma.png"
-  #     rating: 4.8
-  #     url: "https://careerkarma.com/schools/4geeks-academy/"
-  #   - alt: "Switchup"
-  #     image: "../../../static/images/badges/switchup-img.png"
-  #     rating: 4.89
-  #     url: "https://www.switchup.org/bootcamps/4geeks-academy"
-  #   - alt: "Course Report"
-  #     image: "../../../static/images/badges/course-report.png"
-  #     rating: 4.84
-  #     url: "https://www.coursereport.com/schools/4geeks-academy"
-  #   - alt: "Google"
-  #     image: "../../../static/images/badges/google.png"
-  #     rating: 4.9
-  #     url: ""
-
-# program_details:
-#   position: 4
-#   heading: "DETALLES DEL PROGRAMA"
-#   sub_heading: "Únete a la comunidad global de desarrolladores que han transformado sus carreras con 4Geeks Academy"
 
 why_4geeks:
   position: 7
@@ -160,7 +107,6 @@ components:
       text: ""
       font_size: ["16px"]
       path: ""
-    bullets:
       items:
       # - heading: "No se requiere experiencia previa"
       #   icon: "check" 
@@ -194,7 +140,6 @@ components:
     content:
       text: ""
       font_size: ["18px"]
-    bullets:
       items:
       - heading: "Más de 8 años de experiencia"
         text: ""
