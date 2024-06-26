@@ -229,11 +229,11 @@ faq:
 
 ## TWO COLUMNS
 two_columns:
-  proportions: [6, 6]
+  proportions: [4, 8]
   image:
-    style: '{"backgroundSize": "cover", "background-position": "center", "min-height": "300px", "height": "300px"}'
-    src: "../../images/landing/two-womans-and-laptop.webp"
-    shadow: true
+    style: '{"backgroundSize": "contain", "background-position": "center"}'
+    src: "../../images/landing/applied-ai-icons.webp"
+    shadow: false
   heading:
     text: "Expand your capabilities and boost your efficiency!"
     font_size: ["30px", "30px", "30px", "26px", "24px"]

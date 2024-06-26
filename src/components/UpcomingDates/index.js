@@ -100,7 +100,6 @@ const UpcomingDates = ({
   });
   const [formData, setVal] = useState({
     email: { value: "", valid: false },
-    token: { value: null, valid: false },
     consent: { value: true, valid: true },
   });
 
@@ -534,7 +533,7 @@ const UpcomingDates = ({
                       </H4>
                       <Div justifyContent="center" width="100%">
                         <Form
-                          onSubmit={(e) => {
+                          onSubmit={async (e) => {
                             e.preventDefault();
                             if (formStatus.status === "error") {
                               setFormStatus({
@@ -552,7 +551,15 @@ const UpcomingDates = ({
                                 status: "loading",
                                 msg: "Loading...",
                               });
-                              newsletterSignup(formData, session)
+                              const token =
+                                await captcha.current.executeAsync();
+                              newsletterSignup(
+                                {
+                                  ...formData,
+                                  token: { value: token, valid: true },
+                                },
+                                session
+                              )
                                 .then((data) => {
                                   if (
                                     data.error !== false &&
@@ -604,7 +611,7 @@ const UpcomingDates = ({
                             <ReCAPTCHA
                               ref={captcha}
                               sitekey={process.env.GATSBY_CAPTCHA_KEY}
-                              onChange={captchaChange}
+                              size="invisible"
                             />
                           </Div>
                           <Button
@@ -619,17 +626,13 @@ const UpcomingDates = ({
                             fontSize="14px"
                             variant="full"
                             color={
-                              formStatus.status === "loading" ||
-                              !formData.token.valid
+                              formStatus.status === "loading"
                                 ? Colors.darkGray
                                 : Colors.blue
                             }
                             textColor={Colors.white}
                             disabled={
-                              formStatus.status === "loading" ||
-                              !formData.token.valid
-                                ? true
-                                : false
+                              formStatus.status === "loading" ? true : false
                             }
                           >
                             {formStatus.status === "loading"

@@ -240,6 +240,21 @@ const ApliedAi = ({ data, pageContext, yml }) => {
         locations={data.allLocationYaml.edges}
         showMoreRedirect
       />
+      
+      {/* TWO COLUMN video CREAR EN EL YML*/}
+      <TwoColumn
+        left={{ image: yml.two_columns_video?.image, video: yml.two_columns_video?.video }}
+        right={{
+          heading: yml.two_columns_video?.heading,
+          sub_heading: yml.two_columns_video?.sub_heading,
+          bullets: yml.two_columns_video?.bullets,
+          content: yml.two_columns_video?.content,
+          button: yml.two_columns_video?.button,
+        }}
+        proportions={yml.two_columns_video?.proportions}
+        session={session}
+      />
+
       <PricesAndPayment
         background={`linear-gradient(to bottom, ${Colors.white} 50%, ${Colors.lightYellow2} 50%)`}
         type={pageContext.slug}
@@ -452,6 +467,34 @@ export const query = graphql`
             }
           }
           two_columns {
+            proportions
+            image {
+              style
+              src
+              shadow
+            }
+            video
+            heading {
+              text
+              font_size
+            }
+            sub_heading {
+              text
+              font_size
+            }
+            button {
+              text
+              color
+              background
+              path
+            }
+            bullets {
+              items {
+                text
+              }
+            }
+          }
+          two_columns_video {
             proportions
             image {
               style
