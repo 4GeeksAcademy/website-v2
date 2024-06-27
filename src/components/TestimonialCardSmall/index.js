@@ -115,10 +115,7 @@ const TestimonialCardSmall = ({
         <Paragraph
           textAlign="left"
           margin="12px 0 0 0"
-          fontSize="13px"
-          lineHeight="22px"
           letterSpacing="0.05em"
-          fontWeight="300"
           dangerouslySetInnerHTML={{
             __html:
               description.length > 150 && !isExpanded

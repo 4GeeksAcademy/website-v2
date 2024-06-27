@@ -1,5 +1,5 @@
 import React from "react";
-import { H2, Paragraph, H3 } from "../Heading";
+import { H2, H3, Paragraph, SubTitle } from "../Heading";
 import Icon from "../Icon";
 import { Div } from "../Sections";
 import { Colors } from "../Styling";
@@ -25,23 +25,13 @@ const WeTrust = ({ we_trust, background, titleProps, paragraphProps }) => {
         display="block"
         maxWidth="1280px"
       >
-        <Div display="block">
-          <H2
-            textAlign="left"
-            margin="0 0 22px 0"
-            fontSize_tablet="32px"
-            fontSize="21px"
-            lineHeight=""
-            {...titleProps}
-          >
+        <Div display="block" padding="0 0 32px 0">
+          <H2 textAlign="left" {...titleProps}>
             {we_trust.title}
           </H2>
-          <Paragraph
+          <SubTitle
             textAlign="left"
-            color={Colors.darkGray}
-            opacity="1"
-            fontSize_tablet="18px"
-            fontSize="16px"
+            margin="22px 0 0 0"
             dangerouslySetInnerHTML={{ __html: we_trust.text }}
             {...paragraphProps}
           />

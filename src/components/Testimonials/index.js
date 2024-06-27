@@ -20,9 +20,7 @@ const VariantCarousel = ({
       heading={props.heading || testimonialsArray.heading}
       content={props.content}
       background={props.background}
-      padding="20px 0 40px 0"
-      headingProps={{ fontWeight: "400", fontSize: "35px" }}
-      contentProps={{ color: "#000", opacity: "1", fontSize: "21px" }}
+      padding="40px 0"
       settings={{
         slidesToShow: 4,
         slidesToScroll: 4,
@@ -78,7 +76,7 @@ const VariantCarousel = ({
               width_tablet="300px"
               height="230px"
               padding="20px 24px 30px 20px"
-              border="1px solid #C4C4C4"
+              border={!props.background && "1px solid #C4C4C4"}
               borderRadius="4px"
               flexDirection="column"
               justifyContent="between"
@@ -126,7 +124,7 @@ const VariantCarousel = ({
                 gap="10px"
                 style={{ position: "relative" }}
               >
-                <H3 fontSize="15px" lineHeight="19px">
+                <H3 fontSize="16px" lineHeight="19px">
                   {item.student_name}
                 </H3>
                 <H4 fontSize="14px" lineHeight="22px">

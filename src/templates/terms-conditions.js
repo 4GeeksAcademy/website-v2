@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { graphql } from "gatsby";
 import BaseRender from "./_baseLayout";
 import { isCustomBarActive } from "../actions";
 import { SessionContext } from "../session";
+import { Colors } from "../components/Styling";
 
 // components
 import { Div, GridContainer } from "../components/Sections";
@@ -24,7 +25,7 @@ const Terms = (props) => {
           lineHeight="16px"
           fontWeight="700"
           letterSpacing="0.05em"
-          color="#606060"
+          color={Colors.darkGray2}
         >
           4GEEKS ACADEMY
         </H1>

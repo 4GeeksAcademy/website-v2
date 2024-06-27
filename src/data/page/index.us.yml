@@ -57,7 +57,7 @@ choose_program:
   paragraph: Find the path that’s right for you
 
 why_4geeks:
-  proportions: [5, 7]
+  proportions: [6, 6]
   image:
     style: '{ "backgroundSize": "contain", "background-position": "center"}'
     src: "/images/landing/hombre-con-laptop-2.png"
@@ -65,14 +65,11 @@ why_4geeks:
   heading:
     text: "Be part of a vibrant community"
     style: '{ "fontWeight": 400}'
-    font_size: ["35px", "35px", "30px", "24px", "24px"]
   sub_heading:
     text: "Join our international community of over 4000 students, teachers, partners, and alumni. Connect through various channels like Slack, GitHub, social media, and our exclusive platform 4Geeks.com. Where there’s a geek, there’s a way! What sets us apart:"
-    font_size: ["22px", "22px", "21px", "17px", "17px"]
   content:
     text: |-
       Belong to a community of like-minded people who genuinely support each other. Gain lifetime access to our online learning platform and mentorship services. We’ll always be here for you, even after you graduate.
-    font_size: ["17px", "17px", "16px", "14px", "14px"]
   button:
     text: "Apply now"
     color: "white"
@@ -80,13 +77,13 @@ why_4geeks:
     path: "/us/apply"
   bullets:
     items:
-    - heading: "Lifelong and readily available coding mentorship"
+    - text: "Lifelong and readily available coding mentorship"
       icon: "check"
-    - heading: "Unlimited and personalized career support"
+    - text: "Unlimited and personalized career support"
       icon: "check"
-    - heading: "Award-winning syllabus and methodology"
+    - text: "Award-winning syllabus and methodology"
       icon: "check"
-    - heading: "An extensive network of partners in tech"
+    - text: "An extensive network of partners in tech"
       icon: "check"
 
 ## TWO COLUMNS
@@ -101,12 +98,10 @@ two_columns:
     text: "Finance your future"
   heading:
     text: "$20 Millions in scholarships"
-    style: '{ "fontWeight": 400, "marginBottom": "32px" }'
-    font_size: ["35px", "35px", "35px", "35px", "35px"]
+    style: '{ "fontWeight": 400, "marginBottom": "32px", "marginTop": "0px" }'
   content:
     text: |
       1.456 people have benefited from our scholarship programs, from all possible backgrounds, <a style="color: black; cursor:pointer; text-decoration: underline; opacity: 0.8;">read here</a> stories of the beneficiaries and projects.
-    font_size: ["21px"]
     path: "/us/20-million"
   button:
     text: "See all financing options"
@@ -129,15 +124,9 @@ geeks_vs_others:
 iconogram:
   heading:
     text: "How have we built our credibility over the years?"
-    font_size:
-      - 35px
-      - 35px
-      - 35px
-      - 35px
-      - 35px
-    style: '{ "textAlign": "center", "fontSize": "40px", "fontWeight": 400 }'
+    style: '{ "textAlign": "center" }'
   swipable: false
-  background: veryLightBlue2
+  background: veryLightBlue3
   icons:
     - icon: "graduation-2"
       content: "4500+ Graduates"
