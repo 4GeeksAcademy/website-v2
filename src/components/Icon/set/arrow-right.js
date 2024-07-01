@@ -1,20 +1,16 @@
 import React from "react";
 export default (props) => (
   <svg
+    width={props.width || "19"}
+    height={props.height || "35"}
     style={props.style}
-    width={props.width}
-    height={props.height}
-    viewBox="0 0 7 12"
+    viewBox="0 0 19 35"
     fill="none"
-    xmlns="https://www.w3.org/2000/svg"
+    xmlns="http://www.w3.org/2000/svg"
   >
     <path
-      d="M1 1L6 6L1 11"
-      stroke={props.color}
-      strokeWidth="2"
-      strokeMiterlimit="10"
-      strokeLinecap="round"
-      strokeLinejoin="round"
+      d="M18.6616 16.4775L2.19473 0.771515C1.71736 0.318342 0.917 0.291896 0.404007 0.712614C-0.107799 1.13453 -0.137486 1.84374 0.338695 2.29812L16.0052 17.242L0.338695 32.1859C-0.136298 32.6403 -0.106612 33.3507 0.405194 33.7714C0.648628 33.9709 0.958562 34.0707 1.26612 34.0707C1.60574 34.0707 1.94417 33.9505 2.19473 33.7125L18.6616 18.0065C19.1128 17.575 19.1128 16.909 18.6616 16.4775Z"
+      fill={props.color || "black"}
     />
   </svg>
 );

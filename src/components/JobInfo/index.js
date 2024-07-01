@@ -63,18 +63,16 @@ const JobInfo = ({ lang }) => {
                     _
                   </Span>
                 </H3>
-                <Div display="flex" flexWrap={"wrap"}>
+                <Div display="flex" flexWrap="wrap">
                   {item.node.cities.map((city, index) => {
                     return (
                       <Paragraph
                         key={index}
                         width="auto"
-                        padding={"3px"}
-                        margin={"3px"}
+                        padding="3px"
+                        margin="3px"
                         background={Colors.verylightGray}
                         textAlign="left"
-                        fontSize="15px"
-                        lineHeight="22px"
                         color={Colors.darkGray}
                       >
                         {city}
@@ -103,52 +101,3 @@ const JobInfo = ({ lang }) => {
 };
 
 export default JobInfo;
-
-// <Row display="flex" key={index}>
-//   <Column>
-//     <Card
-//       style={{position: "relative"}}
-//       height="100px"
-//       width="100%"
-//       shadow
-//       padding="20px"
-//       margin="5px 0 10px 0"
-//     >
-//       <Row display="flex">
-//         <Column size="12">
-//           <H4
-//             fs_xs="18px"
-//             fs_sm="20px"
-//             fs_md="20px"
-//             fs_lg="20px"
-//             fontSize="24px"
-//             color={Colors.black}>{item.node.banner_heading}</H4>
-//         </Column>
-//       </Row>
-//       <Row display="flex" justifyContent={`center`} margin={`10px 0 0 0`}>
-// {
-//   item.node.cities.map((city, index) => {
-//     return (
-//       <Card
-//         key={index}
-//         padding="3px 10px"
-//         borders=".25rem"
-//         width="100%"
-//         color={`grey`}
-//         margin={`3px`}
-//       ><Paragraph
-//         color={Colors.gray}
-//         align="center"
-//         fs_sm="12px"
-//       >{city}</Paragraph>
-//       </Card>
-//     )
-//   })
-// }
-//       </Row>
-//       <Link to={`/job/${item.node.meta_info.slug}`}>
-//         <Icon icon="arrowright" style={{position: "absolute", right: "10px", bottom: "5px"}} width="32" color={Colors.blue} fill={Colors.blue} />
-//       </Link>
-//     </Card>
-//   </Column>
-// </Row>

@@ -113,7 +113,7 @@ const CodingBootcamp = ({ data, pageContext, yml }) => {
             height={`350px`}
             borderRadius={`3px`}
             image={yml.header.image}
-            bgSize={`contain`}
+            bgSize="contain"
             alt={yml.header.image_alt}
           />
         </Div>
@@ -182,7 +182,7 @@ const CodingBootcamp = ({ data, pageContext, yml }) => {
             height={`350px`}
             borderRadius={`3px`}
             image={yml.what_will_you_learn.image}
-            bgSize={`contain`}
+            bgSize="contain"
             alt={yml.what_will_you_learn.image_alt}
           />
         </Div>
@@ -321,7 +321,7 @@ const CodingBootcamp = ({ data, pageContext, yml }) => {
             height={`800px`}
             borderRadius={`3px`}
             image={yml.content_with_subtitle_and_image.image}
-            bgSize={`contain`}
+            bgSize="contain"
             alt={yml.content_with_subtitle_and_image.image_alt}
           />
         </Div>
@@ -426,8 +426,8 @@ const CodingBootcamp = ({ data, pageContext, yml }) => {
                       type="h4"
                       textAlign="left"
                       fontSize="14px"
-                      align={`left`}
-                      align_sm={`left`}
+                      align="left"
+                      align_sm="left"
                       color={Colors.black}
                       paddingRight="5%"
                       textTransform="uppercase"
@@ -528,8 +528,8 @@ const CodingBootcamp = ({ data, pageContext, yml }) => {
                       type="h4"
                       textAlign="left"
                       fontSize="14px"
-                      align={`left`}
-                      align_sm={`left`}
+                      align="left"
+                      align_sm="left"
                       color={Colors.black}
                       textTransform="uppercase"
                       fontWeight="700"

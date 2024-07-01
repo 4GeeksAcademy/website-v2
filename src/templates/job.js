@@ -97,7 +97,6 @@ const Job = ({ data, pageContext, yml }) => {
           margin="10px 0"
           color={Colors.darkGray}
           align="left"
-          fontSize="14px"
         >
           {yml.description}
         </Paragraph>

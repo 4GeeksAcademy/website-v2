@@ -2,7 +2,7 @@ import React from "react";
 import styled, { css } from "styled-components";
 import PropTypes from "prop-types";
 import { Colors, StyledBackgroundSection } from "../Styling";
-import { H1, H2, Paragraph } from "../Heading";
+import { H1, H2, Paragraph, SubTitle } from "../Heading";
 import { Break } from "../Responsive";
 import { Devices } from "../Responsive";
 import Fragment from "../Fragment";
@@ -358,6 +358,7 @@ export const Div = styled.div`
   margin: ${(props) => props.margin};
   border: ${(props) => props.border};
   border-radius: ${(props) => props.borderRadius};
+  color: ${(props) => props.color};
   background-color: ${(props) => props.backgroundColor};
   background: ${(props) =>
     props.isActive ? props.backgroundActive : props.background};
@@ -401,6 +402,7 @@ export const Div = styled.div`
   &:hover {
     background: ${(props) => props.backgroundHover};
     border-bottom: ${(props) => props.borderBottomHover};
+    color: ${(props) => props.colorHover};
   }
   @media ${Devices.xxs} {
     column-count: ${(props) => props.columnCount_xxs};
@@ -475,7 +477,7 @@ export const Div = styled.div`
         : null};
     align-self: ${(props) => props.alignSelf_tablet};
     order: ${(props) => props.order_tablet};
-    gap: ${(props) => (props) => props.gap_tablet};
+    gap: ${(props) => props.gap_tablet};
     column-count: ${(props) => props.columnCount_tablet};
     place-self: ${(props) => props.placeSelf_tablet};
     background: ${(props) => props.background_tablet};
@@ -536,7 +538,7 @@ export const Div = styled.div`
     grid-area: ${(props) => props.gridArea_md};
     display: ${(props) => props.display_md};
     flex-direction: ${(props) => props.flexDirection_md};
-    gap: ${(props) => (props) => props.gap_md};
+    gap: ${(props) => props.gap_md};
     flex-wrap: ${(props) => props.flexWrap_md};
     justify-content: ${(props) =>
       justifyContentOptions[props.justifyContent_md]};
@@ -787,7 +789,7 @@ export const Header = ({
       height={height}
       height_tablet={height_tablet}
       position={position}
-      margin={margin || "70px 0 0 0"}
+      margin={margin}
       margin_tablet={margin_tablet}
       margin_md={margin_md}
       margin_xxs={margin_xxs}
@@ -811,17 +813,17 @@ export const Header = ({
           gridColumn_tablet={svg_image ? null : "1 / 13"}
           gridArea_tablet={svg_image ? "1/1/1/7" : null}
         >
-          <H2
+          <H1
             type="h1"
             textAlign_tablet={textAlign_tablet}
             margin="0 0 11px 0"
             padding={paddingTitle || "0 20px"}
-            color="#606060"
-            fontSize={fontSize_seo || "12px"}
+            color={Colors.darkGray2}
+            fontSize={fontSize_seo}
           >
             {seo_title}
-          </H2>
-          <H1
+          </H1>
+          <H2
             type="h2"
             textAlign_tablet={textAlign_tablet}
             padding="0 20px"
@@ -833,10 +835,11 @@ export const Header = ({
             fontFamily={fontFamily_title}
             textTransform={uppercase && "uppercase"}
             zindex={zIndex}
+            color={Colors.black}
           >
             {multilineTitle}
-          </H1>
-          <Paragraph
+          </H2>
+          <SubTitle
             width="auto"
             letterSpacing="0.05em"
             padding={paddingParagraph || "20px"}
@@ -851,7 +854,7 @@ export const Header = ({
             color={Colors.black}
           >
             {paragraph}
-          </Paragraph>
+          </SubTitle>
           {children}
         </Div>
         {svg_image ? (

@@ -58,16 +58,9 @@ syllabus_button_text: Buscar
 iconogram:
   heading:
     text: "Cómo tu matrícula ya no es un problema."
-    font_size:
-      - 38px
-      - 38px
-      - 38px
-      - 21px
-      - 21px
     style: '{ "textAlign": "center", "width": "60%" }'
   sub_heading:
     text: ""
-    font_size: ["16px", "16px", "16px", "16px", "16px"]
     style: '{ "textAlign": "center", "width": "60%" }'
   text_link: "#"
   swipable: false

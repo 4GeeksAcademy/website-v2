@@ -118,7 +118,6 @@ const ChooseProgram = (props) => {
                   <Button
                     width={props.width}
                     key={index}
-                    font='"Lato", sans-serif'
                     colorHover={Colors.lightBlue}
                     onClick={() => {
                       if (item.location_bc_slug && item.location_bc_slug != "")
@@ -126,7 +125,7 @@ const ChooseProgram = (props) => {
                       navigate(item.link);
                     }}
                     textColor={Colors.gray}
-                    fontSize={"16px"}
+                    fontSize="16px"
                     padding="10px"
                   >
                     {item.text}

@@ -106,7 +106,7 @@ const ThankYou = (props) => {
           lineHeight="16px"
           fontWeight="700"
           letterSpacing="0.05em"
-          color="#606060"
+          color={Colors.darkGray2}
         >
           Coding Bootcamp
         </H1>
@@ -121,7 +121,7 @@ const ThankYou = (props) => {
           {`< ${yml.banner.tagline} >`}
         </H2>
 
-        <H3 type="h3" fontSize="22px" lineHeight="26px" margin="5px 0">
+        <H3 type="h3" margin="5px 0">
           {yml.content.title}
         </H3>
         {yml.content.message.split("\n").map((m, i) => (
@@ -267,13 +267,7 @@ const ThankYou = (props) => {
 
                 {/* Comentario acerca del post */}
                 <Div>
-                  <Paragraph
-                    fontWeight="300"
-                    fontSize="15px"
-                    color="#3A3A3A"
-                    textAlign="left"
-                    margin="0 0 15px 0"
-                  >
+                  <Paragraph textAlign="left" margin="0 0 15px 0">
                     {item.node.frontmatter.excerpt}
                   </Paragraph>
                 </Div>
@@ -289,7 +283,7 @@ const ThankYou = (props) => {
                     <Link
                       to={`/${pageContext.lang}/${item.node.frontmatter.cluster}/${item.node.frontmatter.slug}`}
                     >
-                      {`Read more >`}
+                      {"Read more >"}
                     </Link>
                   </Paragraph>
                 </Div>
