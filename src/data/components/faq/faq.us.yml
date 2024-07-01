@@ -21,6 +21,7 @@ faq:
         priority: 1
         answer: |-
           Absolutely! 4Geeks Academy is a licensed institution by the Commission for Independent Education of the Florida Department of Education. This ensures that our programs meet rigorous educational standards and provide you with a valuable credential upon completion.
+
       - question: "Who is that face in the logo?"
         templates: ["faq"]
         priority: 0
@@ -54,31 +55,120 @@ faq:
           The classes and exercises for all programs are accessed through the cloud.
       
       ## how do I pay for my tuition?
+      ### FAQ page 
+      - question: "How do I pay for my tuition?" 
+        templates: ["faq"]
+        priority: 0
+        answer: |-
+          We offer various payment options to accommodate your needs. These include loans with payments as low as $150 per month, extended payment plans, and discounts for upfront payments. Additionally, we provide scholarships based on your background. For more information, please reach out to our admissions team or visit our <a class="faq-link" href="/us/financials">financials page</a>.<br>
+          Ready to apply? Start your application process <a class="faq-link" href="/us/apply">here</a>.
+
+      ### USA 
       - question: "How do I pay for my tuition in USA?" #USA
         locations: ["atlanta-usa", "austin-usa", "chicago-usa", "downtown-miami", "houston-usa", "losangeles-usa", "newyork-usa", "orlando", "online", "online-spanish-usa"]
-        templates: ["faq"]
         priority: 1
         answer: |-
           In the United States of America, we offer various payment options to accommodate your needs. These include loans with payments as low as $150 per month, extended payment plans, and discounts for upfront payments. Additionally, we provide scholarships based on your background. For more information, please reach out to our admissions team or visit our <a class="faq-link" href="/us/financials">financials page</a>.<br>
           Ready to apply? Start your application process <a class="faq-link" href="/us/apply">here</a>.
 
-      - question: "How do I pay for my tuition in Spain and Europe?" # Europe
-        locations: ["barcelona-spain", "berlin-germany", "dublin-ireland", "europe", "hamburg-germany", "lisbon-portugal", "madrid-spain", "malaga-spain", "milan-italy", "munich-germany", "rome-italy", "valencia-spain"]
+      ### EUROPE
+      - question: "How do I pay for my tuition in Spain?" # Spain
+        locations: ["barcelona-spain", "madrid-spain", "malaga-spain", "valencia-spain", "europe"]
         priority: 1
         answer: |-
-          We provide multiple payment options tailored to your needs. You can choose to make a single upfront payment or finance your tuition over up to 24 months. To determine the best option for you, schedule a call with our admissions team or visit our <a class="faq-link" href="/us/financials">financials page</a>.
+          In Spain, we provide multiple payment options tailored to your needs. You can choose to make a single upfront payment or finance your tuition over up to 48 months. To determine the best option for you, schedule a call with our admissions team or visit our <a class="faq-link" href="/us/financials">financials page</a>.
 
+      - question: "How do I pay for my tuition in Germany?" # Germany
+        locations: ["berlin-germany", "hamburg-germany", "munich-germany"]
+        priority: 1
+        answer: |-
+          In Germany, we provide multiple payment options tailored to your needs. You can choose to make a single upfront payment or finance your tuition over up to 24 months. To determine the best option for you, schedule a call with our admissions team or visit our <a class="faq-link" href="/us/financials">financials page</a>.
+
+      - question: "How do I pay for my tuition in Italy?" # Italy
+        locations: ["milan-italy", "rome-italy"]
+        priority: 1
+        answer: |-
+          In Italy we provide multiple payment options tailored to your needs. You can choose to make a single upfront payment or finance your tuition over up to 24 months. To determine the best option for you, schedule a call with our admissions team or visit our <a class="faq-link" href="/us/financials">financials page</a>.
+
+      - question: "How do I pay for my tuition in Portugal?" # Portugal
+        locations: ["lisbon-portugal"]
+        priority: 1
+        answer: |-
+          In Portugal, we provide multiple payment options tailored to your needs. You can choose to make a single upfront payment or finance your tuition over up to 24 months. To determine the best option for you, schedule a call with our admissions team or visit our <a class="faq-link" href="/us/financials">financials page</a>.
+
+      - question: "How do I pay for my tuition in Ireland?" # Ireland
+        locations: ["dublin-ireland"]
+        priority: 1
+        answer: |-
+          In Ireland, we provide multiple payment options tailored to your needs. You can choose to make a single upfront payment or finance your tuition over up to 24 months. To determine the best option for you, schedule a call with our admissions team or visit our <a class="faq-link" href="/us/financials">financials page</a>.
+
+      ### CHILE
       - question: "How do I pay for my tuition in Chile?" # Chile
         locations: ["santiago-chile"]
         priority: 1
         answer: |-
-          We provide multiple payment options tailored to your needs. You can choose to make a single upfront payment or finance your tuition over up to 18 months. To determine the best option for you, schedule a call with our admissions team or visit our <a class="faq-link" href="/us/financials">financials page</a>.
+          In Chile, we provide multiple payment options tailored to your needs. You can choose to make a single upfront payment or finance your tuition over up to 18 months. To determine the best option for you, schedule a call with our admissions team or visit our <a class="faq-link" href="/us/financials">financials page</a>.
 
-      - question: "How do I pay for my tuition?" #LATAM
-        locations: ["bogota-colombia", "buenosaires-argentina", "caracas-venezuela", "costa-rica", "lapaz-bolivia", "lima-peru", "mexicocity-mexico", "montevideo-uruguay", "panamacity-panama", "quito-ecuador"]
+      #### LATAM 
+      - question: "How do I pay for my tuition?" #Bogotá, Colombia
+        locations: ["bogota-colombia"]
         priority: 1
         answer: |-
-          4Geeks Academy offers flexible payment options, including one-time payments and financing up to 24 months. We tailor to your needs – schedule a call with admissions to find your perfect fit! For more details, visit our <a class="faq-link" href="/us/financials">financials page</a>.
+          In Colombia, 4Geeks Academy offers flexible payment options, including one-time payments and financing for up to 24 months. We tailor to your needs; schedule a call with admissions to find your perfect fit! For more details, visit our <a class="faq-link" href="/us/financials">financials page</a>.
+
+      - question: "How do I pay for my tuition?" #Buenos Aires, Argentina
+        locations: ["buenosaires-argentina"]
+        priority: 1
+        answer: |-
+          In Argentina, 4Geeks Academy offers flexible payment options, including one-time payments and financing for up to 24 months. We tailor to your needs; schedule a call with admissions to find your perfect fit! For more details, visit our <a class="faq-link" href="/us/financials">financials page</a>.
+
+      - question: "How do I pay for my tuition?" #Caracas, Venezuela
+        locations: ["caracas-venezuela"]
+        priority: 1
+        answer: |-
+          In Venezuela, 4Geeks Academy offers flexible payment options, including one-time payments and financing up to 24 months. We tailor to your needs – schedule a call with admissions to find your perfect fit! For more details, visit our <a class="faq-link" href="/us/financials">financials page</a>.
+
+      - question: "How do I pay for my tuition?" #Costa Rica
+        locations: ["costa-rica"]
+        priority: 1
+        answer: |-
+          In Costa Rica, 4Geeks Academy offers flexible payment options, including one-time payments and financing up to 24 months. We tailor to your needs – schedule a call with admissions to find your perfect fit! For more details, visit our <a class="faq-link" href="/us/financials">financials page</a>.
+
+      - question: "How do I pay for my tuition?" #La Paz, Bolivia
+        locations: ["lapaz-bolivia"]
+        priority: 1
+        answer: |-
+          In La Paz, Bolivia, 4Geeks Academy offers flexible payment options, including one-time payments and financing up to 24 months. We tailor to your needs – schedule a call with admissions to find your perfect fit! For more details, visit our <a class="faq-link" href="/us/financials">financials page</a>.
+
+      - question: "How do I pay for my tuition?" #Lima, Perú
+        locations: ["lima-peru"]
+        priority: 1
+        answer: |-
+          In Lima, Perú, 4Geeks Academy offers flexible payment options, including one-time payments and financing up to 24 months. We tailor to your needs – schedule a call with admissions to find your perfect fit! For more details, visit our <a class="faq-link" href="/us/financials">financials page</a>.
+
+      - question: "How do I pay for my tuition?" #Mexico City, Mexico
+        locations: ["mexicocity-mexico"]
+        priority: 1
+        answer: |-
+          In Mexico City, Mexico, 4Geeks Academy offers flexible payment options, including one-time payments and financing up to 24 months. We tailor to your needs – schedule a call with admissions to find your perfect fit! For more details, visit our <a class="faq-link" href="/us/financials">financials page</a>.
+
+      - question: "How do I pay for my tuition?" #Montevideo, Uruguay
+        locations: ["montevideo-uruguay"]
+        priority: 1
+        answer: |-
+          In Montevideo, Uruguay, 4Geeks Academy offers flexible payment options, including one-time payments and financing up to 24 months. We tailor to your needs – schedule a call with admissions to find your perfect fit! For more details, visit our <a class="faq-link" href="/us/financials">financials page</a>.
+
+      - question: "How do I pay for my tuition?" #Panama City, Panama
+        locations: ["panamacity-panama"]
+        priority: 1
+        answer: |-
+          In Panama City, Panama, 4Geeks Academy offers flexible payment options, including one-time payments and financing up to 24 months. We tailor to your needs – schedule a call with admissions to find your perfect fit! For more details, visit our <a class="faq-link" href="/us/financials">financials page</a>.
+
+      - question: "How do I pay for my tuition?" #Quito, Ecuador
+        locations: ["quito-ecuador"]
+        priority: 1
+        answer: |-
+          In Quito, Ecuador, 4Geeks Academy offers flexible payment options, including one-time payments and financing up to 24 months. We tailor to your needs – schedule a call with admissions to find your perfect fit! For more details, visit our <a class="faq-link" href="/us/financials">financials page</a>.
       ## // how do I pay for my tuition? // 
 
       ## Does 4Geeks offer career support?
