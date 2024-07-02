@@ -1,0 +1,156 @@
+meta_info:
+  slug: "tampa-coding-bootcamp"
+  title: "Tampa Coding Bootcamp"
+  position: 2
+  description: "Get to know here all about our coding bootcamp campus in Tampa, Florida of 4GeeksAcademy"
+  image: "/images/og-preview/tampa-florida.webp"
+  keywords: "null"
+  redirects: []
+  region: "usa-canada"
+  dialCode: "1"
+  related_clusters: ["trends-and-tech"]
+  
+  # ⬇️ cohort_include_regex field is used to filter cohorts on the calendar that only test successfully for a particular regex
+  # for example: for this location, only show cohorts starting with usa-xx-spanish
+  cohort_include_regex: ["miami"]
+  cohort_exclude_regex: ['usa-\d{1,10}-spanish']
+  home_video: "https://www.videoask.com/fyq2h2hvx"
+
+seo_title: "Coding Bootcamp in Tampa"
+header:
+  tagline: "4Geeks Academy in Tampa"
+  sub_header: "All programs are taught "
+  sub_header_highlighted: "Online, Hybrid or In-person."
+  paragraph: ""
+  image: "../../../static/images/locations/tampa-location.webp"
+  alt: "4Geeks Academy online and in-person coding bootcamp in Tampa, Florida"
+
+badges:
+  title: ""
+  paragraph: |
+    4Geeks Academy is the place where developers grow and thrive.
+ 
+    We are licensed by the USA F. Dep. of Education.
+  
+    Chosen as one of the top 35 coding bootcamps of the world and the top <a href="https://4geeksacademy.com/us/coding-bootcamp" rel="nofollow">coding bootcamp</a> in Tampa according to SwitchUp.
+
+    4Geeks Academy has been recognized as one of the top 10 coding bootcamps in the United States according to Newsweek.
+
+    A community built for developers.
+news:
+  title: "4Geeks Academy Tampa has been reviewed in:"
+upcoming:
+  no_dates_message: "There are currently no upcoming dates for this campus"
+  actionMessage: "Let me know when dates are available"
+button_header:
+  button_text: See Programs
+  button_link: "#programs"
+button:
+  syllabus_button_text: "DOWNLOAD SYLLABUS" # <-- this will show everywhere in the website
+  apply_button_text: "APPLY NOW" # <-- this will show everywhere in the website
+  syllabus_submit_text: "DOWNLOAD"
+  apply_button_link: "/apply"
+  cohort_more_details_text: "DETAILS"
+
+custom_bar:
+  active: true
+  message: 'Change your life with Code. Starting at $150 a month. Or you can pay after you get a job! <a class="customBar-link" href="/us/apply">Apply</a>'
+  button: 
+    label: "Read More"
+    path: "/us/apply" #string (can be inline path using #, relative path or absolute path)
+
+info_box:
+  heading: "Find us in Tampa"
+  address: "450 S Orange Ave, Orlando, FL 32801"
+  iframeMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.0886003492096!2d-81.37933699999999!3d28.5370565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e77b01bf992b61%3A0xaecd468d9c4f262c!2sCNL%20Center%20City%20Commons%2C%20450%20S%20Orange%20Ave%2C%20Orlando%2C%20FL%2032801%2C%20USA!5e0!3m2!1sen!2sve!4v1684182525637!5m2!1sen!2sve"
+  contact_heading: "Contacts"
+  phone: "(786) 416-6640"
+  email: "info@4GeeksAcademy.com"
+  image: "../../../static/images/locations/miami-map.png"
+  alt: ""
+images_box:
+  heading: "What you should know about this location: "
+  content: "Tampa is renowned for its beautiful waterfronts and dynamic cultural scene, but it is also a burgeoning hub for technology and innovation. Home to companies like Jabil, Tech Data, and the cybersecurity giant ReliaQuest, Tampa's tech ecosystem is thriving. This city fosters an environment where startups and established firms alike can flourish, making it a hotspot for innovation and entrepreneurial spirit. Tampa's commitment to technology and growth has positioned it as a leader in the tech industry, driving forward advancements that are shaping the future."
+  images:
+    - path: "../../../static/images/locations/tampa-location-image-1.webp"
+      alt: "Tampa city"
+    - path: "../../../static/images/ownpeoplecoding2.webp"
+      alt: "4Geeks Own People Coding"
+    - path: "../../../static/images/locations/miami-people.jpeg"
+      alt: "4Geeeks lab"
+    - path: "../../../static/images/locations/tampa-location-image-2.webp"
+      alt: "Tampa city"
+    - path: "../../../static/images/ownmancoding.webp"
+      alt: "Remote-Coding-Bootcamp"
+  layout_horizontal: true #false == "mode mosaic"
+
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
+    src: "/images/landing/alissa-video.webp"
+    shadow: true
+  video: "EcqasocRKHo"
+  heading:
+    text: "Launch your coding career in Tampa with 4Geeks Academy's Unique Advantages"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "4Geeks Academy offer unique features like unlimited mentorship from experienced professionals and a laser focus on code, ensuring you gain the in-demand skills needed to thrive as a full-stack developer."
+    font_size: ["18px", "18px", "18px", "18px", "18px"]
+  button:
+    text: "APPLY NOW"
+    color: "white"
+    background: "black"
+    path: "/us/apply"
+  bullets:
+    items: 
+    - text: "Tailored curriculum designed to nurture your tech skills and career growth"
+    - text: "Expert-led courses emphasizing practical coding mastery for real-world applications"
+    - text: "Personalized mentorship guiding your journey into Tampa's tech industry"
+
+## HEADING SECTION
+
+active_campaign_location_slug: "tampa"
+breathecode_location_slug: "tampa-usa"
+in_person_available: true # important to accept in-person applicants
+
+consents:
+  - slug: "gdpr_consent"
+    name: "GDPR Consent"
+    active: false
+    message: 'By submitting this form, I accept that my data may be used for a quote request that could result in a commercial relationship. Check out our complete <a style={{ marginLeft: "5px" }} target="_blank" rel="noopener noreferrer nofollow" className="decorated" href="/us/privacy-policy">Privacy Policy</a>'
+    error_message: "You need to accept the privacy terms"
+
+city: "Tampa"
+name: "Tampa, USA"
+latitude: "27.9517"
+longitude: "82.4588"
+phone: "+1 (786) 416-6640"
+address: ""
+zip_code: "32801"
+state: "Florida"
+country: "USA"
+country_shortname: "us"
+socials:
+  - name: "Facebook"
+    icon: "facebook"
+    link: "https://www.facebook.com/4geeksacademy"
+  - name: "Twitter"
+    icon: "x-logo"
+    link: "https://www.twitter.com/4geeksacademy"
+  - name: "Instagram"
+    icon: "instagram"
+    link: "https://www.instagram.com/4geeksacademy/"
+  - name: "Linkedin"
+    icon: "linkedin"
+    link: "https://www.linkedin.com/school/4geeksacademy/"
+courses:
+  - "Full-Time"
+  - "Part-Time"
+flag_icon: ""
+value: "Tampa"
+defaultLanguage: "us" # All lead marketing communications will arrive on this language
+
+documents:
+  payment_guidebook:
+    url: "https://storage.googleapis.com/4geeks-academy-website/blog/2017/10/4GA-Payment-Guidebook-2.pdf"
