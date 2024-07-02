@@ -84,7 +84,7 @@ const NotFoundPage = () => {
           alt={"Rigoberto 4Geeks Academy with a Book"}
           margin="auto"
           height="200px"
-          backgroundSize={`contain`}
+          backgroundSize="contain"
         ></Img>
         <Paragraph>Maybe you were looking for one of these?</Paragraph>
         <ul

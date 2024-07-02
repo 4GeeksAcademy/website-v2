@@ -84,10 +84,6 @@ const CustomBar = ({
             textAlign="center"
             maxWidth="fit-content"
             padding="0 10px"
-            // padding_tablet="0 5%"
-            fontSize="15px"
-            lineHeight="22px"
-            opacity="1"
           >
             {discountContent.bar_content.discount.message}
             <span style={{ fontWeight: "900" }}>
@@ -137,8 +133,6 @@ const CustomBar = ({
               textAlign="center"
               padding="0 10px"
               padding_tablet="0 12%"
-              fontSize="15px"
-              lineHeight="22px"
             />
           )}
           {contentBar.button?.label !== undefined &&

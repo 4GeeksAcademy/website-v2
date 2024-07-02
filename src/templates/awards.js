@@ -1,24 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { graphql } from "gatsby";
-import Link from "gatsby-link";
-import Layout from "../global/Layout";
-import {
-  Grid,
-  Div,
-  GridContainerWithImage,
-  GridContainer,
-} from "../components/Sections";
-import { H1, H2, H3, Paragraph, H4 } from "../components/Heading";
+import { Div } from "../components/Sections";
+import { H1, H2, Paragraph, SubTitle } from "../components/Heading";
 import TestimonialCard from "../components/TestimonialCard";
-import {
-  Colors,
-  Button,
-  StyledBackgroundSection,
-  Img,
-} from "../components/Styling";
-import Badges from "../components/Badges";
+import { Colors, Img } from "../components/Styling";
 import BaseRender from "./_baseLayout";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const SVGBubblesLeft = () => (
   <svg
@@ -336,7 +322,12 @@ const Awards = ({ data, pageContext, yml }) => {
           margin="0 auto"
           padding_xxs="60px 0px"
         >
-          <H1 type="h1" textAlign="center" margin="0 0 11px 0" color="#606060">
+          <H1
+            type="h1"
+            textAlign="center"
+            margin="0 0 11px 0"
+            color={Colors.darkGray2}
+          >
             {yml.seo_title}
           </H1>
           <H2
@@ -348,18 +339,18 @@ const Awards = ({ data, pageContext, yml }) => {
             lineHeight_tablet="60px"
             lineHeight="52px"
             padding_xxs="0 20px"
+            color={Colors.black}
           >
             {"< " + yml.header.title + " >"}
           </H2>
-          <Paragraph
-            fontSize="15px"
+          <SubTitle
             textAlign="center"
             padding_xxs="0 20px"
             padding_tablet="0 10%"
             margin="26px 0"
           >
             {yml.header.paragraph}
-          </Paragraph>
+          </SubTitle>
         </Div>
       </Div>
       <Div

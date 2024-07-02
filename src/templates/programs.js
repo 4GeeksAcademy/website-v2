@@ -58,6 +58,7 @@ const Programs = ({ data, pageContext, yml }) => {
               fontSize="40px"
               fontSize_tablet="50px"
               lineHeight="60px"
+              color={Colors.black}
             >
               {yml.header.title}
             </H2>
@@ -67,7 +68,6 @@ const Programs = ({ data, pageContext, yml }) => {
               letterSpacing="0.05em"
               margin="26px 0"
               color={Colors.black}
-              opacity="1"
             >
               {yml.header.paragraph}
             </Paragraph>
@@ -80,10 +80,10 @@ const Programs = ({ data, pageContext, yml }) => {
           style={{ position: "relative" }}
         >
           <StyledBackgroundSection
-            height={`350px`}
-            borderRadius={`3px`}
+            height="350px"
+            borderRadius="3px"
             image={yml.header.image}
-            bgSize={`contain`}
+            bgSize="contain"
             alt={yml.header.image_alt}
           />
         </Div>

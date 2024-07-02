@@ -44,7 +44,6 @@ const SimpleCards = ({ heading, sub_heading, cards, background }) => {
           <Paragraph
             margin="15px auto"
             fontSize="16px"
-            fontHeight="30px"
             textAlign="left"
             textAlign_sm="center"
             textAlign_tablet="left"

@@ -56,12 +56,6 @@ syllabus_button_text: "Search"
 iconogram:
   heading:
     text: "Paying your tuition should not be a concern"
-    font_size:
-      - 38px
-      - 38px
-      - 38px
-      - 21px
-      - 21px
     style: '{ "textAlign": "center", "width": "60%" }'
   sub_heading:
     text: ""

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { graphql } from "gatsby";
 import { Title, H1, H2, H3, H4, H5, Paragraph } from "../components/Heading";
 import BaseRender from "./_baseLayout";
@@ -15,11 +15,10 @@ const StudentAndProjects = (props) => {
   let projects = data.allAlumniProjectsYaml.edges[0].node.projects;
 
   return (
-    <Div margin="90px 0 75px 0" flexDirection="column">
+    <Div margin="0 0 75px 0" flexDirection="column">
       <Header
         padding="0 10px"
-        // padding_tablet="0 18% 2% 18%"
-        margin={isCustomBarActive(session) ? "70px 0 0 0" : "0"}
+        margin_md={isCustomBarActive(session) ? "70px 0 0 0" : "0"}
         seo_title={yml.seo_title}
         title={yml.header.title}
         paragraph={yml.header.paragraph}
@@ -35,7 +34,7 @@ const StudentAndProjects = (props) => {
               padding_tablet="50px 0"
             >
               <Div
-                boxShadow={`0px 2px 5px rgba(0, 0, 0, 0.1)`}
+                boxShadow="0px 2px 5px rgba(0, 0, 0, 0.1)"
                 boxShadow_tablet="none"
                 borderRadius="3px"
                 border="1px solid #EBEBEB"
@@ -46,12 +45,7 @@ const StudentAndProjects = (props) => {
                 padding_tablet="70px 0 0 0"
                 gridArea_tablet={i % 2 != 0 ? "1/1/1/6" : "1/7/1/13"}
               >
-                <H3
-                  type="h3"
-                  textAlign="left"
-                  fontSize="22px"
-                  lineHeight="26.4px"
-                >
+                <H3 type="h3" textAlign="left">
                   {l.project_name}
                 </H3>
                 {l.alumni.map((alumni, index) => {
@@ -59,14 +53,14 @@ const StudentAndProjects = (props) => {
                     <Div
                       key={index}
                       flexDirection="column"
-                      margin={`10px 0 5px 0`}
+                      margin="10px 0 5px 0"
                     >
                       <Div flexDirection="row">
                         <H4
                           width="auto"
                           type="h4"
                           textAlign="left"
-                          fontWeight={`700`}
+                          fontWeight="700"
                         >
                           {`${alumni.first_name} ${alumni.last_name}`}
                         </H4>
@@ -93,7 +87,7 @@ const StudentAndProjects = (props) => {
                           </Div>
                         )}
                       </Div>
-                      <Paragraph primary lineHeight="22px" textAlign="left">
+                      <Paragraph primary textAlign="left">
                         {alumni.job_title}
                       </Paragraph>
                     </Div>
@@ -102,10 +96,7 @@ const StudentAndProjects = (props) => {
                 <Paragraph
                   textAlign="left"
                   margin="15px 0"
-                  fontSize="15px"
-                  lineHeight="22px"
                   letterSpacing="0.05em"
-                  fontWeight="300"
                 >
                   {l.project_content}
                 </Paragraph>
@@ -140,9 +131,9 @@ const StudentAndProjects = (props) => {
                 {l.project_video === "" ? (
                   <StyledBackgroundSection
                     borderRadius="3px"
-                    height={`389px`}
+                    height="389px"
                     image={l.project_image.childImageSharp.gatsbyImageData}
-                    bgSize={`cover`}
+                    bgSize="cover"
                     alt={l.project_name}
                   />
                 ) : (

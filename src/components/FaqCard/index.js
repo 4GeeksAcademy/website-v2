@@ -13,7 +13,8 @@ const FaqCard = ({ faqs, topicSlug, locationSlug, minPriority, template }) => {
     if (!locationSlug) return true;
     if (
       Array.isArray(question.locations) &&
-      (question.locations.includes(locationSlug) || question.locations.includes("all"))
+      (question.locations.includes(locationSlug) ||
+        question.locations.includes("all"))
     )
       return true;
     return false;
@@ -101,8 +102,8 @@ const FaqCard = ({ faqs, topicSlug, locationSlug, minPriority, template }) => {
                           type="h4"
                           textAlign="left"
                           fontSize="13px"
-                          align={`left`}
-                          align_sm={`left`}
+                          align="left"
+                          align_sm="left"
                           color={Colors.black}
                           paddingRight="5%"
                           textTransform="uppercase"
@@ -127,13 +128,11 @@ const FaqCard = ({ faqs, topicSlug, locationSlug, minPriority, template }) => {
                             <Paragraph
                               textAlign="left"
                               letterSpacing="0.05em"
-                              lineHeight="22px"
                               fontWeight="normal"
                               dangerouslySetInnerHTML={{ __html: faq.answer }}
-                              margin={`20px 0 0 0`}
+                              margin="20px 0 0 0"
                               align_sm="left"
-                              fontFamily="Lato, sans-serif"
-                            ></Paragraph>
+                            />
                           )}
                       </Div>
                     </Div>

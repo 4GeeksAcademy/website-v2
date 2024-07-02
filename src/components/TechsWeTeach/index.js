@@ -62,13 +62,12 @@ const TechsWeTeach = ({ lang, data }) => {
         </Div>
         <Div padding="20px 0 0 0" padding_md="45px 0 0 0">
           <StyledBackgroundSection
-            // className={`image`}
-            height={`289px`}
-            width={`100%`}
+            height="289px"
+            width="100%"
             image={content.image.childImageSharp.gatsbyImageData}
-            bgSize={`contain`}
+            bgSize="contain"
             alt="Tech Logo"
-            borderRadius={`0 0 0 3px`}
+            borderRadius="0 0 0 3px"
           />
         </Div>
 

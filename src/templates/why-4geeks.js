@@ -7,7 +7,7 @@ import {
   Grid,
   Header,
 } from "../components/Sections";
-import { Title, H1, H2, H3, H4, Paragraph } from "../components/Heading";
+import { H1, H2, H4, Paragraph, SubTitle } from "../components/Heading";
 import { Colors, StyledBackgroundSection } from "../components/Styling";
 import { isCustomBarActive } from "../actions";
 import Badges from "../components/Badges";
@@ -51,7 +51,11 @@ const Why4Geeks = (props) => {
           padding_tablet="70px 0 0 0"
           gridColumn_tablet="1 / 7"
         >
-          <H1 textAlign_tablet="left" margin="0 0 11px 0" color="#606060">
+          <H1
+            textAlign_tablet="left"
+            margin="0 0 11px 0"
+            color={Colors.darkGray2}
+          >
             {yml.seo_title}
           </H1>
           <H2
@@ -59,9 +63,9 @@ const Why4Geeks = (props) => {
             fontSize="50px"
             lineHeight="60px"
           >{`${yml.header.title}`}</H2>
-          <Paragraph textAlign_tablet="left" margin="26px 0">
-            {yml.header.paragraph}{" "}
-          </Paragraph>
+          <SubTitle textAlign_tablet="left" margin="26px 0">
+            {yml.header.paragraph}
+          </SubTitle>
         </Div>
         <Div
           display="none"
@@ -78,7 +82,7 @@ const Why4Geeks = (props) => {
               yml.header.image &&
               yml.header.image.childImageSharp.gatsbyImageData
             }
-            bgSize={`contain`}
+            bgSize="contain"
             alt={yml.header.alt}
           />
         </Div>
@@ -118,7 +122,7 @@ const Why4Geeks = (props) => {
               yml.community_banner.image &&
               yml.community_banner.image.childImageSharp.gatsbyImageData
             }
-            bgSize={`contain`}
+            bgSize="contain"
             alt={yml.community_banner.image_alt}
           />
         </Div>
@@ -225,7 +229,7 @@ const Why4Geeks = (props) => {
               yml.python_banner.image &&
               yml.python_banner.image.childImageSharp.gatsbyImageData
             }
-            bgSize={`contain`}
+            bgSize="contain"
             alt={yml.python_banner.image_alt}
           />
         </Div>
@@ -234,7 +238,7 @@ const Why4Geeks = (props) => {
                         height="300px"
                         width="100%"
                         image={yml.python_banner.image && yml.python_banner.image.childImageSharp.gatsbyImageData}
-                        bgSize={`contain`}
+                        bgSize="contain"
                         alt={yml.python_banner.image_alt}
                     />
                 </Div> */}
