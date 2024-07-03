@@ -203,7 +203,10 @@ const Side = ({
                         style={{ strokeWidth: "2px" }}
                       />
                     )}
-                    <Paragraph textAlign="left" dangerouslySetInnerHTML={{ __html: bullet.text }} />
+                    <Paragraph
+                      textAlign="left"
+                      dangerouslySetInnerHTML={{ __html: bullet.text }}
+                    />
                   </Div>
                 )}
               </Div>
