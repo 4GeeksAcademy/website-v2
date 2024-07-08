@@ -19,11 +19,11 @@ meta_info:
 seo_title: "Coding Bootcamp in Tampa"
 header:
   tagline: "4Geeks Academy in Tampa"
-  sub_header: "All programs are taught "
-  sub_header_highlighted: "Online, Hybrid or In-person."
+  sub_header: "Become a Full-Stack developer, Data Scientist, or Cybersecurity Specialist in 18 weeks or less! Choose among "
+  sub_header_highlighted: "online, hybrid or in-person formats."
   paragraph: ""
   image: "../../../static/images/locations/tampa-location.webp"
-  alt: "4Geeks Academy online and in-person coding bootcamp in Tampa, Florida"
+  alt: "4Geeks Academy online coding bootcamp in Tampa, Florida"
 
 badges:
   title: ""
@@ -69,8 +69,11 @@ info_box:
   image: "../../../static/images/locations/miami-map.png"
   alt: ""
 images_box:
-  heading: "What you should know about this location: "
-  content: "Tampa is renowned for its beautiful waterfronts and dynamic cultural scene, but it is also a burgeoning hub for technology and innovation. Home to companies like Jabil, Tech Data, and the cybersecurity giant ReliaQuest, Tampa's tech ecosystem is thriving. This city fosters an environment where startups and established firms alike can flourish, making it a hotspot for innovation and entrepreneurial spirit. Tampa's commitment to technology and growth has positioned it as a leader in the tech industry, driving forward advancements that are shaping the future."
+  heading: "Unlock Tampa’s Tech Potential"
+  content: |-
+      Renowned for its beautiful waterfronts and dynamic cultural scene, Tampa is also becoming a hub for technology and innovation. Hosting offices of companies like Apple, Oracle, Tech Data, and the cybersecurity giant ReliaQuest, the city’s tech ecosystem is thriving. Its tech job market is set to grow by 27% by 2030—more than double the national average! With a vibrant community of coworking spaces, startup support, and networking events, Tampa is an ideal location for tech professionals looking to advance their careers. 
+      Join us at 4Geeks Academy to thrive in Tampa's booming tech scene!
+
   images:
     - path: "../../../static/images/locations/tampa-location-image-1.webp"
       alt: "Tampa city"
@@ -88,14 +91,14 @@ two_columns:
   proportions: [6, 6]
   image:
     style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
-    src: "/images/landing/alissa-video.webp"
+    src: "/images/testimonials/allisa-testimonial.jpg"
     shadow: true
-  video: "EcqasocRKHo"
+  video: "TCHASxvkhpI"
   heading:
-    text: "Launch your coding career in Tampa with 4Geeks Academy's Unique Advantages"
+    text: "Launch a Tech Career in Tampa with 4Geeks Academy's Unique Advantages"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "4Geeks Academy offer unique features like unlimited mentorship from experienced professionals and a laser focus on code, ensuring you gain the in-demand skills needed to thrive as a full-stack developer."
+    text: "4Geeks Academy offers unique features like unlimited coding and career mentorship from experienced professionals and a laser focus on code, ensuring you gain the skills needed to thrive in your new career."
     font_size: ["18px", "18px", "18px", "18px", "18px"]
   button:
     text: "APPLY NOW"
@@ -104,9 +107,9 @@ two_columns:
     path: "/us/apply"
   bullets:
     items: 
-    - text: "Tailored curriculum designed to nurture your tech skills and career growth"
-    - text: "Expert-led courses emphasizing practical coding mastery for real-world applications"
-    - text: "Personalized mentorship guiding your journey into Tampa's tech industry"
+    - text: "Industry-aligned curriculum to kickstart your career."
+    - text: "Hands-on methodology emphasizing coding skills for real-world success."
+    - text: "Personalized career support to guide your journey into Tampa's tech industry."
 
 ## HEADING SECTION
 
