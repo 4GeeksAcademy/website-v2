@@ -96,11 +96,11 @@ follow_bar:
 #   sub_heading: "Un curso de programación sobre las tecnologías más usadas del mundo"
 
 
-geeks_vs_others:
-  position: 3
-  heading: "¿Qué hace a este bootcamp tan exitoso?"
-  paragraph: "Top bootcamp en el mundo y #1 en Chile"
-  total_rows: 5
+# geeks_vs_others:
+#   position: 3
+#   heading: "¿Qué hace a este bootcamp tan exitoso?"
+#   paragraph: "Top bootcamp en el mundo y #1 en Chile"
+#   total_rows: 5
 
 # why_4geeks:
 #   position: 8
@@ -138,14 +138,14 @@ components:
       background: "black"
       path: "#leadform_header"
     content: 
-      text: "Precio: 500.000 CLP - este precio es el promocional."
+      text: ""
       font_size: ["16px"]
       path: ""
     bullets:
       items:
-      - heading: "18 cuotas con Banco de Chile - Sin interés."
+      - heading: "De 4 a 18 cuotas sin interés con tarjetas de banco de chile."
         icon: "circle" 
-      - heading: "12 cuotas con Flow - Sin interés."
+      - heading: "Hasta 12 cuotas sin interés con tarjetas de crédito de cualquier otro banco."
         icon: "circle" 
       - heading: "Transferencia bancaria."
         icon: "circle"  
@@ -168,7 +168,7 @@ components:
       font_size: ["16px"]
     bullets:
       items:
-      - heading: "Sesiones grupales todos los jueves de 18:30 a 21:30 hrs."
+      - heading: "Sesiones grupales todos los jueves de 19 a 21 hrs."
         icon: "check" 
       - heading: "Duración del programa: 8 meses."
         icon: "check" 
