@@ -1,17 +1,14 @@
 meta_info:
   slug: aprende-a-tu-propio-ritmo-chile # <--- URL 4geeksacademy.com/us/landing/example
-
-  # This will show on social media when shared
+          # This will show on social media when shared
   title: "Aprende a programar a tu propio ritmo en el mejor bootcamp de programación"
   description: "Aprende a programar a tu propio ritmo en el mejor bootcamp de programación: 4Geeks Academy."
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   # This will show on social media when shared
   image: "/images/bg/santiago-banner.png"
   keywords: ""
-
   template: "landing_a" # <--- choose your landing template
-  redirects: # <--- URL redirections to avoid 404 errors
-    [""]
+  redirects: [] # <--- URL redirections to avoid 404 errors
 
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
@@ -27,7 +24,7 @@ form:
   heading: "Conoce más información"
   motivation: "Completa el formulario y te enviaremos la información en menos de 5 min a tu correo electrónico."
   button_label: Obtener más información
-  redirect: "/es/gracias/?lang=es"  #you can redirect to another url or entirely diffrent website
+  redirect: "/es/gracias"  #you can redirect to another url or entirely diffrent website
 
 apply_schollarship: # form that is displayed at the end of the landing
   # title: "Apoyo Profesional Ilimitado"
