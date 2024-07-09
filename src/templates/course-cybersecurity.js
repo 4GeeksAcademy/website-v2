@@ -562,6 +562,7 @@ export const query = graphql`
               style
               src
               shadow
+              link
             }
             heading {
               text

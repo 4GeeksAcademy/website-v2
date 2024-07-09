@@ -58,7 +58,8 @@ two_columns_first:
   proportions: [6, 6]
   image:
     style: '{"border" : "0px solid black", "backgroundSize": "contain", "background-position": "center" }'
-    src: "../../images/staff/chema-alonso.webp"  
+    src: "../../images/staff/chema-alonso.webp"
+    link: "https://www.mypublicinbox.com/chemaalonso"
     shadow: false
   heading:
     text: "Our Cybersecurity Bootcamp is backed by Chema Alonso, the Most Recognized Hacker in Spain"
@@ -75,11 +76,14 @@ two_columns_first:
     path: "#prices_and_payment"
   bullets:
     items:
-      - text: "Chema Alonso’s dedicated chat channel."
-      - text: "4 Cybersecurity books from 0xWORD, Chema Alonso's publishing company."
-      - text: "Endorsement of the bootcamp's content and instructors by Chema Alonso."  
-      - text: "Career guidance and support in securing employment, in collaboration with Chema Alonso."
-      - text: "Unlimited, lifetime mentoring."  
+    - text: |-
+        Chat Room with the professor and Chema Alonso on <a href="https://www.mypublicinbox.com/" target="_blank">MyPublicInbox</a> + 2000 Tempos to spend on the platform
+    - text: |-
+        4 Cybersecurity books from <a href="https://0xword.com/" target="_blank">0xWORD</a>, the publisher of Chema Alonso.
+    - text: "Chema Alonso has validated the content and instructors of this course."
+    - text: "Career guidance and help finding a job in collaboration with Chema Alonso. And of course, our unlimited and lifelong mentorship."
+    - text: |-
+        1 Exam from <a href="https://singularity-experts.com/es/l/hackers" target="_blank">Singularity Hackers</a>, the training platform for cybersecurity experts by Chema Alonso.
 
 two_columns_second:
   proportions: [6, 6]
