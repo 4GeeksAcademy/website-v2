@@ -123,7 +123,7 @@ two_columns_info:
   proportions: [6, 6]
   image:
     style: '{"border" : "0px solid black", "backgroundSize": "contain", "background-position": "center" }'
-    src: "../../images/landing/grupo-ventanas.png"
+    src: "../../images/landing/grupo-ventanas.webp"
     shadow: false
   heading:
     text: "Be part of the next Generation of Cybersecurity Professionals"
@@ -188,8 +188,7 @@ details:
         content: "Up to 16 people"
         icon: "laptop"
       - label: "Certificate"
-        content: "Official 4Geeks Completion Certificate,
-                  recognized by multiple institutions."
+        content: "Official 4Geeks Completion Certificate, recognized by multiple institutions."
         link_text: ""
         link: ""
         icon: "certificate"
@@ -205,7 +204,8 @@ details:
     - label: "Commitment"
       value: "20 hrs/week (Mon - Wed - Fri)"
     - label: "Certificate"
-      content: "Our certificates are recognized by multiple institutions."
+      content: "Official 4Geeks Completion Certificate, recognized by multiple institutions.
+"
       link_text: "View example"
       link: ""
       icon: "certificate"
