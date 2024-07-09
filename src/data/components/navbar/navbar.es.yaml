@@ -129,6 +129,8 @@ navbar:
               link_to: "/es/coding-campus/bootcamp-programacion-houston"
             - title: "Austin, USA"
               link_to: "/es/coding-campus/bootcamp-programacion-austin"
+            - title: "Tampa, USA"
+              link_to: "/es/coding-campus/bootcamp-programacion-tampa"
             - title: "Toronto, Canada"
               link_to: "/es/coding-campus/bootcamp-programacion-toronto-canada"
         - title: "Latam"
