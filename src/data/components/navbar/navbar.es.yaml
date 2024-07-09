@@ -35,7 +35,7 @@ navbar:
         - title: "Inteligencia Artificial"
           level: "Desde cero"
           icon: "applied-ai"
-          paragraph: "Explora a detalle la inteligencia artificial y cómo aplicarla en diferentes industrias, roles y en tu trabajo."
+          paragraph: "Explora a detalle las herramientas actuales de inteligencia artificial y cómo aplicarla para escalar en diferentes industrias, roles y en tu trabajo."
           buttons:
             - text: "Ver Programa"
               link: "/es/coding-bootcamps/curso-inteligencia-artificial"
