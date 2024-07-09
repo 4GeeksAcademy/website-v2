@@ -3,7 +3,7 @@
 Use the following code to include in between paragraphs a call to action to a particular website landing page.
 
 ```
-<call-to-action button_text="Ver programa" button_link="/es/coding-bootcamps/full-stack-part-time" background="rgb(0, 151, 205)" title="Impulsa tu carrera, gracias a la programación" text="Te invitamos a impulsa tu carrera, aprendiendo a programar con nuestro Programa Full Stack Developer."></call-to-action>
+<call-to-action button_text="Ver programa" button_link="/es/coding-bootcamps/desarrollador-full-stack" background="rgb(0, 151, 205)" title="Impulsa tu carrera, gracias a la programación" text="Te invitamos a impulsa tu carrera, aprendiendo a programar con nuestro Programa Full Stack Developer."></call-to-action>
 ```
 
 AS you can see, you need to specify carefully the following properties:

@@ -95,26 +95,22 @@ export const MultiColumns = ({
         <Paragraph
           padding={heading ? "0" : "20px"}
           margin="15px 0"
-          fontSize={sh_xl || "16px"}
+          fontSize={sh_xl}
           fontSize_sm={sh_sm}
           fonSize_md={sh_md}
           fontSize_xs={sh_xs}
-          fontHeight="30px"
           style={sub_heading.style ? JSON.parse(sub_heading.style) : null}
-          // style={{textAlign:'center'}}
           dangerouslySetInnerHTML={{ __html: sub_heading.text }}
         />
       ) : sub_heading ? (
         <Paragraph
           padding={heading ? "0" : "20px"}
           margin="15px 0"
-          fontSize={sh_xl || "16px"}
+          fontSize={sh_xl}
           fontSize_sm={sh_sm}
           fonSize_md={sh_md}
           fontSize_xs={sh_xs}
-          fontHeight="30px"
           style={sub_heading.style ? JSON.parse(sub_heading.style) : null}
-          // style={{textAlign:'center'}}
         >
           {sub_heading.text}
         </Paragraph>
@@ -124,12 +120,10 @@ export const MultiColumns = ({
         <Paragraph
           padding={end_paragraph ? "0" : "20px"}
           margin="15px 0"
-          fontSize={p_xl || "16px"}
+          fontSize={p_xl}
           fontSize_sm={p_sm}
           fonSize_md={p_md}
           fontSize_xs={p_xs}
-          fontHeight="30px"
-          lineHeight="19px"
           style={{ textAlign: "center" }}
           dangerouslySetInnerHTML={{ __html: end_paragraph.text }}
           onClick={(e) => {
@@ -141,16 +135,13 @@ export const MultiColumns = ({
       {button && (
         <Button
           outline
-          // width="250px"
           colorHoverText={button.hover_color || Colors.blue}
           lineHeight="26px"
           textColor={Colors[button.color] || button.color}
           color={Colors[button.color] || button.color}
-          // padding_tablet="0"
           fontSize="15px"
           style={button.style ? JSON.parse(button.style) : null}
           background={Colors[button.background] || button.background}
-          // textAlign="left"
           margin="2rem 0"
           padding=".35rem.85rem"
           onClick={() => {
@@ -187,9 +178,6 @@ export const Columns = ({ columns, proportions, swipable }) => {
         <Div
           key={index}
           flexDirection="column"
-          // size={c.size[0]}
-          // size_sm={c.size[2]}
-          // size_xs={c.size[3]}
           textAlign={c.align}
           minWidth="250px"
           margin="25px 15px 0 15px"

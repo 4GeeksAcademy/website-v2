@@ -4,7 +4,7 @@ import { Link } from "gatsby";
 import { isCustomBarActive } from "../actions";
 import BaseRender from "./_baseLayout";
 import { Div, HR, GridContainer } from "../components/Sections";
-import { H2, Paragraph } from "../components/Heading";
+import { H2, Paragraph, SubTitle } from "../components/Heading";
 import { Button, Colors } from "../components/Styling";
 import { beHiringPartner } from "../actions";
 import { SessionContext } from "../session";
@@ -245,6 +245,7 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
         <Div display="block">
           <H2
             type="h2"
+            color={Colors.black}
             textAlign="center"
             textAlign_tablet="center"
             fontSize="40px"
@@ -255,20 +256,17 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
           >
             {yml.header.title}
           </H2>
-          <Paragraph
-            color="black"
-            opacity="1"
+          <SubTitle
+            color={Colors.black}
             margin="20px 0"
             padding="0"
             width="auto"
             letterSpacing="0.05em"
             textAlign="center"
             textAlign_tablet="center"
-            fontSize="24px"
-            lineHeight="28px"
           >
             {yml.header.paragraph}
-          </Paragraph>
+          </SubTitle>
           <Div
             flexDirection_tablet="row"
             flexDirection="column"
@@ -374,7 +372,7 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
           gridColumn_tablet="1 / 7"
           flexDirection="column"
         >
-          <H2 textAlign_tablet="start" margin="0 0 30px 0" lineHeight="35px">
+          <H2 textAlign_tablet="start" margin="0 0 30px 0">
             {yml.form.title}
           </H2>
           {yml.form.paragraph.split("\n").map((m, i) => (

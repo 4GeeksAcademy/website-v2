@@ -712,9 +712,7 @@ const Apply = (props) => {
               title={yml.left.form_section.modal.title}
               padding="20px 10px"
             >
-              <Paragraph fontSize="14px" lineHeight="24px">
-                {yml.left.form_section.modal.text}
-              </Paragraph>
+              <Paragraph>{yml.left.form_section.modal.text}</Paragraph>
               <Div justifyContent="between">
                 <Button
                   variant="full"
@@ -768,14 +766,7 @@ const Apply = (props) => {
           </H3>
           {yml.right.content_section.map((m, i) => {
             return (
-              <Paragraph
-                textAlign="left"
-                margin="20px 0"
-                key={i}
-                fontSize="15px"
-                lineHeight="19px"
-                fontWeight="400"
-              >
+              <Paragraph textAlign="left" margin="20px 0" key={i}>
                 {m}
               </Paragraph>
             );

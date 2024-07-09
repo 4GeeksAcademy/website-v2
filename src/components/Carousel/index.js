@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { H2, Paragraph } from "../Heading";
+import { H2, SubTitle } from "../Heading";
 import { Button } from "../Styling";
 import { Div } from "../Sections";
 import Icon from "../Icon";
@@ -137,7 +137,7 @@ const Carousel = ({
       padding_md={padding_md || "0px"}
       padding_lg={padding_lg || "0px"}
       padding_tablet={padding_tablet || "0px"}
-      margin_tablet={margin_tablet || "30px auto"}
+      margin_tablet={margin_tablet || "auto"}
       margin={margin || "0 0 36px 0"}
       maxWidth={maxWidth}
       {...rest}
@@ -147,20 +147,16 @@ const Carousel = ({
           flexDirection="column"
           alignItems="center"
           gap="32px"
-          margin="0 0 30px 0"
+          margin="0 0 32px 0"
         >
           {content?.heading && (
-            <H2 lineHeight="36px" {...content.headingProps}>
-              {content?.heading}
-            </H2>
+            <H2 {...content.headingProps}>{content?.heading}</H2>
           )}
 
           {content?.content && (
             <Div flexDirection="column" margin="0 0 10px 0">
-              <Paragraph
-                margin="0 0 0 0"
-                fontSize="16px"
-                lineHeight="20px"
+              <SubTitle
+                padding="0 20px"
                 dangerouslySetInnerHTML={{ __html: content.content }}
                 {...content.contentProps}
               />

@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { graphql } from "gatsby";
 import { isCustomBarActive } from "../actions";
 import { SessionContext } from "../session";
+import { Colors } from "../components/Styling";
 import BaseRender from "./_baseLayout";
 
 // components
@@ -16,9 +17,9 @@ const Privacy = (props) => {
       <GridContainer
         github="/components/privacy"
         columns_tablet="12"
-        // margin_tablet="120px 0 0 0"
-        margin={isCustomBarActive(session) ? "160px 0 0 0" : "120px 0 0 0"}
-        // margin="35px 0 0 0"
+        margin_tablet={
+          isCustomBarActive(session) ? "160px 0 0 0" : "120px 0 0 0"
+        }
       >
         <Div flexDirection="column" gridColumn_tablet=" 2 / 12">
           <H1
@@ -27,7 +28,7 @@ const Privacy = (props) => {
             lineHeight="16px"
             fontWeight="700"
             letterSpacing="0.05em"
-            color="#606060"
+            color={Colors.darkGray2}
           >
             {yml.seo_title}
           </H1>

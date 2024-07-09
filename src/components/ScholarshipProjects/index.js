@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { H2, H3, H4, Paragraph } from "../Heading";
+import { H2, H3, H4, Paragraph, SubTitle } from "../Heading";
 import Slider from "react-slick";
 import { Div, HR } from "../Sections";
 import { StyledBackgroundSection } from "../Styling";
@@ -35,7 +35,7 @@ const ScholarshipProjects = ({ content, maxWidth }) => {
       padding_lg="70px 0px"
     >
       <H2 margin="0 0 10px 0">{content.title}</H2>
-      <Paragraph margin="0 0 25px 0">{content.description}</Paragraph>
+      <SubTitle margin="0 0 25px 0">{content.description}</SubTitle>
       <Button
         display="none"
         display_tablet="block"

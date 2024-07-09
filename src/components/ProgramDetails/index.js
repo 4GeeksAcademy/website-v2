@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { GridContainer, Grid, Div } from "../Sections";
-import { H2, H3, H4, Paragraph } from "../Heading";
+import { H2, H3, H4, Paragraph, SubTitle } from "../Heading";
 import { Colors, Anchor } from "../Styling";
 import Icon from "../Icon";
 import Link from "gatsby-link";
@@ -87,16 +87,11 @@ const ProgramDetails = (props) => {
           margin="40px 20px 13px 20px"
         >
           <H3 textAlign="start">{title}</H3>
-          {sub_title && /<\/?[a-z0-9]+>/g.test(sub_title) ? (
+          {sub_title && (
             <Paragraph
               textAlign="start"
-              lineHeight="26px"
               dangerouslySetInnerHTML={{ __html: sub_title }}
             />
-          ) : (
-            <Paragraph textAlign="start" lineHeight="26px">
-              {sub_title}
-            </Paragraph>
           )}
         </Div>
         <Div
@@ -147,12 +142,9 @@ const ProgramDetails = (props) => {
       </Grid>
 
       <Div flexWrap="wrap" margin_xxs="20px" margin_tablet="100px 0 0 0">
-        <H2 lineHeight="36px">{props.heading || props.details.heading}</H2>
-        <Paragraph
+        <H2>{props.heading || props.details.heading}</H2>
+        <SubTitle
           padding="20px 0 0 0"
-          lineHeight_xs="22px"
-          fontSize_tablet="15px"
-          fontSize_xs="18px"
           dangerouslySetInnerHTML={{ __html: splitedSubHeading }}
         />
       </Div>
@@ -190,33 +182,28 @@ const ProgramDetails = (props) => {
                     key={index}
                     onClick={() => setSelected({ index, manual: true })}
                     cursor="pointer"
-                    flexDirection={`column`}
-                    alignItems={`center`}
+                    flexDirection="column"
+                    alignItems="center"
                     backgroundHover={Colors.grayBrown}
                     background={
                       selected.index === index ? Colors.grayBrown : null
                     }
-                    padding={"10px"}
-                    borderRadius={"3px"}
+                    padding="10px"
+                    borderRadius="3px"
                     display="flex"
+                    color={
+                      selected.index === index ? "#ffffff" : Colors.darkGray
+                    }
+                    colorHover="#ffffff"
                   >
-                    <Div
-                      alignItems={`center`}
-                      margin={`0 0 5px 0`}
-                      display="flex"
+                    <H4
+                      color="inherit"
+                      fontWeight="900"
+                      cursor="pointer"
+                      lineHeight="19px"
                     >
-                      <H4
-                        color={
-                          selected.index === index ? "#ffffff" : Colors.darkGray
-                        }
-                        colorHover="#ffffff"
-                        fontWeight="900"
-                        cursor={`pointer`}
-                        lineHeight="19px"
-                      >
-                        {item.module_name}
-                      </H4>
-                    </Div>
+                      {item.module_name}
+                    </H4>
                   </Div>
                 );
               })}
@@ -276,8 +263,6 @@ const ProgramDetails = (props) => {
                     textAlign="left"
                     textTransform="uppercase"
                     margin="0 0 10px 0"
-                    fontSize_xs="18px"
-                    fontSize_tavlet="22px"
                   >
                     {props.details.details_modules[selected.index].title}
                   </H3>
@@ -288,10 +273,6 @@ const ProgramDetails = (props) => {
                         key={i}
                         textAlign="left"
                         color={Colors.darkGray}
-                        fontSize_tablet="18px"
-                        fontSize_xs="14px"
-                        lineHeight_tablet="19px"
-                        lineHeight_xs="17px"
                         margin="0 0 10px 0"
                       >
                         {detail}
@@ -323,8 +304,6 @@ const ProgramDetails = (props) => {
                       textAlign="left"
                       textTransform="uppercase"
                       margin="0 0 10px 0"
-                      fontSize_xs="18px"
-                      fontSize_tavlet="22px"
                     >
                       {strings[lang]["Projects"]}
                     </H3>
@@ -335,10 +314,6 @@ const ProgramDetails = (props) => {
                           key={i}
                           textAlign="left"
                           color={Colors.darkGray}
-                          fontSize_tablet="18px"
-                          fontSize_xs="14px"
-                          lineHeight_tablet="19px"
-                          lineHeight_xs="17px"
                           margin="0 0 10px 0"
                         >
                           {detail}
@@ -360,16 +335,12 @@ const ProgramDetails = (props) => {
                       textAlign="left"
                       textTransform="uppercase"
                       margin="0 0 10px 0"
-                      fontSize_xs="18px"
-                      fontSize_tavlet="22px"
                     >
                       {strings[lang]["Duration"]}
                     </H3>
                     <Paragraph
                       textAlign="left"
                       color={Colors.darkGray}
-                      fontSize="18px"
-                      lineHeight="19px"
                       margin="0 0 10px 0"
                     >
                       {props.details.details_modules[selected.index].duration}
