@@ -1,25 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { Link, graphql } from "gatsby";
 import BaseRender from "./_baseLayout";
-import { Header, Div, GridContainer } from "../components/Sections";
+import { Header, Div } from "../components/Sections";
 import { Button, Colors, Img } from "../components/Styling";
 import { requestSyllabus, isCustomBarActive } from "../actions";
 import { SessionContext } from "../session";
-import AboutTheProgram from "../components/AboutTheProgram";
 import ProgramDetails from "../components/ProgramDetails";
 import ProgramDetailsMobile from "../components/ProgramDetailsMobile";
 import PricesAndPayment from "../components/PricesAndPayment";
 import Modal from "../components/Modal";
 import LeadForm from "../components/LeadForm";
 import Badges from "../components/Badges";
-import TechsWeTeach from "../components/TechsWeTeach";
-import { Circle } from "../components/BackgroundDrawing";
 import UpcomingDates from "../components/UpcomingDates";
-import JobGuaranteeSmall from "../components/JobGuaranteeSmall";
-import GeeksInfo from "../components/GeeksInfo";
-import Testimonials from "../components/Testimonials";
 import OurPartners from "../components/OurPartners";
-import RelatedPosts from "../components/RelatedPosts";
 import Icon from "../components/Icon";
 import Overlaped from "../components/Overlaped";
 import Loc from "../components/Loc";
@@ -64,7 +57,7 @@ const ApliedAi = ({ data, pageContext, yml }) => {
   return (
     <>
       <Header
-        margin={
+        margin_md={
           isCustomBarActive(session) ? "120px auto 0 auto" : "90px auto 0 auto"
         }
         paragraphMargin="26px 20px"
@@ -81,7 +74,7 @@ const ApliedAi = ({ data, pageContext, yml }) => {
         fontSize_title="40px"
         fontSizeTitle_tablet="60px"
         fontFamily_title="Archivo-Black"
-        fontSize_paragraph="24px"
+        fontSize_paragraph="21px"
         gridTemplateColumns_tablet="repeat(14, 1fr)"
         maxWidth="1280px"
         uppercase
@@ -240,6 +233,21 @@ const ApliedAi = ({ data, pageContext, yml }) => {
         locations={data.allLocationYaml.edges}
         showMoreRedirect
       />
+      
+      {/* TWO COLUMN video CREAR EN EL YML*/}
+      <TwoColumn
+        left={{ image: yml.two_columns_video?.image, video: yml.two_columns_video?.video }}
+        right={{
+          heading: yml.two_columns_video?.heading,
+          sub_heading: yml.two_columns_video?.sub_heading,
+          bullets: yml.two_columns_video?.bullets,
+          content: yml.two_columns_video?.content,
+          button: yml.two_columns_video?.button,
+        }}
+        proportions={yml.two_columns_video?.proportions}
+        session={session}
+      />
+
       <PricesAndPayment
         background={`linear-gradient(to bottom, ${Colors.white} 50%, ${Colors.lightYellow2} 50%)`}
         type={pageContext.slug}
@@ -452,6 +460,34 @@ export const query = graphql`
             }
           }
           two_columns {
+            proportions
+            image {
+              style
+              src
+              shadow
+            }
+            video
+            heading {
+              text
+              font_size
+            }
+            sub_heading {
+              text
+              font_size
+            }
+            button {
+              text
+              color
+              background
+              path
+            }
+            bullets {
+              items {
+                text
+              }
+            }
+          }
+          two_columns_video {
             proportions
             image {
               style

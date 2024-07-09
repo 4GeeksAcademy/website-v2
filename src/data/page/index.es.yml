@@ -32,16 +32,12 @@ why_4geeks:
     shadow: false
   heading:
     text: "Sé parte de una comunidad vibrante"
-    style: '{ "fontWeight": 400, "marginBottom": "32px" }'
-    font_size: ["35px", "35px", "35px", "35px", "35px"]
+    style: '{ "fontWeight": 400, "marginBottom": "32px", "marginTop": "0px" }'
   sub_heading:
     text: "Únete a nuestra comunidad internacional de más de 4000 estudiantes, profesores, socios y exalumnos. Conéctate a través de diversos canales como Slack, GitHub, redes sociales y nuestra plataforma exclusiva 4Geeks.com. ¡Donde hay un geek, hay un camino! Lo que nos diferencia:"
-    font_size: ["21px", "21px", "21px", "21px", "21px"]
   content:
     text: |-
       Pertenecerás a una comunidad de personas afines que se apoyan genuinamente entre sí. Obtén acceso de por vida a nuestra plataforma de aprendizaje en línea y servicios de mentoría. Siempre estaremos aquí para ti, incluso después de graduarte.
-
-    font_size: ["16px"]
   button:
     text: "Aplica ahora"
     color: "white"
@@ -49,13 +45,13 @@ why_4geeks:
     path: "/us/apply"
   bullets:
     items:
-    - heading: "Mentoría en codificación disponible de por vida"
+    - text: "Mentoría en codificación disponible de por vida"
       icon: "check"
-    - heading: "Soporte profesional ilimitado y personalizado"
+    - text: "Soporte profesional ilimitado y personalizado"
       icon: "check"
-    - heading: "Plan de estudios y metodología galardonados"
+    - text: "Plan de estudios y metodología galardonados"
       icon: "check"
-    - heading: "Una extensa red de socios en tecnología"
+    - text: "Una extensa red de socios en tecnología"
       icon: "check"
 
 with_4geeks:
@@ -105,11 +101,9 @@ two_columns:
   heading:
     text: "$20 Millones en becas"
     style: '{ "fontWeight": 400, "marginBottom": "32px" }'
-    font_size: ["35px", "35px", "35px", "35px", "35px"]
   content:
     text: |
       1.456 personas se han beneficiado de nuestros programas de becas, de todos los orígenes posibles, <a style="color: black; cursor:pointer; text-decoration: underline; opacity: 0.8;">lea aquí</a> historias de los beneficiarios y proyectos.
-    font_size: ["21px"]
     path: /es/financiacion
   button:
     text: "Opciones de financiamiento"
@@ -127,15 +121,9 @@ two_columns:
 iconogram:
   heading:
     text: "¿Cómo hemos construido nuestra credibilidad a lo largo de los años?"
-    font_size:
-      - 35px
-      - 35px
-      - 35px
-      - 35px
-      - 35px
-    style: '{ "textAlign": "center", "fontSize": "40px", "fontWeight": 400 }'
+    style: '{ "textAlign": "center" }'
   swipable: false
-  background: veryLightBlue2
+  background: veryLightBlue3
   icons:
   - icon: "graduation-2"
     content: "4500+ Graduados"

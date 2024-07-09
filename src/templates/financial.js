@@ -68,6 +68,7 @@ const Financial = (props) => {
             margin="20px 0"
             type="h2"
             fontFamily="Archivo-Black"
+            color={Colors.black}
             textAlign="left"
             fontSize="40px"
             fontSize_tablet="50px"
@@ -75,13 +76,7 @@ const Financial = (props) => {
           >
             {header.title}
           </H2>
-          <Paragraph
-            color={Colors.black}
-            textAlign="left"
-            opacity="1"
-            fontSize="24px"
-            lineHeight="28px"
-          >
+          <Paragraph color={Colors.black} textAlign="left" fontSize="21px">
             {header.paragraph}
           </Paragraph>
           <Button
@@ -304,13 +299,11 @@ export const query = graphql`
             swipable
             heading {
               text
-              font_size
               style
             }
             sub_heading {
               text
               style
-              font_size
             }
             icons {
               icon

@@ -59,7 +59,8 @@ two_columns_first:
   proportions: [6, 6]
   image:
     style: '{"border" : "0px solid black", "backgroundSize": "contain", "background-position": "center" }'
-    src: "../../images/staff/chema-alonso.webp"  
+    src: "../../images/staff/chema-alonso.webp" 
+    link: "https://www.mypublicinbox.com/chemaalonso"
     shadow: false
   heading:
     text: "Curso de Ciberseguridad validado por Chema Alonso el Hacker más Reconocido de España"
@@ -74,10 +75,14 @@ two_columns_first:
     path: "#prices_and_payment"
   bullets:
     items:
-      - text: "Sala de Chat con el profesor y Chema Alonso."
-      - text: "4 libros de Ciberseguridad de 0xWORD, la editorial de Chema Alonso."
+      - text: |-
+          Sala de Chat con el profesor y Chema Alonso en <a href="https://www.mypublicinbox.com/" target="_blank">MyPublicInbox</a> + 2000 Tempos para gastar en la plataforma
+      - text: |-
+          4 libros de Ciberseguridad de <a href="https://0xword.com/" target="_blank">0xWORD</a>, la editorial de Chema Alonso.
       - text: "Chema Alonso ha validado los contenidos y los profesores de este Curso."  
-      - text: "Orientación laboral y ayuda para conseguir empleo en colaboración con Chema Alonso Y por supuesto nuestras mentorias ilimitadas y de por vida."  
+      - text: "Orientación laboral y ayuda para conseguir empleo en colaboración con Chema Alonso Y por supuesto nuestras mentorias ilimitadas y de por vida."
+      - text: |-
+           1 Examen de <a href="https://singularity-experts.com/es/l/hackers" target="_blank">Singularity Hackers</a>, la plataforma de formación para expertos en Ciberseguridad de Chema Alonso.
 
 two_columns_second:
   proportions: [6, 6]

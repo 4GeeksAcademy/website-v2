@@ -1,21 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import { graphql } from "gatsby";
-import { Title, H1, H2, H3, H4, H5, Paragraph } from "../components/Heading";
 import BaseRender from "./_baseLayout";
 import { isCustomBarActive } from "../actions";
 import { SessionContext } from "../session";
 // components
 import News from "../components/News";
-import Icon from "../components/Icon";
 import TestimonialCard from "../components/TestimonialCard";
-import {
-  Colors,
-  StyledBackgroundSection,
-  Anchor,
-  Img,
-} from "../components/Styling";
-import { GridContainer, Div, Header } from "../components/Sections";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { Colors, Img } from "../components/Styling";
+import { Div, Header } from "../components/Sections";
 
 const Press = (props) => {
   const { data, pageContext, yml } = props;
@@ -112,7 +104,7 @@ const Press = (props) => {
         fontSize_title="40px"
         fontSizeTitle_tablet="60px"
         fontFamily_title="Archivo-Black"
-        fontSize_paragraph="24px"
+        fontSize_paragraph="21px"
         gridTemplateColumns_tablet="repeat(14, 1fr)"
         maxWidth="1280px"
         uppercase

@@ -73,6 +73,19 @@ overlaped:
   image:
     src: "/images/landing/tres-personas-reloaded.webp"  
 
+## TWO COLUMNS INFO
+# two_columns_info:
+#   proportions: [6, 6]
+#   image:
+#     style: '{"backgroundSize": "contain" }'
+#     src: "/images/landing/grupo-ventanas.webp"
+#     shadow: false  
+#   heading:
+#     text: "Aprende a aplicar el Machine Learning a problemas del mundo real"
+#     font_size: ["30px", "30px", "30px", "30px", "30px"]
+#   sub_heading:
+#     text: "Nuestro bootcamp de data science está enfocado en brindar todas las herramientas y el apoyo necesario para que puedas triunfar en este campo."
+#     font_size: ["16px", "16px", "16px", "16px", "16px"]
 
 two_columns_info:
   proportions: [6, 6]

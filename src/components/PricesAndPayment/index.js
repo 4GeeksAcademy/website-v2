@@ -122,24 +122,13 @@ const PricingCard = ({
               </Div>
               <Div display="block">
                 <Paragraph
-                  lineHeight="17px"
-                  fontWeight_xs="700"
-                  fontSize="14px"
                   color={Colors.black}
-                  opacity="1"
                   textAlign="left"
                   margin="0 0 5px 0"
                 >
                   {scholarship}
                 </Paragraph>
-                <Paragraph
-                  lineHeight="17px"
-                  fontWeight="400"
-                  fontSize="14px"
-                  color={Colors.black}
-                  opacity="1"
-                  textAlign="left"
-                >
+                <Paragraph color={Colors.black} textAlign="left">
                   {payment_time}
                 </Paragraph>
               </Div>
@@ -220,7 +209,7 @@ const PricingCard = ({
           width="100%"
           borderRadius="4px"
         >
-          <H3 textAlign="center" margin="0 0 15px 0" fontSize="21px">
+          <H3 textAlign="center" margin="0 0 15px 0">
             {info.plan_details}
           </H3>
           {data.bullets &&
@@ -847,13 +836,7 @@ const PricesAndPayment = (props) => {
                       {info.job_guarantee.title}
                     </H4>
                   </Div>
-                  <Paragraph
-                    textAlign="left"
-                    color={Colors.black}
-                    opacity="1"
-                    fontSize="14px"
-                    lineHeight="17px"
-                  >
+                  <Paragraph textAlign="left" color={Colors.black}>
                     {info.job_guarantee.description}
                   </Paragraph>
                 </Div>
@@ -871,12 +854,7 @@ const PricesAndPayment = (props) => {
                   gridColumn_tablet="1/11"
                   gridRow_tablet="2"
                 >
-                  <H3
-                    textAlign="center"
-                    margin="0 0 16px 0"
-                    fontSize="21px"
-                    lineHeight="25px"
-                  >
+                  <H3 textAlign="center" margin="0 0 16px 0">
                     {info.plan_details}
                   </H3>
                   <hr style={{ border: "1px solid #ebebeb", width: "60%" }} />
@@ -891,14 +869,7 @@ const PricesAndPayment = (props) => {
                           color={Colors.blue}
                           fill={Colors.blue}
                         />
-                        <Paragraph
-                          lineHeight="19px"
-                          fontWeight="500"
-                          fontSize="16px"
-                          color={Colors.black}
-                          opacity="1"
-                          textAlign="left"
-                        >
+                        <Paragraph color={Colors.black} textAlign="left">
                           {bullet}
                         </Paragraph>
                       </Div>

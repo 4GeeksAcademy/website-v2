@@ -2,7 +2,7 @@ import React from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import { Div, GridContainer } from "../Sections";
 import DraggableDiv from "../DraggableDiv";
-import { Paragraph, H2 } from "../Heading";
+import { Paragraph, H2, SubTitle } from "../Heading";
 import { Colors } from "../Styling";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
@@ -42,30 +42,10 @@ const SquaresVariant = ({
           maxWidth={maxWidth}
           childMaxWidth="1280px"
         >
-          {title && (
-            <H2
-              type="h2"
-              lineHeight="35px"
-              lineHeight_tablet="28px"
-              fontSize="24px"
-              fontSize_tablet="35px"
-              fontWeight="400"
-            >
-              {title}
-            </H2>
-          )}
+          {title && <H2 type="h2">{title}</H2>}
           {paragraph && (
             <Div margin="15px 0">
-              <Paragraph
-                fontFamily="Lato-Light"
-                fontSize="18px"
-                fontSize_tablet="18px"
-                lineHeight="21px"
-                fontWeight="400"
-                color={Colors.black}
-                opacity="1"
-                dangerouslySetInnerHTML={{ __html: paragraph }}
-              />
+              <SubTitle dangerouslySetInnerHTML={{ __html: paragraph }} />
             </Div>
           )}
           <Div width="100%" style={{ overflowX: "auto" }}>
@@ -215,10 +195,7 @@ const Badges = ({
                 fontFamily="Lato-Light"
                 padding={paddingText || "0 10px 45px 10px"}
                 padding_tablet={paddingText_tablet || "0 5% 55px 5%"}
-                fontSize={short_link || short_text ? "16px" : "16px"}
-                fontSize_tablet={short_link || short_text ? "16px" : "16px"}
                 lineHeight={short_link || short_text ? "29px" : "38px"}
-                fontWeight="400"
                 color={Colors.darkGray}
                 dangerouslySetInnerHTML={{ __html: paragraph }}
                 margin="15px 0 0 0"
@@ -313,9 +290,6 @@ const Badges = ({
                 fontFamily="Lato"
                 padding={paddingText || "0 10px 45px 10px"}
                 padding_tablet={paddingText_tablet || "0 5% 55px 5%"}
-                fontSize={short_link || short_text ? "14px" : "14px"}
-                fontSize_tablet={short_link || short_text ? "14px" : "14px"}
-                lineHeight={short_link || short_text ? "29px" : "38px"}
                 color={Colors.black}
                 dangerouslySetInnerHTML={{ __html: paragraph }}
                 margin="15px 0 0 0"

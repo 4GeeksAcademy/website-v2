@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { isCustomBarActive } from "../actions";
 import { graphql, Link } from "gatsby";
-import { GridContainer, Header, Div } from "../components/Sections";
+import { Header, Div } from "../components/Sections";
 import { Button, Colors, Img } from "../components/Styling";
-import AboutTheProgram from "../components/AboutTheProgram";
 import ProgramDetails from "../components/ProgramDetails";
 import ProgramDetailsMobile from "../components/ProgramDetailsMobile";
 import GeeksInfo from "../components/GeeksInfo";
@@ -15,7 +14,6 @@ import { SessionContext } from "../session";
 import UpcomingDates from "../components/UpcomingDates";
 import Badges from "../components/Badges";
 import PricesAndPayment from "../components/PricesAndPayment";
-import { Circle } from "../components/BackgroundDrawing";
 import LeadForm from "../components/LeadForm";
 import Modal from "../components/Modal";
 import ScholarshipProjects from "../components/ScholarshipProjects";
@@ -27,7 +25,6 @@ import Loc from "../components/Loc";
 const DataScience = ({ data, pageContext, yml }) => {
   const { session } = React.useContext(SessionContext);
   const courseDetails = data.allCourseYaml.edges[0].node;
-  const geek = data.allCourseYaml.edges[0].node;
   const [open, setOpen] = React.useState(false);
 
   const defaultCourse = "machine-learning";
@@ -71,7 +68,7 @@ const DataScience = ({ data, pageContext, yml }) => {
   return (
     <>
       <Header
-        margin={
+        margin_md={
           isCustomBarActive(session) ? "120px auto 0 auto" : "90px auto 0 auto"
         }
         paragraphMargin="26px 20px"
@@ -88,7 +85,7 @@ const DataScience = ({ data, pageContext, yml }) => {
         fontSize_title="40px"
         fontSizeTitle_tablet="60px"
         fontFamily_title="Archivo-Black"
-        fontSize_paragraph="24px"
+        fontSize_paragraph="21px"
         gridTemplateColumns_tablet="repeat(14, 1fr)"
         maxWidth="1280px"
         uppercase
@@ -213,11 +210,12 @@ const DataScience = ({ data, pageContext, yml }) => {
         image={yml.overlaped?.image}
       />
 
-      {/* GEEKSINFO IS A TWOCOLUMN WITH TITLE
+      {/* GEEKSINFO IS A TWOCOLUMN WITH TITLE 
       <GeeksInfo lang={pageContext.lang} /> */}
 
+      {/* TWO COLUMN INFO CREAR EN EL YML*/}
       <TwoColumn
-        right={{ image: yml.two_columns_info?.image}}
+        right={{ image: yml.two_columns_info?.image, video: yml.two_columns_info?.video }}
         left={{
           section_heading: yml.two_columns_info?.section_heading,
           heading: yml.two_columns_info?.heading,
@@ -498,10 +496,6 @@ export const query = graphql`
               style
               src
               shadow
-            }
-            section_heading {
-              text
-              style
             }
             heading {
               text

@@ -73,7 +73,7 @@ const TestimonialCard = ({
       borderRadius="3px"
       padding="16px"
       border={`1px solid ${Colors.lightGray}`}
-      boxShadow={`0px 2px 5px rgba(0, 0, 0, 0.1)`}
+      boxShadow="0px 2px 5px rgba(0, 0, 0, 0.1)"
       style={{ breakInside: "avoid", marginBottom: "32px" }}
       width_xxs={width_xxs}
       width_xs={width_xs}
@@ -99,12 +99,7 @@ const TestimonialCard = ({
           />
           {stories ? ( //Where the component is called (true/false)
             <Div flexDirection="column" margin="0 0 0 9px">
-              <H3
-                fontSize="15px"
-                lineHeight="19px"
-                textAlign="left"
-                fontFamily="Lato-Black"
-              >
+              <H3 fontSize="16px" textAlign="left" fontFamily="Lato-Black">
                 {name}
               </H3>
               <H4
@@ -170,10 +165,7 @@ const TestimonialCard = ({
         <Paragraph
           textAlign="left"
           margin="12px 0 0 0"
-          fontSize="13px"
-          lineHeight="22px"
           letterSpacing="0.05em"
-          fontWeight="300"
           dangerouslySetInnerHTML={{
             __html:
               description.length > 500 && !isExpanded
