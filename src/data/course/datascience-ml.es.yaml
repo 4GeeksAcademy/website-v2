@@ -94,16 +94,17 @@ two_columns_info:
     shadow: false 
     src: "/images/landing/grupo-ventanas.webp"
   section_heading: 
-    text: "Diseñado para hacerte exitoso en el mundo de la programación"
-    style: '{}'
+    text: "Aprende a aplicar el Machine Learning a problemas del mundo real"
   heading:
-    text: "Diseñado para hacerte exitoso en el mundo de la programación"
-      #xl      lg     md     sm    xs
+    text: ""
+          #xl      lg     md     sm    xs
     font_size: ["40px", "34px", "34px", "25px", "20px"]
-  content:
+  sub_heading:
     style: '{}'
-    text: "Fidel Vera, siempre interesado en el potencial de los datos, encontró en 4Geeks Academy la plataforma perfecta para convertir su afición en una carrera profesional sólida. El bootcamp de Data Science de 4Geeks Academy le brindó las herramientas y el conocimiento necesarios para desenvolverse con éxito en este campo tan demandado."
+    text: "Nuestro bootcamp de data science está enfocado en brindar todas las herramientas y el apoyo necesario para que puedas triunfar en este campo."
     font_size: ["16px"]
+  content:
+    text: "Fidel Vera siempre tuvo una fascinación por el potencial de los datos. En 4Geeks Academy, encontró el trampolín perfecto para convertir su pasión en una carrera profesional exitosa. Nuestro bootcamp de Data Science le proporcionó las herramientas y el conocimiento necesarios para integrarse en este campo en la industria tech."
   button:
     text: "Comparar precios y planes"
     path: "#prices_and_payment"
@@ -112,14 +113,12 @@ two_columns_info:
     hover: "lightBlue"
   bullets:
     items: 
-    - heading: "Mentorías Personalizadas Ilimitadas:"
-      text: "Accede a mentorías en línea y en persona de por vida, incluso para resolver dudas específicas relacionadas con la codificación en el ámbito laboral."
-    - heading: "Respuesta Rápida:"
-      text: "No te quedes atascado con tu código, en 4Geeks Academy recibirás ayuda de un instructor en menos de 30 minutos."
-    - heading: "Proporción 1:10 Profesor-Estudiante:"
-      text: "Contamos con más profesores que el promedio de la industria, lo que garantiza una atención personalizada y de calidad."
-    - heading: "Soporte Profesional Personalizado:"
-      text: "Recibe un soporte adaptado a cada oportunidad laboral en el campo de Data Science."
+    - heading: "MENTORÍAS ILIMITADAS"
+      text: "Obtén soporte experto para todas tus preguntas. Nuestros mentores están siempre disponibles en línea, listos para ayudarte desde el primer día hasta siempre."
+    - heading: "PROPORCIÓN PROFESOR ESTUDIANTE 1:7"
+      text: "Experimenta una atención perzonalizada con nuestra proporción profesor-alumno superior a la media."
+    - heading: "APOYO PROFESIONAL PERSONALIZADO"
+      text: "Recibe asesoramiento, orientación y formación ilimitados adaptados a tu perfil único y a tus ofertas de trabajo específicas."
 
 two_columns:
   proportions: [6, 6]
