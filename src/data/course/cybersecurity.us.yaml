@@ -288,6 +288,17 @@ syllabus:
   heading: Get all the information about the syllabus
   button_label: Download
 
+career_opportunities:
+  - name: Computer networking engineer
+  - name: Computer scientist
+  - name: Cryptographer
+  - name: Information security analyst
+  - name: Network security administrator
+  - name: Operating systems engineer
+  - name: Security analyst
+  - name: Security software developer
+  - name: Software engineer
+
 potential_companies:
   tagline: "Get trained to thrive at major companies"
   sub_heading: "Get ready to apply to the best companies in the world: Develop the tools to upskill for the future of AI work."
