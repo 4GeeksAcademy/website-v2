@@ -289,15 +289,15 @@ syllabus:
   button_label: Download
 
 career_opportunities:
-  - name: Computer networking engineer
-  - name: Computer scientist
-  - name: Cryptographer
-  - name: Information security analyst
-  - name: Network security administrator
-  - name: Operating systems engineer
-  - name: Security analyst
-  - name: Security software developer
-  - name: Software engineer
+  - slug: computer-networking-engineer
+  - slug: computer-scientist
+  - slug: cryptographer
+  - slug: information-security-analyst
+  - slug: network-security-administrator
+  - slug: operating-systems-engineer
+  - slug: security-analyst
+  - slug: security-software-developer
+  - slug: software-engineer
 
 potential_companies:
   tagline: "Get trained to thrive at major companies"
