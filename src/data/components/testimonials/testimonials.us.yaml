@@ -30,7 +30,7 @@ testimonials:
   #   linkedin_image: "../../../../static/images/linkedin.png"
   - student_name: João Henrique Xavier
     include_in_marquee: true
-    short_content: "Software Engineer at NCCI"
+    short_content: "Software Engineer @ Microsoft"
     linkedin_url: "https://www.linkedin.com/in/joao-henrique-xavier/"
     student_thumb: "../../../../static/images/testimonials/joao-xavier.jpeg"
     linkedin_image: "../../../../static/images/linkedin.png"
