@@ -77,7 +77,7 @@ two_columns_first:
       - text: "Sala de Chat con el profesor y Chema Alonso."
       - text: "4 libros de Ciberseguridad de 0xWORD, la editorial de Chema Alonso."
       - text: "Chema Alonso ha validado los contenidos y los profesores de este Curso."  
-      - text: "Orientación laboral y ayuda para conseguir empleo en colaboración con Chema Alonso Y por supuesto nuestras mentorias ilimitadas y de por vida."  
+      - text: "Sesión de Q&A grupal de una hora de todos los estudiantes con Chema Alonso donde se podrán hacer preguntas acerca del futuro profesional en el mundo de la ciberseguridad."  
 
 two_columns_second:
   proportions: [6, 6]
