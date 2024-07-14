@@ -1,9 +1,9 @@
 meta_info:
-  slug: "bootcamp-programacion-orlando"
+  slug: "bootcamp-programacion-tampa"
   position: 2
-  title: "4Geeks Academy Orlando - Bootcamp de programación en Orlando, aprende a programar en Orlando"
-  description: "Conoce aquí todo sobre nuestro campus de bootcamp de programación en Orlando, Florida de 4GeeksAcademy"
-  image: "/images/og-preview/orlando-usa.es.png"
+  title: "4Geeks Academy Tampa - Bootcamp de programación en Tampa, aprende a programar en Tampa"
+  description: "Conoce aquí todo sobre nuestro campus de bootcamp de programación en Tampa, Florida de 4GeeksAcademy"
+  image: "/images/og-preview/tampa-florida.webp"
   keywords: "null"
   redirects: []
   region: "usa-canada"
@@ -16,14 +16,14 @@ meta_info:
   cohort_exclude_regex: ['usa-\d{1,10}-spanish']
   home_video: "https://ask.4geeks.com/f67qc0ewu"
 
-seo_title: "Bootcamp de Programación en Orlando"
+seo_title: "Bootcamp de Programación en Tampa"
 header:
-  tagline: "4Geeks Academy en Orlando"
+  tagline: "4Geeks Academy en Tampa"
   sub_header: "Todos los programas son enseñados "
   sub_header_highlighted: "Online, Híbrida o En Persona."
   paragraph: ""
-  image: "../../../static/images/locations/orlando-header.png"
-  alt: "4Geeks Academy modalidad online y presencial en Orlando, Florida"
+  image: "../../../static/images/locations/tampa-location.webp"
+  alt: "4Geeks Academy modalidad online y presencial en Tampa, Florida"
 button_header:
   button_text: Ver Programas
   button_link: "#programs"
@@ -47,17 +47,17 @@ badges:
     4Geeks Academy es el lugar donde los desarrolladores crecen y prosperan. 
     Estamos autorizados por el Departamento de Educación de Florida. 
     Elegido como uno de los 35 mejores cursos de programacion del mundo y 
-    el mejor <a href="/es/curso-de-programacion-desde-cero">curso de programacion</a> en Orlando según SwitchUp. 
+    el mejor <a href="https://4geeksacademy.com/es/curso-de-programacion-desde-cero" rel="nofollow">curso de programacion</a> en Tampa según SwitchUp. 
     4Geeks Academy ha sido reconocida como uno de los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek. 
     Una comunidad construida para desarrolladores.
 news:
-  title: "4Geeks Academy Orlando en las noticias..."
+  title: "4Geeks Academy Tampa en las noticias..."
 upcoming:
   no_dates_message: "Actualmente no hay próximas fechas para este campus"
   actionMessage: "Avisenme fechas disponibles"
 
 info_box:
-  heading: "Encuéntranos en Orlando"
+  heading: "Encuéntranos en Tampa"
   address: "450 S Orange Ave, Orlando, FL 32801"
   iframeMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.0886003492096!2d-81.37933699999999!3d28.5370565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e77b01bf992b61%3A0xaecd468d9c4f262c!2sCNL%20Center%20City%20Commons%2C%20450%20S%20Orange%20Ave%2C%20Orlando%2C%20FL%2032801%2C%20USA!5e0!3m2!1sen!2sve!4v1684182525637!5m2!1sen!2sve"
   contact_heading: "Contacts"
@@ -67,15 +67,17 @@ info_box:
   alt: ""
 images_box:
   heading: "Qué deberías saber acerca de esta ubicacion: "
-  content: |
-    La ciudad es conocida por sus parques temáticos y atracciones famosos en todo el mundo, pero también es hogar de una vibrante comunidad de tecnólogos y visionarios. Empresas como EA Sport, Siemens, Boeing, Disney, entre otras, tienen sus sedes allí. Este es el ecosistema tecnológico de Orlando, una cuna de creatividad, donde las ideas dan lugar a soluciones innovadoras que revolucionan el mundo.
+  content: |-
+    Tampa es conocida por sus hermosos frentes marítimos y su dinámica escena cultural, pero también es un floreciente centro de tecnología e innovación. Hogar de empresas como Jabil, Tech Data y el gigante de la ciberseguridad ReliaQuest, el ecosistema tecnológico de Tampa está en pleno auge. Esta ciudad fomenta un ambiente donde tanto las startups como las empresas consolidadas pueden prosperar, convirtiéndola en un punto de referencia para la innovación y el espíritu emprendedor. El compromiso de Tampa con la tecnología y el crecimiento la ha posicionado como líder en la industria tecnológica, impulsando avances que están moldeando el futuro.
   images:
-    - path: "../../../static/images/locations/orlando-new.png"
-      alt: "Orlando city"
+    - path: "../../../static/images/locations/tampa-location-image-1.webp"
+      alt: "Ciudad de Tampa"
     - path: "../../../static/images/ownpeoplecoding2.webp"
       alt: "4Geeks Own People Coding"
     - path: "../../../static/images/ownmancoding.webp"
       alt: "Remote-Coding-Bootcamp"
+    - path: "../../../static/images/locations/tampa-location-image-2.webp"
+      alt: "Ciudad de Tampa"
     - path: "../../../static/images/locations/miami-old.jpg"
       alt: "4Geeeks location"
     - path: "../../../static/images/locations/miami-people.jpeg"
@@ -90,7 +92,7 @@ two_columns:
     shadow: true  
   video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
   heading:
-    text: " Tu Sendero hacia la Tecnología con 4Geeks Academy en Orlando"
+    text: " Tu Sendero hacia la Tecnología con 4Geeks Academy en Tampa"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
     text: "Desbloquea Tu Potencial en Tecnología a través de la Programación"
@@ -106,8 +108,8 @@ two_columns:
     - text: "Cursos dirigidos por expertos que enfatizan el dominio práctico en codificación para aplicaciones reales"
     - text: "Enfoque centrado en la carrera profesional que te prepara para destacar en el competitivo mercado laboral"
 
-active_campaign_location_slug: "orlando"
-breathecode_location_slug: "orlando"
+active_campaign_location_slug: "tampa"
+breathecode_location_slug: "tampa-usa"
 in_person_available: true # important to accept in-person applicants
 
 consents:
@@ -117,13 +119,13 @@ consents:
     message: 'Al completar este formulario acepto que mi información será utilizada para enviarme información comercial sobre 4Geeks Academy y que podría resultar una relación comercial a partir de esto. Revisa nuestra <a style={{ marginLeft: "5px" }} target="_blank" rel="noopener noreferrer nofollow" className="decorated" href="/es/privacidad">Política de Privacidad</a>'
     error_message: "Debes aceptar el consent de GDPR"
 
-city: "Orlando"
-name: "Orlando, USA"
-latitude: "28.538336"
-longitude: "-81.379234"
-address: "37 N Orange Ave"
+city: "Tampa"
+name: "Tampa, USA"
+latitude: "27.9517"
+longitude: "82.4588"
 phone: "+1 (786) 416-6640"
-zip_code: "33130"
+address: ""
+zip_code: "32801"
 state: "Florida"
 country: "USA"
 country_shortname: "us"
@@ -150,5 +152,5 @@ location_office_image: ""
 location_office_image2: ""
 location_office_image3: ""
 should_know: ""
-value: "Orlando"
+value: "Tampa"
 defaultLanguage: "us" # All lead marketing communications will arrive on this language

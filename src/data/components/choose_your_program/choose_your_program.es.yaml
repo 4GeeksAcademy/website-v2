@@ -7,7 +7,7 @@ programs:
     icon: "fullstack_2"
     description: "Convierte en un programador que utiliza las tecnologias más búscadas, mentoria personalizada y un plan de estudios y career support para conseguir tu primer trabajo."
     description_mobile: "Online, presencial y flexible"
-    link: "/es/coding-bootcamps/full-stack-part-time"
+    link: "/es/coding-bootcamps/desarrollador-full-stack"
     text_link: "Más Info"
 
   - title: "Data Science y Machine Learning"

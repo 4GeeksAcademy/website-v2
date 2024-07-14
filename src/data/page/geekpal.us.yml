@@ -52,7 +52,7 @@ list:
           <span style='font-weight: bold'> unlimited mentoring continues</span> even after you finish your studies at 4Geeks."
 
   - title: "Wherever and whenever"
-    image: "../../../static/images/mujer-leyendo-cafeteria.png"
+    image: "../../../static/images/mujer-leyendo-cafeteria.webp"
     position: "left"
     text: "In 4Geeks we not only adjust the sessions 
       <span style='font-weight: bold'> according to your calendar</span>, but we also give you the opportunity to see them 
@@ -71,7 +71,7 @@ list:
         text: "Is a community created to accelerate the way junior developers learn and evolve using technology. <a href='https://4geeks.com'>4Geeks.com</a> gives you access to many resources to improve your skills, but also you can contribute to help others with their code."
       - title: "Slack Community"
         text: "Our international community of more than 
-          <span style='font-weight: bold'> 2100 people</span>, who will provide you with all the support you need."
+          <span style='font-weight: bold'> 6100 people</span>, who will provide you with all the support you need."
 
 # benefits:
 #   - p:
