@@ -38,15 +38,15 @@ navbar:
 
 header_data:
   background: "#FFF1D1"
-  tagline: ¿Quieres convertirte en un desarrollador Full Stack?🚀
+  tagline: ¡Aprende a tu propio Ritmo!
   tagline_color: "black"
-  sub_heading: "Con nuestro programa asincrónico, podrás aprender a programar a tu propio ritmo en 8 meses."
+  sub_heading: "¿Quieres convertirte en un desarrollador Full Stack?🚀 Con nuestro programa asíncrono, podrás aprender a programar a tu propio ritmo en 8 meses."
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
 
 features:
   marginTop: 0px #<-- separation between tagline and the bullets
-  text: '<span style="margin-top: 10px; display: block; color: black;"> <strong style="font-weight: bold; color:black;">¡Conviértete en Full Stack Developer Junior</strong> trabajando en proyectos reales y con mentores profesionales!</span>'
+  text: ''
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
     - Workshops semanales en vivo o grabados y mentorías grupales durante 8 meses.
@@ -143,11 +143,11 @@ components:
       path: ""
     bullets:
       items:
-      - heading: "De 4 a 18 cuotas sin interés con tarjetas de banco de chile."
+      - text: "De 4 a 18 cuotas sin interés con tarjetas de banco de chile."
         icon: "circle" 
-      - heading: "Hasta 12 cuotas sin interés con tarjetas de crédito de cualquier otro banco."
+      - text: "Hasta 12 cuotas sin interés con tarjetas de crédito de cualquier otro banco."
         icon: "circle" 
-      - heading: "Transferencia bancaria."
+      - text: "Transferencia bancaria."
         icon: "circle"  
 
   - name: python_y_javascript
@@ -168,11 +168,11 @@ components:
       font_size: ["16px"]
     bullets:
       items:
-      - heading: "Sesiones grupales todos los jueves de 19 a 21 hrs."
+      - text: "Sesiones grupales todos los jueves de 19 a 21 hrs."
         icon: "check" 
-      - heading: "Duración del programa: 8 meses."
+      - text: "Duración del programa: 8 meses."
         icon: "check" 
-      - heading: "Feedback personalizado para cada proyecto entregado."
+      - text: "Feedback personalizado para cada proyecto entregado."
         icon: "check"
 
   - name: two_column_geekforce
@@ -205,12 +205,12 @@ components:
 
   - name: two_column_rigobot
     position: 5
-    proportions: [4, 8]
+    proportions: [6, 6]
     background: "lightYellow" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9 .
     layout: two_column_left
     image:
       style: '{"backgroundSize": "contain", "background-position": "center"}'
-      src: "/images/rigoberto/rigo-book.png"
+      src: "/images/landing/rigobot-logo.png"
       shadow: false
     heading:
       text: "RIGOBOT"

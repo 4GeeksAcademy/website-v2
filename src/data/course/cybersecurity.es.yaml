@@ -80,9 +80,7 @@ two_columns_first:
       - text: |-
           4 libros de Ciberseguridad de <a href="https://0xword.com/" target="_blank">0xWORD</a>, la editorial de Chema Alonso.
       - text: "Chema Alonso ha validado los contenidos y los profesores de este Curso."  
-      - text: "Orientación laboral y ayuda para conseguir empleo en colaboración con Chema Alonso Y por supuesto nuestras mentorias ilimitadas y de por vida."
-      - text: |-
-           1 Examen de <a href="https://singularity-experts.com/es/l/hackers" target="_blank">Singularity Hackers</a>, la plataforma de formación para expertos en Ciberseguridad de Chema Alonso.
+      - text: "Sesión de Q&A grupal de una hora de todos los estudiantes con Chema Alonso donde se podrán hacer preguntas acerca del futuro profesional en el mundo de la ciberseguridad."  
 
 two_columns_second:
   proportions: [6, 6]

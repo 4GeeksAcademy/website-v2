@@ -111,11 +111,11 @@ part_time:
     scholarship: "Pay upfront"
     payment_time: "And get a discount"
     price: "€5,200*"
-    original_price: "€7,500"
-    offer: "30% discount"
+    original_price: "€7,800"
+    offer: "~ 30% discount"
     bullets:
       - "Pay by bank transfer, credit or debit card, Paypal, Bitcoin, or Ethereum"
-      - "*Discount up to €2,300*. Pay from €5,200 instead of €7,500. Discount subject to availability!"     
+      - "*Discount up to €2,600*. Pay from €5,200 instead of €7,800. Discount subject to availability!"     
     icons: 
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
@@ -127,11 +127,11 @@ part_time:
     scholarship: "Financed. From €200* per month"
     payment_time: "Apply for a scholarship (limited scholarship slots available)."
     price: "€5,409*"
-    original_price: "€7,500"
+    original_price: "€7,800"
     bullets:
       - "Pay in monthly installments. Starting at €200"
       - "Customized financing, with or without interest, from 4 to 48 months (conditions apply)"
-      - "Scholarships available up to €2,091. Pay from €5,409 instead of €7,500. Scholarships subject to availability!"     
+      - "Scholarships available up to €2,391. Pay from €5,409 instead of €7,800. Scholarships subject to availability!"     
     icons: 
       - "/images/zank.png"
       - "/images/sequra.png"
@@ -157,11 +157,11 @@ part_time:
     scholarship: "Pay upfront"
     payment_time: "And get a discount"
     price: "€5,200*"
-    original_price: "€7,500"
-    offer: "30% discount"
+    original_price: "€7,800"
+    offer: "~ 30% discount"
     bullets:
       - "Pay by bank transfer, credit or debit card, Paypal, Bitcoin, or Ethereum"
-      - "*Discount up to €2,300*. Pay from €5,200 instead of €7,500. Discount subject to availability!"
+      - "*Discount up to €2,600*. Pay from €5,200 instead of €7,800. Discount subject to availability!" 
     icons: 
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
@@ -173,11 +173,11 @@ part_time:
     scholarship: "Financed. From €200* per month"
     payment_time: "Apply for a scholarship (limited scholarship slots available)."
     price: "€5,409*"
-    original_price: "€7,500"
+    original_price: "€7,800"
     bullets:
       - "Pay in monthly installments. Starting at €200"
       - "Customized financing, with or without interest, from 4 to 48 months (conditions apply)"
-      - "Scholarships available up to €2,091. Pay from €5,409 instead of €7,500. Scholarships subject to availability!"      
+      - "Scholarships available up to €2,391. Pay from €5,409 instead of €7,800. Scholarships subject to availability!"     
     icons: 
       - "/images/bcas.png"
           
@@ -200,11 +200,11 @@ part_time:
     scholarship: "Pay upfront"
     payment_time: "And get a discount"
     price: "€5,200*"
-    original_price: "€7,500"
-    offer: "30% discount"
+    original_price: "€7,800"
+    offer: "~ 30% discount"
     bullets:
       - "Pay by bank transfer, credit or debit card, Paypal, Bitcoin, or Ethereum"
-      - "*Discount up to €2,300*. Pay from €5,200 instead of €7,500. Discount subject to availability!" 
+      - "*Discount up to €2,600*. Pay from €5,200 instead of €7,800. Discount subject to availability!" 
     icons: 
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
@@ -216,11 +216,11 @@ part_time:
     scholarship: "Financed. From €200* per month"
     payment_time: "Apply for a scholarship (limited scholarship slots available)."
     price: "€5,409*"
-    original_price: "€7,500"
+    original_price: "€7,800"
     bullets:
       - "Pay in monthly installments. Starting at €200"
       - "Customized financing, with or without interest, from 4 to 48 months (conditions apply)"
-      - "Scholarships available up to €2,091. Pay from €5,409 instead of €7,500. Scholarships subject to availability!"  
+      - "Scholarships available up to €2,391. Pay from €5,409 instead of €7,800. Scholarships subject to availability!" 
     icons: 
       - "/images/bcas.png"
 
