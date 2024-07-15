@@ -30,7 +30,7 @@ intro:
     - "You need to choose a program."
     - "You need to choose a city/Campus."
     - "Each campus offers you different options. For example: Miami (Skills Fund, Climb), Madrid (Quotanda or Stuent Finance), Chile (Quotanda)."
-    - "Ask for Income Sharing Agreements (only available for Full-Time students), Scholarships available (we are always finding new ways to lower the final price), and/or partnerships with special offers."
+    - "Scholarships available (we are always finding new ways to lower the final price), and/or partnerships with special offers."
     - "Apply, go through the admissions process or call us now. We are here to help. Your Coding Career at 4Geeks is about to start." 
 
 ## TUITION AND PAYMENTS SECTION
@@ -75,10 +75,10 @@ iconogram:
     color: "#25BF6C"
     title: Scholarships and partnerships
     content: "We are working with several organizations to reduce your tuition fee."
-  - icon: "contract-2"
-    color: "#BE8BFF"
-    title: Income Sharing Agreement
-    content: "Pay only when you secure a well-paying job."
+  # - icon: "contract-2"
+  #   color: "#BE8BFF"
+  #   title: Income Sharing Agreement
+  #   content: "Pay only when you secure a well-paying job."
   button:
     text: "Conditions apply."
     color: ""
