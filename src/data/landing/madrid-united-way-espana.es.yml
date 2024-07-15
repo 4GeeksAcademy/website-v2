@@ -262,17 +262,17 @@ components:
       text: ""
     bullets:
       items:
-      - heading: "1. Apúntate al programa"
+      - text: "1. Apúntate al programa"
         icon: "circle" 
-      - heading: "2. Aprende a programar"
+      - text: "2. Aprende a programar"
         icon: "circle" 
-      - heading: "3. Entrega tu proyecto final"
+      - text: "3. Entrega tu proyecto final"
         icon: "circle" 
-      - heading: "4. Conviértete en Programador"
+      - text: "4. Conviértete en Programador"
         icon: "circle" 
-      - heading: "5. Consigue un trabajo"
+      - text: "5. Consigue un trabajo"
         icon: "circle" 
-      - heading: "6. Paga solo cuando consigas un trabajo de más de 16.000 € al año ¡sin intereses!"
+      - text: "6. Paga solo cuando consigas un trabajo de más de 16.000 € al año ¡sin intereses!"
         icon: "circle" 
 
 

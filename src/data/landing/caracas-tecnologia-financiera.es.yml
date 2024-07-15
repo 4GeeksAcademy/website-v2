@@ -125,17 +125,13 @@ components:
       path: ""
     bullets:
       items:
-        - heading: "TODAS LAS MENTORIAS QUE NECESITAS"
-          text: ""
+        - text: "TODAS LAS MENTORIAS QUE NECESITAS"
           icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - heading: "TIEMPO DE RESPUESTA"
-          text: ""
+        - text: "TIEMPO DE RESPUESTA"
           icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - heading: "1:7 PROPORCIÓN PROFESOR: ESTUDIANTE"
-          text: ""
+        - text: "1:7 PROPORCIÓN PROFESOR: ESTUDIANTE"
           icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - heading: "SOPORTE PROFESIONAL A LA MEDIDA"
-          text: ""
+        - text: "SOPORTE PROFESIONAL A LA MEDIDA"
           icon: "check" #string with icon for example ['check', 'cicle', etc]
 
   - name: coding

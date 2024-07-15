@@ -138,11 +138,11 @@ components:
       path: "#leadform_header"
     bullets:
       items:
-        - heading: "¡Conviértete en un FullStack developer en tan solo 18 semanas!"
+        - text: "¡Conviértete en un FullStack developer en tan solo 18 semanas!"
           icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - heading: "Desarrollo de habilidades altamente valoradas en el mercado profesional."
+        - text: "Desarrollo de habilidades altamente valoradas en el mercado profesional."
           icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - heading: "Acceso a oportunidades laborales al momento de la graducación."
+        - text: "Acceso a oportunidades laborales al momento de la graducación."
           icon: "check" #string with icon for example ['check', 'cicle', etc]
     content:
       font_size: ["16px"]
