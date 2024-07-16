@@ -102,7 +102,7 @@ components:
     proportions: [6, 6]
     image:
       style: '{ "backgroundSize": "contain", "height": ["500px", "500px", "500px", "500px", "300px"], "minHeight": "auto" }'
-      src: "/images/landing/grupo-ventanas.png"
+      src: "/images/landing/grupo-ventanas.webp"
     heading:
       text: "Why coding?"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
