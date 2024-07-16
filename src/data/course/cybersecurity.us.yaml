@@ -288,6 +288,23 @@ syllabus:
   heading: Get all the information about the syllabus
   button_label: Download
 
+career_opportunities:
+  - slug: cryptographer
+  - slug: network-security-administrator
+  - slug: operating-systems-engineer
+  - slug: security-analyst
+  - slug: security-software-developer
+  - slug: cryptologist
+  - slug: cyber-crime-analyst/investigator
+  - slug: digital-forensics-analyst
+  - slug: ethical-hacker
+  - slug: information-security-analyst
+  - slug: penetration-tester
+  - slug: security-architect
+  - slug: security-engineer
+  - slug: security-management-specialist
+  - slug: security-software-developer
+
 potential_companies:
   tagline: "Get trained to thrive at major companies"
   sub_heading: "Get ready to apply to the best companies in the world: Develop the tools to upskill for the future of AI work."
