@@ -11,13 +11,13 @@ why:
     video: "https://www.youtube.com/watch?v=ln3bQsV1BaQ" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     # video: "ln3bQsV1BaQ"
     icon: address
-  - title: "We finance your career"
-    description: "Don't pay anything from day one until you finally get a coding job with our Income Sharing Agreement(ISA)."
-    image: "../../../../static/images/why2.jpg"
-    alt: ""
-    video: "https://www.youtube.com/watch?v=MBXqEnhodx0" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
-    # video: "MBXqEnhodx0"
-    icon: handmoney
+  # - title: "We finance your career"
+  #   description: "Don't pay anything from day one until you finally get a coding job with our Income Sharing Agreement(ISA)."
+  #   image: "../../../../static/images/why2.jpg"
+  #   alt: ""
+  #   video: "https://www.youtube.com/watch?v=MBXqEnhodx0" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+  #   # video: "MBXqEnhodx0"
+  #   icon: handmoney
   - title: "Never code alone again"
     description: "Limitless and forever: Mentorships, exercises, permanent chatroom, real classrooms, even after you get your job."
     image: "../../../../static/images/why1.jpg"
