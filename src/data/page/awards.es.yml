@@ -19,11 +19,17 @@ awards_list:
   #   title: "Departamento de Education de EEUU"
   #   paragraph: "Los Estados Unidos de America se aseguran de la calidad de la educación a través de los departamentos de educación a nivel federal. Contar con la certificación significa que estamos comprometidos a cumplir con todas las regulaciones nacionales y estatales y a ser supervisados y auditados anualmente para asegurar el éxito de la academia."
 
+  - image: "../../../static/images/badges/arp-logo-certification.png"
+    title: "Institutional Quality Online Education"
+    paragraph: "4Geeks Academy ha obtenido la certificación ARP, destacándose como líder en educación de programación en línea."
+    link: "https://arpcertificate.com/listado-de-cursos/programa-full-stack-development/"
+    text_link: Ver Página
+
   - image: "../../../static/images/badges/forbes-logo-award.png"
     title: "Los mejores Bootcamps Online del 2024"
     paragraph: "Hemos sido seleccionados por Forbes como uno de los mejores bootcamps de programación para este 2024."
     link: "https://www.forbes.com/advisor/education/bootcamps/best-full-stack-developer-bootcamp/#4geeks_academy_full_stack_developer_bootcamp_section"
-    text_link: Ver Articulo
+    text_link: Ver artículo
 
   - image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
     title: "Mejor bootcamp de programación para Course Report 2024"
@@ -35,7 +41,7 @@ awards_list:
     title: "Mejor bootcamp de programación para Ebootcamp 2024"
     paragraph: "Hemos sido nominados por eBootcamp como el principal bootcamp de programación para el 2024."
     link: "https://ebootcamp.net/top-bootcamps-programacion/"
-    text_link: See article
+    text_link: Ver artículo
 
   - image: "../../../static/images/badges/switchup-badge-2023.png"
     title: "Mejor bootcamp de programación Switchup 2023"

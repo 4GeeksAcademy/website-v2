@@ -1,9 +1,9 @@
 meta_info:
-  slug: aprende-a-tu-propio-ritmo-chile # <--- URL 4geeksacademy.com/us/landing/example
+  slug: 4geeks-academy-chile-mas-accesible # <--- URL 4geeksacademy.com/us/landing/example
           # This will show on social media when shared
   title: "Aprende a programar a tu propio ritmo en el mejor bootcamp de programación"
   description: "Aprende a programar a tu propio ritmo en el mejor bootcamp de programación: 4Geeks Academy."
-  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   # This will show on social media when shared
   image: "/images/bg/santiago-banner.png"
   keywords: ""
@@ -38,9 +38,9 @@ navbar:
 
 header_data:
   background: "#FFF1D1"
-  tagline: ¡Aprende a tu propio Ritmo!
+  tagline: ¡4Geeks Academy más accesible!
   tagline_color: "black"
-  sub_heading: "¿Quieres convertirte en un desarrollador Full Stack?🚀 Con nuestro programa asíncrono, podrás aprender a programar a tu propio ritmo en 8 meses."
+  sub_heading: "El bootcamp mejor posicionado y de mejor calidad de Chile lanza una opción más accessible para personas que la necesitan."
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
 
@@ -49,7 +49,8 @@ features:
   text: ''
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-    - Workshops semanales en vivo o grabados y mentorías grupales durante 8 meses.
+    - Con apoyo al alumno, ayuda en tiempo real y mentorias grupales.
+    - Clases semanales en vivo y acceso a grabacion posterior.
     - Feedback personalizado por cada proyecto entregado y acceso al contenido de por vida.
     - Certificado con aval internacional al completar todos los proyectos y acceso al programa general de empleabilidad.
 
