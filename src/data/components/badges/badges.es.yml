@@ -2,6 +2,10 @@
 # For example:
 paragraph: "Este curso cuenta con premios y reconocimientos que validan su excelencia"
 badges:
+  - name: "ARP Certificate"
+    url: ""
+    image: "../../../../static/images/badges/arp-logo-certification.png"
+    alt: "ARP Certificate"
   - name: "Ebootcamp top"
     url: ""
     image: "../../../../static/images/badges/ebootcamp-top.png"
