@@ -3,7 +3,7 @@ meta_info:
           # This will show on social media when shared
   title: "Aprende a programar a tu propio ritmo en el mejor bootcamp de programación"
   description: "Aprende a programar a tu propio ritmo en el mejor bootcamp de programación: 4Geeks Academy."
-  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   # This will show on social media when shared
   image: "/images/bg/santiago-banner.png"
   keywords: ""
