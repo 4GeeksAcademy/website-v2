@@ -12,7 +12,7 @@ meta_info:
 
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
-  utm_course: ["full-stack"]
+  utm_course: ["full-stack-own-rhythm"]
   utm_location: ["santiago-chile"]
   automation: FSAsincrono_Chile # comma separated, "soft" is the default value
   tag: request_more_info # comma separated, "request_more_info" is the default value
@@ -90,33 +90,46 @@ follow_bar:
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
 #
 
-# program_details:
-#   position: 3
-#   background: "#FFFFFF"
-#   heading: "Domina Python, JS y React"
-#   sub_heading: "Un curso de programación sobre las tecnologías más usadas del mundo"
+program_details:
+  position: 1
+  background: "#FFFFFF"
+  heading: "Domina Python, JS y React"
+  sub_heading: "Un curso de programación sobre las tecnologías más usadas del mundo"
 
+badges:
+  position: 3 # It's the position of the component that will be rendered first
+  heading: "4Geeks Academy cuenta con premios y reconocimientos que validan su excelencia"
 
-# geeks_vs_others:
-#   position: 3
-#   heading: "¿Qué hace a este bootcamp tan exitoso?"
-#   paragraph: "Top bootcamp en el mundo y #1 en Chile"
-#   total_rows: 5
-
-# why_4geeks:
-#   position: 8
-#   heading: "Por qué 4Geeks"
-#   sub_heading: " "
+rating_reviews:
+  position: 6
+  heading: "Lee acerca de nosotros"
+  rating_list:
+    - alt: "Career Karma"
+      image: "../../../static/images/badges/career-karma.png"
+      rating: 4.8
+      url: "https://careerkarma.com/schools/4geeks-academy/"
+    - alt: "Switchup"
+      image: "../../../static/images/badges/switchup-img.png"
+      rating: 4.89
+      url: "https://www.switchup.org/bootcamps/4geeks-academy"
+    - alt: "Course Report"
+      image: "../../../static/images/badges/course-report.png"
+      rating: 4.84
+      url: "https://www.coursereport.com/schools/4geeks-academy"
+    - alt: "Google"
+      image: "../../../static/images/badges/google.png"
+      rating: 4.9
+      url: ""
 
 who_is_hiring:
-  position: 9
+  position: 11
   limit: 4
   heading: "¿Quién contrata a nuestros alumnos?"
   sub_heading: "Nos encanta ver crecer a nuestros estudiantes, es por eso que nos esforzamos cada día por tener más aliados, para que puedas trabajar en empresas que te ayuden a seguir creciendo profesionalmente."
 
 components:
   - name: new_design_with_bullets
-    position: 1
+    position: 2
     proportions: [6, 4]
     layout: two_column_right 
     swipable: False
@@ -126,12 +139,12 @@ components:
       src: "/images/landing/hombre-con-laptop.png"
       shadow: false
     section_heading: 
-      text: "Tenemos diversas formas de pago, adaptadas a tus necesidades."
+      text: ""
       style: '{ "font-size": "30px" }'
     heading: 
-      text: "¡No pierdas la oportunidad!"
+      text: "¡Desde $42.000 CLP al mes!"
     sub_heading:
-      text: "Inscríbete ahora y comienza a construir tu futuro como Full Stack Developer."
+      text: "En 4Geeks Academy entendemos la importancia del aprendizaje y, por ello, ofrecemos diversas opciones de financiamiento que van desde los $42.000 CLP mensual. Queremos que nuestro programa sea accesible para todos aquellos que desean aprender a programar, brindando acceso a planes de financiamiento sin interés que te darán las herramientas para entrar en uno de los campos laborales mejor remunerados del mundo en la actualidad."
     button: 
       text: "Postularse"
       color: white
@@ -152,18 +165,18 @@ components:
         icon: "circle"  
 
   - name: python_y_javascript
-    position: 2
+    position: 4
     layout: two_column_left
     background: "veryLightBlue2" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9 .
     image:
       style: '{"backgroundSize": "contain", "background-position": "center"}'
-      src: "/images/programs-heading.png"
+      src: "/images/programs-heading.webp"
     heading:
-      text: "¡Mentorías Grupales!"
+      text: "¡Manteniendo un Enfoque de Apoyo al Alumno!"
         #           xl      lg      md      sm      xs
       font_size: ["45px", "45px", "30px", "28px", "25px"]
     sub_heading:
-      text: "¡Potencia tu creatividad y habilidades con nuestras mentorías grupales!"
+      text: "nuestro compromiso es brindar un apoyo continuo a cada uno de nuestros alumnos, no solo durante el bootcamp, sino a lo largo de toda su carrera profesional. Nuestro equipo de mentores y tutores está siempre disponible para resolver dudas, ofrecer orientación y brindar el soporte necesario para que cada estudiante alcance sus metas en el mundo de la programación. ¡Tu éxito es nuestro objetivo principal!"
     content:
       text: "¡No pierdas la oportunidad de desarrollar todo tu potencial junto a un grupo de mentores y compañeros apasionados por el aprendizaje!"
       font_size: ["16px"]
@@ -171,20 +184,20 @@ components:
       items:
       - text: "Sesiones grupales todos los jueves de 19 a 21 hrs."
         icon: "check" 
-      - text: "Duración del programa: 8 meses."
-        icon: "check" 
       - text: "Feedback personalizado para cada proyecto entregado."
         icon: "check"
+      - text: "Acceso al contenido de por vida."
+        icon: "check" 
 
   - name: two_column_geekforce
-    position: 4
+    position: 5
     layout: two_column_right
     image:
       style: '{"backgroundSize": "cover", "background-position": "center"}'
       src: "/images/ownpeoplecoding2.webp"
       shadow: true
     heading:
-      text: "¡Empoderamiento Profesional!"
+      text: "¡Acceso al programa general de empleabilidad!"
         #           xl      lg      md      sm      xs
       font_size: ["45px", "45px", "30px", "28px", "25px"]
     sub_heading:
@@ -205,25 +218,23 @@ components:
         icon: "circle"
 
   - name: two_column_rigobot
-    position: 5
-    proportions: [6, 6]
-    background: "lightYellow" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9 .
+    position: 7
+    proportions: [5, 7]
+    background: "veryLightBlue2" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9 .
     layout: two_column_left
     image:
-      style: '{"backgroundSize": "contain", "background-position": "center"}'
-      src: "/images/landing/rigobot-logo.png"
-      shadow: false
+      style: '{"backgroundSize": "cover", "background-position": "center"}'
+      src: "/images/landing/rigobot-logo-confondo.jpg"
+      shadow: true
     heading:
-      text: "RIGOBOT"
+      text: "Nunca vuelvas a programar solo"
         #           xl      lg      md      sm      xs
       font_size: ["45px", "45px", "30px", "28px", "25px"]
     sub_heading:
       text: |-
-        Tenemos para ti dentro de nuestra plataforma a Rigobot, es un tutor de programación con inteligencia artificial desarrollado internamente para ayudarte a convertirte en un excelente programador.
-        Nunca más tendrás que programar solo, ya que te ofrece respuestas inmediatas y personalizadas, con un análisis de código en tiempo real que te permite corregir errores al instante.
-        Con su asistencia continua las 24/7, proporciona retroalimentación directa y específica, guiándote en tu aprendizaje y mejora constante.
+         Rigobot está aquí para acelerar tu camino de novato a experto proporcionando retroalimentación y orientación personalizada e inmediata. Diseñado por desarrolladores para desarrolladores, Rigobot es más que una herramienta; es tu compañero de programación.
     content:
-      text: "Obtendrás información acerca de diversas plataformas para la contratación."
+      text: ""
       font_size: ["16px"]
     button:
       text: "Postularse"
@@ -231,3 +242,11 @@ components:
       hover_color: "white"
       background: "black"
       path: "#leadform_bottom"
+    bullets:
+      items:
+      - text: "Herramienta disponible 24/7."
+        icon: "check" 
+      - text: "Obtén respuestas de inmediato."
+        icon: "check" 
+      - text: "Rigobot sabe quién eres."
+        icon: "check"

@@ -3,7 +3,7 @@ meta_info:
   title: "Job Guarantee 4Geeks Academy"
   description: "Job Guarantee 4Geeks Academy"
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
-  image: "/images/programs-heading.png"
+  image: "/images/programs-heading.webp"
   keywords: "Job Guarantee at 4Geeks Academy"
   redirects: ["/job-guarantee"]
   utm_course: ["full-stack", "datascience-ml"]

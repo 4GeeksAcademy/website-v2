@@ -1,0 +1,229 @@
+meta_info:
+  slug: desarrollador-full-stack-mas-accesible
+  title: "Curso de Desarrollador Full Stack en 4Geeks Academy"
+  description: "Descubre el programa Full Stack A Tu Propio Ritmo. Construye sitios web dinamicos, adaptándose a tu tiempo y tu disponibilidad."
+  image: "/images/og-preview/full-stack.es.png"
+  bc_slug: "full-stack-own-rhythm"
+  visibility: "hidden"
+  keywords: null
+  show_in_apply: false
+  redirects: []
+  related_clusters: [""]
+
+apply_form:
+  label: Curso Full Stack Developer a tu propio ritmo
+
+seo_title: "Desarrollador Full Stack a tu propio ritmo"
+header:
+  title: "Full Stack Developer a tu propio ritmo"
+  image: "../../../static/images/bg/program-bg.png"
+  image_alt: "Programa"
+  paragraph: "De cero a tener tu primer trabajo como programador, aprende todo lo necesario, recibe soporte de por vida y consigue un trabajo después de 32 semanas de estudio."
+
+button:
+  syllabus_heading: "Descargar Detalles del Curso"
+  syllabus_btn_label: "Descarga Instantánea"
+  syllabus_motivation: "En 2 min. recibirás en tu buzón de correo un PDF con información muy detallada sobre nuestra metodología, tecnologías, financiación e información del curso."
+  apply_button_link: "/es/aplica"
+  apply_button_text: "Aplicar"
+  
+course_instructors: 
+  header:
+    title: "Conoce a nuestros instructores"
+    paragraph: ""
+
+  instructors:
+    # - name: "Roldolfo Campos"
+    #   sub_title: "Co fundador de 4geeks y director de educación"
+    #   image: "../../../static/images/instructors/example.png"
+    #   bio: "Currently working as a Senior Solutions Architect at VMware, Rodolfo Campos is a Software Engineer with 17 years of experience in Linux, Java, SQL, Blockchain, etc. Master in Computer Science and passionate about Big Data and Entrepreneurship."
+    #   github: ""
+    #   linkedin: "https://www.linkedin.com/"
+
+    # - name: "Gabriel Salinas"
+    #   sub_title: "Sophisticated Software Systems Engineer"
+    #   image: "../../../static/images/instructors/example.png"
+    #   bio: "Currently working as a Senior Solutions Architect at VMware"
+    #   github: ""
+    #   linkedin: "https://www.linkedin.com/"
+
+overlaped:
+  heading: "Python y Javascript"
+  paragraph: "Nuestros programa está basado en el uso de Phyton y Javascript. ¿La razón?, En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails. Python tiene 10 veces más trabajos que node.js. Otras herramientas que también aprenderás a usar en nuestro programa: son GitHub, CSS3, HTML5, Flask, etc."
+  button:
+    text: "Aplicar"
+    color: "blue"  
+    link: "/"
+  image:
+    src: "/images/landing/tres-personas-reloaded.webp"  
+
+## TWO COLUMNS
+# two_columns:
+#   proportions: [6, 6]
+#   image:
+#     style: '{"border" : "3px solid black", "backgroundSize": "contain" }'
+#     src: "/static/images/staff/luisa.png"
+#     shadow: true  
+#   video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+#   heading:
+#     text: "4Geeks Academy and a story full of opportunities"
+#     font_size: ["30px", "30px", "30px", "30px", "30px"]
+#   sub_heading:
+#     text: "We are Miami based and we have been focusing in bringing on more opportunities in South Florida."
+#     font_size: ["16px", "16px", "16px", "16px", "16px"]
+#   button:
+#     text: "Apply now"
+#     color: "white"
+#     background: "black"
+#     path: "#prices_and_payment"
+#   bullets:
+#     items: 
+#     - text: "There is always a full or partial scholarship open"
+#     - text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
+#     - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade County and many more."
+
+
+badges:
+  paragraph: "4Geeks Academy es el lugar idóneo para <a href='/es/curso-de-programacion-desde-cero'>aprender a programar desde cero</a>. Estamos avalados y autorizados por el Departamento de Educación de Florida y hemos sido reconocidos como el mejor de Miami, según SwitchUp y de los 10 mejores cursos de programación, según Newsweek. En España, hemos recibido el Premio Excelencia Educativa durante dos años consecutivos. Y a nivel global formamos parte del top 35 de cursos de programación en el mundo."
+
+upcoming:
+  no_dates_message: "Actualmente no hay próximas fechas para este programa"  
+  actionMessage: "Avísame cuando haya fechas disponibles"
+
+credentials:
+  heading: "RESULTADOS"
+  paragraph: "Nuestros números hablan por sí solos"
+## PROGRAM DETAILS
+details:
+  about:
+      title: "Acerca del programa"
+      sub_title: |
+        Este Bootcamp te brindará la oportunidad de aprender desarrollo de software y aplicaciones web de forma flexible, adaptándose a tu disponibilidad. 
+        Con una duración aproximada de 8 meses, cubrirás módulos detallados que van desde los fundamentos de la programación hasta el desarrollo avanzado de aplicaciones web, incluyendo las mejores prácticas en diseño web responsive y trabajo con diversos lenguajes.<br>
+        Al completar el programa, estarás preparado con una sólida base para ingresar al sector tecnológico como <strong style='font-weight: 700'>Full Stack Developer</strong>.
+      
+      list:
+        - label: "Duración"
+          content:  "26 + 6 semanas"
+          icon: "calendar"
+        - label: "Certificado"
+          content: "Nuestros certificados son  reconocidos por múltiples instituciones."
+          link_text: "Ver certificado"
+          link: "https://certificate.breatheco.de/4ae7a46bba78dc19b823e124fea120c17b45e044"
+          icon: "certificate"
+        - label: "Requisitos"
+          content: "Tan solo necesitas un ordenador y una conexión a internet"
+          icon: "contract-checked"
+        - label: "Idioma"
+          content: "Puedes elegir entre inglés y español para consumir el plan de estudios y el contenido. Las clases se imparten en el idioma oficial de tú campus."
+          icon: "contract-checked"
+          
+  heading: DETALLES DEL PROGRAMA A TU PROPIO RITMO
+  weeks: 26
+  sub_heading: "Proyectos de la vida real y exactamente lo que buscan las empresas"
+  left_labels:
+    description: "DESCRIPCION:"
+    projects: "PROYECTOS:"
+    duration: "DURACIÓN:"
+    skills: "Tópico / Semana:"
+  details_modules:
+    - module_name: "PREWORK"
+      title: "Prework"
+      description: >
+        Empezamos por lo básico: HTML5 + CSS3 + Javascript. Revisamos los fundamentos de la programación y nos aseguramos de que todos estamos en la misma página.
+        Durante el prework revisarás cómo hacer un sitio web con HTML y CSS, luego desarrollarás varios proyectos y por último te iniciarás en el mundo de Javascript, aprendiendo sobre variables, loops, condicionales, y funciones.
+      projects: "Construye tu primera página web, y una versión mínima de Instagram, un generador de excusas, entre otros."
+      slug: "prework"
+      duration: "~ 60 horas"
+      step: 0
+    - module_name: "PIENSA COMO UN ORDENADOR"
+      title: "Aprende a programar"
+      description: "Empieza aprediendo a integrar archivos HTML5, CSS3 y JS para crear tu primer sitio web interactivo apoyándote con Bootstrap. Domina la terminal, controla el flujo de tu código, crea algoritmos, haz un bucle, una condicionales."
+      projects: "Portafo>io de imágenes, subirás tu portafo>io a GitHub, crearás una página web, etc"
+      slug: "Piensa como un ordenador"
+      duration: "6 sem"
+      step: 6
+    - module_name: "DESARROLLO WEB"
+      title: "Desarrollo web"
+      description: "Manipula el Dom con JavaScript y aprende a pensar y diseñar tu código en torno a objetos (POO), y conoce las mejores prácticas de GIT, Arrays, Loops y JSON. Realiza controles de calidad (QA) y pruebas unitarias con Jest. Trabaja con React.js para crear sitios web dinámicos y rápidos."
+      projects: "Construirás tu primera aplicación web con React.js, patrón MVC, Módulos JS, Bundling, Babel JS aplicando interactividad en el DOM."
+      slug: "desarrollo-web"
+      duration: "8 sem"
+      step: 8
+    - module_name: "DESARROLLO DE API'S"
+      title: "Desarrollo de APIs"
+      description: " Almacena y procesa datos con Python, Flask y SQL. Autentica datos con tokens y JWT. aprende a interactuar con APIs conocidas como Google, Twilio, Facebook, Stripe y más"
+      projects: "Introducción a bases de datos con SQL, Python diccionarios, listas y función lambda de python, construye tus propias API's e interactúa con otras."
+      slug: "web-development"
+      duration: "6 sem"
+      step: 6
+    - module_name: "WEB APPS AVANZADAS"
+      title: "WebApps Avanzadas"
+      description: "Aplicarás todo lo aprendido en las semanas anteriores, familiarizandote con los conceptos, las herramientas, todo el proceso de creación de un sitio web, UI/UX, mockups."
+      projects: "Durante esta fase tendrás que diseñar, programar, probar y publicar tu propia aplicación web completa."
+      slug: "aplicacion-avanzada"
+      duration: "7 sem"
+      step: 5.9
+    - module_name: "DE POR VIDA"
+      title: "De por vida"
+      description: "Seguirás recibiendo la ayuda de la academia de por vida, mantendrás el acceso a los contenidos y acceso a una comunidad de programadores con más de 5000 profesionales en el area, incluso cuando comiences tu primer empleo: ¡nunca más estarás solo!"
+      projects: "Consigue tu primer empleo en el sector tecnológico y empieza a ganar dinero como un programador y sigue desarrollándote hasta convertirte en un programador Senior."
+      slug: "lifelong-learning"
+      duration: "Para siempre"
+      step: 0.1
+
+
+
+syllabus:
+  heading: Descarga toda la infomación sobre este programa
+  button_label: Descargar
+
+## 4GEEKS VS OTHERS SECTION
+geeks_vs_others:
+  heading: "EN NÚMEROS: 4GEEKS VS OTROS"
+  sub_heading: ""
+  sub_heading_link: ""
+
+why_4geeks:
+  heading: Porqué 4Geeks Academy
+  sub_heading: ""
+
+## GEEK PAL AND GEEK FORCE BOXES
+geek_data:
+  heading: ¡Career Support de por vida!
+  geek_pal:
+    - Aprenderas Python, Javascript y React. Los Lenguajes más buscados.
+    - Miles de ejercicios interactivos y autoevaluados.
+    - Soluciones en video para una retroalimentación instantánea.
+    - Grabación de las clases para su posterior revisión.
+  geek_force:
+    - Construcción de CV y LinkedIn.
+    - Construcción del perfil de Github y portafolio desde el dia 1.
+    - Preparación de simulación de entrevistas.
+    - Sesión de preparación de entrevistas personalizadas para trabajos específicos.
+    - Prácticas y ejercicios de programación posteriores a la graduación.
+
+## PRICES AND PAYMENTS SECTION
+prices:
+  heading: "Planes y Precios"
+  sub_heading: "Selecciona la sede o modalidad de tu curso para ver los precios y planes de pago"
+  selector:
+    top_label: Sede
+    placeholder: Selecciona una sede
+  button:
+    text: Ver planes / precios
+    link: ""
+## ALUMNI SECTION
+alumni:
+  heading: "Conoce a los graduados y sus proyectos"
+  sub_heading: "La última fase del curso debes construir un proyecto final que tú mismo escogerás, 
+    puede ser un emprendimiento o trabajarás directamente en un proyecto de la vida real en 
+    colaboración con nuestros hiring partners."
+
+## SIDEBAR
+sidebar:
+  membership: "MEMBRESÍA"
+  program: "PROGRAMA"
+  geeks_vs_other: "4GEEKS vs OTROS"
+  pricing: "PRECIO"
+  alumni: "GRADUADOS"

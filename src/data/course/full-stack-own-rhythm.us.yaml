@@ -1,0 +1,215 @@
+meta_info:
+  slug: full-stack-developer-at-your-own-pace
+  title: "Full Stack Developer Course at 4Geeks Academy"
+  description: "Discover our Full Stack At Your Own Pace program. Learn software development and web applications with flexibility, adapting to your availability."
+  image: "/images/og-preview/full-stack.es.png"
+  bc_slug: "full-stack-own-rhythm"
+  visibility: "hidden"
+  keywords: null
+  show_in_apply: false
+  redirects: []
+  related_clusters: [""]
+
+apply_form:
+  label: Full Stack Developer Course at Your Own Pace
+
+seo_title: "Full Stack Developer at Your Own Pace"
+header:
+  title: "Full Stack Developer at Your Own Pace"
+  image: "../../../static/images/bg/program-bg.png"
+  image_alt: "Full stack at your own pace"
+  paragraph: "From zero to your first job as a programmer, learn everything you need, and get a job after 32 weeks of study."
+
+button:
+  syllabus_heading: "Download Course Details"
+  syllabus_btn_label: "Instant Download"
+  syllabus_motivation: "In 2 minutes, you'll receive a detailed PDF in your mailbox about our methodology, technologies, financing, and course information."
+  apply_button_link: "/en/apply"
+  apply_button_text: "Apply"
+
+course_instructors:
+  header:
+    title: "Meet Our Instructors"
+    paragraph: ""
+
+  instructors:
+    # - name: "Roldolfo Campos"
+    #   sub_title: "Co-founder of 4Geeks and Director of Education"
+    #   image: "../../../static/images/instructors/example.png"
+    #   bio: "Currently working as a Senior Solutions Architect at VMware, Rodolfo Campos is a Software Engineer with 17 years of experience in Linux, Java, SQL, Blockchain, etc. Master in Computer Science and passionate about Big Data and Entrepreneurship."
+    #   github: ""
+    #   linkedin: "https://www.linkedin.com/"
+
+    # - name: "Gabriel Salinas"
+    #   sub_title: "Sophisticated Software Systems Engineer"
+    #   image: "../../../static/images/instructors/example.png"
+    #   bio: "Currently working as a Senior Solutions Architect at VMware"
+    #   github: ""
+    #   linkedin: "https://www.linkedin.com/"
+
+overlaped:
+  heading: "Python and JavaScript"
+  paragraph: "Our program is based on the use of Python and JavaScript. Why? In the job market, JavaScript has 26 times more job openings than Ruby on Rails. Python has 10 times more jobs than Node.js. Other tools you will also learn to use in our program include GitHub, CSS3, HTML5, Flask, etc."
+  button:
+    text: "Apply"
+    color: "blue"
+    link: "/"
+  image:
+    src: "/images/landing/tres-personas-reloaded.webp"
+
+## TWO COLUMNS
+# two_columns:
+#   proportions: [6, 6]
+#   image:
+#     style: '{"border" : "3px solid black", "backgroundSize": "contain" }'
+#     src: "/static/images/staff/luisa.png"
+#     shadow: true  
+#   video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+#   heading:
+#     text: "4Geeks Academy and a story full of opportunities"
+#     font_size: ["30px", "30px", "30px", "30px", "30px"]
+#   sub_heading:
+#     text: "We are Miami based and we have been focusing in bringing on more opportunities in South Florida."
+#     font_size: ["16px", "16px", "16px", "16px", "16px"]
+#   button:
+#     text: "Apply now"
+#     color: "white"
+#     background: "black"
+#     path: "#prices_and_payment"
+#   bullets:
+#     items: 
+#     - text: "There is always a full or partial scholarship open"
+#     - text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
+#     - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade County and many more."
+
+badges:
+  paragraph: "4Geeks Academy is the ideal place to <a href='/en/programming-course-from-scratch'>learn to program from scratch</a>. We are endorsed and authorized by the Florida Department of Education and have been recognized as the best in Miami by SwitchUp and one of the top 10 programming courses by Newsweek. In Spain, we have received the Educational Excellence Award for two consecutive years. And globally, we are part of the top 35 programming courses in the world."
+
+upcoming:
+  no_dates_message: "There are currently no upcoming dates for this program"
+  actionMessage: "Notify me when dates are available"
+
+credentials:
+  heading: "RESULTS"
+  paragraph: "Our numbers speak for themselves"
+## PROGRAM DETAILS
+details:
+  about:
+      title: "About the Program"
+      sub_title: |
+        This Bootcamp will give you the opportunity to learn software development and web applications flexibly, adapting to your availability.
+        With an approximate duration of 8 months, you will cover detailed modules ranging from programming fundamentals to advanced web application development, including best practices in responsive web design and working with various languages.<br>
+        Upon completion of the program, you will be prepared with a solid foundation to enter the tech sector as a <strong style='font-weight: 700'>Full Stack Developer</strong>.
+      
+      list:
+        - label: "Duration"
+          content: "26 + 6 weeks"
+          icon: "calendar"
+        - label: "Certificate"
+          content: "Our certificates are recognized by multiple institutions."
+          link_text: "View certificate"
+          link: "https://certificate.breatheco.de/4ae7a46bba78dc19b823e124fea120c17b45e044"
+          icon: "certificate"
+        - label: "Requirements"
+          content: "All you need is a computer and an internet connection"
+          icon: "contract-checked"
+        - label: "Language"
+          content: "You can choose between English and Spanish to consume the curriculum and content. Classes are taught in the official language of your campus."
+          icon: "contract-checked"
+          
+  heading: PROGRAM DETAILS AT YOUR OWN PACE
+  weeks: 26
+  sub_heading: "Real-life projects and exactly what companies are looking for"
+  left_labels:
+    description: "DESCRIPTION:"
+    projects: "PROJECTS:"
+    duration: "DURATION:"
+    skills: "Topic / Week:"
+  details_modules:
+    - module_name: "PREWORK"
+      title: "Prework"
+      description: >
+        We start with the basics: HTML5 + CSS3 + JavaScript. We review programming fundamentals and ensure everyone is on the same page.
+        During prework, you'll review how to create a website with HTML and CSS, then develop several projects, and finally, dive into the world of JavaScript, learning about variables, loops, conditionals, and functions.
+      projects: "Build your first web page, a minimal version of Instagram, an excuse generator, among others."
+      slug: "prework"
+      duration: "~ 60 hours"
+      step: 0
+    - module_name: "THINK LIKE A COMPUTER"
+      title: "Learn to Program"
+      description: "Start by learning to integrate HTML5, CSS3, and JS files to create your first interactive website with Bootstrap. Master the terminal, control the flow of your code, create algorithms, make a loop, and use conditionals."
+      projects: "Image portfolio, upload your portfolio to GitHub, create a web page, etc."
+      slug: "Think like a computer"
+      duration: "6 weeks"
+      step: 6
+    - module_name: "WEB DEVELOPMENT"
+      title: "Web Development"
+      description: "Manipulate the DOM with JavaScript and learn to think and design your code around objects (OOP), and know the best practices of GIT, Arrays, Loops, and JSON. Perform quality control (QA) and unit tests with Jest. Work with React.js to create dynamic and fast websites."
+      projects: "You will build your first web application with React.js, MVC pattern, JS Modules, Bundling, Babel JS applying interactivity in the DOM."
+      slug: "web-development"
+      duration: "8 weeks"
+      step: 8
+    - module_name: "API DEVELOPMENT"
+      title: "API Development"
+      description: " Store and process data with Python, Flask, and SQL. Authenticate data with tokens and JWT. Learn to interact with well-known APIs such as Google, Twilio, Facebook, Stripe, and more."
+      projects: "Introduction to databases with SQL, Python dictionaries, lists, and Python lambda function, build your own APIs and interact with others."
+      slug: "api-development"
+      duration: "6 weeks"
+      step: 6
+    - module_name: "ADVANCED WEB APPS"
+      title: "Advanced WebApps"
+      description: "Apply everything learned in the previous weeks, familiarizing yourself with the concepts, tools, and the entire process of creating a website, UI/UX, mockups."
+      projects: "During this phase, you will have to design, program, test, and publish your own complete website."
+      slug: "advanced-web-apps"
+      duration: "6 weeks"
+      step: 6
+
+syllabus:
+  heading: Get all the information about the syllabus
+  button_label: Download
+
+## 4GEEKS VS OTHERS SECTION
+geeks_vs_others:
+  heading: "WHAT MAKES THIS PROGRAM STAND OUT?"
+  sub_heading: "Compare with other schools"
+  sub_heading_link: ""
+
+## GEEK PAL AND GEEK FORCE BOXES
+geek_data:
+  heading: "And enjoy Career Support... for Life!"
+  geek_pal:
+    - Thousands of auto-graded exercises.
+    - Interactive and auto-graded tutorials.
+    - Video solutions for instant feedback.
+    - Recording of classes for later review.
+    
+  geek_force:
+    - Resume building
+    - Github profile building
+    - Mock interview preparation
+    - Personal Branding coaching
+
+## PRICES AND PAYMENTS SECTION
+prices:
+  heading: "Prices and Payments"
+  sub_heading: "Select the bootcamp location to see the prices and payment plans"
+  selector:
+    top_label: Location
+    placeholder: Select a location
+  button:
+    text: Check Prices and Plans
+    link: ""
+
+
+## ALUMNI SECTION
+alumni:
+  heading: "Meet Our Alumni and Their Projects"
+  sub_heading: "The last phase of the course you must build a final project that you will choose yourself, it can be an undertaking or you will work directly on a real life project in collaboration with our hiring partners"
+
+## SIDEBAR
+sidebar:
+  membership: "MEMBERSHIPS"
+  program: "PROGRAM"
+  geeks_vs_other: "4GEEKS vs OTHERS"
+  pricing: "PRICING"
+  alumni: "THE ALUMNI"
