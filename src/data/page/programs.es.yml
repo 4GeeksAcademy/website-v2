@@ -11,7 +11,7 @@ seo_title: "progresa como desarrollador"
 header:
   title: El código te hace libre
   paragraph: Nuestro himno es la programación, ya sea convertirte en ingeniero de software, especialista en data science o blockchain. Soporte de por vida, mentorías ilimitadas y los agresivos programas de becas nos permiten presentar las mejores ofertas posibles para convertirnos en desarrolladores en cuestión de semanas.
-  image: "../../../static/images/programs-heading.png"
+  image: "../../../static/images/programs-heading.webp"
   alt: ""
 
 choose_program:
