@@ -268,20 +268,15 @@ components:
       font_size: ["16px"]
     bullets:
       items:
-        - heading: "Enroll in the program."
-          text: ""
+        - text: "Enroll in the program."
           icon: "circle" #string with icon for example ['check', 'cicle', etc]
-        - heading: "Learn software development skills."
-          text: ""
+        - text: "Learn software development skills."
           icon: "circle" #string with icon for example ['check', 'cicle', etc]
-        - heading: "Graduate and complete your projects."
-          text: ""
+        - text: "Graduate and complete your projects."
           icon: "circle" #string with icon for example ['check', 'cicle', etc]
-        - heading: "Land a job."
-          text: ""
+        - text: "Land a job."
           icon: "circle" #string with icon for example ['check', 'cicle', etc]
-        - heading: "Keep building a career you love."
-          text: ""
+        - text: "Keep building a career you love."
           icon: "circle" #string with icon for example ['check', 'cicle', etc]
 
   - name: testimonials

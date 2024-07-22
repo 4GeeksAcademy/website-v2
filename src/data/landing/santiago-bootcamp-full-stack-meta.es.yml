@@ -158,11 +158,11 @@ components:
       path: ""
     bullets:
       items:
-      - heading: "No se requiere experiencia previa"
+      - text: "No se requiere experiencia previa"
         icon: "check" 
-      - heading: "Horario part-time adaptable a tu vida actual"
+      - text: "Horario part-time adaptable a tu vida actual"
         icon: "check" 
-      - heading: "Mentorías y career support de por vida"
+      - text: "Mentorías y career support de por vida"
         icon: "check" 
 
   - name: python_y_javascript

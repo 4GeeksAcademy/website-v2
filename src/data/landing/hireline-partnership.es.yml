@@ -157,15 +157,15 @@ components:
       font_size: ["16px"]
     bullets:
       items:
-        - heading: "20% de descuento sobre los (3) tres programas vigentes:"
+        - text: "20% de descuento sobre los (3) tres programas vigentes:"
           icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - heading: "Full Stack Developer"
+        - text: "Full Stack Developer"
           icon: "circle" #string with icon for example ['check', 'cicle', etc]
-        - heading: "Node.js"
+        - text: "Node.js"
           icon: "circle" #string with icon for example ['check', 'cicle', etc]
-        - heading: "Data Science y Machine Learning"
+        - text: "Data Science y Machine Learning"
           icon: "circle" #string with icon for example ['check', 'cicle', etc]
-        - heading: "Beneficios extra disponibles"
+        - text: "Beneficios extra disponibles"
           icon: "circle" #string with icon for example ['check', 'cicle', etc]
 
   - name: top_coding_bootcamp
