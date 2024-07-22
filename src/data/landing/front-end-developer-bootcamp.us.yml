@@ -171,11 +171,11 @@ components:
       path: ""
     bullets:
       items:
-        - heading: "UNLIMITED LIFELONG MENTORSHIP"
+        - text: "UNLIMITED LIFELONG MENTORSHIP"
           icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - heading: "UNLIMITED CAREER SUPPORT"
+        - text: "UNLIMITED CAREER SUPPORT"
           icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - heading: "TAILORED JOB SEARCH PREPARATION"
+        - text: "TAILORED JOB SEARCH PREPARATION"
           icon: "check" #string with icon for example ['check', 'cicle', etc]
 
   - name: how-it-works

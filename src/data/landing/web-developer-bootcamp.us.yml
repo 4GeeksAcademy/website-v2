@@ -151,11 +151,11 @@ components:
       path: ""
     bullets:
       items:
-        - heading: "Interview Simulation"
+        - text: "Interview Simulation"
           icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - heading: "Lifetime Mentoring"
+        - text: "Lifetime Mentoring"
           icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - heading: "ultimited 1-1 mentoring"
+        - text: "ultimited 1-1 mentoring"
           icon: "check" #string with icon for example ['check', 'cicle', etc]
 
   - name: geekinfo_2
