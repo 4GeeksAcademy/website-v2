@@ -24,7 +24,7 @@ async function generate() {
     campuses[
       locationSlug
     ].website = `https://4geeksacademy.com/us/coding-campus/${old.meta_info.slug}`;
-    campuses[locationSlug].social_media_urls = old.socials.map((s) => ({
+    campuses[locationSlug].social_media_urls = old.socials?.map((s) => ({
       network: s.name,
       url: s.link,
     }));
