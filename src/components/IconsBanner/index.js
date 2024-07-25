@@ -38,23 +38,15 @@ export default ({ icon, title, content, color, content_style }) => {
         display_tablet="block"
       >
         {title && (
-          <H3
-            textAlign="left"
-            fontSize="16px"
-            fontFamily="Archivo-Black"
-            // lineHeight="20px"
-            margin="0"
-          >
+          <H3 textAlign="left" fontFamily="Archivo-Black" margin="0">
             {title}
           </H3>
         )}
         {content && (
           <Paragraph
-            lineHeight="24px"
             textAlign="left"
             color="#000"
             opacity="1"
-            fontSize="14px"
             style={content_style ? JSON.parse(content_style) : {}}
           >
             {content}

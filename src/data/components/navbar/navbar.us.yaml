@@ -120,6 +120,8 @@ navbar:
               link_to: "/us/coding-campus/coding-bootcamp-miami"
             - title: "Orlando, USA"
               link_to: "/us/coding-campus/coding-bootcamp-orlando"
+            - title: "Tampa, USA"
+              link_to: "/us/coding-campus/tampa-coding-bootcamp"
             - title: "Atlanta, USA"
               link_to: "/us/coding-campus/coding-bootcamp-atlanta"
             - title: "Chicago, USA"

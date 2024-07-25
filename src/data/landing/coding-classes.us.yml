@@ -171,11 +171,11 @@ components:
       path: ""
     bullets:
       items:
-        - heading: "CAREER RELEVANT SYLLABUS"
+        - text: "CAREER RELEVANT SYLLABUS"
           icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - heading: "PERSONALIZED CAREER SUPPORT"
+        - text: "PERSONALIZED CAREER SUPPORT"
           icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - heading: "LIFELONG ACCESS TO MENTORSHIPS"
+        - text: "LIFELONG ACCESS TO MENTORSHIPS"
           icon: "check" #string with icon for example ['check', 'cicle', etc]
 
   - name: how-it-works

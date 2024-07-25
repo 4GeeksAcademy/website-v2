@@ -89,24 +89,6 @@ const Staff = (props) => {
       >
         <Div
           alignItems="center"
-          flexDirection="column"
-          gridColumn_tablet="2 /12"
-        >
-          <H4
-            fontSize="30px"
-            //textTransform="uppercase"
-            lineHeight="19px"
-            fontWeight="500"
-          >
-            {props.heading || staffList.heading}
-          </H4>
-          <Paragraph fontSize="18px" textAlign="center" margin="20px 0 0 0">
-            {props.paragraph || staffList.sub_heading}
-          </Paragraph>
-        </Div>
-
-        <Div
-          alignItems="center"
           justifyContent="between"
           position="relative"
           display="block"
@@ -114,6 +96,10 @@ const Staff = (props) => {
           <Carousel
             previousArrow
             nextArrow
+            content={{
+              heading: props.heading || staffList.heading,
+              content: props.paragraph || staffList.sub_heading,
+            }}
             settings={{
               dotsClass: "slick-dots-staff",
               slidesToShow: 4,

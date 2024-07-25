@@ -40,7 +40,7 @@ navbar:
   logoUrl: "#"
 
 header_data:
-  partner_logo_url: "../../../static/images/partner/banco-de-chile-logo.png"
+  partner_logo_url: "../../../static/images/partner/logo-de-banco-de-chile.jpg"
   background_image: "../../../static/images/landing/GrupoVariasNacionalidades.webp"
   tagline: Bootcamp de Programación Web
   tagline_color: "white"
@@ -109,12 +109,12 @@ who_is_hiring:
 components:
   - name: python_y_javascript
     position: 1
-    proportions: [4, 8]
+    proportions: [6, 6]
     layout: two_column_left
     background: "veryLightBlue2" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
     image:
-      style: '{ "background-size": "contain", "height":"200px", "min-height":"auto", "background-position": "center", "justify-content": "center"}'
-      src: "/images/logoweb.png"
+      style: '{ "background-size": "contain", "background-position": "center", "justify-content": "center"}'
+      src: "/images/landing/banco-de-chile-tarjeta.png"
     heading:
       text: "Financiación Flexible para Alcanzar Tus Metas Tecnológicas"
         #           xl      lg      md      sm      xs

@@ -69,7 +69,7 @@ const Home = (props) => {
     <>
       <Div
         flexDirection="column"
-        margin_tablet={
+        margin_md={
           isContentBarActive ? "120px auto 108px auto" : "72px auto 108px auto"
         }
         maxWidth="1280px"
@@ -86,28 +86,22 @@ const Home = (props) => {
           position="relative"
           gridColumn_tablet="1/15"
         >
-          {(indexVideo || sessionVideo) && <Div
+          {(indexVideo || sessionVideo) && (
+            <Div
               position="absolute"
               zIndex="5"
-              left_tablet={"50%"}
-              left="50%"
-              left_xxs="65%"
-              left_xs="74%"
-              top_tablet={"3%"}
-              top="90px"
-              top_xxs="20px"
-              top_xs="100px"
-              width_xxs="80px"
-              width_sm="100px"
-              height_xxs="80px"
+              left="74%"
+              left_tablet="47%"
+              top="0px"
+              top_tablet="1%"
+              width="70px"
+              height="70px"
               width_tablet="160px"
               height_tablet="152px"
-              width="100px"
-              height="100px"
             >
               <Icon icon="logo-badge" width="100%" height="100%" />
             </Div>
-          }
+          )}
           <Div
             flexDirection="column"
             alignItems="start"
@@ -126,8 +120,8 @@ const Home = (props) => {
                 type="h1"
                 textAlign="left"
                 textShadow="none"
-                fontSize="16px"
-                lineHeight="18px"
+                fontSize="21px"
+                lineHeight="22.85px"
                 fontWeight="400"
                 color={Colors.black}
               >
@@ -138,12 +132,13 @@ const Home = (props) => {
                 textAlign_tablet="start"
                 textAlign_xxs="start"
                 fontSize="40px"
-                fontSize_tablet="50px"
+                fontSize_tablet="55px"
                 margin="20px 0 0 0"
                 lineHeight_xxs="45px"
                 lineHeight_tablet="60px"
                 width_tablet="100%"
                 fontFamily="Archivo-Black"
+                color={Colors.black}
               >
                 {`${yml.header_data.title}`}
               </H2>
@@ -161,9 +156,6 @@ const Home = (props) => {
                       textAlign="left"
                       padding_tablet="0 20% 0 0"
                       color={Colors.black}
-                      fontSize="16px"
-                      lineHeight="19px"
-                      opacity="1"
                       dangerouslySetInnerHTML={{ __html: bullet }}
                     />
                   </Div>
@@ -298,24 +290,25 @@ const Home = (props) => {
         </Div>
       </Div>
       <Div
-        margin="70px auto 0 auto"
-        margin_tablet="30px auto 0 auto"
+        margin="0 auto"
+        padding="80px 0 40px 0"
+        margin_tablet="0 auto"
         width="100%"
         className="badge-slider hideOverflowX__"
-        background={Colors.veryLightBlue2}
+        background={Colors.veryLightBlue3}
       >
         <Badges
           variant="squares"
           lang={pageContext.lang}
           short_text="15px"
-          margin="40px auto"
+          margin="0 auto"
           title={yml.badges.title}
           paragraph={yml.badges.paragraph}
           maxWidth="1280px"
           paddingText_tablet="0 10% 5px 10%"
         />
       </Div>
-      <Div background={Colors.veryLightBlue2} display="block">
+      <Div background={Colors.veryLightBlue3} display="block">
         <TwoColumn
           left={{ image: yml.why_4geeks?.image }}
           right={{
@@ -332,19 +325,19 @@ const Home = (props) => {
           session={session}
         />
       </Div>
-      <Iconogram yml={yml.iconogram} background={Colors.veryLightBlue2} />
+      <Iconogram yml={yml.iconogram} background={Colors.veryLightBlue3} />
       <GeeksVsOthers
         lang={pageContext.lang}
         mainBackround={Colors.white}
         limit={5}
-        style={{ background: Colors.veryLightBlue2 }}
+        style={{ background: Colors.veryLightBlue3 }}
         title={yml.geeks_vs_others.heading}
         paragraph={yml.geeks_vs_others.sub_heading}
         link
       />
       <Testimonials
         lang={data.allTestimonialsYaml.edges}
-        background={Colors.veryLightBlue2}
+        background={Colors.veryLightBlue3}
         heading={yml.success_cases.title}
         content={yml.success_cases.content}
         margin="0"
@@ -353,7 +346,7 @@ const Home = (props) => {
       <TwoColumnCarousel
         title={yml.two_column_carousel.title}
         text={yml.two_column_carousel.text}
-        background={Colors.veryLightBlue2}
+        background={Colors.veryLightBlue3}
         carouselProps={{
           margin: "0px",
           margin_tablet: "0px",
@@ -385,18 +378,11 @@ const Home = (props) => {
         programs={data.allChooseYourProgramYaml.edges[0].node.programs}
         title={yml.choose_program.title}
         paragraph={yml.choose_program.paragraph}
-        background={Colors.veryLightBlue2}
+        background={Colors.veryLightBlue3}
       />
       {/* TWO COLUMN CREAR EN EL YML*/}
-      <Div display="block" background={Colors.veryLightBlue2}>
-        <H2
-          type="h2"
-          textAlign_tablet="center"
-          lineHeight="38px"
-          lineHeight_tablet="38px"
-          fontSize="36px"
-          fontWeight="400"
-        >
+      <Div display="block" background={Colors.veryLightBlue3} padding="40px 0">
+        <H2 type="h2" textAlign_tablet="center">
           {yml.two_columns.section_heading.text}
         </H2>
         <TwoColumn
@@ -408,6 +394,7 @@ const Home = (props) => {
             content: yml.two_columns?.content,
             justify: yml.two_columns?.justify,
             boxes: yml.two_columns?.boxes,
+            padding_tablet: "0",
           }}
           proportions={yml.two_columns?.proportions}
           session={session}
@@ -415,11 +402,7 @@ const Home = (props) => {
       </Div>
       <With4Geeks
         lang={pageContext.lang}
-        background={Colors.veryLightBlue2}
-        headerProps={{
-          margin: "0 5px 20px 5px",
-          margin_tablet: "0 auto 20px auto",
-        }}
+        background={Colors.veryLightBlue3}
         sessionLocation={
           session &&
           session.location &&
@@ -431,15 +414,10 @@ const Home = (props) => {
 
       <OurPartners
         multiLine
-        background={Colors.veryLightBlue2}
+        background={Colors.veryLightBlue3}
         images={hiring.partners.images}
-        margin="0"
-        padding="50px 0"
-        marquee
-        paddingFeatured="0 0 50px 0"
         featuredImages={landingHiring?.featured}
         variant="carousel"
-        withoutLine
         title={landingHiring ? landingHiring.heading : hiring.partners.tagline}
         paragraph={
           landingHiring
@@ -448,7 +426,7 @@ const Home = (props) => {
         }
       />
       <Loc
-        background={Colors.veryLightBlue2}
+        background={Colors.veryLightBlue3}
         lang={pageContext.lang}
         allLocationYaml={data.allLocationYaml}
         hideHeading
@@ -528,16 +506,13 @@ export const query = graphql`
             }
             heading {
               text
-              font_size
               style
             }
             sub_heading {
               text
-              font_size
             }
             content {
               text
-              font_size
             }
             button {
               text
@@ -547,7 +522,7 @@ export const query = graphql`
             }
             bullets {
               items {
-                heading
+                text
                 icon
               }
             }
@@ -564,12 +539,10 @@ export const query = graphql`
             }
             heading {
               text
-              font_size
               style
             }
             content {
               text
-              font_size
               path
             }
             button {
@@ -591,7 +564,6 @@ export const query = graphql`
           iconogram {
             heading {
               text
-              font_size
               style
             }
             swipable

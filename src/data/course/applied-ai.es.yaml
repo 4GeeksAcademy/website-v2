@@ -239,22 +239,55 @@ faq:
 
 ## TWO COLUMNS
 two_columns:
-  proportions: [5, 9]
+  proportions: [6, 6]
   image:
-    style: '{"backgroundSize": "cover", "background-position": "center", "min-height": "300px", "height": "300px"}'
-    src: "../../images/landing/two-womans-and-laptop.webp"
-    shadow: true
+    style: '{"backgroundSize": "contain", "background-position": "center"}'
+    src: "../../images/landing/applied-ai-icons.webp"
+    shadow: false
   heading:
     text: "¡Expande tus capacidades y aumenta tu eficiencia!"
     font_size: ["30px", "30px", "30px", "26px", "24px"]
   sub_heading:
-    text: "Aprende a aprovechar los modelos generativos basados en texto como ChatGPT, Claude y Llama3, junto con herramientas de generación de imágenes como Stable Diffusion, DALL-E y Midjourney."
+    text: |-
+      En el curso, aprenderás a sacar el máximo provecho de los modelos generativos basados en texto, como ChatGPT, Gemini, Perplexity y Claude.
+
+      Además, explorarás herramientas de generación de imágenes como Midjourney, Stable Diffusion y Open source colabs. 
+      También, te sumergirás en el mundo de la inteligencia artificial aplicada a video con Stable Video, y en el ámbito del audio con Whisper y ElevenLabs. 
+      ¡Prepárate para dominar estas potentes herramientas AI y llevar tus habilidades al siguiente nivel!
     font_size: ["16px", "16px", "16px", "16px", "16px"]
   button:
     text: "Aplicar al programa"
     color: "white"
     background: "black"
     path: "#prices_and_payment"
+
+
+two_columns_video:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "3px solid black", "backgroundSize": "contain" }'
+    src: "/static/images/landing/inteligencia-artificial-para-profesionales.jpg"
+    shadow: true  
+  video: "https://www.youtube.com/watch?v=N_oJOAfge80"
+  heading:
+    text: "Programa de Inteligencia Artificial Aplicada para Profesionales"
+      #xl      lg     md     sm    xs
+    font_size: ["40px", "34px", "34px", "25px", "20px"]
+  sub_heading:
+    style: '{}'
+    text: |- 
+      El programa de Applied AI para Profesionales en 4Geeks Academy te ofrece la oportunidad única de desarrollar habilidades especializadas en Inteligencia Artificial aplicada a contextos profesionales.
+    font_size: ["16px"]
+  button:
+    text: "Aplicar al programa"
+    color: "white"
+    background: "black"
+    path: "#prices_and_payment"
+  bullets:
+    items: 
+    - text: "Domina técnicas avanzadas de IA para resolver problemas complejos en entornos empresariales."
+    - text: "Aprende a implementar soluciones de IA que mejoren la eficiencia operativa y la toma de decisiones."
+    - text: "Explora casos de estudio reales y ejemplos prácticos de éxito en la implementación de IA en diversas industrias."
 
 # button:
 #   syllabus_heading: "Descargar Syllabus"

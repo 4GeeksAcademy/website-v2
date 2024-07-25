@@ -18,10 +18,15 @@ walk(`${__dirname}/../data/downloadable`, async (err, files) => {
     const doc = loadYML(_path);
     if (!doc || !doc.yaml) fail("Invalid YML syntax for " + _path);
   });
+  let _path = "";
   try {
     const resp = await fetch(
       `https://breathecode.herokuapp.com/v1/marketing/downloadable`
     );
+    console.log(`wewewe`);
+    if (!resp.ok) {
+      throw new Error(`HTTP error! status: ${resp.status}`);
+    }
     const downloadables = await resp.json();
 
     const _files = files.filter(
@@ -32,7 +37,7 @@ walk(`${__dirname}/../data/downloadable`, async (err, files) => {
     );
 
     for (let i = 0; i < _files.length; i++) {
-      const _path = _files[i];
+      _path = _files[i];
       const doc = loadYML(_path);
       if (!doc.yaml) fail("Invalid YML syntax for " + _path);
       if (!doc.lang) fail("Missing language on yml file name for " + _path);

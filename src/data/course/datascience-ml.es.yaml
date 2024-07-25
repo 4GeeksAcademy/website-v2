@@ -73,30 +73,53 @@ overlaped:
   image:
     src: "/images/landing/tres-personas-reloaded.webp"  
 
+## TWO COLUMNS INFO
+two_columns_info:
+  proportions: [6, 6]
+  image:
+    style: '{"backgroundSize": "contain" }'
+    src: "/images/landing/grupo-ventanas.webp"
+    shadow: false  
+  heading:
+    text: "Aprende a aplicar el Machine Learning a problemas del mundo real"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "Nuestro bootcamp de data science está enfocado en brindar todas las herramientas y el apoyo necesario para que puedas triunfar en este campo."
+    font_size: ["16px", "16px", "16px", "16px", "16px"]
 
-# two_columns:
-#   proportions: [6, 6]
-#   image:
-#     style: '{"border" : "3px solid black", "backgroundSize": "contain" }'
-#     src: "/static/images/staff/luisa.png"
-#     shadow: true  
-#   video: "https://www.youtube.com/watch?v=c14ZDHXN6_w"
-#   heading:
-#     text: "4Geeks Academy "
-#     font_size: ["30px", "30px", "30px", "30px", "30px"]
-#   sub_heading:
-#     text: "Descubre por qué nuestro Bootcamp de Data Science es el mejor"
-#     font_size: ["16px", "16px", "16px", "16px", "16px"]
-#   button:
-#     text: "Apply now"
-#     color: "white"
-#     background: "black"
-#     path: "#prices_and_payment"
-#   bullets:
-#     items: 
-#     - text: "There is always a full or partial scholarship open"
-#     - text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
-#     - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade County and many more."
+  bullets:
+    items:
+    - heading: "Mentorías ilimitadas" 
+      text: "Obtén soporte experto para todas tus preguntas. Nuestros mentores están siempre disponibles en línea, listos para ayudarte desde el primer día hasta siempre."
+    - heading: "Proporción profesor estudiante 1:7" 
+      text: "Experimenta una atención perzonalizada con nuestra proporción profesor-alumno superior a la media."
+    - heading: "APOYO PROFESIONAL PERSONALIZADO" 
+      text: "Recibe asesoramiento, orientación y formación ilimitados adaptados a tu perfil único y a tus ofertas de trabajo específicas."
+
+### Two Columns
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "3px solid black", "backgroundSize": "cover"}'
+    src: "/images/testimonials/jasmine-testimonial.webp"
+    shadow: true  
+  video: "https://www.youtube.com/watch?v=mSn16mIKQ2o"
+  heading:
+    text: "Experiencias de nuestros alumnos"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "Descubre por qué nuestro Bootcamp de Data Science es el mejor"
+    font_size: ["16px", "16px", "16px", "16px", "16px"]
+  button:
+    text: "Aplica ahora"
+    color: "white"
+    background: "black"
+    path: "#prices_and_payment"
+  bullets:
+    items: 
+    - text: "Un viaje de transformación en Data Science"
+    - text: "El ambiente de aprendizaje era colaborativo y estimulante, lo que me motivó a esforzarme por alcanzar mi máximo potencial."
+    - text: "El curso me enseñó todo lo que necesitaba saber para tener éxito en este campo, desde los fundamentos de la programación y las estadísticas hasta las técnicas de aprendizaje automático más avanzadas."
 
 
 upcoming:

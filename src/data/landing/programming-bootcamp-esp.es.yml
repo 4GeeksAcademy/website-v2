@@ -150,11 +150,11 @@ components:
       path: "#leadform_header"
     bullets:
       items:
-        - heading: "¡Conviértete en un FullStack developer en tan solo 18 semanas!"
+        - text: "¡Conviértete en un FullStack developer en tan solo 18 semanas!"
           icon: "circle" 
-        - heading: "Desarrollo de habilidades altamente valoradas en el mercado profesional."
+        - text: "Desarrollo de habilidades altamente valoradas en el mercado profesional."
           icon: "circle" 
-        - heading: "Acceso a oportunidades laborales al momento de la graducación."
+        - text: "Acceso a oportunidades laborales al momento de la graducación."
           icon: "circle" 
     content:
       font_size: ["16px"]

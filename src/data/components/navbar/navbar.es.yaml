@@ -1,6 +1,6 @@
 navbar:
   - name: "Programas"
-    link: "/es/coding-bootcamps/full-stack-part-time"
+    link: "/es/coding-bootcamps/desarrollador-full-stack"
     sub_menu:
       icon: ""
       title: "Programas"
@@ -35,7 +35,7 @@ navbar:
         - title: "Inteligencia Artificial"
           level: "Desde cero"
           icon: "applied-ai"
-          paragraph: "Explora a detalle la inteligencia artificial y cómo aplicarla en diferentes industrias, roles y en tu trabajo."
+          paragraph: "Explora a detalle las herramientas actuales de inteligencia artificial y cómo aplicarla para escalar en diferentes industrias, roles y en tu trabajo."
           buttons:
             - text: "Ver Programa"
               link: "/es/coding-bootcamps/curso-inteligencia-artificial"
@@ -129,6 +129,8 @@ navbar:
               link_to: "/es/coding-campus/bootcamp-programacion-houston"
             - title: "Austin, USA"
               link_to: "/es/coding-campus/bootcamp-programacion-austin"
+            - title: "Tampa, USA"
+              link_to: "/es/coding-campus/bootcamp-programacion-tampa"
             - title: "Toronto, Canada"
               link_to: "/es/coding-campus/bootcamp-programacion-toronto-canada"
         - title: "Latam"
@@ -152,7 +154,7 @@ navbar:
             - title: "Uruguay"
               link_to: "/es/coding-campus/bootcamp-programacion-uruguay"
             - title: "Venezuela"
-              link_to: "/es/coding-campus/bootcamp-programacion-caracas-venezuela"
+              link_to: "/es/coding-campus/curso-informatica-caracas-venezuela"
             - title: "Peru"
               link_to: "/es/coding-campus/bootcamp-programacion-lima-peru"
             - title: "Otra locación en America"
@@ -203,10 +205,10 @@ button:
 #   - name: "La Academia"
 #     link: "/es/la-academia"
 #   - name: "Programas"
-#     link: "/es/coding-bootcamps/full-stack-part-time"
+#     link: "/es/coding-bootcamps/desarrollador-full-stack"
 #     links:
 #       - name: "Full Stack Development"
-#       - link: "/es/coding-bootcamps/full-stack-part-time"
+#       - link: "/es/coding-bootcamps/desarrollador-full-stack"
 #       - name: "Senior Software Engineering"
 #       - link: "/es/coding-bootcamps/ingenieria-de-software-programacion"
 #   # - name: "Precios"

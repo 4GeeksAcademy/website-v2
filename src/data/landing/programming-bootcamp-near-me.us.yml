@@ -174,13 +174,13 @@ components:
       path: ""
     bullets:
       items:
-        - heading: "Hands-On Learning"
+        - text: "Hands-On Learning"
           icon: "circle" #string with icon for example ['check', 'cicle', etc]
-        - heading: "Flexible Option"
+        - text: "Flexible Option"
           icon: "circle" #string with icon for example ['check', 'cicle', etc]
-        - heading: "Master in-Demand Skills"
+        - text: "Master in-Demand Skills"
           icon: "circle" #string with icon for example ['check', 'cicle', etc]
-        - heading: "No relocation is needed"
+        - text: "No relocation is needed"
           icon: "circle" #string with icon for example ['check', 'cicle', etc]
 
 

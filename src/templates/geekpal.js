@@ -196,11 +196,9 @@ const GeekPal = (props) => {
                 <React.Fragment key={i}>
                   {item.videoId === "" ? (
                     <StyledBackgroundSection
-                      height={`280px`}
-                      // width={`85%`}
-                      //borderRadius={`3px`}
+                      height="280px"
                       image={item.image.childImageSharp.gatsbyImageData}
-                      bgSize={`contain`}
+                      bgSize="contain"
                       alt="geekforce image"
                     />
                   ) : (
@@ -210,7 +208,7 @@ const GeekPal = (props) => {
                       margin_tablet="0px"
                       //imageSize="maxresdefault"
                       videoHeight="280px"
-                      bgSize={`contain`}
+                      bgSize="contain"
                       style={{
                         width: "100%",
                         height: "280px",
@@ -410,7 +408,7 @@ const GeekPal = (props) => {
                         height_tablet="350px"
                         // width={`85%`}
                         image={m.image.childImageSharp.gatsbyImageData}
-                        bgSize={`contain`}
+                        bgSize="contain"
                         alt="geekforce image"
                       />
                     </Div>

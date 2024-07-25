@@ -39,7 +39,7 @@ Don't take more than ${max_tokens * 2} characters.
 Here is the YML: ${raw}`,
     });
 
-    if (!answer) fail(`Error building prompt for payment plans`);
+    if (!answer) fail(`Error building prompt for courses plans`);
     fs.writeFileSync(`./prompts/${courseSlug}.prompt`, answer, "utf8");
     console.log(`Finished summarizing program: ${courseSlug}`);
   }

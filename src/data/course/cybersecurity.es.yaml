@@ -59,7 +59,8 @@ two_columns_first:
   proportions: [6, 6]
   image:
     style: '{"border" : "0px solid black", "backgroundSize": "contain", "background-position": "center" }'
-    src: "../../images/staff/chema-alonso.webp"  
+    src: "../../images/staff/chema-alonso.webp" 
+    link: "https://www.mypublicinbox.com/chemaalonso"
     shadow: false
   heading:
     text: "Curso de Ciberseguridad validado por Chema Alonso el Hacker más Reconocido de España"
@@ -74,10 +75,12 @@ two_columns_first:
     path: "#prices_and_payment"
   bullets:
     items:
-      - text: "Sala de Chat con el profesor y Chema Alonso."
-      - text: "4 libros de Ciberseguridad de 0xWORD, la editorial de Chema Alonso."
+      - text: |-
+          Sala de Chat con el profesor y Chema Alonso en <a href="https://www.mypublicinbox.com/" target="_blank">MyPublicInbox</a> + 2000 Tempos para gastar en la plataforma
+      - text: |-
+          4 libros de Ciberseguridad de <a href="https://0xword.com/" target="_blank">0xWORD</a>, la editorial de Chema Alonso.
       - text: "Chema Alonso ha validado los contenidos y los profesores de este Curso."  
-      - text: "Orientación laboral y ayuda para conseguir empleo en colaboración con Chema Alonso Y por supuesto nuestras mentorias ilimitadas y de por vida."  
+      - text: "Sesión de Q&A grupal de una hora de todos los estudiantes con Chema Alonso donde se podrán hacer preguntas acerca del futuro profesional en el mundo de la ciberseguridad."  
 
 two_columns_second:
   proportions: [6, 6]
@@ -112,7 +115,7 @@ two_columns_info:
   proportions: [6, 6]
   image:
     style: '{"border" : "0px sólido negro", "backgroundSize": "contain", "background-position": "center" }'
-    src: "../../images/landing/grupo-ventanas.png"
+    src: "../../images/landing/grupo-ventanas.webp"
     shadow: false
   heading:
     text: "Sé parte de la próxima generación de profesionales en ciberseguridad"
