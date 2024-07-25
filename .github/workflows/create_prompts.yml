@@ -25,6 +25,8 @@ jobs:
 
     - name: Run the script
       run: sh src/prompt/prompt.sh
+      env:
+        GATSBY_OPENAI_KEY: ${{ secrets.GATSBY_OPENAI_KEY }}
 
     - name: Commit and push changes
       run: |
@@ -35,4 +37,3 @@ jobs:
         git push
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        GATSBY_OPENAI_KEY: ${{ secrets.GATSBY_OPENAI_KEY }}
