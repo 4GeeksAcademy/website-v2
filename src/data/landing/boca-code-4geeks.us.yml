@@ -12,7 +12,8 @@ meta_info:
   # this UTM fields will be included in the CRM
   # utm_course available ["full-stack", "software-engineering", "machine-learning-engineering"]
   utm_course: ["full-stack"] 
-  utm_location: ["downtown-miami", "online"]
+  utm_location: ["downtown-miami"]
+  utm_source: ["boca-code"]
   automation: soft # comma separated, "soft" is the default value
   tag: request_more_info # comma separated, "request_more_info" is the default value
 
@@ -42,7 +43,7 @@ header_data:
   sub_heading: ""
   partner_logo_url: "../../../static/images/boca/bocacode.webp" # optional
   # badge: ""
-  background_image: "../../../static/images/boca/landing-image.jpg" # optional
+  # background_image: "../../../static/images/boca/landing-image.jpg" # optional
   background: "#1e1b4b" #background property, it can be a hex color
   image_filter: brightness(0.2)
 
@@ -140,24 +141,18 @@ components:
     background: "#fbfbfb"
     position: 2
     heading:
-      text: Our Programs
+      text: 10-Week Full Stack Program
     content:
-      text: Our programs combine practical classes taught by experts.
+      text: Intensive Training for Aspiring Developers
       font_size: ["16px"]
     programs:
       - title: "Dive Right In"
         sub_title: "Full-Time, 10-Week Intensive"
         icon: "fullstack_2"
-        description: "Ready to quit your job and jump in full-time? Our 10-week Software Engineering Career Course covers everything you need to prepare for a career in Tech. Whether you're a beginner or looking for a leg up, this course will launch your career in tech."
+        description: "Ready to quit your job and jump in full-time? Our comprehensive Software Engineering Career Course covers everything you need to prepare for a career in tech. Whether you're a beginner or looking to advance, this course will launch your tech career with in-depth training in programming fundamentals, frontend and backend development, and more."
         text_link: "Apply now"
         link: "#leadform_bottom"
 
-      - title: "Slow & Steady"
-        sub_title: "Part-Time, 3-Week Course"
-        icon: "fullstack"
-        description: "Not quite ready to quit your job? We offer several evening and part-time courses to set you on the path to a career in tech. Start with our Intro to Web Development 3-week part-time class to learn the Basics. Then master Backend Engineering with our Intro to JavaScript and Node.js course. Round off the curriculum with React and master Frontend Engineering."
-        text_link: "Apply now"
-        link: "#leadform_bottom"
 
   - name: new_design_2
     position: 3
