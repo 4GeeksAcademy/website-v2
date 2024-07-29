@@ -1,26 +1,21 @@
-Spain:
-- Full Payment: Pay today and get a discount. Price: €5,200*
-- Financed: Pay in monthly installments starting at €200. Price: €5,409*
-- Income Share Agreement (ISA): Pay only when you work. Price: €0*
-
-USA:
-- Full Payment: Pay today and get a discount. Price: $11,999
-- Scholarship: Pay today. Price: $4,999
-- Financed: Pay in 24 months. Price: $310
-
-Chile:
-- Program + Career Support: Pay upfront and get a discount. Price: 3.375.000 CLP*
-- Data Science Program Only: Pay upfront. Price: 3.750.000 CLP*
-- Financed: Pay monthly for program + career support. Price: ~220.500 CLP per month
-
-Europe:
-- Pay upfront: Pay today and get a discount. Price: €5,200*
-- Financed: Pay in monthly installments starting at €200. Price: €5,409*
-- Income Share Agreement (ISA): Pay only when you work. Price: €0*
-
-Latam:
-- Data Science program + Career Support: Price: $3,600
-- Data Science Program Only: Price: $3,600
-- Financed: Pay monthly for program + career support. Price: ~$120/m
-
+- Spain:
+  - Pay upfront and get a discount. Price: €5,200* (€7,800 original price).
+  - Financed with monthly installments starting at €200. Price: €5,409* (€7,800 original price).
+  - Pay only when you work with an Income Share Agreement (ISA). Price: €0*.
+- USA:
+  - Full payment scholarship. Price: $11,999 ($19,998 original price).
+  - Scholarship with limited seats. Price: $4,999 ($16,665 original price).
+  - Financed with 24-month payment option. Price: $310 per month.
+- Chile:
+  - Program + Career Support scholarship. Pay upfront. Price: 3.375.000 CLP* (4.500.000 CLP original price).
+  - Data Science Program Only scholarship. Pay upfront. Price: 3.750.000 CLP*.
+  - Financed program + career support. Pay monthly. Price: ~220.500 CLP per month.
+- Europe:
+  - Pay upfront and get a discount. Price: €5,200* (€7,800 original price).
+  - Financed with monthly installments starting at €200. Price: €5,409* (€7,800 original price).
+  - Pay only when you work with an Income Share Agreement (ISA). Price: €0*.
+- Latam:
+  - Data Science program + Career Support scholarship. Price: USD $3,600 ($5,000 original price).
+- Venezuela:
+  - Pay upfront and get a discount. Price: $2,400* ($4,000 original price).
 stop
