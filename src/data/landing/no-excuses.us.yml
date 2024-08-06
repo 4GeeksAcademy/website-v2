@@ -4,6 +4,7 @@ meta_info:
   # This will show on social media when shared
   title: "Get a Scholarship and join our software development program now. It's LIVE, on-line (or in-person if you want as well). Learn to code and launch your career in Tech"
   description: "Coding has become an essencial skills for every career, enroll in 4Geeks Academy coding program and learn to code to have a better life"
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   image: "/images/bg/main-bg.jpg"
   keywords: "Scholarships for coding program, coding course, Financial aid Coding Classes, Learn to code with a scholarship"
 
@@ -52,7 +53,7 @@ features:
   bullets:
     - Money is not an excuse. Best pricing (ask for scholarships)
     - Unlimited Mentorship and lifetime access to career services
-    - Award winning Florida Bootcamp (Miami, Orlando, Boca, and online!)
+    - Award winning Florida Bootcamp (Miami, Orlando, Boca, Tampa, and online!)
     - Job placement rate of 81%
     - "Part-time: it’s immersive but with a flexible schedule"
   

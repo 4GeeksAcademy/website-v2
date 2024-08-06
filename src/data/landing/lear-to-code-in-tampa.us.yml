@@ -1,0 +1,288 @@
+meta_info:
+  slug: lear-to-code-in-tampa # <--- URL 4geeksacademy.com/us/landing/example
+
+  # This will show on social media when shared
+  title: "Learn to Code in Tampa | 4Geeks Academy - Top Coding Bootcamp"
+  description: "Join 4Geeks Academy in Tampa and become a Full-Stack Developer, Data Scientist, or Cybersecurity Specialist in just 18 weeks."
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  image: "/images/bg/the-academy-bg.jpg"
+  keywords: ""
+
+  template: "landing_a" # <--- choose your landing template
+  redirects:
+    [] # <--- URL redirections to avoid 404 errors
+
+
+    # Set a particular course or location to the landing page
+  # this UTM fields will be also included in the CRM contact
+  utm_course: ["full-stack", "datascience-ml", "cybersecurity"]
+  utm_location: ["tampa-usa"]
+  automation: soft # comma separated, "soft" is the default value
+  tag: request_more_info # comma separated, "request_more_info" is the default value
+
+navbar:
+  logoUrl: "#" # relative(/apply), absolute(https://google.com) or id(#componentName)
+  buttonText: "Get More Info"
+  buttonUrl: "#leadform_bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+
+form:
+  # posible fields: "first_name", "last_name", "full_name", "phone", "email"
+  # always the first_name, email and phone will be mandatory if added.
+  fields: ["full_name", "phone", "email"]
+  heading: "Scholarships and Financing Tailored to Your Needs"
+  motivation: "After filling out the form, you will receive an email with detailed information about 4Geeks Academy."
+  button_label: Get More Info
+  redirect: null #you can redirect to another url or entirely diffrent website
+
+apply_schollarship: # form that is displayed at the end of the landing
+  # title: "Apoyo Profesional Ilimitado"
+  imageSide: "right"
+  image: "../../../static/images/landing/apply.png"
+
+# jumbotron on the top (cannot be commented out)
+header_data:
+  background: "lightBlue"
+  tagline: Learn to Code in Tampa with 4Geeks Academy
+  tagline_color: "#1b1b1b"
+  form_styles:
+    background: "#E3F9FE"
+    button:
+      background: "black"
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+  image_filter: brightness(0.3)
+
+features:
+  marginTop: 0px #<-- separation between tagline and the bullets
+
+  #                                         up   left down  right
+  styles: '{ "fontSize": "20px", "margin": "10px 0px 0px 0px" }'
+  text: Start Your Tech Career Today
+  bullets:
+    - Become a Full-Stack Developer, Data Scientist, or Cybersecurity Specialist!
+    - Apply now and secure your future in Tampa's booming tech industry.
+    - Unlimited Mentorship and lifetime access to career services
+    - "Part-time: it’s immersive but with a flexible schedule"
+
+short_badges:
+  - name: "Top Online Full-Stack Bootcamps Of 2024"
+    url: ""
+    image: "../../../static/images/badges/forbes-logo-award.png"
+    alt: "We have been selected as one of the Top Online Coding Bootcamps by Forbes."
+  - name: "Best for Spanish speakers Of 2024 by Fortune"
+    url: ""
+    image: "../../../static/images/badges/fortune-logo.png"
+    alt: "Recognized by Fortune as one of the Top Coding Bootcamps"
+  - name: "Top Coding Bootcamps Newsweek"
+    url: ""
+    image: "../../../static/images/badges/newsweek.webp"
+    alt: "Top Coding Bootcamps Newsweek"
+  - name: "Best Coding Bootcamp Course Report 2024"
+    url: ""
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+    alt: "Best Coding Bootcamp Course Report 2024"
+  - name: "Licensed by the Florida Department of Education"
+    url: ""
+    image: "../../../static/images/badges/licensed.png"
+    alt: "Licensed by the Florida Department of Education"
+  - name: "ARP Certificate"
+    url: ""
+    image: "../../../static/images/badges/arp-logo-certification.png"
+    alt: "ARP Certificate"
+
+follow_bar:
+  position: "top" # top, bottom, hidden
+  content:
+    text: "Join 4Geeks Academy and thrive in Tampa's growing tech sector."
+    text_mobile: "Join 4Geeks Academy and thrive in Tampa's growing tech sector."
+    # devices:   XL      LG    MD      SM    XS
+    font_size: ["25px", "25px", "25px", "20px", "18px"]
+  button:
+    text: "Get More Info"
+    path: "#leadform_header"
+  phone:
+    text: "Call "
+
+#
+# ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
+#
+rating_reviews:
+  background: "#FBFBFB"
+  position: 2
+  heading: "Top rated on all available review sites"
+  rating_list:
+    - alt: "Career Karma"
+      image: "../../../static/images/badges/career-karma.png"
+      rating: 4.89
+      url: ""
+    - alt: "Switchup"
+      image: "../../../static/images/badges/switchup-img.png"
+      rating: 4.91
+      url: ""
+    - alt: "Course Report"
+      image: "../../../static/images/badges/course-report.png"
+      rating: 4.84
+      url: ""
+    - alt: "Google"
+      image: "../../../static/images/badges/google.png"
+      rating: 5
+      url: ""
+
+# program_details:
+#   position: 3
+#   background: "#FFFFFF"
+#   heading: "From 0 to Full-Stack Jr. programmer."
+#   sub_heading: "Learn HTML5, CSS3, Bootstrap, JS, Reactjs, SQL, Python, Flask, REST APIs."
+
+why_python:
+  position: 5
+  heading: "Why Python and React.js" # optional or set to white space to hide
+  sub_heading: "JavaScript has 26x's more job vacancies than Ruby On Rails. Python has 10x's more job vacancies than Node.js" # optional or set to white space to hide
+
+geeks_vs_others:
+  position: 7
+  heading: "Compare 4Geeks to other bootcamps"
+  # sub_heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+  total_rows: 5
+
+badges:
+  position: 5
+  heading: "4Geeks Academy has awards and recognitions that validate its excellence"
+
+who_is_hiring:
+  position: 9
+  limit: 4
+  heading: "Who is hiring our students?"
+  sub_heading: "550+ hiring partners, and 50+ job openings right now for software development"
+
+why_4geeks:
+  position: 9
+  heading: "Why 4Geeks Academy"
+  sub_heading: ""
+
+components:
+  - name: why_coding-two-columns
+    position: 1
+    proportions: [6, 6]
+    layout: two_column_left
+    image:
+      src: "/images/landing/Group-6626.webp"
+      shadow: false
+    # video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
+    heading:
+      text:
+        "Why Learn to Code in Tampa?"
+        #xl      lg     md     sm    xs
+      font_size: ["40px", "34px", "34px", "25px", "20px"]
+    sub_heading:
+      text: "Learning to code will give you access to:"
+    content:
+      text: ""
+      font_size: ["16px"]
+    button:
+      text: "Get More Info"
+      background: black
+      color: white
+      hover_color: "#white"
+      path: "#leadform_header"
+    bullets:
+      items:
+        - heading: "Job Opportunities:"
+          text: "High demand for computer programmers in Tampa will continue to rise."
+          icon: "circle" #string with icon for example ['check', 'cicle', etc]
+        - heading: "Better Pay:"
+          text: "The estimated total pay for a Junior Developer is $85,243 per year in the Tampa Fl area, with an average salary of $74,345 per year."
+          icon: "circle" #string with icon for example ['check', 'cicle', etc]
+        - heading: "Career Flexibility:"
+          text: "Coding skills open doors to various jobs in the digital economy."
+          icon: "circle" #string with icon for example ['check', 'cicle', etc]
+
+  - name: how-it-works-programs
+    position: 3
+    background: "lightBlue"
+    layout: iconogram
+    swipable: True
+    heading:
+      text: "Our Coding Programs in Tampa"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      text: Choose between Full-Stack Developer, Data Science & Cybersecurity
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+      style: '{ "textAlign": "center", "width": "60%" }'
+    icons:
+      - icon: "fullstack"
+        title: "Full-Stack Dev"
+        content: "Learn to create complete web applications, mastering both the frontend and backend of a project."
+
+      - icon: "machine"
+        title: "Data Science"
+        content: "Enter the world of data science and machine learning, gaining skills to analyze and visualize information."
+
+      - icon: "cibersecurity"
+        title: "Cybersecurity"
+        content: "Become a cybersecurity specialist and prepare against potential attacks on systems like Windows or Linux."
+
+  - name: geekinfo_2
+    position: 4
+    layout: two_column_right
+    proportions: [6, 6]
+    background: ""
+    image:
+      style: '{ "backgroundSize": "contain" }'
+      src: "/images/locations/tampa-location.webp"
+    section_heading:
+      text: ""
+      style: '{ "font-size": "30px" }'
+    heading:
+      text: "Our Mission in Tampa"
+      font_size: ["40px", "40px", "40px", "40px", "40px"]
+    sub_heading:
+      text: "At 4Geeks Academy, our mission in Tampa is to connect aspiring developers with the skills and opportunities they need to succeed. We aim to build a sustainable tech talent pipeline by bridging the gap between employers and skilled tech professionals."
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+    button:
+      text: "Get More Info"
+      color: white
+      hover_color: "black"
+      background: "black"
+      hover: "blue"
+      path: "#why_4geeks"
+    content:
+      text: ""
+      font_size: ["16px"]
+      path: ""
+    bullets:
+      items:
+        - heading: "UNLIMITED MENTORING"
+          text: "You will receive expert support for all your coding needs. Our mentors are always available ready to help you from day one and throughout your career."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "HIGH AVAILABILITY"
+          text: "ever get stuck with a coding problem. Our dedicated instructors or comunity will respond to your queries within 30 minutes or less."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "1:7 PROFESSOR-STUDENT RATIO"
+          text: "Benefit from individualized attention with our superior professor-to-student ratio, ensuring you get the support you need to excel."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "TAILOR-MADE CAREER SUPPORT"
+          text: "Receive personalized advice, guidance, and training tailored to your unique profile and specific job offers, helping you to secure the best positions in the tech industry."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+
+
+  - name: some_id
+    position: 6
+    layout: two_column_left
+    image:
+      src: "/images/testimonials/marcelo-riciliano-testimonial.jpg"
+      shadow: true
+    video: "https://www.youtube.com/watch?v=O9PkI92BAlk"
+    heading:
+      text:
+        "Learn to code in Tampa and listen to Marcelo."
+        #xl      lg     md     sm    xs
+      font_size: ["40px", "34px", "34px", "25px", "20px"]
+    content:
+      text: " I know how hard it is sometimes to make the decision to change careers. I actually transitioned from law to technology back in 2010, and it's been one of the best choices that I've ever made. If, financially speaking, you're struggling or wondering how to make it possible, please reach out because we have plenty of options available, and I believe that we can make it happen. See you soon!"
+      font_size: ["16px"]
+    button:
+      text: "Get More Info"
+      background: black
+      color: white
+      hover_color: "#white"
+      path: "#leadform_header"
