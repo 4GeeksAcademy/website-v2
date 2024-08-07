@@ -33,7 +33,7 @@ const Iconogram = ({ yml, index }) => {
           {heading.text}
         </H2>
       )}
-        {sub_heading && sub_heading.text && (
+      {sub_heading && sub_heading.text && (
         <Paragraph
           padding_xs={heading?.text ? "0 10%" : "20px 10%"}
           padding_tablet={heading?.text ? "0 10%" : "20px 10%"}

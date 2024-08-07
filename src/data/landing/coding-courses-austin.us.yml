@@ -1,0 +1,275 @@
+meta_info:
+  slug: coding-courses-austin # <--- URL 4geeksacademy.com/us/landing/example
+
+  # This will show on social media when shared
+  title: "Austin Coding Courses | 4Geeks Academy - Advance Your Career"
+  description: "Discover top-rated coding courses in Austin at 4Geeks Academy. Become a Full-Stack Developer, Data Scientist, or Cybersecurity Specialist."
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  image: "/images/bg/the-academy-bg.jpg"
+  keywords: ""
+
+  template: "landing_a" # <--- choose your landing template
+  redirects:
+    [] # <--- URL redirections to avoid 404 errors
+
+
+    # Set a particular course or location to the landing page
+  # this UTM fields will be also included in the CRM contact
+  utm_course: ["full-stack", "datascience-ml", "cybersecurity"]
+  utm_location: ["austin-usa"]
+  automation: soft # comma separated, "soft" is the default value
+  tag: request_more_info # comma separated, "request_more_info" is the default value
+
+navbar:
+  logoUrl: "#" # relative(/apply), absolute(https://google.com) or id(#componentName)
+  buttonText: "Get More Info"
+  buttonUrl: "#leadform_bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+
+form:
+  # posible fields: "first_name", "last_name", "full_name", "phone", "email"
+  # always the first_name, email and phone will be mandatory if added.
+  fields: ["full_name", "phone", "email"]
+  heading: "Scholarships and Financing Tailored to Your Needs"
+  motivation: "Upon completing the form, you can expect to receive a comprehensive email providing detailed information about the academy and the wide array of courses offered."
+  button_label: Get More Info
+  redirect: null #you can redirect to another url or entirely diffrent website
+
+apply_schollarship: # form that is displayed at the end of the landing
+  # title: "Apoyo Profesional Ilimitado"
+  imageSide: "right"
+  image: "../../../static/images/landing/apply.png"
+
+# jumbotron on the top (cannot be commented out)
+header_data:
+  background: "#ffecbf"
+  tagline: Enroll in Austin Coding Courses at 4Geeks Academy
+  tagline_color: "#1b1b1b"
+  sub_heading: "Highly Interactive Online Learning: Engage with real-time, live-streamed classes that mimic in-person interactions, ensuring you receive the same comprehensive training remotely."
+  form_styles:
+    background: "#faf2e1"
+    button:
+      background: "black"
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+  image_filter: brightness(0.3)
+
+features:
+  marginTop: 0px #<-- separation between tagline and the bullets
+
+  #                                         up   left down  right
+  styles: '{ "fontSize": "20px", "margin": "10px 0px 0px 0px" }'
+  bullets:
+    - Become a Full-Stack Developer, Data Scientist, or Cybersecurity Specialist!
+    - Programs crafted to meet Austin's tech industry demands, enhancing your employability and readiness for tech roles
+    - Unlimited Mentorship and lifetime access to career services
+    - "Part-time: it’s immersive but with a flexible schedule, ideal for busy professionals and students"
+
+short_badges:
+  - name: "Top Online Full-Stack Bootcamps Of 2024"
+    url: ""
+    image: "../../../static/images/badges/forbes-logo-award.png"
+    alt: "We have been selected as one of the Top Online Coding Bootcamps by Forbes."
+  - name: "Best for Spanish speakers Of 2024 by Fortune"
+    url: ""
+    image: "../../../static/images/badges/fortune-logo.png"
+    alt: "Recognized by Fortune as one of the Top Coding Bootcamps"
+  - name: "Top Coding Bootcamps Newsweek"
+    url: ""
+    image: "../../../static/images/badges/newsweek.webp"
+    alt: "Top Coding Bootcamps Newsweek"
+  - name: "Best Coding Bootcamp Course Report 2024"
+    url: ""
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+    alt: "Best Coding Bootcamp Course Report 2024"
+  - name: "Licensed by the Florida Department of Education"
+    url: ""
+    image: "../../../static/images/badges/licensed.png"
+    alt: "Licensed by the Florida Department of Education"
+  - name: "ARP Certificate"
+    url: ""
+    image: "../../../static/images/badges/arp-logo-certification.png"
+    alt: "ARP Certificate"
+
+follow_bar:
+  position: "top" # top, bottom, hidden
+  content:
+    text: "Start Your Tech Journey with Austin Coding Courses"
+    text_mobile: "Start Your Tech Journey with Austin Coding Courses"
+    # devices:   XL      LG    MD      SM    XS
+    font_size: ["25px", "25px", "25px", "20px", "18px"]
+  button:
+    text: "Get More Info"
+    path: "#leadform_header"
+  phone:
+    text: "Call "
+
+#
+# ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
+#
+rating_reviews:
+  background: "#FBFBFB"
+  position: 4
+  heading: "Top rated on all available review sites"
+  rating_list:
+    - alt: "Career Karma"
+      image: "../../../static/images/badges/career-karma.png"
+      rating: 4.89
+      url: ""
+    - alt: "Switchup"
+      image: "../../../static/images/badges/switchup-img.png"
+      rating: 4.91
+      url: ""
+    - alt: "Course Report"
+      image: "../../../static/images/badges/course-report.png"
+      rating: 4.84
+      url: ""
+    - alt: "Google"
+      image: "../../../static/images/badges/google.png"
+      rating: 5
+      url: ""
+
+program_details:
+  position: 3
+  background: "#faf2e1"
+  heading: "Master Full-Stack Development with Austin Coding Courses"
+  sub_heading: "Dive deep into full-stack development with our detailed program that covers everything from HTML5 to advanced backend frameworks."
+
+why_python:
+  position: 5
+  heading: "Why Python and React.js" # optional or set to white space to hide
+  sub_heading: "JavaScript has 26x's more job vacancies than Ruby On Rails. Python has 10x's more job vacancies than Node.js" # optional or set to white space to hide
+
+geeks_vs_others:
+  position: 7
+  heading: "How Austin Coding Courses Stand Out"
+  # sub_heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+  total_rows: 5
+
+badges:
+  position: 5
+  heading: "4Geeks Academy has awards and recognitions that validate its excellence"
+
+who_is_hiring:
+  position: 9
+  limit: 4
+  heading: "Who is hiring our students?"
+  sub_heading: "550+ hiring partners, and 50+ job openings right now for software development"
+
+why_4geeks:
+  position: 9
+  heading: "Why 4Geeks Academy"
+  sub_heading: ""
+
+components:
+  - name: why_coding-two-columns
+    position: 1
+    proportions: [6, 6]
+    layout: two_column_right
+    image:
+      style: '{ "backgroundSize": "contain"}'
+      src: "/images/landing/blonde-girl-laptop.png"
+      shadow: false
+    # video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
+    heading:
+      text: "Why Choose Our Austin Coding Courses?"
+        #xl      lg     md     sm    xs
+      font_size: ["40px", "34px", "34px", "25px", "20px"]
+    sub_heading:
+      text: "4Geeks Academy has established itself as a leader in tech education, with a focus on adaptive learning methods and a commitment to student success. Our coding courses in Austin are designed to provide a bridge between theoretical knowledge and practical application, ensuring that graduates are not just certified, but truly qualified."
+    content:
+      text: ""
+      font_size: ["16px"]
+    button:
+      text: "Get More Info"
+      background: black
+      color: white
+      hover_color: "#white"
+      path: "#leadform_header"
+    # bullets:
+    #   items:
+    #     - text: "UNLIMITED MENTORING"
+    #       icon: "check" #string with icon for example ['check', 'cicle', etc]
+    #     - text: "HIGH AVAILABILITY"
+    #       icon: "check" #string with icon for example ['check', 'cicle', etc]
+    #     - text: "1:7 PROFESSOR-STUDENT RATIO"
+    #       icon: "check" #string with icon for example ['check', 'cicle', etc]
+    #     - text: "TAILOR-MADE CAREER SUPPORT"
+    #       icon: "check" #string with icon for example ['check', 'cicle', etc]
+
+  - name: how-it-works-programs
+    position: 2
+    background: "darkYellow"
+    layout: iconogram
+    swipable: True
+    heading:
+      text: "Explore Coding Courses Offered in Austin"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      text: "From foundational programming to advanced development techniques, our Austin coding courses cover various aspects of IT:"
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+      style: '{ "textAlign": "center", "width": "60%" }'
+    icons:
+      - icon: "fullstack"
+        title: "Full Stack Development"
+        content: "Learn to create complete web applications, mastering both the frontend and backend of a project."
+
+      - icon: "machine"
+        title: "Data Science and Machine Learning"
+        content: "Equip yourself with the tools to analyze data and automate decision-making processes."
+
+      - icon: "cibersecurity"
+        title: "Cybersecurity"
+        content: "Learn to safeguard digital infrastructures and secure sensitive data against potential cyber threats."
+
+  - name: geekinfo_2
+    position: 4
+    layout: two_column_right
+    proportions: [6, 6]
+    background: "verylightGray"
+    image:
+      style: '{ "backgroundSize": "contain"}'
+      src: "/images/locations/austin-location.webp"
+      shadow: false
+    section_heading:
+      text: ""
+      style: '{ "font-size": "30px" }'
+    heading:
+      text: "Why Pursue Coding Courses in Austin?"
+      font_size: ["40px", "40px", "40px", "40px", "40px"]
+    sub_heading:
+      text: "Austin is not just the political capital of Texas; it's also a burgeoning tech hub. With a culture that fosters innovation and creativity, Austin is the perfect place to start your tech career. The city's growing tech sector promises ample opportunities for skilled professionals."
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+    button:
+      text: "Get More Info"
+      color: white
+      hover_color: "black"
+      background: "black"
+      hover: "blue"
+      path: "#leadform_bottom"
+    content:
+      text: ""
+      font_size: ["16px"]
+      path: ""
+
+
+
+  - name: some_id
+    position: 6
+    layout: two_column_left
+    image:
+      src: "/images/staff/joao.png"
+      shadow: true
+    video: "https://www.youtube.com/watch?v=MBXqEnhodx0"
+    heading:
+      text:
+        "Hear from Joao About Our Coding Courses"
+        #xl      lg     md     sm    xs
+      font_size: ["40px", "34px", "34px", "25px", "20px"]
+    content:
+      text: "I'm Joao H. Xavier, an alumni of 4Geeks Academy. Before joining 4Geeks, I worked in public order, but I wasn't very motivated by it. Moving to San Francisco, I discovered the benefits of working in tech, which led me to 4Geeks Academy. Now, I work at NCCI in Boca, and it's amazing. Not only do I get to work with technology I learned 1.5 years ago, but I also explore new technologies."
+      font_size: ["16px"]
+    button:
+      text: "Get More Info"
+      background: black
+      color: white
+      hover_color: "#white"
+      path: "#leadform_header"
