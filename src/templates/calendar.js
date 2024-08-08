@@ -26,7 +26,7 @@ const Calendar = (props) => {
   useEffect(() => {
     const getData = async () => {
       let eventsQuery = { academy: WHITE_LABEL_ACADEMY };
-      let events = await getEvents(_query=eventsQuery);
+      let events = await getEvents(eventsQuery);
 
       let _types = [];
       for (let i = 0; i < events.length; i++) {
