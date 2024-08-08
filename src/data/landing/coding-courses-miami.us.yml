@@ -1,0 +1,275 @@
+meta_info:
+  slug: coding-courses-miami # <--- URL 4geeksacademy.com/us/landing/example
+
+  # This will show on social media when shared
+  title: "Coding Courses in Miami | 4Geeks Academy - Your Gateway to the Tech Industry"
+  description: "4Geeks Academy offers coding courses in Miami for high-demand tech roles."
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  image: "/images/bg/the-academy-bg.jpg"
+  keywords: ""
+
+  template: "landing_a" # <--- choose your landing template
+  redirects:
+    [] # <--- URL redirections to avoid 404 errors
+
+
+    # Set a particular course or location to the landing page
+  # this UTM fields will be also included in the CRM contact
+  utm_course: ["full-stack", "datascience-ml", "cybersecurity"]
+  utm_location: ["downtown-miami"]
+  automation: soft # comma separated, "soft" is the default value
+  tag: request_more_info # comma separated, "request_more_info" is the default value
+
+navbar:
+  logoUrl: "#" # relative(/apply), absolute(https://google.com) or id(#componentName)
+  buttonText: "Get More Info"
+  buttonUrl: "#leadform_bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+
+form:
+  # posible fields: "first_name", "last_name", "full_name", "phone", "email"
+  # always the first_name, email and phone will be mandatory if added.
+  fields: ["full_name", "phone", "email"]
+  heading: "Explore Scholarships and Personalized Financial Solutions"
+  motivation: "Upon completion of the form, you will receive a detailed email providing information about the academy and the wide range of courses offered."
+  button_label: Get More Info
+  redirect: null #you can redirect to another url or entirely diffrent website
+
+apply_schollarship: # form that is displayed at the end of the landing
+  # title: "Apoyo Profesional Ilimitado"
+  imageSide: "right"
+  image: "../../../static/images/landing/apply.png"
+
+# jumbotron on the top (cannot be commented out)
+header_data:
+  background: "#ffffff"
+  tagline: Begin Your Tech Career with Our Coding Courses in Miami
+  tagline_color: "#1c1c1c"
+  sub_heading: "Step into the vibrant tech scene of Miami with our comprehensive coding courses. Whether you're seeking to switch careers or enhance your existing tech skills, 4Geeks Academy offers the training you need to succeed."
+  form_styles:
+    background: "#FFB718"
+    button:
+      background: "black"
+  # background_image: "../../../static/images/landing-background-men-w-laptop.webp"
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+  image_filter: brightness(0.9)
+
+features:
+  marginTop: 0px #<-- separation between tagline and the bullets
+
+  #                                         up   left down  right
+  styles: '{ "fontSize": "20px", "margin": "10px 0px 0px 0px" }'
+  bullets:
+    - Become a Full-Stack Developer, Data Scientist, or Cybersecurity Specialist!
+    - Unlimited Mentorship and lifetime access to career services
+    - "Part-time: it’s immersive but with a flexible schedule, ideal for busy professionals and students"
+    - Miami is becoming a major center for tech startups and innovation, attracting global talent and entrepreneurs
+
+short_badges:
+  - name: "Top Online Full-Stack Bootcamps Of 2024"
+    url: ""
+    image: "../../../static/images/badges/forbes-logo-award.png"
+    alt: "We have been selected as one of the Top Online Coding Bootcamps by Forbes."
+  - name: "Best for Spanish speakers Of 2024 by Fortune"
+    url: ""
+    image: "../../../static/images/badges/fortune-logo.png"
+    alt: "Recognized by Fortune as one of the Top Coding Bootcamps"
+  - name: "Top Coding Bootcamps Newsweek"
+    url: ""
+    image: "../../../static/images/badges/newsweek.webp"
+    alt: "Top Coding Bootcamps Newsweek"
+  - name: "Best Coding Bootcamp Course Report 2024"
+    url: ""
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+    alt: "Best Coding Bootcamp Course Report 2024"
+  - name: "Licensed by the Florida Department of Education"
+    url: ""
+    image: "../../../static/images/badges/licensed.png"
+    alt: "Licensed by the Florida Department of Education"
+  - name: "ARP Certificate"
+    url: ""
+    image: "../../../static/images/badges/arp-logo-certification.png"
+    alt: "ARP Certificate"
+
+follow_bar:
+  position: "top" # top, bottom, hidden
+  content:
+    text: "Start now and shape your future in technology!"
+    text_mobile: "Start now and shape your future in technology!"
+    # devices:   XL      LG    MD      SM    XS
+    font_size: ["25px", "25px", "25px", "20px", "18px"]
+  button:
+    text: "Get More Info"
+    path: "#leadform_header"
+  phone:
+    text: "Call "
+
+#
+# ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
+#
+rating_reviews:
+  background: "#FBFBFB"
+  position: 4
+  heading: "Top rated on all available review sites"
+  rating_list:
+    - alt: "Career Karma"
+      image: "../../../static/images/badges/career-karma.png"
+      rating: 4.89
+      url: ""
+    - alt: "Switchup"
+      image: "../../../static/images/badges/switchup-img.png"
+      rating: 4.91
+      url: ""
+    - alt: "Course Report"
+      image: "../../../static/images/badges/course-report.png"
+      rating: 4.84
+      url: ""
+    - alt: "Google"
+      image: "../../../static/images/badges/google.png"
+      rating: 5
+      url: ""
+
+# program_details:
+#   position: 3
+#   background: "#faf2e1"
+#   heading: "Master Full-Stack Development with Austin Coding Courses"
+#   sub_heading: "Dive deep into full-stack development with our detailed program that covers everything from HTML5 to advanced backend frameworks."
+
+why_python:
+  position: 5
+  heading: "Why Python and React.js" # optional or set to white space to hide
+  sub_heading: "JavaScript has 26x's more job vacancies than Ruby On Rails. Python has 10x's more job vacancies than Node.js" # optional or set to white space to hide
+
+geeks_vs_others:
+  position: 7
+  heading: "Unforgettable Reasons Why 4Geeks Coding Courses in Miami Shine"
+  # sub_heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+  total_rows: 5
+
+badges:
+  position: 5
+  heading: "4Geeks Academy has awards and recognitions that validate its excellence"
+
+who_is_hiring:
+  position: 9
+  limit: 4
+  heading: "Who is hiring our students?"
+  sub_heading: "550+ hiring partners, and 50+ job openings right now for software development"
+
+why_4geeks:
+  position: 9
+  heading: "Why 4Geeks Academy"
+  sub_heading: ""
+
+components:
+  - name: why_coding-two-columns
+    position: 1
+    proportions: [6, 6]
+    layout: two_column_right
+    image:
+      style: '{ "backgroundSize": "contain"}'
+      src: "/images/landing/blonde-girl-laptop.png"
+      shadow: false
+    # video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
+    heading:
+      text: "Why Choose Coding Courses Miami at 4Geeks Academy?"
+        #xl      lg     md     sm    xs
+      font_size: ["40px", "34px", "34px", "25px", "20px"]
+    sub_heading:
+      text: "Miami's technology sector is thriving and provides abundant opportunities for skilled professionals. Our coding courses in Miami offer a direct path to in-demand tech roles, providing you with the necessary skills and connecting you with local tech communities and startups."
+    content:
+      text: ""
+      font_size: ["16px"]
+    button:
+      text: "Get More Info"
+      background: black
+      color: white
+      hover_color: "#white"
+      path: "#leadform_header"
+    # bullets:
+    #   items:
+    #     - text: "UNLIMITED MENTORING"
+    #       icon: "check" #string with icon for example ['check', 'cicle', etc]
+    #     - text: "HIGH AVAILABILITY"
+    #       icon: "check" #string with icon for example ['check', 'cicle', etc]
+    #     - text: "1:7 PROFESSOR-STUDENT RATIO"
+    #       icon: "check" #string with icon for example ['check', 'cicle', etc]
+    #     - text: "TAILOR-MADE CAREER SUPPORT"
+    #       icon: "check" #string with icon for example ['check', 'cicle', etc]
+
+  - name: how-it-works-programs
+    position: 2
+    background: "darkYellow"
+    layout: iconogram
+    swipable: True
+    heading:
+      text: "Explore a wide range of coding courses in Miami offered by 4Geeks Academy!"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      text: ""
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+      style: '{ "textAlign": "center", "width": "60%" }'
+    icons:
+      - icon: "fullstack"
+        title: "Full Stack Development"
+        content: "Learn to create complete web applications, mastering both the frontend and backend of a project."
+
+      - icon: "machine"
+        title: "Data Science and Machine Learning"
+        content: "Equip yourself with the tools to analyze data and automate decision-making processes."
+
+      - icon: "cibersecurity"
+        title: "Cybersecurity"
+        content: "Learn to safeguard digital infrastructures and secure sensitive data against potential cyber threats."
+
+  - name: geekinfo_2
+    position: 4
+    layout: two_column_left
+    proportions: [6, 6]
+    background: "lightYellow2"
+    image:
+      style: '{ "backgroundSize": "cover", "border":"2px solid black"}'
+      src: "/images/locations/miami-dia.jpg"
+      shadow: true
+    section_heading:
+      text: ""
+      style: '{ "font-size": "30px" }'
+    heading:
+      text: "Discover the Advantages of Joining Our Miami Coding Courses"
+      font_size: ["40px", "40px", "40px", "40px", "40px"]
+    sub_heading:
+      text: "When you enroll in any of our coding courses in Miami, you gain more than just technical knowledge. Miami's strategic location offers unique opportunities for tech professionals, including access to international markets and a thriving local startup scene, which can boost your career growth potential."
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+    button:
+      text: "Get More Info"
+      color: white
+      hover_color: "black"
+      background: "black"
+      hover: "blue"
+      path: "#leadform_bottom"
+    content:
+      text: ""
+      font_size: ["16px"]
+      path: ""
+
+
+
+  - name: some_id
+    position: 6
+    layout: two_column_right
+    image:
+      src: "/images/testimonials/allisa-testimonial.jpg"
+      shadow: true
+    video: "TCHASxvkhpI"
+    heading:
+      text: "Discover Opportunities in Coding Courses Miami"
+        #xl      lg     md     sm    xs
+      font_size: ["40px", "34px", "34px", "25px", "20px"]
+    content:
+      text: "Meet Melissa, the Campus Manager at 4Geeks Academy Miami. In this video, Melissa highlights the dedication of our team to support students in South Florida. We collaborate with various partners such as Miami Tech Works, United Way Miami, and Clark University to ensure that both full and partial scholarships are readily available for residents of Miami-Dade and Broward counties. As a bootcamp rooted in Miami, it's our priority to make these opportunities accessible to residents. If you’re interested in taking advantage of these scholarships and kickstarting your career in tech, contact our admissions team today. Melissa and the rest of our dedicated staff are here to help you every step of the way."
+      font_size: ["16px"]
+    button:
+      text: "Get More Info"
+      background: black
+      color: white
+      hover_color: "#white"
+      path: "#leadform_header"

@@ -215,7 +215,10 @@ const DataScience = ({ data, pageContext, yml }) => {
 
       {/* TWO COLUMN INFO CREAR EN EL YML*/}
       <TwoColumn
-        right={{ image: yml.two_columns_info?.image, video: yml.two_columns_info?.video }}
+        right={{
+          image: yml.two_columns_info?.image,
+          video: yml.two_columns_info?.video,
+        }}
         left={{
           section_heading: yml.two_columns_info?.section_heading,
           heading: yml.two_columns_info?.heading,

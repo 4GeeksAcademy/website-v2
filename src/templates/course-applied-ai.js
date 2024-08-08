@@ -233,10 +233,13 @@ const ApliedAi = ({ data, pageContext, yml }) => {
         locations={data.allLocationYaml.edges}
         showMoreRedirect
       />
-      
+
       {/* TWO COLUMN video CREAR EN EL YML*/}
       <TwoColumn
-        left={{ image: yml.two_columns_video?.image, video: yml.two_columns_video?.video }}
+        left={{
+          image: yml.two_columns_video?.image,
+          video: yml.two_columns_video?.video,
+        }}
         right={{
           heading: yml.two_columns_video?.heading,
           sub_heading: yml.two_columns_video?.sub_heading,
