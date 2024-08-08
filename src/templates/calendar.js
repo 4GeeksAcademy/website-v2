@@ -20,12 +20,12 @@ const Calendar = (props) => {
   const [datas, setData] = useState({
     events: { catalog: [], all: [], filtered: [] },
   });
-  const WHITE_LABEL_ACADEMY = process.env.WHITE_LABEL_ACADEMY || '';
+  const GATSBY_WHITE_LABEL_ACADEMY = process.env.GATSBY_WHITE_LABEL_ACADEMY || '';
   let content = data.allPageYaml.edges[0].node;
 
   useEffect(() => {
     const getData = async () => {
-      let eventsQuery = { academy: WHITE_LABEL_ACADEMY };
+      let eventsQuery = { academy: GATSBY_WHITE_LABEL_ACADEMY };
       let events = await getEvents(eventsQuery);
 
       let _types = [];
