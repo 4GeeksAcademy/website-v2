@@ -24,6 +24,10 @@ const Calendar = (props) => {
   let content = data.allPageYaml.edges[0].node;
 
   useEffect(() => {
+    window.GATSBY_WHITE_LABEL_ACADEMY = GATSBY_WHITE_LABEL_ACADEMY;
+  }, []);
+
+  useEffect(() => {
     const getData = async () => {
       let eventsQuery = { academy: GATSBY_WHITE_LABEL_ACADEMY };
       let events = await getEvents(eventsQuery);
