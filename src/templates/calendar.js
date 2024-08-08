@@ -20,11 +20,13 @@ const Calendar = (props) => {
   const [datas, setData] = useState({
     events: { catalog: [], all: [], filtered: [] },
   });
+  const WHITE_LABEL_ACADEMY = process.env.WHITE_LABEL_ACADEMY || '';
   let content = data.allPageYaml.edges[0].node;
 
   useEffect(() => {
     const getData = async () => {
-      let events = await getEvents();
+      let eventsQuery = { academy: WHITE_LABEL_ACADEMY };
+      let events = await getEvents(eventsQuery);
 
       let _types = [];
       for (let i = 0; i < events.length; i++) {
