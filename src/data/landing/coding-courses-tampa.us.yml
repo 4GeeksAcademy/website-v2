@@ -15,7 +15,7 @@ meta_info:
 
     # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
-  utm_course: ["full-stack", "datascience-ml", "cybersecurity"]
+  utm_course: ["full-stack", "datascience-ml", "cybersecurity", "coding-introduction"]
   utm_location: ["tampa-usa"]
   automation: soft # comma separated, "soft" is the default value
   tag: request_more_info # comma separated, "request_more_info" is the default value
@@ -29,8 +29,8 @@ form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
-  heading: "Scholarships and Financing Tailored to Your Needs"
-  motivation: "Upon completing the form, you can expect to receive a comprehensive email providing detailed information about the academy and the wide array of courses offered."
+  heading: "Get More Information"
+  motivation: "Once you have finished submitting the form, you can expect to receive an email within 5 minutes providing comprehensive details about our programs and the academy."
   button_label: Get More Info
   redirect: null #you can redirect to another url or entirely diffrent website
 

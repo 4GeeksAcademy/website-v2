@@ -1,9 +1,9 @@
 meta_info:
-  slug: lear-to-code-in-tampa # <--- URL 4geeksacademy.com/us/landing/example
+  slug: learn-to-code-in-austin # <--- URL 4geeksacademy.com/us/landing/example
 
   # This will show on social media when shared
-  title: "Learn to Code in Tampa | 4Geeks Academy - Top Coding Bootcamp"
-  description: "Join 4Geeks Academy in Tampa and become a Full-Stack Developer, Data Scientist, or Cybersecurity Specialist in just 18 weeks."
+  title: "Learn to Code in Austin | 4Geeks Academy - Transform Your Career"
+  description: "Kickstart your tech career with 4Geeks Academy in Austin. Our coding bootcamp offers training in software development, data science, and cybersecurity."
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   image: "/images/bg/the-academy-bg.jpg"
   keywords: ""
@@ -15,8 +15,8 @@ meta_info:
 
     # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
-  utm_course: ["full-stack", "datascience-ml", "cybersecurity"]
-  utm_location: ["tampa-usa"]
+  utm_course: ["full-stack", "datascience-ml", "cybersecurity", "coding-introduction"]
+  utm_location: ["austin-usa"]
   automation: soft # comma separated, "soft" is the default value
   tag: request_more_info # comma separated, "request_more_info" is the default value
 
@@ -29,8 +29,8 @@ form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
-  heading: "Scholarships and Financing Tailored to Your Needs"
-  motivation: "After filling out the form, you will receive an email with detailed information about 4Geeks Academy."
+  heading: "Get More Information"
+  motivation: "Upon completion and submission of the form, an email containing comprehensive information about our programs and the academy will be promptly dispatched to you within a 5-minute timeframe."
   button_label: Get More Info
   redirect: null #you can redirect to another url or entirely diffrent website
 
@@ -41,11 +41,12 @@ apply_schollarship: # form that is displayed at the end of the landing
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  background: "lightBlue"
-  tagline: Learn to Code in Tampa with 4Geeks Academy
+  background: "#ffecbf"
+  tagline: Learn to Code in Austin with 4Geeks Academy
   tagline_color: "#1b1b1b"
+  sub_heading: "Unlock the door to new opportunities in one of the fastest-growing tech hubs in the country. Whether you're a beginner or looking to enhance your skills, our courses are designed to equip you with the knowledge and tools needed to succeed in the tech industry."
   form_styles:
-    background: "#E3F9FE"
+    background: "#faf2e1"
     button:
       background: "black"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
@@ -58,8 +59,8 @@ features:
   styles: '{ "fontSize": "20px", "margin": "10px 0px 0px 0px" }'
   text: Start Your Tech Career Today
   bullets:
-    - Become a Full-Stack Developer, Data Scientist, or Cybersecurity Specialist!
-    - Apply now and secure your future in Tampa's booming tech industry.
+    - Choose from diverse coding disciplines to find the program that fits your career goals.
+    - Master coding from anywhere in Austin or beyond with our flexible, online format.
     - Unlimited Mentorship and lifetime access to career services
     - "Part-time: it’s immersive but with a flexible schedule"
 
@@ -92,8 +93,8 @@ short_badges:
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "Join 4Geeks Academy and thrive in Tampa's growing tech sector."
-    text_mobile: "Join 4Geeks Academy and thrive in Tampa's growing tech sector."
+    text: "Embrace the opportunity to learn to code in Austin with our expert-led online courses"
+    text_mobile: "Embrace the opportunity to learn to code in Austin with our expert-led online courses"
     # devices:   XL      LG    MD      SM    XS
     font_size: ["25px", "25px", "25px", "20px", "18px"]
   button:
@@ -140,7 +141,7 @@ why_python:
 
 geeks_vs_others:
   position: 7
-  heading: "Compare 4Geeks to other bootcamps"
+  heading: "Why Choose Our Bootcamp to Learn to Code in Austin"
   # sub_heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
   total_rows: 5
 
@@ -165,16 +166,16 @@ components:
     proportions: [6, 6]
     layout: two_column_left
     image:
-      src: "/images/landing/Group-6626.webp"
+      src: "/images/landing/feliz-empresario-laptop-2.png"
       shadow: false
     # video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
     heading:
       text:
-        "Why Learn to Code in Tampa?"
+        "Why Learn to Code in Austin?"
         #xl      lg     md     sm    xs
       font_size: ["40px", "34px", "34px", "25px", "20px"]
     sub_heading:
-      text: "Learning to code will give you access to:"
+      text: "Austin's dynamic tech scene offers abundant opportunities for aspiring tech professionals. By joining 4Geeks Academy, you'll gain access to cutting-edge training that meets the demands of local and global tech employers, ensuring you're well-prepared for a variety of tech roles."
     content:
       text: ""
       font_size: ["16px"]
@@ -186,14 +187,11 @@ components:
       path: "#leadform_header"
     bullets:
       items:
-        - heading: "Job Opportunities:"
-          text: "High demand for computer programmers in Tampa will continue to rise."
+        - text: "The estimated total pay for a Full Stack Developer is $128,66 per year in the Austin area, with an average salary of $95,56 per year."
           icon: "circle" #string with icon for example ['check', 'cicle', etc]
-        - heading: "Better Pay:"
-          text: "The estimated total pay for a Junior Developer is $85,243 per year in the Tampa Fl area, with an average salary of $74,345 per year."
+        - text: "Coding skills open doors to various jobs in the digital economy."
           icon: "circle" #string with icon for example ['check', 'cicle', etc]
-        - heading: "Career Flexibility:"
-          text: "Coding skills open doors to various jobs in the digital economy."
+        - text: "High demand for computer programmers in Austin will continue to rise."
           icon: "circle" #string with icon for example ['check', 'cicle', etc]
 
   - name: how-it-works-programs
@@ -202,7 +200,7 @@ components:
     layout: iconogram
     swipable: True
     heading:
-      text: "Our Coding Programs in Tampa"
+      text: "Explore Programs to Learn to Code in Austin"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     sub_heading:
       text: Choose between Full-Stack Developer, Data Science & Cybersecurity
@@ -211,7 +209,7 @@ components:
     icons:
       - icon: "fullstack"
         title: "Full-Stack Dev"
-        content: "Learn to create complete web applications, mastering both the frontend and backend of a project."
+        content: "Our courses cover essential areas such as Full-Stack Development, Data Science, and Cybersecurity:"
 
       - icon: "machine"
         title: "Data Science"
@@ -225,18 +223,19 @@ components:
     position: 4
     layout: two_column_right
     proportions: [6, 6]
-    background: ""
+    background: "verylightGray"
     image:
-      style: '{ "backgroundSize": "contain" }'
-      src: "/images/locations/tampa-location.webp"
+      style: '{ "backgroundSize": "contain"}'
+      src: "/images/locations/austin-location.webp"
+      shadow: false
     section_heading:
       text: ""
       style: '{ "font-size": "30px" }'
     heading:
-      text: "Our Mission in Tampa"
+      text: "Why Learn to Code in Austin?"
       font_size: ["40px", "40px", "40px", "40px", "40px"]
     sub_heading:
-      text: "At 4Geeks Academy, our mission in Tampa is to connect aspiring developers with the skills and opportunities they need to succeed. We aim to build a sustainable tech talent pipeline by bridging the gap between employers and skilled tech professionals."
+      text: "Austin is celebrated not only for its vibrant culture but also for its substantial tech industry growth. Studying here connects you with an expansive network of tech professionals and startups, enhancing both your educational and professional experiences."
       font_size: ["16px", "16px", "16px", "16px", "16px"]
     button:
       text: "Get More Info"
@@ -249,36 +248,36 @@ components:
       text: ""
       font_size: ["16px"]
       path: ""
-    bullets:
-      items:
-        - heading: "UNLIMITED MENTORING"
-          text: "You will receive expert support for all your coding needs. Our mentors are always available ready to help you from day one and throughout your career."
-          icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - heading: "HIGH AVAILABILITY"
-          text: "ever get stuck with a coding problem. Our dedicated instructors or comunity will respond to your queries within 30 minutes or less."
-          icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - heading: "1:7 PROFESSOR-STUDENT RATIO"
-          text: "Benefit from individualized attention with our superior professor-to-student ratio, ensuring you get the support you need to excel."
-          icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - heading: "TAILOR-MADE CAREER SUPPORT"
-          text: "Receive personalized advice, guidance, and training tailored to your unique profile and specific job offers, helping you to secure the best positions in the tech industry."
-          icon: "check" #string with icon for example ['check', 'cicle', etc]
+    # bullets:
+    #   items:
+    #     - heading: "UNLIMITED MENTORING"
+    #       text: "You will receive expert support for all your coding needs. Our mentors are always available ready to help you from day one and throughout your career."
+    #       icon: "check" #string with icon for example ['check', 'cicle', etc]
+    #     - heading: "HIGH AVAILABILITY"
+    #       text: "ever get stuck with a coding problem. Our dedicated instructors or comunity will respond to your queries within 30 minutes or less."
+    #       icon: "check" #string with icon for example ['check', 'cicle', etc]
+    #     - heading: "1:7 PROFESSOR-STUDENT RATIO"
+    #       text: "Benefit from individualized attention with our superior professor-to-student ratio, ensuring you get the support you need to excel."
+    #       icon: "check" #string with icon for example ['check', 'cicle', etc]
+    #     - heading: "TAILOR-MADE CAREER SUPPORT"
+    #       text: "Receive personalized advice, guidance, and training tailored to your unique profile and specific job offers, helping you to secure the best positions in the tech industry."
+    #       icon: "check" #string with icon for example ['check', 'cicle', etc]
 
 
   - name: some_id
     position: 6
     layout: two_column_left
     image:
-      src: "/images/testimonials/marcelo-riciliano-testimonial.jpg"
+      src: "/images/staff/joao.png"
       shadow: true
-    video: "https://www.youtube.com/watch?v=O9PkI92BAlk"
+    video: "https://www.youtube.com/watch?v=MBXqEnhodx0"
     heading:
       text:
-        "Learn to code in Tampa and listen to Marcelo."
+        "Learning to Code in Austin: Success Stories from 4Geeks Academy"
         #xl      lg     md     sm    xs
       font_size: ["40px", "34px", "34px", "25px", "20px"]
     content:
-      text: " I know how hard it is sometimes to make the decision to change careers. I actually transitioned from law to technology back in 2010, and it's been one of the best choices that I've ever made. If, financially speaking, you're struggling or wondering how to make it possible, please reach out because we have plenty of options available, and I believe that we can make it happen. See you soon!"
+      text: "Hear from our alumni about how learning to code helped them achieve their tech career goals. Their stories highlight the supportive learning environment and the success it breeds."
       font_size: ["16px"]
     button:
       text: "Get More Info"

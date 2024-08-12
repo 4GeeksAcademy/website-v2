@@ -15,7 +15,7 @@ meta_info:
 
     # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
-  utm_course: ["full-stack", "datascience-ml", "cybersecurity"]
+  utm_course: ["full-stack", "datascience-ml", "cybersecurity", "coding-introduction"]
   utm_location: ["downtown-miami"]
   automation: soft # comma separated, "soft" is the default value
   tag: request_more_info # comma separated, "request_more_info" is the default value
@@ -29,7 +29,7 @@ form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
-  heading: "Explore Scholarships and Personalized Financial Solutions"
+  heading: "Get more Information"
   motivation: "Upon completion of the form, you will receive a detailed email providing information about the academy and the wide range of courses offered."
   button_label: Get More Info
   redirect: null #you can redirect to another url or entirely diffrent website
@@ -44,7 +44,7 @@ header_data:
   background: "#ffffff"
   tagline: Begin Your Tech Career with Our Coding Courses in Miami
   tagline_color: "#1c1c1c"
-  sub_heading: "Step into the vibrant tech scene of Miami with our comprehensive coding courses. Whether you're seeking to switch careers or enhance your existing tech skills, 4Geeks Academy offers the training you need to succeed."
+  sub_heading: "Step into the vibrant tech scene of Miami with our comprehensive coding courses at 4Geeks Academy. Whether you're looking to switch careers or enhance your existing tech skills, we provide the training you need to succeed."
   form_styles:
     background: "#FFB718"
     button:
@@ -171,7 +171,7 @@ components:
       shadow: false
     # video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
     heading:
-      text: "Why Choose Coding Courses Miami at 4Geeks Academy?"
+      text: "Why Choose our Coding Courses in Miami?"
         #xl      lg     md     sm    xs
       font_size: ["40px", "34px", "34px", "25px", "20px"]
     sub_heading:
@@ -202,7 +202,7 @@ components:
     layout: iconogram
     swipable: True
     heading:
-      text: "Explore a wide range of coding courses in Miami offered by 4Geeks Academy!"
+      text: "Explore our wide range of coding courses offered in Miami!"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     sub_heading:
       text: ""

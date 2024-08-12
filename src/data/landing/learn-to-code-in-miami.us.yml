@@ -1,9 +1,9 @@
 meta_info:
-  slug: lear-to-code-in-austin # <--- URL 4geeksacademy.com/us/landing/example
+  slug: learn-to-code-in-miami # <--- URL 4geeksacademy.com/us/landing/example
 
   # This will show on social media when shared
-  title: "Learn to Code in Austin | 4Geeks Academy - Transform Your Career"
-  description: "Kickstart your tech career with 4Geeks Academy in Austin. Our coding bootcamp offers training in software development, data science, and cybersecurity."
+  title: "Learn to Code Miami | 4Geeks Academy - Start Your Tech Career"
+  description: "Dive into the tech world with 4Geeks coding courses in Miami. Our unique approach to education helps you gain the skills needed for a successful tech career."
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   image: "/images/bg/the-academy-bg.jpg"
   keywords: ""
@@ -15,8 +15,8 @@ meta_info:
 
     # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
-  utm_course: ["full-stack", "datascience-ml", "cybersecurity"]
-  utm_location: ["austin-usa"]
+  utm_course: ["full-stack", "datascience-ml", "cybersecurity", "coding-introduction"]
+  utm_location: ["downtown-miami"]
   automation: soft # comma separated, "soft" is the default value
   tag: request_more_info # comma separated, "request_more_info" is the default value
 
@@ -29,7 +29,7 @@ form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
-  heading: "Scholarships and Financing Tailored to Your Needs"
+  heading: "Get more Information"
   motivation: "After filling out the form, you will receive an email with detailed information about 4Geeks Academy."
   button_label: Get More Info
   redirect: null #you can redirect to another url or entirely diffrent website
@@ -37,16 +37,15 @@ form:
 apply_schollarship: # form that is displayed at the end of the landing
   # title: "Apoyo Profesional Ilimitado"
   imageSide: "right"
-  image: "../../../static/images/landing/apply.png"
+  image: "../../../static/images/landing/blonde-girl-laptop.png"
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  background: "#ffecbf"
-  tagline: Learn to Code in Austin with 4Geeks Academy
+  background: "lightBlue"
+  tagline: Learn to Code in Miami with 4Geeks Academy
   tagline_color: "#1b1b1b"
-  sub_heading: "Unlock the door to new opportunities in one of the fastest-growing tech hubs in the country. Whether you're a beginner or looking to enhance your skills, our courses are designed to equip you with the knowledge and tools needed to succeed in the tech industry."
   form_styles:
-    background: "#faf2e1"
+    background: "#E3F9FE"
     button:
       background: "black"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
@@ -57,12 +56,12 @@ features:
 
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 0px 0px" }'
-  text: Start Your Tech Career Today
+  text: 
   bullets:
-    - Choose from diverse coding disciplines to find the program that fits your career goals.
-    - Master coding from anywhere in Austin or beyond with our flexible, online format.
-    - Unlimited Mentorship and lifetime access to career services
-    - "Part-time: it’s immersive but with a flexible schedule"
+    - Choose to become a Full-Stack Developer, Data Scientist, or Cybersecurity Specialist!
+    - The average salaries for tech professionals in Miami range from $81,000/yr for entry-level positions to over $144,000/yr for experienced roles.
+    - Enjoy unlimited mentorship and lifetime access to career services.
+    - The part-time option offers an immersive experience with a flexible schedule.
 
 short_badges:
   - name: "Top Online Full-Stack Bootcamps Of 2024"
@@ -93,8 +92,8 @@ short_badges:
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "Embrace the opportunity to learn to code in Austin with our expert-led online courses"
-    text_mobile: "Embrace the opportunity to learn to code in Austin with our expert-led online courses"
+    text: "Learn to Code Miami with 4Geeks Academy \n Your Gateway to a Thriving Tech Career"
+    text_mobile: "Join 4Geeks Academy in Miami to learn coding for a successful tech career"
     # devices:   XL      LG    MD      SM    XS
     font_size: ["25px", "25px", "25px", "20px", "18px"]
   button:
@@ -107,8 +106,8 @@ follow_bar:
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
 #
 rating_reviews:
-  background: "#FBFBFB"
-  position: 2
+  background: "#fcfcfc"
+  position: 10
   heading: "Top rated on all available review sites"
   rating_list:
     - alt: "Career Karma"
@@ -134,14 +133,19 @@ rating_reviews:
 #   heading: "From 0 to Full-Stack Jr. programmer."
 #   sub_heading: "Learn HTML5, CSS3, Bootstrap, JS, Reactjs, SQL, Python, Flask, REST APIs."
 
+why_4geeks:
+  position: 2
+  heading: "Student Success Stories from Learn to Code Miami"
+  sub_heading: ""
+
 why_python:
   position: 5
   heading: "Why Python and React.js" # optional or set to white space to hide
   sub_heading: "JavaScript has 26x's more job vacancies than Ruby On Rails. Python has 10x's more job vacancies than Node.js" # optional or set to white space to hide
 
 geeks_vs_others:
-  position: 7
-  heading: "Why Choose Our Bootcamp to Learn to Code in Austin"
+  position: 6
+  heading: "Compare 4Geeks with Other Coding Schools in Miami"
   # sub_heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
   total_rows: 5
 
@@ -155,27 +159,25 @@ who_is_hiring:
   heading: "Who is hiring our students?"
   sub_heading: "550+ hiring partners, and 50+ job openings right now for software development"
 
-why_4geeks:
-  position: 9
-  heading: "Why 4Geeks Academy"
-  sub_heading: ""
-
 components:
   - name: why_coding-two-columns
     position: 1
     proportions: [6, 6]
     layout: two_column_left
     image:
-      src: "/images/landing/feliz-empresario-laptop-2.png"
+      src: "/images/landing/Group-6626.webp"
       shadow: false
     # video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
+    section_heading:
+      text: "Why Choose 4Geeks Academy to Learn to Code Miami?"
+      style: '{ "font-size": "30px"}'
     heading:
       text:
-        "Why Learn to Code in Austin?"
+        "Unique Features That Set Us Apart"
         #xl      lg     md     sm    xs
       font_size: ["40px", "34px", "34px", "25px", "20px"]
     sub_heading:
-      text: "Austin's dynamic tech scene offers abundant opportunities for aspiring tech professionals. By joining 4Geeks Academy, you'll gain access to cutting-edge training that meets the demands of local and global tech employers, ensuring you're well-prepared for a variety of tech roles."
+      text: ""
     content:
       text: ""
       font_size: ["16px"]
@@ -187,11 +189,17 @@ components:
       path: "#leadform_header"
     bullets:
       items:
-        - text: "The estimated total pay for a Full Stack Developer is $128,66 per year in the Austin area, with an average salary of $95,56 per year."
+        - heading: "Student-Centric Approach"
+          text: "Small class sizes ensure personalized attention for each student."
           icon: "circle" #string with icon for example ['check', 'cicle', etc]
-        - text: "Coding skills open doors to various jobs in the digital economy."
+        - heading: "Industry-Driven Curriculum"
+          text: "Courses designed to meet the demands of today’s tech employers."
           icon: "circle" #string with icon for example ['check', 'cicle', etc]
-        - text: "High demand for computer programmers in Austin will continue to rise."
+        - heading: "Lifelong Career Support"
+          text: "Extensive alumni network and career services that continue beyond graduation."
+          icon: "circle" #string with icon for example ['check', 'cicle', etc]
+        - heading: "Hands-on Learning"
+          text: "Practical experience through project-based learning and real-world scenarios."
           icon: "circle" #string with icon for example ['check', 'cicle', etc]
 
   - name: how-it-works-programs
@@ -200,42 +208,41 @@ components:
     layout: iconogram
     swipable: True
     heading:
-      text: "Explore Programs to Learn to Code in Austin"
+      text: "Explore Our Coding Programs to Learn to Code Miami"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     sub_heading:
-      text: Choose between Full-Stack Developer, Data Science & Cybersecurity
+      text: Designed to Prepare You for Success
       font_size: ["16px", "16px", "16px", "16px", "16px"]
       style: '{ "textAlign": "center", "width": "60%" }'
     icons:
       - icon: "fullstack"
-        title: "Full-Stack Dev"
-        content: "Our courses cover essential areas such as Full-Stack Development, Data Science, and Cybersecurity:"
+        title: "Full-Stack Development"
+        content: "Learn to create complete web applications by mastering both the frontend and backend of a project."
 
       - icon: "machine"
         title: "Data Science"
-        content: "Enter the world of data science and machine learning, gaining skills to analyze and visualize information."
+        content: "Enter the world of data science and machine learning to gain skills in analyzing and visualizing information."
 
       - icon: "cibersecurity"
         title: "Cybersecurity"
-        content: "Become a cybersecurity specialist and prepare against potential attacks on systems like Windows or Linux."
+        content: "Become a cybersecurity specialist and prepare to defend against potential attacks on systems like Windows or Linux."
 
   - name: geekinfo_2
     position: 4
     layout: two_column_right
     proportions: [6, 6]
-    background: "verylightGray"
+    background: "#ececec"
     image:
-      style: '{ "backgroundSize": "contain"}'
-      src: "/images/locations/austin-location.webp"
-      shadow: false
+      style: '{ "backgroundSize": "contain" }'
+      src: "/images/locations/miami-home.png"
     section_heading:
       text: ""
       style: '{ "font-size": "30px" }'
     heading:
-      text: "Why Learn to Code in Austin?"
+      text: "Why should you learn to code in Miami?"
       font_size: ["40px", "40px", "40px", "40px", "40px"]
     sub_heading:
-      text: "Austin is celebrated not only for its vibrant culture but also for its substantial tech industry growth. Studying here connects you with an expansive network of tech professionals and startups, enhancing both your educational and professional experiences."
+      text: "The Advantages of Miami’s Tech Industry"
       font_size: ["16px", "16px", "16px", "16px", "16px"]
     button:
       text: "Get More Info"
@@ -248,36 +255,35 @@ components:
       text: ""
       font_size: ["16px"]
       path: ""
-    # bullets:
-    #   items:
-    #     - heading: "UNLIMITED MENTORING"
-    #       text: "You will receive expert support for all your coding needs. Our mentors are always available ready to help you from day one and throughout your career."
-    #       icon: "check" #string with icon for example ['check', 'cicle', etc]
-    #     - heading: "HIGH AVAILABILITY"
-    #       text: "ever get stuck with a coding problem. Our dedicated instructors or comunity will respond to your queries within 30 minutes or less."
-    #       icon: "check" #string with icon for example ['check', 'cicle', etc]
-    #     - heading: "1:7 PROFESSOR-STUDENT RATIO"
-    #       text: "Benefit from individualized attention with our superior professor-to-student ratio, ensuring you get the support you need to excel."
-    #       icon: "check" #string with icon for example ['check', 'cicle', etc]
-    #     - heading: "TAILOR-MADE CAREER SUPPORT"
-    #       text: "Receive personalized advice, guidance, and training tailored to your unique profile and specific job offers, helping you to secure the best positions in the tech industry."
-    #       icon: "check" #string with icon for example ['check', 'cicle', etc]
-
+    bullets:
+      items:
+        - heading: "Rapid Growth"
+          text: "Tech jobs in Miami have grown by 27% in the last year alone."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "High Salaries"
+          text: "Average salaries for tech professionals in Miami range from $81,000/yr for entry-level positions to over $144,000/yr for experienced roles."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "Startup Ecosystem"
+          text: "Ranked as one of the top cities for startups, providing numerous opportunities for innovation and entrepreneurship."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "Strategic Location"
+          text: "A gateway to Latin America and a hub for international tech companies."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
 
   - name: some_id
-    position: 6
+    position: 7
     layout: two_column_left
+    background: "veryLightBlue"
     image:
-      src: "/images/staff/joao.png"
+      src: "/images/testimonials/allisa-testimonial.jpg"
       shadow: true
-    video: "https://www.youtube.com/watch?v=MBXqEnhodx0"
+    video: "TCHASxvkhpI"
     heading:
-      text:
-        "Learning to Code in Austin: Success Stories from 4Geeks Academy"
+      text: "Insights from Learn to Code Miami"
         #xl      lg     md     sm    xs
       font_size: ["40px", "34px", "34px", "25px", "20px"]
     content:
-      text: "Hear from our alumni about how learning to code helped them achieve their tech career goals. Their stories highlight the supportive learning environment and the success it breeds."
+      text: "Alissa, our campus manager at 4Geeks Academy Miami, shares insights into the supportive and collaborative learning environment that makes our coding courses effective and enjoyable. She highlights how we empower our students with the skills needed to excel in Miami's competitive tech landscape."
       font_size: ["16px"]
     button:
       text: "Get More Info"
