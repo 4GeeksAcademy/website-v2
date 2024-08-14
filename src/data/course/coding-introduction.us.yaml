@@ -17,10 +17,10 @@ apply_form:
 seo_title: "Coding Introduction Course"
 
 header:
-  title: "Coding Introduction"
+  title: "Introduction to Coding"
   image: "../../../static/images/bg/program-bg.png"
   image_alt: "begin-your-journey-as-a-developer"
-  paragraph: "Embark on your web development career with our Coding Introduction course. Learn HTML, CSS, and JavaScript, and get ready to build interactive and responsive websites in just weeks!"
+  paragraph: "Embark on your web development career with our Coding Introduction. Learn HTML, CSS, and JavaScript, and get ready to build interactive and responsive websites in just weeks!"
 
 button:
   syllabus_heading: "Download Syllabus"
@@ -142,9 +142,9 @@ details:
         content: "English and Spanish"
         icon: "contract-checked"
 
-  heading: "Part-Time Full Stack Development Bootcamp"
+  heading: "Lay the foundations to master HTML, CSS and JS"
   weeks: 9
-  sub_heading: "Hands-on learning through real-life projects. \n Master the 3 most used languages worldwide: Python, JS, and React."
+  sub_heading: "Hands-on learning through real-life projects."
   left_labels:
     description: "DESCRIPTION:"
     projects: "PROJECTS:"
