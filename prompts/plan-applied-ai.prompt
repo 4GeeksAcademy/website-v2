@@ -1,5 +1,9 @@
-- Spain: Pay upfront and get a €500 discount. Price: €3000.
-- USA: Full Payment. Pay today. Price: $3000.
-- Chile: Pay upfront and get a 30% discount. Price: 700,000 CLP.
-- Europe: Pay upfront and get a €500 discount. Price: €3000.
-- LATAM: Pay upfront and save $500. Price: $1,399. stop
+Spain: "Pay upfront and get a discount. Price: €3000. Discount up to €500. Payment options: wire transfer, credit/debit card, Paypal, Bitcoin, or Ethereum."
+
+Europe: "Pay upfront and get a discount. Price: €3000. Discount up to €500. Payment options: wire transfer, credit/debit card, Paypal, Bitcoin, or Ethereum."
+
+Chile: "Pay upfront and get a discount. Price: 700.000 CLP. Discount of 300.000 CLP. Payment options: bank transfer, credit/debit card."
+
+Latam: "Pay upfront and save $500. Price: $1.399. 44% OFF from $2.500. Contact us for more options."
+
+stop
