@@ -73,56 +73,64 @@ overlaped:
   image:
     src: "/images/landing/tres-personas-reloaded.webp"
 
-## TWO COLUMNS INFO
+
 two_columns_info:
   proportions: [6, 6]
   image:
-    style: '{"backgroundSize": "contain" }'
+    style: '{"backgroundSize": "contain", "background-position": "center"}' 
+    shadow: false 
     src: "/images/landing/grupo-ventanas.webp"
-    shadow: false  
+  section_heading: 
+    text: "Learn to Apply Machine Learning to Real-World Problems"
   heading:
-    text: "Get everything you need to succeed"
-    font_size: ["30px", "30px", "30px", "30px", "30px"]
-  sub_heading:
     text: ""
-    font_size: ["16px", "16px", "16px", "16px", "16px"]
-
-  bullets:
-    items:
-    - heading: "UNLIMITED MENTORING" 
-      text: "Get expert support for all your coding needs. Our mentors are available online or in-person, ready to help you from day one to ever after. "
-    - heading: "HIGH AVAILABILITY" 
-      text: "Never get stuck with a coding problem. Our dedicated instructors will respond within 15 minutes or less."
-    - heading: "1:7 PROFESSOR: STUDENT RATIO" 
-      text: "Experience individualized attention with our higher-than-average professor-to-student ratio."
-    - heading: "TAILOR-MADE CAREER SUPPORT" 
-      text: "Receive unlimited advice, guidance, and training tailored to your unique profile and specific job offers. "
-
-    
-## TWO COLUMNS
-two_columns:
-  proportions: [6, 6]
-  image:
-    style: '{"border" : "3px solid black", "backgroundSize": "cover", "backgroundPosition": "right" }'
-    src: "/images/testimonials/luisa-glum.jpg"
-    shadow: true  
-  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
-  heading:
-    text: "4Geeks, Miami and a mission of creating opportunities"
-    font_size: ["30px", "30px", "30px", "30px", "30px"]
+          #xl      lg     md     sm    xs
+    font_size: ["40px", "34px", "34px", "25px", "20px"]
   sub_heading:
-    text: "With Miami as our home base, we're dedicated to fostering opportunities throughout South Florida."
-    font_size: ["16px", "16px", "16px", "16px", "16px"]
+    style: '{}'
+    text: "Our data science bootcamp is focused on providing all the tools and support necessary for you to succeed in this field."
+    font_size: ["16px"]
+  content:
+    text: ""
   button:
-    text: "Apply now"
+    text: "Compare Prices and Plans"
+    path: "#prices_and_payment"
     color: "white"
     background: "black"
-    path: "#prices_and_payment"
+    hover: "lightBlue"
   bullets:
     items: 
-    - text: "Accessible scholarships, whether full or partial, are always available."
-    - text: "Exclusive opportunities await residents of Miami-Dade, Broward, and Palm Beach counties, ensuring local talent thrives."
-    - text: "We maintain ongoing partnerships with institutions such as Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade County, and many more."
+    - heading: "UNLIMITED MENTORING"
+      text: "Get expert support for all your questions. Our mentors are always available online, ready to assist you from day one and beyond."
+    - heading: "1:7 STUDENT-TEACHER RATIO"
+      text: "Experience personalized attention with our above-average student-teacher ratio."
+    - heading: "PERSONALIZED PROFESSIONAL SUPPORT"
+      text: "Receive unlimited advice, guidance, and training tailored to your unique profile and specific job offers."
+
+## TWO COLUMNS
+# two_columns:
+#   proportions: [6, 6]
+#   image:
+#     style: '{"border" : "3px solid black", "backgroundSize": "cover", "backgroundPosition": "right" }'
+#     src: "/images/testimonials/luisa-glum.jpg"
+#     shadow: true  
+#   video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+#   heading:
+#     text: "4Geeks, Miami and a mission of creating opportunities"
+#     font_size: ["30px", "30px", "30px", "30px", "30px"]
+#   sub_heading:
+#     text: "With Miami as our home base, we're dedicated to fostering opportunities throughout South Florida."
+#     font_size: ["16px", "16px", "16px", "16px", "16px"]
+#   button:
+#     text: "Apply now"
+#     color: "white"
+#     background: "black"
+#     path: "#prices_and_payment"
+#   bullets:
+#     items: 
+#     - text: "Accessible scholarships, whether full or partial, are always available."
+#     - text: "Exclusive opportunities await residents of Miami-Dade, Broward, and Palm Beach counties, ensuring local talent thrives."
+#     - text: "We maintain ongoing partnerships with institutions such as Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade County, and many more."
 
 
 upcoming:

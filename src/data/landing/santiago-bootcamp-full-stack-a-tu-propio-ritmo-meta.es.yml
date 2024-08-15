@@ -1,0 +1,238 @@
+meta_info:
+  slug: full-stack-a-tu-propio-ritmo-santiago # <--- URL 4geeksacademy.com/us/landing/example
+
+  # This will show on social media when shared
+  title: "Conviertete en Fullstack a Tu Propio Ritmo en Chile | 4Geeks Academy"
+  description: "Desarrolla tus habilidades Fullstack a tu propio ritmo con 4Geeks Academy en Chile. ¡Inscríbete y avanza según tu propio ritmo!"
+  image: "/images/bg/more-new-main-home-bg.png"
+  keywords: ""
+  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  template: "landing_a" # <--- choose your landing template
+  # <--- URL redirections to avoid 404 errors
+  redirects: []
+
+  # Set a particular course or location to the landing page
+  # this UTM fields will be also included in the CRM contact
+  utm_course: ["full-stack-own-pace"]
+  utm_location: ["santiago-chile"]
+  automation: soft # comma separated, "soft" is the default value
+  tag: request_more_info # comma separated, "request_more_info" is the default value
+
+navbar:
+  buttonText: "Postúlate"
+  buttonUrl: "#leadform_bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+  logoUrl: "#"
+
+form:
+  # posible fields: "first_name", "last_name", "full_name", "phone", "email"
+  # always the first_name, email and phone will be mandatory if added.
+  fields: ["full_name", "phone", "email"]
+  heading: "Completa el formulario para recibir información"
+  motivation: "Recibe detalles completos sobre nuestro curso Fullstack a tu propio ritmo y sus beneficios. Un correo con la información llegará en menos de 5 minutos."
+  button_label: Postúlate
+  redirect: "/es/gracias/?lang=es"
+
+apply_schollarship: # form that is displayed at the end of the landing
+  # title: "Get more info about this award-winning development course"
+  imageSide: "right"
+  image: "../../../static/images/landing/apply.png"
+
+# jumbotron on the top (cannot be commented out)
+header_data:
+  background: "lightBlue"
+  tagline: "Estudia a Tu Propio Ritmo y Conviértete en un Fullstack"
+  tagline_color: "#1b1b1b"
+  form_styles:
+    background: "#E3F9FE"
+    button:
+      background: "black"
+  sub_heading: ""
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+  image_filter: brightness(0.3)
+
+features:
+  marginTop: 0px #<-- separation between tagline and the bullets
+
+  #                                         up   left down  right
+  styles: '{ "fontSize": "20px", "margin": "10px 0px 0px 0px" }'
+  bullets:
+    - Estudia a tu propio ritmo y ajusta el curso a tus necesidades personales y profesionales.
+    - Accede de por vida a todos los materiales del curso y a la red de estudiantes y graduados.
+    - Únete a una comunidad de más de 5,000 estudiantes y graduados en Chile y en el extranjero.
+
+follow_bar:
+  position: "top" # top, bottom, hidden
+  content:
+    text: "¡Desarrolla tus habilidades Fullstack a tu ritmo!\nCon Pago único o en cómodas cuotas"
+    text_mobile: "Conviértete en un desarrollador Fullstack\ncon Pago único o en cómodas cuotas"
+    # devices:    XL      LG      MD      SM       XS
+    font_size: ["22px", "22px", "22px", "18px", "4.3vw"]
+  button:
+    text: "Más información"
+    path: "#leadform_bottom"
+  phone: 
+    text: ""
+
+short_badges:
+  - name: "Top Online Full-Stack Bootcamps Of 2024"
+    url: ""
+    image: "../../../static/images/badges/forbes-logo-award.png"
+    alt: "We have been selected as one of the Top Online Coding Bootcamps by Forbes."
+  - name: "Best for Spanish speakers Of 2024 by Fortune"
+    url: ""
+    image: "../../../static/images/badges/fortune-logo.png"
+    alt: "Recognized by Fortune as one of the Top Coding Bootcamps"
+  - name: "Top Coding Bootcamps Newsweek"
+    url: ""
+    image: "../../../static/images/badges/newsweek.webp"
+    alt: "Top Coding Bootcamps Newsweek"
+  - name: "Best Coding Bootcamp Course Report 2024"
+    url: ""
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+    alt: "Best Coding Bootcamp Course Report 2024"
+  - name: "Licensed by the Florida Department of Education"
+    url: ""
+    image: "../../../static/images/badges/licensed.png"
+    alt: "Licensed by the Florida Department of Education"
+  - name: "ARP Certificate"
+    url: ""
+    image: "../../../static/images/badges/arp-logo-certification.png"
+    alt: "ARP Certificate"
+
+#
+# ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
+#
+
+rating_reviews:
+  position: 6
+  heading: "Lee acerca de nosotros"
+  rating_list:
+    - alt: "Career Karma"
+      image: "../../../static/images/badges/career-karma.png"
+      rating: 4.8
+      url: "https://careerkarma.com/schools/4geeks-academy/"
+    - alt: "Switchup"
+      image: "../../../static/images/badges/switchup-img.png"
+      rating: 4.89
+      url: "https://www.switchup.org/bootcamps/4geeks-academy"
+    - alt: "Course Report"
+      image: "../../../static/images/badges/course-report.png"
+      rating: 4.84
+      url: "https://www.coursereport.com/schools/4geeks-academy"
+    - alt: "Google"
+      image: "../../../static/images/badges/google.png"
+      rating: 4.9
+      url: ""
+badges:
+  position: 3
+  heading: "Reconocimientos que Certifican la Excelencia de Nuestra Formación"
+
+program_details:
+  position: 3
+  heading: "Conviertete en un fullstack developer a tu propio ritmo"
+  sub_heading: "Inicia hoy una experiencia de aprendizaje práctica e intensiva que te preparará para desarrollar aplicaciones web avanzadas."
+
+why_4geeks:
+  position: 7
+  heading: "¿Por qué 4Geeks?"
+  sub_heading: " "
+
+who_is_hiring:
+  position: 15
+  limit: 10
+  heading: "¿Quién contrata a nuestros alumnos?"
+  sub_heading: "Nos encanta ver crecer a nuestros estudiantes, es por eso que nos esforzamos cada día por tener más aliados, para que puedas trabajar en empresas que te ayuden a seguir creciendo profesionalmente."
+
+# Possible layours: [two_column_left_image, two_column_right_image]
+components:
+  - name: new_design_with_bullets
+    position: 1
+    layout: two_column_right
+    swipable: False
+    background: "#fbfbfb"
+    image:
+      style: '{"backgroundSize": "contain;"}'
+      src: "/images/landing/hombre-con-laptop.png"
+      shadow: false
+    section_heading:
+      text: ""
+      style: '{ "font-size": "30px" }'
+    heading:
+      text: "¡Desde Cero a fullstack a tu propio ritmo!"
+    sub_heading:
+      text: "El desarrollo Fullstack proporciona una perspectiva integral del desarrollo web, altamente valorada en el mercado chileno. Al abarcar tanto el frontend como el backend, estarás preparado para explorar diversas oportunidades laborales. Puedes ajustar el curso a tu propio ritmo y adaptarlo a tu estilo de vida."
+    button:
+      text: "Postúlate"
+      color: white
+      hover_color: "white"
+      background: "black"
+      path: "#leadform_header"
+    content:
+      text: ""
+      font_size: ["16px"]
+    bullets:
+      items:
+      - text: "El ecosistema emprendedor en Chile está en crecimiento, lo que ha generado una elevada demanda de desarrolladores para la creación de productos digitales."
+        icon: "circle"
+      - text: "Los salarios para desarrolladores Full Stack en Chile son atractivos, con un rango que comienza en $1.200.000 CLP mensuales para posiciones de nivel junior."
+        icon: "circle"
+      - text: "Muchas empresas tanto chilenas como internacionales ofrecen la posibilidad de trabajar de forma remota, brindando una mayor flexibilidad."
+        icon: "circle"
+
+  - name: python_y_javascript
+    position: 2
+    layout: two_column_left
+    background: "#E3F9FE"
+    proportions: [6, 4]
+    swipable: False
+    image:
+      style: '{"backgroundSize": "contain;"}'
+      src: "/images/landing/community-support-2.png"
+      shadow: false
+    section_heading: 
+      text: ""
+      style: '{ "font-size": "30px" }'
+    heading: 
+      text: "¡Desde $42.000 CLP al Mes!"
+    sub_heading:
+      text: "En 4Geeks Academy comprendemos la importancia del aprendizaje, por eso ofrecemos opciones de financiamiento accesibles desde $42.000 CLP mensuales. Nuestro objetivo es que todos los interesados en aprender a programar puedan acceder a nuestro programa, brindando planes de financiamiento sin interés que te prepararán para ingresar a uno de los campos laborales más lucrativos del momento."
+    button: 
+      text: "Postularse"
+      color: white
+      hover_color: "white"
+      background: "black"
+      path: "#leadform_header"
+    content: 
+      text: ""
+      font_size: ["16px"]
+      path: ""
+    bullets:
+      items:
+      - text: "De 4 a 18 cuotas sin interés con tarjetas del Banco de Chile."
+        icon: "circle" 
+      - text: "Hasta 12 cuotas sin interés con tarjetas de crédito de cualquier otro banco."
+        icon: "circle" 
+      - text: "Transferencia bancaria disponible."
+        icon: "circle"  
+
+  - name: some_id
+    position: 5
+    layout: two_column_right
+    background: "#E3F9FE"
+    image:
+      style: '{ "border" : "3px solid black" }'
+      shadow: true
+      src: "../../../static/images/testimonials/joshua-bravo-testimonial.jpg"
+    video: "https://www.youtube.com/watch?v=rtpfwwfE0yY"
+    heading:
+      text: "De Asistente de Cocina a Desarrollador Full-Stack"
+      font_size: ["40px", "34px", "34px", "25px", "20px"]
+    content:
+      text: "Descubre cómo Joshua Bravo, anteriormente asistente de cocina, transformó su vida al unirse a 4Geeks Academy. Gracias a su dedicación y al curso intensivo en desarrollo full-stack, Joshua ahora es un profesional altamente calificado en tecnología."
+      font_size: ["16px"]
+    button:
+      text: "Postúlate"
+      path: "#leadform_bottom"
+      color: "white"
+      background: "black"
+

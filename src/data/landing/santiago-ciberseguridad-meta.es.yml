@@ -1,0 +1,260 @@
+meta_info:
+  slug: curso-ciberseguridad-santiago # <--- URL 4geeksacademy.com/us/landing/example
+
+  # This will show on social media when shared
+  title: "Curso de Ciberseguridad en Chile - 4Geeks Academy"
+  description: "Asegura tu Futuro con Nuestro Curso de Ciberseguridad en Chile. ¡Inscríbete Hoy en 4Geeks Academy!"
+  image: "/images/bg/main-bg.jpg"
+  keywords: ""
+  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  template: "landing_a" # <--- choose your landing template
+  # <--- URL redirections to avoid 404 errors
+  redirects: []
+
+  # Set a particular course or location to the landing page
+  # this UTM fields will be also included in the CRM contact
+  utm_course: ["cybersecurity"]
+  utm_location: ["santiago-chile"]
+  automation: soft # comma separated, "soft" is the default value
+  tag: request_more_info # comma separated, "request_more_info" is the default value
+
+navbar:
+  buttonText: "Postular"
+  buttonUrl: "#leadform_bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+  logoUrl: "#"
+
+form:
+  # posible fields: "first_name", "last_name", "full_name", "phone", "email"
+  # always the first_name, email and phone will be mandatory if added.
+  fields: ["full_name", "phone", "email"]
+  heading: "Rellena el formulario e ingresa a nuestro curso de ciberseguridad"
+  motivation: "Luego de rellenar el formulario, recibirás información detallada sobre nuestro curso de ciberseguridad y sus beneficios. Deberás recibir un correo en menos de 5 minutos."
+  button_label: Postularse
+  redirect: "/es/gracias/?lang=es"  #you can redirect to another url or entirely diffrent website
+
+apply_schollarship: # form that is displayed at the end of the landing
+  # title: "Get more info about this award-winning development course"
+  imageSide: "right"
+  image: "../../../static/images/pretty-woman-in-a-computer.png"
+
+# jumbotron on the top (cannot be commented out)
+header_data:
+  background: "lightBlue"
+  tagline: "Curso de Ciberseguridad en Chile con 4Geeks Academy"
+  tagline_color: "#1b1b1b"
+  form_styles:
+    background: "#E3F9FE"
+    button:
+      background: "black"
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+  image_filter: brightness(0.3)
+
+features:
+  marginTop: 0px #<-- separation between tagline and the bullets
+
+  #                                         up   left down  right
+  styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
+  bullets:
+    - Formación intensiva en ciberseguridad
+    - Acceso a herramientas y técnicas actuales
+    - Tutoría especializada y proyectos prácticos
+    - Actualmente existe una brecha de 28.000 profesionales de la ciberseguridad en Chile.
+
+follow_bar:
+  position: "top" # top, bottom, hidden
+  content:
+    text: "¡Conviértete en especialista en ciberseguridad!"
+    text_mobile: "¡Conviértete en especialista en ciberseguridad!"
+    # devices:    XL      LG      MD      SM       XS
+    font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
+  button:
+    text: "Escribir por WhatsApp"
+    path: "https://api.whatsapp.com/send/?phone=56920065786&text&type=phone_number&app_absent=0&utm_source=GADS&utm_medium=GADS&utm_campaign=GADS&utm_id=GADS&utm_term=GADS&utm_content=GADS"
+  phone: 
+    text: ""
+
+short_badges:
+  - name: "Top Online Full-Stack Bootcamps Of 2024"
+    url: ""
+    image: "../../../static/images/badges/forbes-logo-award.png"
+    alt: "We have been selected as one of the Top Online Coding Bootcamps by Forbes."
+  - name: "Best for Spanish speakers Of 2024 by Fortune"
+    url: ""
+    image: "../../../static/images/badges/fortune-logo.png"
+    alt: "Recognized by Fortune as one of the Top Coding Bootcamps"
+  - name: "Top Coding Bootcamps Newsweek"
+    url: ""
+    image: "../../../static/images/badges/newsweek.webp"
+    alt: "Top Coding Bootcamps Newsweek"
+  - name: "Best Coding Bootcamp Course Report 2024"
+    url: ""
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+    alt: "Best Coding Bootcamp Course Report 2024"
+  - name: "Licensed by the Florida Department of Education"
+    url: ""
+    image: "../../../static/images/badges/licensed.png"
+    alt: "Licensed by the Florida Department of Education"
+  - name: "ARP Certificate"
+    url: ""
+    image: "../../../static/images/badges/arp-logo-certification.png"
+    alt: "ARP Certificate"
+
+#
+# ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
+#
+
+badges:
+  position: 3
+  heading: "Premios que validan la excelencia de nuestra educación"
+
+rating_reviews:
+  position: 6
+  heading: "Lee acerca de nosotros"
+  rating_list:
+    - alt: "Career Karma"
+      image: "../../../static/images/badges/career-karma.png"
+      rating: 4.8
+      url: "https://careerkarma.com/schools/4geeks-academy/"
+    - alt: "Switchup"
+      image: "../../../static/images/badges/switchup-img.png"
+      rating: 4.89
+      url: "https://www.switchup.org/bootcamps/4geeks-academy"
+    - alt: "Course Report"
+      image: "../../../static/images/badges/course-report.png"
+      rating: 4.84
+      url: "https://www.coursereport.com/schools/4geeks-academy"
+    - alt: "Google"
+      image: "../../../static/images/badges/google.png"
+      rating: 4.9
+      url: ""
+
+program_details:
+  position: 2
+  heading: "Contenidos del Curso de Ciberseguridad"
+  sub_heading: "Descubre los módulos y habilidades que dominarás en nuestro curso de ciberseguridad."
+
+# why_4geeks:
+#   position: 7
+#   heading: "¿Por qué 4Geeks?"
+#   sub_heading: " "
+
+geeks_vs_others:
+  position: 6
+  heading: "Compara 4Geeks Academy con otras academias"
+  # sub_heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+  total_rows: 5
+
+who_is_hiring:
+  position: 15
+  limit: 4
+  heading: "¿Quién contrata a nuestros alumnos?"
+  sub_heading: "Nos encanta ver crecer a nuestros estudiantes, es por eso que nos esforzamos cada día por tener más aliados, para que puedas trabajar en empresas que te ayuden a seguir creciendo profesionalmente."
+
+# Possible layours: [two_column_left_image, two_column_right_image]
+components:
+  - name: new_design_with_bullets
+    position: 1
+    layout: two_column_right
+    proportions: [5, 7] 
+    swipable: False
+    background: "#fbfbfb"
+    image:
+      style: '{"backgroundSize": "contain", "border": "2px solid black"}'
+      src: "/images/landing/grafica-necesidad-de-especialistas-en-ciberseguridad-chile-2024-2035.jpg"
+      shadow: true
+    section_heading: 
+      text: "Oportunidades en el Campo de la Ciberseguridad en Chile"
+      style: '{ "font-size": "30px" }'
+    heading: 
+      text: ""
+    sub_heading:
+      text: "El campo de la ciberseguridad en Chile presenta una alta demanda de profesionales calificados. Se espera que esta demanda continúe creciendo en los próximos años, lo que ofrece una excelente oportunidad para aquellos que deseen desarrollar una carrera en este ámbito."
+    # button: 
+    #   text: "Descubre por qué somos tu mejor elección"
+    #   color: white
+    #   hover_color: "white"
+    #   background: "black"
+    #   path: "https://4geeksacademy.com/es/geeks-vs-otros"
+    content: 
+      text: ""
+      font_size: ["16px"]
+      path: ""
+    bullets:
+      items:
+      - text: "Se estima que habrá una brecha de 28.000 profesionales de la ciberseguridad en Chile para el año 2033."
+        icon: "circle" 
+      - text: "Salarios hasta un 40% superiores al promedio nacional para expertos en ciberseguridad."
+        icon: "circle" 
+      - text: "Según un informe de Randstad Chile, los especialistas en este campo se encuentran entre los 10 profesionales en tecnología con mayor demanda laboral en 2023."
+        icon: "circle" 
+
+
+  - name: porque-bootcamp-de-ciberseguridad
+    position: 4
+    layout: two_column_left
+    background: "veryLightBlue2" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
+    image:
+      src: "/images/landing/hombre-con-laptop-2.png"
+    heading:
+      text: "¿Por Qué Elegir Nuestro Curso de Ciberseguridad?"
+        #           xl      lg      md      sm      xs
+      font_size: ["45px", "45px", "30px", "28px", "25px"]
+    sub_heading:
+      text: "Nuestro curso de ciberseguridad está diseñado para equiparte con los conocimientos y habilidades necesarios para proteger sistemas y datos en un mundo digital cada vez más complejo. Aprende con expertos y desarrolla competencias esenciales para una carrera exitosa en ciberseguridad."
+    content:
+      style: '{}'
+      text: ""
+      font_size: ["16px"]
+    bullets:
+      items:
+      - heading: "Currículo actualizado"
+        text: "Aprenderás las herramientas y técnicas más relevantes y demandadas en el campo de la ciberseguridad."
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+      - heading: "Mentorías personalizadas"
+        text: "Acceso ilimitado a mentorías de por vida, donde podrás resolver tus dudas y recibir orientación de expertos en la materia."
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+      - heading: "Comunidad activa"
+        text: "Únete a una red de más de 5,000 estudiantes y graduados en Chile y otros países, donde podrás compartir experiencias y aprender de otros."
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+      - heading: "Clases prácticas"
+        text: "Enfocamos nuestro aprendizaje en proyectos reales, lo que te permitirá aplicar tus conocimientos en situaciones del mundo real."
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+
+  # - name: some_id
+  #   position: 4
+  #   layout: two_column_right
+  #   background: "#fbfbfb"
+  #   image:
+  #     style: '{ "border" : "3px solid black" }' 
+  #     shadow: true 
+  #     src: "../../../static/images/testimonials/fidel-vera-testimonio-ds.jpg"
+  #   video: "https://www.youtube.com/watch?v=zfLGOolXHWQ"
+  #   heading:
+  #     text:
+  #       "Fidel Vera De Estudiante a Profesional en Data Science"
+  #       #xl      lg     md     sm    xs
+  #     font_size: ["40px", "34px", "34px", "25px", "20px"]
+  #   content:
+  #     style: '{}'
+  #     text: "Fidel Vera, siempre interesado en el potencial de los datos, encontró en 4Geeks Academy la plataforma perfecta para convertir su afición en una carrera profesional sólida. El bootcamp de Data Science de 4Geeks Academy le brindó las herramientas y el conocimiento necesarios para desenvolverse con éxito en este campo tan demandado."
+  #     font_size: ["16px"]
+    # button:
+    #   text: "Experiencias de Éxito"
+    #   path: "#why_4geeks"
+    #   color: "white"
+    #   background: "black"
+    #   hover: "lightBlue"
+
+choose_your_program:
+  position: 5
+  title: Nuestra Modalidad
+  paragraph: Programa de Machine Learning y Data Science en Modalidad Part Time y Full Time
+  programs:  
+  - title: "Part Time"
+    sub_title: "16 semanas"
+    icon: "fullstack"
+    description: |
+      De cero a tener tu primer trabajo como Data Scientist, con una duración de 16 semanas, con clases en vivo 3 veces por semana, compatible con horario laboral o de estudios. 
+    text_link: Obtener más información
+    link: "#leadform_header" # moves to start position
+  

@@ -19,8 +19,8 @@ meta_info:
 seo_title: "Coding Bootcamp in Tampa"
 header:
   tagline: "4Geeks Academy in Tampa"
-  sub_header: "Become a Full-Stack developer, Data Scientist, or Cybersecurity Specialist in 18 weeks or less! Choose among "
-  sub_header_highlighted: "online, hybrid or in-person formats."
+  sub_header: "Become a Full-Stack developer, Data Scientist, or Cybersecurity Specialist in 18 weeks or less! "
+  sub_header_highlighted: "All programs are taught Online"
   paragraph: ""
   image: "../../../static/images/locations/tampa-location.webp"
   alt: "4Geeks Academy online coding bootcamp in Tampa, Florida"
