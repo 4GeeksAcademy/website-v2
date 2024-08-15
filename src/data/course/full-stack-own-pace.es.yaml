@@ -139,7 +139,7 @@ details:
     - module_name: "PIENSA COMO UN ORDENADOR"
       title: "Aprende a programar"
       description: "Empieza aprediendo a integrar archivos HTML5, CSS3 y JS para crear tu primer sitio web interactivo apoyándote con Bootstrap. Domina la terminal, controla el flujo de tu código, crea algoritmos, haz un bucle, una condicionales."
-      projects: "Portafo>io de imágenes, subirás tu portafo>io a GitHub, crearás una página web, etc"
+      projects: "Portafolio de imágenes, subirás tu portafolio a GitHub, crearás una página web, etc"
       slug: "Piensa como un ordenador"
       duration: "6 sem"
       step: 6
