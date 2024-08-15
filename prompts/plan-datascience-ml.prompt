@@ -1,21 +1,24 @@
-- Full-time plan in Spain: Pay upfront and get a 30% discount. Price is €5,200.
+Spain: 
+- Pay today and get a 30% discount. Price: €5,200.
+- Monthly installments starting at €200. Price: €5,409.
+- Pay only when you work. Price: €0.
 
-- Full-time plan in USA: Full payment with a 40% discount, price is $11,999.
+USA: 
+- Pay today and get a 40% discount. Price: $11,999.
+- Limited seats! Price: $4,999.
+- Financing options available. Price: $310.
 
-- Full-time plan in Chile: Program + career support, pay upfront, price is 3.375.000 CLP.
+Chile: 
+- Pay upfront and get a discount. Price: 3.375.000 CLP.
+- Focus on gaining skills. Pay upfront. Price: 3.750.000 CLP.
+- Pay monthly. Price: ~220.500 CLP.
 
-- Full-time plan in Europe: Pay upfront and get a 30% discount. Price is €5,200.
+Europe: 
+- Pay upfront and get a discount. Price: €5,200.
+- Monthly installments starting at €200. Price: €5,409.
+- Pay only when you work. Price: €0.
 
-- Part-time plan in Spain: Pay upfront and get a 30% discount. Price is €5,200.
-
-- Part-time plan in USA: Full payment with a 40% discount, price is $11,999.
-
-- Part-time plan in Chile: Program + career support, pay upfront, price is 3.375.000 CLP.
-
-- Part-time plan in Europe: Pay upfront and get a 30% discount. Price is €5,200.
-
-- Part-time plan in Latin America: Data science program + career support, price is $3,600.
-
-- Part-time plan in Venezuela: Pay upfront and get a 40% discount. Price is $2,400.
-
-- The above information applies to the specified locations. Stop.
+LATAM: 
+- Data Science program + Career Support. Price: $3,600.
+- Data Science program + Career Support. Price: $3,600.
+stop
