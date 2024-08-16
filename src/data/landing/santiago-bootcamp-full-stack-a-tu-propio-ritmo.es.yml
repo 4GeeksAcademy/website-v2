@@ -1,0 +1,236 @@
+meta_info:
+  slug: santiago-bootcamp-full-stack-a-tu-propio-ritmo # <--- URL 4geeksacademy.com/us/landing/example
+
+  # This will show on social media when shared
+  title: "Fullstack a Tu Propio Ritmo en Chile - 4Geeks Academy"
+  description: "Aprende desarrollo fullstack a tu propio ritmo con 4Geeks Academy en Chile. ¡Inscríbete hoy y avanza a tu manera!"
+  image: "/images/bg/more-new-main-home-bg.png"
+  keywords: ""
+  visibility: "unlisted" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  template: "landing_a" # <--- choose your landing template
+  # <--- URL redirections to avoid 404 errors
+  redirects: []
+
+  # Set a particular course or location to the landing page
+  # this UTM fields will be also included in the CRM contact
+  utm_course: ["full-stack-own-pace"]
+  utm_location: ["santiago-chile"]
+  automation: soft # comma separated, "soft" is the default value
+  tag: request_more_info # comma separated, "request_more_info" is the default value
+
+navbar:
+  buttonText: "Postúlate"
+  buttonUrl: "#leadform_bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+  logoUrl: "#"
+
+form:
+  # posible fields: "first_name", "last_name", "full_name", "phone", "email"
+  # always the first_name, email and phone will be mandatory if added.
+  fields: ["full_name", "phone", "email"]
+  heading: "Completa el formulario para recibir información."
+  motivation: "Luego de rellenar el formulario, recibirás información detallada sobre nuestro curso Fullstack a tu propio ritmo y sus beneficios. Deberás recibir un correo en menos de 5 minutos."
+  button_label: Postúlate
+  redirect: "/es/gracias/?lang=es"  #you can redirect to another url or entirely diffrent website
+
+apply_schollarship: # form that is displayed at the end of the landing
+  # title: "Get more info about this award-winning development course"
+  imageSide: "right"
+  image: "../../../static/images/landing/apply.png"
+
+# jumbotron on the top (cannot be commented out)
+header_data:
+  background: "#FFF1D1"
+  tagline: Conviértete en un Fullstack a Tu Propio Ritmo con 4Geeks Academy
+  tagline_color: "#1b1b1b"
+  form_styles:
+    background: "#faf3e3"
+    button:
+      background: "black"
+  sub_heading: ""
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+  image_filter: brightness(0.3)
+
+features:
+  marginTop: 0px #<-- separation between tagline and the bullets
+
+  #                                         up   left down  right
+  styles: '{ "fontSize": "20px", "margin": "10px 0px 0px 0px" }'
+  bullets:
+    - Estudia a tu propio ritmo y adapta tus horarios según tus necesidades personales y profesionales
+    - Disfruta de acceso de por vida a todos los materiales del curso y a la comunidad de estudiantes y graduados.
+    - Conéctate con más de 5,000 estudiantes y graduados en Chile y otros países, compartiendo experiencias y conocimientos.
+
+follow_bar:
+  position: "top" # top, bottom, hidden
+  content:
+    text: "¡Desarrolla tus habilidades Fullstack a tu ritmo!\nCon Pago único o en cómodas cuotas"
+    text_mobile: "Conviértete en un desarrollador Fullstack\ncon Pago único o en cómodas cuotas"
+    # devices:    XL      LG      MD      SM       XS
+    font_size: ["22px", "22px", "22px", "18px", "4.3vw"]
+  button:
+    text: "Más información"
+    path: "#leadform_bottom"
+  phone: 
+    text: ""
+
+short_badges:
+  - name: "Top Online Full-Stack Bootcamps Of 2024"
+    url: ""
+    image: "../../../static/images/badges/forbes-logo-award.png"
+    alt: "We have been selected as one of the Top Online Coding Bootcamps by Forbes."
+  - name: "Best for Spanish speakers Of 2024 by Fortune"
+    url: ""
+    image: "../../../static/images/badges/fortune-logo.png"
+    alt: "Recognized by Fortune as one of the Top Coding Bootcamps"
+  - name: "Top Coding Bootcamps Newsweek"
+    url: ""
+    image: "../../../static/images/badges/newsweek.webp"
+    alt: "Top Coding Bootcamps Newsweek"
+  - name: "Best Coding Bootcamp Course Report 2024"
+    url: ""
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+    alt: "Best Coding Bootcamp Course Report 2024"
+  - name: "Licensed by the Florida Department of Education"
+    url: ""
+    image: "../../../static/images/badges/licensed.png"
+    alt: "Licensed by the Florida Department of Education"
+  - name: "ARP Certificate"
+    url: ""
+    image: "../../../static/images/badges/arp-logo-certification.png"
+    alt: "ARP Certificate"
+
+#
+# ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
+#
+
+rating_reviews:
+  position: 6
+  heading: "Lee acerca de nosotros"
+  rating_list:
+    - alt: "Career Karma"
+      image: "../../../static/images/badges/career-karma.png"
+      rating: 4.8
+      url: "https://careerkarma.com/schools/4geeks-academy/"
+    - alt: "Switchup"
+      image: "../../../static/images/badges/switchup-img.png"
+      rating: 4.89
+      url: "https://www.switchup.org/bootcamps/4geeks-academy"
+    - alt: "Course Report"
+      image: "../../../static/images/badges/course-report.png"
+      rating: 4.84
+      url: "https://www.coursereport.com/schools/4geeks-academy"
+    - alt: "Google"
+      image: "../../../static/images/badges/google.png"
+      rating: 4.9
+      url: ""
+badges:
+  position: 3
+  heading: "Premios que validan la excelencia de nuestra educación"
+
+program_details:
+  position: 3
+  heading: "Todo lo que necesitas para triunfar como Desarrollador Full-Stack"
+  sub_heading: "Empieza hoy una experiencia de aprendizaje práctico e intensivo que te equipará con las habilidades para construir aplicaciones web de vanguardia"
+
+why_4geeks:
+  position: 7
+  heading: "¿Por qué 4Geeks?"
+  sub_heading: " "
+
+who_is_hiring:
+  position: 15
+  limit: 10
+  heading: "¿Quién contrata a nuestros alumnos?"
+  sub_heading: "Nos encanta ver crecer a nuestros estudiantes, es por eso que nos esforzamos cada día por tener más aliados, para que puedas trabajar en empresas que te ayuden a seguir creciendo profesionalmente."
+
+# Possible layours: [two_column_left_image, two_column_right_image]
+components:
+  - name: new_design_with_bullets
+    position: 1
+    layout: two_column_right 
+    swipable: False
+    background: "#fbfbfb"
+    image:
+      style: '{"backgroundSize": "contain;"}'
+      src: "/images/landing/hombre-con-laptop.png"
+      shadow: false
+    section_heading: 
+      text: "Aprende a Programar a tu propio ritmo"
+      style: '{ "font-size": "30px" }'
+    heading: 
+      text: "¡Desde Cero Hasta Tu Primer Empleo!"
+    sub_heading:
+      text: "El desarrollo fullstack ofrece una visión integral del desarrollo web y es altamente valorado en el mercado chileno. Con la capacidad de manejar tanto el frontend como el backend, estarás preparado para enfrentar una variedad de desafíos y oportunidades laborales. Aprende a tu propio ritmo y adapta el curso a tu estilo de vida."
+    button: 
+      text: "Postúlate"
+      color: white
+      hover_color: "white"
+      background: "black"
+      path: "#leadform_header"
+    content: 
+      text: ""
+      font_size: ["16px"]
+      path: ""
+    bullets:
+      items:
+      - text: "El ecosistema emprendedor chileno está en auge, generando una constante demanda de desarrolladores para construir sus productos digitales."
+        icon: "circle" 
+      - text: "Los salarios de un Full Stack Developer en Chile varían según la experiencia, las tecnologías dominadas y la empresa. Sin embargo, en general, son muy competitivos y se encuentran por encima del promedio del mercado, un Jr. FullStack developer Puede ganar desde los $1.200.000 CLP mensuales."
+        icon: "circle" 
+      - text: "Muchas empresas chilenas y extranjeras ofrecen la posibilidad de trabajar de forma remota, lo que brinda mayor flexibilidad."
+        icon: "circle" 
+
+
+  - name: python_y_javascript
+    position: 2
+    layout: two_column_left
+    background: "#FFF1D1" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
+    image:
+      src: "/images/why-4geeks/python-image.png"
+      style: '{ "backgroundSize": "contain", "height": "250px", "minHeight": "250px" }'
+    heading:
+      # style: '{"padding": "0 20px", "line-height": "50px"}'
+      text:
+        "JavaScript y Python"
+        #           xl      lg      md      sm      xs
+      font_size: ["45px", "45px", "30px", "28px", "25px"]
+    content:
+      text: "Nuestro Bootcamp te llevará desde los fundamentos de JavaScript hasta la creación de aplicaciones web dinámicas con React.js. Además, explorarás conceptos avanzados en Python, Flask y gestión de bases de datos. Prepárate para dominar el desarrollo web con habilidades prácticas y actuales, y destacar en el mercado laboral, donde la demanda de desarrolladores con experiencia en estas tecnologías está en aumento."
+      font_size: ["18px"]
+
+  - name: some_id
+    position: 5
+    proportions: [5, 7]
+    background: "#FFF1D1" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9 .
+    layout: two_column_left
+    image:
+      style: '{"backgroundSize": "cover", "background-position": "center"}'
+      src: "/images/landing/rigobot-logo-confondo.jpg"
+      shadow: true
+    heading:
+      text: "Nunca Programes Solo de Nuevo"
+        #           xl      lg      md      sm      xs
+      font_size: ["45px", "45px", "30px", "28px", "25px"]
+    sub_heading:
+      text: |-
+         Rigobot está diseñado para acelerar tu transición de principiante a experto, ofreciéndote retroalimentación y orientación personalizada en tiempo real. Creado por desarrolladores para desarrolladores, Rigobot no es solo una herramienta, es tu compañero de programación.
+    content:
+      text: ""
+      font_size: ["16px"]
+    button:
+      text: "Postularse"
+      color: white
+      hover_color: "white"
+      background: "black"
+      path: "#leadform_bottom"
+    bullets:
+      items:
+      - text: "Disponible 24/7"
+        icon: "check" 
+      - text: "Respuestas inmediatas"
+        icon: "check" 
+      - text: "Conoce tus necesidades y tu progreso"
+        icon: "check"
+
+
+

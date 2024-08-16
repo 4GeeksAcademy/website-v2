@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { isCustomBarActive } from "../actions";
+import { H1, H2, Paragraph } from "../components/Heading";
 import { graphql, Link } from "gatsby";
 import { Header, Div } from "../components/Sections";
 import { Button, Colors, Img } from "../components/Styling";
@@ -210,8 +211,27 @@ const DataScience = ({ data, pageContext, yml }) => {
         image={yml.overlaped?.image}
       />
 
-      {/* GEEKSINFO IS A TWOCOLUMN WITH TITLE */}
-      <GeeksInfo lang={pageContext.lang} />
+      {/* GEEKSINFO IS A TWOCOLUMN WITH TITLE 
+      <GeeksInfo lang={pageContext.lang} /> */}
+
+      {/* TWO COLUMN INFO CREAR EN EL YML*/}
+      <Div display="block" background={Colors.verylightGray2} padding="40px 0">
+        <H2 type="h2" textAlign_tablet="center">
+          {yml.two_columns_info.section_heading.text}
+        </H2>
+        <TwoColumn
+          right={{ image: yml.two_columns_info?.image }}
+          left={{
+            heading: yml.two_columns_info?.heading,
+            sub_heading: yml.two_columns_info?.sub_heading,
+            bullets: yml.two_columns_info?.bullets,
+            content: yml.two_columns_info?.content,
+            button: yml.two_columns_info?.button,
+          }}
+          proportions={yml.two_columns_info?.proportions}
+          session={session}
+        />
+      </Div>
 
       {/* TWO COLUMN CREAR EN EL YML*/}
       <TwoColumn
@@ -475,6 +495,40 @@ export const query = graphql`
               }
             }
           }
+          two_columns_info {
+            proportions
+            image {
+              style
+              src
+              shadow
+            }
+            section_heading {
+              text
+            }
+            heading {
+              text
+              font_size
+            }
+            sub_heading {
+              text
+              font_size
+            }
+            content {
+              text
+            }
+            button {
+              text
+              color
+              background
+              path
+            }
+            bullets {
+              items {
+                heading
+                text
+              }
+            }
+          }
           two_columns {
             proportions
             image {
@@ -489,6 +543,11 @@ export const query = graphql`
             }
             sub_heading {
               text
+              font_size
+            }
+            content {
+              text
+              style
               font_size
             }
             button {

@@ -1,0 +1,252 @@
+meta_info:
+  slug: 4geeks-academy-chile-mas-accesible # <--- URL 4geeksacademy.com/us/landing/example
+          # This will show on social media when shared
+  title: "Aprende a programar a tu propio ritmo en el mejor bootcamp de programación"
+  description: "Aprende a programar a tu propio ritmo en el mejor bootcamp de programación: 4Geeks Academy."
+  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  # This will show on social media when shared
+  image: "/images/bg/santiago-banner.png"
+  keywords: ""
+  template: "landing_a" # <--- choose your landing template
+  redirects: [] # <--- URL redirections to avoid 404 errors
+
+  # Set a particular course or location to the landing page
+  # this UTM fields will be also included in the CRM contact
+  utm_course: ["full-stack-own-pace"]
+  utm_location: ["santiago-chile"]
+  automation: FSAsincrono_Chile # comma separated, "soft" is the default value
+  tag: request_more_info # comma separated, "request_more_info" is the default value
+
+form:
+  # posible fields: "first_name", "last_name", "full_name", "phone", "email"
+  # always the first_name, email and phone will be mandatory if added.
+  fields: ["full_name", "phone", "email"]
+  heading: "Conoce más información"
+  motivation: "Completa el formulario y te enviaremos la información en menos de 5 min a tu correo electrónico."
+  button_label: Obtener más información
+  redirect: "/es/gracias"  #you can redirect to another url or entirely diffrent website
+
+apply_schollarship: # form that is displayed at the end of the landing
+  # title: "Apoyo Profesional Ilimitado"
+  imageSide: "left"
+  image: "../../../static/images/landing/apply.png"    
+
+navbar:
+  buttonText: "Postular"
+  buttonUrl: "#leadform_bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+  logoUrl: "#"
+
+header_data:
+  background: "#FFF1D1"
+  tagline: ¡4Geeks Academy más accesible!
+  tagline_color: "black"
+  sub_heading: "El bootcamp mejor posicionado y de mejor calidad de Chile lanza una opción más accessible para personas que la necesitan."
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+  image_filter: brightness(0.3)
+
+features:
+  marginTop: 0px #<-- separation between tagline and the bullets
+  text: ''
+  styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
+  bullets:
+    - Con apoyo al alumno, ayuda en tiempo real y mentorias grupales.
+    - Clases semanales en vivo y acceso a grabacion posterior.
+    - Feedback personalizado por cada proyecto entregado y acceso al contenido de por vida.
+    - Certificado con aval internacional al completar todos los proyectos y acceso al programa general de empleabilidad.
+
+
+short_badges:
+  - name: "Premios Tecnologia Siglo XXI"
+    url: ""
+    image: "../../../static/images/awards/premios_tecnologia_sigloxxi.png"
+    alt: "Mejor centro de Coding Bootcamp"
+  - name: "Course Report"
+    url: ""
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+    alt: "Top Coding Bootcamps Course Report"
+  - name: "Switchup"
+    url: ""
+    image: "../../../static/images/badges/switchup-badge-2023.png"
+    alt: "Best coding bootcamp Switchup 2023"   
+  - name: "Florida Department of Education"
+    url: ""
+    image: "../../../static/images/badges/licensed.png"
+    alt: "Florida Department of Education"
+
+follow_bar:
+  position: "bottom" # top, bottom, hidden
+  content:
+    text: "Escríbenos por WhatsApp y te ayudaremos a aprender a tu propio ritmo."
+    text_mobile: "Puedes enviarnos un mensaje por WhatsApp"
+    # devices:    XL      LG      MD      SM       XS
+    font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
+  button:
+    text: "Escribir por WhatsApp"
+    path: "https://api.whatsapp.com/send/?phone=56920065786&text&type=phone_number&app_absent=0&utm_source=GADS&utm_medium=GADS&utm_campaign=GADS&utm_id=GADS&utm_term=GADS&utm_content=GADS"
+  phone: 
+    text: ""
+
+#
+# ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
+#
+
+program_details:
+  position: 1
+  background: "#FFFFFF"
+  heading: "Domina Python, JS y React"
+  sub_heading: "Un curso de programación sobre las tecnologías más usadas del mundo"
+
+badges:
+  position: 3 # It's the position of the component that will be rendered first
+  heading: "4Geeks Academy cuenta con premios y reconocimientos que validan su excelencia"
+
+rating_reviews:
+  position: 6
+  heading: "Lee acerca de nosotros"
+  rating_list:
+    - alt: "Career Karma"
+      image: "../../../static/images/badges/career-karma.png"
+      rating: 4.8
+      url: "https://careerkarma.com/schools/4geeks-academy/"
+    - alt: "Switchup"
+      image: "../../../static/images/badges/switchup-img.png"
+      rating: 4.89
+      url: "https://www.switchup.org/bootcamps/4geeks-academy"
+    - alt: "Course Report"
+      image: "../../../static/images/badges/course-report.png"
+      rating: 4.84
+      url: "https://www.coursereport.com/schools/4geeks-academy"
+    - alt: "Google"
+      image: "../../../static/images/badges/google.png"
+      rating: 4.9
+      url: ""
+
+who_is_hiring:
+  position: 11
+  limit: 4
+  heading: "¿Quién contrata a nuestros alumnos?"
+  sub_heading: "Nos encanta ver crecer a nuestros estudiantes, es por eso que nos esforzamos cada día por tener más aliados, para que puedas trabajar en empresas que te ayuden a seguir creciendo profesionalmente."
+
+components:
+  - name: new_design_with_bullets
+    position: 2
+    proportions: [6, 4]
+    layout: two_column_right 
+    swipable: False
+    background: "#fbfbfb"
+    image:
+      style: '{"backgroundSize": "contain;"}'
+      src: "/images/landing/hombre-con-laptop.png"
+      shadow: false
+    section_heading: 
+      text: ""
+      style: '{ "font-size": "30px" }'
+    heading: 
+      text: "¡Desde $42.000 CLP al mes!"
+    sub_heading:
+      text: "En 4Geeks Academy entendemos la importancia del aprendizaje y, por ello, ofrecemos diversas opciones de financiamiento que van desde los $42.000 CLP mensual. Queremos que nuestro programa sea accesible para todos aquellos que desean aprender a programar, brindando acceso a planes de financiamiento sin interés que te darán las herramientas para entrar en uno de los campos laborales mejor remunerados del mundo en la actualidad."
+    button: 
+      text: "Postularse"
+      color: white
+      hover_color: "white"
+      background: "black"
+      path: "#leadform_header"
+    content: 
+      text: ""
+      font_size: ["16px"]
+      path: ""
+    bullets:
+      items:
+      - text: "De 4 a 18 cuotas sin interés con tarjetas de banco de chile."
+        icon: "circle" 
+      - text: "Hasta 12 cuotas sin interés con tarjetas de crédito de cualquier otro banco."
+        icon: "circle" 
+      - text: "Transferencia bancaria."
+        icon: "circle"  
+
+  - name: python_y_javascript
+    position: 4
+    layout: two_column_left
+    background: "veryLightBlue2" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9 .
+    image:
+      style: '{"backgroundSize": "contain", "background-position": "center"}'
+      src: "/images/programs-heading.webp"
+    heading:
+      text: "¡Manteniendo un Enfoque de Apoyo al Alumno!"
+        #           xl      lg      md      sm      xs
+      font_size: ["45px", "45px", "30px", "28px", "25px"]
+    sub_heading:
+      text: "nuestro compromiso es brindar un apoyo continuo a cada uno de nuestros alumnos, no solo durante el bootcamp, sino a lo largo de toda su carrera profesional. Nuestro equipo de mentores y tutores está siempre disponible para resolver dudas, ofrecer orientación y brindar el soporte necesario para que cada estudiante alcance sus metas en el mundo de la programación. ¡Tu éxito es nuestro objetivo principal!"
+    content:
+      text: "¡No pierdas la oportunidad de desarrollar todo tu potencial junto a un grupo de mentores y compañeros apasionados por el aprendizaje!"
+      font_size: ["16px"]
+    bullets:
+      items:
+      - text: "Sesiones grupales todos los jueves de 19 a 21 hrs."
+        icon: "check" 
+      - text: "Feedback personalizado para cada proyecto entregado."
+        icon: "check"
+      - text: "Acceso al contenido de por vida."
+        icon: "check" 
+
+  - name: two_column_geekforce
+    position: 5
+    layout: two_column_right
+    image:
+      style: '{"backgroundSize": "cover", "background-position": "center"}'
+      src: "/images/ownpeoplecoding2.webp"
+      shadow: true
+    heading:
+      text: "¡Acceso al programa general de empleabilidad!"
+        #           xl      lg      md      sm      xs
+      font_size: ["45px", "45px", "30px", "28px", "25px"]
+    sub_heading:
+      text: "Se brindará a los participantes acceso ilimitado a todas las guías y materiales disponibles para potenciar su camino en la búsqueda laboral. Este programa les proporcionará las herramientas necesarias para fortalecer sus habilidades y capacidades, así como para impulsar su desarrollo profesional de manera exitosa, se te guiará para optimizar los perfiles para aumentar tus posibilidades de ser seleccionado a través de :"
+    content:
+      text: ""
+      font_size: ["16px"]
+    bullets:
+      items:
+      - heading: "Optimiza tu perfil de GitHub"
+        text: "Aumenta tu visibilidad y demuestra tus habilidades técnicas a potenciales empleadores."
+        icon: "circle" 
+      - heading: "Perfecciona tu perfil de LinkedIn"
+        text: "Crea una presencia profesional atractiva que te conecte con oportunidades relevantes."
+        icon: "circle" 
+      - heading: "Diseña un curriculum vitae impactante"
+        text: "Destaca tus logros y experiencias de manera convincente para captar la atención de los reclutadores."
+        icon: "circle"
+
+  - name: two_column_rigobot
+    position: 7
+    proportions: [5, 7]
+    background: "veryLightBlue2" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9 .
+    layout: two_column_left
+    image:
+      style: '{"backgroundSize": "cover", "background-position": "center"}'
+      src: "/images/landing/rigobot-logo-confondo.jpg"
+      shadow: true
+    heading:
+      text: "Nunca vuelvas a programar solo"
+        #           xl      lg      md      sm      xs
+      font_size: ["45px", "45px", "30px", "28px", "25px"]
+    sub_heading:
+      text: |-
+         Rigobot está aquí para acelerar tu camino de novato a experto proporcionando retroalimentación y orientación personalizada e inmediata. Diseñado por desarrolladores para desarrolladores, Rigobot es más que una herramienta; es tu compañero de programación.
+    content:
+      text: ""
+      font_size: ["16px"]
+    button:
+      text: "Postularse"
+      color: white
+      hover_color: "white"
+      background: "black"
+      path: "#leadform_bottom"
+    bullets:
+      items:
+      - text: "Herramienta disponible 24/7."
+        icon: "check" 
+      - text: "Obtén respuestas de inmediato."
+        icon: "check" 
+      - text: "Rigobot sabe quién eres."
+        icon: "check"

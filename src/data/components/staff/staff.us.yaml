@@ -1,6 +1,6 @@
 ## STAFF MEMEBERS INFO
-heading: "Meet your Staff"
-sub_heading: "Passionate, committed and experienced staff. They bring a glad-to-help attitude and provide all the support you need to learn how to learn how to code and gain confidence while you do it."
+heading: "Meet the Geeks"
+sub_heading: "Our team is dedicated, highly skilled, and always ready to support you on your journey into tech. They provide all the guidance and encouragement you need to launch a successful new career."
 staff:
   - name: "Alejandro"
     last_name: "Sanchez"
@@ -177,23 +177,23 @@ staff:
     coding_skills:
       - 
     location: ["all"]
-  - name: "María"
-    last_name: "Miranda"
-    nick_name: ""
-    slug: "mamira"
-    job_title: "Product Marketing Europa"
-    bio: ""
-    github: ""
-    linkdin: "https://www.linkedin.com/in/maria-miranda-marketing/"
-    twitter: ""
-    website: ""
-    image: "../../../../static/images/staff/maria-miranda.jpg"
-    age: 26
-    interests:
-      -
-    coding_skills:
-      - 
-    location: ["all"]
+  # - name: "María"
+  #   last_name: "Miranda"
+  #   nick_name: ""
+  #   slug: "mamira"
+  #   job_title: "Product Marketing Europa"
+  #   bio: ""
+  #   github: ""
+  #   linkdin: "https://www.linkedin.com/in/maria-miranda-marketing/"
+  #   twitter: ""
+  #   website: ""
+  #   image: "../../../../static/images/staff/maria-miranda.jpg"
+  #   age: 26
+  #   interests:
+  #     -
+  #   coding_skills:
+  #     - 
+  #   location: ["all"]
   - name: "Ariana"
     last_name: "Sánchez"
     nick_name: ""
@@ -211,20 +211,20 @@ staff:
     coding_skills:
       - 
     location: ["all"]
-  - name: "Ivan"
-    last_name: "Aranzazu"
-    nick_name: ""
-    slug: "ivan-aran"
-    job_title: "Operational Coordinator"
-    bio: ""
-    github: ""
-    linkdin: "https://www.linkedin.com/in/ivan-aranzazu-56651a87/"
-    twitter: ""
-    website: ""
-    image: "../../../../static/images/staff/ivan-aranzazu.jpg"
-    age: 32
-    interests:
-      -
-    coding_skills:
-      - 
-    location: ["all"]
+  # - name: "Ivan"
+  #   last_name: "Aranzazu"
+  #   nick_name: ""
+  #   slug: "ivan-aran"
+  #   job_title: "Operational Coordinator"
+  #   bio: ""
+  #   github: ""
+  #   linkdin: "https://www.linkedin.com/in/ivan-aranzazu-56651a87/"
+  #   twitter: ""
+  #   website: ""
+  #   image: "../../../../static/images/staff/ivan-aranzazu.jpg"
+  #   age: 32
+  #   interests:
+  #     -
+  #   coding_skills:
+  #     - 
+  #   location: ["all"]

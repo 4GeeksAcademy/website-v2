@@ -99,11 +99,11 @@ part_time:
     scholarship: "Paga de contado"
     payment_time: "Y obtén un descuento"
     price: "€5.200*"
-    original_price: "€7.500"
-    offer: "30% de descuento"
+    original_price: "€7.800"
+    offer: "~ 30% de descuento"
     bullets:
       - "Paga con trasnferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
-      - "*Descuento de hasta 2.300 €*. Paga desde 5.200 € en vez de 7.500 €. ¡Descuento sujeto a disponibilidad!"     
+      - "*Descuento de hasta 2.600 €*. Paga desde 5.200 € en vez de 7.800 €. ¡Descuento sujeto a disponibilidad!"     
     icons: 
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
@@ -115,11 +115,11 @@ part_time:
     scholarship: "Financiado. Desde 200 €* al mes"
     payment_time: "Aplica a una beca (plazas con becas limitadas)."
     price: "5.409 €*"
-    original_price: "€ 7.500"
+    original_price: "€ 7.800"
     bullets:
       - "Desde 200 € al mes"
       - "Financiación a tu medida, con o sin intereses, desde 4 hasta 48 meses (condiciones aplican)"
-      - "Becas disponibles de hasta 2.091 €. Paga desde 5.409 € en vez de 7.500 €. ¡Becas sujetas a disponibilidad!"     
+      - "Becas disponibles de hasta 2.391 €. Paga desde 5.409 € en vez de 7.800 €. ¡Becas sujetas a disponibilidad!"     
     icons: 
       - "/images/zank.png"
       - "/images/sequra.png"
@@ -145,11 +145,11 @@ part_time:
     scholarship: "Paga de contado"
     payment_time: "Y obtén un descuento"
     price: "€5.200*"
-    original_price: "€7.500"
-    offer: "30% de descuento"
+    original_price: "€7.800"
+    offer: "~ 30% de descuento"
     bullets:
       - "Paga con trasnferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
-      - "*Descuento de hasta 2.300 €*. Paga desde 5.200 € en vez de 7.500 €. ¡Descuento sujeto a disponibilidad!"
+      - "*Descuento de hasta 2.600 €*. Paga desde 5.200 € en vez de 7.800 €. ¡Descuento sujeto a disponibilidad!"    
     icons: 
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
@@ -161,11 +161,11 @@ part_time:
     scholarship: "Financiado. Desde 200 €* al mes"
     payment_time: "Aplica a una beca (plazas con becas limitadas)."
     price: "5.409 €*"
-    original_price: "€ 7.500"
+    original_price: "€ 7.800"
     bullets:
       - "Desde 200 € al mes"
       - "Financiación a tu medida, con o sin intereses, desde 4 hasta 48 meses (condiciones aplican)"
-      - "Becas disponibles de hasta 2.091 €. Paga desde 5.409 € en vez de 7.500 €. ¡Becas sujetas a disponibilidad!"      
+      - "Becas disponibles de hasta 2.391 €. Paga desde 5.409 € en vez de 7.800 €. ¡Becas sujetas a disponibilidad!"      
     icons: 
       - "/images/bcas.png"
           
@@ -188,11 +188,11 @@ part_time:
     scholarship: "Paga de contado"
     payment_time: "Y obtén un descuento"
     price: "€5.200*"
-    original_price: "€7.500"
-    offer: "30% de descuento"
+    original_price: "€7.800"
+    offer: "~ 30% de descuento"
     bullets:
       - "Paga con trasnferencia bancaria, tarjeta de crédito o débito, Paypal, Bitcoin o Ethereum"
-      - "*Descuento de hasta 2.300 €*. Paga desde 5.200 € en vez de 7.500 €. ¡Descuento sujeto a disponibilidad!" 
+      - "*Descuento de hasta 2.600 €*. Paga desde 5.200 € en vez de 7.800 €. ¡Descuento sujeto a disponibilidad!"    
     icons: 
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
@@ -204,11 +204,11 @@ part_time:
     scholarship: "Financiado. Desde 200 €* al mes"
     payment_time: "Aplica a una beca (plazas con becas limitadas)."
     price: "5.409 €*"
-    original_price: "€ 7.500"
+    original_price: "€ 7.800"
     bullets:
       - "Desde 200 € al mes"
       - "Financiación a tu medida, con o sin intereses, desde 4 hasta 48 meses (condiciones aplican)"
-      - "Becas disponibles de hasta 2.091 €. Paga desde 5.409 € en vez de 7.500 €. ¡Becas sujetas a disponibilidad!"  
+      - "Becas disponibles de hasta 2.391 €. Paga desde 5.409 € en vez de 7.800 €. ¡Becas sujetas a disponibilidad!"  
     icons: 
       - "/images/bcas.png"
 

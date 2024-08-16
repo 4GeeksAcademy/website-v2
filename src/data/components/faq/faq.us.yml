@@ -13,7 +13,7 @@ faq:
           - **Coding-centric approach**: We focus exclusively on coding.<br>
           - **Lifetime career support**: We're here to help you throughout your career.<br>
 
-          You can compare us to other bootcamps by visiting our page: <a class="faq-link" href="https://4geeksacademy.com/us/geeks-vs-others">4Geeks Vs Others</a>.
+          You can compare us to other bootcamps by visiting our page: <a class="faq-link" href="/us/geeks-vs-others">4Geeks Vs Others</a>.
 
       - question: "Is 4Geeks a certified institution?" #all locations
         locations: ["all"]
@@ -21,6 +21,7 @@ faq:
         priority: 1
         answer: |-
           Absolutely! 4Geeks Academy is a licensed institution by the Commission for Independent Education of the Florida Department of Education. This ensures that our programs meet rigorous educational standards and provide you with a valuable credential upon completion.
+
       - question: "Who is that face in the logo?"
         templates: ["faq"]
         priority: 0
@@ -50,35 +51,130 @@ faq:
         priority: 1
         answer: |-
           Yes, having your own laptop is essential for our classes. While we don't mandate a specific operating system for most programs, it's recommended to have a laptop with Windows, macOS, or Linux installed.<br>
-          However, for the <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamps/cybersecurity">cybersecurity program</a>, it's highly recommended to have a laptop with either Windows or Linux operating system due to the nature of the course materials and tools used. For example, applications like VirtualBox and Packet Tracer will be used, so please consider the technical requirements for these tools. Packet Tracer is available for Linux and Windows, while VirtualBox is only compatible with Mac for Intel processors. Additionally, for virtual machines, it's recommended to have at least 4 processor threads and 8 GB of RAM to ensure optimal performance.<br>
+          However, for the <a class="faq-link" target="_blank" href="/us/coding-bootcamps/cybersecurity">cybersecurity program</a>, it's highly recommended to have a laptop with either Windows or Linux operating system due to the nature of the course materials and tools used. For example, applications like VirtualBox and Packet Tracer will be used, so please consider the technical requirements for these tools. Packet Tracer is available for Linux and Windows, while VirtualBox is only compatible with Mac for Intel processors. Additionally, for virtual machines, it's recommended to have at least 4 processor threads and 8 GB of RAM to ensure optimal performance.<br>
           The classes and exercises for all programs are accessed through the cloud.
       
       ## how do I pay for my tuition?
-      - question: "How do I pay for my tuition in USA?" #USA
-        locations: ["atlanta-usa", "austin-usa", "chicago-usa", "downtown-miami", "houston-usa", "losangeles-usa", "newyork-usa", "orlando", "online", "online-spanish-usa"]
+      ### FAQ page 
+      - question: "How do I pay for my tuition?" 
         templates: ["faq"]
-        priority: 1
+        priority: 0
         answer: |-
-          In the United States of America, we offer various payment options to accommodate your needs. These include loans with payments as low as $150 per month, extended payment plans, and discounts for upfront payments. Additionally, we provide scholarships based on your background. For more information, please reach out to our admissions team or visit our <a class="faq-link" href="/us/financials">financials page</a>.<br>
+          We offer various payment options to accommodate your needs. These include loans with payments as low as $120 per month, extended payment plans, and discounts for upfront payments. Additionally, we provide scholarships based on your background. For more information, please reach out to our admissions team or visit our <a class="faq-link" href="/us/financials">financials page</a>.<br>
           Ready to apply? Start your application process <a class="faq-link" href="/us/apply">here</a>.
 
-      - question: "How do I pay for my tuition in Spain and Europe?" # Europe
-        locations: ["barcelona-spain", "berlin-germany", "dublin-ireland", "europe", "hamburg-germany", "lisbon-portugal", "madrid-spain", "malaga-spain", "milan-italy", "munich-germany", "rome-italy", "valencia-spain"]
+      ### USA 
+      - question: "How do I pay for my tuition in USA?" #USA
+        locations: ["atlanta-usa", "austin-usa", "chicago-usa", "downtown-miami", "houston-usa", "losangeles-usa", "newyork-usa", "orlando", "online", "online-spanish-usa", "tampa-usa"]
         priority: 1
         answer: |-
-          We provide multiple payment options tailored to your needs. You can choose to make a single upfront payment or finance your tuition over up to 24 months. To determine the best option for you, schedule a call with our admissions team or visit our <a class="faq-link" href="/us/financials">financials page</a>.
+          In the United States of America, we offer various payment options to accommodate your needs. These include loans with payments as low as $120 per month, extended payment plans, and discounts for upfront payments. Additionally, we provide scholarships based on your background. For more information, please reach out to our admissions team or visit our <a class="faq-link" target="_blank" href="/us/financials">financials page</a>.<br>
+          Ready to apply? Start your application process <a class="faq-link" href="/us/apply">here</a>.
 
+      ### EUROPE
+      - question: "How do I pay for my tuition in Europe?" # Europe
+        locations: ["europe"]
+        priority: 1
+        answer: |-
+          In Europe, we provide multiple payment options tailored to your needs. You can choose to make a single upfront payment or finance your tuition over up to 24 months. To determine the best option for you, schedule a call with our admissions team or visit our <a class="faq-link" target="_blank" href="/us/financials">financials page</a>.
+
+      - question: "How do I pay for my tuition in Spain?" # Spain
+        locations: ["barcelona-spain", "madrid-spain", "malaga-spain", "valencia-spain"]
+        priority: 1
+        answer: |-
+          In Spain, we provide multiple payment options tailored to your needs. You can choose to make a single upfront payment or finance your tuition over up to 48 months. To determine the best option for you, schedule a call with our admissions team or visit our <a class="faq-link" target="_blank" href="/us/financials">financials page</a>.
+
+      - question: "How do I pay for my tuition in Germany?" # Germany
+        locations: ["berlin-germany", "hamburg-germany", "munich-germany"]
+        priority: 1
+        answer: |-
+          In Germany, we provide multiple payment options tailored to your needs. You can choose to make a single upfront payment or finance your tuition over up to 24 months. To determine the best option for you, schedule a call with our admissions team or visit our <a class="faq-link" target="_blank" href="/us/financials">financials page</a>.
+
+      - question: "How do I pay for my tuition in Italy?" # Italy
+        locations: ["milan-italy", "rome-italy"]
+        priority: 1
+        answer: |-
+          In Italy we provide multiple payment options tailored to your needs. You can choose to make a single upfront payment or finance your tuition over up to 24 months. To determine the best option for you, schedule a call with our admissions team or visit our <a class="faq-link" target="_blank" href="/us/financials">financials page</a>.
+
+      - question: "How do I pay for my tuition in Portugal?" # Portugal
+        locations: ["lisbon-portugal"]
+        priority: 1
+        answer: |-
+          In Portugal, we provide multiple payment options tailored to your needs. You can choose to make a single upfront payment or finance your tuition over up to 24 months. To determine the best option for you, schedule a call with our admissions team or visit our <a class="faq-link" target="_blank" href="/us/financials">financials page</a>.
+
+      - question: "How do I pay for my tuition in Ireland?" # Ireland
+        locations: ["dublin-ireland"]
+        priority: 1
+        answer: |-
+          In Ireland, we provide multiple payment options tailored to your needs. You can choose to make a single upfront payment or finance your tuition over up to 24 months. To determine the best option for you, schedule a call with our admissions team or visit our <a class="faq-link" target="_blank" href="/us/financials">financials page</a>.
+
+      ### CHILE
       - question: "How do I pay for my tuition in Chile?" # Chile
         locations: ["santiago-chile"]
         priority: 1
         answer: |-
-          We provide multiple payment options tailored to your needs. You can choose to make a single upfront payment or finance your tuition over up to 18 months. To determine the best option for you, schedule a call with our admissions team or visit our <a class="faq-link" href="/us/financials">financials page</a>.
+          In Chile, we provide multiple payment options tailored to your needs. You can choose to make a single upfront payment or finance your tuition over up to 18 months. To determine the best option for you, schedule a call with our admissions team or visit our <a class="faq-link" target="_blank" href="/us/financials">financials page</a>.
 
-      - question: "How do I pay for my tuition?" #LATAM
-        locations: ["bogota-colombia", "buenosaires-argentina", "caracas-venezuela", "costa-rica", "lapaz-bolivia", "lima-peru", "mexicocity-mexico", "montevideo-uruguay", "panamacity-panama", "quito-ecuador"]
+      #### LATAM 
+      - question: "How do I pay for my tuition?" #Bogotá, Colombia
+        locations: ["bogota-colombia"]
         priority: 1
         answer: |-
-          4Geeks Academy offers flexible payment options, including one-time payments and financing up to 24 months. We tailor to your needs – schedule a call with admissions to find your perfect fit! For more details, visit our <a class="faq-link" href="/us/financials">financials page</a>.
+          In Colombia, 4Geeks Academy offers flexible payment options, including one-time payments and financing for up to 24 months. We tailor to your needs; schedule a call with admissions to find your perfect fit! For more details, visit our <a class="faq-link" target="_blank" href="/us/financials">financials page</a>.
+
+      - question: "How do I pay for my tuition?" #Buenos Aires, Argentina
+        locations: ["buenosaires-argentina"]
+        priority: 1
+        answer: |-
+          In Argentina, 4Geeks Academy offers flexible payment options, including one-time payments and financing for up to 24 months. We tailor to your needs; schedule a call with admissions to find your perfect fit! For more details, visit our <a class="faq-link" target="_blank" href="/us/financials">financials page</a>.
+
+      - question: "How do I pay for my tuition?" #Caracas, Venezuela
+        locations: ["caracas-venezuela"]
+        priority: 1
+        answer: |-
+          In Venezuela, 4Geeks Academy offers flexible payment options, including one-time payments and financing up to 24 months. We tailor to your needs – schedule a call with admissions to find your perfect fit! For more details, visit our <a class="faq-link" target="_blank" href="/us/financials">financials page</a>.
+
+      - question: "How do I pay for my tuition?" #Costa Rica
+        locations: ["costa-rica"]
+        priority: 1
+        answer: |-
+          In Costa Rica, 4Geeks Academy offers flexible payment options, including one-time payments and financing up to 24 months. We tailor to your needs – schedule a call with admissions to find your perfect fit! For more details, visit our <a class="faq-link" target="_blank" href="/us/financials">financials page</a>.
+
+      - question: "How do I pay for my tuition?" #La Paz, Bolivia
+        locations: ["lapaz-bolivia"]
+        priority: 1
+        answer: |-
+          In La Paz, Bolivia, 4Geeks Academy offers flexible payment options, including one-time payments and financing up to 24 months. We tailor to your needs – schedule a call with admissions to find your perfect fit! For more details, visit our <a class="faq-link" target="_blank" href="/us/financials">financials page</a>.
+
+      - question: "How do I pay for my tuition?" #Lima, Perú
+        locations: ["lima-peru"]
+        priority: 1
+        answer: |-
+          In Lima, Perú, 4Geeks Academy offers flexible payment options, including one-time payments and financing up to 24 months. We tailor to your needs – schedule a call with admissions to find your perfect fit! For more details, visit our <a class="faq-link" target="_blank" href="/us/financials">financials page</a>.
+
+      - question: "How do I pay for my tuition?" #Mexico City, Mexico
+        locations: ["mexicocity-mexico"]
+        priority: 1
+        answer: |-
+          In Mexico City, Mexico, 4Geeks Academy offers flexible payment options, including one-time payments and financing up to 24 months. We tailor to your needs – schedule a call with admissions to find your perfect fit! For more details, visit our <a class="faq-link" target="_blank" href="/us/financials">financials page</a>.
+
+      - question: "How do I pay for my tuition?" #Montevideo, Uruguay
+        locations: ["montevideo-uruguay"]
+        priority: 1
+        answer: |-
+          In Montevideo, Uruguay, 4Geeks Academy offers flexible payment options, including one-time payments and financing up to 24 months. We tailor to your needs – schedule a call with admissions to find your perfect fit! For more details, visit our <a class="faq-link" target="_blank" href="/us/financials">financials page</a>.
+
+      - question: "How do I pay for my tuition?" #Panama City, Panama
+        locations: ["panamacity-panama"]
+        priority: 1
+        answer: |-
+          In Panama City, Panama, 4Geeks Academy offers flexible payment options, including one-time payments and financing up to 24 months. We tailor to your needs – schedule a call with admissions to find your perfect fit! For more details, visit our <a class="faq-link" target="_blank" href="/us/financials">financials page</a>.
+
+      - question: "How do I pay for my tuition?" #Quito, Ecuador
+        locations: ["quito-ecuador"]
+        priority: 1
+        answer: |-
+          In Quito, Ecuador, 4Geeks Academy offers flexible payment options, including one-time payments and financing up to 24 months. We tailor to your needs – schedule a call with admissions to find your perfect fit! For more details, visit our <a class="faq-link" target="_blank" href="/us/financials">financials page</a>.
       ## // how do I pay for my tuition? // 
 
       ## Does 4Geeks offer career support?
@@ -87,31 +183,38 @@ faq:
         templates: ["faq"]
         priority: 1
         answer: |-
-          Yes! At 4Geeks Academy, we offer professional support to help you achieve your career goals. Our unlimited professional support plan is part of our Geekforce program. You will have unlimited access to individual and group professional sessions where we will equip you with all the tools necessary to get a job. This includes optimizing your resume, LinkedIn and GitHub profiles, connecting you with events and our hiring network, and preparing you for technical and behavioral interviews, among other services. Learn more about our Geekforce program <a class="faq-link" href="https://4geeksacademy.com/us/geekforce-career-support">here</a>.<br>
+          Yes! At 4Geeks Academy, we offer professional support to help you achieve your career goals. Our unlimited professional support plan is part of our Geekforce program. You will have unlimited access to individual and group professional sessions where we will equip you with all the tools necessary to get a job. This includes optimizing your resume, LinkedIn and GitHub profiles, connecting you with events and our hiring network, and preparing you for technical and behavioral interviews, among other services. Learn more about our <a class="faq-link" target="_blank" href="/us/geekforce-career-support">Geekforce and career support program</a>.<br>
 
-          Additionally, upon paying for the bootcamp, you will also have access to a more basic professional support mentorship plan, which includes our Geek Pal program. For more details about Geek Pal, visit <a class="faq-link" href="https://4geeksacademy.com/us/geekpal-support">here</a>.
+          Additionally, upon paying for the bootcamp, you will also have access to a more basic professional support mentorship plan, which includes our Geek Pal program. For more details, visit the <a class="faq-link" href="/us/geekpal-support">Geek Pal program</a>.
 
       ## Does 4Geeks offer career support?
 
-      ##  Extended Payment Plan? How does it work? And what does it mean? 
+      #### Extended Payment Plan? How does it work? And what does it mean? 
       - question: "Extended Payment Plan? How does it work? And what does it mean?" #USA
-        locations: ["atlanta-usa", "austin-usa", "chicago-usa", "downtown-miami", "houston-usa", "losangeles-usa", "newyork-usa", "orlando", "online", "online-spanish-usa"]
+        locations: ["atlanta-usa", "austin-usa", "chicago-usa", "downtown-miami", "houston-usa", "losangeles-usa", "newyork-usa", "orlando", "online", "online-spanish-usa", "tampa-usa"]
         templates: ["faq"]
         priority: 1
         answer: |-
-          Our extended payment plan allows you to spread your tuition payments over a period of up to 2 years, enabling you to pay gradually during and after the course. To enroll, a $500 deposit is required upfront, and the remaining balance is divided equally over the agreed-upon number of months, <span style="font-weight: 700;">with no interest charged</span>.
+          Our extended payment plan allows you to spread your tuition payments over a period of up to 2 years, enabling you to pay gradually during and after the course. To enroll, a $500 deposit is required upfront, and the remaining balance is divided equally over the agreed-upon number of months, <span style="font-weight: 700;">with no interest charged</span>.<br>
+          For more details about our plans, visit our <a target="_blank" href="/us/financials">Financials page</a>.
 
       - question: "Extended Payment Plan? How does it work? And what does it mean?" #Chile
         locations: ["santiago-chile"]
         priority: 1
-        answer: |
-          The Extended Payment Plan is tailored specifically for our students' needs in Chile. You can apply for a plan lasting up to 18 months, allowing you to pay gradually. Simply pay the required deposit and sign a contract outlining the payment schedule that best suits your lifestyle. For more details about the plan, click <a rel="noopener noreferrer nofollow" href="https://quotanda.com/en/4geeks/">here</a>. 
+        answer: |-
+          The Extended Payment Plan is tailored specifically for our students' needs in Chile. You can apply for a plan lasting up to 18 months, allowing you to pay gradually. Simply pay the required deposit and sign a contract outlining the payment schedule that best suits your lifestyle. For more details about the plan, visit our <a target="_blank" rel="nofollow noopener noreferrer" href="https://quotanda.com/en/4geeks/">payment options page</a>.
 
-      - question: "Extended Payment Plan? How does it work? And what does it mean?" #Europe + LATAM - Excluding Chile
-        locations: ["barcelona-spain", "berlin-germany", "dublin-ireland", "europe", "hamburg-germany", "lisbon-portugal", "madrid-spain", "malaga-spain", "milan-italy", "munich-germany", "rome-italy", "valencia-spain", "bogota-colombia", "buenosaires-argentina", "caracas-venezuela", "costa-rica", "lapaz-bolivia", "lima-peru", "mexicocity-mexico", "montevideo-uruguay", "panamacity-panama", "quito-ecuador"]
+      - question: "Extended Payment Plan? How does it work? And what does it mean?" #Europe
+        locations: ["barcelona-spain", "berlin-germany", "dublin-ireland", "europe", "hamburg-germany", "lisbon-portugal", "madrid-spain", "malaga-spain", "milan-italy", "munich-germany", "rome-italy", "valencia-spain"]
         priority: 1
-        answer: |
-          The Extended Payment Plan is tailored specifically for our students' needs. You can apply for a plan lasting up to 24 months, allowing you to pay gradually. Simply pay the required deposit and sign a contract outlining the payment schedule that best suits your lifestyle. For more details about the plan, click <a rel="noopener noreferrer nofollow" href="https://4geeksacademy.com/us/financials">here</a>. 
+        answer: |-
+          The Extended Payment Plan is tailored specifically for our students' needs across Europe. You can apply for a plan lasting up to 24 months, allowing you to pay gradually. Simply pay the required deposit and sign a contract outlining the payment schedule that best suits your lifestyle. For more details about the plan, visit our <a target="_blank" href="/us/financials">financials page</a>.
+
+      - question: "Extended Payment Plan? How does it work? And what does it mean?" #LATAM - Excluding Chile
+        locations: ["bogota-colombia", "buenosaires-argentina", "caracas-venezuela", "costa-rica", "lapaz-bolivia", "lima-peru", "mexicocity-mexico", "montevideo-uruguay", "panamacity-panama", "quito-ecuador"]
+        priority: 1
+        answer: |-
+          The Extended Payment Plan is tailored specifically for our students' needs across Latin America. You can apply for a plan lasting up to 24 months, allowing you to pay gradually. Simply pay the required deposit and sign a contract outlining the payment schedule that best suits your lifestyle. For more details about the plan, visit our <a target="_blank" href="/us/financials">financials page</a>.
 
       ##  // Extended Payment Plan? How does it work? And what does it mean?  //
 
@@ -130,11 +233,22 @@ faq:
       #   answer: |-
       #     Yes! With our Income Share Agreement (ISA), you'll only pay $1,000 upfront for the bootcamp. The remaining tuition is paid only after you secure a job earning more than $35k per year. If you're not hired, you won't pay anything. Plus, if you lose your job for any reason, your payments will be paused until you're employed again.
 
-      - question: "Can I pay after I get a job?" #Europe + LATAM
-        locations: ["barcelona-spain", "berlin-germany", "dublin-ireland", "europe", "hamburg-germany", "lisbon-portugal", "madrid-spain", "malaga-spain", "milan-italy", "munich-germany", "rome-italy", "valencia-spain", "bogota-colombia", "buenosaires-argentina", "caracas-venezuela", "costa-rica", "lapaz-bolivia", "lima-peru", "mexicocity-mexico", "montevideo-uruguay", "panamacity-panama", "quito-ecuador"]
+      - question: "Can I pay after I get a job?" #Europe
+        locations: ["barcelona-spain", "berlin-germany", "dublin-ireland", "europe", "hamburg-germany", "lisbon-portugal", "madrid-spain", "malaga-spain", "milan-italy", "munich-germany", "rome-italy", "valencia-spain"]
         priority: 1
         answer: |-
-          Yes! We offer an Income Share Agreement (ISA) program as an innovative financing option for our students. With an ISA, you can commence your studies immediately and begin making payments once you secure a well-paying job. Unlike traditional loans, payment under an ISA is based on a percentage of your income once you exceed a set minimum wage.
+          At 4Geeks Academy in Europe, we offer payment options such as Income Share Agreements (ISA) or Deferred Tuition plans, allowing you to pay after securing employment.<br>
+          These models are designed to support your learning journey, enabling you to focus on education before repaying once you're employed. However, terms and conditions vary based on your chosen program and location.<br>
+          For further details and eligibility criteria, please discuss these options with our <a class="faq-link" href="mailto:admission@4geeksacademy.com">admissions team</a>.
+
+      - question: "Can I pay after I get a job?" #LATAM
+        locations: ["bogota-colombia", "buenosaires-argentina", "costa-rica", "lapaz-bolivia", "lima-peru", "mexicocity-mexico", "montevideo-uruguay", "panamacity-panama", "quito-ecuador"]
+        priority: 1
+        answer: |-
+          At 4Geeks Academy in Latin America, we offer payment options such as Income Share Agreements (ISA) or Deferred Tuition plans, allowing you to pay after securing employment.<br>
+          These models are designed to support your learning journey, enabling you to focus on education before repaying once you're employed. However, terms and conditions vary based on your chosen program and location.<br>
+          For further details and eligibility criteria, please discuss these options with our <a class="faq-link" href="mailto:admission@4geeksacademy.com">admissions team</a>.
+
       ##  // Can I pay after I get a job? //
 
       ##  Does 4Geeks offer mentorships?
@@ -143,10 +257,10 @@ faq:
         templates: ["faq"]
         priority: 1
         answer: |-
-          Yes, indeed! At 4Geeks Academy, we provide lifelong mentorship through our GeekPal and GeekForce programs. GeekPal offers technical coaching via group mentoring and 1-1 sessions covering mock interviews, interview preparation, debugging, and problem-solving. On the other hand, GeekForce provides career coaching, including mock interviews for soft skills, career guidance, and resume building. Learn more about GeekPal <a class="faq-link" href="/us/geekpal-support">here</a> and GeekForce <a class="faq-link" href="/us/geekforce-career-support">here</a>.
+          Yes, indeed! At 4Geeks Academy, we provide lifelong mentorship through our <a class="faq-link" target="_blank" href="/us/geekpal-support">GeekPal</a> and <a class="faq-link" target="_blank" href="/us/geekforce-career-support">GeekForce</a> programs. GeekPal offers technical coaching via group mentoring and 1-1 sessions covering mock interviews, interview preparation, debugging, and problem-solving. On the other hand, GeekForce provides career coaching, including mock interviews for soft skills, career guidance, and resume building. 
       
       - question: "Does 4Geeks offer mentorships?" #USA
-        locations: ["atlanta-usa", "austin-usa", "chicago-usa", "downtown-miami", "houston-usa", "losangeles-usa", "newyork-usa", "orlando", "online", "online-spanish-usa"]
+        locations: ["atlanta-usa", "austin-usa", "chicago-usa", "downtown-miami", "houston-usa", "losangeles-usa", "newyork-usa", "orlando", "online", "online-spanish-usa", "tampa-usa"]
         priority: 1
         answer: |-
           Yes, absolutely! Mentorship is at the core of what we do. As a 4Geeks student, you'll enjoy unlimited access to lifelong mentorship. This includes 1-1 sessions, group sessions, access to a Slack support channel with over +5,000 developers worldwide, and participation in technical and behavioral workshops.
@@ -164,18 +278,20 @@ faq:
         templates: ["faq"]
         priority: 1
         answer: |-
-          Not at all! Our curriculum is designed to take you from 0 to specialists. We start with the basics, so if you have no prior experience in tech, that's no problem.<br>
-          In fact, many of our students start without any prior knowledge. Our comprehensive <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp</a> covers everything from the ground up. If you're interested in specific areas like machine learning, we offer a <a class="faq-link" href="https://4geeksacademy.com/us/blog/machine-learning-bootcamp">Machine Learning Bootcamp</a> and a detailed <a class="faq-link" href="https://4geeksacademy.com/us/blog/machine-learning-course">Machine Learning Course</a>.<br>
+          Not at all! Our curriculum is designed to take you from <span style="font-weight: 700;">0 to specialist</span>. We start with the basics, so if you have no prior experience in tech, that's no problem.<br>
+          In fact, many of our students start without any prior knowledge. Our comprehensive <a class="faq-link" target="_blank" href="/us/blog/coding-bootcamp">Coding Bootcamp Blog</a> covers everything from the ground up. If you're interested in specific areas like machine learning, read our content about <a class="faq-link" target="_blank" href="/us/blog/machine-learning-bootcamp">Machine Learning Bootcamp</a> and <a class="faq-link" target="_blank" href="/us/blog/machine-learning-course">Machine Learning Course</a>.<br>
+          
+          To get a head start, you can also read our content on <a class="faq-link" target="_blank" href="/us/blog/learn-javascript">Learn JavaScript</a> and for those who prefer flexible learning options, our <a class="faq-link" target="_blank" href="/us/blog/online-coding-bootcamp">Online Coding Bootcamp</a> is a great choice.<br>
+          
+          If you're curious about the career path, read our content on <a class="faq-link" target="_blank" href="/us/blog/software-engineer">How to Become a Software Engineer</a> to see how our programs can help you achieve your goals.
 
-          To get a head start, you can also check out resources such as <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">Learn JavaScript</a> and <a class="faq-link" href="https://4geeksacademy.com/us/blog/aprender-a-programar">Aprender a Programar</a>. For those who prefer flexible learning options, our <a class="faq-link" href="https://4geeksacademy.com/us/blog/online-coding-bootcamp">Online Coding Bootcamp</a> is a great choice.<br>
 
-          If you're curious about the career path, read more about <a class="faq-link" href="https://4geeksacademy.com/us/blog/software-engineer">How to Become a Software Engineer</a> to see how our programs can help you achieve your goals.<br>
       ##  // Do I need prior experience? //
 
   - topic: "Frequently Asked Questions about Programs"
     slug: "programs"
     questions:
-      - question: "Geekforce or Geekpal, which one to choose?" #all locations
+      - question: "GeekForce or GeekPal, which one to choose?" #all locations
         locations: ["all"]
         templates: ["faq"]
         priority: 1
@@ -190,27 +306,32 @@ faq:
         templates: ["faq"]
         priority: 1
         answer: |-
-          In order to excel in your chosen field, whether it's software development, data science, or cybersecurity, dedication is crucial across all our programs. For instance, in our Part-Time program, classes are scheduled for 3 hours a day, 3 times a week, requiring approximately 20-24 hours of study per week. Alternatively, our Full-Time program entails 8-hour classes each day, with an additional recommended study time of around 48 hours per week. Regardless of the specific program you choose, commitment to study and practice is essential for success.
-      - question: "Why \"Part-time?\" How does it work?"
+          In order to excel in your chosen field, whether it's <span style="font-weight: 700;">software development, data science, or cybersecurity</span>, dedication is crucial across all our programs. <br>For instance, in our Part-Time program, classes are <span style="font-weight: 700;">scheduled for 3 hours a day, 3 times a week<span>, requiring approximately 20-24 hours of study per week.<br>
+
+          Alternatively, our Full-Time program entails 8-hour classes each day, with an additional recommended study time of around 48 hours per week. Regardless of the specific program you choose, commitment to study and practice is essential for success.
+      - question: "Why \"Part-time?\" and how does it work?"
         templates: ["faq"]
         priority: 0
         answer: |-
-            We believe that the future of education is "part-time." Our approach is a blended education that leverages two proven formats: part-time training and flipped classroom. This methodology combines the following four pillars:<br><br>
-            <strong>Flipped Classroom:</strong> The theory is taught through videos, animation, images, and infographics. Class time is used to discuss, create and build projects, and to be mentored in solving practical exercises.<br><br>
-            <strong>Personalized Mentoring:</strong> Each student has the opportunity to have private conversations with a lead mentor on a regular basis.<br><br>
-            <strong>Mentor-Student Ratio 1:6 (on average):</strong> A close and personalized environment allows our academy to adapt to the particular pace of each student.<br><br>
-            <strong>Talent Tree:</strong> The curriculum charts 44 skills in which students earn points for each skill learned in a playful way.<br><br>
-            Learn more about our part-time bootcamps <a class="faq-link" href="https://4geeksacademy.com/us/coding-bootcamp/part-time-bootcamps">here</a>.
-      - question: "Why 'Full-time'? How does it work?"
+            We believe that the future of education is <span style="font-weight: 700;">"part-time."</span> Our approach is a blended education that leverages two proven formats: part-time training and flipped classroom. This methodology combines the following four pillars:<br><br>
+            <span style="font-weight: 700;">Flipped Classroom:</span> The theory is taught through videos, animation, images, and infographics. Class time is used to discuss, create and build projects, and to be mentored in solving practical exercises.<br><br>
+            <span style="font-weight: 700;">Personalized Mentoring:</span> Each student has the opportunity to have private conversations with a lead mentor on a regular basis.<br><br>
+            <span style="font-weight: 700;">Mentor-Student Ratio 1:7 (on average):</span> A close and personalized environment allows our academy to adapt to the particular pace of each student.<br><br>
+            <span style="font-weight: 700;">Talent Tree:</span> The curriculum charts 44 skills in which students earn points for each skill learned in a playful way.<br><br>
+            Learn more about our part-time bootcamp on our <a class="faq-link" href="/us/coding-bootcamp/part-time-bootcamps">part-time bootcamp</a> page.
+
+      - question: "Why \"Full-time?\" and how does it work?"
         templates: ["faq"]
         priority: 0
         answer: |-
-          We also offer Full-Time, we understand that if you are looking for a full-time program it's because you don't have to quit your job and that instead of slowing down your career it's actually boosting it!.
-          This methodology, apart from being immersive, has a combination of 4 pillars: 
-          Flipped Classroom: The theory is taught through videos, animation, images, and infographics. Class time is used to discuss, create and build projects, and to be mentored to solve many practical exercises.
-          One on one mentorships:each student has the opportunity to have private conversations with a lead mentor on a regular basis. 
-          1:6 Ratio Instructor-Students: A close and personalized environment gives our academy the opportunity to adapt to the particular rhythm of each student.
-          Talent Tree: the curriculum charts 44 skills in which students earn points for each skill learned in a playful way."
+          Our Full-Time program is perfect for those looking to rapidly advance their careers. This intensive program covers the most wanted and highest paid technologies, focusing on Python and JavaScript, the top programming languages of 2024. You'll start coding in web development languages, learn algorithm scripting, build apps with front-end libraries, and use APIs to consume data.<br><br>
+          The program culminates in the presentation of your final project, preparing you for further web development experiences. Along the way, you'll reshape your mind to embrace new logical, developmental, and researching skills.<br><br>
+          <span style="font-weight: 700;">Duration:</span> 10 weeks<br>
+          <span style="font-weight: 700;">Classes:</span> 4 classes weekly<br>
+          <span style="font-weight: 700;">Requisites:</span> No previous coding skills or advanced math required<br>
+          <span style="font-weight: 700;">Language:</span> Choose between English and Spanish for the syllabus and content; live classes are taught in the language of your campus.<br><br>
+          Learn more about our full-time bootcamp on our <a class="faq-link" href="/us/coding-bootcamps/full-time-full-stack-developer">Full-Time Bootcamp</a> page.
+
       - question: "What is the difference between a Full-Stack program and other programs that are more junior such as Website Developer?"
         templates: ["faq"]
         priority: 0
@@ -219,7 +340,7 @@ faq:
           Now, the Full Stack Software Development program is designed in four stages:
           Prework + Learn to code + Create websites + Create web applications
           It lasts 16 weeks and includes more than 300 hours of learning.
-          The technology stack here are: JavaScript, React, Python, Flask, API, AJAX, SASS, HTML, CSS, and more.
+          The technology stack here are: JavaScript, React, Python, Flask, API, AJAX, JWT, HTML, CSS, and more.
           We will guide you and help you find a job after the course through our Placement Program.
           You will have lifetime access to our learning platform Breatheco.de
           You will be able to create and build websites, but you will get the skills and tools to tackle more challenging projects like: data analytics, machine learning and augmented reality, to name a few.
@@ -247,7 +368,7 @@ faq:
             Monday to Friday from 9:00 AM to 6:00 PM.
 
       - question: "What are the class schedules at 4Geeks Academy?" #USA
-        locations: ["atlanta-usa", "austin-usa", "chicago-usa", "houston-usa", "losangeles-usa", "newyork-usa", "orlando", "online", "online-spanish-usa"]
+        locations: ["atlanta-usa", "austin-usa", "chicago-usa", "houston-usa", "losangeles-usa", "newyork-usa", "orlando", "online", "online-spanish-usa", "tampa-usa"]
         priority: 1
         answer: |-
           At 4Geeks Academy, we offer flexible class schedules to fit your needs:
@@ -270,7 +391,7 @@ faq:
             Monday, Wednesday, and Friday from 6:30 PM to 9:30 PM or Tuesday and Thursday from 6:30 PM to 9:30 PM and Saturdays from 10:00 AM to 1:00 PM.
           - Full-time:
             Monday to Friday from 9:00 AM to 6:00 PM.
-          To learn more about our coding bootcamp in Berlin, check out our related blog post: <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp-berlin">Coding Bootcamp in Berlin</a>.
+          To learn more about our coding bootcamp in Berlin, check out our related blog post: <a class="faq-link" href="/us/blog/coding-bootcamp-berlin">Coding Bootcamp in Berlin</a>.
 
       - question: "What are the class schedules at 4Geeks Academy in Miami?" #USA
         locations: ["downtown-miami"]
@@ -286,7 +407,7 @@ faq:
           <ul>
               <li><strong>Monday to Friday:</strong> 9:00 AM - 6:00 PM.</li>
           </ul>
-          These schedules are designed to accommodate your availability, whether you prefer evening classes or are looking to commit to a full-time program during the day. To read more about our coding bootcamp in Miami, visit our blog post: <a class="faq-link" href="https://4geeksacademy.com/us/blog/miami-coding-bootcamp">Coding Bootcamp in Miami</a>.
+          These schedules are designed to accommodate your availability, whether you prefer evening classes or are looking to commit to a full-time program during the day. To read more about our coding bootcamp in Miami, visit our blog post: <a class="faq-link" target="_blank" href="/us/blog/miami-coding-bootcamp">Coding Bootcamp in Miami</a>.
 
       - question: "What are the class schedules?" #Chile
         locations: ["santiago-chile"]
@@ -294,9 +415,9 @@ faq:
         answer: |-
           The class schedules for Santiago, Chile are:<br>
           - Part-time:
-            Monday, Wednesday, and Friday from 6:30 PM to 9:30 PM or Tuesday and Thursday from 6:30 PM to 9:30 PM and Saturday from 9:00 AM to 12:00 PM.
+            Monday, Wednesday, and Friday from 6:30 PM to 9:30 PM or Tuesday and Thursday from 6:30 PM to 9:30 PM and Saturday from 9:00 AM to 12:00 PM.<br>
           - Full-time:
-            Monday to Friday from 9:00 AM to 6:00 PM.
+            Monday to Friday from 9:00 AM to 6:00 PM.<br>
 
       # Colombia
       - question: "What are the class schedules?" #colombia
@@ -396,11 +517,11 @@ faq:
         answer: |-
           At 4Geeks Academy, we are dedicated to preparing you for the job market and supporting you in your job search after completing the program. While we cannot guarantee a job, we provide unlimited and lifelong technical and career support, including assistance with resume building, interview preparation, and access to our network of associated employers. 
 
-          Additionally, according to our statistics, 84% of graduates in the US who complete the stages and requirements secure employment with an average salary over $50k per year. To understand more about our job support and the steps we take to help you succeed, visit our <a class="faq-link" href="https://4geeksacademy.com/us/job-guarantee">Job Guarantee</a> page and learn about our comprehensive <a class="faq-link" href="https://4geeksacademy.com/us/geekforce-career-support">Geekforce Career Support</a> program.
+          Additionally, according to our statistics, 84% of graduates in the US who complete the stages and requirements secure employment with an average salary over $50k per year. To understand more about our job support and the steps we take to help you succeed, visit our <a class="faq-link" target="_blank" href="/us/job-guarantee">Job Guarantee</a> page and learn about our comprehensive <a class="faq-link" target="_blank" href="/us/geekforce-career-support">Geekforce Career Support</a> program.
 
           To learn more about career paths in tech, check out these articles:
-          - <a class="faq-link" href="https://4geeksacademy.com/us/blog/full-stack-developer">How to Become a Full Stack Developer</a>
-          - <a class="faq-link" href="https://4geeksacademy.com/us/blog/full-stack-developer-jobs">Full Stack Developer Jobs</a>
+          - <a class="faq-link" href="/us/blog/full-stack-developer">How to Become a Full Stack Developer</a>
+          - <a class="faq-link" href="/us/blog/full-stack-developer-jobs">Full Stack Developer Jobs</a>
 
 
   - topic: "Frequently Asked Questions about Experience"
@@ -412,7 +533,7 @@ faq:
         answer: |-
           JavaScript "owns" the web; it is the only language that all web browsers understand. It is also the most used coding language in the world. Every site needs it, and it's the most demanded language by companies, at least ten times more than the rest. 
 
-          To learn more about why JavaScript is essential and how you can master it, check out our detailed article on how to <a class="faq-link" href="https://4geeksacademy.com/us/blog/learn-javascript">learn JavaScript</a>.
+          To learn more about why JavaScript is essential and how you can master it, check out our detailed article on how to <a class="faq-link" target="_blank"  href="/us/blog/learn-javascript">learn JavaScript</a>.
 
       - question: "Why Python?"
         templates: ["faq"]
@@ -420,7 +541,7 @@ faq:
         answer: |
           Python is the fastest growing language in the wealthiest countries. It is widely used in virtually every industry and has top-quality libraries for all fields, growing to be "the future" in areas like Web, AI, Robotics, Big Data, and more. According to MIT Professors, it is the essential programming language to learn. Go ahead and take a look for yourself <a class="faq-link" target="_blank" rel="noopener noreferrer nofollow" href="https://www.python.org/">here</a>. Python is the way to go. It offers more job opportunities, helps you learn to code, and supports you with other back-end languages and frameworks. Even Google endorses Python and has incorporated it everywhere!
 
-          To delve deeper into Python and its significance, check out our articles on <a class="faq-link" target="_blank" rel="noopener noreferrer nofollow" href="https://4geeksacademy.com/us/blog/python-bootcamp">Python bootcamp</a> and how to <a class="faq-link" target="_blank" rel="noopener noreferrer nofollow" href="https://4geeksacademy.com/us/blog/learn-python">learn Python</a>.
+          To delve deeper into Python and its significance, check out our articles on <a class="faq-link" target="_blank" href="/us/blog/learn-python">learn Python</a>.
 
       - question: "Why not Node JS?"
         templates: ["faq"]
@@ -436,11 +557,11 @@ faq:
         answer: |
           No, previous programming experience is not required to join our bootcamp. All you need is the desire to learn. We believe that everyone has the potential to code, and we'll help you discover it! If you can already open your browser and check Facebook, you're off to a great start!<br><br>
           Ready to begin your coding journey? Check out our available bootcamps:<br>
-          <a class="faq-link" href="https://4geeksacademy.com/us/blog/online-coding-bootcamp">Online Coding Bootcamp</a><br>
-          <a class="faq-link" href="https://4geeksacademy.com/us/blog/data-science-bootcamp">Data Science Bootcamp</a><br>
-          <a class="faq-link" href="https://4geeksacademy.com/us/blog/coding-bootcamp">Coding Bootcamp</a>
-      # Do I need to have previous experience in programming to join the bootcamp?
-
+          Read about our <a class="faq-link" target="_blank" href="/us/blog/online-coding-bootcamp">Online Coding Bootcamp</a> for flexible learning options.<br>
+          Learn more about our <a class="faq-link" target="_blank" href="/us/blog/data-science-bootcamp">Data Science Bootcamp</a> to dive into data science.<br>
+          Explore our comprehensive <a class="faq-link" target="_blank" href="/us/blog/coding-bootcamp">Coding Bootcamp</a> that covers everything from the ground up.<br><br>
+          We also have a lot of free content on our website <a class="faq-link" href="https://4geeks.com">4geeks.com</a> to help you get started.
+      #### // Do I need to have previous experience in programming to join the bootcamp?//
 
       - question: "Do I graduate as a 'Senior Developer?"
         templates: ["faq"]
@@ -455,4 +576,4 @@ faq:
         answer: |
           According to estimations by the IDB between 2020 and 2025, there will be a need for 10.5 million professionals in the tech industry worldwide. Currently, there are over 1.4 million job openings for programmers in the United States, and this number is expected to increase by 2021. In Spain, during the pandemic, 1,500 job openings for programming were created on a single job search platform. On the other hand, in Latin America, around 1.2 million tech professionals will be needed to help reduce the gap. Therefore, the market for companies seeking to hire programmers is going to continue to grow at a rapid pace to keep up with the large demand.
 
-          Interested in learning more about the job market? Explore our blog for further insights: <a class="faq-link" href="https://4geeksacademy.com/us/blog">4Geeks Academy Blog</a>.
+          Interested in learning more about the job market? Explore our blog for further insights: <a class="faq-link" href="/us/blog">4Geeks Academy Blog</a>.

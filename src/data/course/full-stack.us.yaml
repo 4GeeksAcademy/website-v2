@@ -145,7 +145,7 @@ details:
          
   heading: "Part-Time Full Stack Development Bootcamp"
   weeks: 18
-  sub_heading: "Hands-on learning through real-life projects. \n Master the 3 most used languages in the world: Master Python, JS and React."
+  sub_heading: "Hands-on learning through real-life projects. \n Master the 3 most used languages worldwide: Python, JS, and React."
   left_labels:
     description: "DESCRIPTION:"
     projects: "PROJECTS:"
@@ -154,7 +154,9 @@ details:
   details_modules:
     - module_name: "PREWORK"
       title: "Get Ready for the Prework"
-      description: "Starting with the basics: HTML5 + CSS3 + Javascript. We review the basics of coding and make sure we are all on the same page."
+      description: "We start with the basics: HTML5, CSS3, and JavaScript. We review the fundamentals of programming to ensure everyone is on the same page.
+
+        During the prework, you will learn how to create a website using HTML and CSS. Then, you will develop several projects and finally dive into the world of JavaScript, learning about variables, loops, conditionals, and functions."
       projects: "CSS Postcard, Minimal Instagram Version, etc."
       slug: "prework"
       duration: "~ 60 hours"
@@ -162,28 +164,28 @@ details:
     - module_name: "FOUNDATIONS"
       title: "Learn To Code"
       description: "Think like a computer: Control the flow of your code, code algorithms, loop, use conditionals, webpack, the command line, GIT, etc."
-      projects: "Instagram Application, Memory Card Game, Tic Tac Toe, Flappy Bird, etc."
+      projects: "Build your Instagram clone, a form with HTML5, an online resume, etc.."
       slug: "foundations"
       duration: "2 wks"
       step: 2
     - module_name: "THE WEB"
       title: "Web Development"
-      description: "Create your first React.js application, MVC Pattern, JS Modules, Bunding, Babel JS, The DOM, Events"
-      projects: "Coursera clone, Instagram clone, Youtube clone, etc."
+      description: "You will create your first application with React.js, MVC pattern, JS modules, bundling, Babel JS, the DOM, and events."
+      projects: "Instagram Feed clone, random card generator, unit testing with Jest, landing page with React, traffic light, to-do list with React, among others..."
       slug: "web-development"
       duration: "6 wks"
       step: 5.9
     - module_name: "API'S"
       title: "API Development"
       description: "Mainly focused on Python, get ready to build your own API and interact with 3rd party applications like Twillio, Stripe and many more."
-      projects: "Coursera clone, Instagram clone, Youtube clone, etc."
+      projects: "Star Wars Blog page, JWT authentication, Jackson Families, CRUD (create, read, update, delete), build your own APIs and interact with others."
       slug: "web-development"
       duration: "2 wks"
       step: 2
     - module_name: "ADVANCED APPS"
       title: "Advanced Application"
-      description: "Python, Flask, REST API's, Databases, SQL, MVC Pattern, Publishing your website, etc."
-      projects: "During this phase you will have to design, code, test, and publish your own complete web application."
+      description: "Python, Flask, REST APIs, databases, SQL, MVC pattern, publish your website, etc."
+      projects: "During this phase, you will need to design, program, test, and publish your own web application."
       slug: "advanced-application"
       duration: "6 weeks"
       step: 8

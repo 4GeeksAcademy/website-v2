@@ -66,8 +66,8 @@ upcoming:
 #     Practica con escenarios típicos de empresas de la vida real y conoce algunas de las herramientas más utilizadas en la industria. \n
 
 overlaped:
-  heading: |
-    'A.I. won’t take your job, it’s somebody USING A.I. that’ll take your job.' <br> <span style="font-size:16px;">Economist Richard Baldwin, at the World Economic Forum's Growth Summit.</span>
+  heading: |-
+    "A.I. won’t take your job, it’s somebody USING A.I. that’ll take your job." <br> <span style="font-size:13px; line-height: 10px;">Economist James Baldwin at the World Economic Forum.</span>
   paragraph: "AI can boost human productivity to the point that only AI-proficient professionals will be hired in the future. Do more with less. Don't get left behind."
   # button:
   #   text: "LEARN MORE"
@@ -229,11 +229,11 @@ faq:
 
 ## TWO COLUMNS
 two_columns:
-  proportions: [6, 6]
+  proportions: [4, 8]
   image:
-    style: '{"backgroundSize": "cover", "background-position": "center", "min-height": "300px", "height": "300px"}'
-    src: "../../images/landing/two-womans-and-laptop.webp"
-    shadow: true
+    style: '{"backgroundSize": "contain", "background-position": "center"}'
+    src: "../../images/landing/applied-ai-icons.webp"
+    shadow: false
   heading:
     text: "Expand your capabilities and boost your efficiency!"
     font_size: ["30px", "30px", "30px", "26px", "24px"]
@@ -252,7 +252,7 @@ two_columns_second:
   proportions: [6, 6]
   image:
     style: '{"backgroundSize": "contain", "background-position": "center"}'
-    src: "../../images/landing/grupo-ventanas.png"
+    src: "../../images/landing/grupo-ventanas.webp"
     shadow: false
   heading:
     text: "Get everything you need to succeed"

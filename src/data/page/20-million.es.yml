@@ -1,11 +1,11 @@
 meta_info:
   slug: 20-millones
   title: "Courses and programs taught at 4Geeks Academy"
-  description: "Ifff"
+  description: "Descubre becas de programación por más de $20M en 4Geeks Academy."
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   image: "/images/programs-heading.png"
   keywords: "Programs at 4Geeks Academy"
-  redirects: ["/20-millones", "/20millones"]
+  redirects: ["/20-millones", "/20millones", "/becas"]
 
 seo_title: "level up as a developer"
 header:
@@ -22,7 +22,7 @@ two_column_left:
     - 6
   image:
     style: '{ "backgroundSize": "contain" }'
-    src: /images/landing/20-million-column.png
+    src: /images/landing/20-millions-image.webp
   heading:
     text: Nuestra misión es hacer que la educación de programación de alta calidad sea asequible.
     font_size:

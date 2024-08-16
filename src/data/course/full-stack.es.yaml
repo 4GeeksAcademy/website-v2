@@ -66,8 +66,8 @@ course_instructors:
       linkedin: "https://www.linkedin.com/"
 
 overlaped:
-  heading: "Python y Javascript"
-  paragraph: "Nuestros programa está basado en el uso de Phyton y Javascript. La razón?En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails. Python tiene 10 veces más trabajos que node.js. Otras herramientas que también aprenderás a usar en nuestro programa: son GitHub, CSS3, HTML5, Flask, etc."
+  heading: "Python y JavaScript"
+  paragraph: "Nuestros programa está basado en el uso de Phyton y JavaScript. La razón? En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails. Python tiene 10 veces más trabajos que node.js. Otras herramientas que también aprenderás a usar en nuestro programa: son GitHub, CSS3, HTML5, Flask, etc."
   button:
     text: "Aplicar"
     color: "blue"  
@@ -76,29 +76,29 @@ overlaped:
     src: "/images/landing/tres-personas-reloaded.webp"  
 
 ## TWO COLUMNS
-two_columns:
-  proportions: [6, 6]
-  image:
-    style: '{"border" : "3px solid black", "backgroundSize": "contain" }'
-    src: "/static/images/staff/luisa.png"
-    shadow: true  
-  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
-  heading:
-    text: "4Geeks Academy and a story full of opportunities"
-    font_size: ["30px", "30px", "30px", "30px", "30px"]
-  sub_heading:
-    text: "We are Miami based and we have been focusing in bringing on more opportunities in South Florida."
-    font_size: ["16px", "16px", "16px", "16px", "16px"]
-  button:
-    text: "Apply now"
-    color: "white"
-    background: "black"
-    path: "#prices_and_payment"
-  bullets:
-    items: 
-    - text: "There is always a full or partial scholarship open"
-    - text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
-    - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade County and many more."
+# two_columns:
+#   proportions: [6, 6]
+#   image:
+#     style: '{"border" : "3px solid black", "backgroundSize": "contain" }'
+#     src: "/static/images/staff/luisa.png"
+#     shadow: true  
+#   video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+#   heading:
+#     text: "4Geeks Academy and a story full of opportunities"
+#     font_size: ["30px", "30px", "30px", "30px", "30px"]
+#   sub_heading:
+#     text: "We are Miami based and we have been focusing in bringing on more opportunities in South Florida."
+#     font_size: ["16px", "16px", "16px", "16px", "16px"]
+#   button:
+#     text: "Apply now"
+#     color: "white"
+#     background: "black"
+#     path: "#prices_and_payment"
+#   bullets:
+#     items: 
+#     - text: "There is always a full or partial scholarship open"
+#     - text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
+#     - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade County and many more."
 
 
 badges:
@@ -118,7 +118,7 @@ details:
       sub_title: |
         En este Bootcamp te desarrollarás desde cero como Full Stack Developer.
         Aprenderás a crear un sitio web sumergiéndote en las mejores prácticas del       
-        diseño web responsive, trabajando con diversos lenguajes. Obtedrás una       
+        diseño web responsive, trabajando con diversos lenguajes. Obtendrás una       
         sólida base de frontend, backend, base de datos, manejo de procesos       
         distribuidos y despliegue en plataformas web. <br>
         Al finalizar este programa, contarás con los conocimientos para       
@@ -155,8 +155,8 @@ details:
     - module_name: "PREWORK"
       title: "Prework"
       description: >
-        Empezamos por lo básico: HTML5 + CSS3 + Javascript. Revisamos los fundamentos de la programación y nos aseguramos de que todos estamos en la misma página.
-        Durante el prework revisarás cómo hacer un sitio web con HTML y CSS, luego desarrollarás varios proyectos y por último te iniciarás en el mundo de Javascript, aprendiendo sobre variables, loops, condicionales, y funciones.
+        Empezamos por lo básico: HTML5 + CSS3 + JavaScript. Revisamos los fundamentos de la programación y nos aseguramos de que todos estamos en la misma página.
+        Durante el prework revisarás cómo hacer un sitio web con HTML y CSS, luego desarrollarás varios proyectos y por último te iniciarás en el mundo de JavaScript, aprendiendo sobre variables, loops, condicionales, y funciones.
       projects: "Construye tu primera página web, y una versión mínima de Instagram."
       slug: "prework"
       duration: "~ 60 horas"
@@ -164,28 +164,28 @@ details:
     - module_name: "FUNDAMENTOS"
       title: "Aprende a programar"
       description: "Piensa como un ordenador: Controlarás el flujo de tu código, crearás algoritmos, harás bucles, usarás condicionales y una mezcla de JavaScript con HTML5 y CSS3 para lanzar tu primer sitio web interactivo."
-      projects: "Construye tu aplicación de Instagram, juego de cartas de memoria, Tic Tac Toe, Flappy Bird, etc."
+      projects: "Construye tu clon de Instagram post, formulario con HTML5, Curriculum Online, entre otros."
       slug: "fundamentos"
       duration: "2 sem"
       step: 2
     - module_name: "LA WEB"
       title: "Desarrollo web"
       description: "Crearás tu primera aplicación con React.js, Patrón MVC, Módulos JS, Bundling, Babel JS, el DOM, Eventos."
-      projects: "Construirás un clon de Coursera, clon de Instagram, clon de Youtube, entre otros..."
+      projects: "Clon de Instagram Feed, Generador de cartas aleatorias,  Pruebas unitarias con Jest, Lading page con React, Traffic Light, To-do list con React, entre otros... "
       slug: "desarrollo-web"
       duration: "6 sem"
       step: 6
     - module_name: "API'S"
       title: "Desarrollo de APIs"
       description: "Enfocado principalmente en Python, Flask y SQL construirás tus propias APIs e interactuarás con otras APIs muy conocidas como Google, Twillio, Facebook, Stripe ¡Y más!"
-      projects: "Clon de Coursera, Clon de Instagram, Clon de Youtube, etc."
+      projects: "Star Wars Blog page, Autenticación JWT, Jackson Families, CRUD(create, read, update, deleate), construye tus propias API's e interactúa con otras."
       slug: "web-development"
       duration: "3 sem"
       step: 2
     - module_name: "APPS AVANZADAS"
       title: "Apps Avanzadas"
       description: "Python, Flask, REST API's, Bases de datos, SQL, Patrón MVC, Publica tu sitio web, etc."
-      projects: "Durante esta fase tendrás que diseñar, programar, probar y publicar tu propia aplicación web completa."
+      projects: "Durante esta fase tendrás que diseñar, programar, probar y publicar tu propia aplicación web."
       slug: "aplicacion-avanzada"
       duration: "7 sem"
       step: 7.9
@@ -198,7 +198,7 @@ details:
       step: 0.1
 
 syllabus:
-  heading: Descarga toda la infomación sobre este programa
+  heading: Descarga toda la información sobre este programa
   button_label: Descargar
 
 ## 4GEEKS VS OTHERS SECTION
@@ -215,7 +215,7 @@ why_4geeks:
 geek_data:
   heading: ¡Career Support de por vida!
   geek_pal:
-    - Aprenderas Python, Javascript y React. Los Lenguajes más buscados.
+    - Aprenderás Python, JavaScript y React. Los Lenguajes más buscados.
     - Un profesor cada siete estudiantes (1:7).
     - Sesiones ilimitadas de tutoría 1-1 por demanda, en persona o en línea.
     - Miles de ejercicios interactivos y autoevaluados.
@@ -225,7 +225,7 @@ geek_data:
     - Grabación de las clases para su posterior revisión.
   geek_force:
     - Construcción de CV y LinkedIn.
-    - Construcción del perfil de Github y portafolio desde el dia 1.
+    - Construcción del perfil de GitHub y portafolio desde el día 1.
     - Career Week para dedicación exclusiva a tu perfil profesional.
     - Preparación de simulación de entrevistas.
     - Sesión de preparación de entrevistas personalizadas para trabajos específicos.

@@ -192,16 +192,16 @@ components:
       font_size: ["16px"]
     bullets:
       items:
-      - heading: "Aplicaciones Prácticas de IA"
+      - text: "Aplicaciones Prácticas de IA"
         # text: "Descubre cómo aplicar la IA en diversas industrias como salud, marketing y más, abordando casos reales y desafíos específicos"
         icon: "circle"
-      - heading: "Identificación y Aprovechamiento de Oportunidades en IA"
+      - text: "Identificación y Aprovechamiento de Oportunidades en IA"
         # text: "Aprende a identificar y aprovechar oportunidades de implementación de IA en entornos laborales, maximizando su impacto en el rendimiento laboral"
         icon: "circle"
-      - heading: "Aprovecha la IA para optimizar tus tareas"
+      - text: "Aprovecha la IA para optimizar tus tareas"
         # text: "Tareas repetitivas pueden ser optimizadas por IAs para aprovecar el tiempo y maximizar resultados"
         icon: "circle"
-      - heading: "Entendimiento de las Herramientas actuales"
+      - text: "Entendimiento de las Herramientas actuales"
         # text: "Al entenderlas herramientas podrás optener los mejores resultados de ellas, podrás pensar en como aplicarlas de una forma efectiva a tu entorno"
         icon: "circle"
 
@@ -229,17 +229,3 @@ components:
       color: "white"
       background: "black"
       hover: "lightBlue"
-
-# choose_your_program:
-#   position: 5
-#   title: Nuestra Modalidad
-#   paragraph: Applied IA para mejorar la productividad
-#   programs:  
-#   - title: "Part Time"
-#     sub_title: "16 semanas"
-#     icon: "fullstack"
-#     description: |
-#       De cero a tener tu primer trabajo como Data Scientist, con una duración de 16 semanas, con clases en vivo 3 veces por semana, compatible con horario laboral o de estudios. 
-#     text_link: Obtener más información
-#     link: "#leadform_header" # moves to start position
-  

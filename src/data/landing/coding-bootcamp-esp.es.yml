@@ -207,14 +207,11 @@ components:
       path: ""
     bullets:
       items:
-        - heading: "¡Conviértete en un desarrollador web Full Stack en solo 18 semanas!"
-          text: ""
+        - text: "¡Conviértete en un desarrollador web Full Stack en solo 18 semanas!"
           icon: "circle" #string with icon for example ['check', 'cicle', etc]
-        - heading: "Escuela de programación con los mejores resultados"
-          text: ""
+        - text: "Escuela de programación con los mejores resultados"
           icon: "circle" #string with icon for example ['check', 'cicle', etc]
-        - heading: "Solicita información sobre nuestros planes de pago"
-          text: ""
+        - text: "Solicita información sobre nuestros planes de pago"
           icon: "circle" #string with icon for example ['check', 'cicle', etc]
  
   # - name: top_coding_bootcamp

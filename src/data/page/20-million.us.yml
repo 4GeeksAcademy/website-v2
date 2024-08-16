@@ -1,15 +1,12 @@
----
 meta_info:
   slug: 20-million
   title: Coding Programs offered by 4Geeks Academy
-  description: If
+  description: "Explore coding scholarships worth over $20M at 4Geeks Academy."
   visibility: visible
   image: /images/programs-heading.png
   keywords: Programs at 4Geeks Academy
-  redirects:
-    - "/20million"
-    - "/20-millions"
-    - "/20millions"
+  redirects: ["/20million", "/20-millions", "/20millions", "/scholarships"]
+
 seo_title: Level up as a developer
 header:
   title: $20+ Million in Scholarships
@@ -17,14 +14,14 @@ header:
 
 button:
   btn_label: I want to Contribute
-  apply_button_link: /us/apply
+  apply_button_link: "/us/apply"
 two_column_left:
   proportions:
     - 6
     - 6
   image:
     style: '{ "backgroundSize": "contain" }'
-    src: /images/landing/20-million-column.png
+    src: "/images/landing/20-millions-image.webp"
   heading:
     text: Our mission is to make high-quality coding education affordable.
     font_size:
@@ -57,5 +54,5 @@ two_column_left:
     path: "#leadform_bottom"
 form:
   title: "Become a Catalyst for Change: Join Our Network of Partners"
-  paragraph: >
+  paragraph: |
     Thanks to our dedicated partners, we are turning our goals into reality. As a community, hiring, or funding partner, you too can help shape the future of tech and tech education . Connect with us to explore how we can mutually leverage our capacities and  make a lasting impact.

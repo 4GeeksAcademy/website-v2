@@ -64,7 +64,7 @@ badges:
 
 # OVERLAPED
 overlaped:
-  heading: "Learn to create predictive models and Master Machine Learning with 4Geeks Academy"
+  heading: "Learn to create predictive models and master machine learning with 4Geeks Academy"
   paragraph: "Dive into the world of machine learning with 4Geeks Academy's specialized program. Gain the skills to build predictive models for practical applications like fraud detection and natural language processing, using industry-leading tools such as Python, TensorFlow, and Scikit-learn."
   button:
     text: "LEARN MORE"
@@ -73,30 +73,64 @@ overlaped:
   image:
     src: "/images/landing/tres-personas-reloaded.webp"
 
-## TWO COLUMNS
-two_columns:
+
+two_columns_info:
   proportions: [6, 6]
   image:
-    style: '{"border" : "3px solid black", "backgroundSize": "contain" }'
-    src: "/images/staff/luisa.png"
-    shadow: true  
-  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+    style: '{"backgroundSize": "contain", "background-position": "center"}' 
+    shadow: false 
+    src: "/images/landing/grupo-ventanas.webp"
+  section_heading: 
+    text: "Learn to Apply Machine Learning to Real-World Problems"
   heading:
-    text: "4Geeks, Miami and a story full of opportunities"
-    font_size: ["30px", "30px", "30px", "30px", "30px"]
+    text: ""
+          #xl      lg     md     sm    xs
+    font_size: ["40px", "34px", "34px", "25px", "20px"]
   sub_heading:
-    text: "We are Miami based and we have been focusing in bringing on more opportunities in South Florida."
-    font_size: ["16px", "16px", "16px", "16px", "16px"]
+    style: '{}'
+    text: "Our data science bootcamp is focused on providing all the tools and support necessary for you to succeed in this field."
+    font_size: ["16px"]
+  content:
+    text: ""
   button:
-    text: "Apply now"
+    text: "Compare Prices and Plans"
+    path: "#prices_and_payment"
     color: "white"
     background: "black"
-    path: "#prices_and_payment"
+    hover: "lightBlue"
   bullets:
     items: 
-    - text: "There is always a full or partial scholarship open"
-    - text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
-    - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade County and many more."
+    - heading: "UNLIMITED MENTORING"
+      text: "Get expert support for all your questions. Our mentors are always available online, ready to assist you from day one and beyond."
+    - heading: "1:7 STUDENT-TEACHER RATIO"
+      text: "Experience personalized attention with our above-average student-teacher ratio."
+    - heading: "PERSONALIZED PROFESSIONAL SUPPORT"
+      text: "Receive unlimited advice, guidance, and training tailored to your unique profile and specific job offers."
+
+## TWO COLUMNS
+# two_columns:
+#   proportions: [6, 6]
+#   image:
+#     style: '{"border" : "3px solid black", "backgroundSize": "cover", "backgroundPosition": "right" }'
+#     src: "/images/testimonials/luisa-glum.jpg"
+#     shadow: true  
+#   video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+#   heading:
+#     text: "4Geeks, Miami and a mission of creating opportunities"
+#     font_size: ["30px", "30px", "30px", "30px", "30px"]
+#   sub_heading:
+#     text: "With Miami as our home base, we're dedicated to fostering opportunities throughout South Florida."
+#     font_size: ["16px", "16px", "16px", "16px", "16px"]
+#   button:
+#     text: "Apply now"
+#     color: "white"
+#     background: "black"
+#     path: "#prices_and_payment"
+#   bullets:
+#     items: 
+#     - text: "Accessible scholarships, whether full or partial, are always available."
+#     - text: "Exclusive opportunities await residents of Miami-Dade, Broward, and Palm Beach counties, ensuring local talent thrives."
+#     - text: "We maintain ongoing partnerships with institutions such as Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade County, and many more."
 
 
 upcoming:

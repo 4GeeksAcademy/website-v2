@@ -73,31 +73,75 @@ overlaped:
   image:
     src: "/images/landing/tres-personas-reloaded.webp"  
 
-
-# two_columns:
+## TWO COLUMNS INFO
+# two_columns_info:
 #   proportions: [6, 6]
 #   image:
-#     style: '{"border" : "3px solid black", "backgroundSize": "contain" }'
-#     src: "/static/images/staff/luisa.png"
-#     shadow: true  
-#   video: "https://www.youtube.com/watch?v=c14ZDHXN6_w"
+#     style: '{"backgroundSize": "contain" }'
+#     src: "/images/landing/grupo-ventanas.webp"
+#     shadow: false  
 #   heading:
-#     text: "4Geeks Academy "
+#     text: "Aprende a aplicar el Machine Learning a problemas del mundo real"
 #     font_size: ["30px", "30px", "30px", "30px", "30px"]
 #   sub_heading:
-#     text: "Descubre por qué nuestro Bootcamp de Data Science es el mejor"
+#     text: "Nuestro bootcamp de data science está enfocado en brindar todas las herramientas y el apoyo necesario para que puedas triunfar en este campo."
 #     font_size: ["16px", "16px", "16px", "16px", "16px"]
-#   button:
-#     text: "Apply now"
-#     color: "white"
-#     background: "black"
-#     path: "#prices_and_payment"
-#   bullets:
-#     items: 
-#     - text: "There is always a full or partial scholarship open"
-#     - text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
-#     - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade County and many more."
 
+two_columns_info:
+  proportions: [6, 6]
+  image:
+    style: '{"backgroundSize": "contain", "background-position": "center"}' 
+    shadow: false 
+    src: "/images/landing/grupo-ventanas.webp"
+  section_heading: 
+    text: "Aprende a aplicar el Machine Learning a problemas del mundo real"
+  heading:
+    text: ""
+          #xl      lg     md     sm    xs
+    font_size: ["40px", "34px", "34px", "25px", "20px"]
+  sub_heading:
+    style: '{}'
+    text: "Nuestro bootcamp de data science está enfocado en brindar todas las herramientas y el apoyo necesario para que puedas triunfar en este campo."
+    font_size: ["16px"]
+  content:
+    text: "Fidel Vera siempre tuvo una fascinación por el potencial de los datos. En 4Geeks Academy, encontró el trampolín perfecto para convertir su pasión en una carrera profesional exitosa. Nuestro bootcamp de Data Science le proporcionó las herramientas y el conocimiento necesarios para integrarse en este campo en la industria tech."
+  button:
+    text: "Comparar precios y planes"
+    path: "#prices_and_payment"
+    color: "white"
+    background: "black"
+    hover: "lightBlue"
+  bullets:
+    items: 
+    - heading: "MENTORÍAS ILIMITADAS"
+      text: "Obtén soporte experto para todas tus preguntas. Nuestros mentores están siempre disponibles en línea, listos para ayudarte desde el primer día hasta siempre."
+    - heading: "PROPORCIÓN PROFESOR ESTUDIANTE 1:7"
+      text: "Experimenta una atención perzonalizada con nuestra proporción profesor-alumno superior a la media."
+    - heading: "APOYO PROFESIONAL PERSONALIZADO"
+      text: "Recibe asesoramiento, orientación y formación ilimitados adaptados a tu perfil único y a tus ofertas de trabajo específicas."
+
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{ "border" : "3px solid black" }' 
+    shadow: true 
+    src: "../../../static/images/testimonials/fidel-vera-testimonio-ds.jpg"
+  video: "https://www.youtube.com/watch?v=zfLGOolXHWQ"
+  heading:
+    text:
+      "Conoce una historia de transformación de uno de nuestros estudiantes"
+      #xl      lg     md     sm    xs
+    font_size: ["40px", "34px", "34px", "25px", "20px"]
+  content:
+    style: '{}'
+    text: "Fidel Vera siempre tuvo una fascinación por el potencial de los datos. En 4Geeks Academy, encontró el trampolín perfecto para convertir su pasión en una carrera profesional exitosa. Nuestro bootcamp de Data Science le proporcionó las herramientas y el conocimiento necesarios para integrarse en este campo en la industria tech."
+    font_size: ["16px"]
+  button:
+    text: "Obtener Información"
+    path: "#top"
+    color: "white"
+    background: "black"
+    hover: "lightBlue"
 
 upcoming:
   no_dates_message: "Actualmente no hay próximas fechas para este programa"

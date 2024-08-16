@@ -20,6 +20,18 @@ awards_list:
   #   text_link: "See article"
   #   link: "/"
 
+  - image: "../../../static/images/badges/fortune-logo.png"
+    title: "Excellence in Education for Spanish Speakers"
+    paragraph: "4Geeks Academy has been recognized by Fortune as one of the top coding bootcamps for Spanish speakers, highlighting our commitment to inclusive and accessible education."
+    link: "https://fortune.com/education/articles/best-software-engineering-bootcamps/#4Geeks-Academy"
+    text_link: "See website"
+
+  - image: "../../../static/images/badges/arp-logo-certification.png"
+    title: "Institutional Quality Online Education"
+    paragraph: "4Geeks Academy has earned the ARP certification, distinguishing it as a leader in online coding education."
+    link: "https://arpcertificate.com/listado-de-cursos/programa-full-stack-development/"
+    text_link: See website
+
   - image: "../../../static/images/badges/forbes-logo-award.png"
     title: "Top Online Full-Stack Bootcamps Of 2024"
     paragraph: "We have been selected as one of the Top Online Coding Bootcamps by Forbes."

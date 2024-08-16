@@ -158,13 +158,13 @@ components:
       path: ""
     bullets:
       items:
-      - heading: "Dominio de herramientas analíticas"
+      - text: "Dominio de herramientas analíticas"
         icon: "check" 
-      - heading: "Técnicas de Machine Learning"
+      - text: "Técnicas de Machine Learning"
         icon: "check" 
-      - heading: "Visualización de datos"
+      - text: "Visualización de datos"
         icon: "check" 
-      - heading: "Procesamiento de grandes volúmenes de información"
+      - text: "Procesamiento de grandes volúmenes de información"
         icon: "check" 
 
   - name: python_y_javascript

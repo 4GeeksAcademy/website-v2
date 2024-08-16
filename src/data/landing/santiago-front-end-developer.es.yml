@@ -38,8 +38,8 @@ apply_schollarship: # form that is displayed at the end of the landing
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  tagline: Bootcamp Front-End Developer
-  sub_heading: "¡Conviértete en desarrollador en 12 semanas!"
+  tagline: Transformación Profesional en 4Geeks Academy
+  sub_heading: "En 4Geeks Academy, te ofrecemos un bootcamp intensivo diseñado para transformarte en un desarrollador Front-End o en un desarrollador FullStack desde 12 a 18 semanas. Únete a una comunidad internacional de más de 5000 personas que comparten tu pasión por la tecnología y el desarrollo."
   # background: "#FFF1D1"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   background_image: "../../../static/images/locations/satiago-background.webp"
@@ -51,17 +51,15 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-    - Comunidad internacional +5000 personas.
     - Mentorías/Tutorías personalizadas ilimitadas y de por vida.
-    - Clases personalizadas (Ratio Profesor/Alumno promedio 1 a 7).
-    - No vienes a aprender a programar, ¡vienes a convertirte en Developer!.
-    - Aprende los lenguajes de programación más demandados por las empresas.
+    - Clases personalizadas (Ratio Profesor/Alumno promedio 1 a 10).
+    - No vienes a aprender a programar, ¡vienes a convertirte en un programador!.
 
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "Reserva tu lugar ahora y comienza\n tu futuro como desarrollador Front-End"
-    text_mobile: "Reserva tu lugar ahora y comienza\n tu futuro como desarrollador Front-End"
+    text: "Reserva tu lugar ahora y comienza\n Tu carrera como Programador."
+    text_mobile: "Reserva tu lugar ahora y comienza\n Tu carrera como Programador."
     # devices:   XL      LG    MD      SM    XS
     font_size: ["22px", "22px", "22px", "20px", "18px"]
   button:
@@ -97,9 +95,9 @@ short_badges:
 #
 
 program_details:
-  position: 2
-  heading: "Domina el Front-End con JS & React con 4Geeks Academy"
-  sub_heading: "Conviértete en desarrollador Front-End en tan solo 12 semanas"
+  position: 3
+  heading: "Domina JS & React con cualquiera de nuestros programas en 4Geeks Academy"
+  sub_heading: "Conviértete en un Profesional del Desarrollo a partir de 12 Semanas"
 
 badges:
   position: 5
@@ -107,7 +105,7 @@ badges:
 
 geeks_vs_others:
   position: 10
-  heading: "¿Qué hace a nuestro Front-End Developer Bootcamp el mejor?"
+  heading: "¿Qué hace cualquiera de nuestros Bootcamps de programación tu mejor opción?"
   paragraph: ""
   total_rows: 5
 
@@ -146,7 +144,7 @@ who_is_hiring:
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
   - name: new_design_with_bullets
-    position: 1
+    position: 2
     layout: two_column_left
     swipable: False
     background: "#FFFFFF"
@@ -155,13 +153,13 @@ components:
       src: "/images/woman-afro-with-laptop.webp"
       shadow: true
     section_heading:
-      text: "De cero a Desarrollador Front-End Developer"
+      text: "De cero a desarrollador, un camino hacia el futuro del sector TI."
       style: '{ "font-size": "30px" }'
     heading:
-      text: "¿Por qué Estudiar programación Front-End?"
+      text: "¿Por qué Estudiar programación?"
     sub_heading:
-      text: |
-        El salario promedio de un Front-End Developer Junior es entre 650.000 CLP y 800.000 CLP aproximadamente. Nuestro programa no solo te capacitará para convertirte en desarrollador Front-End, sino que también te enseñará las tecnologías más buscadas y mejor pagadas del mercado actual, como: HTML, CSS, JavaScript, React, API REST, entre otras.
+      text: |-
+        El sector TI en Chile está en constante crecimiento, y la demanda por desarrolladores Front-End sigue en aumento. El salario promedio de un Junior web Developer varía entre 650.000 CLP y 800.000 CLP aproximadamente. Adquirir habilidades en tecnologías como HTML, CSS, JavaScript, React, y API REST te posicionará en la vanguardia del mercado laboral, siendo estas las más buscadas y mejor pagadas.
     button:
       text: "Obtener información"
       color: white
@@ -174,18 +172,39 @@ components:
       path: ""
     bullets:
       items:
-        - heading: "CRECIMIENTO LABORAL: "
-          text: "Todos los sectores de la economía necesitarán Desarrolladores Front-End en los próximos años y se prevé que estos puestos seguirán aumentando con el tiempo."
+        - heading: "Crecimiento Laboral en el Sector TI: "
+          text: "Todos los sectores de la economía necesitarán Desarrolladores en los próximos años y se prevé que estos puestos seguirán aumentando con el tiempo."
           icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - heading: "TTRABAJO REMOTO: "
-          text: "Al convertirte en Front-End Developer podrás trabajar de forma remota o desde cualquier parte del mundo para empresas extranjeras."
+        - heading: "Flexibilidad y Trabajo Remoto: "
+          text: "Al convertirte en un desarrollador podrás trabajar de forma remota o desde cualquier parte del mundo para empresas extranjeras."
           icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - heading: "Mayores ingresos: "
-          text: "Trabajar como Desarrollador Front-End aumentará tus ingresos."
+        - heading: "Incremento de Ingresos: "
+          text: "El sector TI ofrece salarios competitivos y la posibilidad de ingresos crecientes."
           icon: "check" #string with icon for example ['check', 'cicle', etc]
 
+  - name: programs-fs-and-front
+    position: 1
+    background: "lightYellow"
+    layout: iconogram
+    swipable: True
+    heading:
+      text: "Descubre tu potencial en 4Geeks Academy"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      text: 'Programas para convertirte en un experto en programación y complementar tu perfil profesional'
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+      style: '{ "textAlign": "center", "width": "60%" }'
+    icons:
+      - icon: "fullstack" 
+        title: "Full-Stack Dev"
+        content: "Aprende a crear aplicaciones web completas, dominando tanto el frontend como el backend de un proyecto."
+
+      - icon: "fullstack_2"
+        title: "Frontend"
+        content: "Especialízate en el desarrollo de la interfaz de usuario con tecnologías como JavaSCript y React."
+
   - name: how-it-works
-    position: 3
+    position: 4
     background: "#E3F9FE !important"
     layout: iconogram
     swipable: True
@@ -193,7 +212,7 @@ components:
       text: "Aprende a tu ritmo y con la mejor atención"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     sub_heading:
-      text: 'El sector tecnológico está en constante crecimiento, lo que significa que las oportunidades laborales como desarrollador Front-End son infinitas.'
+      text: 'El sector tecnológico está en constante crecimiento, lo que significa que las oportunidades laborales como desarrollador web son infinitas.'
       font_size: ["16px", "16px", "16px", "16px", "16px"]
       style: '{ "textAlign": "center", "width": "60%" }'
     text_link: "/"
@@ -203,13 +222,13 @@ components:
         content: "En 4Geeks Academy, la inscripción a nuestro Bootcamp es sencilla y rápida. En pocos pasos, podrás iniciar tu camino hacia una transformación profesional sin igual."
       - icon: "graduation-2"
         title: "Clases personalizadas"
-        content: "Disfruta de una experiencia de aprendizaje personalizada con un ratio de profesor/alumno de 1 a 7. Recibe la atención individualizada que necesitas para convertirte en un experto en desarrollo Front-End."
+        content: "Disfruta de una experiencia de aprendizaje personalizada con un ratio de profesor/alumno de 1 a 7. Recibe la atención individualizada que necesitas para convertirte en un experto en desarrollo."
       - icon: "stairswflag"
         title: "Mentorías ilimitadas"
         content: "Contamos con un equipo de mentores apasionados por la enseñanza que te brindarán apoyo y acompañamiento durante todo tu proceso de aprendizaje. Tendrás acceso a mentorías ilimitadas, incluso después de graduarte, para que nunca te falte el impulso que necesitas para alcanzar tus metas."
 
   - name: geekinfo_2
-    position: 4
+    position: 5
     layout: two_column_right
     proportions: [6, 6]
     background: ""
@@ -221,7 +240,7 @@ components:
       text: ""
       style: '{ "font-size": "30px" }'
     heading:
-      text: "¿Por qué elegir nuestro bootcamp de desarrollo front-end?"
+      text: "¿Por qué elegir nuestro bootcamp de programación?"
       font_size: ["40px", "40px", "40px", "40px", "40px"]
     sub_heading:
       text: "Las características únicas de 4Geeks Academy"
@@ -238,14 +257,14 @@ components:
       path: ""
     bullets:
       items:
-        - heading: "De cero a Desarrollador"
-          text: "Ya sea que tengas o no conocimiento previo sobre programación, este punto no es limitante cualquier persona puede ingresar a la academia donde tendrá acceso a todas las herramientas para convertirse en todo un Front-End Developer."
+        - heading: "De Cero a Desarrollador"
+          text: "Sin importar tu nivel de experiencia previa, en 4Geeks Academy te proporcionamos todas las herramientas necesarias para convertirte en un desarrollador."
           icon: "circle" #string with icon for example ['check', 'cicle', etc]
         - heading: "Mentorías ilimitadas"
-          text: "Recibirás asesoramiento de carrera personalizado y apoyo en la búsqueda de empleo, con acceso ilimitado y de por vida a recursos y a una comunidad en la que estamos allí para impulsar tu éxito profesional."
+          text: "Accede a mentorías y asesoramiento de carrera personalizados de por vida. Nuestro compromiso es brindarte apoyo continuo en tu desarrollo profesional, ayudándote a alcanzar tus objetivos en el dinámico campo del desarrollo tecnológico."
           icon: "circle" #string with icon for example ['check', 'cicle', etc]
         - heading: "Tecnologías Demandadas"
-          text: "Nuestro Bootcamp está enfocado en las tecnologías más demandadas del mercado, lo que te da un sólido punto de partida para ingresar al mundo laboral."
+          text: "Nuestro bootcamp se centra en las tecnologías más solicitadas del mercado, como JavaScript y React, garantizando que tus competencias sean altamente valoradas por las empresas del sector TI."
           icon: "circle" #string with icon for example ['check', 'cicle', etc]
 
 
