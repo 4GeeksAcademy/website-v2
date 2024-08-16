@@ -74,53 +74,74 @@ overlaped:
     src: "/images/landing/tres-personas-reloaded.webp"  
 
 ## TWO COLUMNS INFO
+# two_columns_info:
+#   proportions: [6, 6]
+#   image:
+#     style: '{"backgroundSize": "contain" }'
+#     src: "/images/landing/grupo-ventanas.webp"
+#     shadow: false  
+#   heading:
+#     text: "Aprende a aplicar el Machine Learning a problemas del mundo real"
+#     font_size: ["30px", "30px", "30px", "30px", "30px"]
+#   sub_heading:
+#     text: "Nuestro bootcamp de data science está enfocado en brindar todas las herramientas y el apoyo necesario para que puedas triunfar en este campo."
+#     font_size: ["16px", "16px", "16px", "16px", "16px"]
+
 two_columns_info:
   proportions: [6, 6]
   image:
-    style: '{"backgroundSize": "contain" }'
+    style: '{"backgroundSize": "contain", "background-position": "center"}' 
+    shadow: false 
     src: "/images/landing/grupo-ventanas.webp"
-    shadow: false  
-  heading:
+  section_heading: 
     text: "Aprende a aplicar el Machine Learning a problemas del mundo real"
-    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  heading:
+    text: ""
+          #xl      lg     md     sm    xs
+    font_size: ["40px", "34px", "34px", "25px", "20px"]
   sub_heading:
+    style: '{}'
     text: "Nuestro bootcamp de data science está enfocado en brindar todas las herramientas y el apoyo necesario para que puedas triunfar en este campo."
-    font_size: ["16px", "16px", "16px", "16px", "16px"]
-
+    font_size: ["16px"]
+  content:
+    text: "Fidel Vera siempre tuvo una fascinación por el potencial de los datos. En 4Geeks Academy, encontró el trampolín perfecto para convertir su pasión en una carrera profesional exitosa. Nuestro bootcamp de Data Science le proporcionó las herramientas y el conocimiento necesarios para integrarse en este campo en la industria tech."
+  button:
+    text: "Comparar precios y planes"
+    path: "#prices_and_payment"
+    color: "white"
+    background: "black"
+    hover: "lightBlue"
   bullets:
-    items:
-    - heading: "Mentorías ilimitadas" 
+    items: 
+    - heading: "MENTORÍAS ILIMITADAS"
       text: "Obtén soporte experto para todas tus preguntas. Nuestros mentores están siempre disponibles en línea, listos para ayudarte desde el primer día hasta siempre."
-    - heading: "Proporción profesor estudiante 1:7" 
+    - heading: "PROPORCIÓN PROFESOR ESTUDIANTE 1:7"
       text: "Experimenta una atención perzonalizada con nuestra proporción profesor-alumno superior a la media."
-    - heading: "APOYO PROFESIONAL PERSONALIZADO" 
+    - heading: "APOYO PROFESIONAL PERSONALIZADO"
       text: "Recibe asesoramiento, orientación y formación ilimitados adaptados a tu perfil único y a tus ofertas de trabajo específicas."
 
-### Two Columns
 two_columns:
   proportions: [6, 6]
   image:
-    style: '{"border" : "3px solid black", "backgroundSize": "cover"}'
-    src: "/images/testimonials/jasmine-testimonial.webp"
-    shadow: true  
-  video: "https://www.youtube.com/watch?v=mSn16mIKQ2o"
+    style: '{ "border" : "3px solid black" }' 
+    shadow: true 
+    src: "../../../static/images/testimonials/fidel-vera-testimonio-ds.jpg"
+  video: "https://www.youtube.com/watch?v=zfLGOolXHWQ"
   heading:
-    text: "Experiencias de nuestros alumnos"
-    font_size: ["30px", "30px", "30px", "30px", "30px"]
-  sub_heading:
-    text: "Descubre por qué nuestro Bootcamp de Data Science es el mejor"
-    font_size: ["16px", "16px", "16px", "16px", "16px"]
+    text:
+      "Conoce una historia de transformación de uno de nuestros estudiantes"
+      #xl      lg     md     sm    xs
+    font_size: ["40px", "34px", "34px", "25px", "20px"]
+  content:
+    style: '{}'
+    text: "Fidel Vera siempre tuvo una fascinación por el potencial de los datos. En 4Geeks Academy, encontró el trampolín perfecto para convertir su pasión en una carrera profesional exitosa. Nuestro bootcamp de Data Science le proporcionó las herramientas y el conocimiento necesarios para integrarse en este campo en la industria tech."
+    font_size: ["16px"]
   button:
-    text: "Aplica ahora"
+    text: "Obtener Información"
+    path: "#top"
     color: "white"
     background: "black"
-    path: "#prices_and_payment"
-  bullets:
-    items: 
-    - text: "Un viaje de transformación en Data Science"
-    - text: "El ambiente de aprendizaje era colaborativo y estimulante, lo que me motivó a esforzarme por alcanzar mi máximo potencial."
-    - text: "El curso me enseñó todo lo que necesitaba saber para tener éxito en este campo, desde los fundamentos de la programación y las estadísticas hasta las técnicas de aprendizaje automático más avanzadas."
-
+    hover: "lightBlue"
 
 upcoming:
   no_dates_message: "Actualmente no hay próximas fechas para este programa"
