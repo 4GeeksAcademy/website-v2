@@ -133,9 +133,9 @@ const UpcomingDates = ({
       });
 
       const academyLocation = locations.find(
-        (loc) =>
-          loc.breathecode_location_slug === location ||
-          loc.breathecode_location_slug === academy?.value
+        ({ node }) =>
+          node.breathecode_location_slug === location ||
+          node.breathecode_location_slug === academy?.value
       );
 
       const cohorts =
