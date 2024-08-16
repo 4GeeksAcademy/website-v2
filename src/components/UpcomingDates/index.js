@@ -119,52 +119,68 @@ const UpcomingDates = ({
   const emailFormContent = content.email_form_content;
   const syllabusAlias = content.syllabus_alias;
 
-  useEffect(() => {
-    const getData = async () => {
-      try {
-        setIsLoading(true);
-        const academySlug =
-          session?.academyAliasDictionary?.[location] ||
-          location ||
-          academy?.value;
-        const response = await getCohorts({
-          academy: academySlug,
-          limit: 10,
-          syllabus_slug_like: defaultCourse || undefined,
-        });
+  const getData = async () => {
+    try {
+      setIsLoading(true);
+      const academySlug =
+        session?.academyAliasDictionary?.[location] ||
+        location ||
+        session?.academyAliasDictionary?.[academy?.value];
+      const response = await getCohorts({
+        academy: academySlug,
+        limit: 10,
+        syllabus_slug_like: defaultCourse || undefined,
+      });
 
-        const cohorts = response?.results || [];
-        cohorts.forEach((cohort) => {
-          const syllabus =
-            syllabusAlias.find(
-              (syll) => syll.default_course === defaultCourse
-            ) ||
-            syllabusAlias.find((syll) =>
-              cohort.syllabus_version.slug
-                .toLowerCase()
-                .includes(syll.default_course)
-            );
-
-          if (syllabus) {
-            cohort.syllabus_version.name = syllabus.name;
-            cohort.syllabus_version.courseSlug = syllabus.course_slug;
-            cohort.syllabus_version.duration = syllabus.duration;
+      const academyLocation = session.locations.find((loc) => loc.breathecode_location_slug === location || loc.breathecode_location_slug === academy?.value);
+      
+      const cohorts = response?.results.filter((elm) => {
+        if (Array.isArray(academyLocation?.meta_info.cohort_exclude_regex)) {
+          if (
+            academyLocation.meta_info.cohort_exclude_regex.some((regx) =>
+              RegExp(regx).test(elm.slug)
+            )
+          ) {
+            console.log(`removing ${elm.slug}`);
+            return false;
           }
-        });
+        }
+        return true;
+      }) || [];
 
-        setData((oldData) => ({
-          cohorts: {
-            catalog: oldData.cohorts.catalog,
-            all: cohorts,
-            filtered: cohorts,
-          },
-        }));
-        setIsLoading(false);
-      } catch (e) {
-        console.log(e);
-        setIsLoading(false);
-      }
-    };
+      cohorts.forEach((cohort) => {
+        const syllabus =
+          syllabusAlias.find(
+            (syll) => syll.default_course === defaultCourse
+          ) ||
+          syllabusAlias.find((syll) =>
+            cohort.syllabus_version.slug
+              .toLowerCase()
+              .includes(syll.default_course)
+          );
+
+        if (syllabus) {
+          cohort.syllabus_version.name = syllabus.name;
+          cohort.syllabus_version.courseSlug = syllabus.course_slug;
+          cohort.syllabus_version.duration = syllabus.duration;
+        }
+      });
+
+      setData((oldData) => ({
+        cohorts: {
+          catalog: oldData.cohorts.catalog,
+          all: cohorts,
+          filtered: cohorts,
+        },
+      }));
+      setIsLoading(false);
+    } catch (e) {
+      console.log(e);
+      setIsLoading(false);
+    }
+  };
+
+  useEffect(() => {
     if (session?.academyAliasDictionary) getData();
   }, [session, academy]);
 
