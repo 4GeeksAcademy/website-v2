@@ -132,7 +132,7 @@ const UpcomingDates = ({
         syllabus_slug_like: defaultCourse || undefined,
       });
 
-      const academyLocation = session.locations.find(
+      const academyLocation = locations.find(
         (loc) =>
           loc.breathecode_location_slug === location ||
           loc.breathecode_location_slug === academy?.value
@@ -140,9 +140,9 @@ const UpcomingDates = ({
 
       const cohorts =
         response?.results.filter((elm) => {
-          if (Array.isArray(academyLocation?.meta_info.cohort_exclude_regex)) {
+          if (Array.isArray(academyLocation?.node.meta_info.cohort_exclude_regex)) {
             if (
-              academyLocation.meta_info.cohort_exclude_regex.some((regx) =>
+              academyLocation.node.meta_info.cohort_exclude_regex.some((regx) =>
                 RegExp(regx).test(elm.slug)
               )
             ) {
