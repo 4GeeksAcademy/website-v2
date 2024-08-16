@@ -512,6 +512,8 @@ export const query = graphql`
             image
             keywords
             region
+            cohort_exclude_regex
+            cohort_include_regex
           }
           seo_title
           online_available
