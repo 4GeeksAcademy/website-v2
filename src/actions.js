@@ -373,7 +373,7 @@ export const getCohorts = async (_query = {}) => {
     never_ends: "false",
     sort: "kickoff_date",
     ..._query,
-    academy: _query.academy ? `online,${_query.academy}` : undefined,
+    academy: _query.academy ? `${_query.academy}` : undefined,
   };
   query = Object.keys(query)
     .filter((key) => query[key] && query[key] != undefined)
