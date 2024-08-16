@@ -140,7 +140,9 @@ const UpcomingDates = ({
 
       const cohorts =
         response?.results.filter((elm) => {
-          if (Array.isArray(academyLocation?.node.meta_info.cohort_exclude_regex)) {
+          if (
+            Array.isArray(academyLocation?.node.meta_info.cohort_exclude_regex)
+          ) {
             if (
               academyLocation.node.meta_info.cohort_exclude_regex.some((regx) =>
                 RegExp(regx).test(elm.slug)
