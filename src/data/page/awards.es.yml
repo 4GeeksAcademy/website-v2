@@ -19,6 +19,12 @@ awards_list:
   #   title: "Departamento de Education de EEUU"
   #   paragraph: "Los Estados Unidos de America se aseguran de la calidad de la educación a través de los departamentos de educación a nivel federal. Contar con la certificación significa que estamos comprometidos a cumplir con todas las regulaciones nacionales y estatales y a ser supervisados y auditados anualmente para asegurar el éxito de la academia."
 
+  - image: "../../../static/images/badges/fortune-logo.png"
+    title: "Excelencia en Educación para Hispanohablantes"
+    paragraph: "4Geeks Academy ha sido reconocida por Fortune como uno de los mejores bootcamps de programación para hispanohablantes, destacando su compromiso con una educación inclusiva y accesible."
+    link: "https://fortune.com/education/articles/best-software-engineering-bootcamps/#4Geeks-Academy"
+    text_link: "Ver sitio web"
+
   - image: "../../../static/images/badges/arp-logo-certification.png"
     title: "Institutional Quality Online Education"
     paragraph: "4Geeks Academy ha obtenido la certificación ARP, destacándose como líder en educación de programación en línea."
