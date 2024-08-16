@@ -360,7 +360,11 @@ export const landingSections = {
     const { background } = ratingReviews;
 
     return (
-      <Div background={Colors[background] || background} padding="0 20px" padding_tablet="0 40px">
+      <Div
+        background={Colors[background] || background}
+        padding="0 20px"
+        padding_tablet="0 40px"
+      >
         <Div
           key={index}
           padding="60px 0 60px 0"
