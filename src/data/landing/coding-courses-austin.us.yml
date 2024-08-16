@@ -42,9 +42,9 @@ apply_schollarship: # form that is displayed at the end of the landing
 # jumbotron on the top (cannot be commented out)
 header_data:
   background: "#ffecbf"
-  tagline: Enroll in Our Diverse Coding Courses in Austin at 4Geeks Academy
+  tagline: Coding Courses in Austin at 4Geeks Academy
   tagline_color: "#1b1b1b"
-  sub_heading: "Engage in highly interactive online learning with real-time, live-streamed classes that emulate in-person interactions. Receive comprehensive training remotely to become a Full-Stack Developer, Data Scientist, or Cybersecurity Specialist."
+  sub_heading: ""
   form_styles:
     background: "#faf2e1"
     button:
@@ -59,7 +59,7 @@ features:
   styles: '{ "fontSize": "20px", "margin": "10px 0px 0px 0px" }'
   bullets:
     - Become a Full-Stack Developer, Data Scientist, or Cybersecurity Specialist!
-    - Programs crafted to meet Austin's tech industry demands, enhancing your employability and readiness for tech roles
+    - Meet Austin's tech industry demands, get employability and readiness for tech roles
     - Unlimited Mentorship and lifetime access to career services
     - "Part-time: it’s immersive but with a flexible schedule, ideal for busy professionals and students"
 
@@ -92,8 +92,8 @@ short_badges:
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "Start Your Tech Journey with Austin Coding Courses"
-    text_mobile: "Start Your Tech Journey with Austin Coding Courses"
+    text: "Start Your Tech Journey in Austin\n with our Coding Courses"
+    text_mobile: "Start Your Tech Journey in Austin with our Coding Courses"
     # devices:   XL      LG    MD      SM    XS
     font_size: ["25px", "25px", "25px", "20px", "18px"]
   button:
@@ -140,7 +140,7 @@ why_python:
 
 geeks_vs_others:
   position: 7
-  heading: "How Austin Coding Courses Stand Out"
+  heading: "4Geeks Coding Coures vs Competitors"
   # sub_heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
   total_rows: 5
 
@@ -170,11 +170,11 @@ components:
       shadow: false
     # video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
     heading:
-      text: "Why Choose Our Austin Coding Courses?"
+      text: "Enroll in Our Diverse Coding Courses in Austin at 4Geeks Academy"
         #xl      lg     md     sm    xs
       font_size: ["40px", "34px", "34px", "25px", "20px"]
     sub_heading:
-      text: "4Geeks Academy is a leader in tech education, focusing on adaptive learning methods and student success. Our courses bridge theoretical knowledge with practical application, ensuring that our graduates are not just certified but truly qualified."
+      text: ""
     content:
       text: ""
       font_size: ["16px"]
@@ -184,16 +184,16 @@ components:
       color: white
       hover_color: "#white"
       path: "#leadform_header"
-    # bullets:
-    #   items:
-    #     - text: "UNLIMITED MENTORING"
-    #       icon: "check" #string with icon for example ['check', 'cicle', etc]
-    #     - text: "HIGH AVAILABILITY"
-    #       icon: "check" #string with icon for example ['check', 'cicle', etc]
-    #     - text: "1:7 PROFESSOR-STUDENT RATIO"
-    #       icon: "check" #string with icon for example ['check', 'cicle', etc]
-    #     - text: "TAILOR-MADE CAREER SUPPORT"
-    #       icon: "check" #string with icon for example ['check', 'cicle', etc]
+    bullets:
+      items:
+        - text: "All of our programs are freedom-oriented, with a strong focus on mentorship and consistent micro-feedback to empower students for a blended, flexible schedule and active and self-directed learning."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - text: "Our deep mentorship network allows students unlimited 1-1 mentorship sessions with 1 day or same-day availability, with 24/7 support channels for Q&A and real-time instant feedback from our internally developed AI."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - text: "Driven by numbers, KPIs, and a scientific approach, we make decisions and develop strategies based on data analysis and empirical evidence rather than intuition or personal experience."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - text: "All students, but especially underrepresented minorities, struggle believing they can make it into tech, building their confidence, and embracing mistakes (lots of them) as a part of learning. Students work on guided experiences under the same tools and environments they will use after they get employed."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
 
   - name: how-it-works-programs
     position: 2
@@ -233,10 +233,10 @@ components:
       text: ""
       style: '{ "font-size": "30px" }'
     heading:
-      text: "Why Should You Pursue Coding Courses in Austin?"
+      text: "Launch your tech career in Austin with our coding courses"
       font_size: ["40px", "40px", "40px", "40px", "40px"]
     sub_heading:
-      text: "Austin is not just the political capital of Texas; it's also a burgeoning tech hub. With a culture that fosters innovation and creativity, Austin is the perfect place to start your tech career. The city's growing tech sector promises ample opportunities for skilled professionals."
+      text: ""
       font_size: ["16px", "16px", "16px", "16px", "16px"]
     button:
       text: "Get More Info"
@@ -249,8 +249,23 @@ components:
       text: ""
       font_size: ["16px"]
       path: ""
-
-
+    bullets:
+      items:
+        - heading: "Tech Job Growth"
+          text: "Austin's tech industry accounted for 18.9% of all jobs in the region in 2023."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "Average Salary"
+          text: "Software developers in Austin earn around $108,000 per year, which is better than most US cities."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "Housing Costs"
+          text: "As of mid-2023, the median home price in Austin is approximately $550,000, which is still lower than in other similar tech hubs."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "Venture Capital"
+          text: "Austin-based startups raised over $5 billion in venture capital in 2023, which is almost the same as Boston and Seattle."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "Population Growth"
+          text: "Austin's population grew by nearly 33% from 2010 to 2023."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
 
   - name: some_id
     position: 6

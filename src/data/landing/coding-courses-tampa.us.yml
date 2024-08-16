@@ -130,7 +130,7 @@ rating_reviews:
 program_details:
   position: 3
   background: "#FFFFFF"
-  heading: "Full-Stack Development Program as Part of Our Coding Courses in Tampa"
+  heading: "Full-Stack Development Program as Part of Our Tampa Coding Courses"
   sub_heading: "Our Full-Stack Development program covers everything from the basics to advanced concepts."
 
 why_python:
@@ -140,7 +140,7 @@ why_python:
 
 geeks_vs_others:
   position: 7
-  heading: "Why Choose 4Geeks Academy for Coding Courses in Tampa?"
+  heading: "Compare us vs. other coding courses in Tampa"
   # sub_heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
   total_rows: 5
 
@@ -235,7 +235,7 @@ components:
       text: "Why Choose Tampa for Your Coding Courses?"
       font_size: ["40px", "40px", "40px", "40px", "40px"]
     sub_heading:
-      text: "Tampa is rapidly becoming a major tech hub with a vibrant community and numerous job opportunities. The city's tech job market is expected to grow by 27% by 2030, more than double the national average. With leading companies like Apple, Oracle, and Tech Data setting up offices here, Tampa offers an ideal environment for tech professionals to advance their careers."
+      text: ""
       font_size: ["16px", "16px", "16px", "16px", "16px"]
     button:
       text: "Get More Info"
@@ -248,8 +248,16 @@ components:
       text: ""
       font_size: ["16px"]
       path: ""
-
-
+    bullets:
+      items:
+        - text: "Tampa’s tech job market is projected to grow by 27% by 2030, significantly higher than the national "
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - text: "Leading companies like Apple, Oracle, and Tech Data have established offices in Tampa, creating numerous job opportunities."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - text: "Tampa offers competitive tech salaries while maintaining a lower cost of living compared to other major tech hubs."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - text: "Tampa combines professional opportunities with a desirable lifestyle, including a warm climate, beautiful beaches, and a vibrant cultural scene."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
 
   - name: some_id
     position: 6

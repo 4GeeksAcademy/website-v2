@@ -208,7 +208,7 @@ components:
     layout: iconogram
     swipable: True
     heading:
-      text: "Explore Our Coding Programs to Learn to Code Miami"
+      text: "Explore Our Coding Programs to Learn to Code in Miami"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     sub_heading:
       text: Designed to Prepare You for Success

@@ -56,12 +56,12 @@ features:
 
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 0px 0px" }'
-  text: Start Your Tech Career Today
+  text: 
   bullets:
     - Become a Full-Stack Developer, Data Scientist, or Cybersecurity Specialist!
     - Apply now and secure your future in Tampa's booming tech industry.
     - Unlimited Mentorship and Lifetime Access to Career Services
-    - "Part-time: it’s immersive but with a flexible schedule"
+    # - "Part-time: it’s immersive but with a flexible schedule"
 
 short_badges:
   - name: "Top Online Full-Stack Bootcamps Of 2024"

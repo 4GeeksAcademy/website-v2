@@ -42,9 +42,9 @@ apply_schollarship: # form that is displayed at the end of the landing
 # jumbotron on the top (cannot be commented out)
 header_data:
   background: "#ffffff"
-  tagline: Begin Your Tech Career with Our Coding Courses in Miami
+  tagline: Boost Your Career with Our Coding Courses in Miami
   tagline_color: "#1c1c1c"
-  sub_heading: "Step into the vibrant tech scene of Miami with our comprehensive coding courses at 4Geeks Academy. Whether you're looking to switch careers or enhance your existing tech skills, we provide the training you need to succeed."
+  sub_heading: ""
   form_styles:
     background: "#FFB718"
     button:
@@ -60,9 +60,9 @@ features:
   styles: '{ "fontSize": "20px", "margin": "10px 0px 0px 0px" }'
   bullets:
     - Become a Full-Stack Developer, Data Scientist, or Cybersecurity Specialist!
-    - Unlimited Mentorship and lifetime access to career services
-    - "Part-time: it’s immersive but with a flexible schedule, ideal for busy professionals and students"
-    - Miami is becoming a major center for tech startups and innovation, attracting global talent and entrepreneurs
+    - Enjoy unlimited mentorship and lifetime access to career services.
+    - Miami is emerging as a major hub for tech startups and innovation, drawing in global talent and entrepreneurs.
+    # - "Part-time: Immerse yourself in a flexible schedule, perfect for busy professionals and students."
 
 short_badges:
   - name: "Top Online Full-Stack Bootcamps Of 2024"
@@ -141,7 +141,7 @@ why_python:
 
 geeks_vs_others:
   position: 7
-  heading: "Unforgettable Reasons Why 4Geeks Coding Courses in Miami Shine"
+  heading: "Compare Our Miami Coding Courses vs. the Competition"
   # sub_heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
   total_rows: 5
 
@@ -175,7 +175,7 @@ components:
         #xl      lg     md     sm    xs
       font_size: ["40px", "34px", "34px", "25px", "20px"]
     sub_heading:
-      text: "Miami's technology sector is thriving and provides abundant opportunities for skilled professionals. Our coding courses in Miami offer a direct path to in-demand tech roles, providing you with the necessary skills and connecting you with local tech communities and startups."
+      text: ""
     content:
       text: ""
       font_size: ["16px"]
@@ -185,16 +185,16 @@ components:
       color: white
       hover_color: "#white"
       path: "#leadform_header"
-    # bullets:
-    #   items:
-    #     - text: "UNLIMITED MENTORING"
-    #       icon: "check" #string with icon for example ['check', 'cicle', etc]
-    #     - text: "HIGH AVAILABILITY"
-    #       icon: "check" #string with icon for example ['check', 'cicle', etc]
-    #     - text: "1:7 PROFESSOR-STUDENT RATIO"
-    #       icon: "check" #string with icon for example ['check', 'cicle', etc]
-    #     - text: "TAILOR-MADE CAREER SUPPORT"
-    #       icon: "check" #string with icon for example ['check', 'cicle', etc]
+    bullets:
+      items:
+        - text: "All of our programs are freedom-oriented, emphasizing mentorship and consistent micro-feedback to empower students in a blended, flexible schedule that fosters active and self-directed learning."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - text: "Our expansive mentorship network provides students with unlimited 1-on-1 sessions, available within one day or even the same day. Additionally, 24/7 support channels offer Q&A assistance and real-time instant feedback powered by our proprietary AI."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - text: "We are data-driven, making decisions and developing strategies based on key performance indicators (KPIs), data analysis, and empirical evidence, rather than relying on intuition or personal experience."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - text: "Many students, particularly those from underrepresented minorities, face challenges in believing they can succeed in tech. We help build their confidence and teach them to embrace mistakes (lots of them) as an integral part of learning. Students engage in guided experiences using the same tools and environments they will encounter in their future careers."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
 
   - name: how-it-works-programs
     position: 2
@@ -202,7 +202,7 @@ components:
     layout: iconogram
     swipable: True
     heading:
-      text: "Explore our wide range of coding courses offered in Miami!"
+      text: "Explore our coding courses in Miami!"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     sub_heading:
       text: ""
@@ -234,10 +234,10 @@ components:
       text: ""
       style: '{ "font-size": "30px" }'
     heading:
-      text: "Discover the Advantages of Joining Our Miami Coding Courses"
+      text: "Discover the Advantages of Joining Our Coding Courses in Miami"
       font_size: ["40px", "40px", "40px", "40px", "40px"]
     sub_heading:
-      text: "When you enroll in any of our coding courses in Miami, you gain more than just technical knowledge. Miami's strategic location offers unique opportunities for tech professionals, including access to international markets and a thriving local startup scene, which can boost your career growth potential."
+      text: ""
       font_size: ["16px", "16px", "16px", "16px", "16px"]
     button:
       text: "Get More Info"
@@ -250,8 +250,16 @@ components:
       text: ""
       font_size: ["16px"]
       path: ""
-
-
+    bullets:
+      items:
+        - text: "Miami's tech industry is booming, attracting over $1 billion in startup investments in recent years. This growth is creating thousands of well-paying tech jobs, with an average salary of $104,542."
+          icon: "circle" #string with icon for example ['check', 'cicle', etc]
+        - text: "Miami serves as a gateway to Latin America and the Caribbean, offering unique global networking and business expansion opportunities in a diverse, multicultural environment."
+          icon: "circle" #string with icon for example ['check', 'cicle', etc]
+        - text: "Compared to major tech cities like San Francisco, Miami offers a lower cost of living, making it easier for tech professionals to maintain a high quality of life."
+          icon: "circle" #string with icon for example ['check', 'cicle', etc]
+        - text: "The city's tech ecosystem is diverse, with career paths in software development, cybersecurity, data science, and more, supported by a thriving community and numerous industry events."
+          icon: "circle" #string with icon for example ['check', 'cicle', etc]
 
   - name: some_id
     position: 6
@@ -265,7 +273,7 @@ components:
         #xl      lg     md     sm    xs
       font_size: ["40px", "34px", "34px", "25px", "20px"]
     content:
-      text: "Meet Melissa, the Campus Manager at 4Geeks Academy Miami. In this video, Melissa highlights the dedication of our team to support students in South Florida. We collaborate with various partners such as Miami Tech Works, United Way Miami, and Clark University to ensure that both full and partial scholarships are readily available for residents of Miami-Dade and Broward counties. As a bootcamp rooted in Miami, it's our priority to make these opportunities accessible to residents. If you’re interested in taking advantage of these scholarships and kickstarting your career in tech, contact our admissions team today. Melissa and the rest of our dedicated staff are here to help you every step of the way."
+      text: "Meet Melissa, the Campus Manager at 4Geeks Academy Miami. In this video, Melissa shares how our team is committed to supporting students throughout South Florida. We partner with organizations like Miami Tech Works, United Way Miami, and Clark University to provide full and partial scholarships for Miami-Dade and Broward county residents. As a bootcamp deeply rooted in Miami, we prioritize making these opportunities accessible to our community. If you’re ready to take advantage of these scholarships and launch your tech career, contact our admissions team today. Melissa and our dedicated staff are here to guide you every step of the way."
       font_size: ["16px"]
     button:
       text: "Get More Info"
