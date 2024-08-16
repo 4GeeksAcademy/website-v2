@@ -132,27 +132,30 @@ const UpcomingDates = ({
         syllabus_slug_like: defaultCourse || undefined,
       });
 
-      const academyLocation = session.locations.find((loc) => loc.breathecode_location_slug === location || loc.breathecode_location_slug === academy?.value);
-      
-      const cohorts = response?.results.filter((elm) => {
-        if (Array.isArray(academyLocation?.meta_info.cohort_exclude_regex)) {
-          if (
-            academyLocation.meta_info.cohort_exclude_regex.some((regx) =>
-              RegExp(regx).test(elm.slug)
-            )
-          ) {
-            console.log(`removing ${elm.slug}`);
-            return false;
+      const academyLocation = session.locations.find(
+        (loc) =>
+          loc.breathecode_location_slug === location ||
+          loc.breathecode_location_slug === academy?.value
+      );
+
+      const cohorts =
+        response?.results.filter((elm) => {
+          if (Array.isArray(academyLocation?.meta_info.cohort_exclude_regex)) {
+            if (
+              academyLocation.meta_info.cohort_exclude_regex.some((regx) =>
+                RegExp(regx).test(elm.slug)
+              )
+            ) {
+              console.log(`removing ${elm.slug}`);
+              return false;
+            }
           }
-        }
-        return true;
-      }) || [];
+          return true;
+        }) || [];
 
       cohorts.forEach((cohort) => {
         const syllabus =
-          syllabusAlias.find(
-            (syll) => syll.default_course === defaultCourse
-          ) ||
+          syllabusAlias.find((syll) => syll.default_course === defaultCourse) ||
           syllabusAlias.find((syll) =>
             cohort.syllabus_version.slug
               .toLowerCase()
