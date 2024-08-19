@@ -201,6 +201,7 @@ details:
 
   heading: DETALLES DEL PROGRAMA
   weeks: 14
+  week_unit: "sem"
   facts:
     - label: "Duración"
       value: "14 semanas"
