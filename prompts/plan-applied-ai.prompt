@@ -1,6 +1,15 @@
-Spain: Pay upfront and get a discount. Price: €3000.
-Europe: Pay upfront and get a discount. Price: €3000.
-Chile: Pay upfront and get a discount. Price: 700.000 CLP.
-Chile: Tailor-made financing, limited seats. Price: Starting from 58.000 CLP
-LATAM: Pay upfront and save $500. Price: USD $1.399
-stop
+Spain:
+- Pay upfront and get a discount. Price: €3000. Discount up to €500.
+- Pay with various payment methods. Icons: Visa/Mastercard, Bitcoin, Ethereum. stop
+
+Europe:
+- Pay upfront and get a discount. Price: €3000. Discount up to €500.
+- Pay with various payment methods. Icons: Visa/Mastercard, Bitcoin, Ethereum. stop
+
+Chile:
+- Pay upfront and get a discount. Price: 700.000 CLP. Discount of 300.000 CLP.
+- Limited seats available for financed option. Starting from 58.000 CLP with tailor-made financing. stop
+
+LATAM:
+- Pay upfront and save $500. Price: USD $1.399. 44% off from USD $2.500.
+- If not satisfied, contact for other options. Icons: Visa/Mastercard. stop
