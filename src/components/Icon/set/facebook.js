@@ -1,12 +1,20 @@
 import React from "react";
 export default (props) => (
-  <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
-  width="20pt" height="20pt" viewBox="0 0 512.000000 512.000000"
-  preserveAspectRatio="xMidYMid meet">
-
-    <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
-    fill="#000000" stroke="none">
-    <path d="M572 5109 c-279 -47 -519 -292 -562 -575 -7 -47 -10 -687 -8 -2019
+  <svg
+    version="1.0"
+    xmlns="http://www.w3.org/2000/svg"
+    width="20pt"
+    height="20pt"
+    viewBox="0 0 512.000000 512.000000"
+    preserveAspectRatio="xMidYMid meet"
+  >
+    <g
+      transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+      fill="#000000"
+      stroke="none"
+    >
+      <path
+        d="M572 5109 c-279 -47 -519 -292 -562 -575 -7 -47 -10 -687 -8 -2019
     l3 -1950 28 -80 c79 -223 229 -373 452 -452 l80 -28 1995 0 1995 0 80 28 c231
     82 390 248 462 482 17 57 18 148 18 2050 l0 1990 -28 80 c-79 223 -229 373
     -452 452 l-80 28 -1965 1 c-1109 1 -1988 -2 -2018 -7z m2753 -974 l25 -24 0
@@ -16,7 +24,8 @@ export default (props) => (
     -670 -20 -690 -19 -19 -33 -20 -275 -20 -242 0 -256 1 -275 20 -20 20 -20 33
     -20 690 l0 670 -186 0 -186 0 -29 29 -29 29 0 255 0 255 31 26 c30 26 31 26
     215 26 l184 0 0 238 c0 340 16 448 92 602 74 152 225 277 393 325 96 28 146
-    32 398 34 l238 1 24 -25z"/>
+    32 398 34 l238 1 24 -25z"
+      />
     </g>
   </svg>
 );
