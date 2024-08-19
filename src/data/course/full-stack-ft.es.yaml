@@ -138,6 +138,7 @@ details:
           
   heading: DETALLES DEL PROGRAMA FULL-TIME
   weeks: 10
+  week_unit: "sem"
   sub_heading: "Proyectos de la vida real y exactamente lo que buscan las empresas"
   left_labels:
     description: "DESCRIPCIÓN:"
