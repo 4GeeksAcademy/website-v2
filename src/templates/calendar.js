@@ -20,7 +20,8 @@ const Calendar = (props) => {
   const [datas, setData] = useState({
     events: { catalog: [], all: [], filtered: [] },
   });
-  const GATSBY_WHITE_LABEL_ACADEMY = process.env.GATSBY_WHITE_LABEL_ACADEMY || '';
+  const GATSBY_WHITE_LABEL_ACADEMY =
+    process.env.GATSBY_WHITE_LABEL_ACADEMY || "";
   let content = data.allPageYaml.edges[0].node;
 
   useEffect(() => {
@@ -461,6 +462,8 @@ export const query = graphql`
             keywords
             redirects
             region
+            cohort_exclude_regex
+            cohort_include_regex
           }
           header {
             sub_heading

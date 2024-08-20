@@ -975,6 +975,8 @@ export const query = graphql`
             visibility
             keywords
             redirects
+            cohort_exclude_regex
+            cohort_include_regex
           }
           header {
             sub_heading
