@@ -44,8 +44,8 @@ button:
   syllabus_motivation: "En 2 min. recibirás en tu buzón de correo un PDF con información muy detallada sobre nuestra metodología, tecnologías, financiación e información del curso."
   apply_button_link: "/es/aplica"
   apply_button_text: "Aplicar"
-  
-course_instructors: 
+
+course_instructors:
   header:
     title: "Conoce a nuestros instructores"
     paragraph: ""
@@ -70,10 +70,10 @@ overlaped:
   paragraph: "Nuestros programa está basado en el uso de Phyton y JavaScript. La razón? En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails. Python tiene 10 veces más trabajos que node.js. Otras herramientas que también aprenderás a usar en nuestro programa: son GitHub, CSS3, HTML5, Flask, etc."
   button:
     text: "Aplicar"
-    color: "blue"  
+    color: "blue"
     link: "/"
   image:
-    src: "/images/landing/tres-personas-reloaded.webp"  
+    src: "/images/landing/tres-personas-reloaded.webp"
 
 ## TWO COLUMNS
 # two_columns:
@@ -81,7 +81,7 @@ overlaped:
 #   image:
 #     style: '{"border" : "3px solid black", "backgroundSize": "contain" }'
 #     src: "/static/images/staff/luisa.png"
-#     shadow: true  
+#     shadow: true
 #   video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
 #   heading:
 #     text: "4Geeks Academy and a story full of opportunities"
@@ -95,56 +95,57 @@ overlaped:
 #     background: "black"
 #     path: "#prices_and_payment"
 #   bullets:
-#     items: 
+#     items:
 #     - text: "There is always a full or partial scholarship open"
 #     - text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
 #     - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade County and many more."
-
 
 badges:
   paragraph: "4Geeks Academy es el lugar idóneo para <a href='/es/curso-de-programacion-desde-cero'>aprender a programar desde cero</a>. Estamos avalados y autorizados por el Departamento de Educación de Florida y hemos sido reconocidos como el mejor de Miami, según SwitchUp y de los 10 mejores cursos de programación, según Newsweek. En España, hemos recibido el Premio Excelencia Educativa durante dos años consecutivos. Y a nivel global formamos parte del top 35 de cursos de programación en el mundo."
 
 upcoming:
-  no_dates_message: "Actualmente no hay próximas fechas para este programa"  
+  no_dates_message: "Actualmente no hay próximas fechas para este programa"
   actionMessage: "Avísame cuando haya fechas disponibles"
 
 credentials:
   heading: "RESULTADOS"
   paragraph: "Nuestros números hablan por sí solos"
+
 ## PROGRAM DETAILS
 details:
   about:
-      title: "Acerca del programa"
-      sub_title: |
-        En este Bootcamp te desarrollarás desde cero como Full Stack Developer.
-        Aprenderás a crear un sitio web sumergiéndote en las mejores prácticas del       
-        diseño web responsive, trabajando con diversos lenguajes. Obtendrás una       
-        sólida base de frontend, backend, base de datos, manejo de procesos       
-        distribuidos y despliegue en plataformas web. <br>
-        Al finalizar este programa, contarás con los conocimientos para       
-        incorporarte al sector tecnológico como <strong style='font-weight: 700'>Full Stack Developer</strong>. 
-    
-      list:
-        - label: "Duración"
-          content:  "18 semanas"
-          icon: "calendar"
-        - label: "Clases"
-          content: "3 Clases semanales"
-          icon: "book"
-        - label: "Certificado"
-          content: "Nuestros certificados son  reconocidos por múltiples instituciones."
-          link_text: "Ver certificado"
-          link: "https://certificate.breatheco.de/4ae7a46bba78dc19b823e124fea120c17b45e044"
-          icon: "certificate"
-        - label: "Requisitos"
-          content: "Tan solo necesitas un ordenador y una conexión a internet"
-          icon: "contract-checked"
-        - label: "Idioma"
-          content: "Puedes elegir entre inglés y español para consumir el plan de estudios y el contenido. Las clases se imparten en el idioma oficial de tú campus."
-          icon: "contract-checked"
-          
+    title: "Acerca del programa"
+    sub_title: |
+      En este Bootcamp te desarrollarás desde cero como Full Stack Developer.
+      Aprenderás a crear un sitio web sumergiéndote en las mejores prácticas del       
+      diseño web responsive, trabajando con diversos lenguajes. Obtendrás una       
+      sólida base de frontend, backend, base de datos, manejo de procesos       
+      distribuidos y despliegue en plataformas web. <br>
+      Al finalizar este programa, contarás con los conocimientos para       
+      incorporarte al sector tecnológico como <strong style='font-weight: 700'>Full Stack Developer</strong>.
+
+    list:
+      - label: "Duración"
+        content: "18 semanas"
+        icon: "calendar"
+      - label: "Clases"
+        content: "3 Clases semanales"
+        icon: "book"
+      - label: "Certificado"
+        content: "Nuestros certificados son  reconocidos por múltiples instituciones."
+        link_text: "Ver certificado"
+        link: "https://certificate.breatheco.de/4ae7a46bba78dc19b823e124fea120c17b45e044"
+        icon: "certificate"
+      - label: "Requisitos"
+        content: "Tan solo necesitas un ordenador y una conexión a internet"
+        icon: "contract-checked"
+      - label: "Idioma"
+        content: "Puedes elegir entre inglés y español para consumir el plan de estudios y el contenido. Las clases se imparten en el idioma oficial de tú campus."
+        icon: "contract-checked"
+
   heading: DETALLES DEL PROGRAMA PART-TIME
   weeks: 18
+  week_unit: "sem"
   sub_heading: "Proyectos de la vida real y exactamente lo que buscan las empresas"
   left_labels:
     description: "DESCRIPCION:"
@@ -246,8 +247,9 @@ prices:
 ## ALUMNI SECTION
 alumni:
   heading: "Conoce a los graduados y sus proyectos"
-  sub_heading: "La última fase del curso debes construir un proyecto final que tú mismo escogerás, 
-    puede ser un emprendimiento o trabajarás directamente en un proyecto de la vida real en 
+  sub_heading:
+    "La última fase del curso debes construir un proyecto final que tú mismo escogerás,
+    puede ser un emprendimiento o trabajarás directamente en un proyecto de la vida real en
     colaboración con nuestros hiring partners."
 
 ## SIDEBAR

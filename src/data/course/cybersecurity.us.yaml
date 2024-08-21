@@ -198,6 +198,7 @@ details:
 
   heading: PROGRAM DETAILS
   weeks: 14
+  week_unit: "wks"
   facts:
     - label: "Duration"
       value: "16 weeks"

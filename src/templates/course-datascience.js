@@ -455,6 +455,8 @@ export const query = graphql`
             }
             heading
             sub_heading
+            weeks
+            week_unit
             facts {
               value
               label

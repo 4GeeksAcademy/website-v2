@@ -1003,6 +1003,7 @@ export const query = graphql`
               }
             }
             weeks
+            week_unit
             sub_heading
             left_labels {
               description

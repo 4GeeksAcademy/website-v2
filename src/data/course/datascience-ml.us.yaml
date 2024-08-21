@@ -171,6 +171,7 @@ details:
           
   heading: Data Science and Machine Learning Syllabus
   weeks: 16
+  week_unit: "wk"
   weeks_label: "weeks"
   facts:
     - label: "Duration"
