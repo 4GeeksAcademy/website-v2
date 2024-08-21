@@ -274,7 +274,7 @@ components:
     video: "https://www.youtube.com/watch?v=O9PkI92BAlk"
     heading:
       text:
-        "Learn to code in Tampa and listen to Marcelo."
+        "Learn to code in Tampa Highligts from Marcelo"
         #xl      lg     md     sm    xs
       font_size: ["40px", "34px", "34px", "25px", "20px"]
     content:
