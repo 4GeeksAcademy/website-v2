@@ -48,8 +48,8 @@ two_column_carousel:
   videos:
     - src: "/images/landing/alissa-video.webp"
       video: "EcqasocRKHo"
-    - src: "/images/landing/alissa-video.webp"
-      video: "EcqasocRKHo"
+    # - src: "/images/landing/alissa-video.webp"
+    #   video: "EcqasocRKHo"
 
 ## CHOOSE YOUR PROGRAM /components/ChooseYourProgram
 choose_program:

@@ -1,0 +1,210 @@
+meta_info:
+  slug: coding-introduction
+  title: "Coding Introduction Course by 4Geeks Academy, Master the Basics of Web Development"
+  bc_slug: "coding-introduction"
+  template: "course-code-introduction"
+  description: "Start your journey in web development with our Coding Introduction Course. Learn the basics of HTML, CSS, and JS. Enroll now and begin coding!"
+  image: "/images/og-preview/full-stack.us.png"
+  visibility: "visible"
+  keywords: ""
+  show_in_apply: true
+  related_clusters: ["full-stack-developer"]
+  redirects: []
+
+apply_form:
+  label: Coding Introduction
+
+seo_title: "Coding Introduction Course"
+
+header:
+  title: "Introduction to Coding"
+  image: "../../../static/images/bg/program-bg.png"
+  image_alt: "begin-your-journey-as-a-developer"
+  paragraph: "Embark on your web development career with our Coding Introduction. Learn HTML, CSS, and JavaScript, and get ready to build interactive and responsive websites in just weeks!"
+
+button:
+  syllabus_heading: "Download Syllabus"
+  syllabus_btn_label: "Instant Download"
+  syllabus_motivation: "Get it in just a few seconds"
+  apply_button_text: "Apply now"
+  apply_button_link: "/us/apply"
+
+course_instructors:
+  header:
+    title: "Meet our instructors"
+    paragraph: ""
+
+  instructors:
+    # - name: "Roldolfo Campos"
+    #   sub_title: "Co fundador de 4geeks y director de educación"
+    #   image: "../../../static/images/instructors/example.png"
+    #   bio: "Currently working as a Senior Solutions Architect at VMware, Rodolfo Campos is a Software Engineer with 17 years of experience in Linux, Java, SQL, Blockchain, etc. Master in Computer Science and passionate about Big Data and Entrepreneurship."
+    #   github: ""
+    #   linkedin: "https://www.linkedin.com/"
+
+    # - name: "Gabriel Salinas"
+    #   sub_title: "Sophisticated Software Systems Engineer"
+    #   image: "../../../static/images/instructors/example.png"
+    #   bio: "Currently working as a Senior Solutions Architect at VMware"
+    #   github: ""
+    #   linkedin: "https://www.linkedin.com/"
+
+partners:
+  limit: 4
+  heading: "Our Industry Connections"
+  sub_heading: "Our students are supported by a network of partners and potential employers who recognize the quality of our introductory coding curriculum."
+
+overlaped:
+  heading: "How Prework Prepares You for a Booming Job Market"
+  paragraph: "The prework phase of our coding bootcamp is designed to prepare you for a successful career in full-stack development by introducing foundational skills in HTML, CSS, and JavaScript. <br><br> The field of web development and digital design is expected to grow rapidly at 16% from 2022 to 2032, creating about 19,000 job openings annually."
+  button:
+    text: "LEARN MORE"
+    color: "blue"
+    link: "/"
+  image:
+    src: "/images/landing/tres-personas-reloaded.webp"
+
+two_columns_info:
+  proportions: [6, 6]
+  image:
+    style: '{"backgroundSize": "contain" }'
+    src: "../../images/landing/blonde-girl-laptop.png"
+    shadow: false
+  heading:
+    text: "Transforming Lives through Tech Education"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "At 4Geeks Academy, we empower individuals with top-tier tech education and career support, preparing them for success in today's tech-driven world."
+    font_size: ["16px", "16px", "16px", "16px", "16px"]
+  # button:
+  #   text: "Apply now"
+  #   color: "white"
+  #   background: "black"
+  #   path: "#prices_and_payment"
+  bullets:
+    items:
+      - heading: "Foundational Knowledge"
+        text: "The pre-work covers essential concepts and skills that will prepare you for the immersive learning experience."
+      - heading: "Self-Paced Learning"
+        text: "You can complete the pre-work at your own pace, allowing you to balance it with your other commitments."
+      - heading: "Access to Resources"
+        text: "You’ll have access to a variety of resources, including tutorials and exercises, to help you grasp the material effectively."
+
+
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "3px solid black", "backgroundSize": "contain" }'
+    src: "/static/images/staff/hernan-new.webp"
+    shadow: true
+  video: "ln3bQsV1BaQ"
+  heading:
+    text: "Real Success Stories from Our Alumni"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "Listen to our graduates sharing their experiences about how 4Geeks Academy has transformed their careers and lives. The video features a former student who went from various odd jobs to a rewarding career in tech. Despite having no prior background in technology, he discovered his passion through our comprehensive training and supportive learning environment. His story confirms the effectiveness of our approach, which not only focuses on technical skills but also provides job placement support, leading to multiple job offers."
+    font_size: ["16px", "16px", "16px", "16px", "16px"]
+  button:
+    text: "Apply now"
+    color: "white"
+    background: "black"
+    path: "#prices_and_payment"
+  # bullets:
+  #   items:
+  #     - text: "Scholarship opportunities are always available"
+  #     - text: "Expanding opportunities across Miami-Dade County, Broward, and Palm Beach"
+badges:
+  paragraph: "Start your coding journey at 4Geeks Academy, recognized for excellence in tech education. Our Coding Introduction course sets a solid foundation, preparing you for more advanced studies in web development."
+
+upcoming:
+  no_dates_message: "No upcoming dates for this program are currently available"
+  actionMessage: "Notify me when dates become available"
+credentials:
+  heading: "This Program By The Numbers"
+  paragraph: "Our results speak for themselves"
+
+## PROGRAM DETAILS
+details:
+  about:
+    title: "About the Coding Introduction Program"
+    sub_title: "This program introduces you to the fundamentals of coding, focusing on the three pillars of web development: HTML, CSS, and JavaScript. Learn through practical, hands-on projects and prepare to take the next steps in the tech industry."
+    list:
+      - label: "Duration"
+        content: "9 Weeks"
+        icon: "calendar"
+      - label: "Classes"
+        content: "Online"
+        icon: "book"
+      - label: "Requisites"
+        content: "No previous coding skills required."
+        icon: "contract-checked"
+      - label: "Language"
+        content: "English and Spanish"
+        icon: "contract-checked"
+
+  heading: "Lay the foundations to master HTML, CSS and JS"
+  weeks: 9
+  sub_heading: "Hands-on learning through real-life projects."
+  left_labels:
+    description: "DESCRIPTION:"
+    projects: "PROJECTS:"
+    duration: "DURATION:"
+    skills: "Skills / Weeks:"
+  details_modules:
+    - module_name: "CODING BASICS"
+      title: "Introduction to Web Development"
+      description: "Start your web development journey with this foundational module. Learn HTML for creating web pages and CSS for styling. Gain a solid understanding of these fundamental technologies to prepare for more advanced topics in web development"
+      projects: "Engage in practical projects to apply HTML skills, build web pages, and use CSS for visually appealing and responsive web design."
+      slug: "coding-basics"
+      duration: "12 modules"
+      step: 1
+    - module_name: "YOUR FIRST WEBSITE"
+      title: "Build Your First Website"
+      description: "Use your HTML and CSS skills to build your first website. This module focuses on applying HTML for content structure, CSS for styling, and essential debugging techniques. You'll learn to debug HTML and CSS code to solve common issues in web development. The module culminates in a project to design and create a digital postcard, reinforcing your ability to craft interactive and visually appealing web designs."
+      projects: "Design and build a digital postcard using HTML and CSS, applying debugging skills to ensure functionality and aesthetic appeal."
+      slug: "your-first-website"
+      duration: "3 modules"
+      step: 1
+    - module_name: "BUILD LAYOUTS"
+      title: "Mastering Layouts"
+      description: "Learn to master CSS layouts with a focus on box models, flexbox, and CSS Grid. Enhance your ability to manipulate and style HTML elements using CSS selectors. Gain hands-on experience with readings, exercises, and a project to create functional and visually appealing layouts, reinforcing your understanding of web architecture."
+      projects: "Create a project to design a basic Instagram photo feed using HTML and CSS. Implement advanced layout techniques and CSS selectors covered in the module."
+      slug: "build-layouts"
+      duration: "5 modules"
+      step: 1
+    - module_name: "START JAVASCRIPT"
+      title: "Introduction to JavaScript"
+      description: "Discover JavaScript, the language that adds interactivity to web pages. Learn essentials like variables, conditionals, arrays, and functions. Manipulate HTML and CSS with JavaScript to update content based on user interactions. Each session enhances your understanding, preparing you to create responsive web applications."
+      projects: "Apply your JavaScript skills to create an Excuse Generator, a practical project where you'll implement various programming concepts learned to generate random excuses on user command."
+      slug: "start-javascript"
+      duration: "6 modules"
+      step: 3
+    - module_name: "MASTER JAVASCRIPT"
+      title: "Master JavaScript"
+      description: "The final section of our prework course is intended to strengthen and enhance your JavaScript skills through thorough practice. As you get ready to move into more advanced development positions, this particular exercise challenges you to improve your coding techniques, tackle difficult problems, and strengthen your grasp of JavaScript in readiness for the next stage of your coding education."
+      projects: "Engage in 'More Practicing JS'—a comprehensive exercise that challenges you to apply all the JavaScript skills you've learned in a series of intricate coding tasks. This final project is aimed at enhancing your problem-solving abilities and ensuring you have a robust grasp of JavaScript essentials."
+      slug: "master-javascript"
+      duration: "1 activity"
+      step: 3
+prices:
+  heading: "Course Pricing and Payment Options"
+  sub_heading: "Affordable learning options to start your coding journey"
+  selector:
+    top_label: Location
+    placeholder: Select a location
+  button:
+    text: "View Pricing"
+    link: ""
+
+## ALUMNI SECTION
+alumni:
+  heading: "Meet Our Alumni and Their Projects"
+  sub_heading: "The last phase of the course you must build a final project that you will choose yourself, it can be an undertaking or you will work directly on a real life project in collaboration with our hiring partners"
+
+## SIDEBAR
+sidebar:
+  membership: "MEMBERSHIPS"
+  program: "PROGRAM"
+  geeks_vs_other: "4GEEKS vs OTHERS"
+  pricing: "PRICING"
+  alumni: "THE ALUMNI"
