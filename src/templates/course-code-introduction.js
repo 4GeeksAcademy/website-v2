@@ -1,24 +1,23 @@
 import React, { useEffect, useState } from "react";
 import { Link, graphql } from "gatsby";
-import BaseRender from "./_baseLayout";
-import { Header, Div } from "../components/Sections";
-import { Button, Colors, Img } from "../components/Styling";
-import { requestSyllabus, isCustomBarActive } from "../actions";
-import { SessionContext } from "../session";
-import ProgramDetails from "../components/ProgramDetails";
-import ProgramDetailsMobile from "../components/ProgramDetailsMobile";
-import PricesAndPayment from "../components/PricesAndPayment";
-import Modal from "../components/Modal";
-import LeadForm from "../components/LeadForm";
-import Badges from "../components/Badges";
-import UpcomingDates from "../components/UpcomingDates";
-import JobGuaranteeSmall from "../components/JobGuaranteeSmall";
-import GeeksInfo from "../components/GeeksInfo";
-import OurPartners from "../components/OurPartners";
-import Icon from "../components/Icon";
-import Overlaped from "../components/Overlaped";
-import Loc from "../components/Loc";
-import ScholarshipProjects from "../components/ScholarshipProjects";
+import BaseRender from "./_baseLayout.js";
+import { Header, Div } from "../components/Sections/index.js";
+import { Button, Colors, Img } from "../components/Styling/index.js";
+import { requestSyllabus, isCustomBarActive } from "../actions.js";
+import { SessionContext } from "../session.js";
+import ProgramDetails from "../components/ProgramDetails/index.js";
+import ProgramDetailsMobile from "../components/ProgramDetailsMobile/index.js";
+import PricesAndPayment from "../components/PricesAndPayment/index.js";
+import Modal from "../components/Modal/index.js";
+import LeadForm from "../components/LeadForm/index.js";
+import Badges from "../components/Badges/index.js";
+import UpcomingDates from "../components/UpcomingDates/index.js";
+import JobGuaranteeSmall from "../components/JobGuaranteeSmall/index.js";
+import OurPartners from "../components/OurPartners/index.js";
+import Icon from "../components/Icon/index.js";
+import Overlaped from "../components/Overlaped/index.js";
+import Loc from "../components/Loc/index.js";
+import ScholarshipProjects from "../components/ScholarshipProjects/index.js";
 import TwoColumn from "../components/TwoColumn/index.js";
 
 const Program = ({ data, pageContext, yml }) => {
@@ -28,7 +27,7 @@ const Program = ({ data, pageContext, yml }) => {
   const hiring = data.allPartnerYaml.edges[0].node;
   const landingHiring = yml.partners;
 
-  const defaultCourse = "full-stack";
+  const defaultCourse = "coding-introduction";
   const program_schedule = yml.meta_info.slug.includes("full-time")
     ? "full_time"
     : "part_time";
@@ -176,9 +175,9 @@ const Program = ({ data, pageContext, yml }) => {
           paragraph={yml.badges.paragraph}
         />
       </Header>
-      <JobGuaranteeSmall
+      {/* <JobGuaranteeSmall
         content={data.allJobGuaranteeSmallYaml.edges[0].node}
-      />
+      /> */}
       <ProgramDetails
         details={courseDetails.details}
         lang={pageContext.lang}
@@ -199,7 +198,21 @@ const Program = ({ data, pageContext, yml }) => {
       />
 
       {/* GEEKSINFO IS A TWOCOLUMN WITH TITLE */}
-      <GeeksInfo lang={pageContext.lang} />
+      {/* <GeeksInfo lang={pageContext.lang} /> */}
+
+      {/* TWO COLUMN CREAR EN EL YML*/}
+      <TwoColumn
+        right={{ image: yml.two_columns_info?.image }}
+        left={{
+          heading: yml.two_columns_info?.heading,
+          sub_heading: yml.two_columns_info?.sub_heading,
+          bullets: yml.two_columns_info?.bullets,
+          content: yml.two_columns_info?.content,
+          button: yml.two_columns_info?.button,
+        }}
+        proportions={yml.two_columns_info?.proportions}
+        session={session}
+      />
 
       {/* TWO COLUMN CREAR EN EL YML*/}
       <TwoColumn
@@ -215,14 +228,14 @@ const Program = ({ data, pageContext, yml }) => {
         session={session}
       />
 
-      <UpcomingDates
+      {/* <UpcomingDates
         lang={pageContext.lang}
         message={courseDetails.upcoming.no_dates_message}
         actionMessage={courseDetails.upcoming.actionMessage}
         locations={data.allLocationYaml.edges}
         showMoreRedirect
-      />
-      <PricesAndPayment
+      /> */}
+      {/* <PricesAndPayment
         background={`linear-gradient(to bottom, ${Colors.white} 50%, ${Colors.lightYellow2} 50%)`}
         type={pageContext.slug}
         lang={pageContext.lang}
@@ -231,7 +244,7 @@ const Program = ({ data, pageContext, yml }) => {
         defaultSchedule={program_schedule}
         title={yml.prices.heading}
         paragraph={yml.prices.sub_heading}
-      />
+      /> */}
 
       <ScholarshipProjects
         content={data.allScholarshipProjectsYaml.edges[0].node}
@@ -390,7 +403,6 @@ export const query = graphql`
             }
             heading
             weeks
-            week_unit
             sub_heading
             left_labels {
               description
@@ -437,6 +449,29 @@ export const query = graphql`
             }
             image {
               src
+            }
+          }
+          two_columns_info {
+            proportions
+            image {
+              style
+              src
+              shadow
+            }
+            heading {
+              text
+              font_size
+            }
+            sub_heading {
+              text
+              font_size
+            }
+
+            bullets {
+              items {
+                heading
+                text
+              }
             }
           }
           two_columns {
@@ -738,8 +773,6 @@ export const query = graphql`
             keywords
             redirects
             region
-            cohort_exclude_regex
-            cohort_include_regex
           }
           header {
             sub_heading

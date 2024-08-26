@@ -120,6 +120,7 @@ details:
           
   heading: DETALLES DEL PROGRAMA A TU PROPIO RITMO
   weeks: 26
+  week_unit: "sem"
   sub_heading: "Proyectos de la vida real y exactamente lo que buscan las empresas"
   left_labels:
     description: "DESCRIPCION:"

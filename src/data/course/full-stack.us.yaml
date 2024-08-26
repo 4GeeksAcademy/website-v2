@@ -145,6 +145,7 @@ details:
          
   heading: "Part-Time Full Stack Development Bootcamp"
   weeks: 18
+  week_unit: "wks"
   sub_heading: "Hands-on learning through real-life projects. \n Master the 3 most used languages worldwide: Python, JS, and React."
   left_labels:
     description: "DESCRIPTION:"

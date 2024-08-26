@@ -119,6 +119,7 @@ details:
           
   heading: PROGRAM DETAILS AT YOUR OWN PACE
   weeks: 26
+  week_unit: "wks"
   sub_heading: "Real-life projects and exactly what companies are looking for"
   left_labels:
     description: "DESCRIPTION:"

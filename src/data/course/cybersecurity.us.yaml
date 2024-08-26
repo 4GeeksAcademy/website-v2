@@ -198,14 +198,14 @@ details:
 
   heading: PROGRAM DETAILS
   weeks: 14
+  week_unit: "wks"
   facts:
     - label: "Duration"
       value: "16 weeks"
     - label: "Commitment"
       value: "20 hrs/week (Mon - Wed - Fri)"
     - label: "Certificate"
-      content: "Official 4Geeks Completion Certificate, recognized by multiple institutions.
-"
+      content: "Official 4Geeks Completion Certificate, recognized by multiple institutions."
       link_text: "View example"
       link: ""
       icon: "certificate"

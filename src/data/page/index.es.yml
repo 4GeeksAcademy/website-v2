@@ -76,10 +76,10 @@ two_column_carousel:
   title: "Nosotros lo hacemos posible"
   text: "Nuestro programa de Job Guarantee está dando excelentes resultados. Vea algunas de las historias de nuestros graduados:"
   videos:
-    - src: "/images/landing/alissa-video.webp"
-      link: "EcqasocRKHo"
-    - src: "/images/landing/alissa-video.webp"
-      link: "EcqasocRKHo"
+    - src: "/images/testimonials/pablo-review.jpg"
+      link: "OtJvrNwQw9E"
+    # - src: "/images/landing/alissa-video.webp"
+    #   link: "EcqasocRKHo"
 
 ## CHOOSE YOUR PROGRAM /components/ChooseYourProgram
 choose_program:

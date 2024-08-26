@@ -1,0 +1,202 @@
+meta_info:
+  slug: introduccion-a-la-programacion
+  title: "Curso de Introducción a la Programación por 4Geeks Academy, Domina los Fundamentos del Desarrollo Web"
+  bc_slug: "coding-introduction"
+  template: "course-code-introduction"
+  description: "Inicia tu viaje en el desarrollo web con nuestro Curso de Introducción a la Programación. Aprende los fundamentos de HTML, CSS y JS."
+  image: "/images/og-preview/full-stack.us.png"
+  visibility: "visible"
+  keywords: ""
+  show_in_apply: false
+  related_clusters: ["full-stack-developer"]
+  redirects: []
+
+apply_form:
+  label: Introducción a la Programación
+
+seo_title: "Curso de Introducción a la Programación"
+
+header:
+  title: "Introducción a la Programación"
+  image: "../../../static/images/bg/program-bg.png"
+  image_alt: "comienza-tu-viaje-como-desarrollador"
+  paragraph: "Embarca en tu carrera de desarrollo web con nuestro curso de Introducción a la Programación. Aprende HTML, CSS y JavaScript, y prepárate para construir sitios web interactivos y responsivos en solo semanas!"
+
+button:
+  syllabus_heading: "Descargar Programa"
+  syllabus_btn_label: "Descarga Instantánea"
+  syllabus_motivation: "Obténlo en solo unos segundos"
+  apply_button_text: "Aplica ahora"
+  apply_button_link: "/es/aplica"
+
+course_instructors:
+  header:
+    title: "Conoce a nuestros instructores"
+    paragraph: ""
+
+  instructors:
+    # - name: "Roldolfo Campos"
+    #   sub_title: "Co fundador de 4geeks y director de educación"
+    #   image: "../../../static/images/instructors/example.png"
+    #   bio: "Currently working as a Senior Solutions Architect at VMware, Rodolfo Campos is a Software Engineer with 17 years of experience in Linux, Java, SQL, Blockchain, etc. Master in Computer Science and passionate about Big Data and Entrepreneurship."
+    #   github: ""
+    #   linkedin: "https://www.linkedin.com/"
+
+    # - name: "Gabriel Salinas"
+    #   sub_title: "Sophisticated Software Systems Engineer"
+    #   image: "../../../static/images/instructors/example.png"
+    #   bio: "Currently working as a Senior Solutions Architect at VMware"
+    #   github: ""
+    #   linkedin: "https://www.linkedin.com/"
+
+partners:
+  limit: 4
+  heading: "Nuestras Conexiones Industriales"
+  sub_heading: "Nuestros estudiantes son respaldados por una red de socios y posibles empleadores que reconocen la calidad de nuestro currículo introductorio de codificación."
+
+overlaped:
+  heading: "Cómo el Prework te Prepara para un Mercado Laboral en Auge"
+  paragraph: "La fase de prework de nuestro bootcamp de codificación está diseñada para prepararte para una carrera exitosa en desarrollo full-stack al introducir habilidades fundamentales en HTML, CSS y JavaScript. <br><br> Se espera que el campo del desarrollo web y diseño digital crezca rápidamente a un 16% desde 2022 hasta 2032, creando alrededor de 19,000 aperturas de trabajo anualmente."
+  button:
+    text: "APRENDE MÁS"
+    color: "azul"
+    link: "/"
+  image:
+    src: "/images/landing/tres-personas-reloaded.webp"
+
+two_columns_info:
+  proportions: [6, 6]
+  image:
+    style: '{"backgroundSize": "contain" }'
+    src: "../../images/landing/blonde-girl-laptop.png"
+    shadow: false
+  heading:
+    text: "Transformando Vidas a través de la Educación Tecnológica"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "En 4Geeks Academy, empoderamos a las personas con una educación tecnológica de primer nivel y apoyo profesional, preparándolos para el éxito en el mundo tecnológico actual."
+    font_size: ["16px", "16px", "16px", "16px", "16px"]
+  bullets:
+    items:
+      - heading: "Conocimiento Fundamental"
+        text: "El pre-work cubre conceptos esenciales y habilidades que te prepararán para la experiencia de aprendizaje inmersivo."
+      - heading: "Aprendizaje a tu Ritmo"
+        text: "Puedes completar el pre-work a tu propio ritmo, lo que te permite equilibrarlo con tus otros compromisos."
+      - heading: "Acceso a Recursos"
+        text: "Tendrás acceso a una variedad de recursos, incluyendo tutoriales y ejercicios, para ayudarte a entender el material efectivamente."
+
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "3px solid black", "backgroundSize": "contain" }'
+    src: "/static/images/staff/hernan-new.webp"
+    shadow: true
+  video: "ln3bQsV1BaQ"
+  heading:
+    text: "Historias Reales de Éxito de Nuestros Alumnos"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "Escucha a nuestros graduados compartir sus experiencias sobre cómo 4Geeks Academy ha transformado sus carreras y vidas. El video presenta a un exalumno que pasó de diversos trabajos ocasionales a una carrera gratificante en tecnología. A pesar de no tener experiencia previa en tecnología, descubrió su pasión a través de nuestra formación integral y entorno de aprendizaje de apoyo. Su historia confirma la efectividad de nuestro enfoque, que no solo se centra en habilidades técnicas sino también en apoyo para la colocación laboral, lo que lleva a múltiples ofertas de trabajo."
+    font_size: ["16px", "16px", "16px", "16px", "16px"]
+  button:
+    text: "Aplica ahora"
+    color: "blanco"
+    background: "negro"
+    path: "#prices_and_payment"
+
+badges:
+  paragraph: "Comienza tu viaje de programación en 4Geeks Academy, reconocida por la excelencia en educación tecnológica. Nuestro Curso de Introducción a la Programación establece una base sólida, preparándote para estudios más avanzados en desarrollo web."
+
+upcoming:
+  no_dates_message: "Actualmente no hay fechas disponibles para este programa"
+  actionMessage: "Notifícame cuando las fechas estén disponibles"
+
+credentials:
+  heading: "Este Programa en Números"
+  paragraph: "Nuestros resultados hablan por sí mismos"
+
+## DETALLES DEL PROGRAMA
+details:
+  about:
+    title: "Sobre el Programa de Introducción a la Programación"
+    sub_title: "Este programa te introduce a los fundamentos de la programación, enfocándose en los tres pilares del desarrollo web: HTML, CSS y JavaScript. Aprende mediante proyectos prácticos y prepárate para dar los siguientes pasos en la industria tecnológica."
+    list:
+      - label: "Duración"
+        content: "9 Semanas"
+        icon: "calendar"
+      - label: "Clases"
+        content: "En línea"
+        icon: "book"
+      - label: "Requisitos"
+        content: "No se requieren habilidades previas de programación."
+        icon: "contract-checked"
+      - label: "Idioma"
+        content: "Inglés y Español"
+        icon: "contract-checked"
+
+  heading: "Bootcamp de Desarrollo Full Stack a Tiempo Parcial"
+  weeks: 9
+  sub_heading: "Aprendizaje práctico a través de proyectos de la vida real. \n Domina los 3 lenguajes más utilizados a nivel mundial: Python, JS y React."
+  left_labels:
+    description: "DESCRIPCIÓN:"
+    projects: "PROYECTOS:"
+    duration: "DURACIÓN:"
+    skills: "Habilidades / Semanas:"
+  details_modules:
+    - module_name: "BÁSICOS DE PROGRAMACIÓN"
+      title: "Introducción al Desarrollo Web"
+      description: "Comienza tu viaje de desarrollo web con este módulo fundamental. Aprende HTML para crear páginas web y CSS para el estilo. Adquiere una comprensión sólida de estas tecnologías fundamentales para prepararte para temas más avanzados en desarrollo web."
+      projects: "Participa en proyectos prácticos para aplicar habilidades HTML, construir páginas web y usar CSS para un diseño web visualmente atractivo y responsivo."
+      slug: "basicos-de-programacion"
+      duration: "12 módulos"
+      step: 1
+    - module_name: "TU PRIMER SITIO WEB"
+      title: "Construye Tu Primer Sitio Web"
+      description: "Utiliza tus habilidades de HTML y CSS para construir tu primer sitio web. Este módulo se centra en aplicar HTML para estructura de contenido, CSS para estilización y técnicas esenciales de depuración. Aprenderás a depurar código HTML y CSS para resolver problemas comunes en el desarrollo web. El módulo culmina en un proyecto para diseñar y crear una postal digital, reforzando tu capacidad para crear diseños web interactivos y visualmente atractivos."
+      projects: "Diseña y construye una postal digital usando HTML y CSS, aplicando habilidades de depuración para asegurar funcionalidad y atractivo estético."
+      slug: "tu-primer-sitio-web"
+      duration: "3 módulos"
+      step: 1
+    - module_name: "CONSTRUYE DISEÑOS"
+      title: "Dominando Diseños"
+      description: "Aprende a dominar los diseños CSS con enfoque en modelos de caja, flexbox y CSS Grid. Mejora tu capacidad para manipular y estilizar elementos HTML utilizando selectores CSS. Gana experiencia práctica con lecturas, ejercicios y un proyecto para crear diseños funcionales y visualmente atractivos, reforzando tu comprensión de la arquitectura web."
+      projects: "Crea un proyecto para diseñar un feed de fotos de Instagram básico usando HTML y CSS. Implementa técnicas avanzadas de diseño y selectores CSS cubiertos en el módulo."
+      slug: "construye-disenos"
+      duration: "5 módulos"
+      step: 1
+    - module_name: "INICIA JAVASCRIPT"
+      title: "Introducción a JavaScript"
+      description: "Descubre JavaScript, el lenguaje que agrega interactividad a las páginas web. Aprende lo esencial como variables, condicionales, arreglos y funciones. Manipula HTML y CSS con JavaScript para actualizar contenido basado en interacciones de usuario. Cada sesión mejora tu comprensión, preparándote para crear aplicaciones web responsivas."
+      projects: "Aplica tus habilidades de JavaScript para crear un Generador de Excusas, un proyecto práctico donde implementarás varios conceptos de programación aprendidos para generar excusas aleatorias a comando del usuario."
+      slug: "inicia-javascript"
+      duration: "6 módulos"
+      step: 3
+    - module_name: "DOMINA JAVASCRIPT"
+      title: "Domina JavaScript"
+      description: "La sección final de nuestro curso de prework tiene como objetivo fortalecer y mejorar tus habilidades en JavaScript a través de la práctica intensiva. A medida que te preparas para avanzar a posiciones de desarrollo más avanzadas, este ejercicio en particular te desafía a mejorar tus técnicas de programación, enfrentar problemas difíciles y fortalecer tu comprensión de JavaScript en preparación para la próxima etapa de tu educación en programación."
+      projects: "Participa en 'Más Práctica en JS'—un ejercicio integral que te desafía a aplicar todas las habilidades de JavaScript que has aprendido en una serie de tareas de codificación intrincadas. Este proyecto final está dirigido a mejorar tus habilidades de resolución de problemas y asegurar que tengas un sólido dominio de los fundamentos de JavaScript."
+      slug: "domina-javascript"
+      duration: "1 actividad"
+      step: 3
+prices:
+  heading: "Precios del Curso y Opciones de Pago"
+  sub_heading: "Opciones de aprendizaje asequibles para iniciar tu viaje de programación"
+  selector:
+    top_label: Ubicación
+    placeholder: Selecciona una ubicación
+  button:
+    text: "Ver Precios"
+    link: ""
+
+## SECCIÓN DE ALUMNI
+alumni:
+  heading: "Conoce a Nuestros Alumnos y Sus Proyectos"
+  sub_heading: "En la última fase del curso debes construir un proyecto final que elegirás tú mismo, puede ser una empresa o trabajarás directamente en un proyecto real en colaboración con nuestros socios de contratación"
+
+## BARRA LATERAL
+sidebar:
+  membership: "MEMBRESÍAS"
+  program: "PROGRAMA"
+  geeks_vs_other: "4GEEKS vs OTROS"
+  pricing: "PRECIOS"
+  alumni: "LOS ALUMNOS"

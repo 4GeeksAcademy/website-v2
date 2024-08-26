@@ -104,7 +104,7 @@ details:
   about:
       title: "About the Program"
       sub_title: "Get the skills to meet the global demand for problem solvers and logical thinkers who drive the world to real change and impact.
-      Develop distributed highly scalable cloud applications used only by Fortune 500. Land yourself a real software engineering job or create the next tech unicorn."
+        Develop distributed highly scalable cloud applications used only by Fortune 500. Land yourself a real software engineering job or create the next tech unicorn."
       list:
         - label: "Duration"
           content:  "18 Weeks"
@@ -121,6 +121,7 @@ details:
           
   heading: Software Engineering Syllabus
   weeks: 18
+  week_unit: "wks"
   sub_heading: "Master exactly what is required to be a real Software Engineer."
   left_labels:
     description: "DESCRIPTION:"

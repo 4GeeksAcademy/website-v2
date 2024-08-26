@@ -43,8 +43,9 @@ const ProgramDetails = (props) => {
 
   const weeks = [];
   const totalWeeks = props.details.weeks || 16;
+  const weekUnit = props.details.week_unit;
   for (let i = 1; i <= totalWeeks; i++) {
-    weeks.push(i.toString() + props.details?.details_modules[0].duration);
+    weeks.push(i.toString() +" "+ weekUnit);
   }
 
   const steps = props.details.details_modules.reduce(

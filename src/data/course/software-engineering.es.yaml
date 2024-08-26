@@ -117,6 +117,7 @@ details:
           
   heading: DETALLES DEL PROGRAMA
   weeks: 18
+  week_unit: "sem"
   sub_heading: "Part Time"
   left_labels:
     description: "DESCRIPCION:"

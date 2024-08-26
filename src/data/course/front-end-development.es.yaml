@@ -124,6 +124,7 @@ details:
           
   heading: DETALLES DEL PROGRAMA PART-TIME
   weeks: 12
+  week_unit: "sem"
   sub_heading: "Proyectos practicos de la vida real, exactamente lo que buscan las empresas"
   left_labels:
     description: "DESCRIPCION:"

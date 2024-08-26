@@ -103,6 +103,7 @@ details:
 
   heading: "PROGRAM DETAILS"
   weeks: 6
+  week_unit: "wks"
   facts:
     - label: "Duration"
       value: "6 weeks"

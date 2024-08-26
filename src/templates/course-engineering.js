@@ -398,6 +398,8 @@ export const query = graphql`
             }
             heading
             sub_heading
+            weeks
+            week_unit
             left_labels {
               description
               projects
@@ -740,6 +742,8 @@ export const query = graphql`
             keywords
             redirects
             region
+            cohort_exclude_regex
+            cohort_include_regex
           }
           header {
             sub_heading

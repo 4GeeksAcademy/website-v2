@@ -101,6 +101,7 @@ details:
 
   heading: "DETALLES DEL PROGRAMA"
   weeks: 6
+  week_unit: "sem"
   facts:
     - label: "Duración"
       value: "6 semanas"
