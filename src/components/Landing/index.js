@@ -386,17 +386,17 @@ export const landingSections = {
             gap="45px"
             gap_tablet="24px"
           >
-            {ratingReviews.rating_list.map((item, i) => {
+            {ratingReviews.rating_list.map((item) => {
               return (
                 <Div
-                  key={i}
+                  key={`rating-component-${item.alt}`}
                   display="flex"
                   alignItems="center"
                   flexDirection="column"
                   borderRadius="4px"
                   background="white"
                   width="100%"
-                  padding="10px 0"
+                  padding="10px"
                 >
                   <GatsbyImage
                     style={{
@@ -417,6 +417,7 @@ export const landingSections = {
                     fontSize="9px"
                     color={Colors.darkGray3}
                     fontWeight="bold"
+                    textTransform="lowercase"
                   >
                     {`${item.rating} ${
                       pageContext.lang === "us" ? "On Reviews" : "En reseñas"
