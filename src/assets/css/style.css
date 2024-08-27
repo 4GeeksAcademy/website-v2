@@ -551,7 +551,7 @@ button.active p {
   background-color: transparent;
   border: none;
   outline: none;
-  font-size: 18px;
+  font-size: 15px;
 }
 .star-rating div.on {
   background: #ffb718;

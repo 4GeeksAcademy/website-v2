@@ -446,6 +446,7 @@ export const query = graphql`
           rating_reviews {
             position
             heading
+            background
             rating_list {
               alt
               image {
@@ -1003,6 +1004,7 @@ export const query = graphql`
               }
             }
             weeks
+            week_unit
             sub_heading
             left_labels {
               description

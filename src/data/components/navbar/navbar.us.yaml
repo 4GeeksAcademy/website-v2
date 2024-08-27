@@ -26,7 +26,7 @@ navbar:
         - title: "CyberSecurity Bootcamp"
           level: " "
           icon: "cyber-security"
-          paragraph: "Become a cybersecurity specialist, equipped to identify, manage and mitigate system vulnerabilities, in compliance with ISO and other standards"
+          paragraph: "Become a cybersecurity specialist, equipped to identify, manage, and mitigate system vulnerabilities, aligned with ISO and other standards."
           buttons:
             - text: "View program"
               link: "/us/coding-bootcamps/cybersecurity"

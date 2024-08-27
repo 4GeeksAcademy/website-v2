@@ -27,7 +27,7 @@ with:
   - name: "Luisa Glum"
     title: "The school was as invested as I was"
     open_in_modal: true
-    description: "Luisa enrolled in our ISA (Income Sharing Agreement) program and paid for the program after graduation."
+    description: "Luisa enrolled in our program using one of our many financing methods and successfully paid for the program after graduation."
     image: ../../../../static/images/staff/luisa.png
     alt: ""
     video: "https://www.youtube.com/watch?v=PWkgaAT8pHg" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL

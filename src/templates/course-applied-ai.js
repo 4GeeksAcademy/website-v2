@@ -419,6 +419,7 @@ export const query = graphql`
             }
             heading
             weeks
+            week_unit
             sub_heading
             left_labels {
               description
