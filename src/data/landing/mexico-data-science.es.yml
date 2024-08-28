@@ -2,8 +2,8 @@ meta_info:
   slug: mexico-datascience-bootcamp # <--- URL 4geeksacademy.com/us/landing/example
 
   # This will show on social media when shared
-  title: "¡Únete a nuestro bootcamp de Data Science en México y conviértete en un experto en solo 16 semanas!"
-  description: "El Bootcamp de Data Science y Machine Learning el más premiado en México, Con 4Geeks te convertirás en experto"
+  title: "¡Únete a nuestro bootcamp de Data Science en México y conviértete en un especialista en solo 16 semanas!"
+  description: "El Bootcamp de Data Science y Machine Learning el más premiado en México, Con 4Geeks te convertirás en especialista"
   image: "/images/bg/new-main-home-bg.png"
   keywords: ""
   visibility: "unlisted" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).

@@ -1,0 +1,228 @@
+meta_info:
+  slug: curso-de-ciberseguridad-uruguay # <--- URL 4geeksacademy.com/us/landing/example
+
+  # This will show on social media when shared
+  title: "Curso de Ciberseguridad en Uruguay - 4Geeks Academy"
+  description: "Aprende ciberseguridad en Uruguay con 4Geeks Academy. Inscríbete hoy y adquiere las habilidades para proteger el futuro digital."
+  image: "/images/bg/main-bg.jpg"
+  keywords: ""
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  template: "landing_a" # <--- choose your landing template
+  # <--- URL redirections to avoid 404 errors
+  redirects: []
+
+  # Set a particular course or location to the landing page
+  # this UTM fields will be also included in the CRM contact
+  utm_course: ["cybersecurity"]
+  utm_location: ["montevideo-uruguay"]
+  automation: soft # comma separated, "soft" is the default value
+  tag: website-lead # comma separated, "request_more_info" is the default value
+
+follow_bar:
+  position: "top" # top, bottom, hidden
+  content:
+    text: "Conviértete en un especialista en ciberseguridad en Uruguay."
+    text_mobile: "Conviértete en un especialista en ciberseguridad en Uruguay."
+    # devices:    XL      LG      MD      SM       XS
+    font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
+  button:
+    text: "Escribir por WhatsApp"
+    path: "https://wa.me/+5804122326485"
+  phone: 
+    text: ""
+
+navbar:
+  buttonText: "Más información"
+  buttonUrl: "#leadform_bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+  logoUrl: "#"
+
+form:
+  # posible fields: "first_name", "last_name", "full_name", "phone", "email"
+  # always the first_name, email and phone will be mandatory if added.
+  fields: ["full_name", "phone", "email"]
+  heading: "Completa el Formulario"
+  motivation: "Una vez que completes el formulario en menos de 5 minutos tendrás toda la información, Recibe detalles completos del curso y opciones de financiamiento en tu correo."
+  button_label: Obtener Más Información
+  redirect: "/es/gracias/?lang=es"  #you can redirect to another url or entirely diffrent website
+
+apply_schollarship: # form that is displayed at the end of the landing
+  # title: "Get more info about this award-winning development course"
+  imageSide: "right"
+  image: "../../../static/images/pretty-woman-in-a-computer.png"
+
+# jumbotron on the top (cannot be commented out)
+header_data:
+  background: "lightBlue"
+  tagline: "Curso de Ciberseguridad en Uruguay"
+  tagline_color: "#1b1b1b"
+  sub_heading: ""
+  form_styles:
+    background: "#E3F9FE"
+    button:
+      background: "black"
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+  image_filter: brightness(0.3)
+
+features:
+  marginTop: 0px #<-- separation between tagline and the bullets
+
+  #                                         up   left down  right
+  styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
+  bullets:
+    - Capacitación integral desde los fundamentos hasta técnicas avanzadas de ciberseguridad.
+    - Certificación reconocida que abrirá puertas en el mercado laboral uruguayo e internacional.
+    - Preparación práctica para enfrentar las amenazas cibernéticas más complejas.
+
+short_badges:
+  - name: "Top Online Full-Stack Bootcamps Of 2024"
+    url: ""
+    image: "../../../static/images/badges/forbes-logo-award.png"
+    alt: "We have been selected as one of the Top Online Coding Bootcamps by Forbes."
+  - name: "Best for Spanish speakers Of 2024 by Fortune"
+    url: ""
+    image: "../../../static/images/badges/fortune-logo.png"
+    alt: "Recognized by Fortune as one of the Top Coding Bootcamps"
+  - name: "Top Coding Bootcamps Newsweek"
+    url: ""
+    image: "../../../static/images/badges/newsweek.webp"
+    alt: "Top Coding Bootcamps Newsweek"
+  - name: "Best Coding Bootcamp Course Report 2024"
+    url: ""
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+    alt: "Best Coding Bootcamp Course Report 2024"
+  - name: "Licensed by the Florida Department of Education"
+    url: ""
+    image: "../../../static/images/badges/licensed.png"
+    alt: "Licensed by the Florida Department of Education"
+  - name: "ARP Certificate"
+    url: ""
+    image: "../../../static/images/badges/arp-logo-certification.png"
+    alt: "ARP Certificate"
+
+#
+# ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
+#
+
+badges:
+  position: 3
+  heading: "Premios que validan la excelencia de nuestra educación"
+
+rating_reviews:
+  position: 6
+  heading: "Lee acerca de nosotros"
+  rating_list:
+    - alt: "Career Karma"
+      image: "../../../static/images/badges/career-karma.png"
+      rating: 4.8
+      url: "https://careerkarma.com/schools/4geeks-academy/"
+    - alt: "Switchup"
+      image: "../../../static/images/badges/switchup-img.png"
+      rating: 4.89
+      url: "https://www.switchup.org/bootcamps/4geeks-academy"
+    - alt: "Course Report"
+      image: "../../../static/images/badges/course-report.png"
+      rating: 4.84
+      url: "https://www.coursereport.com/schools/4geeks-academy"
+    - alt: "Google"
+      image: "../../../static/images/badges/google.png"
+      rating: 4.9
+      url: ""
+
+program_details:
+  position: 2
+  heading: "Programa de Contenidos de Nuestro Curso de Ciberseguridad"
+  sub_heading: "De cero a especialista en ciberseguridad. Aprende a proteger sistemas y datos con las técnicas más avanzadas."
+
+# why_4geeks:
+#   position: 7
+#   heading: "¿Por qué 4Geeks?"
+#   sub_heading: " "
+
+geeks_vs_others:
+  position: 6
+  heading: "Compara Nuestro Curso con Otros en Uruguay"
+  # sub_heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+  total_rows: 5
+
+who_is_hiring:
+  position: 15
+  limit: 4
+  heading: "Empresas que Contratan a Nuestros Alumnos"
+  sub_heading: "Nos encanta ver crecer a nuestros estudiantes, por eso nos esforzamos cada día por tener más aliados, para que puedas trabajar en empresas que te ayuden a seguir creciendo profesionalmente.-"
+
+# Possible layours: [two_column_left_image, two_column_right_image]
+components:
+  - name: new_design_with_bullets
+    position: 1
+    layout: two_column_right
+    proportions: [7, 5] 
+    swipable: False
+    background: "#fbfbfb"
+    image:
+      style: '{"backgroundSize": "cover", "border": "2px solid black"}'
+      src: "/images/landing/ciberseguridad-uruguay.webp"
+      shadow: true
+    section_heading: 
+      text: "La Necesidad de Especialistas en Ciberseguridad en Uruguay"
+      style: '{ "font-size": "30px" }'
+    heading: 
+      text: ""
+    sub_heading:
+      text: "Con el aumento de las amenazas cibernéticas en Uruguay, las empresas están invirtiendo en profesionales capacitados en ciberseguridad para garantizar la protección de su infraestructura digital. Este curso te preparará para asumir roles clave en la protección digital y te posicionará como un profesional indispensable en el mercado laboral uruguayo."
+    content: 
+      text: ""
+      font_size: ["16px"]
+      path: ""
+    bullets:
+      items:
+      - text: "El sector de la ciberseguridad en Uruguay está experimentando un crecimiento exponencial, Se espera que las oportunidades laborales en este campo crezcan un 27% para 2024, lo que refleja la importancia creciente de la ciberseguridad en el país."
+        icon: "circle" 
+      - text: "Los especialistas en ciberseguridad en Uruguay pueden ganar entre $1,500 hasta $2,500 USD mensuales, dependiendo de la experiencia, la empresa y la ubicación."
+        icon: "circle" 
+      - text: "Los profesionales de alto nivel, como los CISOs (Chief Information Security Officers), pueden ganar hasta 2,559,947 UYU (alrededor de $63,000 USD) al año, dependiendo de su experiencia y certificaciones."
+        icon: "circle" 
+    button: 
+      text: "Más Información"
+      color: white
+      hover_color: "white"
+      background: "black"
+      path: "#leadform_bottom"
+
+  - name: porque-bootcamp-de-ciberseguridad
+    position: 4
+    proportions: [6,6]
+    layout: two_column_left
+    background: "veryLightBlue2" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
+    image:
+      style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
+      src: "/static/images/testimonials/pablo-review.jpg"
+      shadow: true 
+    video: "OtJvrNwQw9E"
+    heading:
+      text: "Beneficios Únicos de Nuestro Curso de Ciberseguridad"
+        #           xl      lg      md      sm      xs
+      font_size: ["45px", "45px", "30px", "28px", "25px"]
+    sub_heading:
+      text: "Nuestro curso está diseñado para prepararte para los desafíos actuales en ciberseguridad, combinando teoría con ejercicios prácticos que te aseguran estar listo para sobresalir en el mercado laboral uruguayo."
+    content:
+      style: '{}'
+      text: ""
+      font_size: ["16px"]
+    bullets:
+      items:
+      - heading: "Prácticas Intensivas"
+        text: " Participa en simulaciones que reflejan los retos actuales de la ciberseguridad. No solo aprenderás a proteger sistemas, sino que también desarrollarás habilidades clave que te harán destacar en el campo laboral."
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+      - heading: "Mentoría Ilimitada y Continua"
+        text: "Recibe apoyo y guía de profesionales en la industria durante todo el curso, con acceso a mentorías ilimitadas y de por vida, asegurando que siempre tengas el respaldo necesario en tu carrera."
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+      - heading: "Red Global de Contactos"
+        text: "Conéctate a una comunidad internacional de más de 5,000 profesionales, brindándote apoyo continuo en tu carrera, incluso después de graduarte."
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+    button: 
+      text: "Más Información"
+      color: white
+      hover_color: "white"
+      background: "black"
+      path: "#leadform_bottom"
+
