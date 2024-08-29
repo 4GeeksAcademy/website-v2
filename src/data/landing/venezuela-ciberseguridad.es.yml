@@ -68,8 +68,8 @@ follow_bar:
     # devices:    XL      LG      MD      SM       XS
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:
-    text: "Escribir por WhatsApp"
-    path: "https://wa.me/+5804122326485"
+    text: "Más Información"
+    path: "#leadform_header"
   phone: 
     text: ""
 
