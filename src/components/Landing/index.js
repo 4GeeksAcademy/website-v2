@@ -357,61 +357,76 @@ export const landingSections = {
     let dataYml =
       data.allLandingYaml.edges[0] || data.allDownloadableYaml.edges[0];
     let ratingReviews = dataYml.node.rating_reviews;
+    const { background } = ratingReviews;
 
     return (
       <Div
-        key={index}
-        padding="60px 0 60px 0"
-        display="flex"
-        flexDirection="column"
-        borderBottom="3px solid #F5F5F5"
+        background={Colors[background] || background}
+        padding="0 20px"
+        padding_tablet="0 40px"
       >
-        <H2 type="h2" fontSize="22px" fontWeight="700" padding="10px 0 60px 0">
-          {ratingReviews.heading}
-        </H2>
         <Div
+          key={index}
+          padding="60px 0 60px 0"
           display="flex"
           flexDirection="column"
-          flexDirection_tablet="row "
-          justifyContent="center"
-          gap="45px"
-          gap_tablet="10%"
+          borderBottom="3px solid #F5F5F5"
+          margin="auto"
+          width="100%"
+          maxWidth="1280px"
         >
-          {ratingReviews.rating_list.map((item, i) => {
-            return (
-              <Div
-                key={i}
-                display="flex"
-                alignItems="center"
-                flexDirection="column"
-              >
-                <GatsbyImage
-                  style={{
-                    height: "50px",
-                    minWidth: "135px",
-                    width: "135px",
-                  }}
-                  imgStyle={{ objectFit: "contain" }}
-                  loading="eager"
-                  // draggable={false}
-                  // fadeIn={false}
-                  alt={item.alt}
-                  image={getImage(item.image.childImageSharp.gatsbyImageData)}
-                />
-                <StarRating rating={item.rating} />
-                <Paragraph
-                  padding="6px 0"
-                  fontSize="15px"
-                  letterSpacing="0.05em"
-                  fontWeight="bold"
+          <H2 type="h2" padding="10px 0 60px 0">
+            {ratingReviews.heading}
+          </H2>
+          <Div
+            display="flex"
+            flexDirection="column"
+            flexDirection_tablet="row "
+            justifyContent="center"
+            gap="45px"
+            gap_tablet="24px"
+          >
+            {ratingReviews.rating_list.map((item) => {
+              return (
+                <Div
+                  key={`rating-component-${item.alt}`}
+                  display="flex"
+                  alignItems="center"
+                  flexDirection="column"
+                  borderRadius="4px"
+                  background="white"
+                  width="100%"
+                  padding="10px"
                 >
-                  {`${item.rating} ${
-                    pageContext.lang === "us" ? "On Reviews" : "En reseñas"
-                  }`}
-                </Paragraph>
-              </Div>
-            );
-          })}
+                  <GatsbyImage
+                    style={{
+                      height: "50px",
+                      minWidth: "135px",
+                      width: "135px",
+                    }}
+                    imgStyle={{ objectFit: "contain" }}
+                    loading="eager"
+                    // draggable={false}
+                    // fadeIn={false}
+                    alt={item.alt}
+                    image={getImage(item.image.childImageSharp.gatsbyImageData)}
+                  />
+                  <StarRating rating={item.rating} />
+                  <Paragraph
+                    padding="6px 0"
+                    fontSize="9px"
+                    color={Colors.darkGray3}
+                    fontWeight="bold"
+                    textTransform="lowercase"
+                  >
+                    {`${item.rating} ${
+                      pageContext.lang === "us" ? "On Reviews" : "En reseñas"
+                    }`}
+                  </Paragraph>
+                </Div>
+              );
+            })}
+          </Div>
         </Div>
       </Div>
     );

@@ -5,7 +5,8 @@ const StarRating = ({ rating = 0 }) => {
   const getRate = (index, rate) => {
     if (Math.round(rate) === index && rate % 1 !== 0) {
       return "middle";
-    } else if (index <= rate) {
+    }
+    if (index <= rate) {
       return "on";
     }
     return "off";
