@@ -8,6 +8,30 @@ institutions: Institutions that contibuted
 press: Press references
 see_project: See full project
 projects:
+  - name: Costa Rica Forte And 4Geeks Academy
+    image:
+      alt: Costa Rica Forte And 4Geeks Academy
+      src: "../../../../static/images/crusa-forte-scholarship.webp"
+    description: In collaboration with MICITT and the IDB, 4Geeks Academy has partnered with the FORTE model to boost talent development in Costa Rica. This program has trained over 200 students in high-demand digital technologies, focusing on women from areas with high unemployment. Through the Geek Forte program, participants receive free training, enabling them to access better jobs in the 4.0 industry and contribute to the country's economic growth.
+    details:
+      cost: $1.5mm
+      geeks_benefited: 35
+    institutions:
+      - name: BID
+        logo: "../../../../static/images/partner/bid-logo.webp"
+      - name: Crusa
+        logo: "../../../../static/images/partner/crusa-logo.webp"
+      - name: MICITT
+        logo: "../../../../static/images/partner/micitt-logo.webp"
+      - name: 4Geeks Academy
+        logo: "../../../../static/images/4G_logo_negro.png"
+    press:
+      - name: Periodico Mensaje
+        link: https://www.periodicomensaje.com/educacion/11609-mas-de-100-mujeres-concluyeron-formacion-en-tecnologias-digitales-gracias-a-la-alianza-crusa-forte
+      - name: La Republica
+        link: https://www.larepublica.net/noticia/mas-de-100-mujeres-se-formaron-en-tecnologias-digitales-para-aumentar-sus-oportunidades-de-empleo
+    pdf: .pdf
+
   - name: Costa Rica-CINDE and 4Geeks Project
     image:
       alt: typing
@@ -18,9 +42,9 @@ projects:
       geeks_benefited: 212
     institutions:
       - name: Interamerican Development Bank
-        logo: "../../../../static/images/idb-logo.png"
+        logo: "../../../../static/images/partner/bid-logo.webp"
       - name: MICITT
-        logo: "../../../../static/images/micitt-logo.jpg"
+        logo: "../../../../static/images/partner/micitt-logo.webp"
       - name: 4Geeks Academy
         logo: "../../../../static/images/4G_logo_negro.png"
     press:
