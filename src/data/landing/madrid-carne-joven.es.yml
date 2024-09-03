@@ -101,7 +101,7 @@ short_badges:
 apply_schollarship: # form that is displayed at the end of the landing
   # title: "Apoyo Profesional Ilimitado"
   imageSide: "left"
-  image: "../../../static/images/landing/apply.png"
+  image: "../../../static/images/landing/hombre-joven-con-laptop-senalando.webp"
 #
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
 #
@@ -154,14 +154,14 @@ components:
 
   - name: new_design_with_bullets
     position: 1
-    layout: two_column_right
+    layout: two_column_left
     proportions: [7, 5] 
     swipable: False
     background: "#fbfbfb"
     image:
-      style: '{"backgroundSize": "cover", "border": "2px solid black"}'
-      src: "/images/landing/carnejoven-4geeks.webp"
-      shadow: true
+      style: '{"backgroundSize": "contain"}'
+      src: "/images/landing/hombre-joven-con-laptop-carne-joven.webp"
+      shadow: false
     section_heading: 
       text: "Impulsa tu Carrera con 4Geeks Academy y Carné Joven"
       style: '{ "font-size": "30px" }'
@@ -190,10 +190,12 @@ components:
 
   - name: more_testimonials
     position: 3
-    layout: two_column_left
+    layout: two_column_right
+    proportions: [6, 6]
     image:
-      shadow: true
-      src: "https://storage.googleapis.com/4geeks-academy-website/landing-pictures/testimonials.webp"
+      style: '{"backgroundSize": "contain"}'
+      src: "/images/landing/hombre-joven-con-laptop.webp"
+      shadow: false
     heading:
       text: "¿Qué Hace Único a Nuestro Bootcamp?"
       #xl      lg     md     sm    xs
@@ -207,6 +209,17 @@ components:
     content:
       text: "4Geeks Academy es reconocido internacionalmente por su enfoque práctico y la calidad de sus programas. Ofrecemos una educación personalizada con tutorías ilimitadas y acceso a una comunidad global de programadores. Con esta colaboración especial con Carné Joven, te ofrecemos una formación de alta calidad a un precio accesible."
       font_size: ["16px"]
+    bullets:
+      items:
+      - heading: "Formación Personalizada"
+        text: "Acceso a mentorías ilimitadas y de por vida, asegurando tu éxito en cada etapa de tu carrera."
+        icon: "check" 
+      - heading: "Comunidad Global"
+        text: "Conéctate con más de 6,000 profesionales en todo el mundo, creando redes valiosas y oportunidades de colaboración."
+        icon: "check" 
+      - heading: "Preparación Laboral"
+        text: "Capacitación enfocada en habilidades altamente demandadas en el mercado laboral, garantizando tu empleabilidad en sectores en crecimiento."
+        icon: "check" 
 
   # - name: top_coding_bootcamp
   #   position: 4
@@ -230,7 +243,7 @@ components:
 
   - name: some_id
     position: 4
-    layout: two_column_right
+    layout: two_column_left
     background: "veryLightBlue2"
     image:
       style: '{ "border" : "3px solid black" }'
