@@ -446,6 +446,7 @@ export const query = graphql`
           rating_reviews {
             position
             heading
+            background
             rating_list {
               alt
               image {

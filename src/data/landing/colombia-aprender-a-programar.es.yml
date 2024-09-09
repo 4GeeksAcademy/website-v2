@@ -129,6 +129,7 @@ components:
 rating_reviews:
   position: 2
   heading: "Lee acerca de nosotros"
+  background: "veryLightBlue3"
   rating_list:
     - alt: "Career Karma"
       image: "../../../static/images/badges/career-karma.png"
