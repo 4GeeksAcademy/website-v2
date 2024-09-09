@@ -19,7 +19,7 @@ meta_info:
   tag: request_more_info # comma separated, "request_more_info" is the default value
 
 navbar:
-  buttonText: "Más información"
+  buttonText: "Descargar información"
   buttonUrl: "#leadform_bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
   logoUrl: "#"
 
@@ -27,10 +27,10 @@ form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
-  heading: "Completa el formulario y recibe más información"
+  heading: "Descarga información del curso"
   motivation: "Una vez completado el formulario recibirás un correo en menos de 5 minutos con información detallada sobre el bootcamp y opciones de financiamiento."
-  button_label: Más información
-  redirect: "/es/gracias/?lang=es"  #you can redirect to another url or entirely diffrent website
+  button_label: Descargar información
+  redirect: "/es/gracias/?lang=es" #you can redirect to another url or entirely diffrent website
 
 apply_schollarship: # form that is displayed at the end of the landing
   # title: "Get more info about this award-winning development course"
@@ -67,9 +67,9 @@ follow_bar:
     # devices:    XL      LG      MD      SM       XS
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:
-    text: "Más Información"
+    text: "Descargar información"
     path: "#leadform_header"
-  phone: 
+  phone:
     text: ""
 
 short_badges:
@@ -108,7 +108,7 @@ badges:
 
 rating_reviews:
   position: 6
-  heading: "Lee acerca de nosotros"
+  heading: "Reputación de nuestra academia"
   rating_list:
     - alt: "Career Karma"
       image: "../../../static/images/badges/career-karma.png"
@@ -132,10 +132,10 @@ program_details:
   heading: "Programa de contenido de nuestro Bootcamp de Ciberseguridad"
   sub_heading: "Desde fundamentos hasta técnicas avanzadas de protección digital."
 
-# why_4geeks:
-#   position: 7
-#   heading: "¿Por qué 4Geeks?"
-#   sub_heading: " "
+why_4geeks:
+  position: 10
+  heading: ""
+  sub_heading: ""
 
 geeks_vs_others:
   position: 6
@@ -154,42 +154,42 @@ components:
   - name: new_design_with_bullets
     position: 1
     layout: two_column_right
-    proportions: [7, 5] 
+    proportions: [7, 5]
     swipable: False
     background: "#fbfbfb"
     image:
       style: '{"backgroundSize": "cover", "border": "2px solid black"}'
       src: "/images/landing/ciberseguridad-panama.webp"
       shadow: true
-    section_heading: 
+    section_heading:
       text: "La demanda actual de especialistas en Ciberseguridad en Panamá"
       style: '{ "font-size": "30px" }'
-    heading: 
+    heading:
       text: ""
     sub_heading:
       text: "Panamá, como un centro neurálgico de negocios y tecnología en América Latina, enfrenta un número creciente de amenazas cibernéticas. Las organizaciones locales buscan cada vez más expertos en ciberseguridad para proteger sus activos digitales. Este bootcamp te preparará para convertirte en un especialista en ciberseguridad, listo para enfrentar los desafíos más complejos en el ámbito digital."
-    button: 
-      text: "Más Información"
+    button:
+      text: "Descarga más información"
       color: white
       hover_color: "white"
       background: "black"
       path: "#leadform_bottom"
-    content: 
+    content:
       text: ""
       font_size: ["16px"]
       path: ""
     bullets:
       items:
-      - text: "El mercado de ciberseguridad en Panamá generará este año $51 millones de dólares, lo que representa un 34 % de crecimiento respecto al año anterior, según Frost & Sullivan."
-        icon: "circle" 
-      - text: "El sueldo promedio de un Analista en Ciberseguridad en Panamá es de PAB 1.591 por mes."
-        icon: "circle" 
-      - text: "se estima que hacen falta al menos 3,14 millones de profesionales en ciberseguridad para satisfacer la demanda global."
-        icon: "circle" 
+        - text: "El mercado de ciberseguridad en Panamá generará este año $51 millones de dólares, lo que representa un 34 % de crecimiento respecto al año anterior, según Frost & Sullivan."
+          icon: "circle"
+        - text: "El sueldo promedio de un Analista en Ciberseguridad en Panamá es de PAB 1.591 por mes."
+          icon: "circle"
+        - text: "se estima que hacen falta al menos 3,14 millones de profesionales en ciberseguridad para satisfacer la demanda global."
+          icon: "circle"
 
   - name: porque-bootcamp-de-ciberseguridad
     position: 4
-    proportions: [5,7]
+    proportions: [5, 7]
     layout: two_column_left
     background: "veryLightBlue2" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
     image:
@@ -197,28 +197,29 @@ components:
       src: "/images/landing/GrupoVariasNacionalidades.webp"
       shadow: true
     heading:
-      text: "Ventajas únicas de 4Geeks Academy"
+      text:
+        "Ventajas únicas de 4Geeks Academy"
         #           xl      lg      md      sm      xs
       font_size: ["45px", "45px", "30px", "28px", "25px"]
     sub_heading:
       text: "Nuestro bootcamp está diseñado para brindarte una formación exhaustiva y práctica en ciberseguridad. Aprenderás a identificar y mitigar amenazas, proteger redes y sistemas, y desarrollar estrategias de seguridad digital que son críticas para el éxito en el mundo moderno."
     content:
-      style: '{}'
+      style: "{}"
       text: ""
       font_size: ["16px"]
     bullets:
       items:
-      - heading: "Experiencia Práctica"
-        text: "Adquiere habilidades prácticas en ciberseguridad, alineadas con las demandas del mercado laboral actual, trabajando con estandares a la altura del ISO y NIST."
-        icon: "check" #string with icon for example ['check', 'cicle', etc]
-      - heading: "Clases Reducidas"
-        text: "Disfruta de un ambiente de aprendizaje más efectivo con un ratio de 1 profesor por cada 7 estudiantes, lo que permite una atención más personalizada."
-        icon: "check" #string with icon for example ['check', 'cicle', etc]
-      - heading: "Mentorías Ilimitadas"
-        text: "Acceso ilimitado y de por vida a mentorías personalizadas y a una comunidad internacional de más de 5,000 profesionales, lo que te brinda apoyo continuo en tu carrera."
-        icon: "check" #string with icon for example ['check', 'cicle', etc]
-    button: 
-      text: "Más Información"
+        - heading: "Experiencia Práctica"
+          text: "Adquiere habilidades prácticas en ciberseguridad, alineadas con las demandas del mercado laboral actual, trabajando con estandares a la altura del ISO y NIST."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "Clases Reducidas"
+          text: "Disfruta de un ambiente de aprendizaje más efectivo con un ratio de 1 profesor por cada 7 estudiantes, lo que permite una atención más personalizada."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "Mentorías Ilimitadas"
+          text: "Acceso ilimitado y de por vida a mentorías personalizadas y a una comunidad internacional de más de 5,000 profesionales, lo que te brinda apoyo continuo en tu carrera."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+    button:
+      text: "Descargar información"
       color: white
       hover_color: "white"
       background: "black"
@@ -229,8 +230,8 @@ components:
   #   layout: two_column_right
   #   background: "#fbfbfb"
   #   image:
-  #     style: '{ "border" : "3px solid black" }' 
-  #     shadow: true 
+  #     style: '{ "border" : "3px solid black" }'
+  #     shadow: true
   #     src: "../../../static/images/testimonials/fidel-vera-testimonio-ds.jpg"
   #   video: "https://www.youtube.com/watch?v=zfLGOolXHWQ"
   #   heading:
@@ -242,10 +243,9 @@ components:
   #     style: '{}'
   #     text: "Fidel Vera, siempre interesado en el potencial de los datos, encontró en 4Geeks Academy la plataforma perfecta para convertir su afición en una carrera profesional sólida. El bootcamp de Data Science de 4Geeks Academy le brindó las herramientas y el conocimiento necesarios para desenvolverse con éxito en este campo tan demandado."
   #     font_size: ["16px"]
-    # button:
-    #   text: "Experiencias de Éxito"
-    #   path: "#why_4geeks"
-    #   color: "white"
-    #   background: "black"
-    #   hover: "lightBlue"
-
+  # button:
+  #   text: "Experiencias de Éxito"
+  #   path: "#why_4geeks"
+  #   color: "white"
+  #   background: "black"
+  #   hover: "lightBlue"
