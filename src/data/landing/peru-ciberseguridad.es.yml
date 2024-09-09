@@ -1,0 +1,250 @@
+meta_info:
+  slug: bootcamp-de-ciberseguridad-en-peru # <--- URL 4geeksacademy.com/us/landing/example
+
+  # This will show on social media when shared
+  title: "Bootcamp de Ciberseguridad en Perú | 4Geeks Academy"
+  description: "Conviértete en un especialista en ciberseguridad en Perú con 4Geeks Academy. ¡Inscríbete hoy y asegura tu futuro digital!"
+  image: "/images/bg/main-bg.jpg"
+  keywords: ""
+  visibility: "unlisted" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  template: "landing_a" # <--- choose your landing template
+  # <--- URL redirections to avoid 404 errors
+  redirects: []
+
+  # Set a particular course or location to the landing page
+  # this UTM fields will be also included in the CRM contact
+  utm_course: ["cybersecurity"]
+  utm_location: ["lima-peru"]
+  automation: soft # comma separated, "soft" is the default value
+  tag: website-lead # comma separated, "request_more_info" is the default value
+
+navbar:
+  buttonText: "Solicitar información"
+  buttonUrl: "#leadform_bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+  logoUrl: "#"
+
+form:
+  # posible fields: "first_name", "last_name", "full_name", "phone", "email"
+  # always the first_name, email and phone will be mandatory if added.
+  fields: ["full_name", "phone", "email"]
+  heading: "Completa el Formulario y Únete Hoy"
+  motivation: "Recibe detalles completos del curso y opciones de financiamiento en tu correo. Completa el formulario y en menos de 5 minutos tendrás toda la información."
+  button_label: Solicitar información
+  redirect: "/es/gracias/?lang=es"  #you can redirect to another url or entirely diffrent website
+
+apply_schollarship: # form that is displayed at the end of the landing
+  # title: "Get more info about this award-winning development course"
+  imageSide: "right"
+  image: "../../../static/images/pretty-woman-in-a-computer.png"
+
+# jumbotron on the top (cannot be commented out)
+header_data:
+  background: "lightBlue"
+  tagline: "Bootcamp de Ciberseguridad en Perú"
+  tagline_color: "#1b1b1b"
+  form_styles:
+    background: "#E3F9FE"
+    button:
+      background: "black"
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+  image_filter: brightness(0.3)
+
+features:
+  marginTop: 0px #<-- separation between tagline and the bullets
+
+  #                                         up   left down  right
+  styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
+  bullets:
+    - Formación integral desde los conceptos básicos hasta las técnicas más avanzadas.
+    - Certificación reconocida que abrirá puertas en el mercado laboral peruano e internacional.
+    - Preparación práctica para enfrentar las amenazas cibernéticas más complejas.
+follow_bar:
+  position: "top" # top, bottom, hidden
+  content:
+    text: "Conviértete en un especialista en ciberseguridad en Perú"
+    text_mobile: "¡Inicia tu carrera como especialista en ciberseguridad!"
+    # devices:    XL      LG      MD      SM       XS
+    font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
+  button:
+    text: "Solicitar Información"
+    path: "#leadform_header"
+  phone: 
+    text: ""
+
+short_badges:
+  - name: "Top Online Full-Stack Bootcamps Of 2024"
+    url: ""
+    image: "../../../static/images/badges/forbes-logo-award.png"
+    alt: "We have been selected as one of the Top Online Coding Bootcamps by Forbes."
+  - name: "Best for Spanish speakers Of 2024 by Fortune"
+    url: ""
+    image: "../../../static/images/badges/fortune-logo.png"
+    alt: "Recognized by Fortune as one of the Top Coding Bootcamps"
+  - name: "Top Coding Bootcamps Newsweek"
+    url: ""
+    image: "../../../static/images/badges/newsweek.webp"
+    alt: "Top Coding Bootcamps Newsweek"
+  - name: "Best Coding Bootcamp Course Report 2024"
+    url: ""
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+    alt: "Best Coding Bootcamp Course Report 2024"
+  - name: "Licensed by the Florida Department of Education"
+    url: ""
+    image: "../../../static/images/badges/licensed.png"
+    alt: "Licensed by the Florida Department of Education"
+  - name: "ARP Certificate"
+    url: ""
+    image: "../../../static/images/badges/arp-logo-certification.png"
+    alt: "ARP Certificate"
+
+#
+# ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
+#
+
+badges:
+  position: 3
+  heading: "Premios que validan la excelencia de nuestra educación"
+
+rating_reviews:
+  position: 6
+  heading: "Lee acerca de nosotros"
+  rating_list:
+    - alt: "Career Karma"
+      image: "../../../static/images/badges/career-karma.png"
+      rating: 4.8
+      url: "https://careerkarma.com/schools/4geeks-academy/"
+    - alt: "Switchup"
+      image: "../../../static/images/badges/switchup-img.png"
+      rating: 4.89
+      url: "https://www.switchup.org/bootcamps/4geeks-academy"
+    - alt: "Course Report"
+      image: "../../../static/images/badges/course-report.png"
+      rating: 4.84
+      url: "https://www.coursereport.com/schools/4geeks-academy"
+    - alt: "Google"
+      image: "../../../static/images/badges/google.png"
+      rating: 4.9
+      url: ""
+
+program_details:
+  position: 2
+  heading: "Programa de contenido de nuestro Bootcamp de Ciberseguridad"
+  sub_heading: "Desde fundamentos hasta técnicas avanzadas de protección digital."
+
+# why_4geeks:
+#   position: 7
+#   heading: "¿Por qué 4Geeks?"
+#   sub_heading: " "
+
+geeks_vs_others:
+  position: 6
+  heading: "Compara 4Geeks Academy con otros Bootcamps en Peru"
+  # sub_heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+  total_rows: 5
+
+who_is_hiring:
+  position: 15
+  limit: 4
+  heading: "¿Quién contrata a nuestros alumnos?"
+  sub_heading: "Nos encanta ver crecer a nuestros estudiantes, es por eso que nos esforzamos cada día por tener más aliados, para que puedas trabajar en empresas que te ayuden a seguir creciendo profesionalmente."
+
+# Possible layours: [two_column_left_image, two_column_right_image]
+components:
+  - name: new_design_with_bullets
+    position: 1
+    layout: two_column_right
+    proportions: [7, 5] 
+    swipable: False
+    background: "#fbfbfb"
+    image:
+      style: '{"backgroundSize": "cover", "border": "2px solid black"}'
+      src: "/images/landing/ciberseguridad-peru.webp"
+      shadow: true
+    section_heading: 
+      text: "La Creciente Demanda de Ciberseguridad en Perú"
+      style: '{ "font-size": "30px" }'
+    heading: 
+      text: ""
+    sub_heading:
+      text: "En Perú, la ciberseguridad se ha convertido en un pilar fundamental para las organizaciones que buscan proteger sus sistemas y datos en un entorno digital cada vez más complejo."
+    button: 
+      text: "Solicitar Información"
+      color: white
+      hover_color: "white"
+      background: "black"
+      path: "#leadform_bottom"
+    content: 
+      text: ""
+      font_size: ["16px"]
+      path: ""
+    bullets:
+      items:
+      - text: "El mercado peruano de ciberseguridad está proyectado para crecer un 18% anual hasta 2025, y el sector se espera que supere los $225 millones para 2029."
+        icon: "circle" 
+      - text: "32% de incremento en las ofertas de empleo relacionadas con ciberseguridad entre 2021 y 2022."
+        icon: "circle" 
+      - text: "El sueldo promedio de un especialista en Ciberseguridad jr. en Peru es de 1.020$ USD por mes."
+        icon: "circle" 
+
+  - name: porque-bootcamp-de-ciberseguridad
+    position: 4
+    proportions: [6,6]
+    layout: two_column_left
+    background: "veryLightBlue2" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
+    image:
+      style: '{"backgroundSize": "cover", "background-position": "center"}'
+      src: "/images/landing/ciberseguridad-peru-ii.webp"
+      shadow: true
+    heading:
+      text: "Beneficios Únicos de Nuestro Bootcamp de Ciberseguridad"
+        #           xl      lg      md      sm      xs
+      font_size: ["45px", "45px", "30px", "28px", "25px"]
+    sub_heading:
+      text: "Nuestro bootcamp te ofrece una formación práctica y exhaustiva, diseñada para prepararte para los desafíos actuales en ciberseguridad. Desde ejercicios prácticos hasta acceso a una red global de contactos, te aseguramos que estarás listo para destacar en el mercado laboral peruano."
+    content:
+      style: '{}'
+      text: "¡Conviértete en un especialista en ciberseguridad y da el primer paso hacia un futuro profesional exitoso con 4Geeks Academy en Peru!"
+      font_size: ["16px"]
+    bullets:
+      items:
+      - heading: "Experiencia Práctica"
+        text: "Adquiere habilidades prácticas en ciberseguridad, alineadas con las exigencias del mercado laboral en Peru, trabajando con estándares reconocidos como ISO y NIST."
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+      - heading: "Clases Reducidas"
+        text: "Disfruta de un ambiente de aprendizaje más efectivo con un ratio de 1 profesor por cada 7 estudiantes, lo que garantiza una atención personalizada y un aprendizaje más profundo."
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+      - heading: "Mentorías Ilimitadas"
+        text: "Acceso ilimitado y de por vida a mentorías personalizadas y a una comunidad internacional de más de 5,000 profesionales, brindándote apoyo continuo en tu carrera, incluso después de graduarte."
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+    button: 
+      text: "Solicitar Información"
+      color: white
+      hover_color: "white"
+      background: "black"
+      path: "#leadform_bottom"
+
+  # - name: some_id
+  #   position: 4
+  #   layout: two_column_right
+  #   background: "#fbfbfb"
+  #   image:
+  #     style: '{ "border" : "3px solid black" }' 
+  #     shadow: true 
+  #     src: "../../../static/images/testimonials/fidel-vera-testimonio-ds.jpg"
+  #   video: "https://www.youtube.com/watch?v=zfLGOolXHWQ"
+  #   heading:
+  #     text:
+  #       "Fidel Vera De Estudiante a Profesional en Data Science"
+  #       #xl      lg     md     sm    xs
+  #     font_size: ["40px", "34px", "34px", "25px", "20px"]
+  #   content:
+  #     style: '{}'
+  #     text: "Fidel Vera, siempre interesado en el potencial de los datos, encontró en 4Geeks Academy la plataforma perfecta para convertir su afición en una carrera profesional sólida. El bootcamp de Data Science de 4Geeks Academy le brindó las herramientas y el conocimiento necesarios para desenvolverse con éxito en este campo tan demandado."
+  #     font_size: ["16px"]
+    # button:
+    #   text: "Experiencias de Éxito"
+    #   path: "#why_4geeks"
+    #   color: "white"
+    #   background: "black"
+    #   hover: "lightBlue"
+
