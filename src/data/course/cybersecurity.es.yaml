@@ -68,6 +68,9 @@ two_columns_first:
   sub_heading:
     text: "Tanto los contenidos, como los docentes del bootcamp de ciberseguridad de 4Geeks Academy han sido validados por Chema Alonso, experto en ciberseguridad. Se trata de un curso de alta calidad, con contenido actualizado en el que aprenderás a trabajar con los estándares ISO y NIST, y adquirirás experiencia práctica en técnicas de prevención de pérdida de datos (DLP), pruebas de penetración, etc. Además incluye :"
     font_size: ["16px", "16px", "16px", "16px", "16px"]
+  disclosure: 
+    text: '* Todos los beneficios relacionados con nuestra colaboración con Chema Alonso están disponibles <span style="font-weight: 600;" >únicamente</span> para nuestros estudiantes que asisten a clases en cualquiera de nuestros campus en España.'
+    style: '{"margin-top": "0px"}'
   button:
     text: "Inscríbete ahora"
     color: "white"

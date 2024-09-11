@@ -69,6 +69,8 @@ two_columns_first:
       With over 20 years of experience and recognition from industry giants like Microsoft, Chema Alonso brings unparalleled expertise to our program. His endorsement ensures cutting-edge content, alignment with ISO and NIST standards, and practical insights into essential areas such as data loss prevention (DLP) techniques and penetration testing.
       As part of our partnership, you'll gain access to:  
     font_size: ["16px", "16px", "16px", "16px", "16px"]
+  disclosure: 
+    text: '* All the benefits related to our partnership with Chema Alonso are <span style="font-weight: 600;" >only Available</span> for our students attending to classes at any of our campus in spain.'
   button:
     text: "APPLY NOW"
     color: "white"
