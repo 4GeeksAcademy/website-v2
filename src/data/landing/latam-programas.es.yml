@@ -262,7 +262,7 @@ components:
     background: "veryLightBlue" 
     image:
       style: '{"backgroundSize": "contain", "background-position": "center"}'
-      src: "/images/why-4geeks/python-image.png"
+      src: "/images/landing/landing-programas.webp"
       shadow: false
     section_heading:
       text: ""
