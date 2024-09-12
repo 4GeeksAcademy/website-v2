@@ -1,35 +1,23 @@
-- Spain:
-  - Scholarship: "Financed. From €200* per month"
-  - Payment time: "Apply for a scholarship (limited scholarship slots available)."
-  - Price: "€5,500*"
-  - Original price: "€7,800"
-  - Offer: "Launch Offer!"
+Spain:
+- Financed plan: From €200 per month, customized financing from 4 to 48 months. Scholarships available up to €2,300.
+- Pay upfront plan: €5,500 with a discount up to €2,600.
 
-- USA:
-  - Scholarship: "Full Payment"
-  - Payment time: "Pay today"
-  - Price: "$9,000"
-  - Original price: "$15,000"
-  - Offer: "40% OFF"
+USA:
+- Full Payment plan: Pay today $9,000, saving $6,000.
+- Financed plan: Pay in 3, 4, or 5 years, ~$150 per month.
 
-- Chile:
-  - Scholarship: "Cybersecurity + Career Support"
-  - Payment time: "Pay Upfront and get a discount"
-  - Price: "2.975.000 CLP*"
-  - Original price: "3.500.000 CLP*"
-  - Offer: "15% OFF"
+Chile:
+- Cybersecurity + Career Support plan: Pay upfront 2.975.000 CLP with 15% OFF.
+- Cybersecurity plan: Program only for 2.750.000 CLP.
+- Financed plan: 18 months payment, ~158.000 CLP.
 
-- Europe:
-  - Scholarship: "Financed. From €200* per month"
-  - Payment time: "Apply for a scholarship (limited scholarship slots available)."
-  - Price: "€5,500*"
-  - Original price: "€7,800"
-  - Offer: "Launch Offer!"
+Europe:
+- Financed plan: From €200 per month, customized financing from 4 to 48 months. Scholarships available up to €2,300.
+- Pay upfront plan: €5,500 with a discount up to €2,600.
 
-- LATAM:
-  - Scholarship: "Cybersecurity program + Career Support"
-  - Payment time: "We help you build your professional profile"
-  - Price: "$ 2,500 USD"
-  - Original price: "$ 3,500 USD"
+LATAM:
+- Cybersecurity + Career Support plan: $2,500 with ~28% OFF.
+- Career Support plan only.
+- Job Guaranteed Feature plan.
 
 stop
