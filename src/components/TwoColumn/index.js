@@ -291,7 +291,7 @@ const Side = ({
           </Paragraph>
         ))
       )}
-      
+
       {button && (
         <Button
           outline
