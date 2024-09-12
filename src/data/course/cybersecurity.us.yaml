@@ -70,7 +70,7 @@ two_columns_first:
       As part of our partnership, you'll gain access to:  
     font_size: ["16px", "16px", "16px", "16px", "16px"]
   disclosure: 
-    text: '* All the benefits related to our partnership with Chema Alonso are <span style="font-weight: 600;" >only Available</span> for our students attending to classes at any of our campus in spain.'
+    text: '* These benefits related to our partnership with Chema Alonso are <span style="font-weight: 600;" >only Available</span> for our students attending classes at any of our campuses in 🇪🇸 Spain.'
     style: '{"margin-top": "0px"}'
   button:
     text: "APPLY NOW"
