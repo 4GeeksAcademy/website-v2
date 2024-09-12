@@ -56,6 +56,7 @@ badges:
 
 two_columns_first:
   proportions: [6, 6]
+  #IMPORTANT: Only the locations listed here will be able to see this section
   available_locations: ["madrid-spain", "malaga-spain", "barcelona-spain", "valencia-spain"]
   image:
     style: '{"border" : "0px solid black", "backgroundSize": "contain", "background-position": "center" }'
