@@ -1,10 +1,10 @@
 meta_info:
-  slug: coding-courses-miami # <--- URL 4geeksacademy.com/us/landing/example
+  slug: miami-coding-courses # <--- URL 4geeksacademy.com/us/landing/example
 
   # This will show on social media when shared
-  title: "Coding Courses in Miami | 4Geeks Academy - Your Gateway to the Tech Industry"
-  description: "4Geeks Academy offers coding courses in Miami for high-demand tech roles."
-  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  title: "Start Your Career in Tech for Just $40/Week"
+  description: "Become a Full Stack Developer with 4Geeks Academy for only $40/week. Get certified and start your tech career today."
+  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   image: "/images/bg/the-academy-bg.jpg"
   keywords: ""
 
@@ -15,7 +15,7 @@ meta_info:
 
     # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
-  utm_course: ["full-stack", "datascience-ml", "cybersecurity", "coding-introduction"]
+  utm_course: ["full-stack"]
   utm_location: ["downtown-miami"]
   automation: soft # comma separated, "soft" is the default value
   tag: request_more_info # comma separated, "request_more_info" is the default value
@@ -30,23 +30,25 @@ form:
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
   heading: "Get more Information"
-  motivation: "Upon completion of the form, you will receive a detailed email providing information about the academy and the wide range of courses offered."
+  motivation: "Fill out the form to receive detailed information about 4Geeks Academy and all the courses we offer, delivered straight to your inbox."
   button_label: Get More Info
   redirect: null #you can redirect to another url or entirely diffrent website
 
 apply_schollarship: # form that is displayed at the end of the landing
   # title: "Apoyo Profesional Ilimitado"
-  imageSide: "right"
-  image: "../../../static/images/landing/apply.png"
+  imageSide: "left"
+  image: "../../../static/images/landing/hombre-joven-con-laptop-senalando.webp"
 
 # jumbotron on the top (cannot be commented out)
 header_data:
   background: "#ffffff"
-  tagline: Boost Your Career with Our Coding Courses in Miami
+  tagline: Start A Career In Tech for $40/Week
   tagline_color: "#1c1c1c"
-  sub_heading: ""
+  sub_heading: "Enjoy unlimited mentorship and lifetime access to career services. \n
+    Learn anywhere, anytime, you choose the format."
   form_styles:
-    background: "#FFB718"
+    background: "#0084FF"
+    color: "white"
     button:
       background: "black"
   # background_image: "../../../static/images/landing-background-men-w-laptop.webp"
@@ -128,26 +130,26 @@ rating_reviews:
       rating: 5
       url: ""
 
-# program_details:
-#   position: 3
-#   background: "#faf2e1"
-#   heading: "Master Full-Stack Development with Austin Coding Courses"
-#   sub_heading: "Dive deep into full-stack development with our detailed program that covers everything from HTML5 to advanced backend frameworks."
+program_details:
+  position: 2
+  background: "#faf2e1"
+  heading: "Master Full-Stack Development with Austin Coding Courses"
+  sub_heading: "Dive deep into full-stack development with our detailed program that covers everything from HTML5 to advanced backend frameworks."
 
-why_python:
-  position: 5
-  heading: "Why Python and React.js" # optional or set to white space to hide
-  sub_heading: "JavaScript has 26x's more job vacancies than Ruby On Rails. Python has 10x's more job vacancies than Node.js" # optional or set to white space to hide
+# why_python:
+#   position: 5
+#   heading: "Why Python and React.js" # optional or set to white space to hide
+#   sub_heading: "JavaScript has 26x's more job vacancies than Ruby On Rails. Python has 10x's more job vacancies than Node.js" # optional or set to white space to hide
 
 geeks_vs_others:
-  position: 7
-  heading: "Compare Our Miami Coding Courses vs. the Competition"
+  position: 4
+  heading: "Compare our coding bootcamp to the competition"
   # sub_heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
   total_rows: 5
 
 badges:
   position: 5
-  heading: "4Geeks Academy has awards and recognitions that validate its excellence"
+  heading: " Numerous Awards and Recognitions Celebrate Our Excellence"
 
 who_is_hiring:
   position: 9
@@ -156,28 +158,59 @@ who_is_hiring:
   sub_heading: "550+ hiring partners, and 50+ job openings right now for software development"
 
 why_4geeks:
-  position: 9
+  position: 6
   heading: "Why 4Geeks Academy"
   sub_heading: ""
 
 components:
-  - name: why_coding-two-columns
+  - name: why-4geeks-icons
     position: 1
+    background: "#fbfcfc"
+    layout: iconogram
+    swipable: True
+    heading:
+      text: "Job guarantee commitment"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      text: ""
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+      style: '{ "textAlign": "center", "width": "60%" }'
+    icons:
+      - icon: "mortar-board-icon"
+        title: ""
+        content: "Get a job within 180 days after graduation or get your money back."
+
+      - icon: "stage-dots-icon"
+        title: ""
+        content: "Go through each phase of our comprehensive career support process for job readiness."
+
+      - icon: "people-group-icon"
+        title: ""
+        content: "Connect with a network of 5,000+ hiring partners across various industries."
+
+      - icon: "hands-w-purple"
+        title: ""
+        content: "We commit to supporting your future career, ensuring your success in tech."
+
+  - name: why_choose-4geeks
+    position: 3
     proportions: [6, 6]
-    layout: two_column_right
+    layout: two_column_left
     image:
       style: '{ "backgroundSize": "contain"}'
       src: "/images/landing/blonde-girl-laptop.png"
       shadow: false
     # video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
     heading:
-      text: "Why Choose our Coding Courses in Miami?"
+      text: "Why Choose Our Coding Courses?"
         #xl      lg     md     sm    xs
       font_size: ["40px", "34px", "34px", "25px", "20px"]
     sub_heading:
       text: ""
     content:
-      text: ""
+      text: "Our programs are designed to accelerate your learning and ensure your success. Backed by years of research and experience, our teaching methods use a blend of personalized mentorship, hands-on practice, and continuous micro-feedback to keep you motivated and actively engaged in the learning process. \n
+        At 4Geeks Academy, you’ll benefit from a comprehensive support system. Our mentorship and career services offer unlimited 1-on-1 sessions with our industry experts, providing personalized guidance whenever you need it. With instant feedback on your coding exercises from our proprietary AI and 24/7 support through our active community channels, you’re never left to figure things out on your own.\n
+        Many students face self-doubt about succeeding in tech, but we’re here to build your confidence and teach you that mistakes—lots of them—are a natural and essential part of learning. Our curriculum, tools, and exercises are grounded in real-world workplace demands, ensuring that you graduate career-ready and prepared to thrive in the tech industry."
       font_size: ["16px"]
     button:
       text: "Get More Info"
@@ -185,20 +218,10 @@ components:
       color: white
       hover_color: "#white"
       path: "#leadform_header"
-    bullets:
-      items:
-        - text: "All of our programs are freedom-oriented, emphasizing mentorship and consistent micro-feedback to empower students in a blended, flexible schedule that fosters active and self-directed learning."
-          icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - text: "Our expansive mentorship network provides students with unlimited 1-on-1 sessions, available within one day or even the same day. Additionally, 24/7 support channels offer Q&A assistance and real-time instant feedback powered by our proprietary AI."
-          icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - text: "We are data-driven, making decisions and developing strategies based on key performance indicators (KPIs), data analysis, and empirical evidence, rather than relying on intuition or personal experience."
-          icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - text: "Many students, particularly those from underrepresented minorities, face challenges in believing they can succeed in tech. We help build their confidence and teach them to embrace mistakes (lots of them) as an integral part of learning. Students engage in guided experiences using the same tools and environments they will encounter in their future careers."
-          icon: "check" #string with icon for example ['check', 'cicle', etc]
 
   - name: how-it-works-programs
-    position: 2
-    background: "darkYellow"
+    position: 5
+    background: "#fbfcfc"
     layout: iconogram
     swipable: True
     heading:
@@ -223,18 +246,18 @@ components:
 
   - name: geekinfo_2
     position: 4
-    layout: two_column_left
+    layout: two_column_right
     proportions: [6, 6]
-    background: "lightYellow2"
+    background: ""
     image:
-      style: '{ "backgroundSize": "cover", "border":"2px solid black"}'
-      src: "/images/locations/miami-dia.jpg"
-      shadow: true
+      style: '{ "backgroundSize": "contain"}'
+      src: "/images/landing/meet-windows-group-en.webp"
+      shadow: false
     section_heading:
       text: ""
       style: '{ "font-size": "30px" }'
     heading:
-      text: "Discover the Advantages of Joining Our Coding Courses in Miami"
+      text: "Unique Features That Set Us Apart"
       font_size: ["40px", "40px", "40px", "40px", "40px"]
     sub_heading:
       text: ""
@@ -252,28 +275,32 @@ components:
       path: ""
     bullets:
       items:
-        - text: "Miami's tech industry is booming, attracting over $1 billion in startup investments in recent years. This growth is creating thousands of well-paying tech jobs, with an average salary of $104,542."
-          icon: "circle" #string with icon for example ['check', 'cicle', etc]
-        - text: "Miami serves as a gateway to Latin America and the Caribbean, offering unique global networking and business expansion opportunities in a diverse, multicultural environment."
-          icon: "circle" #string with icon for example ['check', 'cicle', etc]
-        - text: "Compared to major tech cities like San Francisco, Miami offers a lower cost of living, making it easier for tech professionals to maintain a high quality of life."
-          icon: "circle" #string with icon for example ['check', 'cicle', etc]
-        - text: "The city's tech ecosystem is diverse, with career paths in software development, cybersecurity, data science, and more, supported by a thriving community and numerous industry events."
-          icon: "circle" #string with icon for example ['check', 'cicle', etc]
+        - heading: "STUDENT-CENTRIC APPROACH"
+          text: "Small classes and 1:1 mentorship ensure personalized attention for each student."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "INDUSTRY-DRIVEN CURRICULUM"
+          text: "Courses designed to meet the demands of today’s tech employers."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "LIFELONG CAREER SUPPORT"
+          text: "Extensive alumni network and career services that continue beyond graduation."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "HANDS-ON LEARNING"
+          text: "Practical experience through project-based learning and real-world scenarios."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
 
   - name: some_id
-    position: 6
-    layout: two_column_right
+    position: 7
+    layout: two_column_left
     image:
       src: "/images/testimonials/allisa-testimonial.jpg"
       shadow: true
     video: "TCHASxvkhpI"
     heading:
-      text: "Discover Opportunities in Coding Courses Miami"
+      text: "Join our bootcamp with one of our financing plans and access award-winning coding education without straining your finances"
         #xl      lg     md     sm    xs
       font_size: ["40px", "34px", "34px", "25px", "20px"]
     content:
-      text: "Meet Alissa, the Campus Manager at 4Geeks Academy Miami. In this video, Alissa shares how our team is committed to supporting students throughout South Florida. We partner with organizations like Miami Tech Works, United Way Miami, and Clark University to provide full and partial scholarships for Miami-Dade and Broward county residents. As a bootcamp deeply rooted in Miami, we prioritize making these opportunities accessible to our community. If you’re ready to take advantage of these scholarships and launch your tech career, contact our admissions team today. Alissa and our dedicated staff are here to guide you every step of the way."
+      text: ""
       font_size: ["16px"]
     button:
       text: "Get More Info"
@@ -281,3 +308,18 @@ components:
       color: white
       hover_color: "#white"
       path: "#leadform_header"
+    bullets:
+      items:
+        - text: "Lifelong and readily available coding mentorship"
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - text: "Unlimited and personalized career support"
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - text: "Award-winning syllabus and methodology"
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - text: "An extensive network of partners in tech"
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+
+
+      
+
+
