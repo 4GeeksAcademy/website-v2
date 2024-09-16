@@ -292,15 +292,16 @@ components:
     position: 7
     layout: two_column_left
     image:
-      src: "/images/testimonials/allisa-testimonial.jpg"
+      style: '{"border": "3px solid black"}'
+      src: "/images/landing/alissa-video.webp"
       shadow: true
-    video: "TCHASxvkhpI"
+    video: "EcqasocRKHo"
     heading:
       text: "Join our bootcamp with one of our financing plans and access award-winning coding education without straining your finances"
         #xl      lg     md     sm    xs
       font_size: ["40px", "34px", "34px", "25px", "20px"]
     content:
-      text: ""
+      text: "Based on years of research and experience, we've perfected the method and tools to optimize your learning curve and overall success rate. Listen to our campus manager Alissa as she explains the features that will keep you engaged, motivated, and on track to achieve your career goals."
       font_size: ["16px"]
     button:
       text: "Get More Info"
@@ -308,18 +309,13 @@ components:
       color: white
       hover_color: "#white"
       path: "#leadform_header"
-    bullets:
-      items:
-        - text: "Lifelong and readily available coding mentorship"
-          icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - text: "Unlimited and personalized career support"
-          icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - text: "Award-winning syllabus and methodology"
-          icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - text: "An extensive network of partners in tech"
-          icon: "check" #string with icon for example ['check', 'cicle', etc]
-
-
-      
-
-
+    # bullets:
+    #   items:
+    #     - text: "Lifelong and readily available coding mentorship"
+    #       icon: "check" #string with icon for example ['check', 'cicle', etc]
+    #     - text: "Unlimited and personalized career support"
+    #       icon: "check" #string with icon for example ['check', 'cicle', etc]
+    #     - text: "Award-winning syllabus and methodology"
+    #       icon: "check" #string with icon for example ['check', 'cicle', etc]
+    #     - text: "An extensive network of partners in tech"
+    #       icon: "check" #string with icon for example ['check', 'cicle', etc]
