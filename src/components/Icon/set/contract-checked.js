@@ -1,7 +1,7 @@
 import React from "react";
 
 export default (props) => (
-<svg
+  <svg
     style={props.style}
     width={props.width || "24"}
     height={props.height || "24"}
