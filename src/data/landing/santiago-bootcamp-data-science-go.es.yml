@@ -40,7 +40,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 # jumbotron on the top (cannot be commented out)
 header_data:
   background: "#FFF1D1"
-  tagline: Conviértete en un Experto en Data Science
+  tagline: Conviértete en un especialista en Data Science
   sub_heading: "Aprende con los mejores y domina el mundo de los datos en Santiago"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
