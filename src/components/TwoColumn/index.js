@@ -17,6 +17,7 @@ const Side = ({
   heading,
   sub_heading,
   content,
+  disclosure,
   button,
   bullets,
   boxes,
@@ -251,6 +252,39 @@ const Side = ({
             onClick={(e) => {
               if (e.target.tagName === "A" && content.path)
                 smartRedirecting(e, content.path);
+            }}
+          >
+            {p}
+          </Paragraph>
+        ))
+      )}
+
+      {disclosure && /<\/?[a-z0-9]+>/g.test(disclosure.text) ? (
+        <Paragraph
+          textAlign="left"
+          textAlign_tablet="left"
+          margin="10px 0"
+          fontSize="13px"
+          style={disclosure.style ? JSON.parse(disclosure.style) : null}
+          dangerouslySetInnerHTML={{ __html: disclosure.text }}
+          onClick={(e) => {
+            if (e.target.tagName === "A" && disclosure.path)
+              smartRedirecting(e, disclosure.path);
+          }}
+        />
+      ) : (
+        disclosure &&
+        disclosure.text.split("\n").map((p, i) => (
+          <Paragraph
+            key={`${i}-${p}`}
+            textAlign="left"
+            textAlign_tablet="left"
+            margin="10px 0"
+            fontSize="13px"
+            style={disclosure.style ? JSON.parse(disclosure.style) : null}
+            onClick={(e) => {
+              if (e.target.tagName === "A" && disclosure.path)
+                smartRedirecting(e, disclosure.path);
             }}
           >
             {p}

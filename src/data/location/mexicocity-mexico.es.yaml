@@ -64,7 +64,7 @@ info_box:
   heading: "Encuéntranos en Mexico"
   address: ""
   iframeMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1126.521243034489!2d-80.20142868794088!3d25.759937884725943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b153865e526d%3A0xf884fb3f86a9c7db!2s4Geeks%20Academy!5e0!3m2!1ses-419!2scl!4v1621010581768!5m2!1ses-419!2scl"
-  phone: Llámanos +58 412 2326485
+  phone: Llámanos 
   whatsapp: +58 412 2326485
   whatsapp_link: "https://wa.me/+5804122326485"
   email: "latam@4geeksacademy.com"
@@ -125,6 +125,11 @@ consents:
     active: false
     message: 'Al completar este formulario acepto que mi información será utilizada para enviarme información comercial sobre 4Geeks Academy y que podría resultar una relación comercial a partir de esto. Revisa nuestra <a style={{ marginLeft: "5px" }} target="_blank" rel="noopener noreferrer nofollow" className="decorated" href="/es/privacidad">Política de Privacidad</a>'
     error_message: "Debes aceptar el consent de GDPR"
+  - slug: "wa_consent"
+    name: "WhatsApp Consent"
+    active: true
+    message: 'Acepto recibir información vía email, WhatsApp y/o otros canales sobre talleres de programación, eventos, cursos y otros materiales de marketing. Nunca compartiremos tu información de contacto y puedes darte de baja fácilmente en cualquier momento.'
+    error_message: "Debes aceptar el consentimiento de Whatsapp."
 
 city: "Mexico City"
 name: "Mexico"
@@ -133,7 +138,7 @@ longitude: "-99.159580"
 address: ""#Hamburgo 26, Juárez, Cuauhtémoc, 06600 Ciudad de México, CDMX, Mexico
 zip_code: ""
 state: ""
-phone: "+58 412 2326485"
+phone: ""
 country: "Mexico"
 country_shortname: "mx"
 socials:

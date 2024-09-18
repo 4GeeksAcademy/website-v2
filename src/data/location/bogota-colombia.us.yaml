@@ -67,7 +67,7 @@ info_box:
   address: "Only remotely in Colombia"
   iframeMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1126.521243034489!2d-80.20142868794088!3d25.759937884725943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b153865e526d%3A0xf884fb3f86a9c7db!2s4Geeks%20Academy!5e0!3m2!1ses-419!2scl!4v1621010581768!5m2!1ses-419!2scl"
   contact_heading: "Contacts"
-  phone: "Call us +58 412 2326485"
+  phone: "Call us "
   whatsapp: +58 412 2326485
   whatsapp_link: "https://wa.me/+5804122326485"
   email: "latam@4geeksacademy.com"
@@ -131,6 +131,11 @@ consents:
     active: false
     message: 'By submitting this form, I accept that my data may be used for a quote request that could result in a commercial relationship. Check out our complete <a style={{ marginLeft: "5px" }} target="_blank" rel="noopener noreferrer nofollow" className="decorated" href="/us/privacy-policy">Privacy Policy</a>'
     error_message: "You need to accept the privacy terms"
+  - slug: "wa_consent"
+    name: "WhatsApp Consent"
+    active: true
+    message: "I agree to receive information through email, WhatsApp, and/or other channels about coding workshops, events, courses, and other marketing materials. We'll never share your contact information, and you can easily opt out at any moment."
+    error_message: "You need to accept Whatsapp consent"
 
 city: "Bogotá"
 name: "Colombia"

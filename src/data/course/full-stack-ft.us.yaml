@@ -119,7 +119,7 @@ details:
       list:
         - label: "Duration"
           content:  "9 Weeks"
-          icon: "calendar"
+          icon: "duration-icon"
         - label: "Classes"
           content: "4 Classes weekly"
           icon: "book"
@@ -127,13 +127,13 @@ details:
           content: "Full-Stack Developer"
           link_text: "See example"
           link: "https://certificate.breatheco.de/4ae7a46bba78dc19b823e124fea120c17b45e044"
-          icon: "certificate"
+          icon: "certificate-icon"
         - label: "Requisites"
           content: "No previous coding skills or advanced math are required."
           icon: "contract-checked"
         - label: "Language"
           content: "You can choose between English and Spanish for the syllabus and content. Live classes are taught in the language of your campus."
-          icon: "contract-checked"
+          icon: "language"
           
   heading: PROGRAM DETAILS FULL-TIME
   weeks: 9

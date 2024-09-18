@@ -196,6 +196,7 @@ const Cybersecurity = ({ data, pageContext, yml }) => {
           sub_heading: yml.two_columns_first?.sub_heading,
           bullets: yml.two_columns_first?.bullets,
           content: yml.two_columns_first?.content,
+          disclosure: yml.two_columns_first?.disclosure,
           button: yml.two_columns_first?.button,
         }}
         proportions={yml.two_columns_first?.proportions}
@@ -573,6 +574,10 @@ export const query = graphql`
             sub_heading {
               text
               font_size
+            }
+            disclosure {
+              text
+              style
             }
             button {
               text
