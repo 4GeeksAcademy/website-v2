@@ -37,7 +37,7 @@ form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
-  heading: "Opten más información"
+  heading: "Obtén más información"
   motivation: "Una vez que hayas completado el formulario, recibirás detalles completos sobre los programas, opciones de financiamiento y certificaciones disponibles."
   button_label: Más información
   redirect: null #you can redirect to another url or entirely diffrent website
