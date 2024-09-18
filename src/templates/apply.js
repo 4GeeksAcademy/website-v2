@@ -686,7 +686,7 @@ const Apply = (props) => {
                 variant="full"
                 type="submit"
                 margin="2rem auto"
-                margin_tablet="2rem 0 2rem auto"
+                margin_tablet="2rem 0 0 auto"
                 width="100%"
                 textAlign="center"
                 display="block"
@@ -704,6 +704,28 @@ const Apply = (props) => {
                   ? "Loading..."
                   : yml.left.button.button_text}
               </Button>
+              <Paragraph
+                fontSize="10px"
+                textAlign="left"
+              >
+                {yml.left.terms.agree_terms_text}
+                {' '}
+                <a
+                  href={yml.left.terms.terms_and_conditions_link}
+                  target="_blank"
+                >
+                  {yml.left.terms.terms_and_conditions}
+                </a>
+                {' '}
+                {yml.left.terms.connector_and}
+                {' '}
+                <a
+                  href={yml.left.terms.privacy_policy_link}
+                  target="_blank"
+                >
+                  {yml.left.terms.privacy_policy}
+                </a>
+              </Paragraph>
             </Div>
             <Modal
               show={showModal}
@@ -818,6 +840,14 @@ export const query = graphql`
             button {
               button_text
               button_link
+            }
+            terms {
+              agree_terms_text
+              terms_and_conditions
+              terms_and_conditions_link
+              privacy_policy
+              privacy_policy_link
+              connector_and
             }
             form_section {
               first_name
