@@ -8,6 +8,30 @@ institutions: Instituciones que contribuyeron
 press: Referencias en prensa
 see_project: Mira el proyecto completo
 projects:
+  - name: Costa Rica, Forte y 4Geeks Academy
+    image:
+      alt: costa rica, forte y 4Geeks
+      src: "../../../../static/images/crusa-forte-scholarship.webp"
+    description: En colaboración con Crusa y Forte, 4Geeks Academy se ha unido al modelo FORTE para impulsar el talento en Costa Rica. Este programa ha capacitado a más de 35 estudiantes, enfocándose en mujeres de zonas con alto desempleo, en tecnologías digitales de alta demanda. A través del programa, los participantes reciben formación sin costo, permitiéndoles acceder a mejores empleos en la industria 4.0 y contribuir al crecimiento económico del país.
+    details:
+      cost: $50,000
+      geeks_benefited: 35
+    institutions:
+      - name: BID
+        logo: "../../../../static/images/partner/bid-logo.webp"
+      - name: Crusa
+        logo: "../../../../static/images/partner/crusa-logo.webp"
+      - name: MICITT
+        logo: "../../../../static/images/partner/micitt-logo.webp"
+      - name: 4Geeks Academy
+        logo: "../../../../static/images/4G_logo_negro.png"
+    press:
+      - name: Periodico Mensaje
+        link: https://www.periodicomensaje.com/educacion/11609-mas-de-100-mujeres-concluyeron-formacion-en-tecnologias-digitales-gracias-a-la-alianza-crusa-forte
+      - name: La Republica
+        link: https://www.larepublica.net/noticia/mas-de-100-mujeres-se-formaron-en-tecnologias-digitales-para-aumentar-sus-oportunidades-de-empleo
+    pdf: https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/FORTE%20Report.pdf
+
   - name: United Way Miami y 4Geeks Academy
     image:
       alt: typing
