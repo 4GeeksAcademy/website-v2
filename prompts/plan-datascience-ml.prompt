@@ -1,6 +1,29 @@
-- Spain: Pay upfront and get a ~30% discount. Price: €5,200.
-- USA: Full payment option for $11,999. There is also a scholarship option for $4,999.
-- Chile: Program + career support for 3.375.000 CLP (~$4,400). Data science program only for 3.750.000 CLP (~$4,900).
-- Europe: Pay upfront and get ~30% discount. Price: €5,200.
-- LATAM: Data science program + career support for $3,600 with 28% discount.
+Spain: 
+- Pay upfront and get a discount: €5,200*
+- Financed, starting at €200 per month
+- Income Share Agreement (ISA), pay when income exceeds €16,000 per year
+stop 
+
+USA: 
+- Full Payment: $11,999
+- Scholarship: $4,999
+- Financed: $310 p/m
+stop
+
+Chile: 
+- Program + Career Support: 3.375.000 CLP*
+- Data Science Program Only: 3.750.000 CLP*
+- Financed: ~220.500 CLP p/m
+stop 
+
+Europe: 
+- Pay upfront and get a discount: €5,200*
+- Financed, starting at €200 per month
+- Income Share Agreement (ISA), pay when income exceeds €16,000 per year
+stop 
+
+LATAM: 
+- Data Science program + Career Support: $3,600
+- Pay upfront and get a discount: $3,600
+- Financed: payment plan available
 stop
