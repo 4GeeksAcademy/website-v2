@@ -9,7 +9,7 @@ meta_info:
   region: "usa-canada"
   dialCode: "1"
   related_clusters: ["desarrollador-full-stack"]
-  
+
   # ⬇️ cohort_include_regex field is used to filter cohorts on the calendar that only test successfully for a particular regex
   # for example: for this location, only show cohorts starting with usa-xx-spanish
   cohort_include_regex: ["miami"]
@@ -47,7 +47,7 @@ badges:
   # use the pipe operator ' | ' instead, like the example below
   paragraph: |
     4Geeks Academy es el lugar donde los desarrolladores crecen y prosperan.
-  
+
     Estamos autorizados por el Departamento de Educación de Florida.
       
     Elegido como uno de los 35 mejores bootcamps de codificación del mundo y el mejor bootcamp de codificación en Atlanta según SwitchUp.
@@ -68,7 +68,7 @@ two_columns:
   image:
     style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
     src: "/static/images/testimonials/allisa-testimonial.jpg"
-    shadow: true  
+    shadow: true
   video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
   heading:
     text: "Aprende a programar desde Atlanta"
@@ -82,15 +82,14 @@ two_columns:
     background: "black"
     path: "/es/aplica"
   bullets:
-    items: 
-    - text: "Proyectos prácticos donde obtendrás un dominio de las herramientas."
-    - text: "Plan de estudios alineado con la industria para estar listo para el mundo real"
-    - text: "Apoyo profesional para navegar la próspera industria tecnológica de Atlanta"
+    items:
+      - text: "Proyectos prácticos donde obtendrás un dominio de las herramientas."
+      - text: "Plan de estudios alineado con la industria para estar listo para el mundo real"
+      - text: "Apoyo profesional para navegar la próspera industria tecnológica de Atlanta"
 
 staff:
   heading: "Meet your Staff"
   sub_heading: ""
-
 
 info_box:
   heading: "Encuéntranos en Atlanta"
@@ -116,7 +115,6 @@ images_box:
     - path: "../../../static/images/locations/miami-people.jpeg"
       alt: "4Geeeks miami lab"
   layout_horizontal: true #false == mode mosaic
-
 
 active_campaign_location_slug: "atlanta-usa"
 breathecode_location_slug: "atlanta-usa"
