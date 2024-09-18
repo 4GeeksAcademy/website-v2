@@ -704,25 +704,16 @@ const Apply = (props) => {
                   ? "Loading..."
                   : yml.left.button.button_text}
               </Button>
-              <Paragraph
-                fontSize="10px"
-                textAlign="left"
-              >
-                {yml.left.terms.agree_terms_text}
-                {' '}
+              <Paragraph fontSize="10px" textAlign="left">
+                {yml.left.terms.agree_terms_text}{" "}
                 <a
                   href={yml.left.terms.terms_and_conditions_link}
                   target="_blank"
                 >
                   {yml.left.terms.terms_and_conditions}
-                </a>
-                {' '}
-                {yml.left.terms.connector_and}
-                {' '}
-                <a
-                  href={yml.left.terms.privacy_policy_link}
-                  target="_blank"
-                >
+                </a>{" "}
+                {yml.left.terms.connector_and}{" "}
+                <a href={yml.left.terms.privacy_policy_link} target="_blank">
                   {yml.left.terms.privacy_policy}
                 </a>
               </Paragraph>

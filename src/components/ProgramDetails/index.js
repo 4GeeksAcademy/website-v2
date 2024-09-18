@@ -298,7 +298,7 @@ const ProgramDetails = (props) => {
                   height_xs="auto"
                 >
                   <Div>
-                    <Icon icon="rocket-icon-new" width="46px" height="46px"/>
+                    <Icon icon="rocket-icon-new" width="46px" height="46px" />
                   </Div>
                   <Div flexDirection="column" margin="0 0 0 15px">
                     <H3
