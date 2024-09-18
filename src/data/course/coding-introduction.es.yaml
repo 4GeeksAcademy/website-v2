@@ -123,7 +123,7 @@ details:
     list:
       - label: "Duración"
         content: "9 Semanas"
-        icon: "calendar"
+        icon: "duration-icon"
       - label: "Clases"
         content: "En línea"
         icon: "book"
@@ -132,7 +132,7 @@ details:
         icon: "contract-checked"
       - label: "Idioma"
         content: "Inglés y Español"
-        icon: "contract-checked"
+        icon: "language"
 
   heading: "Bootcamp de Desarrollo Full Stack a Tiempo Parcial"
   weeks: 9

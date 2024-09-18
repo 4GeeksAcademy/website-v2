@@ -67,8 +67,11 @@ two_columns_first:
   sub_heading:
     text: |-
       With over 20 years of experience and recognition from industry giants like Microsoft, Chema Alonso brings unparalleled expertise to our program. His endorsement ensures cutting-edge content, alignment with ISO and NIST standards, and practical insights into essential areas such as data loss prevention (DLP) techniques and penetration testing.
-      As part of our partnership, you'll gain access to:  
+      As part of our partnership, students from our campus in Spain will gain access to:  
     font_size: ["16px", "16px", "16px", "16px", "16px"]
+  disclosure: 
+    text: '* These benefits related to our partnership with Chema Alonso are <span style="font-weight: 600;" >only Available</span> for our students attending classes at any of our campuses in 🇪🇸 Spain.'
+    style: '{"margin-top": "0px"}'
   button:
     text: "APPLY NOW"
     color: "white"
@@ -180,18 +183,18 @@ details:
     list:
       - label: "Duration"
         content: "16 weeks"
-        icon: "calendar"
+        icon: "duration-icon"
       - label: "Classes"
         content: "3 live online classes per week"
         icon: "book"
       - label: "Class Size"
         content: "Up to 16 people"
-        icon: "laptop"
+        icon: "people-class-icon"
       - label: "Certificate"
         content: "Official 4Geeks Completion Certificate, recognized by multiple institutions."
         link_text: ""
         link: ""
-        icon: "certificate"
+        icon: "certificate-icon"
       - label: "Requirements"
         content: "No previous experience is required"
         icon: "contract-checked"
