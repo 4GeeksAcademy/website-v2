@@ -1,14 +1,26 @@
-Spain: Scholarship: Pay upfront and get a discount. Price: €3000. 
+Spain:
+- Scholarship for part-time courses. Pay upfront and get a discount. Price: €3000*
+- *Discount up to €500. From €3500 to €3000
+stop
 
-USA: Scholarship: Full Payment. Price: $3000. 
-Scholarship: Financed (12 months). Price: ~$266 p/m. 
-Scholarship: Financed (24 months). Price: ~$145 p/m. 
+USA:
+- Scholarship for part-time courses. Pay today and get a special $500 discount. Price: $3000
+- Scholarship for financed courses. Pay in 12 months. Price: ~$266 p/m
+- Scholarship for financed courses. Pay in 24 months. Price: ~$145 p/m
+stop
 
-Chile: Scholarship: Pay upfront and get a discount. Price: 700.000 CLP. 
-Scholarship: Financed (12 months). Price: Starting from 58.000 CLP. 
+Chile:
+- Scholarship for part-time courses. Pay upfront and get a discount. Price: 700.000 CLP*
+- *Discount of 300.000 CLP OFF
+- Scholarship for financed courses. 12 months payment. Price: Starting from 58.000 CLP
+stop
 
-Europe: Scholarship: Pay upfront and get a discount. Price: €3000. 
+Europe:
+- Scholarship for part-time courses. Pay upfront and get a discount. Price: €3000*
+- *Discount up to €500. From €3500 instead of €3000
+stop
 
-Latam: Scholarship: Pay upfront and save $500. Price: USD $1.399.
-
+LATAM:
+- Scholarship for part-time courses. Pay upfront and save $500. Price: USD $1.399
+- *Discount of 44% OFF. From $2.500 to $1.399
 stop
