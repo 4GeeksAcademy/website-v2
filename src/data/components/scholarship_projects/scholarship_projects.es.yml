@@ -12,9 +12,9 @@ projects:
     image:
       alt: costa rica, forte y 4Geeks
       src: "../../../../static/images/crusa-forte-scholarship.webp"
-    description: En colaboración con el MICITT y el BID, 4Geeks Academy se ha unido al modelo FORTE para impulsar el talento en Costa Rica. Este programa ha capacitado a más de 200 estudiantes, enfocándose en mujeres de zonas con alto desempleo, en tecnologías digitales de alta demanda. A través del programa Geek Forte, los participantes reciben formación sin costo, permitiéndoles acceder a mejores empleos en la industria 4.0 y contribuir al crecimiento económico del país.
+    description: En colaboración con Crusa y Forte, 4Geeks Academy se ha unido al modelo FORTE para impulsar el talento en Costa Rica. Este programa ha capacitado a más de 35 estudiantes, enfocándose en mujeres de zonas con alto desempleo, en tecnologías digitales de alta demanda. A través del programa, los participantes reciben formación sin costo, permitiéndoles acceder a mejores empleos en la industria 4.0 y contribuir al crecimiento económico del país.
     details:
-      cost: $1.5M
+      cost: $50,000
       geeks_benefited: 35
     institutions:
       - name: BID
