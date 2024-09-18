@@ -6,7 +6,7 @@ meta_info:
   description: "Aprende ciberseguridad en Argentina con 4Geeks Academy. Inscríbete hoy y adquiere las habilidades para proteger el futuro digital."
   image: "/images/bg/main-bg.jpg"
   keywords: ""
-  visibility: "unlisted" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   template: "landing_a" # <--- choose your landing template
   # <--- URL redirections to avoid 404 errors
   redirects: []
@@ -26,13 +26,13 @@ follow_bar:
     # devices:    XL      LG      MD      SM       XS
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:
-    text: "Más Información"
+    text: "Descarga más información"
     path: "#leadform_header"
   phone: 
     text: ""
 
 navbar:
-  buttonText: "Más información"
+  buttonText: "Descargar información"
   buttonUrl: "#leadform_bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
   logoUrl: "#"
 
@@ -40,9 +40,9 @@ form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
-  heading: "Rellena el formulario"
-  motivation: "Completa el formulario y en menos de 5 minutos tendrás toda la información, Recibe detalles completos del curso y opciones de financiamiento en tu correo."
-  button_label: Obtener Más Información
+  heading: "Descarga detalles del curso"
+  motivation: "Obtén un PDF en tu correo con detalles del curso y opciones de financiamiento rápidamente en menos de 5 minutos."
+  button_label: Más Información
   redirect: "/es/gracias/?lang=es"  #you can redirect to another url or entirely diffrent website
 
 apply_schollarship: # form that is displayed at the end of the landing
@@ -109,7 +109,7 @@ badges:
 
 rating_reviews:
   position: 6
-  heading: "Lee acerca de nosotros"
+  heading: "Valoraciones de nuestra academia"
   rating_list:
     - alt: "Career Karma"
       image: "../../../static/images/badges/career-karma.png"
@@ -133,10 +133,10 @@ program_details:
   heading: "Programa de Contenidos de Nuestro Curso de Ciberseguridad"
   sub_heading: "Aprende a proteger sistemas y datos con las técnicas más avanzadas."
 
-# why_4geeks:
-#   position: 7
-#   heading: "¿Por qué 4Geeks?"
-#   sub_heading: " "
+why_4geeks:
+  position: 10
+  heading: ""
+  sub_heading: ""
 
 geeks_vs_others:
   position: 6
@@ -182,7 +182,7 @@ components:
       - text: "Los especialistas en ciberseguridad en Argentina pueden ganar entre $120,000 y $800,000 ARS mensuales, dependiendo de la experiencia."
         icon: "circle" 
     button: 
-      text: "Más Información"
+      text: "Descarga más información"
       color: white
       hover_color: "white"
       background: "black"
@@ -220,7 +220,7 @@ components:
         text: "Conéctate a una comunidad internacional de más de 5,000 profesionales, brindándote apoyo continuo en tu carrera, incluso después de graduarte."
         icon: "check" #string with icon for example ['check', 'cicle', etc]
     button: 
-      text: "Más Información"
+      text: "Descarga más información"
       color: white
       hover_color: "white"
       background: "black"

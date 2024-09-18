@@ -26,13 +26,13 @@ follow_bar:
     # devices:    XL      LG      MD      SM       XS
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:
-    text: "Más Información"
+    text: "Descargar información"
     path: "#leadform_header"
   phone: 
     text: ""
 
 navbar:
-  buttonText: "Más información"
+  buttonText: "Descargar información"
   buttonUrl: "#leadform_bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
   logoUrl: "#"
 
@@ -40,9 +40,9 @@ form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
-  heading: "Completa el Formulario"
-  motivation: "Una vez que completes el formulario en menos de 5 minutos tendrás toda la información, Recibe detalles completos del curso y opciones de financiamiento en tu correo."
-  button_label: Obtener Más Información
+  heading: "Descargar información"
+  motivation: "En menos 5 minutos tendrás en tu correo toda la información del curso y las opciones de financiamiento."
+  button_label: Descargar información
   redirect: "/es/gracias/?lang=es"  #you can redirect to another url or entirely diffrent website
 
 apply_schollarship: # form that is displayed at the end of the landing
@@ -109,7 +109,7 @@ badges:
 
 rating_reviews:
   position: 6
-  heading: "Lee acerca de nosotros"
+  heading: "Calificaciones de nuestra academia"
   rating_list:
     - alt: "Career Karma"
       image: "../../../static/images/badges/career-karma.png"
@@ -133,10 +133,10 @@ program_details:
   heading: "Programa de Contenidos de Nuestro Curso de Ciberseguridad"
   sub_heading: "De cero a especialista en ciberseguridad. Aprende a proteger sistemas y datos con las técnicas más avanzadas."
 
-# why_4geeks:
-#   position: 7
-#   heading: "¿Por qué 4Geeks?"
-#   sub_heading: " "
+why_4geeks:
+  position: 10
+  heading: ""
+  sub_heading: ""
 
 geeks_vs_others:
   position: 6
@@ -182,7 +182,7 @@ components:
       - text: "Los profesionales de alto nivel, como los CISOs (Chief Information Security Officers), pueden ganar hasta 2,559,947 UYU (alrededor de $63,000 USD) al año, dependiendo de su experiencia y certificaciones."
         icon: "circle" 
     button: 
-      text: "Más Información"
+      text: "Descarga más información"
       color: white
       hover_color: "white"
       background: "black"
@@ -220,7 +220,7 @@ components:
         text: "Conéctate a una comunidad internacional de más de 5,000 profesionales, brindándote apoyo continuo en tu carrera, incluso después de graduarte."
         icon: "check" #string with icon for example ['check', 'cicle', etc]
     button: 
-      text: "Más Información"
+      text: "Descarga más información"
       color: white
       hover_color: "white"
       background: "black"

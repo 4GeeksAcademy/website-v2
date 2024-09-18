@@ -6,7 +6,7 @@ meta_info:
   description: "Aprende ciberseguridad en Costa Rica con 4Geeks Academy. Inscríbete hoy y adquiere las habilidades necesarias para proteger el futuro digital."
   image: "/images/bg/main-bg.jpg"
   keywords: ""
-  visibility: "unlisted" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   template: "landing_a" # <--- choose your landing template
   # <--- URL redirections to avoid 404 errors
   redirects: []
@@ -19,7 +19,7 @@ meta_info:
   tag: website-lead # comma separated, "request_more_info" is the default value
 
 navbar:
-  buttonText: "Solicitar información"
+  buttonText: "Descarga más información"
   buttonUrl: "#leadform_bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
   logoUrl: "#"
 
@@ -27,9 +27,9 @@ form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
-  heading: "Recibe más información"
-  motivation: "Al completar el formulario, recibirás información detallada sobre el curso y opciones de financiamiento. Te enviaremos un correo en menos de 5 minutos."
-  button_label: Solicitar información
+  heading: "Descarga más información"
+  motivation: "Descarga a toda la información del curso y opciones de financiamiento en tu correo en 5 minutos.."
+  button_label: Descarga más información
   redirect: "/es/gracias/?lang=es"  #you can redirect to another url or entirely diffrent website
 
 apply_schollarship: # form that is displayed at the end of the landing
@@ -108,7 +108,7 @@ badges:
 
 rating_reviews:
   position: 6
-  heading: "Lee acerca de nosotros"
+  heading: "Clasificaciones de nuestra academia"
   rating_list:
     - alt: "Career Karma"
       image: "../../../static/images/badges/career-karma.png"
@@ -132,10 +132,10 @@ program_details:
   heading: "Programa de nuestro Bootcamp de Ciberseguridad"
   sub_heading: "Desde fundamentos básicos hasta técnicas avanzadas."
 
-# why_4geeks:
-#   position: 7
-#   heading: "¿Por qué 4Geeks?"
-#   sub_heading: " "
+why_4geeks:
+  position: 10
+  heading: ""
+  sub_heading: ""
 
 geeks_vs_others:
   position: 6
@@ -169,7 +169,7 @@ components:
     sub_heading:
       text: "Con el avance de la digitalización en Costa Rica, la demanda de expertos en ciberseguridad ha aumentado significativamente. Este Bootcamp te preparará para enfrentar estos desafíos y te posicionará como un especialista en el campo de la ciberseguridad en Costa Rica."
     button: 
-      text: "Solicitar Información"
+      text: "Descarga más información"
       color: white
       hover_color: "white"
       background: "black"
@@ -218,7 +218,7 @@ components:
         text: "Acceso ilimitado y de por vida a mentorías personalizadas y a una comunidad internacional de más de 5,000 profesionales, brindándote apoyo continuo en tu carrera, incluso después de graduarte."
         icon: "check" #string with icon for example ['check', 'cicle', etc]
     button: 
-      text: "Solicitar Información"
+      text: "Descarga más información"
       color: white
       hover_color: "white"
       background: "black"
