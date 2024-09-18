@@ -15,7 +15,7 @@ meta_info:
 
     # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
-  utm_course: ["full-stack", "datascience-ml", "cybersecurity", "coding-introduction"]
+  utm_course: ["full-stack", "datascience-ml", "cybersecurity", "coding-introduction", "applied-ai"]
   utm_location: ["downtown-miami"]
   automation: soft # comma separated, "soft" is the default value
   tag: request_more_info # comma separated, "request_more_info" is the default value
@@ -44,8 +44,7 @@ header_data:
   background: "#ffffff"
   tagline: Start A Career In Tech for $40/Week
   tagline_color: "#1c1c1c"
-  sub_heading: "Enjoy unlimited mentorship and lifetime access to career services. \n
-    Learn anywhere, anytime, you choose the format."
+  sub_heading: "Enjoy unlimited mentorship and lifetime access to career services."
   form_styles:
     background: "#0084FF"
     color: "white"
@@ -63,7 +62,7 @@ features:
   bullets:
     - Become a Full-Stack Developer, Data Scientist, or Cybersecurity Specialist!
     - Enjoy unlimited mentorship and lifetime access to career services.
-    - Miami is emerging as a major hub for tech startups and innovation, drawing in global talent and entrepreneurs.
+    - Learn anywhere, anytime—choose the format that suits you.
     # - "Part-time: Immerse yourself in a flexible schedule, perfect for busy professionals and students."
 
 short_badges:
@@ -181,8 +180,8 @@ components:
         content: "Become a Full Stack software developer using Python, React, and Javascript. Master the most sought-after- skills and land a job as a developer."
 
       - icon: "machine"
-        title: "Data Science and ML"
-        content: "Equip yourself with the tools to analyze data and automate decision-making processes."
+        title: "DATA SCIENCE AND MACHINE LEARNING"
+        content: "Acquire the skills to analyze complex data and leverage machine learning techniques to automate decision-making and uncover actionable insights."
 
       - icon: "cibersecurity"
         title: "CyberSecurity Bootcamp"
