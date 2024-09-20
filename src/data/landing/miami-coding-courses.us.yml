@@ -44,7 +44,7 @@ header_data:
   background: "#ffffff"
   tagline: Start A Career In Tech for $40/Week
   tagline_color: "#1c1c1c"
-  sub_heading: "Enjoy unlimited mentorship and lifetime access to career services."
+  sub_heading: " Step into fast-growing, high-paying tech professions with strong job prospects and future demand."
   form_styles:
     background: "#0084FF"
     color: "white"
@@ -187,7 +187,7 @@ components:
         title: "CyberSecurity Bootcamp"
         content: "Become a cybersecurity specialist, equipped to identify, manage, and mitigate system vulnerabilities in compliance with ISO and other standards."
 
-      - icon: "cibersecurity"
+      - icon: "applied-ai"
         title: "Applied AI"
         content: "Explore how to leverage artificial intelligence to advance your career. Learn best practices to use generative AI to your advantage and become more productive."
 
