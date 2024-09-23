@@ -571,6 +571,7 @@ export const query = graphql`
                 heading
                 text
                 icon
+                icon_color
               }
             }
             background
