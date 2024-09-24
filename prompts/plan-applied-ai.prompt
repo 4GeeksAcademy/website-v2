@@ -1,6 +1,30 @@
-- Spain: Scholarship for part-time courses. Pay upfront and get a discount. Price: €3000.
-- USA: No plans available.
-- Chile: Scholarship for part-time courses. Pay upfront and get a discount. Price: 700.000 CLP.
-- Europe: Scholarship for part-time courses. Pay upfront and get a discount. Price: €3000.
-- LATAM: Scholarship for part-time courses. Pay upfront and save $500. Price: $1.399.
+Spain:
+- Scholarship: Pay upfront and get a discount
+- Payment Time: And get a discount
+- Price: €3000*
+- Discount: Up to €500. From €3500 to €3000
+- Payment Methods: Wire transfer, credit or debit card, Paypal, Bitcoin or Ethereum
+
+USA & Europe:
+- Scholarship: Full Payment
+- Payment Time: Pay today
+- Price: $3000
+- Discount: $500 OFF
+- Payment Methods (USA): Pay today or in 3 parts
+- Payment Methods (Europe): Pay upfront
+
+Chile:
+- Scholarship: Pay Upfront
+- Payment Time: And get a discount
+- Price: 700.000 CLP*
+- Discount: 300.000 CLP OFF
+- Payment Methods: Bank transfer, credit or debit card
+
+LATAM:
+- Scholarship: Pay upfront and save $500
+- Payment Time: 
+- Price: USD $1.399
+- Discount: 44% OFF
+- Payment Methods: Visa, Mastercard
+
 stop
