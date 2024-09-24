@@ -212,7 +212,7 @@ components:
     heading: 
       text: "Crack the Code to Your Learning Success: Our Research-Based Features Make All the Difference!"
       font_size: ["21px"]
-      style: '{ "lineHeight": "22.85px" }'
+      style: '{ "lineHeight": "30px" }'
       heading_image:
         src: "/images/rigobot-logo.png"
     sub_heading:
