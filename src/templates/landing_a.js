@@ -569,6 +569,9 @@ export const query = graphql`
               text
               font_size
               style
+              heading_image {
+                src
+              }
             }
             sub_heading {
               text
@@ -587,6 +590,7 @@ export const query = graphql`
                 heading
                 text
                 icon
+                icon_color
               }
             }
             cards {

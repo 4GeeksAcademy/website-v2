@@ -198,6 +198,58 @@ components:
           text: "Some text description for the bullet"
           icon: "check" #string with icon for example ['check', 'cicle', etc]
 
+  - name: new_design_bullets
+    position: 1
+    layout: two_column_left
+    swipable: False
+    background: "#FFFFFF"
+    justify: "start" #start,end,center
+    image:
+      style: '{ "border" : "3px solid black", "backgroundSize": "cover", "background-position": "center", "min-height": "350px", "height": "350px"}'
+      src: "/images/landing/rigobot-error-found.png"
+      shadow: true
+    video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+    heading: 
+      text: "Crack the Code to Your Learning Success: Our Research-Based Features Make All the Difference!"
+      font_size: ["21px"]
+      style: '{ "lineHeight": "30px" }'
+      heading_image:
+        src: "/images/rigobot-logo.png"
+    sub_heading:
+      text: "Through years of research and experience, we've perfected our teaching methods to optimize your learning curve and overall success rate. Through our learning platform 4Geeks.com, we provide the strategy and tools to ensure your constant and efficient progress."
+      font_size: ["18px"]
+    button: 
+      text: "See all financing options"
+      color: white
+      hover_color: "white"
+      background: "black"
+      path: "https://www.youtube.com/watch?v=plwPwyrxX84"
+    bullets:
+      item_style: '{ "padding": 0, "font-weight": "100" }'
+      items:
+        - heading: "Lorem ipsum dolor sit amet"
+          text: |
+            Rigobot, our custom-trained AI, offers unlimited:
+            <br />
+            • Instant tutoring as you code
+            <br />
+            • Skill evaluations to track your progress
+            <br />
+            • Bug fixing assistance
+            <br />
+            It’s the perfect complement to our human mentorship program!
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+          icon_color: '#25BF6C'
+        - heading: "Lorem ipsum dolor sit amet"
+          text: |
+            Rigobot, our custom-trained AI, offers unlimited:
+            <br />
+            • Instant tutoring as you code
+            <br />
+            • Instant tutoring as you code
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+          icon_color: '#25BF6C'
+
   - name: new_design_with_bullets
     position: 2
     layout: two_column_right 
