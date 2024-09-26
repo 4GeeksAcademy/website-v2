@@ -22,6 +22,7 @@ import About4Geeks from "../About4Geeks";
 import IconsBanner from "../IconsBanner";
 import Icon from "../Icon";
 import ChooseYourProgram from "../ChooseYourProgram";
+import JobGuaranteeSmall from "../JobGuaranteeSmall";
 import StarRating from "../StarRating";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { smartRedirecting, transferQuerystrings } from "../../utils/utils.js";
@@ -38,7 +39,6 @@ const Title = ({ id, title, paragraph }) => {
     <GridContainer
       id={id}
       margin={paragraph ? "40px 0 20px 0" : "40px 0 30px 0"}
-      margin_tablet={paragraph ? "80px 0 20px 0" : "80px 0 60px 0"}
     >
       <H2 type="h2">{title}</H2>
       {paragraph && <Paragraph margin="26px 0">{paragraph}</Paragraph>}
@@ -325,13 +325,9 @@ export const landingSections = {
     return <Iconogram yml={yml} index={index} />;
   },
 
-  badges: ({ session, data, pageContext, yml, course, index }) => {
-    let dataYml =
-      data.allLandingYaml.edges.length !== 0 &&
-      data.allLandingYaml.edges[0].node.badges !== null
-        ? data.allLandingYaml.edges
-        : data.allDownloadableYaml.edges;
-    let badges = dataYml[0].node.badges;
+  badges: ({ pageContext, yml, index }) => {
+
+    const badges = yml;
     return (
       <React.Fragment key={index}>
         <Div background={Colors.verylightGray2} width="100%">
@@ -432,6 +428,24 @@ export const landingSections = {
     );
   },
 
+  job_guarantee_small: ({ yml, index }) => {
+    const { icons, heading, button } = yml;
+    const link = button && { 
+      url: button.path,
+      label: button.text,
+    };
+    return (
+      <JobGuaranteeSmall
+        key={`job-guarantee-small-${index}`}
+        content={{
+          title: heading?.text,
+          link,
+          icons,
+        }}
+      />
+    );
+  },
+
   syllabus: ({ session, data, pageContext, yml, course, location, index }) => {
     const filteredPrograms = data.allCourseYaml.edges
       .filter(({ node }) => {
@@ -529,16 +543,11 @@ export const landingSections = {
   geeks_vs_others: ({ session, pageContext, yml, course, index }) => {
     return (
       <React.Fragment key={index}>
-        <Title
-          id="geeks_vs_others"
-          title={yml.heading}
-          paragraph={yml.paragraph}
-        />
         <GeeksVsOthers
           lang={pageContext.lang}
           limit={yml.total_rows}
           title={yml.heading}
-          paragraph={yml.sub_heading}
+          paragraph={yml.paragraph}
         />
       </React.Fragment>
     );
@@ -1029,15 +1038,6 @@ export const landingSections = {
   ),
   columns: ({ session, data, pageContext, yml, index }) => (
     <Div id="columns" key={index} flexDirection="column" margin="50px 0">
-      {/* <Title
-            size="10"
-            title={yml.heading.text}
-            paragraph={yml.sub_heading}
-            paragraphColor={Colors.darkGray}
-            maxWidth="800px"
-            margin="auto"
-            variant="primary"
-        /> */}
       <Columns columns={yml.columns} proportions={yml.proportions} />
     </Div>
   ),

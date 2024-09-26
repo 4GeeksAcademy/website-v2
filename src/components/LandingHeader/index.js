@@ -145,9 +145,7 @@ const LandingHeader = (props) => {
                   type="h2"
                   textAlign="left"
                   fontSize="18px"
-                  color={
-                    yml.header_data.background ? Colors.black : Colors.white
-                  }
+                  color={taglineColor()}
                   variant="main"
                   fontWeight="bolder"
                   padding="0 0 10px 0"
@@ -161,7 +159,6 @@ const LandingHeader = (props) => {
                 <Div
                   alignItems="center"
                   margin="8px 0"
-                  padding="0px 20px"
                   gap="10px"
                 >
                   <Icon
@@ -186,9 +183,7 @@ const LandingHeader = (props) => {
                       fontWeight: "bolder",
                     }}
                     textAlign="left"
-                    color={
-                      yml.header_data.background ? Colors.black : Colors.white
-                    }
+                    color={taglineColor()}
                     dangerouslySetInnerHTML={{ __html: bullet }}
                   />
                 </Div>

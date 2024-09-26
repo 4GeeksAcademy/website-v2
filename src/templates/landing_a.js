@@ -386,7 +386,6 @@ export const query = graphql`
             margin_md
           }
           features {
-            marginTop
             text
             bullets
             styles
@@ -604,13 +603,6 @@ export const query = graphql`
                 style
                 font_size
               }
-              content {
-                text
-                style
-              }
-              button {
-                text
-              }
             }
             columns {
               size
@@ -719,7 +711,6 @@ export const query = graphql`
             button_label
           }
           features {
-            marginTop
             text
             bullets
             styles

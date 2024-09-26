@@ -26,14 +26,10 @@ const JobGuaranteeSmall = ({ content }) => {
           <Div width="225px" flexDirection="column" alignItems="center">
             <Icon icon={icon.icon} color="#FFCF18" width="94" height="98" />
             <Paragraph
-              opacitu-="1"
               fontSize="14px"
-              // width="140px"
-              // width_md="auto"
               color={Colors.black}
               lineHeight="19px"
               padding="20px 0"
-              // padding_tablet="20px 15%"
             >
               {icon.title}
             </Paragraph>
