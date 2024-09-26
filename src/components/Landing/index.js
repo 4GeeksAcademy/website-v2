@@ -326,7 +326,6 @@ export const landingSections = {
   },
 
   badges: ({ pageContext, yml, index }) => {
-
     const badges = yml;
     return (
       <React.Fragment key={index}>
@@ -430,7 +429,7 @@ export const landingSections = {
 
   job_guarantee_small: ({ yml, index }) => {
     const { icons, heading, button } = yml;
-    const link = button && { 
+    const link = button && {
       url: button.path,
       label: button.text,
     };

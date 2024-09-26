@@ -156,11 +156,7 @@ const LandingHeader = (props) => {
 
             {Array.isArray(yml.features.bullets) &&
               yml.features.bullets.map((bullet, i) => (
-                <Div
-                  alignItems="center"
-                  margin="8px 0"
-                  gap="10px"
-                >
+                <Div alignItems="center" margin="8px 0" gap="10px">
                   <Icon
                     style={{
                       background:
