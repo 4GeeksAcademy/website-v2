@@ -255,7 +255,7 @@ const ProgramDetails = (props) => {
               >
                 <Icon
                   style={{ flexShrink: 0 }}
-                  icon="laptop"
+                  icon="laptop-icon-new"
                   width="52px"
                   height="39px"
                 />
@@ -298,7 +298,7 @@ const ProgramDetails = (props) => {
                   height_xs="auto"
                 >
                   <Div>
-                    <Icon icon="rocket" width="46px" height="46px" />
+                    <Icon icon="rocket-icon-new" width="46px" height="46px" />
                   </Div>
                   <Div flexDirection="column" margin="0 0 0 15px">
                     <H3
@@ -329,7 +329,7 @@ const ProgramDetails = (props) => {
                   height_xs="auto"
                 >
                   <Div>
-                    <Icon icon="clock" width="46px" height="46px" />
+                    <Icon icon="wall-clock-icon" width="46px" height="46px" />
                   </Div>
                   <Div flexDirection="column" margin="0 0 0 20px">
                     <H3

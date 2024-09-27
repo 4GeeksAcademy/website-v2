@@ -143,7 +143,7 @@ components:
       text: "Diseñado para convertirte en un Científico de datos"
       style: '{ "font-size": "30px" }'
     heading: 
-      text: "Nuestro programa de estudio está enfocado en las necesidades actuales de la industria"
+      text: ""
     sub_heading:
       text: "Aprende las habilidades más demandadas en Data Science con un currículo diseñado por expertos que te preparará para los desafíos reales del mercado laboral."
     button: 

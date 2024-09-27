@@ -261,6 +261,35 @@ components:
         - text: "The city's tech ecosystem is diverse, with career paths in software development, cybersecurity, data science, and more, supported by a thriving community and numerous industry events."
           icon: "circle" #string with icon for example ['check', 'cicle', etc]
 
+  - name: why-4geeks-icons
+    position: 5
+    background: "#fbfcfc"
+    layout: iconogram
+    swipable: True
+    heading:
+      text: "Job guarantee commitment"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      text: ""
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+      style: '{ "textAlign": "center", "width": "60%" }'
+    icons:
+      - icon: "mortar-board-icon"
+        title: ""
+        content: "Get a job within 180 days after graduation or get your money back."
+
+      - icon: "stage-dots-icon"
+        title: ""
+        content: "Go through each phase of our comprehensive career support process for job readiness."
+
+      - icon: "people-group-icon"
+        title: ""
+        content: "Connect with a network of 5,000+ hiring partners across various industries."
+
+      - icon: "hands-w-purple"
+        title: ""
+        content: "We commit to supporting your future career, ensuring your success in tech."
+
   - name: some_id
     position: 6
     layout: two_column_right
@@ -273,7 +302,7 @@ components:
         #xl      lg     md     sm    xs
       font_size: ["40px", "34px", "34px", "25px", "20px"]
     content:
-      text: "Meet Melissa, the Campus Manager at 4Geeks Academy Miami. In this video, Melissa shares how our team is committed to supporting students throughout South Florida. We partner with organizations like Miami Tech Works, United Way Miami, and Clark University to provide full and partial scholarships for Miami-Dade and Broward county residents. As a bootcamp deeply rooted in Miami, we prioritize making these opportunities accessible to our community. If you’re ready to take advantage of these scholarships and launch your tech career, contact our admissions team today. Melissa and our dedicated staff are here to guide you every step of the way."
+      text: "Meet Alissa, the Campus Manager at 4Geeks Academy Miami. In this video, Alissa shares how our team is committed to supporting students throughout South Florida. We partner with organizations like Miami Tech Works, United Way Miami, and Clark University to provide full and partial scholarships for Miami-Dade and Broward county residents. As a bootcamp deeply rooted in Miami, we prioritize making these opportunities accessible to our community. If you’re ready to take advantage of these scholarships and launch your tech career, contact our admissions team today. Alissa and our dedicated staff are here to guide you every step of the way."
       font_size: ["16px"]
     button:
       text: "Get More Info"

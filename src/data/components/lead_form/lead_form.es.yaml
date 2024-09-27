@@ -9,6 +9,14 @@ apply_job:
   apply_button_text: Enviar aplicación
   close: cerrar
 
+terms:
+  agree_terms_text: "Al registrarte, estás aceptando nuestros"
+  terms_and_conditions: "Términos y condiciones"
+  terms_and_conditions_link: "/es/terminos"
+  privacy_policy: "Políticas de privacidad"
+  privacy_policy_link: "/es/privacidad"
+  connector_and: "y"
+
 form_fields:
   - name: first_name
     required: true

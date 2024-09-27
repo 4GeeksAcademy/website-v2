@@ -217,6 +217,14 @@ const LeadForm = ({
               success
               error
             }
+            terms {
+              agree_terms_text
+              terms_and_conditions
+              terms_and_conditions_link
+              privacy_policy
+              privacy_policy_link
+              connector_and
+            }
             form_fields {
               name
               required
@@ -613,6 +621,16 @@ const LeadForm = ({
                 </Button>
               </Div>
             )}
+            <Paragraph fontSize="10px" textAlign="left">
+              {yml.terms.agree_terms_text}{" "}
+              <a href={yml.terms.terms_and_conditions_link} target="_blank">
+                {yml.terms.terms_and_conditions}
+              </a>{" "}
+              {yml.terms.connector_and}{" "}
+              <a href={yml.terms.privacy_policy_link} target="_blank">
+                {yml.terms.privacy_policy}
+              </a>
+            </Paragraph>
           </Div>
         </>
       )}

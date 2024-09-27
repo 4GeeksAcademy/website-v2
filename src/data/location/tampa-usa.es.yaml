@@ -108,7 +108,7 @@ two_columns:
     - text: "Cursos dirigidos por expertos que enfatizan el dominio práctico en codificación para aplicaciones reales"
     - text: "Enfoque centrado en la carrera profesional que te prepara para destacar en el competitivo mercado laboral"
 
-active_campaign_location_slug: "tampa"
+active_campaign_location_slug: "tampa-usa"
 breathecode_location_slug: "tampa-usa"
 in_person_available: true # important to accept in-person applicants
 

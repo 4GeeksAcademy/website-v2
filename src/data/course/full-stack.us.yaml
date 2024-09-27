@@ -1,8 +1,8 @@
 meta_info:
   slug: part-time-full-stack-developer
-  title: "Full Stack Developer Course by 4geeks Academy, master the Skills and Technologies"
+  title: "Full Stack Developer Bootcamp | 4Geeks Academy"
   bc_slug: "full-stack"
-  description: "Enroll in our Full Stack Developer Course and become a web development expert. Learn how to build applications from scratch. Join us today!"
+  description: "Become a Full Stack Developer with 4Geeks Academy. Master essential technologies like JavaScript and Python to launch your tech career with confidence today!"
   image: "/images/og-preview/full-stack.us.png"
   visibility: "visible"
   keywords: ""
@@ -70,7 +70,7 @@ partners:
 
 overlaped:
   heading: "Why learning Python and Javascript is essential"
-  paragraph: "Programmers who are proficient in Python and JavaScript have access to some of the highest-paid career opportunities in the US. There are currently over 26 times more job opportunities in JavaScript compared to Ruby on Rails, and 10 times more jobs in Python compared to Node.js. According to Indeed, Python and JavaScript developers enjoy average salaries of $110k."
+  paragraph: "Programmers proficient in Python and JavaScript have access to some of the highest-paid career opportunities in the US. Currently, there are over 26 times more job opportunities for developers skilled in JavaScript than for those specializing in Ruby on Rails, and 10 times more positions for Python developers compared to those focusing on Node.js. According to Indeed, Python and JavaScript developers earn salaries averaging $110k."
   button:
     text: "LEARN MORE"
     color: "blue"  
@@ -86,10 +86,10 @@ two_columns:
     shadow: true  
   video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
   heading:
-    text: "4Geeks, Miami and a story full of opportunities"
+    text: "4Geeks, Miami and a mission of creating opportunities"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "We are Miami based and we have been focusing in bringing on more opportunities in South Florida."
+    text: "With Miami as our home base, we're dedicated to fostering opportunities throughout South Florida."
     font_size: ["16px", "16px", "16px", "16px", "16px"]
   button:
     text: "Apply now"
@@ -98,9 +98,9 @@ two_columns:
     path: "#prices_and_payment"
   bullets:
     items: 
-    - text: "There is always a full or partial scholarship open"
-    - text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
-    - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade County and many more."
+    - text: "Accessible scholarships, whether full or partial, are always available."
+    - text: "Exclusive opportunities await residents of Miami-Dade, Broward, and Palm Beach counties, ensuring local talent thrives."
+    - text: "We maintain ongoing partnerships with institutions such as Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade County, and many more. "
 
 
 badges:
@@ -127,21 +127,21 @@ details:
       list:
         - label: "Duration"
           content:  "16+2 Weeks"
-          icon: "calendar"
+          icon: "duration-icon"
         - label: "Classes"
           content: "3 classes weekly"
-          icon: "book"
+          icon: "people-class-icon"
         - label: "Certificate"
           content: "Full-Stack Developer"
           link_text: "See example"
           link: "https://certificate.breatheco.de/4ae7a46bba78dc19b823e124fea120c17b45e044"
-          icon: "certificate"
+          icon: "certificate-icon"
         - label: "Requisites"
           content: "No previous coding skills or advanced math are required."
           icon: "contract-checked"
         - label: "Language"
           content: "You can choose between English and Spanish for the syllabus and content. Live classes are taught in the language of your campus."
-          icon: "contract-checked"
+          icon: "language"
          
   heading: "Part-Time Full Stack Development Bootcamp"
   weeks: 18
@@ -178,7 +178,7 @@ details:
       step: 5.9
     - module_name: "API'S"
       title: "API Development"
-      description: "Mainly focused on Python, get ready to build your own API and interact with 3rd party applications like Twillio, Stripe and many more."
+      description: "Mainly focused on Python. Get ready to build your own API and interact with 3rd party applications like Twillio, Stripe and many more."
       projects: "Star Wars Blog page, JWT authentication, Jackson Families, CRUD (create, read, update, delete), build your own APIs and interact with others."
       slug: "web-development"
       duration: "2 wks"

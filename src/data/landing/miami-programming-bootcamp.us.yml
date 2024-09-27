@@ -36,9 +36,15 @@ apply_schollarship: # form that is displayed at the end of the landing
 header_data:
   tagline: Intensive Programming Bootcamp
   sub_heading: "Become a Full Stack Developer in 18 weeks with unlimited mentorships and career support"
-  # background: "#FFF1D1"
-  background_image: "../../../static/images/landing/grupo-varias-nacionalidades.jpg"
-  image_filter: brightness(0.25)
+  background: "#ffffff"
+  tagline_color: "#1c1c1c"
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+  # image_filter: brightness(0.1)
+  form_styles:
+    background: "#0084FF"
+    color: "white"
+    button:
+      background: "black"
 
 features:
   marginTop: 0px #<-- separation between tagline and the bullets

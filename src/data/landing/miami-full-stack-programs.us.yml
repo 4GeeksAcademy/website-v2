@@ -27,24 +27,29 @@ form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
-  heading: "Get more information, and change your life!"
-  motivation: "ENROLL NOW and change your life."
+  heading: "Get more Information"
+  motivation: "Fill out the form to receive detailed information about 4Geeks Academy and all the courses we offer, delivered straight to your inbox."
   button_label: Get more information
   redirect: null #you can redirect to another url or entirely diffrent website
 
 apply_schollarship: # form that is displayed at the end of the landing
   # title: "Apoyo Profesional Ilimitado"
-  imageSide: "right"
+  imageSide: "left"
   image: "../../../static/images/landing/hombre-con-laptop.png"  
 
 # jumbotron on the top (cannot be commented out)
 header_data:
   tagline: Become a Software Developer and Boost your Career in Tech
   sub_heading: "Get a Career in Tech."
-  # background: "#FFF1D1"
+  background: "#ffffff"
+  tagline_color: "#1c1c1c"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
-  background_image: "../../../static/images/landing/4Geeks-Espana.jpg"
-  image_filter: brightness(0.1)
+  # image_filter: brightness(0.1)
+  form_styles:
+    background: "#0084FF"
+    color: "white"
+    button:
+      background: "black"
 
 features:
   marginTop: 0px #<-- separation between tagline and the bullets
@@ -148,7 +153,7 @@ alumni_projects:
 components:
   - name: passion
     position: 1
-    background: "lightBlue"
+    background: "#e6f5fa"
     layout: two_column_left
     proportions: [6, 6]
     image:
@@ -231,11 +236,11 @@ components:
     proportions: [4, 8]
     layout: two_column_left
     image:
-      style: '{ "background-size": "cover", "height":"250px", "min-height":"auto", "background-position": "top"}'
+      style: '{ "background-size": "cover", "height":"250px", "min-height":"auto", "background-position": "center", "border": "2px solid black"}'
       src: "/images/landing/feliz-empresario-laptop.png"
       shadow: true
     heading:
-      style: '{ "justify-content": "center", "marginTop": "150px"}'
+      style: '{ "justify-content": "center"}'
       text:
         "86% of our graduates are now working in the field with an average entry salary of $50,000/yr."
         #           xl      lg     md     sm    xs

@@ -208,7 +208,7 @@ components:
       style: '{ "border" : "3px solid black", "backgroundSize": "cover", "background-position": "center", "min-height": "350px", "height": "350px"}'
       src: "/images/landing/rigobot-error-found.png"
       shadow: true
-    video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+    # video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
     heading: 
       text: "Crack the Code to Your Learning Success: Our Research-Based Features Make All the Difference!"
       font_size: ["21px"]
