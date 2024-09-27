@@ -38,7 +38,7 @@ const JobGuaranteeSmall = ({ content }) => {
         />
       )}
 
-<Div
+      <Div
         display="flex"
         flexDirection="column"
         flexDirection_xs="row"
