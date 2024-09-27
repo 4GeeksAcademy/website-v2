@@ -1,6 +1,25 @@
-- Spain: "Pay upfront and get a ~30% discount. Price: €5,200"
-- USA: "Full payment available for $11,999. Price: $11,999"
-- Chile: "Data Science program + Career Support for 3.375.000 CLP. Pay upfront and get a 25% discount"
-- Europe: "Pay upfront and get a ~30% discount. Price: €5,200"
-- LATAM: "Data Science program + Career Support for $3,600. Pay upfront and get a 28% discount"
-stop
+Spain:
+- Full Payment Scholarship for part-time courses. Pay today. Price: €5,200*
+- Financed Scholarship for part-time courses. Payment in monthly installments. Price: €5,409*
+- Income Share Agreement for part-time courses. Pay only when you work. Price: €0*
+
+USA:
+- Full Payment Scholarship for full-time courses. Pay today. Price: $11,999
+- Scholarship for full-time courses. Pay today. Price: $4,999
+- Financed Scholarship for full-time courses. Payment in 24 months. Price: $310
+
+Chile:
+- Program + Career Support Scholarship for part-time courses. Pay upfront. Price: 3.375.000 CLP*
+- Data Science Program Only Scholarship for part-time courses. Pay upfront. Price: 3.750.000 CLP*
+- Financed Scholarship for part-time courses. Payment monthly. Price: ~220.500 CLP per month
+
+Europe:
+- Pay upfront Scholarship for part-time courses. Pay upfront. Price: €5,200*
+- Financed Scholarship for part-time courses. Payment in monthly installments. Price: €5,409*
+- Income Share Agreement for part-time courses. Pay only when you work. Price: €0*
+
+Latam:
+- Data Science program + Career Support Scholarship for part-time courses. Price: USD $3,600
+- Data Science program + Career Support Scholarship for part-time courses. Price: USD $3,600
+
+Stop
