@@ -948,6 +948,21 @@ export const query = graphql`
         }
       }
     }
+    allJobGuaranteeSmallYaml(filter: { fields: { lang: { eq: $lang } } }) {
+      edges {
+        node {
+          title
+          icons {
+            title
+            icon
+          }
+          link {
+            url
+            label
+          }
+        }
+      }
+    }
     allFaqYaml(filter: { fields: { lang: { eq: $lang } } }) {
       edges {
         node {

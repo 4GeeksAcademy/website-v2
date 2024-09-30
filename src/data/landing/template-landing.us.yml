@@ -97,18 +97,6 @@ components:
     position: 1
     heading:
       text: Job guarantee commitment
-    icons:
-      - icon: "handshake"
-        title: We both commit to your future career
-      - icon: "stairswflag"
-        title: Complete all stages of our career support process.
-      - icon: "network"
-        title: Access a network of +5K hiring partners.
-      - icon: "graduation-2"
-        title: Get a job within 180 days of graduation or your money back.
-    button:
-      path: https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/Conditions%20Job%20Guaranteed%20Program.pdf
-      text: Conditions apply
 
   - name: two_column
     position: 3

@@ -428,24 +428,6 @@ export const landingSections = {
     );
   },
 
-  job_guarantee_small: ({ yml, index }) => {
-    const { icons, heading, button } = yml;
-    const link = button && {
-      url: button.path,
-      label: button.text,
-    };
-    return (
-      <JobGuaranteeSmall
-        key={`job-guarantee-small-${index}`}
-        content={{
-          title: heading?.text,
-          link,
-          icons,
-        }}
-      />
-    );
-  },
-
   syllabus: ({ session, data, pageContext, yml, course, location, index }) => {
     const filteredPrograms = data.allCourseYaml.edges
       .filter(({ node }) => {
@@ -745,6 +727,22 @@ export const landingSections = {
           variant={yml.variant}
         />
       </Div>
+    );
+  },
+
+  job_guarantee_small: ({ data, yml, index }) => {
+    const { heading } = yml;
+
+    const { icons, link } = data.allJobGuaranteeSmallYaml.edges[0].node;
+    return (
+      <JobGuaranteeSmall
+        key={`job-guarantee-small-${index}`}
+        content={{
+          title: heading?.text,
+          link,
+          icons,
+        }}
+      />
     );
   },
 
