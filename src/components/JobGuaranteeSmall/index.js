@@ -2,46 +2,72 @@ import React from "react";
 import { H2, Paragraph } from "../Heading";
 import { Div } from "../Sections";
 import { Colors, Anchor } from "../Styling";
-import Icon from "../Icon";
+import IconsBanner from "../IconsBanner";
 
 const JobGuaranteeSmall = ({ content }) => {
   return (
     <Div
       display="block"
+      margin="0 auto"
       padding="40px 20px"
-      padding_tablet="50px 0"
-      background={Colors.lightYellow}
+      padding_lg="40px 0"
+      padding_md="40px 80px"
+      padding_tablet="40px 40px"
+      width="100%"
+      background="#F4F9FF"
     >
-      {content.title && <H2 margin="0 0 30px 0">{content.title}</H2>}
+      {content.title && (
+        <H2
+          type="h2"
+          maxWidth="1280px"
+          margin="0 auto"
+          style={{ textAlign: "center" }} // Centramos el texto
+        >
+          {content.title}
+        </H2>
+      )}
+
+      {content.sub_heading && (
+        <Paragraph
+          padding_xs="0 10%"
+          padding_tablet="20px 10%"
+          padding_md="20px 10%"
+          margin="15px auto"
+          maxWidth="1280px"
+          dangerouslySetInnerHTML={{ __html: content.sub_heading }}
+        />
+      )}
+
       <Div
+        display="flex"
+        flexDirection="column"
+        flexDirection_xs="row"
+        flexDirection_tablet="row"
+        flexWrap_xs="wrap"
+        flexWrap_tablet="nowrap"
+        justifyContent="center"
+        gap_tablet={content.icons.length > 4 ? "0px" : "3%"}
         maxWidth="1280px"
-        margin_tablet="0 auto"
-        justifyContent="around"
-        flexWrap="wrap"
-        padding_tablet="25px 40px"
-        padding_md="25px 80px"
-        padding_lg="25px 0px"
+        margin="0 auto"
+        padding="32px 0 10px 0"
       >
-        {content.icons.map((icon) => (
-          <Div width="225px" flexDirection="column" alignItems="center">
-            <Icon icon={icon.icon} color="#FFCF18" width="94" height="98" />
-            <Paragraph
-              fontSize="14px"
-              color={Colors.black}
-              lineHeight="19px"
-              padding="20px 0"
-            >
-              {icon.title}
-            </Paragraph>
-          </Div>
-        ))}
+        {Array.isArray(content.icons) &&
+          content.icons.map((item, index) => (
+            <React.Fragment key={index}>
+              <IconsBanner
+                icon={item.icon}
+                color="#FFCF18"
+                title={item.title}
+                content={item.content}
+              />
+            </React.Fragment>
+          ))}
       </Div>
       {content.link && (
         <Paragraph
           margin="30px 0 0 0"
           fontSize="18px"
           color={Colors.black}
-          opacity="1"
           textDecoration="underline"
         >
           <Anchor color={`${Colors.black} !important`} to={content.link.url}>

@@ -43,6 +43,14 @@ left:
   button:
     button_text: "APPLY"
     button_link: ""
+  terms:
+    agree_terms_text: "By signing up, you agree to the"
+    terms_and_conditions: "Terms and Conditions"
+    terms_and_conditions_link: "/us/terms-conditions"
+    privacy_policy: "Privacy Policy"
+    privacy_policy_link: "/us/privacy-policy"
+    connector_and: "and"
+
 
 ## APPLY RIGHT SECTION
 

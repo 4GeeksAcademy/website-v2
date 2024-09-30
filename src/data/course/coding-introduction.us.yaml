@@ -131,7 +131,7 @@ details:
     list:
       - label: "Duration"
         content: "9 Weeks"
-        icon: "calendar"
+        icon: "duration-icon"
       - label: "Classes"
         content: "Online"
         icon: "book"
@@ -140,7 +140,7 @@ details:
         icon: "contract-checked"
       - label: "Language"
         content: "English and Spanish"
-        icon: "contract-checked"
+        icon: "language"
 
   heading: "Lay the foundations to master HTML, CSS and JS"
   weeks: 9

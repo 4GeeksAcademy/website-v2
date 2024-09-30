@@ -105,18 +105,18 @@ details:
       list:
         - label: "Duración"
           content:  "26 + 6 semanas"
-          icon: "calendar"
+          icon: "duration-icon"
         - label: "Certificado"
           content: "Nuestros certificados son  reconocidos por múltiples instituciones."
           link_text: "Ver certificado"
           link: "https://certificate.breatheco.de/4ae7a46bba78dc19b823e124fea120c17b45e044"
-          icon: "certificate"
+          icon: "certificate-icon"
         - label: "Requisitos"
           content: "Tan solo necesitas un ordenador y una conexión a internet"
           icon: "contract-checked"
         - label: "Idioma"
           content: "Puedes elegir entre inglés y español para consumir el plan de estudios y el contenido. Las clases se imparten en el idioma oficial de tú campus."
-          icon: "contract-checked"
+          icon: "language"
           
   heading: DETALLES DEL PROGRAMA A TU PROPIO RITMO
   weeks: 26

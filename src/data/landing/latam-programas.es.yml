@@ -37,9 +37,9 @@ form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
-  heading: "Completa el Formulario y Descubre Nuestros Programas"
-  motivation: "Una vez que hayas completado el formulario, recibirás detalles completos sobre los programas, opciones de financiamiento y certificaciones disponibles en LATAM."
-  button_label: Solicita más información
+  heading: "Obtén más información"
+  motivation: "Una vez que hayas completado el formulario, recibirás detalles completos sobre los programas, opciones de financiamiento y certificaciones disponibles."
+  button_label: Más información
   redirect: null #you can redirect to another url or entirely diffrent website
 
 apply_schollarship: # form that is displayed at the end of the landing
@@ -50,7 +50,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 # jumbotron on the top (cannot be commented out)
 header_data:
   tagline: ¡Impulsa tu carrera en tecnología con 4Geeks!
-  sub_heading: "Elige entre nuestros programas especializados y da el siguiente paso en tu carrera tecnológica."
+  sub_heading: ""
   background: "lightBlue"
   form_styles:
     background: "#E3F9FE"
@@ -67,7 +67,6 @@ features:
     - Desde desarrollo Full-Stack hasta Data Science, Ciberseguridad y Applied AI.
     - Obtén una certificación reconocida que abrirá puertas en toda LATAM y más allá.
     - orientación continua e ilimitada de expertos de la industria de por vida.
-    - FConéctate con una comunidad global de profesionales de más de 5,000 personas
 
 follow_bar:
   position: "top" # top, bottom, hidden
@@ -203,7 +202,7 @@ components:
     background: "#fbfbfb" 
     image:
       style: '{"backgroundSize": "cover", "background-position": "center", "border": "2px solid black"}'
-      src: "/images/landing/personas-programando.webp"
+      src: "/images/landing/grupo-varias-nacionalidades.jpg"
       shadow: true
     section_heading:
       text: "¿Por Qué Estudiar con 4Geeks Academy en LATAM?"
@@ -263,7 +262,7 @@ components:
     background: "veryLightBlue" 
     image:
       style: '{"backgroundSize": "contain", "background-position": "center"}'
-      src: "/images/landing/4geeks-programas-ii.jpg"
+      src: "/images/landing/landing-programas.webp"
       shadow: false
     section_heading:
       text: ""
@@ -271,24 +270,24 @@ components:
     heading:
       text: "Formación para el Futuro"
     sub_heading:
-      text: "En 4Geeks Academy, ofrecemos una variedad de programas diseñados para equiparte con las habilidades necesarias para sobresalir en el competitivo mundo tecnológico. Nuestros cursos están alineados con las demandas del mercado y te preparan para roles altamente solicitados en la región."
+      text: "Los programas de 4Geeks Academy están diseñados para cubrir la creciente demanda de talento en LATAM, ofreciendo una formación práctica y relevante en las tecnologías más solicitadas:"
     # content:
       # text: "Cada uno de nuestros programas está diseñado para brindarte una educación práctica y relevante, asegurando que estés listo para enfrentar los desafíos del mundo laboral. ¡Únete a nosotros y comienza tu camino hacia una carrera exitosa en tecnología!"
       font_size: ["16px"]
       path: ""
     bullets:
       items:
-      - heading: "Desarrollador Full-Stack"
-        text: "Aprende a construir aplicaciones web completas, desde el front-end hasta el back-end, dominando las tecnologías más relevantes del sector."
+      - heading: "Full Stack Developer"
+        text: "Con salarios entre $800 y $6,500 USD al mes, este campo te permite dominar tecnologías clave como JavaScript y Python, utilizadas ampliamente en el desarrollo de aplicaciones completas tanto en el frontend como en el backend"
         icon: "check" 
       - heading: "Data Science y Machine Learning"
-        text: "Adquiere las competencias necesarias para analizar datos y desarrollar modelos de machine learning que impulsen la toma de decisiones en las empresas."
+        text: "Crece a un 16% anual, con salarios de hasta $12,000 USD. Los científicos de datos son esenciales en la toma de decisiones basadas en datos, utilizando herramientas como Python, Numpy y Pandas."
         icon: "check" 
       - heading: "Especialista en ciberseguridad"
-        text: "Prepárate para proteger sistemas y datos críticos, aprendiendo sobre las mejores prácticas y herramientas en ciberseguridad."
+        text: "La demanda crece rápidamente, con sueldos de entre $1,500 y $4,500 USD mensuales. Aprende a proteger sistemas y datos críticos usando herramientas como Wireshark y Metasploit."
         icon: "check" 
       - heading: "Applied AI"
-        text: "Aprende a implementar soluciones de inteligencia artificial en diversas aplicaciones, desarrollando habilidades para crear sistemas que mejoren la eficiencia y la toma de decisiones."
+        text: "la inteligencia artificial aplicada transforma industrias a través de soluciones innovadoras, un profesional que sepa aprovechar las herramientas de inteligencia artificial puede multiplicar tus resultados y por consecuencia tus ingresos, muchos profesionales en distintos rubros  utilizan actualmente  la IA."
         icon: "check" 
     button:
       text: "Inscribete hoy!"
