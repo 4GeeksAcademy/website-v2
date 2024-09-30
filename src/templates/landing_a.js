@@ -533,6 +533,7 @@ export const query = graphql`
             filter_indexes
             variant
             text_link
+            topic
             icons {
               icon
               color
@@ -943,6 +944,25 @@ export const query = graphql`
               comment
               video
             }
+          }
+        }
+      }
+    }
+    allFaqYaml(filter: { fields: { lang: { eq: $lang } } }) {
+      edges {
+        node {
+          faq {
+            topic
+            slug
+            questions {
+              locations
+              priority
+              question
+              answer
+            }
+          }
+          fields {
+            lang
           }
         }
       }

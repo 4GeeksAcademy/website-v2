@@ -199,6 +199,11 @@ components:
       - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade Counti and so manu more"
         icon: "check" #string with icon for example ['check', 'cicle', etc]
 
+  - name: faq
+    position: 10
+    layout: faq
+    topic: 4geeks
+
   - name: new_design_bullets
     position: 20
     layout: two_column_left

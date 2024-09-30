@@ -39,6 +39,7 @@ const landingSections = [
   "columns",
   "simple_cards",
   "job_guarantee_small",
+  "faq",
 ];
 
 async function listDir(dir) {

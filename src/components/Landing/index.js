@@ -9,6 +9,7 @@ import { requestSyllabus } from "../../actions";
 import ReactPlayer from "../ReactPlayer";
 import TestimonialsCarrousel from "../Testimonials";
 import With4Geeks from "../With4Geeks";
+import FaqCard from "../FaqCard";
 // import WhyPython from '../WhyPython';
 import AlumniProjects from "../AlumniProjects";
 import SuccessStories from "../SuccessStories";
@@ -746,6 +747,14 @@ export const landingSections = {
       </Div>
     );
   },
+
+  faq: ({ data, yml, index }) => (
+    <FaqCard
+      key={`faq-${index}`}
+      faqs={data.allFaqYaml.edges[0].node.faq}
+      topicSlug={yml.topic}
+    />
+  ),
 
   why_4geeks: ({ session, pageContext, yml, index }) => (
     <Div
