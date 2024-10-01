@@ -326,6 +326,24 @@ const Home = (props) => {
         />
       </Div>
       <Iconogram yml={yml.iconogram} background={Colors.veryLightBlue3} />
+
+      {/* Two Columns Rigo */}
+      < Div background={Colors.veryLightBlue3} display="block">
+        <TwoColumn
+          right={{ image: yml.two_columns_rigo?.image, video: yml.two_columns_rigo?.video }}
+          left={{
+            heading: yml.two_columns_rigo?.heading,
+            heading_image: yml.two_columns_rigo?.heading_image,
+            sub_heading: yml.two_columns_rigo?.sub_heading,
+            bullets: yml.two_columns_rigo?.bullets,
+            content: yml.two_columns_rigo?.content,
+            button: yml.two_columns_rigo?.button,
+          }}
+          proportions={yml.two_columns_rigo?.proportions}
+          session={session}
+        />
+      </Div>
+
       <GeeksVsOthers
         lang={pageContext.lang}
         mainBackround={Colors.white}
@@ -555,6 +573,44 @@ export const query = graphql`
               icon
               title
               text
+            }
+          }
+          two_columns_rigo{
+            proportions
+            image {
+              style
+              src
+              shadow
+            }
+            heading{
+              text
+              font_size
+              style
+              heading_image {
+                src
+                }
+            }
+            sub_heading {
+              text
+              font_size
+            }
+            content {
+              text
+              style
+            }
+            button {
+              text
+              color
+              background
+              path
+            }
+            bullets {
+              items {
+                heading
+                text
+                icon
+                icon_color
+              }
             }
           }
           geeks_vs_others {

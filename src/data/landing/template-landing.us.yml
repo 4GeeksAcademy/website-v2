@@ -302,7 +302,7 @@ components:
       color: white
       hover_color: "blue"
       background: "black"
-      path: "https://www.youtube.com/watch?v=plwPwyrxX84"
+      path: "/us/financials"
     content: 
       text: "Mentoría como nunca antes. Decenas de Instructores, en varios idiomas, todos los días, a cualquier hora. Estaremos contigo todo el tiempo, aun cuando hayas conseguido trabajo. Una vez eres parte de 4Geeks, estaremos para siempre contigo."
       font_size: ["16px"]

@@ -15,6 +15,7 @@ import { H2, H3, Paragraph } from "../components/Heading";
 import { Img } from "../components/Styling";
 import { StyledBackgroundSection } from "../components/Styling";
 import Iconogram from "../components/Iconogram";
+import TwoColumn from "../components/TwoColumn/index.js";
 
 const GeekForce = (props) => {
   const { data, pageContext, yml } = props;
@@ -217,6 +218,21 @@ const GeekForce = (props) => {
       </Grid>
 
       <Iconogram yml={content.iconogram} />
+
+      {/* Two Columns Rigo */}
+      <TwoColumn
+        left={{ image: yml.two_columns?.image, video: yml.two_columns?.video }}
+        right={{
+          heading: yml.two_columns?.heading,
+          heading_image: yml.two_columns?.heading_image,
+          sub_heading: yml.two_columns?.sub_heading,
+          bullets: yml.two_columns?.bullets,
+          content: yml.two_columns?.content,
+          button: yml.two_columns?.button,
+        }}
+        proportions={yml.two_columns?.proportions}
+        session={session}
+      />
 
       {Array.isArray(content.list) &&
         content.list.map((m, i) => {
@@ -493,6 +509,44 @@ export const query = graphql`
             icons {
               icon
               content
+            }
+          }
+          two_columns {
+            proportions
+            image {
+              style
+              src
+              shadow
+            }
+            heading{
+              text
+              font_size
+              style
+              heading_image {
+                src
+                }
+            }
+            sub_heading {
+              text
+              font_size
+            }
+            content {
+              text
+              style
+            }
+            button {
+              text
+              color
+              background
+              path
+            }
+            bullets {
+              items {
+                heading
+                text
+                icon
+                icon_color
+              }
             }
           }
           geekForce {

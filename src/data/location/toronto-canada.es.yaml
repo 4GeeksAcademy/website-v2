@@ -107,6 +107,57 @@ two_columns:
     - text: "Desarrollo práctico de habilidades que mejoran tu preparación para el mercado laboral tecnológico"
     - text: "Preparación para desafíos del mundo real y oportunidades laborales en tecnología"
 
+# Two Columns - Rigo
+two_columns_rigo:
+  proportions: [7, 5]
+  background: "#FFFFFF"
+  justify: "center" #start,end,center
+  image:
+    style: '{"backgroundSize": "contain", "background-position": "center"}'
+    src: "/images/landing/rigobot-section.webp"
+    shadow: false
+  # video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  heading: 
+    text: "Descifra el código del éxito con ¡Nuestras nuevas herramientas de IA marcarán la diferencia en tu proceso de aprendizaje!"
+    font_size: ["21px"]
+    style: '{ "lineHeight": "30px" }'
+    heading_image:
+      src: "/images/rigobot-logo.png"
+  sub_heading:
+    text: "Luego de años de investigación y experiencia, hemos perfeccionado nuestros métodos de enseñanza para optimizar tu curva de aprendizaje y tu tasa de éxito. A través de nuestra plataforma de aprendizaje 4Geeks.com, te brindamos las estrategias y herramientas para garantizar tu progreso constante y eficiente."
+    font_size: ["18px"]
+  content:
+    style: '{ "font-size":"18px", "margin":"0" }'
+    text: "¡Experimenta la diferencia que marcan nuestras nuevas herramientas de Inteligencia Artificial! Nuestro enfoque ha demostrado mantenerte comprometido, motivado y encaminado a lograr tus objetivos de programación."
+  button: 
+    text: "Opciones de financiación"
+    color: white
+    hover_color: "white"
+    background: "black"
+    path: "/es/financiacion"
+  bullets:
+    item_style: '{ "padding": "0", "font-weight": "100", "margin":"0" }'
+    items:
+      - heading: "Rigobot, nuestra IA personalizada, ofrece de forma ilimitada:"
+        text: |
+          • Tutoría instantánea mientras programas
+          <br />
+          • Evaluaciones de habilidades para seguir tu progreso
+          <br />
+          • Asistencia para corregir errores
+          <br /><br />
+          ¡Es el complemento perfecto para nuestro programa de mentoría humana!
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+        icon_color: '#25BF6C'
+      - heading: "Learnpack, nuestro software de aprendizaje fácil de usar, proporciona:"
+        text: |
+          • Cientos de ejercicios interactivos para ayudarte a dominar y retener habilidades
+          <br />
+          • Pruebas automatizadas para ayudarte a seguir tu progreso
+          <br />
+          • Y mucho más…
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+        icon_color: '#25BF6C'
 
 active_campaign_location_slug: "toronto-canada"
 breathecode_location_slug: "toronto-canada"

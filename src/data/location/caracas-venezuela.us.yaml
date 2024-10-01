@@ -114,6 +114,58 @@ two_columns:
     - text: "Industry-aligned curriculum for real-world readiness"
     - text: "Discover why 4Geeks Academy stands out as the best option to learn programming"
 
+# Two Columns - Rigo
+two_columns_rigo:
+  proportions: [7, 5]
+  background: "#FFFFFF"
+  justify: "center" #start,end,center
+  image:
+    style: '{"backgroundSize": "contain", "background-position": "center"}'
+    src: "/images/landing/rigobot-section.webp"
+    shadow: false
+  # video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  heading: 
+    text: "Crack the Code to Your Learning Success: Our AI-Powered Features Make All the Difference!"
+    font_size: ["21px"]
+    style: '{ "lineHeight": "30px" }'
+    heading_image:
+      src: "/images/rigobot-logo.png"
+  sub_heading:
+    text: "Through years of research and experience, we've perfected the strategies and tools to ensure your constant and efficient progress. To optimize your learning curve and empower you to tackle challenges with confidence, we've now incorporated the power of AI."
+    font_size: ["18px"]
+  content:
+    style: '{ "font-size":"18px", "margin":"0" }'
+    text: "Experience the difference our AI-powered features make. Our tried-and-tested approach keeps you engaged, motivated, and on the fast track to achieving your coding goals!"
+  button: 
+    text: "See all financing options"
+    color: white
+    hover_color: "white"
+    background: "black"
+    path: "/us/financials"
+  bullets:
+    item_style: '{ "padding": "0", "font-weight": "100", "margin":"0" }'
+    items:
+      - heading: "Meet Rigobot, our AI coding assistant"
+        text: |
+          • Instant tutoring as you code
+          <br />
+          • Skill evaluations to track your progress
+          <br />
+          • Expert bug fixing assistance
+          <br /><br />
+          It perfectly complements our human mentorship program!
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+        icon_color: '#25BF6C'
+      - heading: "Learnpack, our interactive learning software, providing:"
+        text: |
+          • Hundreds of interactive exercises to help you master and retain skills
+          <br />
+          • Automated tests to help track your progress
+          <br />
+          • Structured practice
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+        icon_color: '#25BF6C'
+
 ## START FROM HERE - DON'T CHANGE ANYTHING ABOVE
 ## HEADING SECTION
 heading_section:
