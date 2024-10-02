@@ -258,7 +258,10 @@ const Location = ({ data, pageContext, yml }) => {
 
       {/* Two Columns Rigo */}
       <TwoColumn
-        right={{ image: yml.two_columns_rigo?.image, video: yml.two_columns_rigo?.video }}
+        right={{
+          image: yml.two_columns_rigo?.image,
+          video: yml.two_columns_rigo?.video,
+        }}
         left={{
           heading: yml.two_columns_rigo?.heading,
           heading_image: yml.two_columns_rigo?.heading_image,
@@ -270,7 +273,6 @@ const Location = ({ data, pageContext, yml }) => {
         proportions={yml.two_columns_rigo?.proportions}
         session={session}
       />
-
 
       {/* GEEKSINFO IS A TWOCOLUMN WITH TITLE */}
       <GeeksInfo lang={pageContext.lang} />
@@ -511,20 +513,20 @@ export const query = graphql`
               }
             }
           }
-          two_columns_rigo{
+          two_columns_rigo {
             proportions
             image {
               style
               src
               shadow
             }
-            heading{
+            heading {
               text
               font_size
               style
               heading_image {
                 src
-                }
+              }
             }
             sub_heading {
               text

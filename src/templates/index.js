@@ -328,9 +328,12 @@ const Home = (props) => {
       <Iconogram yml={yml.iconogram} background={Colors.veryLightBlue3} />
 
       {/* Two Columns Rigo */}
-      < Div background={Colors.veryLightBlue3} display="block">
+      <Div background={Colors.veryLightBlue3} display="block">
         <TwoColumn
-          right={{ image: yml.two_columns_rigo?.image, video: yml.two_columns_rigo?.video }}
+          right={{
+            image: yml.two_columns_rigo?.image,
+            video: yml.two_columns_rigo?.video,
+          }}
           left={{
             heading: yml.two_columns_rigo?.heading,
             heading_image: yml.two_columns_rigo?.heading_image,
@@ -575,20 +578,20 @@ export const query = graphql`
               text
             }
           }
-          two_columns_rigo{
+          two_columns_rigo {
             proportions
             image {
               style
               src
               shadow
             }
-            heading{
+            heading {
               text
               font_size
               style
               heading_image {
                 src
-                }
+              }
             }
             sub_heading {
               text

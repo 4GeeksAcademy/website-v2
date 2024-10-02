@@ -518,13 +518,13 @@ export const query = graphql`
               src
               shadow
             }
-            heading{
+            heading {
               text
               font_size
               style
               heading_image {
                 src
-                }
+              }
             }
             sub_heading {
               text
