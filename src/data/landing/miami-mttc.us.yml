@@ -174,8 +174,8 @@ components:
       path: "#leadform_bottom"
 
   - name: new_design_with_bullets
-    position: 5
-    proportions: [5, 7]
+    position: 4
+    proportions: [6, 6]
     layout: two_column_left
     background: "#F4F9FF"
     image:
@@ -187,10 +187,10 @@ components:
     sub_heading:
       text: "Choose the path that’s right for you."
     button: 
-      text: "Apply now"
+      text: "Apply Now"
       color: white
       hover_color: "white"
-      background: "black"
+      background: "blue"
       path: "#leadform_bottom"
     content: 
       text: ""
@@ -202,13 +202,13 @@ components:
         text: "Become a Full Stack software developer using Python, React, and Javascript. Master the most sought-after- skills and land a job as a developer. \n 
           art to end, including deployment into production and maintenance with Privacy, Security, and Ethics. Download syllabus here. (LINK)"
         icon: "circle" #string with icon for example ['check', 'cicle', etc]
-      - heading: "Data Science and ML"
+      - heading: "Data Science and Machine Learning"
         text: "Learn Python to collect and manage data. Create models and solve problems using Machine Learning, Deep Learning, and AI.
           art to end, including deployment into production and maintenance with Privacy, Security, and Ethics. Download syllabus here. (LINK)"
         icon: "circle" #string with icon for example ['check', 'cicle', etc]
 
   - name: how-it-works
-    position: 3
+    position: 5
     background: "#0084FF"
     layout: iconogram
     swipable: True
