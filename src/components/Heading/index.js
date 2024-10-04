@@ -140,6 +140,7 @@ export const H4 = styled(BaseHeading)`
   font-weight: ${(props) => props.fontWeight || "400"};
   letter-spacing: 0.05em;
   padding-right: ${(props) => props.paddingRight};
+  font-family: ${(props) => props.fontFamily};
 `;
 export const H5 = styled(BaseHeading)`
   font-weight: 700;

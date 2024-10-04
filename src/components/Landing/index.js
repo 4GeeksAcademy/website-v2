@@ -322,7 +322,7 @@ export const landingSections = {
     );
   },
 
-  iconogram: ({ pageContext, yml, index }) => {
+  iconogram: ({ yml, index }) => {
     return <Iconogram yml={yml} index={index} />;
   },
 
@@ -734,13 +734,14 @@ export const landingSections = {
     const { heading } = yml;
 
     const { icons, link, title } = data.allJobGuaranteeSmallYaml.edges[0].node;
+    const formatedIcons = icons.map(({ title, icon }) => ({ icon, content: title }));
     return (
       <JobGuaranteeSmall
         key={`job-guarantee-small-${index}`}
         content={{
           title: heading?.text || title,
           link,
-          icons,
+          icons: formatedIcons,
         }}
       />
     );
