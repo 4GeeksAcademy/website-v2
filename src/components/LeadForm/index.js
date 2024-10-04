@@ -601,7 +601,12 @@ const LeadForm = ({
               />
             </Div>
             {layout === "block" && (
-              <Div display="flex" padding="10px 0 0 0" width="100%" flexDirection="row-reverse">
+              <Div
+                display="flex"
+                padding="10px 0 0 0"
+                width="100%"
+                flexDirection="row-reverse"
+              >
                 <Button
                   type="submit"
                   fontSize="17px"
@@ -624,11 +629,25 @@ const LeadForm = ({
             )}
             <Paragraph fontSize="10px" textAlign="left" color={textColor}>
               {yml.terms.agree_terms_text}{" "}
-              <a href={yml.terms.terms_and_conditions_link} style={{ color: background === Colors.blue ? Colors.black : Colors.blue }} target="_blank">
+              <a
+                href={yml.terms.terms_and_conditions_link}
+                style={{
+                  color:
+                    background === Colors.blue ? Colors.black : Colors.blue,
+                }}
+                target="_blank"
+              >
                 {yml.terms.terms_and_conditions}
               </a>{" "}
               {yml.terms.connector_and}{" "}
-              <a href={yml.terms.privacy_policy_link} style={{ color: background === Colors.blue ? Colors.black : Colors.blue }} target="_blank">
+              <a
+                href={yml.terms.privacy_policy_link}
+                style={{
+                  color:
+                    background === Colors.blue ? Colors.black : Colors.blue,
+                }}
+                target="_blank"
+              >
                 {yml.terms.privacy_policy}
               </a>
             </Paragraph>

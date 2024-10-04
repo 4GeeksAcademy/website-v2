@@ -734,7 +734,10 @@ export const landingSections = {
     const { heading } = yml;
 
     const { icons, link, title } = data.allJobGuaranteeSmallYaml.edges[0].node;
-    const formatedIcons = icons.map(({ title, icon }) => ({ icon, content: title }));
+    const formatedIcons = icons.map(({ title, icon }) => ({
+      icon,
+      content: title,
+    }));
     return (
       <JobGuaranteeSmall
         key={`job-guarantee-small-${index}`}

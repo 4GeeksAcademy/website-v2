@@ -155,7 +155,9 @@ const LandingHeader = (props) => {
                   variant="main"
                   fontWeight="bolder"
                   padding="0 0 10px 0"
-                  dangerouslySetInnerHTML={{ __html: yml.header_data.sub_heading }}
+                  dangerouslySetInnerHTML={{
+                    __html: yml.header_data.sub_heading,
+                  }}
                 />
               )}
 
