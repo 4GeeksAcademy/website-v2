@@ -20,7 +20,7 @@ awards_list:
   #   paragraph: "Los Estados Unidos de America se aseguran de la calidad de la educación a través de los departamentos de educación a nivel federal. Contar con la certificación significa que estamos comprometidos a cumplir con todas las regulaciones nacionales y estatales y a ser supervisados y auditados anualmente para asegurar el éxito de la academia."
 
   - image: "../../../static/images/badges/switchup-2025-top.webp"
-    title: "Reconocido en los Mejores Bootcamps de Programación de SwitchUp 2025"
+    title: "Reconocido entre los Mejores Bootcamps de Programación por SwitchUp 2025"
     paragraph: "4Geeks Academy tiene el honor de ser incluido en la prestigiosa lista de SwitchUp de los mejores bootcamps de programación para 2025."
     link: "https://www.switchup.org/research/best-coding-bootcamps"
     text_link: "Ver sitio web"
