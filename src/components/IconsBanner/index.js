@@ -20,7 +20,6 @@ export default ({ icon, title, content, color, content_style }) => {
       alignItems="center"
       alignItems_tablet="start"
       borderRadius="4px"
-      margin=" 7px"
     >
       {icon && (
         <Icon
@@ -48,9 +47,8 @@ export default ({ icon, title, content, color, content_style }) => {
             color="#000"
             opacity="1"
             style={content_style ? JSON.parse(content_style) : {}}
-          >
-            {content}
-          </Paragraph>
+            dangerouslySetInnerHTML={{ __html: content }}
+          />
         )}
       </Div>
     </Div>
