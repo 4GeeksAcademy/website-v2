@@ -21,8 +21,8 @@ awards_list:
   #   link: "/"
 
   - image: "../../../static/images/badges/switchup-2025-top.webp"
-    title: "Recognized in SwitchUp's 2025 Best Coding Bootcamps"
-    paragraph: "4Geeks Academy is honored to be featured on SwitchUp's prestigious list of top coding bootcamps for 2025."
+    title: "Listed among the top 5 of Switchup’s best coding bootcamps in 2025"
+    paragraph: "SwitchUp has honored 4Geeks Academy by featuring it on their prestigious list of top coding bootcamps for 2025."
     link: "https://www.switchup.org/rankings/best-coding-bootcamps"
     text_link: "See website"
 
