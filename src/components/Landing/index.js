@@ -530,6 +530,10 @@ export const landingSections = {
           limit={yml.total_rows}
           title={yml.heading}
           paragraph={yml.paragraph}
+          mainBackround={Colors.white}
+          thirdBackground="#F9F9F9"
+          border={`1px solid ${Colors.lightGray}`}
+          borderRadius="4px"
         />
       </React.Fragment>
     );

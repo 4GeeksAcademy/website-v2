@@ -401,7 +401,8 @@ const LeadForm = ({
             {heading && (
               <H4
                 type="h4"
-                lineHeight="26px"
+                // lineHeight="26px"
+                lineHeight=""
                 fontSize="45px"
                 padding={headerImage && "0 10% 0 0"}
                 color={textColor}

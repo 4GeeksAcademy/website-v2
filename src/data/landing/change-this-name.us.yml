@@ -91,8 +91,12 @@ program_details:
   background: "#FFFFFF"
   sub_heading: "Las tecnologias más buscadas en el mercado laboral"
 
+why_4geeks:
+  position: 8
+  heading: "Escuchalo de nuestros alumnos"
+
 geeks_vs_others:
-  position: 4
+  position: 5
   heading: "Compara 4Geeks con otros bootcamps"
   paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
   total_rows: 5
@@ -135,21 +139,53 @@ components:
       - icon: "contract-2"
         title: "Job placement"
         content: "Thanks to our program you'll be equipped"
+  
+  - name: "whatever"
+    layout: choose_your_program
+    position: 3
+    heading:
+      text: Nuestras Modalidades
+    content:
+      text: Programa Full Stack Developer en Modalidad Part Time y Full Time
+    programs:
+    - title: "Part Time"
+      sub_title: "18 semanas"
+      icon: "fullstack_2"
+      description: |
+        De cero a tener tu primer trabajo como Full Stack Developer, con una duración de 18 semanas, con clases 3 veces por semana, compatible con horario laboral o de estudios. 
+      text_link: Obtener más información
+      link: "#leadform_header" # moves to start position
+      
+    - title: "Full Time"
+      sub_title: "10 semanas"
+      icon: "fullstack_2"
+      description: |
+        Programa intensivo de 10 semanas, con clases de lunes a viernes durante todo el día, para vivir una experiencia inmersiva en el mundo del código.
+      text_link: Obtener más información
+      link: "#leadform_header"
 
-  - name: two_column
+    - title: "Full Time"
+      sub_title: "10 semanas"
+      icon: "fullstack_2"
+      description: |
+        Programa intensivo de 10 semanas, con clases de lunes a viernes durante todo el día, para vivir una experiencia inmersiva en el mundo del código.
+      text_link: Obtener más información
+      link: "#leadform_header"
+
+  - name: why_4geeks_column
     position: 3
     layout: two_column_left
     image:
-      src: "/images/landing/hombre-con-laptop.png"
+      src: "/images/landing/blonde-girl-laptop.png"
     heading: 
       text: "Why 4Geeks?"
     sub_heading:
-      text: "¿Quieres desatar tu potencial como Full-Stack Developer y/o Data Scientist?"
+      text: ¿Quieres desatar tu potencial como Full-Stack Developer y/o Data Scientist?
     button: 
       text: "APPLY NOW"
       color: white
       hover_color: "white"
-      background: "black"
+      background: "blue"
       path: "#leadform_header"
     content: 
       text: |
@@ -157,36 +193,34 @@ components:
         Contamos con más de 8 años de experiencia, presencia en diferentes partes del mundo y premios a nivel mundial. 
         <br>
         <br>
-        <span style="font-weight: 700;">¡Únete a la academia y transforma tu carrera!</span>
+        Únete a la academia y transforma tu carrera!
 
-  - name: new_design_with_bullets
-    position: 6
-    layout: two_column_right 
-    swipable: False
-    background: "#FFFFFF"
+  - name: Educacionflexible
+    position: 3
+    layout: two_column_left
     image:
-      src: "/images/landing/grupo-ventanas.webp"
-    section_heading: 
-      text: "Designed to make you successful in the coding world"
+      src: "/images/landing/meet-windows-group-en.webp"
+    heading: 
+      text: "Educación flexible e intensiva"
     button: 
-      text: "See all financing options"
+      text: "APPLY NOW"
       color: white
       hover_color: "white"
-      background: "black"
-      path: "https://www.youtube.com/watch?v=plwPwyrxX84"
+      background: "blue"
+      path: "#leadform_header"
+    content: 
+      text: |
+        Conviértete en un Full-Stack Developer y/o Data Scientist en solo 18 semanas con 4Geeks Academy. Sin experiencia previa necesaria.<br>
+        Contamos con más de 8 años de experiencia, presencia en diferentes partes del mundo y premios a nivel mundial.
     bullets:
       items:
-      - heading: "MENTORÍA PERMANENTE e ILIMITADA "
-        text: "Online and in-person, for the rest of your life, even for coding work-related doubts"
+      - text: Apoyo Profesional de por vida
         icon: "check" #string with icon for example ['check', 'cicle', etc]
-      - heading: "TIEMPO DE RESPUESTA"
-        text: "Do not get stuck with your code , it won’t take you more than 15 minutes for an instructor to help you"
+      - text: <a href="https://google.com" target="_blank">Opciones de financiacion</a> Apoyo Profesional de por vida
         icon: "check" #string with icon for example ['check', 'cicle', etc]
-      - heading: "1:5 PROFESOR: ESTUDIANTE RATIO"
-        text: "You will find more teachers at 4Geeks than the industry average."
+      - text: Apoyo Profesional de por vida
         icon: "check" #string with icon for example ['check', 'cicle', etc]
-      - heading: "Soporte profesional a la medida"
-        text: "Based on each job opportunity"
+      - text: Apoyo Profesional de por vida
         icon: "check" #string with icon for example ['check', 'cicle', etc]
 
   - name: testimonials

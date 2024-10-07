@@ -93,7 +93,7 @@ export default ({
             margin_tablet="0 0 15px 0"
             margin_xs="0px"
             textTransform={title ? "" : "uppercase"}
-            textAlign={title ? "center" : "left"}
+            textAlign="center"
           >
             {title || info?.header?.title}
           </H2>

@@ -266,8 +266,7 @@ export const Paragraph = styled.p`
     max-width: ${(props) => props.maxWidth_tablet};
     font-size: ${(props) =>
       paragraphSizes[props.fontSize_tablet] || props.fontSize_tablet};
-    font-weight: ${(props) =>
-      props.isActive ? "bold" : props.fontWeight_tablet || "400"};
+    font-weight: ${(props) => props.fontWeight_tablet};
     text-align: ${(props) => props.textAlign_tablet};
     align-self: ${(props) => props.alignSelf_tablet};
     padding: ${(props) => props.padding_tablet};

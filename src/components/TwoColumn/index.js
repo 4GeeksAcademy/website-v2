@@ -149,10 +149,11 @@ const Side = ({
       {sub_heading && (
         <Paragraph
           textAlign_tablet="left"
-          fontFamily="Lato"
+          fontFamily="Archivo"
+          fontWeight="600"
           textAlign="left"
           margin="0"
-          fontSize={sh_xs || sh_xl}
+          fontSize={sh_xs || sh_xl || "21px"}
           fontSize_xs={sh_xs}
           fontSize_sm={sh_sm}
           fontSize_tablet={sh_md}

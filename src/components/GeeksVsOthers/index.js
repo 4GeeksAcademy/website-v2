@@ -13,6 +13,8 @@ const GeeksVsOthers = ({
   lang,
   mainBackround,
   style,
+  thirdBackground,
+  ...rest
 }) => {
   const [selected, setSelected] = useState({ index: null, manual: false });
 
@@ -102,6 +104,7 @@ const GeeksVsOthers = ({
           columnGap="16px"
           padding_tabletChild="10px"
           width="100%"
+          {...rest}
         >
           <Div
             gridColumn_tablet="1 / 4"
@@ -141,7 +144,7 @@ const GeeksVsOthers = ({
             gridColumn_tablet="7 / 10"
             height="74px"
             alignItems="center"
-            background={Colors.white}
+            background={thirdBackground || Colors.white}
             borderRadius="4px"
             padding="0 25px 0 20px"
             padding_tablet="0 16px"
@@ -203,7 +206,7 @@ const GeeksVsOthers = ({
                 </Div>
                 <Div
                   gridColumn_tablet="7 / 10"
-                  background={Colors.white}
+                  background={thirdBackground || Colors.white}
                   borderRadius={i === arr.length - 1 && "0 0 4px 4px"}
                   padding="0 25px 0 20px"
                   padding_tablet="0 16px"
@@ -233,7 +236,6 @@ const GeeksVsOthers = ({
       {/* MOBILE VERSION*/}
 
       <Div
-        //className="program-details-mobile"
         flexWrap="wrap"
         padding_xs="0 0 20px 0"
         margin_tablet="20px 35px"

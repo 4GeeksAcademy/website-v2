@@ -44,12 +44,14 @@ const LandingHeader = (props) => {
 
   const taglineColor = () => {
     if (yml.header_data.tagline_color) return yml.header_data.tagline_color;
-    return yml.header_data.background ? Colors.white : Colors.darkBlue;
+    if (yml.header_data.background === '#FFF1D1') return Colors.darkBlue;
+    return yml.header_data.background || yml.header_data.background_image ? Colors.white : Colors.darkBlue;
   };
 
   const bulletsColor = () => {
     if (yml.header_data.tagline_color) return yml.header_data.tagline_color;
-    return yml.header_data.background ? Colors.white : Colors.darkGray3;
+    if (yml.header_data.background === '#FFF1D1') return Colors.darkBlue;
+    return yml.header_data.background || yml.header_data.background_image ? Colors.white : Colors.darkGray3;
   };
 
   const formColor = () => {
