@@ -247,6 +247,37 @@ components:
       - text: Apoyo Profesional de por vida
         icon: "check" #string with icon for example ['check', 'cicle', etc]
 
+  - name: Educacionflexible2
+    position: 3
+    layout: two_column_right
+    image:
+      src: "/images/landing/meet-windows-group-en.webp"
+    heading: 
+      text: Apoyo de la Comunidad
+    sub_heading:
+      text: Apoyo de la Comunidad
+    button: 
+      text: "APPLY NOW"
+      color: white
+      hover_color: "white"
+      background: "blue"
+      path: "#leadform_header"
+
+    bullets:
+      items:
+      - heading: 4GEEKS.COM
+        text: |
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+      - heading: COMUNIDAD SLACK
+        text: |
+          Nuestra comunidad internacional de más de 1100 personas, que te brindará todo el apoyo que necesites.
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+      - heading: COMUNIDAD SLACK
+        text: |
+          Nuestra comunidad internacional de más de 1100 personas, que te brindará todo el apoyo que necesites.
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+
   - name: testimonials
     position: 6
     layout: testimonials_new

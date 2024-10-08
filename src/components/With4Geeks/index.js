@@ -89,11 +89,7 @@ const With4Geeks = ({
           padding_tablet="0 40px 32px 40px"
           {...headerProps}
         >
-          <H2
-            margin_tablet="0 0 15px 0"
-            margin_xs="0px"
-            textAlign="center"
-          >
+          <H2 margin_tablet="0 0 15px 0" margin_xs="0px" textAlign="center">
             {title || info?.header?.title}
           </H2>
           {paragraph && (
