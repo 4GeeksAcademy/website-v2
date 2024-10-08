@@ -393,6 +393,7 @@ export const query = graphql`
           badges {
             position
             heading
+            sub_heading
           }
           short_badges {
             name

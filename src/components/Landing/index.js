@@ -327,17 +327,19 @@ export const landingSections = {
   },
 
   badges: ({ pageContext, yml, index }) => {
-    const badges = yml;
+    const title = yml.heading?.text || yml.heading;
+    const subHeading = yml.sub_heading?.text || yml.sub_heading;
     return (
       <React.Fragment key={index}>
-        <Div background={Colors.verylightGray2} width="100%">
+        <Div width="100%">
           <Badges
             link
-            // wrapped_images={true}
             id="badges"
+            variant="squares"
             lang={pageContext.lang}
-            background={Colors.verylightGray2}
-            paragraph={badges.heading}
+            title={title}
+            paragraph={subHeading}
+            imageBorder={`1px solid ${Colors.lightGray2}`}
             short_text
             padding="60px 0"
             padding_tablet="68px 0"
@@ -349,7 +351,7 @@ export const landingSections = {
     );
   },
 
-  rating_reviews: ({ session, data, pageContext, yml, course, index }) => {
+  rating_reviews: ({ data, pageContext, yml, course, index }) => {
     let dataYml =
       data.allLandingYaml.edges[0] || data.allDownloadableYaml.edges[0];
     let ratingReviews = dataYml.node.rating_reviews;
@@ -366,7 +368,6 @@ export const landingSections = {
           padding="60px 0 60px 0"
           display="flex"
           flexDirection="column"
-          borderBottom="3px solid #F5F5F5"
           margin="auto"
           width="100%"
           maxWidth="1280px"
@@ -762,27 +763,31 @@ export const landingSections = {
     />
   ),
 
-  why_4geeks: ({ session, pageContext, yml, index }) => (
-    <Div
-      id="why_4geeks"
-      key={index}
-      flexDirection="column"
-      margin="0"
-      padding="0"
-    >
-      <With4Geeks
-        text={yml.footer?.text}
-        sessionLocation={
-          session &&
-          session.location &&
-          session.location.breathecode_location_slug
-        }
-        text_link={yml.footer?.text_link}
-        lang={pageContext.lang}
-        playerHeight="auto"
-      />
-    </Div>
-  ),
+  why_4geeks: ({ session, pageContext, yml, index }) => {
+    const title = yml.heading?.text || yml.heading;
+    return (
+      <Div
+        id="why_4geeks"
+        key={index}
+        flexDirection="column"
+        margin="0"
+        padding="0"
+      >
+        <With4Geeks
+          text={yml.footer?.text}
+          sessionLocation={
+            session &&
+            session.location &&
+            session.location.breathecode_location_slug
+          }
+          text_link={yml.footer?.text_link}
+          lang={pageContext.lang}
+          playerHeight="auto"
+          title={title}
+        />
+      </Div>
+    );
+  },
   alumni_projects: ({ session, data, pageContext, yml, index }) => (
     <Div
       id="alumni_projects"
@@ -835,6 +840,8 @@ export const landingSections = {
         margin_xs="60px 0 40px 0"
       >
         <OurPartners
+          multiLine
+          variant="carousel"
           images={hiring.partners.images}
           margin="0"
           padding="0 ​0 75px 0"

@@ -91,22 +91,46 @@ program_details:
   background: "#FFFFFF"
   sub_heading: "Las tecnologias más buscadas en el mercado laboral"
 
-why_4geeks:
-  position: 8
-  heading: "Escuchalo de nuestros alumnos"
-
 geeks_vs_others:
   position: 5
   heading: "Compara 4Geeks con otros bootcamps"
   paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
   total_rows: 5
 
+why_4geeks:
+  position: 6
+  heading: "Escúchalo de nuestros alumnos"
+
 who_is_hiring:
   position: 9
   limit: 3
-  heading: "NUESTROS PARTNERS"
-  sub_heading: "Gracias a nuestra creciente red de Aliados podemos contar con ofertas constantes a nivel nacional e internacional"
+  heading: "¿Quien contrata a nuestros estudiantes?"
+  sub_heading: "Gracias a nuestra creciente red de Aliados podemos contar con ofertas constantes  a nivel nacional e internacional. Gracias a esto y a nuestro servicio de GeekFORCE (Apoyo a tu desarrollo Profesional) es que logramos que el ~89% de nuestros alumnos consigan trabajo dentro de los siguientes 100 días o menos desde su graduación."
 
+badges:
+  position: 10
+  heading: "How have we built our credibility over the years?"
+  sub_heading: "We are Licensed by the Florida Department of Education, we have been names by Forbes as a top 5 Coding School and every major Coding School independent listing have been naming us as top worldwide Bootcamp over the years"
+
+rating_reviews:
+  position: 10
+  heading: Lea acerca de nosotros
+  rating_list:
+    - alt: "Career Karma"
+      image: "../../../static/images/badges/career-karma.png"
+      rating: 4.8
+      url: "https://careerkarma.com/schools/4geeks-academy/"
+    - alt: "Switchup"
+      image: "../../../static/images/badges/switchup-img.png"
+      rating: 4.89
+      url: "https://www.switchup.org/bootcamps/4geeks-academy"
+    - alt: "Course Report"
+      image: "../../../static/images/badges/course-report.png"
+      rating: 4.84
+      url: "https://www.coursereport.com/schools/4geeks-academy"
+    - alt: "Google"
+      image: "../../../static/images/badges/google.png"
+      rating: 4.9
 
 components:
   - name: JobGuarantee
@@ -230,36 +254,3 @@ components:
       text: "Escúchalo de nuestros alumnos"
     filter_indexes: ['azu-bota','nai-kali','cha-fabr', 'jona-ferra', 'jos-bra', 'kev-so']
     variant: small
-
-  - name: story_full_oportunities
-    position: 6
-    layout: two_column_left
-    swipable: False
-    background: "#FFFFFF"
-    heading:
-      text: 4Geeks, Miami and a story full of opportunities
-    sub_heading:
-      text: "We are Miami based and we have been focusing in bringing on more opportunities in South Florida"
-    image:
-      src: "/static/images/staff/luisa.png"
-      shadow: True
-    video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
-    button: 
-      text: "See all financing options"
-      color: white
-      hover_color: "white"
-      background: "black"
-      path: "https://www.youtube.com/watch?v=plwPwyrxX84"
-    bullets:
-      items:
-      - text: "There is always a full or partial scholarship open"
-        icon: "check" #string with icon for example ['check', 'cicle', etc]
-      - text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
-        icon: "check" #string with icon for example ['check', 'cicle', etc]
-      - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade Counti and so manu more"
-        icon: "check" #string with icon for example ['check', 'cicle', etc]
-
-  - name: faq
-    position: 10
-    layout: faq
-    topic: 4geeks
