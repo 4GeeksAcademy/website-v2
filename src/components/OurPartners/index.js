@@ -253,6 +253,7 @@ const SquareBoxPartner = ({ border, elem, width, height }) => {
               cursor: "pointer",
               margin: "auto",
               width: "60%",
+              display: "block",
             }}
             height="112px"
             objectFit="contain"

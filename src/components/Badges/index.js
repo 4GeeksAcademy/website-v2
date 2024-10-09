@@ -17,6 +17,7 @@ const SquaresVariant = ({
   maxWidth,
   content,
   imageBackground,
+  imageBorder,
 }) => {
   return (
     <>
@@ -61,6 +62,7 @@ const SquaresVariant = ({
                     borderRadius="4px"
                     flexShrink="0"
                     flexShrink_tablet="0"
+                    border={imageBorder}
                   >
                     <GatsbyImage
                       key={l.name}
@@ -105,6 +107,7 @@ const Badges = ({
   badges,
   bottom_paragraph,
   imageBackground,
+  imageBorder,
   variant,
 }) => {
   const data = useStaticQuery(graphql`
@@ -154,6 +157,7 @@ const Badges = ({
       <SquaresVariant
         id={id}
         title={title}
+        imageBorder={imageBorder}
         paragraph={paragraph}
         background={background}
         padding={padding}

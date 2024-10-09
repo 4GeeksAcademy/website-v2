@@ -32,21 +32,28 @@ export default ({ icon, title, content, color, content_style }) => {
       )}
       <Div
         margin="0 0 0 15px"
-        margin_tablet="30px 0 0 0"
+        margin_tablet="24px 0 0 0"
         display="flex"
         flexDirection="column"
         display_tablet="block"
       >
         {title && (
-          <H3 textAlign="left" fontFamily="Archivo-Black" margin="0">
+          <H3
+            textAlign="left"
+            fontFamily="Archivo"
+            fontWeight="600"
+            fontSize="16px"
+            margin="0"
+          >
             {title}
           </H3>
         )}
         {content && (
           <Paragraph
             textAlign="left"
-            color="#000"
-            opacity="1"
+            color={Colors.darkGray}
+            fontFamily="Archivo"
+            fontSize="18px"
             style={content_style ? JSON.parse(content_style) : {}}
           >
             {content}
