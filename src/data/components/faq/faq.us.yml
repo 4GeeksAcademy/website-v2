@@ -63,15 +63,98 @@ faq:
           We offer various payment options to accommodate your needs. These include loans with payments as low as $120 per month, extended payment plans, and discounts for upfront payments. Additionally, we provide scholarships based on your background. For more information, please reach out to our admissions team or visit our <a class="faq-link" href="/us/financials">financials page</a>.<br>
           Ready to apply? Start your application process <a class="faq-link" href="/us/apply">here</a>.
 
-      ### USA 
-      - question: "How do I pay for my tuition in USA?" #USA
-        locations: ["atlanta-usa", "austin-usa", "chicago-usa", "downtown-miami", "houston-usa", "losangeles-usa", "newyork-usa", "orlando", "online", "online-spanish-usa", "tampa-usa"]
+      # =============================================
+      #     how do I pay for my tuition?
+      # =============================================
+
+      # - question: "How do I pay for my tuition in USA?" #USA
+      #   locations: ["atlanta-usa", "austin-usa", "chicago-usa", "downtown-miami", "houston-usa", "losangeles-usa", "newyork-usa", "orlando", "online", "online-spanish-usa", "tampa-usa"]
+      #   priority: 1
+      #   answer: |-
+      #     In the United States of America, we offer various payment options to accommodate your needs. These include loans with payments as low as $120 per month, extended payment plans, and discounts for upfront payments. Additionally, we provide scholarships based on your background. For more information, please reach out to our admissions team or visit our <a class="faq-link" target="_blank" href="/us/financials">financials page</a>.<br>
+      #     Ready to apply? Start your application process <a class="faq-link" href="/us/apply">here</a>.
+
+      - question: "How do I pay for my tuition in Atlanta?" # Atlanta
+        locations: ["atlanta-usa"]
         priority: 1
         answer: |-
-          In the United States of America, we offer various payment options to accommodate your needs. These include loans with payments as low as $120 per month, extended payment plans, and discounts for upfront payments. Additionally, we provide scholarships based on your background. For more information, please reach out to our admissions team or visit our <a class="faq-link" target="_blank" href="/us/financials">financials page</a>.<br>
+          In Atlanta, we offer various payment options to suit your financial situation. These include loans with monthly payments starting as low as $120, extended payment plans, and discounts for upfront payments. Additionally, scholarships are available depending on your background. For more information, reach out to our admissions team or visit our <a class="faq-link" target="_blank" href="/us/financials">financials page</a>.<br>
           Ready to apply? Start your application process <a class="faq-link" href="/us/apply">here</a>.
 
-      ### EUROPE
+      - question: "How do I pay for my tuition in Austin?" # Austin
+        locations: ["austin-usa"]
+        priority: 1
+        answer: |-
+          In Austin, we provide flexible payment plans tailored to your needs. These include loans with monthly payments as low as $120, extended payment options, and discounts for those who pay upfront. Scholarships are also available based on your profile. For more details, contact our admissions team or visit our <a class="faq-link" target="_blank" href="/us/financials">financials page</a>.<br>
+          Ready to apply? Start your application process <a class="faq-link" href="/us/apply">here</a>.
+
+      - question: "How do I pay for my tuition in Chicago?" # Chicago
+        locations: ["chicago-usa"]
+        priority: 1
+        answer: |-
+          In Chicago, we have several payment options available, including loans with monthly payments as low as $120, extended payment plans, and upfront payment discounts. Additionally, we offer scholarships depending on your background. To learn more, please reach out to our admissions team or visit our <a class="faq-link" target="_blank" href="/us/financials">financials page</a>.<br>
+          Ready to apply? Start your application process <a class="faq-link" href="/us/apply">here</a>.
+
+      - question: "How do I pay for my tuition in Downtown Miami?" # Downtown Miami
+        locations: ["downtown-miami"]
+        priority: 1
+        answer: |-
+          In Downtown Miami, we offer flexible payment plans to fit your budget, including loans with monthly payments starting at $120, extended payment plans, and upfront payment discounts. Scholarships are also available based on your profile. For more details, contact our admissions team or visit our <a class="faq-link" target="_blank" href="/us/financials">financials page</a>.<br>
+          Ready to apply? Start your application process <a class="faq-link" href="/us/apply">here</a>.
+
+      - question: "How do I pay for my tuition in Houston?" # Houston
+        locations: ["houston-usa"]
+        priority: 1
+        answer: |-
+          In Houston, we provide various payment options, such as loans with payments starting as low as $120 per month, extended payment plans, and upfront payment discounts. Additionally, we offer scholarships depending on your background. For more information, please contact our admissions team or visit our <a class="faq-link" target="_blank" href="/us/financials">financials page</a>.<br>
+          Ready to apply? Start your application process <a class="faq-link" href="/us/apply">here</a>.
+
+      - question: "How do I pay for my tuition in Los Angeles?" # Los Angeles
+        locations: ["losangeles-usa"]
+        priority: 1
+        answer: |-
+          In Los Angeles, we offer multiple payment options tailored to your financial needs. These include loans with payments starting at $120 per month, extended payment plans, and discounts for upfront payments. Scholarships based on your background are also available. For more information, reach out to our admissions team or visit our <a class="faq-link" target="_blank" href="/us/financials">financials page</a>.<br>
+          Ready to apply? Start your application process <a class="faq-link" href="/us/apply">here</a>.
+
+      - question: "How do I pay for my tuition in New York?" # New York
+        locations: ["newyork-usa"]
+        priority: 1
+        answer: |-
+          In New York, we provide several payment options, including loans with monthly payments starting at $120, extended payment plans, and discounts for upfront payments. Scholarships are also available depending on your profile. For more details, contact our admissions team or visit our <a class="faq-link" target="_blank" href="/us/financials">financials page</a>.<br>
+          Ready to apply? Start your application process <a class="faq-link" href="/us/apply">here</a>.
+
+      - question: "How do I pay for my tuition in Orlando?" # Orlando
+        locations: ["orlando"]
+        priority: 1
+        answer: |-
+          In Orlando, we offer flexible payment options including loans with monthly payments as low as $120, extended payment plans, and discounts for upfront payments. We also offer scholarships based on your background. For more information, please contact our admissions team or visit our <a class="faq-link" target="_blank" href="/us/financials">financials page</a>.<br>
+          Ready to apply? Start your application process <a class="faq-link" href="/us/apply">here</a>.
+
+      - question: "How do I pay for my tuition online in the USA?" # Online
+        locations: ["online"]
+        priority: 1
+        answer: |-
+          For our online programs in the USA, we offer a variety of payment options, including loans with payments starting at $120 per month, extended payment plans, and discounts for upfront payments. Scholarships are also available depending on your background. To find out more, please contact our admissions team or visit our <a class="faq-link" target="_blank" href="/us/financials">financials page</a>.<br>
+          Ready to apply? Start your application process <a class="faq-link" href="/us/apply">here</a>.
+
+      - question: "How do I pay for my tuition for the Spanish online programs in the USA?" # Online Spanish
+        locations: ["online-spanish-usa"]
+        priority: 1
+        answer: |-
+          For our Spanish online programs in the USA, we provide several payment options, including loans with monthly payments as low as $120, extended payment plans, and upfront payment discounts. Scholarships are also available based on your background. To get more details, contact our admissions team or visit our <a class="faq-link" target="_blank" href="/us/financials">financials page</a>.<br>
+          Ready to apply? Start your application process <a class="faq-link" href="/us/apply">here</a>.
+
+      - question: "How do I pay for my tuition in Tampa?" # Tampa
+        locations: ["tampa-usa"]
+        priority: 1
+        answer: |-
+          In Tampa, we offer flexible payment plans to fit your financial situation. These include loans with monthly payments starting at $120, extended payment plans, and discounts for upfront payments. Scholarships are also available based on your profile. For more details, contact our admissions team or visit our <a class="faq-link" target="_blank" href="/us/financials">financials page</a>.<br>
+          Ready to apply? Start your application process <a class="faq-link" href="/us/apply">here</a>.
+
+      # =============================================
+      #     how do I pay for my tuition? - Europe
+      # =============================================
+      
       - question: "How do I pay for my tuition in Europe?" # Europe
         locations: ["europe"]
         priority: 1
@@ -108,14 +191,20 @@ faq:
         answer: |-
           In Ireland, we provide multiple payment options tailored to your needs. You can choose to make a single upfront payment or finance your tuition over up to 24 months. To determine the best option for you, schedule a call with our admissions team or visit our <a class="faq-link" target="_blank" href="/us/financials">financials page</a>.
 
-      ### CHILE
+      # =============================================
+      #     how do I pay for my tuition? - Chile
+      # =============================================
+
       - question: "How do I pay for my tuition in Chile?" # Chile
         locations: ["santiago-chile"]
         priority: 1
         answer: |-
           In Chile, we provide multiple payment options tailored to your needs. You can choose to make a single upfront payment or finance your tuition over up to 18 months. To determine the best option for you, schedule a call with our admissions team or visit our <a class="faq-link" target="_blank" href="/us/financials">financials page</a>.
 
-      #### LATAM 
+      # =============================================
+      #     how do I pay for my tuition? - LATAM
+      # =============================================
+
       - question: "How do I pay for my tuition?" #Bogotá, Colombia
         locations: ["bogota-colombia"]
         priority: 1
@@ -144,19 +233,19 @@ faq:
         locations: ["lapaz-bolivia"]
         priority: 1
         answer: |-
-          In La Paz, Bolivia, 4Geeks Academy offers flexible payment options, including one-time payments and financing up to 24 months. We tailor to your needs – schedule a call with admissions to find your perfect fit! For more details, visit our <a class="faq-link" target="_blank" href="/us/financials">financials page</a>.
+          In Bolivia, 4Geeks Academy offers flexible payment options, including one-time payments and financing up to 24 months. We tailor to your needs – schedule a call with admissions to find your perfect fit! For more details, visit our <a class="faq-link" target="_blank" href="/us/financials">financials page</a>.
 
       - question: "How do I pay for my tuition?" #Lima, Perú
         locations: ["lima-peru"]
         priority: 1
         answer: |-
-          In Lima, Perú, 4Geeks Academy offers flexible payment options, including one-time payments and financing up to 24 months. We tailor to your needs – schedule a call with admissions to find your perfect fit! For more details, visit our <a class="faq-link" target="_blank" href="/us/financials">financials page</a>.
+          In Peru, 4Geeks Academy offers flexible payment options, including one-time payments and financing up to 24 months. We tailor to your needs – schedule a call with admissions to find your perfect fit! For more details, visit our <a class="faq-link" target="_blank" href="/us/financials">financials page</a>.
 
       - question: "How do I pay for my tuition?" #Mexico City, Mexico
         locations: ["mexicocity-mexico"]
         priority: 1
         answer: |-
-          In Mexico City, Mexico, 4Geeks Academy offers flexible payment options, including one-time payments and financing up to 24 months. We tailor to your needs – schedule a call with admissions to find your perfect fit! For more details, visit our <a class="faq-link" target="_blank" href="/us/financials">financials page</a>.
+          In Mexico, 4Geeks Academy offers flexible payment options, including one-time payments and financing up to 24 months. We tailor to your needs – schedule a call with admissions to find your perfect fit! For more details, visit our <a class="faq-link" target="_blank" href="/us/financials">financials page</a>.
 
       - question: "How do I pay for my tuition?" #Montevideo, Uruguay
         locations: ["montevideo-uruguay"]
@@ -175,28 +264,357 @@ faq:
         priority: 1
         answer: |-
           In Quito, Ecuador, 4Geeks Academy offers flexible payment options, including one-time payments and financing up to 24 months. We tailor to your needs – schedule a call with admissions to find your perfect fit! For more details, visit our <a class="faq-link" target="_blank" href="/us/financials">financials page</a>.
+
       ## // how do I pay for my tuition? // 
 
-      ## Does 4Geeks offer career support?
-      - question: "Does 4Geeks Academy offer professional support?" # all locations
-        locations: ["all"]
+      # =============================================
+      #  Does 4Geeks offer career support?
+      # =============================================
+
+      - question: "Does 4Geeks Academy offer professional support?" # FAQ page
+        # locations: ["all"]
         templates: ["faq"]
-        priority: 1
+        priority: 0
         answer: |-
           Yes! At 4Geeks Academy, we offer professional support to help you achieve your career goals. Our unlimited professional support plan is part of our Geekforce program. You will have unlimited access to individual and group professional sessions where we will equip you with all the tools necessary to get a job. This includes optimizing your resume, LinkedIn and GitHub profiles, connecting you with events and our hiring network, and preparing you for technical and behavioral interviews, among other services. Learn more about our <a class="faq-link" target="_blank" href="/us/geekforce-career-support">Geekforce and career support program</a>.<br>
 
           Additionally, upon paying for the bootcamp, you will also have access to a more basic professional support mentorship plan, which includes our Geek Pal program. For more details, visit the <a class="faq-link" href="/us/geekpal-support">Geek Pal program</a>.
 
-      ## Does 4Geeks offer career support?
-
-      #### Extended Payment Plan? How does it work? And what does it mean? 
-      - question: "Extended Payment Plan? How does it work? And what does it mean?" #USA
-        locations: ["atlanta-usa", "austin-usa", "chicago-usa", "downtown-miami", "houston-usa", "losangeles-usa", "newyork-usa", "orlando", "online", "online-spanish-usa", "tampa-usa"]
-        templates: ["faq"]
+      - question: "Does 4Geeks Academy offer professional support in Atlanta?" # Atlanta
+        locations: ["atlanta-usa"]
         priority: 1
+        answer: |-
+          Yes! At 4Geeks Academy in Atlanta, we offer comprehensive professional support through our Geekforce program. You will have unlimited access to individual and group sessions that will help you build the tools you need to succeed in your career. This includes resume, LinkedIn, and GitHub optimization, interview preparation, and access to local and global hiring events. Learn more about our <a class="faq-link" target="_blank" href="/us/geekforce-career-support">Geekforce and career support program.</a>.<br>
+          Additionally, the Geek Pal mentorship plan is available upon paying for the bootcamp, providing personalized guidance. Explore more about our <a class="faq-link" href="/us/geekpal-support">Geek Pal program</a>.
+
+      - question: "Does 4Geeks Academy offer professional support in Austin?" # Austin
+        locations: ["austin-usa"]
+        priority: 1
+        answer: |-
+          In Austin, 4Geeks Academy provides professional career support through our Geekforce program. This plan gives you unlimited access to career coaching, including help with resumes, LinkedIn, GitHub, and technical and behavioral interview preparation. We also connect you with hiring opportunities in Austin’s growing tech scene. Learn more about our <a class="faq-link" target="_blank" href="/us/geekforce-career-support">Geekforce and career support program</a>.<br>
+          You will also have access to our Geek Pal mentorship program upon enrolling in the bootcamp. Find out more about the <a class="faq-link" href="/us/geekpal-support">Geek Pal program</a>.
+
+      - question: "Does 4Geeks Academy offer professional support in Barcelona?" # Barcelona
+        locations: ["barcelona-spain"]
+        priority: 1
+        answer: |-
+          At 4Geeks Academy in Barcelona, we offer professional support through our Geekforce program, providing unlimited access to individual and group career sessions. These include resume, LinkedIn, and GitHub optimization, interview preparation, and connections with hiring partners across Spain and internationally. Learn more about our <a class="faq-link" target="_blank" href="/us/geekforce-career-support">Geekforce and career support program</a>.<br>
+          Our Geek Pal mentorship program is also available after enrollment. For more information, visit the <a class="faq-link" href="/us/geekpal-support">Geek Pal program</a>.
+
+      - question: "Does 4Geeks Academy offer professional support in Berlin?" # Berlin
+        locations: ["berlin-germany"]
+        priority: 1
+        answer: |-
+          In Berlin, 4Geeks Academy offers a robust professional support plan through Geekforce, providing unlimited access to career coaching sessions. You’ll receive help with your resume, LinkedIn, GitHub, and interview preparation, along with connections to local and international hiring opportunities. Learn more about our <a class="faq-link" target="_blank" href="/us/geekforce-career-support">Geekforce and career support program</a>.<br>
+          Additionally, our Geek Pal mentorship program is included when you enroll. Discover more about the <a class="faq-link" href="/us/geekpal-support">Geek Pal program</a>.
+
+      - question: "Does 4Geeks Academy offer professional support in Bogotá?" # Bogotá
+        locations: ["bogota-colombia"]
+        priority: 1
+        answer: |-
+          Yes! In Bogotá, 4Geeks Academy provides professional career support through our Geekforce program. You’ll have access to unlimited individual and group sessions to help you with resume, LinkedIn, GitHub profiles, and interview preparation. We also offer connections to local and international companies. Learn more about our <a class="faq-link" target="_blank" href="/us/geekforce-career-support">Geekforce and career support program</a>.<br>
+          Additionally, upon enrollment, you will have access to the Geek Pal mentorship program. Learn more about the <a class="faq-link" href="/us/geekpal-support">Geek Pal program</a>.
+
+      - question: "Does 4Geeks Academy offer professional support in Buenos Aires?" # Buenos Aires
+        locations: ["buenosaires-argentina"]
+        priority: 1
+        answer: |-
+          In Buenos Aires, 4Geeks Academy offers comprehensive career support through Geekforce. This includes unlimited access to professional coaching sessions, resume, LinkedIn, and GitHub optimization, and preparation for interviews. We also connect you with local and international hiring networks. Learn more about our <a class="faq-link" target="_blank" href="/us/geekforce-career-support">Geekforce and career support program</a>.<br>
+          Upon enrolling in the bootcamp, you’ll also gain access to the Geek Pal mentorship program. Find out more about our <a class="faq-link" href="/us/geekpal-support">Geek Pal program</a>.
+
+      - question: "Does 4Geeks Academy offer professional support in Caracas?" # Caracas
+        locations: ["caracas-venezuela"]
+        priority: 1
+        answer: |-
+          At 4Geeks Academy in Caracas, we offer extensive career support through Geekforce. You’ll receive unlimited professional coaching, assistance with resumes, LinkedIn, and GitHub profiles, and access to job interview preparation sessions. Learn more about our <a class="faq-link" target="_blank" href="/us/geekforce-career-support">Geekforce and career support program</a>.<br>
+          Enroll in the bootcamp to gain access to the Geek Pal mentorship program. Find more details about the <a class="faq-link" href="/us/geekpal-support">Geek Pal program</a>.
+
+      - question: "Does 4Geeks Academy offer professional support in Chicago?" # Chicago
+        locations: ["chicago-usa"]
+        priority: 1
+        answer: |-
+          In Chicago, 4Geeks Academy provides robust professional career support through our Geekforce program. With unlimited access to individual and group career coaching, we’ll help you optimize your resume, LinkedIn, and GitHub profiles, and prepare you for interviews. We also connect you with hiring networks in Chicago and beyond. Learn more about our <a class="faq-link" target="_blank" href="/us/geekforce-career-support">Geekforce and career support program</a>.<br>
+          You’ll also have access to the Geek Pal mentorship program upon enrolling. Find more information about the <a class="faq-link" href="/us/geekpal-support">Geek Pal program</a>.
+
+      - question: "Does 4Geeks Academy offer professional support in Costa Rica?" # Costa Rica
+        locations: ["costa-rica"]
+        priority: 1
+        answer: |-
+          In Costa Rica, 4Geeks Academy offers comprehensive career support through our Geekforce program. You’ll have unlimited access to professional coaching sessions, where we help you optimize your resume, LinkedIn, GitHub profiles, and interview skills. Learn more about our <a class="faq-link" target="_blank" href="/us/geekforce-career-support">Geekforce and career support program</a>.<br>
+          Additionally, you will have access to the Geek Pal mentorship program upon enrollment. Discover more about the <a class="faq-link" href="/us/geekpal-support">Geek Pal program</a>.
+
+      - question: "Does 4Geeks Academy offer professional support in Downtown Miami?" # Downtown Miami
+        locations: ["downtown-miami"]
+        priority: 1
+        answer: |-
+          Yes! At 4Geeks Academy in Downtown Miami, we provide robust career support through our Geekforce program. You’ll have unlimited access to individual and group career coaching sessions that cover resume, LinkedIn, and GitHub optimization, interview preparation, and connections with both local and international employers. Learn more about our <a class="faq-link" target="_blank" href="/us/geekforce-career-support">Geekforce and career support program</a>.<br>
+          Upon enrollment, you will also have access to the Geek Pal mentorship program for additional guidance. Find out more about the <a class="faq-link" href="/us/geekpal-support">Geek Pal program</a>.
+
+      - question: "Does 4Geeks Academy offer professional support in Dublin?" # Dublin
+        locations: ["dublin-ireland"]
+        priority: 1
+        answer: |-
+          In Dublin, 4Geeks Academy offers professional support through our Geekforce program, providing unlimited access to career coaching sessions. This includes help with resumes, LinkedIn, and GitHub profiles, as well as interview preparation. We also connect you with job opportunities in Ireland and globally. Learn more about our <a class="faq-link" target="_blank" href="/us/geekforce-career-support">Geekforce and career support program</a>.<br>
+          Additionally, the Geek Pal mentorship program is available upon enrollment. Explore more about the <a class="faq-link" href="/us/geekpal-support">Geek Pal program</a>.
+
+      - question: "Does 4Geeks Academy offer professional support in Europe?" # Europe
+        locations: ["europe"]
+        priority: 1
+        answer: |-
+          At 4Geeks Academy in Europe, we offer unlimited career support through our Geekforce program. This includes individual and group coaching sessions, assistance with resumes, LinkedIn, and GitHub optimization, interview preparation, and access to our hiring network across Europe and beyond. Learn more about our <a class="faq-link" target="_blank" href="/us/geekforce-career-support">Geekforce and career support program</a>.<br>
+          Additionally, you will gain access to the Geek Pal mentorship program upon enrolling. Find more information about the <a class="faq-link" href="/us/geekpal-support">Geek Pal program</a>.
+
+      - question: "Does 4Geeks Academy offer professional support in Hamburg?" # Hamburg
+        locations: ["hamburg-germany"]
+        priority: 1
+        answer: |-
+          In Hamburg, 4Geeks Academy provides extensive professional support through our Geekforce program, which offers unlimited career coaching. You’ll receive help with your resume, LinkedIn, GitHub profiles, and interview preparation, as well as access to local and international hiring networks. Learn more about our <a class="faq-link" target="_blank" href="/us/geekforce-career-support">Geekforce and career support program</a>.<br>
+          Additionally, our Geek Pal mentorship program is available upon bootcamp enrollment. Discover more about the <a class="faq-link" href="/us/geekpal-support">Geek Pal program</a>.
+
+      - question: "Does 4Geeks Academy offer professional support in Houston?" # Houston
+        locations: ["houston-usa"]
+        priority: 1
+        answer: |-
+          Yes! At 4Geeks Academy in Houston, we offer comprehensive professional support through Geekforce. You will have unlimited access to career coaching sessions, covering resume, LinkedIn, and GitHub optimization, interview preparation, and access to hiring networks both locally in Houston and internationally. Learn more about our <a class="faq-link" target="_blank" href="/us/geekforce-career-support">Geekforce and career support program</a>.<br>
+          Upon bootcamp enrollment, you will also gain access to our Geek Pal mentorship program. For more details, visit the <a class="faq-link" href="/us/geekpal-support">Geek Pal program</a>.
+
+      - question: "Does 4Geeks Academy offer professional support in La Paz?" # La Paz
+        locations: ["lapaz-bolivia"]
+        priority: 1
+        answer: |-
+          At 4Geeks Academy in La Paz, we offer professional support through Geekforce. This program gives you unlimited access to career coaching sessions, including help with resumes, LinkedIn, GitHub, and interview preparation. We also connect you with hiring opportunities locally in Bolivia and globally. Learn more about our <a class="faq-link" target="_blank" href="/us/geekforce-career-support">Geekforce and career support program</a>.<br>
+          Upon enrollment, you’ll also gain access to our Geek Pal mentorship program. Find more details about the <a class="faq-link" href="/us/geekpal-support">Geek Pal program</a>.
+
+      - question: "Does 4Geeks Academy offer professional support in Lima?" # Lima
+        locations: ["lima-peru"]
+        priority: 1
+        answer: |-
+          In Lima, 4Geeks Academy offers extensive professional career support through our Geekforce program. This includes unlimited access to individual and group sessions, resume and LinkedIn optimization, GitHub guidance, and interview preparation. You’ll also gain access to both local and international hiring networks. Learn more about our <a class="faq-link" target="_blank" href="/us/geekforce-career-support">Geekforce and career support program</a>.<br>
+          You’ll also have access to the Geek Pal mentorship program after bootcamp enrollment. Explore more about the <a class="faq-link" href="/us/geekpal-support">Geek Pal program</a>.
+
+      - question: "Does 4Geeks Academy offer professional support in Lisbon?" # Lisbon
+        locations: ["lisbon-portugal"]
+        priority: 1
+        answer: |-
+          At 4Geeks Academy in Lisbon, we offer robust career support through Geekforce, giving you unlimited access to professional coaching. This includes help with resumes, LinkedIn, GitHub profiles, and interview preparation, as well as connections to hiring networks in Portugal and internationally. Learn more about our <a class="faq-link" target="_blank" href="/us/geekforce-career-support">Geekforce and career support program</a>.<br>
+          Additionally, after enrolling in the bootcamp, you will gain access to the Geek Pal mentorship program. Discover more about the <a class="faq-link" href="/us/geekpal-support">Geek Pal program</a>.
+
+      - question: "Does 4Geeks Academy offer professional support in Los Angeles?" # Los Angeles
+        locations: ["losangeles-usa"]
+        priority: 1
+        answer: |-
+          In Los Angeles, 4Geeks Academy provides professional support through Geekforce. This program includes unlimited career coaching sessions, covering resume, LinkedIn, and GitHub optimization, interview preparation, and connections to local and international employers. Learn more about our <a class="faq-link" target="_blank" href="/us/geekforce-career-support">Geekforce and career support program</a>.<br>
+          Upon enrollment, you’ll also have access to the Geek Pal mentorship program. Find more information about the <a class="faq-link" href="/us/geekpal-support">Geek Pal program</a>.
+
+      - question: "Does 4Geeks Academy offer professional support in Madrid?" # Madrid
+        locations: ["madrid-spain"]
+        priority: 1
+        answer: |-
+          Yes! At 4Geeks Academy in Madrid, we offer professional career support through Geekforce. This includes unlimited access to career coaching sessions, where you’ll receive help with your resume, LinkedIn, GitHub, and interview preparation. We also connect you with hiring networks across Spain and globally. Learn more about our <a class="faq-link" target="_blank" href="/us/geekforce-career-support">Geekforce and career support program</a>.<br>
+          Additionally, you will have access to the Geek Pal mentorship program upon enrollment. For more details, visit the <a class="faq-link" href="/us/geekpal-support">Geek Pal program</a>.
+
+      - question: "Does 4Geeks Academy offer professional support in Málaga?" # Málaga
+        locations: ["malaga-spain"]
+        priority: 1
+        answer: |-
+          At 4Geeks Academy in Málaga, we provide career support through our Geekforce program. This program offers unlimited access to career coaching sessions, including help with resumes, LinkedIn, GitHub profiles, interview preparation, and connections with hiring networks locally and internationally. Learn more about our <a class="faq-link" target="_blank" href="/us/geekforce-career-support">Geekforce and career support program</a>.<br>
+          Additionally, you’ll gain access to our Geek Pal mentorship program upon enrolling.
+
+      - question: "Does 4Geeks Academy offer professional support in Mexico City?" # Mexico City
+        locations: ["mexicocity-mexico"]
+        priority: 1
+        answer: |-
+          In Mexico City, 4Geeks Academy offers professional support through our Geekforce program. This includes unlimited access to individual and group career coaching sessions, resume, LinkedIn, and GitHub optimization, and interview preparation. We also connect you with hiring networks both locally in Mexico and globally. Learn more about our <a class="faq-link" target="_blank" href="/us/geekforce-career-support">Geekforce and career support program</a>.<br>
+          Upon enrollment, you will also gain access to the Geek Pal mentorship program. Find out more about the <a class="faq-link" href="/us/geekpal-support">Geek Pal program</a>.
+
+      - question: "Does 4Geeks Academy offer professional support in Milan?" # Milan
+        locations: ["milan-italy"]
+        priority: 1
+        answer: |-
+          Yes! In Milan, 4Geeks Academy offers professional support through our Geekforce program. You will have unlimited access to career coaching sessions that include resume, LinkedIn, and GitHub optimization, and interview preparation. We also connect you with local and international hiring networks. Learn more about our <a class="faq-link" target="_blank" href="/us/geekforce-career-support">Geekforce and career support program</a>.<br>
+          Additionally, upon enrolling, you will have access to our Geek Pal mentorship program. Explore more about the <a class="faq-link" href="/us/geekpal-support">Geek Pal program</a>.
+
+      - question: "Does 4Geeks Academy offer professional support in Montevideo?" # Montevideo
+        locations: ["montevideo-uruguay"]
+        priority: 1
+        answer: |-
+          At 4Geeks Academy in Montevideo, we offer extensive professional support through our Geekforce program. You’ll have access to unlimited career coaching, resume, LinkedIn, and GitHub optimization, and interview preparation. We also connect you with local and international hiring networks. Learn more about our <a class="faq-link" target="_blank" href="/us/geekforce-career-support">Geekforce and career support program</a>.<br>
+          Upon enrollment, you’ll also gain access to the Geek Pal mentorship program. For more information, visit the <a class="faq-link" href="/us/geekpal-support">Geek Pal program</a>.
+
+      - question: "Does 4Geeks Academy offer professional support in Munich?" # Munich
+        locations: ["munich-germany"]
+        priority: 1
+        answer: |-
+          Yes! At 4Geeks Academy in Munich, we offer career support through Geekforce. This includes unlimited access to individual and group career coaching sessions, resume, LinkedIn, and GitHub optimization, and interview preparation. We also provide connections with hiring networks in Munich and internationally. Learn more about our <a class="faq-link" target="_blank" href="/us/geekforce-career-support">Geekforce and career support program</a>.<br>
+          Additionally, upon bootcamp enrollment, you will have access to the Geek Pal mentorship program. Find out more about the <a class="faq-link" href="/us/geekpal-support">Geek Pal program</a>.
+
+      - question: "Does 4Geeks Academy offer professional support in New York?" # New York
+        locations: ["newyork-usa"]
+        priority: 1
+        answer: |-
+          In New York, 4Geeks Academy provides professional support through our Geekforce program. This plan includes unlimited access to career coaching, including resume, LinkedIn, and GitHub optimization, and interview preparation. We also connect you with hiring opportunities both in New York and globally. Learn more about our <a class="faq-link" target="_blank" href="/us/geekforce-career-support">Geekforce and career support program</a>.<br>
+          Upon enrollment, you will also gain access to our Geek Pal mentorship program. Discover more about the <a class="faq-link" href="/us/geekpal-support">Geek Pal program</a>.
+
+      - question: "Does 4Geeks Academy offer professional support for online students in the USA?" # Online USA
+        locations: ["online"]
+        priority: 1
+        answer: |-
+          Yes! For our online students in the USA, 4Geeks Academy provides comprehensive career support through our Geekforce program. This includes unlimited career coaching, resume, LinkedIn, and GitHub optimization, interview preparation, and access to local and global hiring networks. Learn more about our <a class="faq-link" target="_blank" href="/us/geekforce-career-support">Geekforce and career support program</a>.<br>
+          You’ll also have access to the Geek Pal mentorship program upon enrollment. Explore more about the <a class="faq-link" href="/us/geekpal-support">Geek Pal program</a>.
+
+      - question: "Does 4Geeks Academy offer professional support in Orlando?" # Orlando
+        locations: ["orlando"]
+        priority: 1
+        answer: |-
+          In Orlando, 4Geeks Academy provides extensive professional support through our Geekforce program. This includes unlimited access to career coaching sessions, resume, LinkedIn, and GitHub optimization, and interview preparation. We also offer connections to local and international hiring networks. Learn more about our <a class="faq-link" target="_blank" href="/us/geekforce-career-support">Geekforce and career support program</a>.<br>
+          Additionally, you will have access to the Geek Pal mentorship program upon enrollment. Find more information about the <a class="faq-link" href="/us/geekpal-support">Geek Pal program</a>.
+
+      - question: "Does 4Geeks Academy offer professional support in Panama City?" # Panama City
+        locations: ["panamacity-panama"]
+        priority: 1
+        answer: |-
+          In Panama City, 4Geeks Academy offers comprehensive career support through our Geekforce program. You will have access to unlimited career coaching sessions, resume, LinkedIn, and GitHub optimization, interview preparation, and connections to hiring networks in Panama and globally. Learn more about our <a class="faq-link" target="_blank" href="/us/geekforce-career-support">Geekforce and career support program</a>.<br>
+          Additionally, after enrolling in the bootcamp, you will gain access to our Geek Pal mentorship program. Discover more about the <a class="faq-link" href="/us/geekpal-support">Geek Pal program</a>.
+
+      - question: "Does 4Geeks Academy offer professional support in Quito?" # Quito
+        locations: ["quito-ecuador"]
+        priority: 1
+        answer: |-
+          Yes! At 4Geeks Academy in Quito, we offer professional support through Geekforce. This includes unlimited access to individual and group career coaching sessions, resume, LinkedIn, and GitHub optimization, interview preparation, and access to hiring networks both locally in Ecuador and internationally. Learn more about our <a class="faq-link" target="_blank" href="/us/geekforce-career-support">Geekforce and career support program</a>.<br>
+          Additionally, upon bootcamp enrollment, you will have access to the Geek Pal mentorship program. For more details, visit the <a class="faq-link" href="/us/geekpal-support">Geek Pal program</a>.
+
+      - question: "Does 4Geeks Academy offer professional support in Rome?" # Rome
+        locations: ["rome-italy"]
+        priority: 1
+        answer: |-
+          In Rome, 4Geeks Academy offers extensive career support through our Geekforce program. You’ll have access to unlimited career coaching sessions, resume, LinkedIn, and GitHub optimization, interview preparation, and hiring connections both in Italy and globally. Learn more about our <a class="faq-link" target="_blank" href="/us/geekforce-career-support">Geekforce and career support program</a>.<br>
+          Upon enrollment, you’ll also gain access to the Geek Pal mentorship program. Explore more about the <a class="faq-link" href="/us/geekpal-support">Geek Pal program</a>.
+
+      - question: "Does 4Geeks Academy offer professional support in Santiago?" # Santiago
+        locations: ["santiago-chile"]
+        priority: 1
+        answer: |-
+          Yes! At 4Geeks Academy in Santiago, we offer unlimited professional support through our Geekforce program. This includes individual and group coaching sessions that help you optimize your resume, LinkedIn, GitHub, and prepare for interviews. We also provide connections to hiring networks both in Chile and internationally. Learn more about our <a class="faq-link" target="_blank" href="/us/geekforce-career-support">Geekforce and career support program</a>.<br>
+          Additionally, upon enrollment, you will gain access to our Geek Pal mentorship program. Find more details about the <a class="faq-link" href="/us/geekpal-support">Geek Pal program</a>.
+
+      - question: "Does 4Geeks Academy offer professional support in Tampa?" # Tampa
+        locations: ["tampa-usa"]
+        priority: 1
+        answer: |-
+          In Tampa, 4Geeks Academy provides professional support through our Geekforce program, offering unlimited access to career coaching sessions, resume, LinkedIn, and GitHub optimization, and interview preparation. We also connect you with hiring networks in Tampa and beyond. Learn more about our <a class="faq-link" target="_blank" href="/us/geekforce-career-support">Geekforce and career support program</a>.<br>
+          You’ll also have access to our Geek Pal mentorship program upon bootcamp enrollment. Find out more about the <a class="faq-link" href="/us/geekpal-support">Geek Pal program</a>.
+
+      - question: "Does 4Geeks Academy offer professional support in Toronto?" # Toronto
+        locations: ["toronto-canada"]
+        priority: 1
+        answer: |-
+          At 4Geeks Academy in Toronto, we offer extensive professional career support through our Geekforce program. This includes unlimited access to career coaching sessions, help with resumes, LinkedIn, and GitHub profiles, interview preparation, and access to local and international hiring networks. Learn more about our <a class="faq-link" target="_blank" href="/us/geekforce-career-support">Geekforce and career support program</a>.<br>
+          Upon enrollment, you will also have access to our Geek Pal mentorship program. Find more details about the <a class="faq-link" href="/us/geekpal-support">Geek Pal program</a>.
+
+      - question: "Does 4Geeks Academy offer professional support in Valencia?" # Valencia
+        locations: ["valencia-spain"]
+        priority: 1
+        answer: |-
+          Yes! At 4Geeks Academy in Valencia, we provide professional support through Geekforce. This includes unlimited access to career coaching sessions, resume, LinkedIn, and GitHub optimization, interview preparation, and access to hiring networks locally in Spain and globally. Learn more about our <a class="faq-link" target="_blank" href="/us/geekforce-career-support">Geekforce and career support program</a>.<br>
+          Additionally, you’ll have access to our Geek Pal mentorship program upon bootcamp enrollment. Find more information about the <a class="faq-link" href="/us/geekpal-support">Geek Pal program</a>.
+
+      ## // Does 4Geeks offer career support? //
+
+      # =================================================================================
+      #  Extended Payment Plan? How does it work? And what does it mean? 
+      # =================================================================================
+
+      # =================================================================================
+      #  Extended Payment Plan? How does it work? And what does it mean?  -- USA
+      # =================================================================================
+      
+      - question: "Extended Payment Plan? How does it work? And what does it mean?"
+        templates: ["faq"]
+        priority: 0
         answer: |-
           Our extended payment plan allows you to spread your tuition payments over a period of up to 2 years, enabling you to pay gradually during and after the course. To enroll, a $500 deposit is required upfront, and the remaining balance is divided equally over the agreed-upon number of months, <span style="font-weight: 700;">with no interest charged</span>.<br>
           For more details about our plans, visit our <a target="_blank" href="/us/financials">Financials page</a>.
+
+      - question: "Extended Payment Plan? How does it work? And what does it mean?" # Atlanta
+        locations: ["atlanta-usa"]
+        priority: 1
+        answer: |-
+          Our extended payment plan in Atlanta allows you to spread your tuition payments over a period of up to 2 years, enabling you to pay gradually during and after the course. To enroll, a $500 deposit is required upfront, and the remaining balance is divided equally over the agreed-upon number of months, <span style="font-weight: 700;">with no interest charged</span>.<br>
+          For more details about our plans, visit our <a target="_blank" href="/us/financials">Financials page</a>.
+
+      - question: "Extended Payment Plan? How does it work? And what does it mean?" # Austin
+        locations: ["austin-usa"]
+        priority: 1
+        answer: |-
+          Our extended payment plan in Austin allows you to spread your tuition payments over a period of up to 2 years, enabling you to pay gradually during and after the course. A $500 deposit is required upfront, and the rest is divided equally over the agreed number of months, <span style="font-weight: 700;">with no interest charged</span>.<br>
+          For more details, visit our <a target="_blank" href="/us/financials">Financials page</a>.
+
+      - question: "Extended Payment Plan? How does it work? And what does it mean?" # Chicago
+        locations: ["chicago-usa"]
+        priority: 1
+        answer: |-
+          Our extended payment plan in Chicago allows you to spread your tuition payments over 2 years, with gradual payments during and after the course. A $500 deposit is required, and the balance is split evenly across the agreed months, <span style="font-weight: 700;">interest-free</span>.<br>
+          Learn more on our <a target="_blank" href="/us/financials">Financials page</a>.
+
+      - question: "Extended Payment Plan? How does it work? And what does it mean?" # Downtown Miami
+        locations: ["downtown-miami"]
+        priority: 1
+        answer: |-
+          In Downtown Miami, our extended payment plan allows you to spread tuition payments over up to 2 years. A $500 deposit is required, and the rest is split over the agreed number of months, <span style="font-weight: 700;">with no interest</span>.<br>
+          For more details, visit our <a target="_blank" href="/us/financials">Financials page</a>.
+
+      - question: "Extended Payment Plan? How does it work? And what does it mean?" # Houston
+        locations: ["houston-usa"]
+        priority: 1
+        answer: |-
+          In Houston, our extended payment plan allows you to pay tuition over a period of up to 2 years. A $500 deposit is needed upfront, and the balance is split evenly over the agreed months, <span style="font-weight: 700;">interest-free</span>.<br>
+          More details can be found on our <a target="_blank" href="/us/financials">Financials page</a>.
+
+      - question: "Extended Payment Plan? How does it work? And what does it mean?" # Los Angeles
+        locations: ["losangeles-usa"]
+        priority: 1
+        answer: |-
+          In Los Angeles, our extended payment plan allows you to pay for your tuition over a period of up to 2 years. A $500 deposit is required, with the remaining balance divided into equal payments over the agreed-upon period, <span style="font-weight: 700;">interest-free</span>.<br>
+          For more details, check out our <a target="_blank" href="/us/financials">Financials page</a>.
+
+      - question: "Extended Payment Plan? How does it work? And what does it mean?" # New York
+        locations: ["newyork-usa"]
+        priority: 1
+        answer: |-
+          Our extended payment plan in New York allows you to pay your tuition over a 2-year period. A $500 deposit is required upfront, and the balance is split equally across the agreed months, <span style="font-weight: 700;">with no interest charged</span>.<br>
+          For more details, visit our <a target="_blank" href="/us/financials">Financials page</a>.
+
+      - question: "Extended Payment Plan? How does it work? And what does it mean?" # Orlando
+        locations: ["orlando"]
+        priority: 1
+        answer: |-
+          In Orlando, our extended payment plan gives you up to 2 years to pay your tuition. A $500 deposit is needed upfront, and the remaining balance is split over the agreed number of months, <span style="font-weight: 700;">interest-free</span>.<br>
+          For further details, visit our <a target="_blank" href="/us/financials">Financials page</a>.
+
+      - question: "Extended Payment Plan? How does it work? And what does it mean?" # Online
+        locations: ["online"]
+        priority: 1
+        answer: |-
+          For our online programs in the USA, the extended payment plan allows you to pay your tuition over a 2-year period. A $500 deposit is required, and the balance is split equally over the agreed months, <span style="font-weight: 700;">with no interest charged</span>.<br>
+          More information is available on our <a target="_blank" href="/us/financials">Financials page</a>.
+
+      - question: "Extended Payment Plan? How does it work? And what does it mean?" # Online Spanish
+        locations: ["online-spanish-usa"]
+        priority: 1
+        answer: |-
+          For our Spanish online programs in the USA, the extended payment plan lets you spread your tuition payments over 2 years. A $500 deposit is required upfront, and the remaining balance is split over the agreed months, <span style="font-weight: 700;">with no interest charged</span>.<br>
+          Visit our <a target="_blank" href="/us/financials">Financials page</a> for more details.
+
+      - question: "Extended Payment Plan? How does it work? And what does it mean?" # Tampa
+        locations: ["tampa-usa"]
+        priority: 1
+        answer: |-
+          In Tampa, our extended payment plan allows you to pay your tuition over a period of up to 2 years. A $500 deposit is required upfront, and the balance is divided equally across the agreed months, <span style="font-weight: 700;">with no interest charged</span>.<br>
+          Visit our <a target="_blank" href="/us/financials">Financials page</a> for more details.
+
+      # =================================================================================
+      #  Extended Payment Plan? How does it work? And what does it mean?  -- Europe
+      # =================================================================================
 
       - question: "Extended Payment Plan? How does it work? And what does it mean?" #Chile
         locations: ["santiago-chile"]
@@ -204,13 +622,86 @@ faq:
         answer: |-
           The Extended Payment Plan is tailored specifically for our students' needs in Chile. You can apply for a plan lasting up to 18 months, allowing you to pay gradually. Simply pay the required deposit and sign a contract outlining the payment schedule that best suits your lifestyle. For more details about the plan, visit our <a target="_blank" rel="nofollow noopener noreferrer" href="https://quotanda.com/en/4geeks/">payment options page</a>.
 
-      - question: "Extended Payment Plan? How does it work? And what does it mean?" #Europe
-        locations: ["barcelona-spain", "berlin-germany", "dublin-ireland", "europe", "hamburg-germany", "lisbon-portugal", "madrid-spain", "malaga-spain", "milan-italy", "munich-germany", "rome-italy", "valencia-spain"]
+      # - question: "Extended Payment Plan? How does it work? And what does it mean?" #Europe
+      #   locations: ["barcelona-spain", "berlin-germany", "dublin-ireland", "europe", "hamburg-germany", "lisbon-portugal", "madrid-spain", "malaga-spain", "milan-italy", "munich-germany", "rome-italy", "valencia-spain"]
+      #   priority: 1
+      #   answer: |-
+      #     The Extended Payment Plan is tailored specifically for our students' needs across Europe. You can apply for a plan lasting up to 24 months, allowing you to pay gradually. Simply pay the required deposit and sign a contract outlining the payment schedule that best suits your lifestyle. For more details about the plan, visit our <a target="_blank" href="/us/financials">financials page</a>.
+
+      - question: "Extended Payment Plan? How does it work? And what does it mean?" # Barcelona
+        locations: ["barcelona-spain"]
         priority: 1
         answer: |-
-          The Extended Payment Plan is tailored specifically for our students' needs across Europe. You can apply for a plan lasting up to 24 months, allowing you to pay gradually. Simply pay the required deposit and sign a contract outlining the payment schedule that best suits your lifestyle. For more details about the plan, visit our <a target="_blank" href="/us/financials">financials page</a>.
+          In Barcelona, our Extended Payment Plan is designed to meet your financial needs, allowing you to pay your tuition gradually over a period of up to 24 months. To get started, you'll need to pay a deposit and sign a contract outlining the monthly payments. For more information, visit our <a target="_blank" href="/us/financials">financials page</a>.
 
-      - question: "Extended Payment Plan? How does it work? And what does it mean?" #LATAM - Excluding Chile
+      - question: "Extended Payment Plan? How does it work? And what does it mean?" # Berlin
+        locations: ["berlin-germany"]
+        priority: 1
+        answer: |-
+          In Berlin, we offer an Extended Payment Plan that allows you to spread your tuition payments over 24 months. After paying the deposit, you'll sign a contract detailing the payment schedule that best suits your lifestyle. For more details, check our <a target="_blank" href="/us/financials">financials page</a>.
+
+      - question: "Extended Payment Plan? How does it work? And what does it mean?" # Dublin
+        locations: ["dublin-ireland"]
+        priority: 1
+        answer: |-
+          Our Extended Payment Plan in Dublin allows you to spread your tuition payments over a period of up to 24 months. A deposit is required, followed by a flexible payment schedule outlined in your contract. For more information, visit our <a target="_blank" href="/us/financials">financials page</a>.
+
+      - question: "Extended Payment Plan? How does it work? And what does it mean?" # Europe
+        locations: ["europe"]
+        priority: 1
+        answer: |-
+          Across Europe, our Extended Payment Plan lets you pay your tuition gradually over a 24-month period. After paying the deposit, a contract will be drawn up to outline your monthly payments. For more details, visit our <a target="_blank" href="/us/financials">financials page</a>.
+
+      - question: "Extended Payment Plan? How does it work? And what does it mean?" # Hamburg
+        locations: ["hamburg-germany"]
+        priority: 1
+        answer: |-
+          In Hamburg, our Extended Payment Plan allows you to pay your tuition over a 24-month period. After paying the deposit, you will sign a contract detailing the payment schedule that works best for you. For further details, visit our <a target="_blank" href="/us/financials">financials page</a>.
+
+      - question: "Extended Payment Plan? How does it work? And what does it mean?" # Lisbon
+        locations: ["lisbon-portugal"]
+        priority: 1
+        answer: |-
+          In Lisbon, we offer an Extended Payment Plan that lets you pay your tuition over a 24-month period. A deposit is required upfront, and the remaining balance is paid monthly as outlined in your contract. For more information, visit our <a target="_blank" href="/us/financials">financials page</a>.
+
+      - question: "Extended Payment Plan? How does it work? And what does it mean?" # Madrid
+        locations: ["madrid-spain"]
+        priority: 1
+        answer: |-
+          In Madrid, our Extended Payment Plan allows you to pay your tuition over a period of up to 24 months. You'll pay a deposit upfront, and the remaining balance will be divided into monthly payments outlined in your contract. For more information, visit our <a target="_blank" href="/us/financials">financials page</a>.
+
+      - question: "Extended Payment Plan? How does it work? And what does it mean?" # Málaga
+        locations: ["malaga-spain"]
+        priority: 1
+        answer: |-
+          Our Extended Payment Plan in Málaga allows you to spread your tuition payments over 24 months. After paying the deposit, you will sign a contract that specifies your monthly payments. For further details, visit our <a target="_blank" href="/us/financials">financials page</a>.
+
+      - question: "Extended Payment Plan? How does it work? And what does it mean?" # Milan
+        locations: ["milan-italy"]
+        priority: 1
+        answer: |-
+          In Milan, we offer an Extended Payment Plan that lets you spread your tuition payments over 24 months. A deposit is required upfront, and the payment schedule is outlined in the contract. For more information, visit our <a target="_blank" href="/us/financials">financials page</a>.
+
+      - question: "Extended Payment Plan? How does it work? And what does it mean?" # Munich
+        locations: ["munich-germany"]
+        priority: 1
+        answer: |-
+          In Munich, our Extended Payment Plan allows you to pay your tuition over a period of up to 24 months. You'll pay a deposit upfront, and the balance will be divided into monthly payments as outlined in the contract. For more details, visit our <a target="_blank" href="/us/financials">financials page</a>.
+
+      - question: "Extended Payment Plan? How does it work? And what does it mean?" # Rome
+        locations: ["rome-italy"]
+        priority: 1
+        answer: |-
+          In Rome, 4Geeks Academy offers an Extended Payment Plan that allows you to pay your tuition over a 24-month period. You'll need to pay a deposit upfront, and the remaining balance will be divided into monthly payments, outlined in the contract. For more details, check out our <a target="_blank" href="/us/financials">financials page</a>.
+
+      - question: "Extended Payment Plan? How does it work? And what does it mean?" # Valencia
+        locations: ["valencia-spain"]
+        priority: 1
+        answer: |-
+          In Valencia, our Extended Payment Plan allows you to spread your tuition payments over 24 months. After paying a deposit, you will sign a contract that outlines your monthly payment plan. For more information, visit our <a target="_blank" href="/us/financials">financials page</a>.
+
+
+      - question: "Extended Payment Plan? How does it work? And what does it mean?" #LATAM
         locations: ["bogota-colombia", "buenosaires-argentina", "caracas-venezuela", "costa-rica", "lapaz-bolivia", "lima-peru", "mexicocity-mexico", "montevideo-uruguay", "panamacity-panama", "quito-ecuador"]
         priority: 1
         answer: |-
