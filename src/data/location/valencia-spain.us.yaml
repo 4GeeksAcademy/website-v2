@@ -128,44 +128,39 @@ two_columns_rigo:
     shadow: false
   # video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
   heading: 
-    text: "Crack the Code to Your Learning Success: Our AI-Powered Features Make All the Difference!"
-    font_size: ["21px"]
+    text: "Our AI-powered features make all the difference!"
+    font_size: ["33px", "33px", "33px", "33px", "33px"]
     style: '{ "lineHeight": "30px" }'
     heading_image:
       src: "/images/rigobot-logo.png"
   sub_heading:
     text: "Through years of research and experience, we've perfected the strategies and tools to ensure your constant and efficient progress. To optimize your learning curve and empower you to tackle challenges with confidence, we've now incorporated the power of AI."
-    font_size: ["18px"]
+    font_size: ["16px","16px","16px","16px","16px"]
+    style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"600" }'
   content:
-    style: '{ "font-size":"18px", "margin":"0" }'
+    style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"600"}'
     text: "Experience the difference our AI-powered features make. Our tried-and-tested approach keeps you engaged, motivated, and on the fast track to achieving your coding goals!"
-  button: 
-    text: "See all financing options"
-    color: white
-    hover_color: "white"
-    background: "black"
-    path: "/us/financials"
   bullets:
     item_style: '{ "padding": "0", "font-weight": "100", "margin":"0" }'
     items:
-      - heading: "Meet Rigobot, our AI coding assistant"
+      - heading: "Meet Rigobot, our AI coding assistant:"
         text: |
-          • Instant tutoring as you code
+          • Instant tutoring as you code.
           <br />
-          • Skill evaluations to track your progress
+          • Skill evaluations to track your progress.
           <br />
-          • Expert bug fixing assistance
+          • Expert bug fixing assistance.
           <br /><br />
           It perfectly complements our human mentorship program!
         icon: "check" #string with icon for example ['check', 'cicle', etc]
         icon_color: '#25BF6C'
-      - heading: "Learnpack, our interactive learning software, providing:"
+      - heading: "Learnpack, our interactive learning software, provides:"
         text: |
-          • Hundreds of interactive exercises to help you master and retain skills
+          • There are hundreds of interactive exercises to help you master and retain skills.
           <br />
-          • Automated tests to help track your progress
+          • Automated tests to help track your progress.
           <br />
-          • Structured practice
+          • Structured practice.
         icon: "check" #string with icon for example ['check', 'cicle', etc]
         icon_color: '#25BF6C'
 

@@ -339,8 +339,7 @@ const Home = (props) => {
             heading_image: yml.two_columns_rigo?.heading_image,
             sub_heading: yml.two_columns_rigo?.sub_heading,
             bullets: yml.two_columns_rigo?.bullets,
-            content: yml.two_columns_rigo?.content,
-            button: yml.two_columns_rigo?.button,
+            content: yml.two_columns_rigo?.content
           }}
           proportions={yml.two_columns_rigo?.proportions}
           session={session}
@@ -600,20 +599,6 @@ export const query = graphql`
             content {
               text
               style
-            }
-            button {
-              text
-              color
-              background
-              path
-            }
-            bullets {
-              items {
-                heading
-                text
-                icon
-                icon_color
-              }
             }
           }
           geeks_vs_others {

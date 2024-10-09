@@ -529,16 +529,11 @@ export const query = graphql`
             sub_heading {
               text
               font_size
+              style
             }
             content {
               text
               style
-            }
-            button {
-              text
-              color
-              background
-              path
             }
             bullets {
               items {
