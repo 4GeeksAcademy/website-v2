@@ -610,7 +610,8 @@ const LeadForm = ({
               >
                 <Button
                   type="submit"
-                  fontSize="17px"
+                  fontSize="21px"
+                  height="auto"
                   margin={marginButton}
                   margin_tablet={marginButton_tablet}
                   width_lg={widthButton}

@@ -178,6 +178,8 @@ const ChooseYourProgram = ({
                             width="100%"
                             borderRadius="4px"
                             textAlign="center"
+                            fontSize="21px"
+                            height="auto"
                           >
                             {program.text_link}
                           </Button>

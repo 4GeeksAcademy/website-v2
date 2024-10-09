@@ -464,7 +464,7 @@ const SmartButton = ({ children, onClick, type, icon, ...rest }) => {
 export const Button = styled(SmartButton)`
   font-size: ${(props) => props.fontSize};
   font-family: "Lato", sans-serif;
-  text-transform: ${(props) => props.textTransform || "uppercase"};
+  text-transform: ${(props) => props.textTransform};
   text-decoration: ${(props) => props.textDecoration || "none"};
   text-decoration-line: ${(props) => props.textDecorationLine || "none"};
   font-weight: ${(props) => props.fontWeight || "700"};
