@@ -590,9 +590,6 @@ export const query = graphql`
                 text
                 font_size
               }
-              button {
-                text
-              }
             }
             columns {
               size

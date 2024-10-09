@@ -7,8 +7,8 @@ const { walk, loadYML, fail } = require("../test/_utils");
 async function complete({ system, user, model, max_tokens }) {
   try {
     // Define the OpenAI API endpoint URL
-    // gpt-3.5-turbo-16k, gpt-3.5-turbo-instruct
-    if (model == undefined) model = "gpt-3.5-turbo-16k";
+    // gpt-4o-mini
+    if (model == undefined) model = "gpt-4o-mini";
     const is_chat = !model.includes("instruct");
 
     let apiUrl = "https://api.openai.com/v1/completions";

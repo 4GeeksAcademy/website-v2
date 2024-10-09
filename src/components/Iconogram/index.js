@@ -1,7 +1,7 @@
 import React from "react";
 import { Div } from "../Sections";
 import { H2, Paragraph } from "../Heading";
-import { Colors } from "../Styling";
+import { Colors, Anchor } from "../Styling";
 import IconsBanner from "../IconsBanner";
 
 const Iconogram = ({ yml, index }) => {
@@ -73,6 +73,18 @@ const Iconogram = ({ yml, index }) => {
             );
           })}
       </Div>
+      {button && (
+        <Paragraph
+          margin="30px 0 0 0"
+          fontSize="18px"
+          color={Colors.black}
+          textDecoration="underline"
+        >
+          <Anchor color={`${Colors.black} !important`} to={button.path}>
+            {button.text}
+          </Anchor>
+        </Paragraph>
+      )}
     </Div>
   );
 };

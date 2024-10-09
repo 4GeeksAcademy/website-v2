@@ -149,10 +149,11 @@ const Side = ({
       {sub_heading && (
         <Paragraph
           textAlign_tablet="left"
-          fontFamily="Lato"
+          fontFamily="Archivo"
+          fontWeight="600"
           textAlign="left"
           margin="0"
-          fontSize={sh_xs || sh_xl}
+          fontSize={sh_xs || sh_xl || "21px"}
           fontSize_xs={sh_xs}
           fontSize_sm={sh_sm}
           fontSize_tablet={sh_md}
@@ -312,9 +313,10 @@ const Side = ({
           textColor={Colors.black}
           textTransform="none"
           color={Colors[button.color] || button.color}
-          fontSize="15px"
+          fontSize="21px"
+          height="auto"
           textAlign="left"
-          margin="2rem 0"
+          margin="1rem 0"
           padding="10px 20px"
           borderRadius="4px"
           onClick={() => {
