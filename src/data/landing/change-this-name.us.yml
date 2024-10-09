@@ -29,7 +29,7 @@ form:
   heading: "Apply to 4Geeks"
   sub_heading: "86% of our graduates have already started their future-proof, tech careers with on overage entry salary of $50.000"
   motivation: "A top quality program at No Cost for you. No excuses. Become a developer and change your life" # < -- subtitle ideal to movitate people on filling the form
-  button_label: SEND
+  button_label: Apply Now
   # redirect: "https://google.com" #you can redirect to another url or entirely diffrent website
 
 # jumbotron on the top (cannot be commented out)

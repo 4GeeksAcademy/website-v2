@@ -316,7 +316,7 @@ const Side = ({
           fontSize="21px"
           height="auto"
           textAlign="left"
-          margin="2rem 0"
+          margin="1rem 0"
           padding="10px 20px"
           borderRadius="4px"
           onClick={() => {

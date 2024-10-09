@@ -509,7 +509,7 @@ export const Button = styled(SmartButton)`
   }
   @media ${Devices.xs} {
     width: ${(props) => props.width_xs};
-    height: ${(props) => props.height_xs || "40px"};
+    height: ${(props) => props.height_xs};
     text-align: ${(props) => props.textAlign_xs || "center"};
     padding: ${(props) => props.padding_xs || "12px 24px"};
     max-width: ${(props) => props.maxWidth_xs};
@@ -520,7 +520,7 @@ export const Button = styled(SmartButton)`
   }
   @media ${Devices.sm} {
     width: ${(props) => props.width_sm};
-    height: ${(props) => props.height_sm || "40px"};
+    height: ${(props) => props.height_sm};
     max-width: ${(props) => props.maxWidth_sm};
     margin: ${(props) => props.margin_sm};
     font-size: ${(props) => props.fontSize_sm};
@@ -531,7 +531,7 @@ export const Button = styled(SmartButton)`
   }
   @media ${Devices.tablet} {
     width: ${(props) => props.width_tablet};
-    height: ${(props) => props.height_tablet || "40px"};
+    height: ${(props) => props.height_tablet};
     margin: ${(props) => props.margin_tablet};
     padding: ${(props) => props.padding_tablet || "12px 24px"};
     max-width: ${(props) => props.maxWidth_tablet};
