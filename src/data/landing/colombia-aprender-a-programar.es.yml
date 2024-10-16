@@ -39,9 +39,14 @@ apply_schollarship: # form that is displayed at the end of the landing
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  background: "#FFF1D1"
+  background: "#ffffff"
   tagline: Si no consigues empleo te devolveremos TODO tu dinero.
   sub_heading: Da el paso hoy y Conviértete en Full-Stack Developer.
+  tagline_color: "#1b1b1b"
+  form_styles:
+    background: "#0084FF"
+    button:
+      background: "black"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
 
@@ -56,22 +61,30 @@ features:
     - Programa Part Time y 100% remoto.
 
 short_badges:
-  - name: "Premios Tecnologia Siglo XXI"
+  - name: "Top Online Full-Stack Bootcamps Of 2024"
     url: ""
-    image: "../../../static/images/awards/premios_tecnologia_sigloxxi.png"
-    alt: "Mejor centro de Coding Bootcamp"
-  - name: "Course Report"
+    image: "../../../static/images/badges/forbes-logo-award.png"
+    alt: "We have been selected as one of the Top Online Coding Bootcamps by Forbes."
+  - name: "Best for Spanish speakers Of 2024 by Fortune"
+    url: ""
+    image: "../../../static/images/badges/fortune-logo.png"
+    alt: "Recognized by Fortune as one of the Top Coding Bootcamps"
+  - name: "Top Coding Bootcamps Newsweek"
+    url: ""
+    image: "../../../static/images/badges/newsweek.webp"
+    alt: "Top Coding Bootcamps Newsweek"
+  - name: "Best Coding Bootcamp Course Report 2024"
     url: ""
     image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
-    alt: "Top Coding Bootcamps Course Report"
-  - name: "Switchup"
-    url: ""
-    image: "../../../static/images/badges/switchup-badge-2023.png"
-    alt: "Best coding bootcamp Switchup 2023"
-  - name: "Florida Department of Education"
+    alt: "Best Coding Bootcamp Course Report 2024"
+  - name: "Licensed by the Florida Department of Education"
     url: ""
     image: "../../../static/images/badges/licensed.png"
-    alt: "Florida Department of Education"
+    alt: "Licensed by the Florida Department of Education"
+  - name: "ARP Certificate"
+    url: ""
+    image: "../../../static/images/badges/arp-logo-certification.png"
+    alt: "ARP Certificate"
 
 follow_bar:
   position: "top" # top, bottom, hidden
@@ -86,6 +99,12 @@ follow_bar:
   phone:
     text: "Llama "
 
+geeks_vs_others:
+  position: 5
+  heading: "¿Por qué nuestro coding bootcamp es tan exitoso?"
+  paragraph: ""
+  total_rows: 5
+
 #
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
 #
@@ -94,7 +113,7 @@ components:
     position: 1
     layout: two_column_left
     proportions: [4, 8]
-    background: "#f1f1f1"
+    background: "#fbfbfb"
     image:
       style: '{ "backgroundSize": "contain" }'
       src: "/images/badges/Course-Report-Badge-2024.webp"
@@ -126,10 +145,38 @@ components:
       hover_color: "#white"
       path: "#leadform_bottom"
 
+  - name: Educacionflexible
+    position: 3
+    layout: two_column_left
+    image:
+      src: "/images/landing/meet-windows-group-en.webp"
+    heading: 
+      text: "Educación flexible e intensiva"
+    button: 
+      text: "APPLY NOW"
+      color: white
+      hover_color: "white"
+      background: "blue"
+      path: "#leadform_header"
+    content: 
+      text: |
+        Conviértete en un Full-Stack Developer y/o Data Scientist en solo 18 semanas con 4Geeks Academy. Sin experiencia previa necesaria.<br>
+        Contamos con más de 8 años de experiencia, presencia en diferentes partes del mundo y premios a nivel mundial.
+    bullets:
+      items:
+      - text: Apoyo Profesional de por vida
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+      - text: <a href="/es/financiacion" target="_blank">Opciones de financiacion</a> Apoyo Profesional de por vida
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+      - text: Apoyo Profesional de por vida
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+      - text: Apoyo Profesional de por vida
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+
 rating_reviews:
   position: 2
   heading: "Lee acerca de nosotros"
-  background: "veryLightBlue3"
+  background: "#ffffff"
   rating_list:
     - alt: "Career Karma"
       image: "../../../static/images/badges/career-karma.png"
@@ -160,7 +207,7 @@ program_details:
 
 why_4geeks:
   position: 4
-  heading: "Por qué 4Geeks"
+  heading: "Escuchalo de nuestros alumnos"
   sub_heading: " "
 
 who_is_hiring:

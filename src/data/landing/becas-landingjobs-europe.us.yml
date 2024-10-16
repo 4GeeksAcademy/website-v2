@@ -1,14 +1,14 @@
 meta_info:
   slug: scholarships-landing-jobs-europe # <--- URL 4geeksacademy.com/us/landing/example
 
-  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   # This will show on social media when shared
   title: "Get your scholarship!"
   description: "Landing.Jobs and 4Geeks get together to offer more than €500,000 in scholarships to become a Data Science and Machine Learning Engineer."
   image: "/images/bg/remote.jpeg"
   keywords: "Learn to code, 4Geeks academy, Learn programming, learn computer engineering"
 
-  template: "landing_nonav" # <--- choose your landing template
+  template: "landing_a" # <--- choose your landing template
   redirects: ["/landing/becas-partner"] # <--- URL redirections to avoid 404 errors
 
   # Set a particular course or location to the landing page
@@ -35,14 +35,12 @@ form:
 header_data:
   tagline: + €500,000 in scholarships
   sub_heading: ""
-  partner_logo_url: "../../../static/images/partner/landing-jobs.png"
-  background_image: "../../../static/images/4GeeksTeamES.jpeg"
+  partner_logo_url: "../../../static/images/partner/landing-jobs-black.png"
+  # background_image: "../../../static/images/4GeeksTeamES.jpeg"
   image_filter: brightness(0.3)
 
 features:
-  marginTop: 20px #<-- separation between tagline and the bullets
-
-  #                                         up   left down  right
+  marginTop: 20px #<-- separation between tagline and the bullets #  up   left down  right
   styles: '{ "fontSize": "15px", "margin": "10px 0px 10px 0px" }'
   text: Landing.Jobs and 4Geeks have teamed up to offer over €500,000 in scholarships for aspiring Data Scientists and Machine Learning Engineers. Each scholarship covers 50% of the tuition fees and will be awarded based on the results of our selection process. Don't miss this amazing opportunity to advance your career in tech!
   bullets:
@@ -53,8 +51,8 @@ features:
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "Apply for a scholarship now. \n Financing options available."
-    text_mobile: "Landing.Jobs scholarships . \n Payment plans available"
+    text: "Apply for a scholarship now. \nFinancial options are available."
+    text_mobile: "Landing.Jobs scholarships. \n Payment plans available"
     # devices:   XL      LG    MD      SM    XS
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:
@@ -66,44 +64,52 @@ follow_bar:
     text: "WhatsApp "
 
 short_badges:
-  - name: "Premios Tecnologia Siglo XXI"
+  - name: "Top Online Full-Stack Bootcamps Of 2024"
     url: ""
-    image: "../../../static/images/awards/premios_tecnologia_sigloxxi.png"
-    alt: "Mejor centro de Coding Bootcamp"
-  - name: "Course Report"
+    image: "../../../static/images/badges/forbes-logo-award.png"
+    alt: "We have been selected as one of the Top Online Coding Bootcamps by Forbes."
+  - name: "Best for Spanish speakers Of 2024 by Fortune"
+    url: ""
+    image: "../../../static/images/badges/fortune-logo.png"
+    alt: "Recognized by Fortune as one of the Top Coding Bootcamps"
+  - name: "Top Coding Bootcamps Newsweek"
+    url: ""
+    image: "../../../static/images/badges/newsweek.webp"
+    alt: "Top Coding Bootcamps Newsweek"
+  - name: "Best Coding Bootcamp Course Report 2024"
     url: ""
     image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
-    alt: "Top Coding Bootcamps Course Report"
-  - name: "Switchup"
+    alt: "Best Coding Bootcamp Course Report 2024"
+  - name: "Licensed by the Florida Department of Education"
     url: ""
-    image: "../../../static/images/badges/switchup-badge-2023.png"
-    alt: "Best coding bootcamp Switchup 2023"   
-  - name: "Florida Department of Education"
+    image: "../../../static/images/badges/licensed.png"
+    alt: "Licensed by the Florida Department of Education"
+  - name: "ARP Certificate"
     url: ""
-    image: "../../../static/images/badges/licensed-inverted.png"
-    alt: "Florida Department of Education"
+    image: "../../../static/images/badges/arp-logo-certification.png"
+    alt: "ARP Certificate"
 
 #
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
 #
 badges:
-  position: 3 # It's the position of the component that will be rendered first
+  position: 9 # It's the position of the component that will be rendered first
   heading: "4Geeks Academy has received numerous awards and recognitions for its excellence"
 
-about4Geeks:
-  position: 2
-  heading: Flexible and intensive education
-  sub_heading: "More than 320 hours of practical learning (exercises, projects) will enable you to improve your skills and better prepare for interviews and various selection processes, allowing you to secure a job as a Data Scientist, Data Analyst or Machine Learning Engineer."
-  list:
-    - title: "Lifetime Career Support"
-    - title: "Financial options to complement your scholarship"
-    - title: "Ratio 1:7 teacher student. Unlimited 1 on 1 mentoring"
-    - title: "Preparation for interviews and selection processes"
-  paragraph: ""
-  button_text: "Apply for a scholarship"
-  button_link: "#leadform_header" # accepts url: relative(/us/apply), absolute(https://google.com) or component id(#componentName)
-  image: "../../../static/images/bg/community.png"
-  image_mobile: "../../../static/images/bg/community.png"
+# about4Geeks:
+#   position: 2
+#   heading: Flexible and intensive education
+#   sub_heading: "More than 320 hours of practical learning (exercises, projects) will enable you to improve your skills and better prepare for interviews and various selection processes, allowing you to secure a job as a Data Scientist, Data Analyst or Machine Learning Engineer."
+#   list:
+#     - title: "Lifetime Career Support"
+#     - title: "Financial options to complement your scholarship"
+#     - title: "Ratio 1:7 teacher student. Unlimited 1 on 1 mentoring"
+#     - title: "Preparation for interviews and selection processes"
+#   paragraph: ""
+#   button_text: "Apply for a scholarship"
+#   button_link: "#leadform_header" # accepts url: relative(/us/apply), absolute(https://google.com) or component id(#componentName)
+#   image: "../../../static/images/bg/community.png"
+#   image_mobile: "../../../static/images/bg/community.png"
 
 who_is_hiring:
   position: 10
@@ -118,7 +124,7 @@ who_is_hiring:
       image: "../../../static/images/partner/apple.png"
 
 program_details:
-  position: 1
+  position: 2
   background: "#FFFFFF"
   heading: "Program Details"
   sub_heading: "Learn the technologies that companies demand"
@@ -138,28 +144,59 @@ apply_schollarship: # form that is displayed at the end of the landing
 
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
+
+  - name: Educacionflexible
+    position: 1
+    layout: two_column_left
+    image:
+      src: "/images/landing/community-support-2.webp"
+    heading: 
+      text: "Flexible and intensive education"
+    sub_heading:
+      text: "More than 400 hours of practical learning (exercises, projects). You will be able to improve your skills in order to face interviews and different selection processes that will allow you to find a job as a Junior or Senior Developer."
+    button: 
+      text: "APPLY NOW"
+      color: white
+      hover_color: "white"
+      background: "blue"
+      path: "#leadform_header"
+    content: 
+      text: ""
+    bullets:
+      items:
+      - text: "Lifetime Career Support"
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+      - text: "Financial options to complement your scholarship"
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+      - text: "Ratio 1:7 teacher student. Unlimited 1 on 1 mentoring"
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+      - text: "Preparation for interviews and selection processes"
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+
   - name: how-it-works
-    position: 2
+    position: 3
     background: ""
     layout: iconogram
     swipable: True
     heading:
-      text: ""
-      font_size: ["30px", "30px", "30px", "30px", "30px"]
-    sub_heading:
-      text: ""
-      font_size: ["16px", "16px", "16px", "16px", "16px"]
-      style: '{ "textAlign": "center", "width": "60%" }'
-    text_link: "#leadform_header"
+      text: How your tuition is no longer a concern
+    button:
+      text: Conditions apply
+      path: "/us/terms-conditions"
     icons:
-    - icon: "touch"
-      title: Apply for your scholarship before June 15th, 2023
-    - icon: "receive_mail"
-      title: You will receive an email with all the information
-    - icon: "talk"
-      title: Do an online interview with our admissions team 
-    - icon: "terminal"
-      title: Get the result, book your spot and start coding
+      - icon: "graduation-2"
+        title: "Join 4Geeks Academy"
+        content: "Develop your full techie potential!"
+      - icon: "money"
+        color: "blue"
+        title: "Dive in & Code"
+        content: "Experience interactive, hands-on learning with live online classes"
+      - icon: "stairswflag"
+        title: "Job placement"
+        content: "Thanks to our program you'll be equipped"
+      - icon: "contract-2"
+        title: "Job placement"
+        content: "Thanks to our program you'll be equipped"
 
   - name: data_science_machine_learning
     position: 6
