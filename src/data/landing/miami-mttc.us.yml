@@ -41,7 +41,7 @@ navbar:
   logoUrl: "#"
 
 header_data:
-  tagline: "No Cost, No Excuses: Full & Partial Scholarships from Miami Tech Coalition"
+  tagline: "No Cost, No Excuses: Full & Partial Scholarships from the Miami Tech Coalition"
   sub_heading: ""
   tagline_color: "#2E2E38"
   form_styles: 
@@ -91,10 +91,10 @@ short_badges:
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "No Costs. No Excuses. Join and be a part of the #MiamiTech movement"
-    text_mobile: "No Costs. No Excuses. Join and be a part of the #MiamiTech movement"
+    text: "No cost. No excuses. \n Join and be a part of the #MiamiTech movement."
+    text_mobile: "No cost. No excuses.\n Join and be a part of the #MiamiTech movement."
     # devices:   XL      LG    MD      SM    XS
-    font_size: ["25px", "25px", "25px", "20px", "18px"]
+    font_size: ["22px", "22px", "22px", "16px", "16px"]
   button:
     text: "Apply Now"
     path: "#leadform_header"
@@ -319,7 +319,7 @@ components:
       shadow: true 
       src: "/images/landing/latin-woman-laptop-coffee.png"
     heading:
-      text: "Don’t stress about financing your studies \nJust focus on your career ahead!"
+      text: "Don’t stress about financing your studies. \nJust focus on your career ahead!"
       font_size: ["28px", "28px", "28px", "26px", "26px"]
     sub_heading:
       text: "The MTC scholarships are here to change the game for aspiring tech professionals in South Florida. Serious about launching a tech career? Don’t miss this opportunity."   
