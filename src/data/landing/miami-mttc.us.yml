@@ -2,8 +2,8 @@ meta_info:
   slug: miami-tech-talent-coalition # <--- URL 4geeksacademy.com/us/landing/example
 
   # This will show on social media when shared
-  title: "Launch Your Tech Career with 4Geeks Academy & Miami Tech Coalition Scholarships"
-  description: "No-cost coding bootcamps with full or partial scholarships available. Become a software developer or data scientist and join the #MiamiTechLife."
+  title: "Launch your tech career with 4Geeks Academy and Miami Tech Coalition scholarships"
+  description: "There are no-cost coding bootcamps that offer full or partial scholarships. Become a software developer or data scientist and join Miami Tech Life."
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   # This will show on social media when shared
   image: "public/images/landing/miamitech-logo-sidetext.png"
@@ -25,10 +25,9 @@ form:
   # always the first_name, email and phone will be mandatory if added.
   # NOTE: THERE IS NO NEED TO ADD THE COURSE FIELD HERE. IT IS CONTROLLED THROUGH THE utm_course
   fields: ["full_name", "phone", "email"]
-  heading: "Apply to 4Geeks"
-  motivation: |
-    When you fill out this form, you will immediately get more information about the program and scholarship and one of our admissions advisors will contact you to finish your application.
-  button_label: Apply
+  heading: "Get more Information"
+  motivation: "Fill out the form to receive detailed information about 4Geeks Academy and the courses we offer, delivered straight to your inbox."
+  button_label: SUBMIT
   redirect: "/us/thank-you/"  #you can redirect to another url or entirely diffrent website
 
 apply_schollarship: # form that is displayed at the end of the landing
@@ -42,12 +41,12 @@ navbar:
   logoUrl: "#"
 
 header_data:
-  tagline: "No Cost, No Excuses. Get a full or partial scholarship from the Miami Tech Coalition"
+  tagline: "No Cost, No Excuses: Full & Partial Scholarships from Miami Tech Coalition"
   sub_heading: ""
   tagline_color: "#2E2E38"
   form_styles: 
-    background: "#0084FF"
-    color: "white"
+    background: "#FFB718"
+    color: "black"
     button:
       background: "black"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
@@ -56,12 +55,11 @@ header_data:
 
 features:
   marginTop: 0px #<-- separation between tagline and the bullets
-  text: ""
+  text: "Apply now—don’t miss your chance!"
   bullets:
-    - 'Launch your tech career and join the <span style="color:#0097CD;">#MiamiTechLife</span>'
-    - 'Become a software Developer or a Data Scientist'
-    - 'Less than 30 Spots left!'
-    - 'Accepting applications NOW'
+    - 'Kickstart a career in Florida’s vibrant tech scene'
+    - 'Become an AI-powered Full Stack Developer or Data Scientist'
+    - 'Less than 30 spots left!'
   styles: '{ "color": "black", "fontWeight":"500" }'
 
 short_badges:
@@ -142,13 +140,13 @@ components:
     bullets:
       items:
         - heading: "Strong Demand"
-          text: "Demand for skilled computer programmers is high and expected to grow over the next decade."
+          text: "Demand for skilled, AI-fluent programmers is high and is expected to grow over the next decade."
           icon: "check" #string with icon for example ['check', 'cicle', etc]
         - heading: "High-Paying Salaries"
-          text: "Junior Software Developers in Miami start at an average salary of $48,000, with plenty of opportunities for growth."
+          text: "Junior software developers in Miami start at an average salary of $48,000, with plenty of opportunities for growth."
           icon: "check" #string with icon for example ['check', 'cicle', etc]
         - heading: "Diverse Career Opportunities"
-          text: "From tech to traditional industries, coding skills have become essential as digital tools and platforms are now integrated into nearly every business."
+          text: "Coding skills have become essential in both tech and traditional industries due to the integration of digital tools and platforms into nearly every business."
           icon: "check" #string with icon for example ['check', 'cicle', etc]
 
   - name: start_your_journey
@@ -158,12 +156,12 @@ components:
     proportions: [5, 7]
     content:
       font_size: ["16px"]
-      text: "A total of 100 students will be accepted into the program."
+      text: "Only 45 students will be accepted into the scholarship program. Don’t wait!"
     image:
       style: '{ "backgroundSize": "contain" }'
       src: "/images/landing/community-support-2.png"
     heading:
-      text: "Ready to start your journey to a better future?"
+      text: "This is Your Opportunity to Join Miami’s Thriving Tech Scene"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     sub_heading:
       text: "The Miami Tech Talent Coalition connects employers, educators, and community organizations in South Florida to create a strong tech talent pipeline. By training local talent and matching them with companies looking for skilled professionals, we’re helping to build and sustain a thriving tech community in the region."
@@ -187,7 +185,7 @@ components:
     sub_heading:
       text: "Choose the path that’s right for you."
     button: 
-      text: "Apply Now"
+      text: "GET IN TOUCH"
       color: white
       hover_color: "white"
       background: "blue"
@@ -198,13 +196,13 @@ components:
       path: ""
     bullets:
       items:
-      - heading: "FULL STACK Coding Bootcamp"
-        text: "Become a Full Stack software developer using Python, React, and Javascript. Master the most sought-after- skills and land a job as a developer. \n 
-          art to end, including deployment into production and maintenance with Privacy, Security, and Ethics. Download syllabus here. (LINK)"
+      - heading: "FULL STACK Coding Bootcamp with AI"
+        text: |
+          Become a Full Stack Developer by mastering Python, React, JavaScript, and leveraging cutting-edge AI tools to enhance your workflow. <br> Gain the most sought-after skills and launch your tech career.  <a href="/us/coding-bootcamps/part-time-full-stack-developer">Find more information here</a>.
         icon: "circle" #string with icon for example ['check', 'cicle', etc]
-      - heading: "Data Science and Machine Learning"
-        text: "Learn Python to collect and manage data. Create models and solve problems using Machine Learning, Deep Learning, and AI.
-          art to end, including deployment into production and maintenance with Privacy, Security, and Ethics. Download syllabus here. (LINK)"
+      - heading: "WITH PYTHON Datascience and ML"
+        text: |
+          Learn to collect and manage data with Python. Create models and solve problems using machine learning, deep learning, and AI. <br>Strategize and develop your own AI projects from development to deployment and maintenance. <a href="/us/coding-bootcamps/datascience-machine-learning">Find more information here</a>.
         icon: "circle" #string with icon for example ['check', 'cicle', etc]
 
   - name: how-it-works
@@ -263,7 +261,7 @@ components:
           icon: "check" #string with icon for example ['check', 'cicle', etc]
         - text: "Unlimited and personalized career support"
           icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - text: "Award-winning syllabus and methodology"
+        - text: "Industry-aligned curriculum, ahead of the latest job market trends"
           icon: "check" #string with icon for example ['check', 'cicle', etc]
         - text: "An extensive, highly active network of partners in Tech"
           icon: "check" #string with icon for example ['check', 'cicle', etc]
@@ -294,14 +292,14 @@ components:
     proportions: [6, 6]
     background: "#F4F9FF"
     image:
-      style: '{ "backgroundSize": "contain", "height": ["300px", "300px", "300px", "300px", "300px"], "minHeight": "auto" }'
+      style: '{ "backgroundSize": "contain", "height": "250px"}'
       src: "/images/landing/miamitech-logo-sidetext.png"
     heading:
       style: '{ "font-weight": "400", "margin-bottom": "0" }'
-      text: "The Miami Tech Coalition and 4Geeks Academy Mission" 
-      font_size: ["40px", "40px", "40px", "40px", "40px"]
+      text: "The Miami Tech Coalition’s and 4Geeks Academy’s Mission" 
+      font_size: ["36px", "36px", "30px", "28px", "28px"]
     content:
-      text: "In a vital joint effort, we’re dedicated to cultivating Miami as a vibrant hub for innovation and an attractive destination for tech talent and companies alike. Together, we’re building a sustainable pipeline of skilled tech workers in Miami by connecting employers, educators, and local talent. Through ongoing collaboration with businesses and community organizations, we develop training models that lead directly to job opportunities, continuously expanding our positive impact on the local tech scene."
+      text: "Our partnership supports the Coalition's goal to cultivate Miami as a vibrant hub for innovation and an attractive destination for tech talent and companies alike. Together, we’re building a sustainable pipeline of skilled tech workers connecting South Florida employers, educators, and local talent. Through ongoing collaboration with businesses and community organizations, we ensure our training models lead directly to job opportunities, continuously expanding our positive impact on the local tech scene."
       font_size: ["16px"]
     button:
       style: '{ "padding": "10px", "border-radius": "3px" }'
@@ -321,24 +319,24 @@ components:
       shadow: true 
       src: "/images/landing/latin-woman-laptop-coffee.png"
     heading:
-      text: "Don’t stress about financing your studies. \n Just focus on your career ahead!"
-      font_size: ["30px", "30px", "30px", "30px", "30px"]
+      text: "Don’t stress about financing your studies \nJust focus on your career ahead!"
+      font_size: ["28px", "28px", "28px", "26px", "26px"]
     sub_heading:
       text: "The MTC scholarships are here to change the game for aspiring tech professionals in South Florida. Serious about launching a tech career? Don’t miss this opportunity."   
     bullets:
       items:
+        - text: "Apply to the Scholarship"
+          icon: circle
         - text: "Enroll in the program."
           icon: circle
         - text: "Learn software development or data science skills."
-          icon: circle
-        - text: "Complete your projects and graduate."
           icon: circle
         - text: "Land a job."
           icon: circle
         - text: "Thrive in a career you love."
           icon: circle
     button:
-      style: '{ "padding": "10px", "border-radius": "3px" }'
+      style: '{ "padding-top": "10px", "border-radius": "3px" }'
       text: "Apply to the Scholarship"
       color: white
       hover_color: "white"
