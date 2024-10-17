@@ -196,11 +196,11 @@ components:
       path: ""
     bullets:
       items:
-      - heading: "FULL STACK Coding Bootcamp with AI"
+      - heading: "Full Stack Development with AI"
         text: |
           Become a Full Stack Developer by mastering Python, React, JavaScript, and leveraging cutting-edge AI tools to enhance your workflow. <br> Gain the most sought-after skills and launch your tech career.  <a href="/us/coding-bootcamps/part-time-full-stack-developer">Find more information here</a>.
         icon: "circle" #string with icon for example ['check', 'cicle', etc]
-      - heading: "WITH PYTHON Datascience and ML"
+      - heading: "Data Science and Machine Learning"
         text: |
           Learn to collect and manage data with Python. Create models and solve problems using machine learning, deep learning, and AI. <br>Strategize and develop your own AI projects from development to deployment and maintenance. <a href="/us/coding-bootcamps/datascience-machine-learning">Find more information here</a>.
         icon: "circle" #string with icon for example ['check', 'cicle', etc]
