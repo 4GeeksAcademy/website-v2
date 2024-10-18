@@ -28,13 +28,13 @@ locations:
 - "rome-italy"
 - "toronto-canada"
 icons:
-  - icon: "graduation-2"
+  - icon: "mortar-board-icon"
     title: Obtenga un trabajo dentro de los 180 días posteriores a la graduación o recupere su dinero.
-  - icon: "stairswflag"
+  - icon: "stage-dots-icon"
     title: Completa las etapas de nuestro proceso de apoyo a la carrera.
-  - icon: "talk"
+  - icon: "people-group-icon"
     title: Acceda a una red de contratación de 5000 socios.
-  - icon: "handshake"
+  - icon: "hands-w-purple"
     title: Ambos nos comprometemos con tu futura carrera.
 link:
   url: https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/Condiciones%20y%20Requerimientos%20Job%20Guaranteed%20Program.pdf

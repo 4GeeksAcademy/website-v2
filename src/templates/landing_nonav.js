@@ -571,6 +571,7 @@ export const query = graphql`
                 heading
                 text
                 icon
+                icon_color
               }
             }
             background
@@ -588,9 +589,6 @@ export const query = graphql`
               heading {
                 text
                 font_size
-              }
-              button {
-                text
               }
             }
             columns {

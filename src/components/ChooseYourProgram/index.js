@@ -119,8 +119,8 @@ const ChooseYourProgram = ({
                       flexDirection="column"
                       width="100%"
                       alignContent="flex-start"
-                      margin_tablet={landingTemplate ? "0 0 50px 0" : "0"}
-                      margin_xs={landingTemplate ? "0 0 50px 0" : "0"}
+                      // margin_tablet={landingTemplate ? "0 0 50px 0" : "0"}
+                      // margin_xs={landingTemplate ? "0 0 50px 0" : "0"}
                       padding="20px 0px 30px 0px"
                     >
                       {program.description &&
@@ -159,21 +159,27 @@ const ChooseYourProgram = ({
                   <Div
                     margin="10px auto 0 auto"
                     width="100%"
-                    width_tablet="150px"
+                    // width_tablet="150px"
                   >
                     {!program.comming_soon ? (
-                      <Link to={program.link} style={{ width: "100%" }}>
+                      <Link
+                        to={program.link}
+                        style={{
+                          width: landingTemplate && "100%",
+                          margin: "auto",
+                        }}
+                      >
                         {landingTemplate ? (
                           <Button
-                            display="flex"
-                            float="left"
-                            background={Colors.black}
-                            colorHover={Colors.black}
+                            display="block"
+                            background={Colors.blue}
+                            colorHover={Colors.blue}
                             color={Colors.white}
-                            justifyContent="center"
-                            width="auto"
-                            width_tablet="150px"
+                            width="100%"
                             borderRadius="4px"
+                            textAlign="center"
+                            fontSize="21px"
+                            height="auto"
                           >
                             {program.text_link}
                           </Button>

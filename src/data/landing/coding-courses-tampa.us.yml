@@ -41,11 +41,11 @@ apply_schollarship: # form that is displayed at the end of the landing
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  background: "lightBlue"
+  background: "#ffffff"
   tagline: Coding Courses in Tampa with 4Geeks Academy
   tagline_color: "#1b1b1b"
   form_styles:
-    background: "#E3F9FE"
+    background: "#0084FF"
     button:
       background: "black"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
@@ -166,6 +166,7 @@ components:
     layout: two_column_right
     image:
       src: "/images/nov-22th-51.jpg"
+      style: '{ "border": "3px solid black"}'
       shadow: true
     # video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
     heading:
@@ -196,7 +197,7 @@ components:
 
   - name: how-it-works-programs
     position: 2
-    background: "lightBlue"
+    background: "#e1f1f7"
     layout: iconogram
     swipable: True
     heading:
@@ -223,7 +224,7 @@ components:
     position: 4
     layout: two_column_right
     proportions: [6, 6]
-    background: "#BBEAFC"
+    background: "#e1f1f7"
     image:
       style: '{ "backgroundSize": "cover", "border": "solid 2px black"}'
       src: "/images/locations/tampa-location.webp"

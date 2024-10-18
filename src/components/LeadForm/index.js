@@ -303,6 +303,7 @@ const LeadForm = ({
       marginTop={marginTop}
       marginTop_tablet={marginTop_tablet}
       marginTop_xs={marginTop_xs}
+      padding="24px"
       d_sm={d_sm}
       style={style}
       onSubmit={async (e) => {
@@ -395,17 +396,18 @@ const LeadForm = ({
             display="block"
             className={"leadform-" + layout}
             size="12"
-            padding="0 24px"
             gap={gap}
           >
             {heading && (
               <H4
                 type="h4"
-                lineHeight="26px"
-                fontSize="22px"
+                // lineHeight="26px"
+                lineHeight=""
+                fontSize="45px"
                 padding={headerImage && "0 10% 0 0"}
                 color={textColor}
-                fontWeight="700"
+                fontWeight="400"
+                fontFamily="Archivo"
                 width="auto"
                 textAlign={titleTextAlign || "left"}
                 margin={
@@ -413,14 +415,15 @@ const LeadForm = ({
                     ? "25px 0px 10px 0"
                     : titleMargin || "20px 0px 10px 0px"
                 }
-                margin_tablet={titleMargin_tablet || "20px 0px 10px 0px"}
+                margin_tablet="0 0 18px 0"
               >
                 {heading}
               </H4>
             )}
             {motivation && (
               <Paragraph
-                style={{ fontWeight: "700", color: textColor || "#000" }}
+                style={{ fontWeight: "400", color: textColor || "#000" }}
+                fontFamily="Archivo"
                 textAlign="left"
                 padding={textPadding || "0px 0px 10px 0px"}
                 padding_tablet={textPadding_tablet || "0px 0px 20px 0px"}
@@ -577,10 +580,11 @@ const LeadForm = ({
                         fontSize="11px"
                         margin="5px 0 0 5px"
                         textAlign="left"
+                        color={textColor}
                         dangerouslySetInnerHTML={{
                           __html: consent.message,
                         }}
-                      ></Paragraph>
+                      />
                     </Div>
                   );
               })}
@@ -598,18 +602,22 @@ const LeadForm = ({
               />
             </Div>
             {layout === "block" && (
-              <Div display="flex" padding="10px 0 0 0" width="100%">
+              <Div
+                display="flex"
+                padding="10px 0 0 0"
+                width="100%"
+                flexDirection="row-reverse"
+              >
                 <Button
-                  //variant="full"
                   type="submit"
-                  fontSize="17px"
+                  fontSize="21px"
+                  height="auto"
                   margin={marginButton}
                   margin_tablet={marginButton_tablet}
                   width_lg={widthButton}
-                  width_xs="100%"
                   justifyContent="center"
-                  background={buttonStyles?.background || Colors.blue}
-                  //textAlign="center"
+                  background={buttonStyles?.background || Colors.black}
+                  borderRadius="3px"
                   color={
                     formStatus.status === "loading"
                       ? Colors.darkGray
@@ -621,13 +629,27 @@ const LeadForm = ({
                 </Button>
               </Div>
             )}
-            <Paragraph fontSize="10px" textAlign="left">
+            <Paragraph fontSize="10px" textAlign="left" color={textColor}>
               {yml.terms.agree_terms_text}{" "}
-              <a href={yml.terms.terms_and_conditions_link} target="_blank">
+              <a
+                href={yml.terms.terms_and_conditions_link}
+                style={{
+                  color:
+                    background === Colors.blue ? Colors.black : Colors.blue,
+                }}
+                target="_blank"
+              >
                 {yml.terms.terms_and_conditions}
               </a>{" "}
               {yml.terms.connector_and}{" "}
-              <a href={yml.terms.privacy_policy_link} target="_blank">
+              <a
+                href={yml.terms.privacy_policy_link}
+                style={{
+                  color:
+                    background === Colors.blue ? Colors.black : Colors.blue,
+                }}
+                target="_blank"
+              >
                 {yml.terms.privacy_policy}
               </a>
             </Paragraph>
