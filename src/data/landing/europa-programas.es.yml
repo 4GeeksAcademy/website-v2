@@ -43,6 +43,7 @@ header_data:
   tagline_color: "#1b1b1b"
   form_styles:
     background: "#0084FF"
+    color: "white"
     button:
       background: "black"
   sub_heading: "Aprende, Crece y Conviértete en un Profesional del mundo Tech"
