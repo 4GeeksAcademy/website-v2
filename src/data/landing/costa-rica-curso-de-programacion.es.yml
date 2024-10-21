@@ -1,11 +1,12 @@
 meta_info:
   slug: curso-de-programacion-costa-rica # <--- URL 4geeksacademy.com/us/landing/example
 
+  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   # This will show on social media when shared
   title: "Bootcamp de programación en Costa Rica. Aprende a programar y consigue empleo como programador."
   description: "Aprende a programar en uno de los bootcamps más importantes del Costa Rica, obtén asesoria de por vida y acceso a mejores oportunidades laborales."
   image: "/images/bg/main-bg.jpg"
-  keywords: "Curso de programacion, Bootcamp de Programación, Bootcamp programacion Costa Rica, Bootcamp de python, Bootcamp de React y Javascript, Bootcamp de Informática, Coding Bootcamp, 4Geeks Academy"
+  keywords: ""
 
   template: "landing_a" # <--- choose your landing template
   redirects: # <--- URL redirections to avoid 404 errors
@@ -23,12 +24,12 @@ form:
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
   heading: "Aplica a 4Geeks"
-  motivation: "Este es el futuro que estabas buscando."
-  button_label: APLICA YA
+  motivation: "Rellena el formulario y en menos de 5 minutos recibirás información sobre nuestros programas y opciones de pago directamente en tu correo."
+  button_label: ¡Aplica ahora!
   redirect: "/es/gracias/?lang=es"  #you can redirect to another url or entirely diffrent website
 
 navbar:
-  buttonText: "APLICAR YA"
+  buttonText: "Más información"
   buttonUrl: "#leadform_bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
   logoUrl: "#"
 
@@ -40,9 +41,14 @@ apply_schollarship: # form that is displayed at the end of the landing
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  background: "#FFF1D1"
-  tagline: Aprende a programar desde cero o potencia tu carrera en el mundo tech 
+  background: "#ffffff"
+  tagline: "Aprende a programar en Costa Rica"
   sub_heading: ""
+  tagline_color: "#1c1c1c"
+  form_styles:
+    background: "#0084FF"
+    button:
+      background: "black"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
 
@@ -52,27 +58,35 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-    - Aprende las tecnologías más demandadas por las grandes empresas.
-    - Programa 100% Remoto y Medio Tiempo. ¡Certificate en tan solo 18 semanas!
     - Contamos con un plan de Trabajo Garantizado y distintas opciones de Financiamiento.
+    - Programa 100% Remoto y Medio Tiempo. ¡Certificate en tan solo 18 semanas!
+    - Aprende las tecnologías más demandadas por las grandes empresas.
 
 short_badges:
-  - name: "Premios Tecnologia Siglo XXI"
+  - name: "Top Online Full-Stack Bootcamps Of 2024"
     url: ""
-    image: "../../../static/images/awards/premios_tecnologia_sigloxxi.png"
-    alt: "Mejor centro de Coding Bootcamp"
-  - name: "Course Report"
+    image: "../../../static/images/badges/forbes-logo-award.png"
+    alt: "We have been selected as one of the Top Online Coding Bootcamps by Forbes."
+  - name: "Best for Spanish speakers Of 2024 by Fortune"
+    url: ""
+    image: "../../../static/images/badges/fortune-logo.png"
+    alt: "Recognized by Fortune as one of the Top Coding Bootcamps"
+  - name: "Top Coding Bootcamps Newsweek"
+    url: ""
+    image: "../../../static/images/badges/newsweek.webp"
+    alt: "Top Coding Bootcamps Newsweek"
+  - name: "Best Coding Bootcamp Course Report 2024"
     url: ""
     image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
-    alt: "Top Coding Bootcamps Course Report"
-  - name: "Switchup"
-    url: ""
-    image: "../../../static/images/badges/switchup-badge-2023.png"
-    alt: "Best coding bootcamp Switchup 2023"   
-  - name: "Florida Department of Education"
+    alt: "Best Coding Bootcamp Course Report 2024"
+  - name: "Licensed by the Florida Department of Education"
     url: ""
     image: "../../../static/images/badges/licensed.png"
-    alt: "Florida Department of Education"
+    alt: "Licensed by the Florida Department of Education"
+  - name: "ARP Certificate"
+    url: ""
+    image: "../../../static/images/badges/arp-logo-certification.png"
+    alt: "ARP Certificate"
 
 follow_bar:
   position: "top" # top, bottom, hidden
@@ -82,43 +96,76 @@ follow_bar:
     # devices:    XL      LG      MD      SM       XS
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:
-    text: "APLICA YA"
+    text: "Más información"
     path: "#leadform_header"
   phone:
     text: "Llama "
+
+geeks_vs_others:
+  position: 6
+  heading: "Compara 4Geeks con otros bootcamps"
+  paragraph: "Comprueba los aspectos únicos de nuestra academia"
+  total_rows: 5
 
 #
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
 #
 components:
+  - name: why_4geeks_column
+    position: 1
+    layout: two_column_left
+    image:
+      style: '{"backgroundSize": "contain", "filter": "drop-shadow(10px 10px 0px rgba(255, 183, 24, 1))"}'
+      src: "/images/landing/blonde-girl-laptop.png"
+    heading: 
+      text: "Domina el Desarrollo Web en Solo 18 Semanas"
+    sub_heading:
+      text: "Conviértete en un Full-Stack Developer en 18 semanas con un programa intensivo que cubre las tecnologías más demandadas. Aprenderás desde cero y sin necesidad de experiencia previa. \n Durante el curso, te sumergirás en herramientas clave como React, Python, SQL, y mucho más. Dominarás tanto el Frontend como el Backend, preparándote para afrontar los desafíos del mundo real."
+    button: 
+      text: "Más Información"
+      color: white
+      hover_color: "white"
+      background: "blue"
+      path: "#leadform_header"
+    bullets:
+      items:
+      - text: Apoyo Profesional de por vida
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+      - text: <a href="/es/financiacion" target="_blank">Opciones de financiamiento flexibles</a>
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+      - text: Mentorías ilimitadas con expertos
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+      - text: Clases en vivo y grabadas para que estudies a tu propio ritmo
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+
   - name: some_id
-    position: 3
+    position: 5
     layout: two_column_right
-    background: "lightBlue2"
+    background: "#e6feff"
     image:
       style: '{ "border" : "3px solid black" }' 
       shadow: true 
       src: "../../../static/images/testimonials/Mattia-Tozzi-testimonial.jpg"
     video: "B01-eTfgqqc"
     heading:
-      text: "El viaje de Mattia Tozzi en 4geeks Academy y como cambió su vida profesional."
+      text: "Descubre como 4geeks academy puede impulsar tu carrera"
       #xl      lg     md     sm    xs
       font_size: ["40px", "34px", "34px", "25px", "20px"]
     content:
       text: "Conoce la historia inspiradora de Mattia Tozzi, quien, buscando un cambio en su carrera, se unió a 4Geeks Academy. Su experiencia demuestra cómo la dedicación y el aprendizaje en este bootcamp lo llevaron a convertirse en un profesional altamente capacitado."
       font_size: ["16px"]
     button:
-      text: "¡Únete a la Academia!"
+      text: "Más información"
       path: "#leadform_bottom"
       color: "white"
       background: "black"
       hover: "lightBlue"
 
   - name: top_coding_bootcamp
-    position: 1
+    position: 3
     layout: two_column_left
     proportions: [4, 8]
-    background: "#f1f1f1"
+    background: "#fbfbfb"
     image:
       style: '{ "backgroundSize": "contain" }'
       src: "/images/badges/Course-Report-Badge-2024.webp"
@@ -152,21 +199,21 @@ rating_reviews:
 
 badges:
   position: 7
-  heading: "4Geeks Academy cuenta con premios y reconocimientos que validan su excelencia"
+  heading: "Premios y reconocimientos que validan nuestra excelencia"
 
 program_details:
-  position: 1
+  position: 2
   background: "#FFFFFF"
   heading: "Domina Python, JS y React"
   sub_heading: "Un curso de programación sobre las tecnologías más usadas del mundo"
 
 why_4geeks:
-  position: 4
-  heading: "Por qué 4Geeks"
+  position: 10
+  heading: "Escuchalo de nuestros alumnos"
   sub_heading: " "
 
 who_is_hiring:
-  position: 8
+  position: 15
   limit: 4
   heading: "¿Quién contrata a nuestros alumnos?"
   sub_heading: "84% de nuestros estudiantes que completaron el proceso de GeekFORCE han conseguido trabajo luego de haberse graduado (incluso dentro de los sigiuientes  100 días)"

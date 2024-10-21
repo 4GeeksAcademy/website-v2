@@ -6,7 +6,7 @@ meta_info:
   description: "Aprende las habilidades más demandadas en ciberseguridad con nuestro programa intensivo en Ecuador."
   image: "/images/bg/main-bg.jpg"
   keywords: ""
-  visibility: "unlisted" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   template: "landing_a" # <--- choose your landing template
   # <--- URL redirections to avoid 404 errors
   redirects: []
@@ -39,11 +39,11 @@ apply_schollarship: # form that is displayed at the end of the landing
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  background: "lightBlue"
+  background: "#ffffff"
   tagline: "Bootcamp de Ciberseguridad en Ecuador"
-  tagline_color: "#1b1b1b"
+  tagline_color: "#1c1c1c"
   form_styles:
-    background: "#E3F9FE"
+    background: "#0084FF"
     button:
       background: "black"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
@@ -158,9 +158,9 @@ components:
     swipable: False
     background: "#fbfbfb"
     image:
-      style: '{"backgroundSize": "cover", "border": "2px solid black"}'
-      src: "/images/landing/ciberseguridad-ecuador.webp"
-      shadow: true
+      style: '{"backgroundSize": "contain", "filter": "drop-shadow(10px 10px 0px rgba(255, 183, 24, 1))"}'
+      src: "/images/landing/blonde-girl-laptop.png"
+      shadow: false
     section_heading: 
       text: "La Creciente Demanda de Expertos en Ciberseguridad en Ecuador"
       style: '{ "font-size": "30px" }'
@@ -194,7 +194,7 @@ components:
     background: "veryLightBlue2" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
     image:
       style: '{"backgroundSize": "contain", "background-position": "center"}'
-      src: "/images/landing/ciberseguridad-ecuador-ii.webp"
+      src: "/images/landing/hombre-joven-con-laptop.webp"
       shadow: false
     heading:
       text: "Ventajas Únicas de nuestro Bootcamp de Ciberseguridad"

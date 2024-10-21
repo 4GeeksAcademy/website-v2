@@ -158,9 +158,9 @@ components:
     swipable: False
     background: "#fbfbfb"
     image:
-      style: '{"backgroundSize": "cover", "border": "2px solid black"}'
-      src: "/images/landing/ciberseguridad-colombia.webp"
-      shadow: true
+      style: '{"backgroundSize": "cover", "filter":"drop-shadow(10px 10px 0px rgba(0, 132, 255, 1))"}'
+      src: "/images/landing/hombre-con-laptop.webp"
+      shadow: false
     section_heading: 
       text: "La Creciente Demanda de Ciberseguridad en Colombia"
       style: '{ "font-size": "30px" }'

@@ -1,8 +1,8 @@
 meta_info:
   slug: aprende-a-programar-costa-rica # <--- URL 4geeksacademy.com/us/landing/example
-
+  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   # This will show on social media when shared
-  title: "Bootcamp de programación en Costa Rica. Aprende a programar y consigue empleo como programador."
+  title: "Aprende a Programar en Costa Rica | 4 Geeks Academy"
   description: "Aprende a programar en uno de los bootcamps más importantes del Costa Rica, obtén acceso a una indrustria que está en constante crecimiento."
   image: "/images/bg/main-bg.jpg"
   keywords: "Aprende a programar, Bootcamp de Programación, Bootcamp programacion Costa Rica, Bootcamp de python, Bootcamp de React y Javascript, Bootcamp de Informática, Coding Bootcamp, 4Geeks Academy"
@@ -23,7 +23,7 @@ form:
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
   heading: "Aplica a 4Geeks"
-  motivation: "Este es el futuro que estabas buscando."
+  motivation: "Una vez que rellenes el formulario recibirás información sobre el curso, la academia y sus planes de pagos"
   button_label: APLICA YA
   redirect: "/es/gracias/?lang=es"  #you can redirect to another url or entirely diffrent website
 
@@ -40,9 +40,14 @@ apply_schollarship: # form that is displayed at the end of the landing
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  background: "#FFF1D1"
+  background: "#ffffff"
   tagline: Bootcamp de Programación en Costa Rica 
-  sub_heading: Aprende a programar desde cero o mejora tus habilidades en programación y recibe soporte técnico y profesional de por vida.
+  sub_heading: ""
+  tagline_color: "#1c1c1c"
+  form_styles:
+    background: "#0084FF"
+    button:
+      background: "black"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
 
@@ -57,22 +62,30 @@ features:
     - Contamos con un plan de Trabajo Garantizado y distintas opciones de Financiamiento.
 
 short_badges:
-  - name: "Premios Tecnologia Siglo XXI"
+  - name: "Top Online Full-Stack Bootcamps Of 2024"
     url: ""
-    image: "../../../static/images/awards/premios_tecnologia_sigloxxi.png"
-    alt: "Mejor centro de Coding Bootcamp"
-  - name: "Course Report"
+    image: "../../../static/images/badges/forbes-logo-award.png"
+    alt: "We have been selected as one of the Top Online Coding Bootcamps by Forbes."
+  - name: "Best for Spanish speakers Of 2024 by Fortune"
+    url: ""
+    image: "../../../static/images/badges/fortune-logo.png"
+    alt: "Recognized by Fortune as one of the Top Coding Bootcamps"
+  - name: "Top Coding Bootcamps Newsweek"
+    url: ""
+    image: "../../../static/images/badges/newsweek.webp"
+    alt: "Top Coding Bootcamps Newsweek"
+  - name: "Best Coding Bootcamp Course Report 2024"
     url: ""
     image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
-    alt: "Top Coding Bootcamps Course Report"
-  - name: "Switchup"
-    url: ""
-    image: "../../../static/images/badges/switchup-badge-2023.png"
-    alt: "Best coding bootcamp Switchup 2023"   
-  - name: "Florida Department of Education"
+    alt: "Best Coding Bootcamp Course Report 2024"
+  - name: "Licensed by the Florida Department of Education"
     url: ""
     image: "../../../static/images/badges/licensed.png"
-    alt: "Florida Department of Education"
+    alt: "Licensed by the Florida Department of Education"
+  - name: "ARP Certificate"
+    url: ""
+    image: "../../../static/images/badges/arp-logo-certification.png"
+    alt: "ARP Certificate"
 
 follow_bar:
   position: "top" # top, bottom, hidden
@@ -127,9 +140,9 @@ rating_reviews:
       rating: 4.9
       url: ""
 
-badges:
-  position: 10
-  heading: "4Geeks Academy cuenta con premios y reconocimientos que validan su excelencia"
+# badges:
+#   position: 10
+#   heading: "4Geeks Academy cuenta con premios y reconocimientos que validan su excelencia"
 
 program_details:
   position: 1
