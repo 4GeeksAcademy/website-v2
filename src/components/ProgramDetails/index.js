@@ -45,7 +45,7 @@ const ProgramDetails = (props) => {
   const totalWeeks = props.details.weeks || 16;
   const weekUnit = props.details.week_unit;
   for (let i = 1; i <= totalWeeks; i++) {
-    weeks.push(i.toString() + " " + weekUnit);
+    weeks.push(`${i.toString()} ${weekUnit}`);
   }
 
   const steps = props.details.details_modules.reduce(
@@ -237,21 +237,21 @@ const ProgramDetails = (props) => {
               ))}
             </Div>
             <Div
+              className="module-description"
               display_tablet="flex"
               display_xs="flex" // aqui
               flexDirection_xs="column"
               flexDirection_md="row"
               margin_xxs="20px"
+              gap="20px"
             >
               <Div
-                margin_md="20px 20px 0 0"
-                margin_tablet="auto"
-                margin_xs="0 0 20px 20px"
                 width_md="50%"
                 width_xs="300px"
                 width_tablet="80%"
-                height_md="fit-content"
-                height_xs="auto"
+                border={`1px solid ${Colors.lightGray}`}
+                borderRadius="4px"
+                padding="16px"
               >
                 <Icon
                   style={{ flexShrink: 0 }}
@@ -282,10 +282,9 @@ const ProgramDetails = (props) => {
                 </Div>
               </Div>
               <Div
-                margin_md="20px 0 20px 20px"
-                margin_tablet="auto"
-                margin_xs="0 0 0 20px"
-                display="inline"
+                display="flex"
+                flexDirection="column"
+                gap="20px"
                 width_tablet="80%"
                 width_md="50%"
                 width_xs="320px"
@@ -294,8 +293,9 @@ const ProgramDetails = (props) => {
                   margin_md="0 10px 0 0"
                   margin_xs="0 0 20px 0"
                   width="100%"
-                  height_md="fit-content"
-                  height_xs="auto"
+                  border={`1px solid ${Colors.lightGray}`}
+                  borderRadius="4px"
+                  padding="16px"
                 >
                   <Div>
                     <Icon icon="rocket-icon-new" width="46px" height="46px" />
@@ -323,10 +323,12 @@ const ProgramDetails = (props) => {
                   </Div>
                 </Div>
                 <Div
-                  margin="0 10px 0 0"
+                  // margin="0 10px 0 0"
                   width="100%"
-                  height_md="50px"
-                  height_xs="auto"
+                  // height_md="50px"
+                  border={`1px solid ${Colors.lightGray}`}
+                  borderRadius="4px"
+                  padding="16px"
                 >
                   <Div>
                     <Icon icon="wall-clock-icon" width="46px" height="46px" />

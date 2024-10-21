@@ -28,13 +28,13 @@ locations:
 - "rome-italy"
 - "toronto-canada"
 icons:
-  - icon: "handshake"
+  - icon: "mortar-board-icon"
     title: We both commit to your future career
-  - icon: "stairswflag"
+  - icon: "stage-dots-icon"
     title: Complete all stages of our career support process.
-  - icon: "network"
+  - icon: "people-group-icon"
     title: Access a network of +5K hiring partners.
-  - icon: "graduation-2"
+  - icon: "hands-w-purple"
     title: Get a job within 180 days of graduation or your money back.
 link:
   url: https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/Conditions%20Job%20Guaranteed%20Program.pdf
