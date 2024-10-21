@@ -217,29 +217,111 @@ components:
       color: white
       hover_color: "white"
       background: "black"
-      path: "https://www.youtube.com/watch?v=plwPwyrxX84"
-    bullets:
-      item_style: '{ "padding": 0, "font-weight": "100" }'
-      items:
-        - heading: "Lorem ipsum dolor sit amet"
-          text: |
-            Rigobot, our custom-trained AI, offers unlimited:
-            <br />
-            • Instant tutoring as you code
-            <br />
-            • Skill evaluations to track your progress
-            <br />
-            • Bug fixing assistance
-            <br />
-            It’s the perfect complement to our human mentorship program!
-          icon: "check" #string with icon for example ['check', 'cicle', etc]
-          icon_color: '#25BF6C'
-        - heading: "Lorem ipsum dolor sit amet"
-          text: |
-            Rigobot, our custom-trained AI, offers unlimited:
-            <br />
-            • Instant tutoring as you code
-            <br />
-            • Instant tutoring as you code
-          icon: "check" #string with icon for example ['check', 'cicle', etc]
-          icon_color: '#25BF6C'
+
+    cards:
+      - image:
+          style: '{ "backgroundSize": "cover", "minHeight": "230px", "borderRadius": "80px" }'
+          src: "/images/low-income-people-of-color.png"
+        heading: 
+          text: "Low-income people of color"
+          style: '{ "fontWeight": "700" }'
+          font_size: "15px"
+        button:
+          text: "See more"
+      - image:
+          style: '{ "backgroundSize": "cover", "minHeight": "230px", "borderRadius": "80px" }'
+          src: "/images/low-income-veterans.png"
+        heading: 
+          text: "Low-income veterans"
+          style: '{ "fontWeight": "700" }'
+          font_size: "15px"
+        # button:
+        #   text: "See more"
+      - image:
+          style: '{ "backgroundSize": "cover", "minHeight": "230px", "borderRadius": "80px" }'
+          src: "/images/low-income-female-heads-of-household.png"
+        heading: 
+          text: "Low-income single female heads of household"
+          style: '{ "fontWeight": "700" }'
+          font_size: "15px"
+        button:
+          text: "See more"
+      
+
+  - name: name
+    position: 8
+    layout: overlaped
+    image:
+      src: "/images/landing/two-womans-and-laptop.webp"
+    heading:
+      text: "Python y Javascript"
+    content:
+      text: |
+        <strong style="font-weight: bold;"> Nuestros programa está basado en el uso de Phyton y Javascript. La razón? </strong> En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails. Python tiene 10 veces más trabajos que node.js.
+        Otras herramientas que también aprenderás a usar en nuestro programa son: GitHub, CSS3, HTML5, Flask, etc.
+    button: 
+      text: Aplicar
+      color: black
+
+  - name: "whatever"
+    layout: choose_your_program
+    position: 7
+    heading:
+      text: Nuestros Programas
+    content:
+      text: Contamos con programas que combinan clases prácticas dictadas por expertos
+      font_size: ["16px"]
+      path: ""
+    programs:
+    - title: "Full Stack Developer"
+      sub_title: "Nivel 1"
+      icon: "fullstack_2"
+      description: |
+        Aprende desde cero, empezando por lo básico: HTML + CSS3 + Javascript.
+        
+        Aprende las habilidades más solicitadas con instructores apasionados y un plan de estudios práctico para ayudarte a encontrar un trabajo de programación como desarrollador Jr.
+      
+      text_link: Aplica a una beca
+      link: "#"
+      
+    - title: "Ingeniero de Software"
+      sub_title: "Nivel 2"
+      icon: "software_2"
+      description: |
+        Profundizamos a un nivel avanzado principios específicos de desarrollo, llevando tu carrera a otro nivel.
+        
+        Texto que resuma y explique que este programa tiene modalidad part time y full time. Que también resuma eficientemente el syballus del programa. Acá incluiría un <a href="/us/apply">link</a> para poder descargar el PDF con el detalle del programa.
+        Desarrolla más habilidades adentrándote en el mundo de computación y aplicaciones nativas de la nube. Aprende las habilidades que el 90% de las empresas Fortune 500 están buscando.
+      
+      text_link: Aplica a una beca
+      link: "#"
+ 
+  - name: elegibility
+    position: 7
+    layout: simple_cards
+    background: black
+    heading:
+      text: "We make education accessible to everyone"
+      style: '{ "color": "white" }'
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      text: |
+        You may qualify if are a <strong style="font-weight: bold;"> Miami resident </strong> and belong to one of these groups:
+      style: '{ "color": "white", "opacity": "1" }'
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+    cards:
+      - background: "#E0D1FF"
+        heading: 
+          text: "Low-income people of color"
+          style: '{ "fontWeight": "700" }'
+          font_size: "15px"
+      - background: "#FFB718"
+        heading: 
+          text: "Low-income veterans"
+          style: '{ "fontWeight": "700" }'
+          font_size: "15px"
+      - background: "#0084FF"
+        heading: 
+          text: "Low-income single female heads of household"
+          style: '{ "fontWeight": "700" }'
+          font_size: "15px"
