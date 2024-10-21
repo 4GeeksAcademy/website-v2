@@ -168,22 +168,25 @@ details:
         
       list:
         - label: "Duración"
-          content:  "16 semanas"
+          content: "16 semanas"
           icon: "duration-icon"
         - label: "Clases"
-          content: "3 Clases semanales"
-          icon: "book"
+          content: "3 clases semanales"
+          icon: "book-2"
         - label: "Tamaño de la clase"
           content: "12 personas máx"
-          icon: "people-class-icon"
+          icon: "people"
         - label: "Certificado"
-          content: "Nuestros certificados son reconocidos por múltiples instuticiones."
+          content: "Nuestros certificados son reconocidos por múltiples instituciones."
           link_text: "Ver ejemplo"
           link: "https://certificate.4geeks.com/44c61b294a248f91088f5355aea09606126795e3"
-          icon: "certificate-icon"
+          icon: "certification"
         - label: "Requisitos"
-          content: "No se necesita experiencia previa"
+          content: "No se necesita experiencia previa."
           icon: "contract-checked"
+        - label: "Idioma"
+          content: "Puedes elegir entre inglés y español para consumir el plan de estudios y el contenido. Las clases se imparten en el idioma oficial de tu campus."
+          icon: "language"
 
   heading: DETALLES DEL PROGRAMA
   weeks: 16

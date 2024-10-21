@@ -41,8 +41,8 @@ apply_schollarship: # form that is displayed at the end of the landing
 header_data:
   tagline: "+500.000€ en Becas"
   sub_heading: "TicJob ofrece más de 500.000€ en Becas para que te conviertas en Data Scientist en 4Geeks Academy. No te quedes atrás, Aprende Data Science y Machine Learning, el perfil más demandado por las empresas. Impulsarás tu carrera en el Mejor Coding Bootcamp de España según los Premios Excelencia Educativa. Se te descontarán 3.900 €. ¿Listo para unirte y reinventar tu futuro?"
-  partner_logo_url: "../../../static/images/partner/logo-ticjob-blanco.png"
-  background_image: "../../../static/images/bg/community.png"
+  partner_logo_url: "../../../static/images/partner/logo-ticjob-4GAES.png"
+  # background_image: "../../../static/images/bg/community.png"
   image_filter: brightness(0.2)
 
 
@@ -98,24 +98,24 @@ short_badges:
 # #
 badges:
   position: 5 # It's the position of the component that will be rendered first
-  heading: "4Geeks Academy es una de las mejores escuelas de programación del mundo, ha sido Galardonada como el Mejor Centro de Formación de España 2023 y sus programas de estudio han sido reconocidos como los Mejores para la Inserción Profesional. "
+  sub_heading: "4Geeks Academy es una de las mejores escuelas de programación del mundo, ha sido Galardonada como el Mejor Centro de Formación de España 2024 y sus programas de estudio han sido reconocidos como los Mejores para la Inserción Profesional. "
 
-about4Geeks:
-  position: 2
-  heading: ¿Qué hace a 4Geeks diferente? 
-  sub_heading: "Educación flexible e intensiva basada en metodologías disruptivas y eficaces como flipped classroom o learning by doing. +400 horas de aprendizaje práctico (ejercicios, proyectos). Te acompañaremos y prepararemos para afrontar procesos de selección y encontrar un nuevo trabajo en tecnología."
-  list:
-    - title: "GeekPal:  Mentorías 1:1 ilimitadas y de por vida."
-    - title: "Grupos reducidos (máximo 15 personas). Ratio 1:7 profesor alumno."
-    - title: " GeekForce: Apoyo profesional para siempre."
-    - title: "Acceso 24/7 a nuestra plataforma de aprendizaje y comunidad de +3000 Developers."
-  paragraph: ""
+# about4Geeks:
+#   position: 2
+#   heading: ¿Qué hace a 4Geeks diferente? 
+#   sub_heading: "Educación flexible e intensiva basada en metodologías disruptivas y eficaces como flipped classroom o learning by doing. +400 horas de aprendizaje práctico (ejercicios, proyectos). Te acompañaremos y prepararemos para afrontar procesos de selección y encontrar un nuevo trabajo en tecnología."
+#   list:
+#     - title: "GeekPal:  Mentorías 1:1 ilimitadas y de por vida."
+#     - title: "Grupos reducidos (máximo 15 personas). Ratio 1:7 profesor alumno."
+#     - title: " GeekForce: Apoyo profesional para siempre."
+#     - title: "Acceso 24/7 a nuestra plataforma de aprendizaje y comunidad de +3000 Developers."
+#   paragraph: ""
 
-  button_text: "¡Reserva tu plaza ahora!"
-  button_link: "#leadform_header" # accepts url: relative(/us/apply), absolute(https://google.com) or component id(#componentName)
-  image: "../../../static/images/bg/remote.jpeg"
-  image_mobile: "../../../static/images/bg/remote.jpeg"
-  shadow: true
+#   button_text: "¡Reserva tu plaza ahora!"
+#   button_link: "#leadform_header" # accepts url: relative(/us/apply), absolute(https://google.com) or component id(#componentName)
+#   image: "../../../static/images/bg/remote.jpeg"
+#   image_mobile: "../../../static/images/bg/remote.jpeg"
+#   shadow: true
 
 who_is_hiring:
   position: 10
@@ -130,35 +130,66 @@ who_is_hiring:
       image: "../../../static/images/partner/apple.png"
 
 program_details:
-  position: 4
+  position: 2
   background: "#FFFFFF"
   heading: "Detalles del programa"
   sub_heading: "Aprende las tecnologías que demandan las empresas"
 
+geeks_vs_others:
+  position: 5
+  heading: "Compara 4Geeks con otros bootcamps"
+  paragraph: ""
+  total_rows: 5
+
 # # Possible layouts: [two_column_left_image, two_column_right_image]
 components:
+  - name: Educacionflexible
+    position: 1
+    layout: two_column_left
+    image:
+      src: "/images/landing/community-support-2.webp"
+    heading: 
+      text: "¿Qué hace a 4Geeks diferente?"
+    sub_heading:
+      text: "Educación flexible e intensiva basada en metodologías disruptivas y eficaces como flipped classroom o learning by doing. +400 horas de aprendizaje práctico (ejercicios, proyectos). Te acompañaremos y prepararemos para afrontar procesos de selección y encontrar un nuevo trabajo en tecnología."
+    button: 
+      text: "Solicita tu beca"
+      color: white
+      hover_color: "white"
+      background: "blue"
+      path: "#leadform_header"
+    content: 
+      text: ""
+    bullets:
+      items:
+      - text: "GeekPal: Mentorías 1:1 ilimitadas y de por vida."
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+      - text: "Grupos reducidos (máximo 15 personas). Ratio 1:7 profesor alumno."
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+      - text: "GeekForce: Apoyo profesional para siempre."
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+      - text: "Acceso 24/7 a nuestra plataforma de aprendizaje y comunidad de +3000 Developers."
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+
   - name: how-it-works
     position: 3
-    background: "veryLightBlue2"
+    background: ""
     layout: iconogram
     swipable: True
     heading:
-      text: "¿Cómo solicitar tu plaza?"
-      font_size: ["30px", "30px", "30px", "30px", "30px"]
-    sub_heading:
-      text: ""
-      font_size: ["16px", "16px", "16px", "16px", "16px"]
-      style: '{ "textAlign": "center", "width": "60%" }'
-    text_link: "#leadform_header"
+      text: ¿Cómo solicitar tu plaza?
+    button:
+      text: Condiciones aplican
     icons:
-    - icon: "touch"
-      title: 1. Completa el formulario
-    - icon: "receive_mail"
-      title: 2. Recibirás un correo electrónico con toda la información para avanzar en el proceso
-    - icon: "talk"
-      title: 3. Haz una entrevista personal vía telefónica con el equipo de admisiones
-    - icon: "stairswflag"
-      title: 4. Reserva tu plaza y ¡acelera tu carrera!
+      - icon: "graduation-2"
+        content: Aplica a la beca
+      - icon: "money"
+        color: "blue"
+        content: Obten un correo electrónico con la información
+      - icon: "stairswflag"
+        content: Haz una entrevista con nuestro equipo
+      - icon: "contract-2"
+        content: Aprende a programar con nosotros
 
   # - name: python_y_javascript
   #   position: 8

@@ -104,23 +104,21 @@ details:
         ¡Únete a nosotros y comienza a construir tu futuro en la industria tecnológica! 
     
       list:
-        - label: "Duración"
-          content:  "12 semanas"
+        - label: "Duration"
+          content: "12 weeks"
           icon: "duration-icon"
-        - label: "Clases"
-          content: "3 Clases semanales"
-          icon: "book"
-        - label: "Certificado"
-          content: "Nuestros certificados son  reconocidos por múltiples instituciones."
-          link_text: ""
-          link: ""
-          icon: "certificate-icon"
-        - label: "Requisitos"
-          content: "Tan solo necesitas un ordenador y una conexión a internet"
+        - label: "Classes"
+          content: "3 weekly classes"
+          icon: "book-2"
+        - label: "Certificate"
+          content: "Our certificates are recognized by multiple institutions."
+          icon: "certification"
+        - label: "Requirements"
+          content: "You only need a computer and an internet connection."
           icon: "contract-checked"
-        - label: "Idioma"
-          content: "Puedes elegir entre inglés y español para consumir el plan de estudios y el contenido. Las clases se imparten en el idioma oficial de tú campus."
-          icon: "language"
+        # - label: "Language"
+        #   content: "You can choose between English and Spanish for the syllabus and content. Live classes are taught in the official language of your campus."
+        #   icon: "language"
           
   heading: DETALLES DEL PROGRAMA PART-TIME
   weeks: 12

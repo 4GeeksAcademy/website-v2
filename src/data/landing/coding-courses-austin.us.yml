@@ -4,7 +4,7 @@ meta_info:
   # This will show on social media when shared
   title: "Austin Coding Courses | 4Geeks Academy - Advance Your Career"
   description: "Discover top-rated coding courses in Austin at 4Geeks Academy. Become a Full-Stack Developer, Data Scientist, or Cybersecurity Specialist."
-  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   image: "/images/bg/the-academy-bg.jpg"
   keywords: ""
 

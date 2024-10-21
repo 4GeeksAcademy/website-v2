@@ -3,10 +3,10 @@ meta_info:
 
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   # This will show on social media when shared
-  title: "¡Obtén tu beca!"
-  description: "Landing.Jobs y 4Geeks se unen para ofrecer más de 500.000 € en Becas para que te conviertas en Data Scientist, Data Analyst o Ingeniero de Machine Learning."
+  title: "Becas Bootcamp 4Geeks - ¡Obtén tu beca!"
+  description: "Más de 500.000€ en becas del 50% para nuestro programa de Data Science & Machine Learning. ¡Impulsa tu carrera en tech con 4Geeks y Landing.Jobs!"
   image: "/images/bg/remote.jpeg"
-  keywords: "Aprende a programar, 4Geeks academy, aprende programacion, aprende ingenieria informatica"
+  keywords: ""
 
   template: "landing_a" # <--- choose your landing template
   redirects: ["/landing/becas-partner"] # <--- URL redirections to avoid 404 errors
@@ -35,8 +35,8 @@ form:
 header_data:
   tagline: +500.000 € en becas
   sub_heading: ""
-  partner_logo_url: "../../../static/images/partner/landing-jobs.png"
-  background_image: "../../../static/images/PeopleStudying.jpeg"
+  partner_logo_url: "../../../static/images/partner/landing-jobs-black.png"
+  # background_image: "../../../static/images/PeopleStudying.jpeg"
   image_filter: brightness(0.23)
 
 features:
@@ -89,23 +89,23 @@ short_badges:
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
 #
 badges:
-  position: 7 # It's the position of the component that will be rendered first
+  position: 5 # It's the position of the component that will be rendered first
   heading: "4Geeks Academy cuenta con premios y reconocimientos que validan su excelencia"
 
-about4Geeks:
-  position: 2
-  heading: Educación flexible e intensiva
-  sub_heading: "Más de 320 horas de aprendizaje práctico (ejercicios, proyectos). Mejoraras tus habilidades para poder afrontar procesos de selección y encontrar un trabajo como Data Scientist, Data Analyst o Machine Learning Engineer."
-  list:
-    - title: "Apoyo Profesional de por vida"
-    - title: "Opciones de financiación para complementar tu beca"
-    - title: "Ratio 1:7 profesor alumno. Mentorías 1:1 ilimitadas "
-    - title: "Preparación para entrevistas y procesos de selección"
-  paragraph: ""
-  button_text: "Solicita tu beca"
-  button_link: "#leadform_header" # accepts url: relative(/us/apply), absolute(https://google.com) or component id(#componentName)
-  image: "../../../static/images/bg/community.png"
-  image_mobile: "../../../static/images/bg/community.png"
+# about4Geeks:
+#   position: 2
+#   heading: Educación flexible e intensiva
+#   sub_heading: "Más de 320 horas de aprendizaje práctico (ejercicios, proyectos). Mejoraras tus habilidades para poder afrontar procesos de selección y encontrar un trabajo como Data Scientist, Data Analyst o Machine Learning Engineer."
+#   list:
+#     - title: "Apoyo Profesional de por vida"
+#     - title: "Opciones de financiación para complementar tu beca"
+#     - title: "Ratio 1:7 profesor alumno. Mentorías 1:1 ilimitadas "
+#     - title: "Preparación para entrevistas y procesos de selección"
+#   paragraph: ""
+#   button_text: "Solicita tu beca"
+#   button_link: "#leadform_header" # accepts url: relative(/us/apply), absolute(https://google.com) or component id(#componentName)
+#   image: "../../../static/images/bg/community.png"
+#   image_mobile: "../../../static/images/bg/community.png"
 
 who_is_hiring:
   position: 10
@@ -120,7 +120,7 @@ who_is_hiring:
       image: "../../../static/images/partner/apple.png"
 
 program_details:
-  position: 5
+  position: 2
   background: "#FFFFFF"
   heading: "Detalles del programa"
   sub_heading: "Aprende las tecnologías que demandan las empresas"
@@ -135,34 +135,67 @@ why_4geeks:
 
 apply_schollarship: # form that is displayed at the end of the landing
   # title: "Apoyo Profesional Ilimitado"
-  imageSide: "right"
+  imageSide: "left"
   image: "../../../static/images/landing/apply.png"
 
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
-
-  - name: how-it-works
-    position: 3
-    background: "veryLightBlue2"
-    layout: iconogram
-    swipable: True
-    heading:
-      text: "Cómo funciona"
-      font_size: ["30px", "30px", "30px", "30px", "30px"]
+  - name: Educacionflexible
+    position: 1
+    layout: two_column_left
+    image:
+      src: "/images/landing/community-support-2.webp"
+    heading: 
+      text: "Educación flexible e intensiva"
     sub_heading:
-      text: "Según el Instituto Nacional de Estadística de España, los desarrolladores de software en España tienen perspectivas laborales superiores al promedio y obtienen un salario medio de  <strong>45.000€ al año. ¡Mejora tus posibilidades de ser uno de ellos!"
-      font_size: ["16px", "16px", "16px", "16px", "16px"]
-      style: '{ "textAlign": "center", "width": "60%" }'
-    text_link: "#leadform_header"
-    icons:
-    - icon: "touch"
-      title: Solicita tu beca antes del 15 de Junio 2023
-    - icon: "receive_mail"
-      title: Recibirás un correo electrónico con toda la información
-    - icon: "talk"
-      title: Haz una entrevista online con nuestro equipo de admisiones
-    - icon: "terminal"
-      title: Recibe los resultados, reserva tu plaza y empieza a PROGRAMAR
+      text: "Más de 400 horas de aprendizaje práctico (ejercicios, proyectos). Mejoraras tus habilidades para poder afrontar procesos de selección y encontrar un trabajo como desarrollador junior o senior."
+    button: 
+      text: "Solicita tu beca"
+      color: white
+      hover_color: "white"
+      background: "blue"
+      path: "#leadform_header"
+    content: 
+      text: ""
+    bullets:
+      items:
+      - text: "Apoyo Profesional de por vida"
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+      - text: "Opciones de financiación para complementar tu beca"
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+      - text: "Ratio 1:7 profesor alumno. Mentorías 1:1 ilimitadas"
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+      - text: "Preparación para entrevistas y procesos de selección"
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+
+  - name: JobGuarantee
+    layout: job_guarantee_small
+    position: 3
+    heading:
+      text: Apoyo profesional para iniciar tu carrera
+
+  # - name: how-it-works
+  #   position: 3
+  #   background: "veryLightBlue2"
+  #   layout: iconogram
+  #   swipable: True
+  #   heading:
+  #     text: "Cómo funciona"
+  #     font_size: ["30px", "30px", "30px", "30px", "30px"]
+  #   sub_heading:
+  #     text: "Según el Instituto Nacional de Estadística de España, los desarrolladores de software en España tienen perspectivas laborales superiores al promedio y obtienen un salario medio de  <strong>45.000€ al año. ¡Mejora tus posibilidades de ser uno de ellos!"
+  #     font_size: ["16px", "16px", "16px", "16px", "16px"]
+  #     style: '{ "textAlign": "center", "width": "60%" }'
+  #   text_link: "#leadform_header"
+  #   icons:
+  #   - icon: "touch"
+  #     title: Solicita tu beca antes del 15 de Junio 2023
+  #   - icon: "receive_mail"
+  #     title: Recibirás un correo electrónico con toda la información
+  #   - icon: "talk"
+  #     title: Haz una entrevista online con nuestro equipo de admisiones
+  #   - icon: "terminal"
+  #     title: Recibe los resultados, reserva tu plaza y empieza a PROGRAMAR
     
 
   # - name: "whatever"
@@ -202,7 +235,7 @@ components:
   - name: Data_Science_y_Machine_Learning
     position: 6
     layout: two_column_right
-    background: "veryLightBlue2" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
+    background: "#F4F9FF" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
     image:
       src: "/images/why-4geeks/python-image.png"
       # /static/images/why-4geeks/python-image.png
