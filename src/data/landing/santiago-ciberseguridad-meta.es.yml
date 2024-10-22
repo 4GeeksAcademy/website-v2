@@ -160,9 +160,9 @@ components:
     swipable: False
     background: "#fbfbfb"
     image:
-      style: '{"backgroundSize": "contain", "border": "2px solid black"}'
-      src: "/images/landing/grafica-necesidad-de-especialistas-en-ciberseguridad-chile-2024-2035.jpg"
-      shadow: true
+      style: '{"backgroundSize": "contain", "filter":"drop-shadow(10px 10px 0px rgba(0, 132, 255, 1))"}'
+      src: "/images/landing/hombre-con-laptop.webp"
+      shadow: false
     section_heading: 
       text: "Oportunidades en el Campo de la Ciberseguridad en Chile"
       style: '{ "font-size": "30px" }'

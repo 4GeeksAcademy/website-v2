@@ -27,7 +27,7 @@ form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
-  heading: "Rellena el formulario e ingresa a nuestro curso de ciberseguridad"
+  heading: "Más información"
   motivation: "Luego de rellenar el formulario, recibirás información detallada sobre nuestro curso de ciberseguridad y sus beneficios. Deberás recibir un correo en menos de 5 minutos."
   button_label: Postularse
   redirect: "/es/gracias/?lang=es"  #you can redirect to another url or entirely diffrent website
@@ -40,7 +40,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 # jumbotron on the top (cannot be commented out)
 header_data:
   background: "#ffffff"
-  tagline: "Curso de Ciberseguridad en Chile con 4Geeks Academy"
+  tagline: "Curso de Ciberseguridad en Chile"
   tagline_color: "#1c1c1c"
   form_styles:
     background: "#0084FF"

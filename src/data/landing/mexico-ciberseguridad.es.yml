@@ -160,9 +160,9 @@ components:
     swipable: False
     background: "#fbfbfb"
     image:
-      style: '{"backgroundSize": "cover", "border": "2px solid black"}'
-      src: "/images/landing/ciberseguridad-mexico.webp"
-      shadow: true
+      style: '{"backgroundSize": "contain", "filter":"drop-shadow(10px 10px 0px rgba(0, 132, 255, 1))"}'
+      src: "/images/landing/hombre-con-laptop.webp"
+      shadow: false
     section_heading: 
       text: "Creciente Demanda de Expertos en Ciberseguridad en México"
       style: '{ "font-size": "30px" }'

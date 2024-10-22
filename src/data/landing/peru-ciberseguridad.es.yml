@@ -158,9 +158,9 @@ components:
     swipable: False
     background: "#fbfbfb"
     image:
-      style: '{"backgroundSize": "cover", "border": "2px solid black"}'
-      src: "/images/landing/ciberseguridad-peru.webp"
-      shadow: true
+      style: '{"backgroundSize": "contain", "filter":"drop-shadow(10px 10px 0px rgba(0, 132, 255, 1))"}'
+      src: "/images/landing/hombre-con-laptop.webp"
+      shadow: false
     section_heading: 
       text: "La Creciente Demanda de Ciberseguridad en Perú"
       style: '{ "font-size": "30px" }'
