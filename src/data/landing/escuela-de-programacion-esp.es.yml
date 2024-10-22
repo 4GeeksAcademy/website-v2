@@ -40,10 +40,15 @@ apply_schollarship: # form that is displayed at the end of the landing
   image: "../../../static/images/woman-laptop-smile-bg.webp"
   
 header_data:
-  tagline_color: black
-  background: "lightBlue"
+  background: "#ffffff"
   tagline: Bootcamp de Programación tu entrada al mundo tech
   sub_heading: Aprende a programar y transforma tu futuro en la Escuela de Programación 4Geeks
+  tagline_color: "#1c1c1c"
+  form_styles:
+    background: "#0084FF"
+    color: "white"
+    button:
+      background: "black"
   # background_image: "../../../static/images/bg/main-bg.jpg"
   # video: "https://www.videoask.com/fm984j5nz"
   image_filter: brightness(0.5)

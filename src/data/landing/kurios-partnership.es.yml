@@ -1,7 +1,7 @@
 meta_info:
   slug: alianza-kurios # <--- URL 4geeksacademy.com/es/landing/academia-programacion
 # landing para campañas con influencers
-  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   # This will show on social media when shared
   title: "Impulsa tu carrera profesional, ¡aprende a programar con 4Geeks Academy!"
   description: "La programación es clave para el éxito profesional. Únete a 4Geeks Academy, el bootcamp líder en Latinoamérica."
@@ -34,12 +34,17 @@ form:
     
   # jumbotron on the top (cannot be commented out)
 header_data:
-  background: "#FFF1D1"
+  background: "#ffffff"
   tagline: ¡Bienvenido a 4Geeks Academy! La academia de programación líder en el mundo
-  tagline_color: "black"
   sub_heading: ""
+  tagline_color: "#1c1c1c"
+  form_styles:
+    background: "#0084FF"
+    color: "white"
+    button:
+      background: "black"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
-  #background_image: "../../../static/images/bg/main-bg.jpg"
+  # background_image: "../../../static/images/bg/main-bg.jpg"
   #video: "https://www.videoask.com/fm984j5nz"
   image_filter: brightness(0.4)
 

@@ -45,7 +45,7 @@ header_data:
   sub_heading: ""
   form_styles:
     background: "#0084FF"
-    color: "black"
+    color: "white"
     button:
       background: "black"
   # background_image: "../../../static/images/bg/main-bg.jpg"

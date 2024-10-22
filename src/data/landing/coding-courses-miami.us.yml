@@ -47,6 +47,7 @@ header_data:
   sub_heading: ""
   form_styles:
     background: "#FFB718"
+    color: "black"
     button:
       background: "black"
   # background_image: "../../../static/images/landing-background-men-w-laptop.webp"

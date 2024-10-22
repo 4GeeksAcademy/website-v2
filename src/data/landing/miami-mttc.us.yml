@@ -44,8 +44,9 @@ navbar:
 header_data:
   tagline: "No Cost, No Excuses. Get a full or partial scholarship from the Miami Tech Coalition"
   sub_heading: ""
-  tagline_color: "#2E2E38"
-  form_styles: 
+  background: "#ffffff"
+  tagline_color: "#1c1c1c"
+  form_styles:
     background: "#0084FF"
     color: "white"
     button:

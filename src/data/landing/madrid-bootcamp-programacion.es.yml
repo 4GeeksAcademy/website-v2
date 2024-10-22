@@ -1,6 +1,7 @@
 meta_info:
   slug: bootcamp-programacion-espana # <--- URL 4geeksacademy.com/us/landing/example
 
+  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   # This will show on social media when shared
   title: "Curso remoto impulsa tu carrera con 4Geeks"
   description: "La programación es el nuevo lenguaje universal, únete a nuestro programa, recibe acompañamiento de por vida y aprende lo que las empresas necesitan."
@@ -39,9 +40,15 @@ apply_schollarship: # form that is displayed at the end of the landing
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  background: "#FFF1D1"
+  background: "#ffffff"
   tagline: Descubre el Mejor Bootcamp en España! Full-Stack Developer en Solo 18 Semanas.
   sub_heading: "El 86% de nuestros alumnos ya han empezado su carrera en el sector tech con un salario medio de 22.000€ al año."
+  tagline_color: "#1c1c1c"
+  form_styles:
+    background: "#0084FF"
+    color: "white"
+    button:
+      background: "black"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
 

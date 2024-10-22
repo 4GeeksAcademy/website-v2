@@ -39,7 +39,7 @@ header_data:
   sub_heading: ""
   form_styles:
     background: "#0084FF"
-    color: "black"
+    color: "white"
     button:
       background: "black"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"

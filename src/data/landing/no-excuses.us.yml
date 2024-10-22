@@ -4,7 +4,7 @@ meta_info:
   # This will show on social media when shared
   title: "Get a Scholarship and join our software development program now. It's LIVE, on-line (or in-person if you want as well). Learn to code and launch your career in Tech"
   description: "Coding has become an essencial skills for every career, enroll in 4Geeks Academy coding program and learn to code to have a better life"
-  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   image: "/images/bg/main-bg.jpg"
   keywords: "Scholarships for coding program, coding course, Financial aid Coding Classes, Learn to code with a scholarship"
 
@@ -39,8 +39,14 @@ apply_schollarship: # form that is displayed at the end of the landing
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  background: "#FFF1D1"
+  background: "#ffffff"
   tagline: No Excuses. The Go-to Coding Bootcamp in Florida.
+  tagline_color: "#1c1c1c"
+  form_styles:
+    background: "#0084FF"
+    color: "white"
+    button:
+      background: "black"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
 

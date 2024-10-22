@@ -40,10 +40,15 @@ apply_schollarship: # form that is displayed at the end of the landing
   image: "../../../static/images/landing/apply.png"  
 
 header_data:
-  background: "#FFF1D1"
+  background: "#ffffff"
   tagline: "Impulsa tu carrera gracias a la programación"
-  tagline_color: "black"
   sub_heading: ""
+  tagline_color: "#1c1c1c"
+  form_styles:
+    background: "#0084FF"
+    color: "white"
+    button:
+      background: "black"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.png"
   image_filter: brightness(0.3)
   right_image: "../../../static/images/landing/header_united_way.png"

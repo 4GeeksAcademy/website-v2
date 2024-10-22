@@ -38,10 +38,15 @@ apply_schollarship: # form that is displayed at the end of the landing
   image: "../../../static/images/landing/apply.png"
 
 header_data:
-  tagline_color: "black"
-  color: "black"
   tagline: Become a Software developer!
-  # background_image: "../../../static/images/4geeks-main.jpg"
+  background: "#ffffff"
+  tagline_color: "#1c1c1c"
+  form_styles:
+    background: "#0084FF"
+    color: "white"
+    button:
+      background: "black"
+  background_image: "../../../static/images/4geeks-main.jpg"
   badge: "../../../static/images/badges/switchup.png" #Tmage on the right side of the form
   image_filter: brightness(0.4) #0 is dark, 1 is bright
 

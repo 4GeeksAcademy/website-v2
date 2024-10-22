@@ -39,9 +39,15 @@ apply_schollarship: # form that is displayed at the end of the landing
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  background: "#FFF1D1"
+  background: "#ffffff"
   tagline: Bootcamp Full Stack Development
   sub_heading: "Desde cero hasta conseguir tu primer trabajo como programador, aprende todo lo necesario, recibe soporte de por vida y consigue un empleo después de 18 semanas de estudio."
+  tagline_color: "#1c1c1c"
+  form_styles:
+    background: "#0084FF"
+    color: "white"
+    button:
+      background: "black"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
 

@@ -1,11 +1,12 @@
 meta_info:
   slug: europe-germany-coding-course # <--- URL 4geeksacademy.com/us/landing/example
 
+  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   # This will show on social media when shared
   title: "Coding Course On-line and In-person, learn to code and get a better professional career"
   description: "Become a software developer and get a job in tech in just a few months. Now open in Germany!"
   image: "/images/bg/main-bg.jpg"
-  keywords: "Coding Course, Coding Bootcamp, Coding Classes, Learn to code, 4Geeks Academy"
+  keywords: ""
 
   template: "landing_a" # <--- choose your landing template
   redirects: # <--- URL redirections to avoid 404 errors
@@ -34,9 +35,15 @@ apply_schollarship: # form that is displayed at the end of the landing
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  background: "#FFF1D1"
+  background: "#ffffff"
   tagline: Become a web developer in a few as 18 weeks through work on real projects and mentorship by experienced professionals
   sub_heading: "86% of our graduates have already started their future-proof, tech careers with an average entry salary of $50,000/yr"
+  tagline_color: "#1c1c1c"
+  form_styles:
+    background: "#0084FF"
+    color: "white"
+    button:
+      background: "black"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
 

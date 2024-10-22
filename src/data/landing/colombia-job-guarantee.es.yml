@@ -44,6 +44,7 @@ header_data:
   tagline_color: "#1c1c1c"
   form_styles:
     background: "#0084FF"
+    color: "white"
     button:
       background: "black"
   sub_heading: ""

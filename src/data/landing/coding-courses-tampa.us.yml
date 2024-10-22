@@ -46,6 +46,7 @@ header_data:
   tagline_color: "#1b1b1b"
   form_styles:
     background: "#0084FF"
+    color: "white"
     button:
       background: "black"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"

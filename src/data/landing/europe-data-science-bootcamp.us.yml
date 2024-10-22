@@ -1,7 +1,7 @@
 meta_info:
   slug: data-science-bootcamp-europe # <--- URL 4geeksacademy.com/us/landing/example
 
-  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   # This will show on social media when shared
   title: "Become a Data Scientist at 4Geeks Academy"
   description: "Embark on a transformative journey into the world of data science"
@@ -36,7 +36,13 @@ form:
 header_data:
   tagline: Master Data Science at 4Geeks Academy
   sub_heading: "Unleash the power of data in just 16 weeks with our comprehensive course!"
-  background_image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg"
+  tagline_color: "#1c1c1c"
+  form_styles:
+    background: "#0084FF"
+    color: "white"
+    button:
+      background: "black"
+  # background_image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg"
   image_filter: brightness(0.1)
 
 features:

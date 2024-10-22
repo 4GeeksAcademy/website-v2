@@ -6,7 +6,7 @@ meta_info:
   description: "Descubre por qué somos uno de los mejores bootcamps de México y cómo te ayudamos a alcanzar tus metas"
   image: "/images/bg/main-bg.jpg"
   keywords: ""
-  visibility: "unlisted"
+  visibility: "hidden"
   template: "landing_a" # <--- choose your landing template
   redirects: # <--- URL redirections to avoid 404 errors
     ["/landing/aprende-a-programar-mexico"]
@@ -40,9 +40,15 @@ apply_schollarship: # form that is displayed at the end of the landing
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  background: "lightBlue"
+  background: "#ffffff"
   tagline: "Bootcamps en México"
   sub_heading: "Descubre por qué 4Geeks Academy es el mejor bootcamp en México"
+  tagline_color: "#1c1c1c"
+  form_styles:
+    background: "#0084FF"
+    color: "white"
+    button:
+      background: "black"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
 
