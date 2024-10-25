@@ -356,7 +356,7 @@ components:
           text: "Low-income single female heads of household"
           style: '{ "fontWeight": "700" }'
           font_size: "15px"
-          
+
 #   # - name: divider_one
 #   #   position: 10
 #   #   layout: divider 
@@ -417,3 +417,4 @@ components:
   #     text: "Download the course syllabus"
   #     #             xl      lg      md      sm      xs
   #     font_size: ["40px", "40px", "40px", "40px", "40px"]
+
