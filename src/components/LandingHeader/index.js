@@ -360,11 +360,21 @@ const LandingHeader = (props) => {
                 boxShadow="9px 8px 0px 0px rgba(0,0,0,1)"
               />
             ) : (
+              <a
+                href={yml.form.side_image_url || "#"}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  position: "relative", // Asegura que el z-index se aplique correctamente
+                  zIndex: "11", // Ajusta este valor para estar por encima de otros elementos
+                }}
+              >
               <Img
                 src={
                   yml.form.side_image || "/images/landing/grupo-ventanas.webp"
                 }
-                alt="4Geeks Academy Section"
+                alt="4Geeks Academy Srtipe button"
+                id="button-stripe"
                 margin="auto"
                 height="100%"
                 minHeight_tablet="none"
@@ -376,6 +386,7 @@ const LandingHeader = (props) => {
                 // h_sm="250px"
                 backgroundSize="contain"
               />
+              </a>
             )}
             <Div
               display="none"
