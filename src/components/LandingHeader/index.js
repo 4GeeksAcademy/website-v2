@@ -365,8 +365,9 @@ const LandingHeader = (props) => {
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
-                  position: "relative", // Asegura que el z-index se aplique correctamente
-                  zIndex: "11", // Ajusta este valor para estar por encima de otros elementos
+                  filter: "drop-shadow(10px 10px 0px #000000)",
+                  position: "relative",
+                  zIndex: "11",
                 }}
               >
               <Img
@@ -381,7 +382,7 @@ const LandingHeader = (props) => {
                 minHeight="500px"
                 maxHeight="500px"
                 width_tablet="80%"
-                width="100%"
+                width="80%"
                 zIndex="10"
                 // h_sm="250px"
                 backgroundSize="contain"

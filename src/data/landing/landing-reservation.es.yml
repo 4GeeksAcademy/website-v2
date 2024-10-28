@@ -29,7 +29,7 @@ form:
   motivation: "" # < -- subtitle ideal to movitate people on filling the form
   button_label: SEND
   hide_form: true
-  side_image: "/images/landing/reservation-es.jpg"
+  side_image: "/images/landing/reservation-es.webp"
   side_image_url: "https://buy.stripe.com/cN214id1Je882LScMS"
   # redirect: "https://google.com" #you can redirect to another url or entirely diffrent website
 
