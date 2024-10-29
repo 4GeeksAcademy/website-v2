@@ -159,6 +159,7 @@ const Landing = (props) => {
         programs={programs}
         hideForm={yml.form.hide_form}
       />
+
       {Object.keys(components)
         .filter(
           (name) =>
@@ -179,6 +180,7 @@ const Landing = (props) => {
             index: index,
           });
         })}
+
       {!yml.form.hide_form && (
         <Grid
           id="bottom"
@@ -206,38 +208,35 @@ const Landing = (props) => {
             gridRow_tablet="1/1"
           >
             {applySchollarship?.imageSide === "right" ? (
-              <>
-                <Div
-                  display="none"
-                  display_md="none"
-                  style={{
-                    position: "absolute",
-                    background: Colors.yellow,
-                    width: "280px",
-                    height: "480px",
-                    bottom: "-10px",
-                    right: "-16px",
-                    borderRadius: "3px",
-                  }}
-                />
-              </>
+              <Div
+                display="none"
+                display_md="none"
+                style={{
+                  position: "absolute",
+                  background: Colors.yellow,
+                  width: "280px",
+                  height: "480px",
+                  bottom: "-10px",
+                  right: "-16px",
+                  borderRadius: "3px",
+                }}
+              />
             ) : (
-              <>
-                <Div
-                  display="none"
-                  display_md="none"
-                  style={{
-                    position: "absolute",
-                    background: "transparent",
-                    width: "101%",
-                    height: "282px",
-                    top: "40px",
-                    left: "-30px",
-                    borderRadius: "3px",
-                  }}
-                />
-              </>
+              <Div
+                display="none"
+                display_md="none"
+                style={{
+                  position: "absolute",
+                  background: "transparent",
+                  width: "101%",
+                  height: "282px",
+                  top: "40px",
+                  left: "-30px",
+                  borderRadius: "3px",
+                }}
+              />
             )}
+
             <StyledBackgroundSection
               height="450px"
               borderRadius="3px"
@@ -308,6 +307,37 @@ const Landing = (props) => {
                     : "15px 0 30px auto"
                 }
               />
+              {/* Botón */}
+              {yml.features.button && (
+                <a
+                  href={yml.features.button.path || "#"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: "inline-block",
+                    backgroundColor:
+                      yml.features.button.background || Colors.black,
+                    color: yml.features.button.color || Colors.white,
+                    padding: "10px 20px",
+                    textDecoration: "none",
+                    borderRadius: "5px",
+                    marginTop: "20px",
+                    fontWeight: "bold",
+                    textAlign: "center",
+                    transition: "background-color 0.3s ease",
+                  }}
+                  onMouseOver={(e) => {
+                    e.target.style.backgroundColor =
+                      yml.features.button.hover_color || Colors.gray;
+                  }}
+                  onMouseOut={(e) => {
+                    e.target.style.backgroundColor =
+                      yml.features.button.background || Colors.black;
+                  }}
+                >
+                  {yml.features.button.text}
+                </a>
+              )}
             </Div>
           </Div>
         </Grid>
@@ -377,7 +407,6 @@ export const query = graphql`
           form {
             hide_form
             side_image
-            side_image_url
             heading
             motivation
             redirect
@@ -390,6 +419,13 @@ export const query = graphql`
             text
             bullets
             styles
+            button {
+              text
+              color
+              path
+              background
+              hover_color
+            }
           }
           badges {
             position
@@ -499,6 +535,7 @@ export const query = graphql`
               }
             }
           }
+
           why_python {
             position
             heading

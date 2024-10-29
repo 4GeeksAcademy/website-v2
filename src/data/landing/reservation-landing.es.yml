@@ -7,7 +7,7 @@ meta_info:
   keywords: "" # SEO optimized keywords
   visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   template: "landing_reservation" # <--- choose your landing template
-  redirects: [/stripe-pay] # <--- URL redirections to avoid 404 errors
+  redirects: [/pago-reservacion] # <--- URL redirections to avoid 404 errors
   
   # this UTM fields will be included in the CRM
   # utm_course available ["full-stack", "software-engineering", "machine-learning-engineering"]
@@ -19,7 +19,7 @@ meta_info:
 navbar:
   logoUrl: "#"
   buttonText: "Reserva acá" # this modifies the button text in the navbar
-  buttonUrl: "#button-stripe" #accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+  buttonUrl: "#features_button" #accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
 
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
@@ -30,7 +30,6 @@ form:
   button_label: SEND
   hide_form: true
   side_image: "/images/landing/reservation-es.webp"
-  side_image_url: "https://buy.stripe.com/cN214id1Je882LScMS"
   # redirect: "https://google.com" #you can redirect to another url or entirely diffrent website
 
 # jumbotron on the top (cannot be commented out)
@@ -43,7 +42,7 @@ header_data:
   background: "#E3F9FE"
   tagline: Bienvenido 4Geeks Academy
   tagline_color: "#1b1b1b"
-  sub_heading: "Reserva tu cupo con 50$ USD para garantizar tu lugar en la academia."
+  sub_heading: "Paga $50 USD y Reserva tu lugar en la academia."
   form_styles:
     background: "#E3F9FE"
     color: "black"
@@ -57,17 +56,17 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   button:
-      text: "APPLY NOW"
+      text: "Reserva acá"
       color: "white"
-      path: ""
-      background: "blue"
-      hover_color: "black"
+      path: "https://buy.stripe.com/cN214id1Je882LScMS"
+      background: "black"
+      hover_color: "darkBlue"
   bullets:
     - Completa tu pago hoy y asegura un lugar en el próximo curso
     - Transacciones rápidas y confiables para tu tranquilidad
 
 follow_bar:
-  position: "top" # top, bottom, hidden
+  position: "hidden" # top, bottom, hidden
   content:
     text: "Reserva tu Cupo en 4Geeks Academy"
     text_mobile: "Reserva tu Cupo en 4Geeks Academy"
@@ -75,7 +74,7 @@ follow_bar:
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:
     text: "¡Reserva ahora!"
-    path: "#button-stripe" # #top, #bottom, #anotherComponentId
+    path: "#features_button" # #top, #bottom, #anotherComponentId
     # ├──if path is empty("") it point to top per default
     # └── path accepts: relative(/example/path), absolute(https://google.com) or id(#idName)
   phone:
