@@ -218,11 +218,13 @@ const LandingHeader = (props) => {
                   display: 'inline-block',
                   backgroundColor: yml.features.button.background || Colors.black,
                   color: yml.features.button.color || Colors.white,
-                  width: '100%',
+                  width: '90%',
                   padding: '10px 20px',
                   textDecoration: 'none',
                   borderRadius: '3px',
                   marginTop: '20px',
+                  marginBottom: yml.features.button.marginBottom || "20px",
+                  margin: window.innerWidth < 576 ? 'auto' : '20px 0 250px 0',
                   fontWeight: 'bold',
                   fontFamily: 'lato',
                   fontSize: '17px',
@@ -407,7 +409,7 @@ const LandingHeader = (props) => {
                 minHeight_tablet="none"
                 minHeight="500px"
                 maxHeight="500px"
-                width_tablet="80%"
+                width_tablet="100%"
                 width="100%"
                 zIndex="10"
                 // h_sm="250px"
