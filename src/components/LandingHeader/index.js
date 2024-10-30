@@ -215,21 +215,22 @@ const LandingHeader = (props) => {
                 rel="noopener noreferrer"
                 id="features_button"
                 style={{
-                  display: 'inline-block',
-                  backgroundColor: yml.features.button.background || Colors.black,
+                  display: "inline-block",
+                  backgroundColor:
+                    yml.features.button.background || Colors.black,
                   color: yml.features.button.color || Colors.white,
-                  width: '90%',
-                  padding: '10px 20px',
-                  textDecoration: 'none',
-                  borderRadius: '3px',
-                  marginTop: '20px',
+                  width: "90%",
+                  padding: "10px 20px",
+                  textDecoration: "none",
+                  borderRadius: "3px",
+                  marginTop: "20px",
                   marginBottom: yml.features.button.marginBottom || "20px",
-                  margin: window.innerWidth < 576 ? 'auto' : '20px 0 250px 0',
-                  fontWeight: 'bold',
-                  fontFamily: 'lato',
-                  fontSize: '17px',
-                  textAlign: 'center',
-                  transition: 'background-color 0.3s ease',
+                  margin: window.innerWidth < 576 ? "auto" : "20px 0 250px 0",
+                  fontWeight: "bold",
+                  fontFamily: "lato",
+                  fontSize: "17px",
+                  textAlign: "center",
+                  transition: "background-color 0.3s ease",
                 }}
                 onMouseOver={(e) => {
                   e.target.style.backgroundColor =
@@ -401,7 +402,7 @@ const LandingHeader = (props) => {
                   yml.form.side_image || "/images/landing/grupo-ventanas.webp"
                 }
                 style={{
-                  filter: "drop-shadow(10px 10px 0px #000000)"
+                  filter: "drop-shadow(10px 10px 0px #000000)",
                 }}
                 alt="4Geeks Academy Section"
                 margin="auto"

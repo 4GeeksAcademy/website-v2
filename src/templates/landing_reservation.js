@@ -321,7 +321,7 @@ const Landing = (props) => {
                     padding: "10px 20px",
                     textDecoration: "none",
                     borderRadius: "5px",
-                    marginTop: '20px',
+                    marginTop: "20px",
                     fontWeight: "bold",
                     textAlign: "center",
                     transition: "background-color 0.3s ease",
