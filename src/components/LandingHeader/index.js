@@ -225,7 +225,7 @@ const LandingHeader = (props) => {
                   borderRadius: "3px",
                   marginTop: "20px",
                   marginBottom: yml.features.button.marginBottom || "20px",
-                  margin: window.innerWidth < 576 ? "auto" : "20px 0 250px 0",
+                  margin: "20px 0 250px 0",
                   fontWeight: "bold",
                   fontFamily: "lato",
                   fontSize: "18px",
