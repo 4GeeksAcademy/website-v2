@@ -219,7 +219,7 @@ const LandingHeader = (props) => {
                   backgroundColor:
                     yml.features.button.background || Colors.black,
                   color: yml.features.button.color || Colors.white,
-                  width: "90%",
+                  width: "250px",
                   padding: "10px 20px",
                   textDecoration: "none",
                   borderRadius: "3px",
@@ -228,7 +228,7 @@ const LandingHeader = (props) => {
                   margin: window.innerWidth < 576 ? "auto" : "20px 0 250px 0",
                   fontWeight: "bold",
                   fontFamily: "lato",
-                  fontSize: "17px",
+                  fontSize: "18px",
                   textAlign: "center",
                   transition: "background-color 0.3s ease",
                 }}
