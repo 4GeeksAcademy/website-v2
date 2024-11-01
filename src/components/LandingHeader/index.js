@@ -273,7 +273,7 @@ const LandingHeader = (props) => {
                           alt={l.alt}
                           image={getImage(
                             l.image != null &&
-                            l.image.childImageSharp.gatsbyImageData
+                              l.image.childImageSharp.gatsbyImageData
                           )}
                         />
                       );
