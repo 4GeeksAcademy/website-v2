@@ -40,7 +40,7 @@ form:
 
 header_data:
   background: "#ffffff"
-  tagline: Bienvenido 4Geeks Academy
+  tagline: Bienvenido/a 4Geeks Academy
   tagline_color: "#1b1b1b"
   sub_heading: "Reserva tu cupo con $50 USD para garantizar tu lugar en la academia."
   form_styles:
