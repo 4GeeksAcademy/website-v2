@@ -461,6 +461,7 @@ components:
       hover_color: "white"
       path: "#top"
       background: "black"
+
     cards:
       - image:
           style: '{ "backgroundSize": "cover", "minHeight": "230px", "borderRadius": "80px" }'
@@ -599,4 +600,35 @@ components:
   #     text: "Download the course syllabus"
   #     #             xl      lg      md      sm      xs
   #     font_size: ["40px", "40px", "40px", "40px", "40px"]
+
+
+  - name: elegibility
+    position: 7
+    layout: simple_cards
+    background: black
+    heading:
+      text: "We make education accessible to everyone"
+      style: '{ "color": "white" }'
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      text: |
+        You may qualify if are a <strong style="font-weight: bold;"> Miami resident </strong> and belong to one of these groups:
+      style: '{ "color": "white", "opacity": "1" }'
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+    cards:
+      - background: "#E0D1FF"
+        heading: 
+          text: "Low-income people of color"
+          style: '{ "fontWeight": "700" }'
+          font_size: "15px"
+      - background: "#FFB718"
+        heading: 
+          text: "Low-income veterans"
+          style: '{ "fontWeight": "700" }'
+          font_size: "15px"
+      - background: "#0084FF"
+        heading: 
+          text: "Low-income single female heads of household"
+          style: '{ "fontWeight": "700" }'
+          font_size: "15px"
 
