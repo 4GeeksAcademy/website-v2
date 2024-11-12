@@ -12,7 +12,7 @@ full_time:
       - "Estás ahorrando $1000 USD"
       - "Este descuento aplica a estudiantes que no son elegibles para la Beca de la Universidad Clark (generalmente empleados o con trabajo estable)."
     icons:
-      - "/images/ascent_logo.jpg"
+      - "/images/ascent-logo.png"
       - "/images/climb-logo.png"
 
   - slug: 'plan-1'
@@ -39,7 +39,7 @@ full_time:
       - "Con $400 p/ semana de estipendios para gastos de subsistencia"
       - "9% de tu salario hasta que se pague en su totalidad, solo si consigues un trabajo en tecnología."
     icons: 
-      - "/images/ascent_logo.jpg"
+      - "/images/ascent-logo.png"
       - "/images/climb-logo.png"
 
 
@@ -87,8 +87,9 @@ part_time:
       - "Puedes obtener una beca parcial y el saldo restante con un plan de pago"
       - "Estamos totalmente comprometidos a hacer que nuestra educación sea accesible y ofrecemos múltiples planes de pago y opciones de financiamiento para cumplir con nuestra promesa."
       - "Puedes adaptar tu camino de aprendizaje a tus necesidades financieras. Elige incluir o excluir nuestros servicios de apoyo profesional."
+      - "El pago para el programa de Data Science y Machine Learning con Ascent o Climb no será inferior a $270.22."
     icons: 
-      - "/images/ascent_logo.jpg"
+      - "/images/ascent-logo.png"
       - "/images/climb-logo.png"
       - "/images/quotanda-logo.png"
 

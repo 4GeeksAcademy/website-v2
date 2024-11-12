@@ -22,13 +22,17 @@ part_time:
     academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
     recomended: false
     scholarship: "Financed"
-    payment_time: "You can pay in 3, 4 or 5 years"
+    payment_time: |
+      Pay in 3, 4 or 5 years <br>
+      *Please see the Ascent website <a href="https://partner.ascentfunding.com/4geeksacademy/" target="_blank">partner page</a> for repayment examples and APRs.*
     price: "~$150 p/mo"
     bullets: 
       - "Several partners offering loans and payment plans"
       - "You can get a partial scholarship and the remaining balance with a payment plan"
+      - "Payments for Data Science and Machine Learning program with Ascent or Climb will not be less than $270.22."
+      
     icons: 
-      - "/images/ascent_logo.jpg"
+      - "/images/ascent-logo.png"
       - "/images/climb-logo.png"
       - "/images/quotanda-logo.png"
     

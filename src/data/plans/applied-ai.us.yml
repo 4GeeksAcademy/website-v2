@@ -21,8 +21,9 @@ part_time:
     bullets: 
       - "There is always a payment plan available to help you join 4Geeks Academy."
       - "If you don't find anything that works for you here, please contact us so we can try to find other ways to help you."
+      - '*Please see the Ascent website <a href="https://partner.ascentfunding.com/4geeksacademy/" target="_blank">partner page</a> for repayment examples and APRs.*'
     icons: 
-      - "/images/ascent_logo.jpg"
+      - "/images/ascent-logo.png"
       - "/images/climb-logo.png"
       - "/images/quotanda-logo.png"
 
@@ -35,8 +36,10 @@ part_time:
     bullets: 
       - "There is always a payment plan available to help you join 4Geeks Academy."
       - "If you don't find anything that works for you here, please contact us so we can try to find other ways to help you."
+      - '*Please see the Ascent website <a href="https://partner.ascentfunding.com/4geeksacademy/" target="_blank">partner page</a> for repayment examples and APRs.*'
+
     icons: 
-      - "/images/ascent_logo.jpg"
+      - "/images/ascent-logo.png"
       - "/images/climb-logo.png"
       - "/images/quotanda-logo.png"
 
