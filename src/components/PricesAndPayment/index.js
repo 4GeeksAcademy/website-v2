@@ -128,8 +128,10 @@ const PricingCard = ({
                 >
                   {scholarship}
                 </Paragraph>
-                <Paragraph color={Colors.black} textAlign="left" 
-                dangerouslySetInnerHTML={{ __html: payment_time }} 
+                <Paragraph
+                  color={Colors.black}
+                  textAlign="left"
+                  dangerouslySetInnerHTML={{ __html: payment_time }}
                 />
               </Div>
             </Div>
@@ -869,7 +871,9 @@ const PricesAndPayment = (props) => {
                           color={Colors.blue}
                           fill={Colors.blue}
                         />
-                        <Paragraph color={Colors.black} textAlign="left"
+                        <Paragraph
+                          color={Colors.black}
+                          textAlign="left"
                           dangerouslySetInnerHTML={{ __html: bullet }}
                         />
                       </Div>
