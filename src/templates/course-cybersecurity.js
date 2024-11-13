@@ -243,7 +243,7 @@ const Cybersecurity = ({ data, pageContext, yml }) => {
 
       {/* TWO COLUMN CREAR EN EL YML*/}
       <TwoColumn
-        right={{ image: yml.two_columns_info?.image }}
+        right={{ image: yml.two_columns_info?.image, video: yml.two_columns_info?.video }}
         left={{
           heading: yml.two_columns_info?.heading,
           sub_heading: yml.two_columns_info?.sub_heading,
@@ -523,6 +523,7 @@ export const query = graphql`
               src
               shadow
             }
+            video
             heading {
               text
               font_size
