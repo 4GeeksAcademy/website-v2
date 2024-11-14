@@ -188,8 +188,8 @@ const Cybersecurity = ({ data, pageContext, yml }) => {
         />
       </Header>
 
-      {/* TWO COLUMN CREAR EN EL YML*/}
-      <TwoColumn
+      {/* pposición original del twocolumns  first, reemplazado por twocolumn info*/}
+      {/* <TwoColumn
         left={{ image: yml.two_columns_first?.image }}
         right={{
           heading: yml.two_columns_first?.heading,
@@ -200,6 +200,19 @@ const Cybersecurity = ({ data, pageContext, yml }) => {
           button: yml.two_columns_first?.button,
         }}
         proportions={yml.two_columns_first?.proportions}
+        session={session}
+      /> */}
+
+      <TwoColumn
+        left={{ image: yml.two_columns_info?.image, video: yml.two_columns_info?.video }}
+        right={{
+          heading: yml.two_columns_info?.heading,
+          sub_heading: yml.two_columns_info?.sub_heading,
+          bullets: yml.two_columns_info?.bullets,
+          content: yml.two_columns_info?.content,
+          button: yml.two_columns_info?.button,
+        }}
+        proportions={yml.two_columns?.proportions}
         session={session}
       />
 
@@ -221,6 +234,29 @@ const Cybersecurity = ({ data, pageContext, yml }) => {
 
       {/* TWO COLUMN CREAR EN EL YML*/}
       <TwoColumn
+        right={{ image: yml.two_columns_first?.image }}
+        left={{
+          heading: yml.two_columns_first?.heading,
+          sub_heading: yml.two_columns_first?.sub_heading,
+          bullets: yml.two_columns_first?.bullets,
+          content: yml.two_columns_first?.content,
+          disclosure: yml.two_columns_first?.disclosure,
+          button: yml.two_columns_first?.button,
+        }}
+        proportions={yml.two_columns_first?.proportions}
+        session={session}
+      />
+
+      {/* OVERLAPED CREAR EN EL YML*/}
+      <Overlaped
+        heading={yml.overlaped?.heading}
+        content={yml.overlaped?.paragraph}
+        button={yml.overlaped?.button}
+        image={yml.overlaped?.image}
+      />
+
+      {/* TWO COLUMNS second*/}
+      <TwoColumn
         right={{ image: yml.two_columns_second?.image }}
         left={{
           heading: yml.two_columns_second?.heading,
@@ -233,27 +269,6 @@ const Cybersecurity = ({ data, pageContext, yml }) => {
         session={session}
       />
 
-      {/* OVERLAPED CREAR EN EL YML*/}
-      <Overlaped
-        heading={yml.overlaped?.heading}
-        content={yml.overlaped?.paragraph}
-        button={yml.overlaped?.button}
-        image={yml.overlaped?.image}
-      />
-
-      {/* TWO COLUMN CREAR EN EL YML*/}
-      <TwoColumn
-        right={{ image: yml.two_columns_info?.image, video: yml.two_columns_info?.video }}
-        left={{
-          heading: yml.two_columns_info?.heading,
-          sub_heading: yml.two_columns_info?.sub_heading,
-          bullets: yml.two_columns_info?.bullets,
-          content: yml.two_columns_info?.content,
-          button: yml.two_columns_info?.button,
-        }}
-        proportions={yml.two_columns?.proportions}
-        session={session}
-      />
       {/* TWO COLUMN CREAR EN EL YML*/}
       <TwoColumn
         left={{ image: yml.two_columns?.image }}
