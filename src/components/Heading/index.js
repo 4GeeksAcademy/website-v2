@@ -140,6 +140,7 @@ export const H4 = styled(BaseHeading)`
   font-weight: ${(props) => props.fontWeight || "400"};
   letter-spacing: 0.05em;
   padding-right: ${(props) => props.paddingRight};
+  font-family: ${(props) => props.fontFamily};
 `;
 export const H5 = styled(BaseHeading)`
   font-weight: 700;
@@ -265,8 +266,7 @@ export const Paragraph = styled.p`
     max-width: ${(props) => props.maxWidth_tablet};
     font-size: ${(props) =>
       paragraphSizes[props.fontSize_tablet] || props.fontSize_tablet};
-    font-weight: ${(props) =>
-      props.isActive ? "bold" : props.fontWeight_tablet || "400"};
+    font-weight: ${(props) => props.fontWeight_tablet};
     text-align: ${(props) => props.textAlign_tablet};
     align-self: ${(props) => props.alignSelf_tablet};
     padding: ${(props) => props.padding_tablet};

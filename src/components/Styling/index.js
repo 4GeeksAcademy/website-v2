@@ -52,6 +52,7 @@ export const Colors = {
   verylightGray2: "#FBFBFB",
   verylightGray3: "#F9F9F9",
   lightGray: "#ebebeb",
+  lightGray2: "#C4C4C4",
   lightGreen: "#c4f7b7",
   green: "#20630d",
   darkGray: "#3A3A3A",
@@ -463,7 +464,7 @@ const SmartButton = ({ children, onClick, type, icon, ...rest }) => {
 export const Button = styled(SmartButton)`
   font-size: ${(props) => props.fontSize};
   font-family: "Lato", sans-serif;
-  text-transform: ${(props) => props.textTransform || "uppercase"};
+  text-transform: ${(props) => props.textTransform};
   text-decoration: ${(props) => props.textDecoration || "none"};
   text-decoration-line: ${(props) => props.textDecorationLine || "none"};
   font-weight: ${(props) => props.fontWeight || "700"};
@@ -508,7 +509,7 @@ export const Button = styled(SmartButton)`
   }
   @media ${Devices.xs} {
     width: ${(props) => props.width_xs};
-    height: ${(props) => props.height_xs || "40px"};
+    height: ${(props) => props.height_xs};
     text-align: ${(props) => props.textAlign_xs || "center"};
     padding: ${(props) => props.padding_xs || "12px 24px"};
     max-width: ${(props) => props.maxWidth_xs};
@@ -519,7 +520,7 @@ export const Button = styled(SmartButton)`
   }
   @media ${Devices.sm} {
     width: ${(props) => props.width_sm};
-    height: ${(props) => props.height_sm || "40px"};
+    height: ${(props) => props.height_sm};
     max-width: ${(props) => props.maxWidth_sm};
     margin: ${(props) => props.margin_sm};
     font-size: ${(props) => props.fontSize_sm};
@@ -530,7 +531,7 @@ export const Button = styled(SmartButton)`
   }
   @media ${Devices.tablet} {
     width: ${(props) => props.width_tablet};
-    height: ${(props) => props.height_tablet || "40px"};
+    height: ${(props) => props.height_tablet};
     margin: ${(props) => props.margin_tablet};
     padding: ${(props) => props.padding_tablet || "12px 24px"};
     max-width: ${(props) => props.maxWidth_tablet};

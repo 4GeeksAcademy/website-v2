@@ -1,0 +1,287 @@
+meta_info:
+  slug: change-this-name # <--- URL 4geeksacademy.com/us/landing/change-this-name
+
+  
+  title: "" # This will show the browser tab title
+  description: "CHANGE_THIS_DESCRIPTION" # under 255 characters, will show on social media when shared
+  image: "" # description will show on social media when shared
+  keywords: "" # SEO optimized keywords
+  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  template: "landing_a" # <--- choose your landing template
+  redirects: [] # <--- URL redirections to avoid 404 errors
+  
+  # this UTM fields will be included in the CRM
+  # utm_course available ["full-stack", "software-engineering", "machine-learning-engineering"]
+  utm_course: ["full-stack"] 
+  utm_location: ["madrid-spain", "santiago-chile"]
+  automation: soft # comma separated, "soft" is the default value
+  tag: request_more_info # comma separated, "request_more_info" is the default value
+
+navbar:
+  logoUrl: "#"
+  buttonText: "Solicitar" # this modifies the button text in the navbar
+  buttonUrl: "#leadform_bottom" #accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+
+form:
+  # posible fields: "first_name", "last_name", "full_name", "phone", "email"
+  # always the first_name, email and phone will be mandatory if added.
+  fields: ["full_name", "phone", "email"]
+  heading: "Apply to 4Geeks"
+  sub_heading: "86% of our graduates have already started their future-proof, tech careers with on overage entry salary of $50.000"
+  motivation: "A top quality program at No Cost for you. No excuses. Become a developer and change your life" # < -- subtitle ideal to movitate people on filling the form
+  button_label: Apply Now
+  # redirect: "https://google.com" #you can redirect to another url or entirely diffrent website
+
+# jumbotron on the top (cannot be commented out)
+apply_schollarship: # form that is displayed at the end of the landing
+  # title: "Get more info about this award-winning development course"
+  imageSide: "left"
+  image: "../../../static/images/landing/apply.png"
+
+header_data:
+  tagline: Become a Software developer!
+
+features:
+  text: |
+    <span style="font-weight: 700;">We're all about making our high-quality education affordable to everyone.</span><br />
+    That's why we offer multiple options to help you fund our coding bootcamps stress-free. Whether it's an ISA, scholarship, payment plan or Job Guarantee we're here to guide you every step of the way.
+  bullets:
+    - Un Desarrollador en Madrid hace €25mil anual
+    - Hay más vacantes que en cualquier otra industria
+    - Impulsa tu Carrera y hazte programador de software
+
+follow_bar:
+  position: "top" # top, bottom, hidden
+  content:
+    text: "Solicita una beca de hasta 2.750 euros. \n Planes de pago de hasta 24 meses."
+    text_mobile: "Becas de €2.750 . \n Plan de pago de 24 m. \n ¡Últimas plazas!"
+    # devices:   XL      LG    MD      SM    XS
+    font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
+  button:
+    text: "Más información"
+    path: "#leadform_bottom" # #top, #bottom, #anotherComponentId
+    # ├──if path is empty("") it point to top per default
+    # └── path accepts: relative(/example/path), absolute(https://google.com) or id(#idName)
+  phone:
+    text: "Llama "
+    number: "+1 (786) 416-6640" # you can set your own phone number, or leave it false to use the utm_location number
+
+
+short_badges:
+  - name: "Premios Excelencia Educativa"
+    url: ""
+    image: "../../../static/images/badges/exelencia-educativa-es.png"
+    alt: "Mejor centro de Coding Bootcamp"
+  - name: "Newsweek"
+    url: ""
+    image: "../../../static/images/badges/newsweek-es.png"
+    alt: "Top Coding Bootcamps Newsweek"
+  - name: "Switchup"
+    url: ""
+    image: "../../../static/images/badges/reviews.png"
+    alt: "Best cooding bootcamp Switchup 2021"
+
+#
+# ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇ 
+#
+
+program_details:
+  position: 3
+  heading: "Lo que aprenderás"
+  background: "#FFFFFF"
+  sub_heading: "Las tecnologias más buscadas en el mercado laboral"
+
+geeks_vs_others:
+  position: 5
+  heading: "Compara 4Geeks con otros bootcamps"
+  paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+  total_rows: 5
+
+why_4geeks:
+  position: 6
+  heading: "Escúchalo de nuestros alumnos"
+
+who_is_hiring:
+  position: 9
+  limit: 3
+  heading: "¿Quien contrata a nuestros estudiantes?"
+  sub_heading: "Gracias a nuestra creciente red de Aliados podemos contar con ofertas constantes  a nivel nacional e internacional. Gracias a esto y a nuestro servicio de GeekFORCE (Apoyo a tu desarrollo Profesional) es que logramos que el ~89% de nuestros alumnos consigan trabajo dentro de los siguientes 100 días o menos desde su graduación."
+
+badges:
+  position: 10
+  heading: "How have we built our credibility over the years?"
+  sub_heading: "We are Licensed by the Florida Department of Education, we have been names by Forbes as a top 5 Coding School and every major Coding School independent listing have been naming us as top worldwide Bootcamp over the years"
+
+rating_reviews:
+  position: 10
+  heading: Lea acerca de nosotros
+  rating_list:
+    - alt: "Career Karma"
+      image: "../../../static/images/badges/career-karma.png"
+      rating: 4.8
+      url: "https://careerkarma.com/schools/4geeks-academy/"
+    - alt: "Switchup"
+      image: "../../../static/images/badges/switchup-img.png"
+      rating: 4.89
+      url: "https://www.switchup.org/bootcamps/4geeks-academy"
+    - alt: "Course Report"
+      image: "../../../static/images/badges/course-report.png"
+      rating: 4.84
+      url: "https://www.coursereport.com/schools/4geeks-academy"
+    - alt: "Google"
+      image: "../../../static/images/badges/google.png"
+      rating: 4.9
+
+components:
+  - name: JobGuarantee
+    layout: job_guarantee_small
+    position: 1
+    heading:
+      text: Job guarantee commitment
+
+  - name: how-it-works
+    position: 2
+    background: "#E3F9FE !important"
+    layout: iconogram
+    swipable: True
+    heading:
+      text: How your tuition is no longer a concern
+    button:
+      text: Conditions apply
+      path: "https://www.youtube.com/watch?v=plwPwyrxX84"
+    icons:
+      - icon: "graduation-2"
+        title: "Join 4Geeks Academy"
+        content: "Develop your full techie potential!"
+      - icon: "money"
+        color: "blue"
+        title: "Dive in & Code"
+        content: "Experience interactive, hands-on learning with live online classes"
+      - icon: "stairswflag"
+        title: "Job placement"
+        content: "Thanks to our program you'll be equipped"
+      - icon: "contract-2"
+        title: "Job placement"
+        content: "Thanks to our program you'll be equipped"
+  
+  - name: "whatever"
+    layout: choose_your_program
+    position: 3
+    heading:
+      text: Nuestras Modalidades
+    content:
+      text: Programa Full Stack Developer en Modalidad Part Time y Full Time
+    programs:
+    - title: "Part Time"
+      sub_title: "18 semanas"
+      icon: "fullstack_2"
+      description: |
+        De cero a tener tu primer trabajo como Full Stack Developer, con una duración de 18 semanas, con clases 3 veces por semana, compatible con horario laboral o de estudios. 
+      text_link: Obtener más información
+      link: "#leadform_header" # moves to start position
+      
+    - title: "Full Time"
+      sub_title: "10 semanas"
+      icon: "fullstack_2"
+      description: |
+        Programa intensivo de 10 semanas, con clases de lunes a viernes durante todo el día, para vivir una experiencia inmersiva en el mundo del código.
+      text_link: Obtener más información
+      link: "#leadform_header"
+
+    - title: "Full Time"
+      sub_title: "10 semanas"
+      icon: "fullstack_2"
+      description: |
+        Programa intensivo de 10 semanas, con clases de lunes a viernes durante todo el día, para vivir una experiencia inmersiva en el mundo del código.
+      text_link: Obtener más información
+      link: "#leadform_header"
+
+  - name: why_4geeks_column
+    position: 3
+    layout: two_column_left
+    image:
+      src: "/images/landing/blonde-girl-laptop.png"
+    heading: 
+      text: "Why 4Geeks?"
+    sub_heading:
+      text: ¿Quieres desatar tu potencial como Full-Stack Developer y/o Data Scientist?
+    button: 
+      text: "APPLY NOW"
+      color: white
+      hover_color: "white"
+      background: "blue"
+      path: "#leadform_header"
+    content: 
+      text: |
+        Conviértete en un Full-Stack Developer y/o Data Scientist en solo 18 semanas con 4Geeks Academy. Sin experiencia previa necesaria.<br>
+        Contamos con más de 8 años de experiencia, presencia en diferentes partes del mundo y premios a nivel mundial. 
+        <br>
+        <br>
+        Únete a la academia y transforma tu carrera!
+
+  - name: Educacionflexible
+    position: 3
+    layout: two_column_left
+    image:
+      src: "/images/landing/meet-windows-group-en.webp"
+    heading: 
+      text: "Educación flexible e intensiva"
+    button: 
+      text: "APPLY NOW"
+      color: white
+      hover_color: "white"
+      background: "blue"
+      path: "#leadform_header"
+    content: 
+      text: |
+        Conviértete en un Full-Stack Developer y/o Data Scientist en solo 18 semanas con 4Geeks Academy. Sin experiencia previa necesaria.<br>
+        Contamos con más de 8 años de experiencia, presencia en diferentes partes del mundo y premios a nivel mundial.
+    bullets:
+      items:
+      - text: Apoyo Profesional de por vida
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+      - text: <a href="https://google.com" target="_blank">Opciones de financiacion</a> Apoyo Profesional de por vida
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+      - text: Apoyo Profesional de por vida
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+      - text: Apoyo Profesional de por vida
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+
+  - name: Educacionflexible2
+    position: 3
+    layout: two_column_right
+    image:
+      src: "/images/landing/meet-windows-group-en.webp"
+    heading: 
+      text: Apoyo de la Comunidad
+    sub_heading:
+      text: Apoyo de la Comunidad
+    button: 
+      text: "APPLY NOW"
+      color: white
+      hover_color: "white"
+      background: "blue"
+      path: "#leadform_header"
+
+    bullets:
+      items:
+      - heading: 4GEEKS.COM
+        text: |
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+      - heading: COMUNIDAD SLACK
+        text: |
+          Nuestra comunidad internacional de más de 1100 personas, que te brindará todo el apoyo que necesites.
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+      - heading: COMUNIDAD SLACK
+        text: |
+          Nuestra comunidad internacional de más de 1100 personas, que te brindará todo el apoyo que necesites.
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+
+  - name: testimonials
+    position: 6
+    layout: testimonials_new
+    heading:
+      text: "Escúchalo de nuestros alumnos"
+    filter_indexes: ['azu-bota','nai-kali','cha-fabr', 'jona-ferra', 'jos-bra', 'kev-so']
+    variant: small
