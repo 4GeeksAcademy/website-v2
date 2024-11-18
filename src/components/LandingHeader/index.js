@@ -44,13 +44,24 @@ const LandingHeader = (props) => {
 
   const taglineColor = () => {
     if (yml.header_data.tagline_color) return yml.header_data.tagline_color;
-    return yml.header_data.background ? Colors.black : Colors.white;
+    if (yml.header_data.background === "#FFF1D1") return Colors.darkBlue;
+    return yml.header_data.background || yml.header_data.background_image
+      ? Colors.white
+      : Colors.darkBlue;
+  };
+
+  const bulletsColor = () => {
+    if (yml.header_data.tagline_color) return yml.header_data.tagline_color;
+    if (yml.header_data.background === "#FFF1D1") return Colors.darkBlue;
+    return yml.header_data.background || yml.header_data.background_image
+      ? Colors.white
+      : Colors.darkGray3;
   };
 
   const formColor = () => {
     if (yml.header_data?.form_styles?.background)
       return yml.header_data?.form_styles?.background;
-    return yml.header_data.background === "#FFF1D1" ? Colors.white : "#FFF1D1";
+    return Colors.blue;
   };
 
   return (
@@ -123,6 +134,7 @@ const LandingHeader = (props) => {
             <H1
               zIndex="1"
               type="h1"
+              fontFamily="Archivo-Black"
               variant="main"
               lineHeight="normal"
               lineHeight_tablet="normal"
@@ -131,8 +143,8 @@ const LandingHeader = (props) => {
               padding="0 10px 20px 0px"
               color={taglineColor()}
               fontSize="32px"
-              fontSize_tablet="52px"
-              fontWeight="700"
+              fontSize_tablet="60px"
+              fontWeight="900"
               textAlign="left"
             >
               {inLocation}
@@ -145,25 +157,19 @@ const LandingHeader = (props) => {
                   type="h2"
                   textAlign="left"
                   fontSize="18px"
-                  color={
-                    yml.header_data.background ? Colors.black : Colors.white
-                  }
+                  color={taglineColor()}
                   variant="main"
                   fontWeight="bolder"
                   padding="0 0 10px 0"
-                >
-                  {yml.header_data.sub_heading}
-                </H2>
+                  dangerouslySetInnerHTML={{
+                    __html: yml.header_data.sub_heading,
+                  }}
+                />
               )}
 
             {Array.isArray(yml.features.bullets) &&
               yml.features.bullets.map((bullet, i) => (
-                <Div
-                  alignItems="center"
-                  margin="8px 0"
-                  padding="0px 20px"
-                  gap="10px"
-                >
+                <Div alignItems="center" margin="8px 0" gap="10px">
                   <Icon
                     style={{
                       background:
@@ -179,25 +185,22 @@ const LandingHeader = (props) => {
                   />
                   <Paragraph
                     zIndex="1"
-                    key={i}
+                    key={`header-bullet-${i}`}
+                    fontFamily="Archivo"
                     fontSize="21px"
                     style={{
                       ...JSON.parse(yml.features.styles),
-                      fontWeight: "bolder",
                     }}
                     textAlign="left"
-                    color={
-                      yml.header_data.background ? Colors.black : Colors.white
-                    }
+                    color={bulletsColor()}
                     dangerouslySetInnerHTML={{ __html: bullet }}
                   />
                 </Div>
               ))}
             {yml.features.text && (
               <Paragraph
-                isActive
                 fontSize="18px"
-                color={yml.header_data.background ? Colors.black : Colors.white}
+                color={taglineColor()}
                 style={JSON.parse(yml.features.styles)}
                 margin="7px 0"
                 padding_tablet="0px 0px"
@@ -362,7 +365,7 @@ const LandingHeader = (props) => {
                   yml.header_data.badge.childImageSharp.gatsbyImageData
                 }
                 background={formColor()}
-                textColor={yml.header_data?.form_styles?.color}
+                textColor={yml.header_data?.form_styles?.color || Colors.white}
                 buttonStyles={yml.header_data?.form_styles?.button || {}}
                 margin_md="50px 0 0 14.5%"
                 margin_tablet="18px 0"
@@ -389,11 +392,9 @@ const LandingHeader = (props) => {
                 fields={yml.form.fields}
                 data={preData}
                 justifyContentButton="center"
-                marginButton="10px auto 30px auto"
-                widthButton="100%"
+                marginButton="10px 0"
                 width_md="84%"
                 width_tablet="84%"
-                // marginButton_tablet="0 0 30px auto"
                 boxShadow="9px 8px 0px 0px rgba(0,0,0,1)"
               />
             ) : (
