@@ -12,9 +12,9 @@ full_time:
       - "You're saving $1000 USD"
       - "This discount applies to students who are not eligible for the Clark University Scholarship (typically employed or in stable work)."
     icons:
-      - "/images/ascent_logo.jpg"
-      - "/images/climb-logo.png"
-      - "/images/quotanda-logo.png"
+      - "/images/visa-mastercard.png"
+      - "/images/ethereum.png"
+      - "/images/bitcoin.png"
 
   - slug: 'plan-1'
     academies: ['downtown-miami', 'orlando']
@@ -37,10 +37,14 @@ full_time:
     payment_time: "24 months payment"
     price: "$310"
     bullets: 
-      - "With $400 p/ week living stipends"
-      - "9% of your salary until paid in full, only if you get a job in tech."
+      - "Several partners offering loans and payment plans"
+      - "Remaining balance could be paid over time $100 p/mo"
+      - "You can get a partial scholarship and the remaining balance with a payment plan"
+      - "We're fully committed to making our education accessible and offer multiple payment plans and financing options to uphold our promise."
+      - "You can adapt your learning path to your financial needs. Choose to include or exclude our career support services."
+      - "Payments for Data Science and Machine Learning program with Ascent or Climb will not be less than $270.22."
     icons: 
-      - "/images/ascent_logo.jpg"
+      - "/images/ascent-logo.png"
       - "/images/climb-logo.png"
       - "/images/quotanda-logo.png"
 
@@ -54,7 +58,7 @@ full_time:
   #     - "With $400 p/ week living stipends"
   #     - "9% of your salary until paid in full, only if you get a job in tech."
   #   icons: 
-  #     - "/images/ascent_logo.jpg"
+  #     - "/images/ascent-logo.png"
   #     - "/images/climb-logo.png"
   #     - "/images/quotanda-logo.png"
 
@@ -94,16 +98,20 @@ part_time:
     academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online']
     recomended: false
     scholarship: "Financed"
-    payment_time: "Pay in 3, 4 or 5 years"
+    payment_time: |
+      Pay in 3, 4 or 5 years <br>
+      *Please see the Ascent website <a href="https://partner.ascentfunding.com/4geeksacademy/" target="_blank">partner page</a> for repayment examples and APRs.*
     price: "~$100p/m"
+    warning_message: ""
     bullets: 
       - "Several partners offering loans and payment plans"
       - "Remaining balance could be paid over time $100 p/mo"
       - "You can get a partial scholarship and the remaining balance with a payment plan"
       - "We're fully committed to making our education accessible and offer multiple payment plans and financing options to uphold our promise."
       - "You can adapt your learning path to your financial needs. Choose to include or exclude our career support services."
+      - "Payments for Data Science and Machine Learning program with Ascent or Climb will not be less than $270.22."
     icons: 
-      - "/images/ascent_logo.jpg"
+      - "/images/ascent-logo.png"
       - "/images/climb-logo.png"
       - "/images/quotanda-logo.png"
 

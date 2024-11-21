@@ -20,7 +20,7 @@ full_time:
       - "With $400 p/ week living stipends"
       - "9% of your salary until paid in full, only if you get a job in tech."
     icons: 
-      - "/images/ascent_logo.jpg"
+      - "/images/ascent-logo.png"
       - "/images/climb-logo.png"
       - "/images/quotanda-logo.png"
   - slug: 'plan-3'
@@ -33,7 +33,7 @@ full_time:
       - "With $400 p/ week living stipends"
       - "9% of your salary until paid in full, only if you get a job in tech."
     icons: 
-      - "/images/ascent_logo.jpg"
+      - "/images/ascent-logo.png"
       - "/images/climb-logo.png"
       - "/images/quotanda-logo.png"
   - slug: 'plan-4'
@@ -67,7 +67,7 @@ part_time:
       - "With $400 p/ week living stipends"
       - "9% of your salary until paid in full, only if you get a job in tech."
     icons: 
-      - "/images/ascent_logo.jpg"
+      - "/images/ascent-logo.png"
       - "/images/climb-logo.png"
       - "/images/quotanda-logo.png"
   - slug: 'plan-3'
@@ -80,7 +80,7 @@ part_time:
       - "With $400 p/ week living stipends"
       - "9% of your salary until paid in full, only if you get a job in tech."
     icons: 
-      - "/images/ascent_logo.jpg"
+      - "/images/ascent-logo.png"
       - "/images/climb-logo.png"
       - "/images/quotanda-logo.png"
   - slug: 'plan-4'
