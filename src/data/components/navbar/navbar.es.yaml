@@ -40,11 +40,11 @@ navbar:
             - text: "Ver Programa"
               link: "/es/coding-bootcamps/curso-inteligencia-artificial"
 
-  - name: "Porqué 4Geeks"
+  - name: "Por qué 4Geeks"
     link: "/es/porque-4geeks"
     sub_menu:
       icon: "awards"
-      title: "Porqué 4Geeks Academy"
+      title: "Por qué 4Geeks Academy"
       link: "/es/porque-4geeks"
       paragraph: "Este es el lugar para impulsar tu carrera aprendiendo a codificar. Piensa de manera diferente, ten más confianza en ti mismo, da vida a tus ideas y gana más dinero."
       width: "950px"

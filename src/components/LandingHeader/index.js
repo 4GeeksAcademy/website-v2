@@ -209,6 +209,44 @@ const LandingHeader = (props) => {
                 dangerouslySetInnerHTML={{ __html: yml.features.text }}
               />
             )}
+
+            {/* Botón features - por ahora solo lo utilizo en el template de reservations*/}
+            {yml.features.button && (
+              <a
+                href={yml.features.button.path || "#"}
+                target="_blank"
+                rel="noopener noreferrer"
+                id="features_button"
+                style={{
+                  display: "inline-block",
+                  backgroundColor:
+                    yml.features.button.background || Colors.black,
+                  color: yml.features.button.color || Colors.white,
+                  width: "250px",
+                  padding: "10px 20px",
+                  textDecoration: "none",
+                  borderRadius: "3px",
+                  marginTop: "20px",
+                  marginBottom: yml.features.button.marginBottom || "20px",
+                  margin: "20px 0 250px 0",
+                  fontWeight: "bold",
+                  fontFamily: "lato",
+                  fontSize: "18px",
+                  textAlign: "center",
+                  transition: "background-color 0.3s ease",
+                }}
+                onMouseOver={(e) => {
+                  e.target.style.backgroundColor =
+                    yml.features.button.hover_color || Colors.gray;
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.backgroundColor =
+                    yml.features.button.background || Colors.black;
+                }}
+              >
+                {yml.features.button.text}
+              </a>
+            )}
             {yml.short_badges && (
               <Marquee_v2
                 speed={1.5}
@@ -247,6 +285,7 @@ const LandingHeader = (props) => {
               </Marquee_v2>
             )}
           </Div>
+
           <Div
             position="relative"
             flexDirection="column"
@@ -255,8 +294,6 @@ const LandingHeader = (props) => {
             textAlign_sm="center"
             margin_md={yml.form.margin_md || "0 0 0 0"}
             gridColumn_tablet="8 / 15"
-            // gridColumn_md="8 / 14"
-            // gridColumn_tablet="8 / 13"
           >
             <Div
               top="0"
@@ -365,13 +402,16 @@ const LandingHeader = (props) => {
                 src={
                   yml.form.side_image || "/images/landing/grupo-ventanas.webp"
                 }
+                style={{
+                  filter: "drop-shadow(10px 10px 0px #000000)",
+                }}
                 alt="4Geeks Academy Section"
                 margin="auto"
                 height="100%"
                 minHeight_tablet="none"
                 minHeight="500px"
                 maxHeight="500px"
-                width_tablet="80%"
+                width_tablet="100%"
                 width="100%"
                 zIndex="10"
                 // h_sm="250px"
@@ -382,7 +422,6 @@ const LandingHeader = (props) => {
               display="none"
               display_tablet="block"
               margin_lg="5% 0 0 20px"
-              // margin_md="40% 0 0 20px"
               margin_tablet="20% 0 0 20px"
               position="absolute"
               bottom_lg="0px"

@@ -1,10 +1,10 @@
 meta_info:
-  slug: santiago-programas # <--- URL 4geeksacademy.com/us/landing/example
+  slug: santiago-descuento-2024 # <--- URL 4geeksacademy.com/us/landing/example
 
   # This will show on social media when shared
-  title: "Nuestros programas en chile"
-  description: "Descubre el potencial de nuestros programas en chile - 4Geeks Academy chile"
-  image: "/images/bg/pricing-bg.jpg"
+  title: "Aprovecha un 20% de descuento en nuestros programas en chile"
+  description: "20% OFF en chile - 4Geeks Academy"
+  image: "/images/bg/follow-that-dream-digital-nomad.webp"
   keywords: ""
   visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   template: "landing_a" # <--- choose your landing template
@@ -12,23 +12,23 @@ meta_info:
 
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
-  utm_course: ["full-stack", "datascience-ml", "cybersecurity", "front-end-development", "applied-ai"]
+  utm_course: ["full-stack", "datascience-ml", "cybersecurity", "applied-ai"]
   utm_location: ["santiago-chile"]
   automation: soft # comma separated, "soft" is the default value
   tag: request_more_info # comma separated, "request_more_info" is the default value
 
 navbar:
   logoUrl: "#"
-  buttonText: "Solicitar más información" # this modifies the button text in the navbar
-  buttonUrl: "#leadform_bottom" #accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+  buttonText: "Aplicar a la academia" # this modifies the button text in the navbar
+  buttonUrl: "/es/aplica" #accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
 
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
-  heading: "Rellena el formulario y optén más información"
-  motivation: "Una vez completado el formulario, alguien de nuestro equipo se pondrá en contacto contigo en breves minutos a través de un correo electrónico."
-  button_label: Solicita más información
+  heading: "Completa el formulario"
+  motivation: "Una vez completado el formulario, alguien de nuestro equipo se pondrá en contacto contigo en breves minutos a través de tu correo electrónico."
+  button_label: Aplica a la Academia
   redirect: null #you can redirect to another url or entirely diffrent website
 
 apply_schollarship: # form that is displayed at the end of the landing
@@ -38,15 +38,12 @@ apply_schollarship: # form that is displayed at the end of the landing
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  tagline: Descubre tu potencial en 4Geeks Academy
-  sub_heading: "Programas para convertirte en un experto en programación y complementar tu perfil profesional"
-  background: "#FFFFFF"
-  tagline_color: "#1c1c1c"
+  tagline: 20% de descuento en 4Geeks Academy
+  tagline_color: "#1b1b1b"
+  sub_heading: ""
   form_styles:
-    background: "#0084FF"
-    color: "white"
-    button:
-      background: "black"
+    background: "#fff1d1"
+    color: "black"
   # background_image: "../../../static/images/bg/pricing-bg.jpg"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.1)
@@ -55,18 +52,18 @@ features:
   marginTop: 0px #<-- separation between tagline and the bullets
 
   #                                         up   left down  right
-  styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
+  styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px", "color": "black" }'
   bullets:
-    - Aprende a resolver problemas de manera efectiva
     - Desarrolla habilidades de aprendizaje autodidacta
     - Accede a mentorías personalizadas ilimitadas y de por vida
     - Forma parte de una comunidad internacional de más de 5,000 personas
+    - Aprovecha este descuento especial de 20%
 
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "Si gustas, nos puedes contactar por WhatsApp al "
-    text_mobile: "Si gustas, nos puedes contactar por WhatsApp al "
+    text: "Aprovecha hoy un 20% de descuento en nuestros programas"
+    text_mobile: "Aprovecha hoy un 20% de descuento en nuestros programas"
     # devices:   XL      LG    MD      SM    XS
     font_size: ["22px", "22px", "22px", "20px", "18px"]
   button:
@@ -155,8 +152,43 @@ why_4geeks:
 
 # Possible layouts: [two_column_left_image, two_column_right_image]
 components:
+  - name: new_design
+    position: 3
+    layout: two_column_left
+    swipable: False
+    background: "#FFFFFF"
+    justify: "center" #start,end,center
+    image:
+      style: '{ "backgroundSize": "contain", "background-position": "center", "filter": "drop-shadow(8px 8px 0px #fff1d1)"}'
+      src: "/images/landing/hombre-joven-con-laptop-senalando.webp"
+      shadow: false
+    heading: 
+      text: "Programa tu futuro"
+    sub_heading:
+      text: "En 4Geeks Academy, estamos comprometidos con hacer que nuestra educación de alta calidad sea accesible para todos. Aprovecha nuestro descuento exclusivo del 20% y transforma tu carrera hoy mismo."
+    button: 
+      text: "aplica a la academia"
+      color: white
+      hover_color: "white"
+      background: "black"
+      path: "#leadform_bottom"
+    content: 
+      text: ""
+      font_size: ["16px"]
+      path: ""
+    bullets:
+      item_style: '{ "padding": 0, "font-weight": "300" }'
+      items:
+        - text: "Utiliza el código <br>Webstarted&4Geeks20 para obtener un 20% de descuento en nuestros programas de Full Stack Development, Data Science, Ciberseguridad y Applied AI."
+          icon: "circle" #string with icon for example ['check', 'cicle', etc]
+        - text: "Ofrecemos planes de financiación para que puedas cubrir el costo restante de tu programa de forma cómoda y enfocarte en tu aprendizaje."
+          icon: "circle" #string with icon for example ['check', 'cicle', etc]
+        - text: "Equilibra tus estudios con tu trabajo y vida personal. Nuestro formato part-time te permite aprender sin renunciar a tus responsabilidades actuales."
+          icon: "circle" #string with icon for example ['check', 'cicle', etc]
+
+
   - name: how-it-works
-    position: 1
+    position: 2
     background: "lightYellow"
     layout: iconogram
     swipable: True
@@ -175,10 +207,6 @@ components:
       - icon: "machine"
         title: "Data Science"
         content: "Entra al mundo de la ciencia de datos y el machine learning, adquiriendo habilidades para analizar y visualizar información."
-
-      - icon: "fullstack_2"
-        title: "Frontend"
-        content: "Especialízate en el desarrollo de la interfaz de usuario con tecnologías como JavaSCript y React."
 
       - icon: "applied-ai"
         title: "IA para Profesionales"
@@ -219,7 +247,7 @@ components:
 
   - name: how-it-works-2
     position: 8
-    background: "#E3F9FE !important"
+    background: "#fff1d1 !important"
     layout: iconogram
     swipable: True
     heading:

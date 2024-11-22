@@ -107,30 +107,25 @@ two_columns_info:
     - heading: "PERSONALIZED PROFESSIONAL SUPPORT"
       text: "Receive unlimited advice, guidance, and training tailored to your unique profile and specific job offers."
 
-## TWO COLUMNS
-# two_columns:
-#   proportions: [6, 6]
-#   image:
-#     style: '{"border" : "3px solid black", "backgroundSize": "cover", "backgroundPosition": "right" }'
-#     src: "/images/testimonials/luisa-glum.jpg"
-#     shadow: true  
-#   video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
-#   heading:
-#     text: "4Geeks, Miami and a mission of creating opportunities"
-#     font_size: ["30px", "30px", "30px", "30px", "30px"]
-#   sub_heading:
-#     text: "With Miami as our home base, we're dedicated to fostering opportunities throughout South Florida."
-#     font_size: ["16px", "16px", "16px", "16px", "16px"]
-#   button:
-#     text: "Apply now"
-#     color: "white"
-#     background: "black"
-#     path: "#prices_and_payment"
-#   bullets:
-#     items: 
-#     - text: "Accessible scholarships, whether full or partial, are always available."
-#     - text: "Exclusive opportunities await residents of Miami-Dade, Broward, and Palm Beach counties, ensuring local talent thrives."
-#     - text: "We maintain ongoing partnerships with institutions such as Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade County, and many more."
+# TWO COLUMNS
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "3px solid black", "backgroundSize": "cover", "backgroundPosition": "right" }'
+    src: "../../../static/images/testimonials/alissa-datascience.jpg"
+    shadow: true  
+  video: "https://www.youtube.com/watch?v=snI-n8Ruvxg"
+  heading:
+    text: "Discover data science with Alissa, our campus manager in Miami"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "Hear our campus manager explain the fundamentals of data science and its applications! Discover the core concepts of 4Geeks Data Science & Machine Learning Bootcamp, including data analysis, predictive model building, and the use of tools such as Python, SQL, Looker, and Streamlit."
+    font_size: ["16px", "16px", "16px", "16px", "16px"]
+  button:
+    text: "Apply now"
+    color: "white"
+    background: "black"
+    path: "/us/apply"
 
 
 upcoming:
