@@ -1,6 +1,7 @@
 meta_info:
   slug: bootcamp-de-programacion-ve # <--- URL 4geeksacademy.com/us/landing/example
 
+  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap). 
   # This will show on social media when shared
   title: "Impulsa tu carrera profesional ¡Aprende a programar con 4Geeks Academy!"
   description: "La programación se ha convertido en un conocimiento esencial para tu éxito profesional, aprende a programar con 4Geeks Academy."
@@ -32,9 +33,15 @@ navbar:
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  background: "#FFF1D1"
-  tagline: Cambia tu vida y aprende a programar
+  background: "#FFFFFF"
+  tagline:  ¡Aprende a programar y Cambia tu vida!
+  tagline_color: "#1b1b1b"
   sub_heading: ""
+  form_styles:
+    background: "#E3F9FE"
+    color: "black"
+    button:
+      background: "black"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   # partner_logo_url: "../../../static/images/partner/microsoft.png"
   # background_image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg"
@@ -46,28 +53,37 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-    - Un Desarrollador Web Junior en Caracas gana aprox. $1.000 mensuales.
+    - No necesitas experiencia previa para comenzar.
     - Es una de las industrias donde hay más vacantes actualmente.
-    - No necesitas experiencia previa para comenzar
+    - Un Desarrollador Web Junior en Caracas gana aprox. $1.000 mensuales.
   text: ¡Es el momento de impulsar tu carrera y convertirte en programador!
 
 short_badges:
-  - name: "Premios Tecnologia Siglo XXI"
+  - name: "Top Online Full-Stack Bootcamps Of 2024"
     url: ""
-    image: "../../../static/images/awards/premios_tecnologia_sigloxxi.png"
-    alt: "Mejor centro de Coding Bootcamp"
-  - name: "Course Report"
+    image: "../../../static/images/badges/forbes-logo-award.png"
+    alt: "We have been selected as one of the Top Online Coding Bootcamps by Forbes."
+  - name: "Best for Spanish speakers Of 2024 by Fortune"
+    url: ""
+    image: "../../../static/images/badges/fortune-logo.png"
+    alt: "Recognized by Fortune as one of the Top Coding Bootcamps"
+  - name: "Top Coding Bootcamps Newsweek"
+    url: ""
+    image: "../../../static/images/badges/newsweek.webp"
+    alt: "Top Coding Bootcamps Newsweek"
+  - name: "Best Coding Bootcamp Course Report 2024"
     url: ""
     image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
-    alt: "Top Coding Bootcamps Course Report"
-  - name: "Switchup"
-    url: ""
-    image: "../../../static/images/badges/switchup-badge-2023.png"
-    alt: "Best coding bootcamp Switchup 2023"
-  - name: "Florida Department of Education"
+    alt: "Best Coding Bootcamp Course Report 2024"
+  - name: "Licensed by the Florida Department of Education"
     url: ""
     image: "../../../static/images/badges/licensed.png"
-    alt: "Florida Department of Education"
+    alt: "Licensed by the Florida Department of Education"
+  - name: "ARP Certificate"
+    url: ""
+    image: "../../../static/images/badges/arp-logo-certification.png"
+    alt: "ARP Certificate"
+
 
 follow_bar:
   position: "top" # top, bottom, hidden
@@ -106,8 +122,8 @@ geeks_vs_others:
   total_rows: 5
 
 why_4geeks:
-  position: 5
-  heading: "Por qué 4Geeks"
+  position: 7
+  heading: "Escúchalo de nuestros alumnos"
   sub_heading: ""
 
 who_is_hiring:
@@ -127,7 +143,7 @@ components:
     position: 2
     layout: two_column_left
     proportions: [4, 8]
-    background: "#e6e6e6"
+    background: "#fbfbfb"
     image:
       style: '{ "backgroundSize": "contain"}'
       src: "/images/badges/Course-Report-Badge-2024.webp"
@@ -138,31 +154,45 @@ components:
         #xl      lg     md     sm    xs
       font_size: ["38px", "36px", "32", "30px", "30px"]
       padding: "0px"
-  - name: more_testimonials
+
+  - name: Educacionflexible2
     position: 9
     layout: two_column_left
     image:
-      shadow: true
-      src: "https://storage.googleapis.com/4geeks-academy-website/landing-pictures/testimonials.webp"
-    heading:
-      text: "Escúchalo de nuestros alumnos"
-      #xl      lg     md     sm    xs
-      font_size: ["40px", "34px", "34px", "25px", "20px"]
-    button:
-      text: "Historias de Éxito"
-      background: black
+      src: "/images/landing/meet-windows-group-en.webp"
+    heading: 
+      text: Apoyo de la Comunidad
+    sub_heading:
+      text: Apoyo de la Comunidad
+    button: 
+      text: "Más información"
       color: white
-      hover_color: "#FFB718"
-      path: "#why_4geeks"
-    content:
-      text: "Mi experiencia con 4Geeks ha sido magnífica, me ha encantado. Tengo unos profesores maravillosos y tengo unos compañeros súper geniales. He aprendido bastante sobre HTML, CSS, JavaScript, React y Python. Mis profesores siempre estuvieron atentos a lo que necesitaba. Igual hay una plataforma donde podemos hablar todos los estudiantes de 4Geeks y nos ayudamos entre todos.... ¡Ha sido genial tomar esta decisión! -Beatriz Hernández"
-      font_size: ["16px"]
+      hover_color: "white"
+      background: "black"
+      path: "#leadform_bottom"
+
+    bullets:
+      items:
+      - heading: 4GEEKS.COM
+        text: |
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+      - heading: COMUNIDAD SLACK
+        text: |
+          Nuestra comunidad internacional de más de 1100 personas, que te brindará todo el apoyo que necesites.
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+      - heading: COMUNIDAD SLACK
+        text: |
+          Nuestra comunidad internacional de más de 1100 personas, que te brindará todo el apoyo que necesites.
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+
   - name: divider_one
     position: 9
     layout: divider
     height: ["50px", "50px", "50px", "0px", "0px"]
+    
   - name: some_id
-    position: 7
+    position: 6
     layout: two_column_right
     image:
       style: '{ "border" : "3px solid black" }'

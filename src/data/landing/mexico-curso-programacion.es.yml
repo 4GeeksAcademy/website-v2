@@ -6,7 +6,7 @@ meta_info:
   description: "Aprende programación en uno de los coding bootcamps más importantes del mundo y consigue miles de oportunidades laborales."
   image: "/images/bg/main-bg.jpg"
   keywords: "Bootcamp de Programación, Bootcamp programacion Mexico, Bootcamp de python, Bootcamp de React y Javascript, Bootcamp de Informática, Coding Bootcamp, 4Geeks Academy"
-
+  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   template: "landing_a" # <--- choose your landing template
   redirects: # <--- URL redirections to avoid 404 errors
     ["/landing/curso-de-programacion-mexico"]
@@ -40,9 +40,15 @@ apply_schollarship: # form that is displayed at the end of the landing
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  background: "#FFF1D1"
+  background: "#ffffff"
   tagline: "Aprende a programar desde cero o potencia tu carrera en el mundo tech"
   sub_heading: ""
+  tagline_color: "#1c1c1c"
+  form_styles:
+    background: "#0084FF"
+    color: "white"
+    button:
+      background: "black"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
 

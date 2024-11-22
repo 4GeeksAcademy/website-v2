@@ -58,6 +58,7 @@ header_data:
   sub_heading: ""
   form_styles:
     background: "#E3F9FE"
+    color: "black"
     button:
       background: "black"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
@@ -159,9 +160,9 @@ components:
     swipable: False
     background: "#fbfbfb"
     image:
-      style: '{"backgroundSize": "cover", "border": "2px solid black"}'
-      src: "/images/landing/ciberseguridad-argentina.webp"
-      shadow: true
+      style: '{"backgroundSize": "contain"}'
+      src: "/images/landing/community-support-2.webp"
+      shadow: false
     section_heading: 
       text: "La Creciente Necesidad de Ciberseguridad en Argentina"
       style: '{ "font-size": "30px" }'

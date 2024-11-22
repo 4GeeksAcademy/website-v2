@@ -51,9 +51,13 @@ apply_schollarship: # form that is displayed at the end of the landing
 header_data:
   tagline: ¡Impulsa tu carrera en tecnología con 4Geeks!
   sub_heading: ""
-  background: "lightBlue"
+  background: "#ffffff"
+  tagline_color: "#1c1c1c"
   form_styles:
-    background: "#E3F9FE"
+    background: "#0084FF"
+    color: "white"
+    button:
+      background: "black"
   # background_image: "../../../static/images/bg/pricing-bg.jpg"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.1)

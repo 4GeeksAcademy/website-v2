@@ -1,6 +1,7 @@
 meta_info:
   slug: aprende-a-programar # <--- URL 4geeksacademy.com/us/landing/example
 
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   # This will show on social media when shared
   title: "Desarrolla tu carrera con 4geeks!"
   description: "La programación se ha convertido en un conocimiento escencial para tu éxito profesional, aprende a programar con 4Geeks Academy."
@@ -35,8 +36,14 @@ form:
 header_data:
   tagline: ¡Aprende a Programar en 18 Semanas!
   sub_heading: " "
+  tagline_color: "#1c1c1c"
+  form_styles:
+    background: "#0084FF"
+    color: "white"
+    button:
+      background: "black"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
-  background_image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg"
+  # background_image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg"
   image_filter: brightness(0.2)
 
 features:
