@@ -9,7 +9,7 @@ footer:
     heading: "COMPAÑÍA"
     width: 3
     items:
-      - name: "Porqué 4Geeks"
+      - name: "Por qué 4Geeks"
         link: "/es/porque-4geeks"
       - name: "La Academia"
         link: "/es/sobre-la-academia"
