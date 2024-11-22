@@ -43,8 +43,8 @@ apply_schollarship: # form that is displayed at the end of the landing
 header_data:
   background: "#ffffff"
   tagline: Start A Career In Tech for $40/Week
-  tagline_color: "#1c1c1c"
   sub_heading: "Enjoy unlimited mentorship and lifetime access to career services."
+  tagline_color: "#1c1c1c"
   form_styles:
     background: "#0084FF"
     color: "white"

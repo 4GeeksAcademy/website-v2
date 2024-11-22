@@ -40,9 +40,15 @@ apply_schollarship: # form that is displayed at the end of the landing
 header_data:
   tagline: Transformación Profesional en 4Geeks Academy
   sub_heading: "En 4Geeks Academy, te ofrecemos un bootcamp intensivo diseñado para transformarte en un desarrollador Front-End o en un desarrollador FullStack desde 12 a 18 semanas. Únete a una comunidad internacional de más de 5000 personas que comparten tu pasión por la tecnología y el desarrollo."
-  # background: "#FFF1D1"
+  background: "#ffffff"
+  tagline_color: "#1c1c1c"
+  form_styles:
+    background: "#0084FF"
+    color: "white"
+    button:
+      background: "black"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
-  background_image: "../../../static/images/locations/satiago-background.webp"
+  # background_image: "../../../static/images/locations/satiago-background.webp"
   image_filter: brightness(0.15)
 
 features:

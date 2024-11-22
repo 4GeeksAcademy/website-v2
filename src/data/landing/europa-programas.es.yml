@@ -40,9 +40,10 @@ apply_schollarship: # form that is displayed at the end of the landing
 header_data:
   background: "#ffffff"
   tagline: ¡Transforma tu futuro con 4Geeks Academy!
-  tagline_color: "#1b1b1b"
+  tagline_color: "#1c1c1c"
   form_styles:
     background: "#0084FF"
+    color: "white"
     button:
       background: "black"
   sub_heading: "Aprende, Crece y Conviértete en un Profesional del mundo Tech"

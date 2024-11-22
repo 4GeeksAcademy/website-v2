@@ -6,7 +6,7 @@ meta_info:
   description: "Coding has become an essencial knowledge for every career, take a programming bootcamp and learn to code and have a better life."
   image: "/images/bg/main-bg.jpg"
   keywords: "Programming Bootcamp, Coding Bootcamp, Computer Science Bootcamp, Coding Classes, Learn to code, 4Geeks Academy"
-
+  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   template: "landing_a" # <--- choose your landing template
   redirects: # <--- URL redirections to avoid 404 errors
     ["/landing/programming-bootcamp"]
@@ -38,13 +38,13 @@ header_data:
   sub_heading: "Become a Full Stack Developer in 18 weeks with unlimited mentorships and career support"
   background: "#ffffff"
   tagline_color: "#1c1c1c"
-  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
-  # image_filter: brightness(0.1)
   form_styles:
     background: "#0084FF"
     color: "white"
     button:
       background: "black"
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+  # image_filter: brightness(0.1)
 
 features:
   marginTop: 0px #<-- separation between tagline and the bullets

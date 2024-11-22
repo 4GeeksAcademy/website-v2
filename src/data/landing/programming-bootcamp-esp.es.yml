@@ -39,10 +39,15 @@ apply_schollarship: # form that is displayed at the end of the landing
   image: "../../../static/images/woman-laptop-smile-bg.webp"
   
 header_data:
-  background: "#fcf2cf"
+  background: "#ffffff"
   tagline: Acelera tu futuro con nuestro Programming Bootcamp
-  tagline_color: "black"
   sub_heading: Aprende las habilidades más demandadas por la industria con nuestro intensivo programming botcamp de 18 semanas
+  tagline_color: "#1c1c1c"
+  form_styles:
+    background: "#0084FF"
+    color: "white"
+    button:
+      background: "black"
   # background_image: "../../../static/images/bg/main-bg.jpg"
   #video: "https://www.videoask.com/fm984j5nz"
   image_filter: brightness(0.4)

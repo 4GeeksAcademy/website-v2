@@ -39,14 +39,15 @@ apply_schollarship: # form that is displayed at the end of the landing
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  background: "lightBlue"
+  background: "#ffffff"
   tagline: "Estudia a Tu Propio Ritmo y Conviértete en un Fullstack"
-  tagline_color: "#1b1b1b"
+  sub_heading: ""
+  tagline_color: "#1c1c1c"
   form_styles:
-    background: "#E3F9FE"
+    background: "#0084FF"
+    color: "white"
     button:
       background: "black"
-  sub_heading: ""
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
 

@@ -1,6 +1,6 @@
 meta_info:
   slug: becas-partner # <--- URL 4geeksacademy.com/us/landing/example
-
+  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   # This will show on social media when shared
   title: "Obtén tu beca!"
   description: "Obtén una beca para aprender a programar con 4Geeks Academy. Desarrolla tu talento, sé beneficiario de una beca y conviértete en programador."
@@ -35,16 +35,16 @@ form:
 # jumbotron on the top (cannot be commented out)
 header_data:
   tagline: Impulsa tu carrera profesional!
-  tagline_color: white
+  tagline_color: #0c0c0c
   sub_heading: ""
   partner_logo_url: "../../../static/images/partner/microsoft.png"
-  background_image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg"
+  # background_image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg"
   image_filter: brightness(0.15)
 
 features:
   marginTop: 20px #<-- separation between tagline and the bullet
   #                                         up   left down  right
-  styles: '{ "color": "white", "fontSize": "15px", "margin": "10px 0px 10px 0px" }'
+  styles: '{ "fontSize": "15px", "margin": "10px 0px 10px 0px" }'
   text: Hay más vacantes que en cualquier otra industria ¡Impulsa tu Carrera! y hazte programador de software
   bullets:
     
@@ -80,7 +80,7 @@ short_badges:
     alt: "Best coding bootcamp Switchup 2023"   
   - name: "Florida Department of Education"
     url: ""
-    image: "../../../static/images/badges/licensed-inverted.png"
+    image: "../../../static/images/badges/licensed.png"
     alt: "Florida Department of Education"
 
 #
@@ -89,21 +89,6 @@ short_badges:
 badges:
   position: 5 # It's the position of the component that will be rendered first
   heading: "4Geeks Academy cuenta con premios y reconocimientos que validan su excelencia"
-
-about4Geeks:
-  position: 2
-  heading: Sumate a nuestro Sistema de Becas
-  sub_heading: "Una comunidad de más de 4000 estudiantes, profesores, partners y exalumnos, conectados por medio de Slack, GitHub, Social Media y 4Geeks.com (nuestra plataforma educacional)"
-  list:
-    - title: "Apoyo Profesional para siempre"
-    - title: "Financiamos tu carrera"
-    - title: "Mentorias 1:1 ilimitadas"
-    - title: "Preparación para Entrevistas customizada"
-  paragraph: ""
-  button_text: "Postula a una beca"
-  button_link: "/es/aplica"
-  image: "../../../static/images/bg/community.png"
-  image_mobile: "../../../static/images/bg/community.png"
 
 who_is_hiring:
   position: 10
@@ -129,29 +114,53 @@ apply_schollarship:
 
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
+  - name: Educacionflexible
+    position: 2
+    layout: two_column_left
+    image:
+      src: "/images/landing/community-support-2.webp"
+    heading: 
+      text: "Sumate a nuestro Sistema de Becas"
+    sub_heading:
+      text: "Una comunidad de más de 4000 estudiantes, profesores, partners y exalumnos, conectados por medio de Slack, GitHub, Social Media y 4Geeks.com (nuestra plataforma educacional)"
+    button: 
+      text: "Solicita una beca"
+      color: white
+      hover_color: "white"
+      background: "blue"
+      path: "#leadform_header"
+    content: 
+      text: ""
+    bullets:
+      items:
+      - text: "Apoyo Profesional de por vida"
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+      - text: "Opciones de financiación para complementar tu beca"
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+      - text: "Ratio 1:7 profesor alumno. Mentorías 1:1 ilimitadas"
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+      - text: "Preparación para entrevistas y procesos de selección"
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
 
   - name: how-it-works
     position: 3
-    background: "veryLightBlue2"
+    background: ""
     layout: iconogram
     swipable: True
     heading:
-      text: ""
-      font_size: ["30px", "30px", "30px", "30px", "30px"]
-    sub_heading:
-      text: ""
-      font_size: ["16px", "16px", "16px", "16px", "16px"]
-      style: '{ "textAlign": "center", "width": "60%" }'
-    text_link: "#leadform_header"
+      text: ¿Cómo solicitar tu plaza?
+    button:
+      text: Condiciones aplican
     icons:
-    - icon: "touch" 
-      title: Aplica a la beca
-    - icon: "receive_mail"
-      title: Obten un correo electrónico con la información
-    - icon: "talk"
-      title: Haz una entrevista con nuestro equipo
-    - icon: "terminal"
-      title: Aprende a programar con nosotros
+      - icon: "graduation-2"
+        content: Aplica a la beca
+      - icon: "money"
+        color: "blue"
+        content: Obten un correo electrónico con la información
+      - icon: "stairswflag"
+        content: Haz una entrevista con nuestro equipo
+      - icon: "contract-2"
+        content: Aprende a programar con nosotros
 
   - name: "whatever"
     layout: choose_your_program

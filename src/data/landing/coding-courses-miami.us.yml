@@ -4,7 +4,7 @@ meta_info:
   # This will show on social media when shared
   title: "Coding Courses in Miami | 4Geeks Academy - Your Gateway to the Tech Industry"
   description: "4Geeks Academy offers coding courses in Miami for high-demand tech roles."
-  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   image: "/images/bg/the-academy-bg.jpg"
   keywords: ""
 
@@ -47,6 +47,7 @@ header_data:
   sub_heading: ""
   form_styles:
     background: "#FFB718"
+    color: "black"
     button:
       background: "black"
   # background_image: "../../../static/images/landing-background-men-w-laptop.webp"
@@ -162,7 +163,7 @@ why_4geeks:
 
 components:
   - name: why_coding-two-columns
-    position: 1
+    position: 2
     proportions: [6, 6]
     layout: two_column_right
     image:
@@ -198,7 +199,7 @@ components:
 
   - name: how-it-works-programs
     position: 2
-    background: "darkYellow"
+    background: "#fff5de"
     layout: iconogram
     swipable: True
     heading:
@@ -225,7 +226,7 @@ components:
     position: 4
     layout: two_column_left
     proportions: [6, 6]
-    background: "lightYellow2"
+    background: "#fff5de"
     image:
       style: '{ "backgroundSize": "cover", "border":"2px solid black"}'
       src: "/images/locations/miami-dia.jpg"
@@ -262,7 +263,7 @@ components:
           icon: "circle" #string with icon for example ['check', 'cicle', etc]
 
   - name: why-4geeks-icons
-    position: 5
+    position: 1
     background: "#fbfcfc"
     layout: iconogram
     swipable: True

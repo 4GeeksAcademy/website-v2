@@ -6,7 +6,7 @@ meta_info:
   description: "Aprende desarrollo fullstack a tu propio ritmo con 4Geeks Academy en Chile. ¡Inscríbete hoy y avanza a tu manera!"
   image: "/images/bg/more-new-main-home-bg.png"
   keywords: ""
-  visibility: "unlisted" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   template: "landing_a" # <--- choose your landing template
   # <--- URL redirections to avoid 404 errors
   redirects: []
@@ -39,14 +39,15 @@ apply_schollarship: # form that is displayed at the end of the landing
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  background: "#FFF1D1"
+  background: "#ffffff"
   tagline: Conviértete en un Fullstack a Tu Propio Ritmo con 4Geeks Academy
-  tagline_color: "#1b1b1b"
+  sub_heading: ""
+  tagline_color: "#1c1c1c"
   form_styles:
-    background: "#faf3e3"
+    background: "#0084FF"
+    color: "white"
     button:
       background: "black"
-  sub_heading: ""
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
 

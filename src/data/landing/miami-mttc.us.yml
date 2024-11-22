@@ -2,8 +2,8 @@ meta_info:
   slug: miami-tech-talent-coalition # <--- URL 4geeksacademy.com/us/landing/example
 
   # This will show on social media when shared
-  title: "Launch your tech career with 4Geeks Academy and Miami Tech Coalition scholarships"
-  description: "There are no-cost coding bootcamps that offer full or partial scholarships. Become a software developer or data scientist and join Miami Tech Life."
+  title: "Launch Your Tech Career with 4Geeks Academy & Miami Tech Coalition Scholarships"
+  description: "No-cost coding bootcamps with full or partial scholarships available. Become a software developer or data scientist and join the #MiamiTechLife."
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   # This will show on social media when shared
   image: "public/images/landing/miamitech-logo-sidetext.png"
@@ -43,10 +43,11 @@ navbar:
 header_data:
   tagline: "No Cost, No Excuses: Full & Partial Scholarships from the Miami Tech Coalition"
   sub_heading: ""
-  tagline_color: "#2E2E38"
-  form_styles: 
-    background: "#FFB718"
-    color: "black"
+  background: "#ffffff"
+  tagline_color: "#1c1c1c"
+  form_styles:
+    background: "#0084FF"
+    color: "white"
     button:
       background: "black"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"

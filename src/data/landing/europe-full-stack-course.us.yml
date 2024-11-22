@@ -1,7 +1,7 @@
 meta_info:
   slug: europe-full-stack-course # <--- URL 4geeksacademy.com/us/landing/example
 
-  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   # This will show on social media when shared
   title: "Master Full-Stack Development at 4Geeks Academy"
   description: "Unlock the realm of Full-Stack Development with our immersive course at 4Geeks Academy. Dive into the world of coding"
@@ -35,7 +35,13 @@ form:
 header_data:
   tagline: Become a Full Stack Developer
   sub_heading: "In just 18 weeks, unlock the benefits of our bootcamp!"
-  background_image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg"
+  tagline_color: "#1c1c1c"
+  form_styles:
+    background: "#0084FF"
+    color: "white"
+    button:
+      background: "black"
+  # background_image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg"
   image_filter: brightness(0.1)
 
 features:
