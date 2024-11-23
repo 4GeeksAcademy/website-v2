@@ -1,11 +1,11 @@
 meta_info:
   slug: bootcamp-colombia-jg # <--- URL 4geeksacademy.com/us/landing/example
-
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   # This will show on social media when shared
   title: "Bootcamp de programación en Colombia, consigue empleo como programador."
   description: "Únete a 4Geeks Academy y consigue empleo 6 meses luego de haber recibido nuestro certificado."
   image: "/images/bg/main-bg.jpg"
-  keywords: "Bootcamp de Programación, Bootcamp programacion Colombia, Bootcamp de python, Bootcamp de React y Javascript, Bootcamp de Informática, Coding Bootcamp, 4Geeks Academy"
+  keywords: ""
 
   template: "landing_a" # <--- choose your landing template
   redirects: # <--- URL redirections to avoid 404 errors
@@ -23,12 +23,12 @@ form:
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
   heading: "Aplica a 4Geeks"
-  motivation: "Únete a miles de graduados que viven como programadores y trabajan en grandes empresas."
-  button_label: APLICA YA
+  motivation: "Una vez completes el formulario recibirás en tu correo la información del curso, la academia y nuestros planes de pago."
+  button_label: Solicita más Información
   redirect: "/es/gracias/?lang=es" #you can redirect to another url or entirely diffrent website
 
 navbar:
-  buttonText: "APLICA YA"
+  buttonText: "Más Información"
   buttonUrl: "#leadform_bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
   logoUrl: "#"
 
@@ -39,9 +39,15 @@ apply_schollarship: # form that is displayed at the end of the landing
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  background: "#FFF1D1"
-  tagline: Empleo Garantizado en 6 meses con nuestro programa Full-Stack Developer
-  sub_heading: Si no consigues empleo con nuestro Programa te devolvemos tu dinero. Da el paso hoy y Conviértete en Full-Stack Developer.
+  background: "#ffffff"
+  tagline: Empleo Garantizado en Colombia
+  tagline_color: "#1c1c1c"
+  form_styles:
+    background: "#0084FF"
+    color: "white"
+    button:
+      background: "black"
+  sub_heading: ""
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
 
@@ -56,22 +62,30 @@ features:
     - Aprovecha nuestras opciones de Financiamiento
 
 short_badges:
-  - name: "Premios Tecnologia Siglo XXI"
+  - name: "Top Online Full-Stack Bootcamps Of 2024"
     url: ""
-    image: "../../../static/images/awards/premios_tecnologia_sigloxxi.png"
-    alt: "Mejor centro de Coding Bootcamp"
-  - name: "Course Report"
+    image: "../../../static/images/badges/forbes-logo-award.png"
+    alt: "We have been selected as one of the Top Online Coding Bootcamps by Forbes."
+  - name: "Best for Spanish speakers Of 2024 by Fortune"
+    url: ""
+    image: "../../../static/images/badges/fortune-logo.png"
+    alt: "Recognized by Fortune as one of the Top Coding Bootcamps"
+  - name: "Top Coding Bootcamps Newsweek"
+    url: ""
+    image: "../../../static/images/badges/newsweek.webp"
+    alt: "Top Coding Bootcamps Newsweek"
+  - name: "Best Coding Bootcamp Course Report 2024"
     url: ""
     image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
-    alt: "Top Coding Bootcamps Course Report"
-  - name: "Switchup"
-    url: ""
-    image: "../../../static/images/badges/switchup-badge-2023.png"
-    alt: "Best coding bootcamp Switchup 2023"   
-  - name: "Florida Department of Education"
+    alt: "Best Coding Bootcamp Course Report 2024"
+  - name: "Licensed by the Florida Department of Education"
     url: ""
     image: "../../../static/images/badges/licensed.png"
-    alt: "Florida Department of Education"
+    alt: "Licensed by the Florida Department of Education"
+  - name: "ARP Certificate"
+    url: ""
+    image: "../../../static/images/badges/arp-logo-certification.png"
+    alt: "ARP Certificate"
 
 follow_bar:
   position: "top" # top, bottom, hidden
@@ -81,7 +95,7 @@ follow_bar:
     # devices:    XL      LG      MD      SM       XS
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:
-    text: "APLICA YA"
+    text: "Solicita más Información"
     path: "#leadform_header"
   phone:
     text: "Llama "
@@ -113,10 +127,10 @@ rating_reviews:
 
 badges:
   position: 7
-  heading: "4Geeks Academy cuenta con premios y reconocimientos que validan su excelencia"
+  heading: "Premios y reconocimientos que validan su excelencia"
 
 program_details:
-  position: 1
+  position: 2
   background: "#FFFFFF"
   heading: "Domina Python, JS y React"
   sub_heading: "Un curso de programación sobre las tecnologías más usadas del mundo"
@@ -128,7 +142,7 @@ geeks_vs_others:
   total_rows: 5
 
 why_4geeks:
-  position: 7
+  position: 9
   heading: "Por qué 4Geeks"
   sub_heading: " "
 
@@ -139,38 +153,72 @@ who_is_hiring:
   sub_heading: "84% de nuestros estudiantes que completaron el proceso de GeekFORCE han conseguido trabajo luego de haberse graduado (incluso dentro de los sigiuientes  100 días)"
 
 alumni_projects:
-  position: 9
+  position: 8
   heading: "Así podría ser tu proyecto final del curso"
   sub_heading: "Proyectos hechos por estudiantes de la academia"
 
 components:
-  - name: ""
-    position: 3
-    background: "veryLightBlue2"
-    layout: iconogram
-    swipable: True
+  - name: jog_guarantee
+    position: 1
+    layout: two_column_left
+    swipable: False
+    image:
+      style: '{"backgroundSize": "contain", "filter":"drop-shadow(10px 10px 0px rgba(0, 132, 255, 1))"}'
+      src: "/images/landing/hombre-joven-con-laptop.webp"
+      link: "" # take uses somewhere when they click on the image
+      # shadow: true
     heading:
-      text: "Garantía de Empleo"
-      font_size: ["30px", "30px", "30px", "30px", "30px"]
+      text: "Programa de Empleo Garantizado en Colombia"
     sub_heading:
-      text: ""
-      font_size: ["16px", "16px", "16px", "16px", "16px"]
-      style: '{ "textAlign": "center", "width": "60%" }'
+      text: "En 4Geeks Academy, estamos comprometidos con tu éxito profesional. Con nuestro Programa de Empleo Garantizado, recibirás el apoyo necesario para asegurar un trabajo en tecnología en solo 6 meses. A través de nuestras iniciativas GeekForce, te proporcionamos las herramientas esenciales para que logres tus objetivos laborales y lleves tu carrera al siguiente nivel."
     button:
-      text: "Condiciones Aplican"
-      color: black
-      # hover_color: "white"
-      # background: "black"
-      path: "https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/Condiciones%20y%20Requerimientos%20Job%20Guaranteed%20Program.pdf"
-    icons:
-      - icon: "yellowhat"
-        title: Si no encuentras empleo en los primeros 180 días tras graduarte, te devolvemos tu dinero.
-      - icon: "stairswflag"
-        title: Completa las etapas de nuestro proceso de apoyo para la carrera profesional.
-      - icon: "group"
-        title: Optimiza tu perfil profesional y preparate para las entrevistas.
-      - icon: "hands"
-        title: Ambos nos comprometemos con tu futura carrera.
+      text: "Más Información"
+      color: white
+      hover_color: "white"
+      background: "black"
+      path: "#leadform_bottom"
+    content:
+      text: "Nuestro programa de empleo garantizado te asegura conseguir trabajo en 6 meses o te devolvemos tu dinero. Da el paso hoy y conviértete en Full-Stack Developer."
+      font_size: ["16px"]
+    bullets:
+      items:
+        - heading: "Apoyo Profesional Ilimitado"
+          text: "Tendrás acceso a sesiones individuales y grupales con expertos que te ayudarán a mejorar tu currículum, LinkedIn, GitHub, y te prepararán para entrevistas técnicas y conductuales."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+
+  - name: JobGuarantee
+    layout: job_guarantee_small
+    position: 3
+    heading:
+      text: Garantía de Empleo
+
+  # - name: ""
+  #   position: 3
+  #   background: "veryLightBlue2"
+  #   layout: iconogram
+  #   swipable: True
+  #   heading:
+  #     text: "Garantía de Empleo"
+  #     font_size: ["30px", "30px", "30px", "30px", "30px"]
+  #   sub_heading:
+  #     text: ""
+  #     font_size: ["16px", "16px", "16px", "16px", "16px"]
+  #     style: '{ "textAlign": "center", "width": "60%" }'
+  #   button:
+  #     text: "Condiciones Aplican"
+  #     color: black
+  #     # hover_color: "white"
+  #     # background: "black"
+  #     path: "https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/Condiciones%20y%20Requerimientos%20Job%20Guaranteed%20Program.pdf"
+  #   icons:
+  #     - icon: "yellowhat"
+  #       title: Si no encuentras empleo en los primeros 180 días tras graduarte, te devolvemos tu dinero.
+  #     - icon: "stairswflag"
+  #       title: Completa las etapas de nuestro proceso de apoyo para la carrera profesional.
+  #     - icon: "group"
+  #       title: Optimiza tu perfil profesional y preparate para las entrevistas.
+  #     - icon: "hands"
+  #       title: Ambos nos comprometemos con tu futura carrera.
 
   # - name: python_y_javascript
   #   position: 2
@@ -189,7 +237,7 @@ components:
     position: 2
     layout: two_column_right
     swipable: False
-    background: "veryLightBlue2"
+    background: ""
     image:
       style: "{}"
       src: "/images/techs/python-js.png"
@@ -237,8 +285,8 @@ components:
       text: "Desde su creación en Colombia, 4Geeks Academy siempre ha tenido como objetivo brindar oportunidades de aprendizaje, facilitar opciones de financiamiento y establecer asociaciones públicas para ofrecer oportunidades laborales. Si tienes alguna pregunta sobre cómo podemos contribuir a tu futuro profesional, no dudes en contactarnos. Estaremos encantados de ayudarte en todo lo posible."
       font_size: ["16px"]
     button:
-      text: "Experiencias reales"
+      text: "Más información"
       background: black
       color: white
       hover_color: "#white"
-      path: "#why_4geeks"
+      path: "#leadform_bottom"

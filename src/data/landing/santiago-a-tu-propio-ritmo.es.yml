@@ -37,10 +37,15 @@ navbar:
   logoUrl: "#"
 
 header_data:
-  background: "#FFF1D1"
+  background: "#ffffff"
   tagline: ¡4Geeks Academy más accesible!
-  tagline_color: "black"
   sub_heading: "El bootcamp mejor posicionado y de mejor calidad de Chile lanza una opción más accessible para personas que la necesitan."
+  tagline_color: "#1c1c1c"
+  form_styles:
+    background: "#0084FF"
+    color: "white"
+    button:
+      background: "black"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
 

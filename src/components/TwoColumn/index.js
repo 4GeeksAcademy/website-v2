@@ -120,28 +120,40 @@ const Side = ({
         </Div>
       )}
       {heading && (
-        <H2
-          type="h2"
-          textAlign_tablet="left"
-          fontSize={h_xs}
-          fontSize_xxs={h_xs}
-          fontSize_md={h_md}
-          fontSize_sm={h_sm}
-          fontSize_tablet={h_lg}
-          fontSize_lg={h_xl}
-          margin="30px 0 20px 0"
-          style={heading.style ? JSON.parse(heading.style) : null}
-        >
-          {heading.text}
-        </H2>
+        <Div alignItems="center" gap="12px">
+          {heading.heading_image && (
+            <Img
+              src={heading.heading_image.src}
+              margin="0px"
+              width="60px"
+              height="60px"
+              backgroundSize="contain"
+            />
+          )}
+          <H2
+            type="h2"
+            textAlign_tablet="left"
+            fontSize={h_xs}
+            fontSize_xxs={h_xs}
+            fontSize_md={h_md}
+            fontSize_sm={h_sm}
+            fontSize_tablet={h_lg}
+            fontSize_lg={h_xl}
+            margin="30px 0 20px 0"
+            style={heading.style ? JSON.parse(heading.style) : null}
+          >
+            {heading.text}
+          </H2>
+        </Div>
       )}
       {sub_heading && (
         <Paragraph
           textAlign_tablet="left"
-          fontFamily="Lato"
+          fontFamily="Archivo"
+          fontWeight="600"
           textAlign="left"
           margin="0"
-          fontSize={sh_xs || sh_xl}
+          fontSize={sh_xs || sh_xl || "21px"}
           fontSize_xs={sh_xs}
           fontSize_sm={sh_sm}
           fontSize_tablet={sh_md}
@@ -176,7 +188,7 @@ const Side = ({
                       icon={bullet.icon || "check"}
                       width="13px"
                       display="inline"
-                      color={Colors.blue}
+                      color={bullet.icon_color || Colors.blue}
                       fill={Colors.yellow}
                       style={{ strokeWidth: "2px" }}
                     />
@@ -199,7 +211,7 @@ const Side = ({
                         icon={bullet.icon || "check"}
                         width="13px"
                         display="inline"
-                        color={Colors.blue}
+                        color={bullet.icon_color || Colors.blue}
                         fill={Colors.yellow}
                         style={{ strokeWidth: "2px" }}
                       />
@@ -301,9 +313,10 @@ const Side = ({
           textColor={Colors.black}
           textTransform="none"
           color={Colors[button.color] || button.color}
-          fontSize="15px"
+          fontSize="21px"
+          height="auto"
           textAlign="left"
-          margin="2rem 0"
+          margin="1rem 0"
           padding="10px 20px"
           borderRadius="4px"
           onClick={() => {

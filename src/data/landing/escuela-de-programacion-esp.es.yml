@@ -1,7 +1,7 @@
 meta_info:
   slug: escuela-de-programacion-esp # <--- URL 4geeksacademy.com/es/landing/academia-programacion
 # landing para campañas con influencers
-  visibility: "unlisted" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   # This will show on social media when shared
   title: "Conviértete en un desarrollador Full-Stack en 4Geeks Academy la mejor escuela de programación"
   description: "Aprende a programar y transforma tu futuro en la Escuela de Programación 4Geeks."
@@ -40,10 +40,15 @@ apply_schollarship: # form that is displayed at the end of the landing
   image: "../../../static/images/woman-laptop-smile-bg.webp"
   
 header_data:
-  tagline_color: black
-  background: "lightBlue"
-  tagline: Escuela de Programación tu entrada al mundo tech
+  background: "#ffffff"
+  tagline: Bootcamp de Programación tu entrada al mundo tech
   sub_heading: Aprende a programar y transforma tu futuro en la Escuela de Programación 4Geeks
+  tagline_color: "#1c1c1c"
+  form_styles:
+    background: "#0084FF"
+    color: "white"
+    button:
+      background: "black"
   # background_image: "../../../static/images/bg/main-bg.jpg"
   # video: "https://www.videoask.com/fm984j5nz"
   image_filter: brightness(0.5)
@@ -59,36 +64,36 @@ features:
     - Clases en vivo y grabadas para que puedas elegir la modalidad que mejor se adapte a tu estilo de vida
 
 short_badges:
-  - name: "Premios Excelencia Educativa"
+  - name: "Top Online Full-Stack Bootcamps Of 2024"
     url: ""
-    image: "../../../static/images/badges/exelencia-educativa-es.png"
-  - name: "Premios Tecnologia Siglo XXI"
+    image: "../../../static/images/badges/forbes-logo-award.png"
+    alt: "We have been selected as one of the Top Online Coding Bootcamps by Forbes."
+  - name: "Best for Spanish speakers Of 2024 by Fortune"
     url: ""
-    image: "../../../static/images/awards/premios_tecnologia_sigloxxi.png"
-    alt: "Mejor centro de Coding Bootcamp"
-  - name: "Course Report"
+    image: "../../../static/images/badges/fortune-logo.png"
+    alt: "Recognized by Fortune as one of the Top Coding Bootcamps"
+  - name: "Top Coding Bootcamps Newsweek"
+    url: ""
+    image: "../../../static/images/badges/newsweek.webp"
+    alt: "Top Coding Bootcamps Newsweek"
+  - name: "Best Coding Bootcamp Course Report 2024"
     url: ""
     image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
-    alt: "Top Coding Bootcamps Course Report"
-  - name: "Switchup"
-    url: ""
-    image: "../../../static/images/badges/switchup-badge-2023.png"
-    alt: "Best coding bootcamp Switchup 2023"
-  - name: "Ebootcamp"
-    url: ""
-    image: "../../../static/images/badges/ebootcamp-top.png"
-    alt: "Best coding bootcamp Switchup 2023"
-  - name: "Florida Department of Education"
+    alt: "Best Coding Bootcamp Course Report 2024"
+  - name: "Licensed by the Florida Department of Education"
     url: ""
     image: "../../../static/images/badges/licensed.png"
-    alt: "Florida Department of Education"
-
+    alt: "Licensed by the Florida Department of Education"
+  - name: "ARP Certificate"
+    url: ""
+    image: "../../../static/images/badges/arp-logo-certification.png"
+    alt: "ARP Certificate"
 
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "Empieza tu camino como programador en\n  La mejor escuela de programación"
-    text_mobile: "Empieza tu camino como programador en\n  La mejor escuela de programación"
+    text: "Empieza tu camino como programador \n en 4Geeks Academy"
+    text_mobile: "Empieza tu camino como programador \n en 4Geeks Academy"
     # devices:    XL      LG      MD      SM       XS
     font_size: ["20px", "20px", "20px", "18px", "4vw"]
   button:

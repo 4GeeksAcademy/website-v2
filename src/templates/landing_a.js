@@ -386,7 +386,6 @@ export const query = graphql`
             margin_md
           }
           features {
-            marginTop
             text
             bullets
             styles
@@ -394,6 +393,7 @@ export const query = graphql`
           badges {
             position
             heading
+            sub_heading
           }
           short_badges {
             name
@@ -534,6 +534,7 @@ export const query = graphql`
             filter_indexes
             variant
             text_link
+            topic
             icons {
               icon
               color
@@ -569,6 +570,9 @@ export const query = graphql`
               text
               font_size
               style
+              heading_image {
+                src
+              }
             }
             sub_heading {
               text
@@ -587,6 +591,7 @@ export const query = graphql`
                 heading
                 text
                 icon
+                icon_color
               }
             }
             cards {
@@ -599,13 +604,6 @@ export const query = graphql`
                 text
                 style
                 font_size
-              }
-              content {
-                text
-                style
-              }
-              button {
-                text
               }
             }
             columns {
@@ -715,7 +713,6 @@ export const query = graphql`
             button_label
           }
           features {
-            marginTop
             text
             bullets
             styles
@@ -948,6 +945,40 @@ export const query = graphql`
               comment
               video
             }
+          }
+        }
+      }
+    }
+    allJobGuaranteeSmallYaml(filter: { fields: { lang: { eq: $lang } } }) {
+      edges {
+        node {
+          title
+          icons {
+            title
+            icon
+          }
+          link {
+            url
+            label
+          }
+        }
+      }
+    }
+    allFaqYaml(filter: { fields: { lang: { eq: $lang } } }) {
+      edges {
+        node {
+          faq {
+            topic
+            slug
+            questions {
+              locations
+              priority
+              question
+              answer
+            }
+          }
+          fields {
+            lang
           }
         }
       }

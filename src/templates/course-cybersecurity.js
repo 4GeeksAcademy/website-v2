@@ -16,7 +16,8 @@ import PricesAndPayment from "../components/PricesAndPayment";
 import LeadForm from "../components/LeadForm";
 import Modal from "../components/Modal";
 import ScholarshipProjects from "../components/ScholarshipProjects";
-import TwoColumn from "../components/TwoColumn/index.js";
+import TwoColumn from "../components/TwoColumn";
+import OnlyFor from "../components/OnlyFor";
 import Overlaped from "../components/Overlaped";
 import JobGuaranteeSmall from "../components/JobGuaranteeSmall";
 import Loc from "../components/Loc";
@@ -150,8 +151,6 @@ const Cybersecurity = ({ data, pageContext, yml }) => {
           >
             {syllabus_button_text}
           </Button>
-          {/* <Button onClick={handleOpen} variant="outline" width="200px" color={Colors.black} margin="10px 0 58px 0" textColor={Colors.black}>{syllabus_button_text}</Button> */}
-          {/* <Button variant="outline" icon={<Icon icon="download" stroke={Colors.black} style={{marginRight: "10px"}} width="46px" height="46px" />} color={Colors.black} margin="10px 0 50px 0" margin_tablet="0" textColor={Colors.black}>{syllabus_button_text}</Button> */}
         </Div>
         <Modal
           aria-labelledby="simple-modal-title"
@@ -188,33 +187,22 @@ const Cybersecurity = ({ data, pageContext, yml }) => {
         />
       </Header>
 
-      {/* pposición original del twocolumns  first, reemplazado por twocolumn info*/}
-      {/* <TwoColumn
-        left={{ image: yml.two_columns_first?.image }}
-        right={{
-          heading: yml.two_columns_first?.heading,
-          sub_heading: yml.two_columns_first?.sub_heading,
-          bullets: yml.two_columns_first?.bullets,
-          content: yml.two_columns_first?.content,
-          disclosure: yml.two_columns_first?.disclosure,
-          button: yml.two_columns_first?.button,
-        }}
-        proportions={yml.two_columns_first?.proportions}
-        session={session}
-      /> */}
-
-      <TwoColumn
-        left={{ image: yml.two_columns_info?.image, video: yml.two_columns_info?.video }}
-        right={{
-          heading: yml.two_columns_info?.heading,
-          sub_heading: yml.two_columns_info?.sub_heading,
-          bullets: yml.two_columns_info?.bullets,
-          content: yml.two_columns_info?.content,
-          button: yml.two_columns_info?.button,
-        }}
-        proportions={yml.two_columns?.proportions}
-        session={session}
-      />
+      {/* TWO COLUMN CREAR EN EL YML*/}
+      <OnlyFor locations={yml.two_columns_first?.available_locations}>
+        <TwoColumn
+          left={{ image: yml.two_columns_first?.image }}
+          right={{
+            heading: yml.two_columns_first?.heading,
+            sub_heading: yml.two_columns_first?.sub_heading,
+            bullets: yml.two_columns_first?.bullets,
+            content: yml.two_columns_first?.content,
+            disclosure: yml.two_columns_first?.disclosure,
+            button: yml.two_columns_first?.button,
+          }}
+          proportions={yml.two_columns_first?.proportions}
+          session={session}
+        />
+      </OnlyFor>
 
       <JobGuaranteeSmall
         content={data.allJobGuaranteeSmallYaml.edges[0].node}
@@ -322,12 +310,6 @@ const Cybersecurity = ({ data, pageContext, yml }) => {
       />
 
       <Loc lang={pageContext.lang} allLocationYaml={data.allLocationYaml} />
-
-      {/* <RelatedPosts
-        lang={pageContext.lang}
-        posts={data.allMarkdownRemark.edges}
-        relatedClusters={courseDetails.meta_info.related_clusters}
-      /> */}
     </>
   );
 };
@@ -577,6 +559,7 @@ export const query = graphql`
           }
           two_columns_first {
             proportions
+            available_locations
             image {
               style
               src

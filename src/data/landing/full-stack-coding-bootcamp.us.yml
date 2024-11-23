@@ -40,7 +40,13 @@ apply_schollarship: # form that is displayed at the end of the landing
 header_data:
   tagline: Full Stack Coding Bootcamp
   sub_heading: "Become a Full Stack Developer in 18 weeks with unlimited mentorships and career support"
-  background: "#FFF1D1"
+  background: "#ffffff"
+  tagline_color: "#1c1c1c"
+  form_styles:
+    background: "#0084FF"
+    color: "white"
+    button:
+      background: "black"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
 

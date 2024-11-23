@@ -40,8 +40,14 @@ apply_schollarship: # form that is displayed at the end of the landing
 header_data:
   tagline: Descubre tu potencial en 4Geeks Academy
   sub_heading: "Programas para convertirte en un experto en programación y complementar tu perfil profesional"
-  # background: "#FFFFFF"
-  background_image: "../../../static/images/bg/pricing-bg.jpg"
+  background: "#FFFFFF"
+  tagline_color: "#1c1c1c"
+  form_styles:
+    background: "#0084FF"
+    color: "white"
+    button:
+      background: "black"
+  # background_image: "../../../static/images/bg/pricing-bg.jpg"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.1)
 
@@ -144,7 +150,7 @@ who_is_hiring:
 
 why_4geeks:
   position: 9
-  heading: "Porqué 4Geeks"
+  heading: "Por qué 4Geeks"
   sub_heading: ""
 
 # Possible layouts: [two_column_left_image, two_column_right_image]

@@ -4,7 +4,7 @@ meta_info:
   # This will show on social media when shared
   title: "Learn to Code in Austin | 4Geeks Academy - Transform Your Career"
   description: "Kickstart your tech career with 4Geeks Academy in Austin. Our coding bootcamp offers training in software development, data science, and cybersecurity."
-  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   image: "/images/bg/the-academy-bg.jpg"
   keywords: ""
 
@@ -41,12 +41,13 @@ apply_schollarship: # form that is displayed at the end of the landing
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  background: "#ffecbf"
+  background: "#ffffff"
   tagline: Learn to Code in Austin with 4Geeks Academy
-  tagline_color: "#1b1b1b"
   sub_heading: ""
+  tagline_color: "#1c1c1c"
   form_styles:
-    background: "#faf2e1"
+    background: "#0084FF"
+    color: "white"
     button:
       background: "black"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"

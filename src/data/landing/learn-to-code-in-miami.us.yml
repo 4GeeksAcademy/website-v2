@@ -4,7 +4,7 @@ meta_info:
   # This will show on social media when shared
   title: "Learn to Code Miami | 4Geeks Academy - Start Your Tech Career"
   description: "Dive into the tech world with 4Geeks coding courses in Miami. Our unique approach to education helps you gain the skills needed for a successful tech career."
-  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   image: "/images/bg/the-academy-bg.jpg"
   keywords: ""
 
@@ -41,11 +41,12 @@ apply_schollarship: # form that is displayed at the end of the landing
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  background: "lightBlue"
+  background: "#ffffff"
   tagline: Learn to Code in Miami with 4Geeks Academy
-  tagline_color: "#1b1b1b"
+  tagline_color: "#1c1c1c"
   form_styles:
-    background: "#E3F9FE"
+    background: "#0084FF"
+    color: "white"
     button:
       background: "black"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
