@@ -26,7 +26,7 @@ button:
   syllabus_btn_label: "Descarga Instantanea"
   syllabus_motivation: "En 2 min. recibirás en tu buzón de correo un PDF con información muy detallada sobre nuestra metodología, tecnologías, becas, financiación e información del curso."
   apply_button_link: "/es/aplica"
-  apply_button_text: "Aplicar a la Academia"
+  apply_button_text: "Postúlate a la Academia"
 
 course_instructors:
   header:
@@ -72,7 +72,7 @@ two_columns_first:
     text: '* Estos beneficios relacionados con nuestra colaboración con Chema Alonso están disponibles <span style="font-weight: 600;" >únicamente</span> para nuestros estudiantes que asisten a clases en cualquiera de nuestros campus en 🇪🇸 España.'
     style: '{"margin-top": "0px"}'
   button:
-    text: "Aplicar a la Academia"
+    text: "Postúlate a la Academia"
     color: "white"
     background: "black"
     path: "#prices_and_payment"
@@ -100,7 +100,7 @@ two_columns_second:
       Domina las amenazas del mundo digital actual con el Curso de Ciberseguridad de 4Geeks Academy. Aprende las habilidades y conocimientos claves para protegerte. Las prácticas de pentesting se basan en los laboratorios de certificación EJPT.
     font_size: ["16px", "16px", "16px", "16px", "16px"]
   button:
-    text: "Aplicar a la Academia"
+    text: "Postúlate a la Academia"
     color: "white"
     background: "black"
     path: "/es/aplica"
@@ -150,7 +150,7 @@ two_columns:
     text: "Adquiere los conocimientos para proteger sistemas contra amenazas cibernéticas. Este curso intensivo te brindará las habilidades necesarias para identificar, analizar y prevenir ataques, usando herramientas como Nessus, Nmap, Wireshark y Metasploit. Este programa de estudios fue cocreado por Daniela Maissi, una hacker ética del EC-Council como investigadora de malware y hábil desarrolladora web experta en ciberseguridad con más de 5 años de experiencia y 12+ certificaciones en computación en la nube, OSINT y soluciones de TI." 
     font_size: ["16px", "16px", "16px", "16px", "16px"]
   button:
-    text: "Aplicar a la Academia"
+    text: "Postúlate a la Academia"
     color: "white"
     background: "black"
     path: "#prices_and_payment"
