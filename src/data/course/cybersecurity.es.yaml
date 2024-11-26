@@ -61,9 +61,10 @@ two_columns_first:
   available_locations: ["madrid-spain", "malaga-spain", "barcelona-spain", "valencia-spain"]
   image:
     style: '{"border" : "0px solid black", "backgroundSize": "contain", "background-position": "center" }'
-    src: "../../images/staff/chema-alonso.webp" 
-    link: "https://www.mypublicinbox.com/chemaalonso"
-    shadow: false
+    src: "../../images/partner/chema-videoI.jpg" 
+    # link: "https://www.mypublicinbox.com/chemaalonso" # Link De la imagen  hacia cualquier URL.
+    shadow: true
+  video: "https://youtu.be/r0P4PwmOra0"
   heading:
     text: "Curso de Ciberseguridad validado por Chema Alonso el Hacker más Reconocido de España"
     font_size: ["28px", "28px", "28px", "23px", "23px"]
