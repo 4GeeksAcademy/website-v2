@@ -36,15 +36,6 @@ Buit by: Fernando Funes and George Mihov during the full-stack bootcamp
 
 ---
 
-Project name: iWash
-Description: iWash is an application integrating hardware and software towards building a platform capable of setting and launching Smart Laundry machines from your mobile device.  You can pay the cost of the service as well as set time, speed, type of laundry process, and receive notifications about the status of your laundry.
-Video demonstration: 
-Github URL: https://github.com/samirbenzada/Iwash
-Live URL: https://iwash-react.herokuapp.com/
-Buit by: Samir Benzada and Victor Mori during the full-stack bootcamp
-
----
-
 Project name: reMindful
 Description: Generating awareness about recycling and considering all the steps that need to be covered. They have created an application that integrates both software and hardware that allows to weigh the amount of plastic, glass or garbage there is within a container and how much it will affect both the recycling process as well as the environment.
 Video demonstration: https://www.youtube.com/watch?v=cKcZD0_1IKk
