@@ -12,6 +12,7 @@ import LeadForm from "../components/LeadForm";
 import { Circle } from "../components/BackgroundDrawing";
 import Testimonials from "../components/Testimonials";
 import OurPartners from "../components/OurPartners";
+import WeMakeEducation from "../components/WeMakeEducation";
 import ScholarshipProjects from "../components/ScholarshipProjects";
 import ScholarshipSuccessCases from "../components/ScholarshipSuccessCases";
 import BenefitsAndCharts from "../components/BenefitsAndCharts";
@@ -310,7 +311,7 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
           </Div>
         </Div>
       </Div>
-      <OurPartners margin="0" images={partnersData.partners.images} marquee />
+      <WeMakeEducation/>
       <ScholarshipProjects
         content={data.allScholarshipProjectsYaml.edges[0].node}
         lang={pageContext.lang}

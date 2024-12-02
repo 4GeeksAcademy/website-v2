@@ -13,7 +13,7 @@ const ScholarshipProjects = ({ content, maxWidth }) => {
   const sliderRef = useRef();
 
   const settings = {
-    dots: false,
+    dots: true,
     infinite: true,
     autoplay: true,
     autoplaySpeed: 6000,
