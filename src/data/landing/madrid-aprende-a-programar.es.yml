@@ -20,7 +20,7 @@ meta_info:
 
 navbar:
   logoUrl: "#" # relative(/apply), absolute(https://google.com) or id(#componentName)
-  buttonText: "Solicitar plaza"
+  buttonText: "Solicita tu plaza"
   buttonUrl: "#leadform_bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
 
 
@@ -28,14 +28,15 @@ form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
-  heading: "Solicita tu Beca"
+  heading: "Solicita tu plaza"
+  motivation: "Una vez completado el formulario alguien de nuestro equipo se podrá en contacto contigo, está atento a tu bandeja de correo."
   button_label: Enviar
   redirect: null #you can redirect to another url or entirely diffrent website
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  tagline: ¡Aprende a Programar en 18 Semanas!
-  sub_heading: " "
+  tagline: '¡Aprende <br>a Programar <br>en <span style="">18 Semanas!'
+  sub_heading: ""
   tagline_color: "#1c1c1c"
   form_styles:
     background: "#0084FF"
@@ -52,59 +53,76 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-    - Gana 24.000 € al año como desarrollador.
-    - El 86% de nuestros estudiantes encuentran trabajo en menos de 180 días.
     - No necesitas experiencia previa para comenzar.
+    - El 86% de nuestros estudiantes encuentran trabajo en menos de 180 días.
+    - Un Fullstack Promedio Gana unos 36000 € al año como desarrollador en España.
   text: 
 
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "Solicita una beca de hasta 1.800€. \n Planes de pago de hasta 24 meses."
-    text_mobile: "Becas de 1.800€ . \n Plan de pago de 24 m. \n ¡Últimas plazas!"
+    text: "Solicita tu plaza con Planes de pago\n de hasta 24 meses."
+    text_mobile: "Solicita tu plaza con Planes de pago\n de hasta 24 meses"
     # devices:   XL      LG    MD      SM    XS
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:
-    text: "Más información"
+    text: "Solicitar plaza"
     path: "#leadform_header"
   phone:
     text: "Llama "
 
 short_badges:
+  - name: "Top Online Full-Stack Bootcamps Of 2024"
+    url: ""
+    image: "../../../static/images/badges/forbes-logo-award.png"
+    alt: "We have been selected as one of the Top Online Coding Bootcamps by Forbes."
+  - name: "Best for Spanish speakers Of 2024 by Fortune"
+    url: ""
+    image: "../../../static/images/badges/fortune-logo.png"
+    alt: "Recognized by Fortune as one of the Top Coding Bootcamps"
+  - name: "Top Coding Bootcamps Newsweek"
+    url: ""
+    image: "../../../static/images/badges/newsweek.webp"
+    alt: "Top Coding Bootcamps Newsweek"
+  - name: "Best Coding Bootcamp Course Report 2024"
+    url: ""
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+    alt: "Best Coding Bootcamp Course Report 2024"
+  - name: "Licensed by the Florida Department of Education"
+    url: ""
+    image: "../../../static/images/badges/licensed.png"
+    alt: "Licensed by the Florida Department of Education"
+  - name: "ARP Certificate"
+    url: ""
+    image: "../../../static/images/badges/arp-logo-certification.png"
+    alt: "ARP Certificate"
   - name: "Premios Tecnologia Siglo XXI"
     url: ""
     image: "../../../static/images/awards/premios_tecnologia_sigloxxi.png"
     alt: "Mejor centro de Coding Bootcamp"
-  - name: "Course Report"
+  - name: "Premios Excelencia Educativa"
     url: ""
-    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
-    alt: "Top Coding Bootcamps Course Report"
-  - name: "Switchup"
-    url: ""
-    image: "../../../static/images/badges/switchup-badge-2023.png"
-    alt: "Best coding bootcamp Switchup 2023"
-  - name: "Florida Department of Education"
-    url: ""
-    image: "../../../static/images/badges/licensed-inverted.png"
-    alt: "Florida Department of Education"
+    image: "../../../../static/images/badges/exelencia-educativa-es.png"
+    alt: "Mejor centro de Coding Bootcamp"
+
 
 apply_schollarship: # form that is displayed at the end of the landing
   # title: "Get more info about this award-winning development course"
   imageSide: "left"
-  image: "../../../static/images/landing/apply.png"
+  image: "../../../static/images/landing/hombre-joven-con-laptop-senalando.webp"
 
 #
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
 #
 
 badges:
-  position: 5
+  position: 10
   heading: "Premios y reconocimientos que validan nuestra excelencia"
 
 program_details:
-  position: 1
-  heading: "Lo que aprenderás"
-  sub_heading: "Python, Javascript y React son las tecnologías más demandadas del mundo"
+  position: 2
+  heading: "¡Aprende las tecnologías más demandadas del mundo!"
+  sub_heading: "Python, Javascript y React"
 
 geeks_vs_others:
   position: 4
@@ -113,12 +131,12 @@ geeks_vs_others:
   total_rows: 5
 
 why_4geeks:
-  position: 5
-  heading: "¿Por qué 4Geeks?"
-  sub_heading: ""
+  position: 11
+  heading: "Experiencia de nuestros alumnos"
+  sub_heading: "Nuestro compromiso es brindarte todas las herramientas, mentorías y soporte para convertirte en un fullstack"
 
 who_is_hiring:
-  position: 6
+  position: 12
   limit: 4
   heading: "¿Quién contrata a nuestros alumnos?"
   sub_heading: "Nuestros partners de contratación aumentan todos los días, con más de 150 aliados a nivel global y decenas de vacantes activas en nuestras bolsas de empleo."
@@ -130,6 +148,28 @@ who_is_hiring:
 
 # Possible layours: [two_column_left_image, two_column_right_image]
 components:
+  - name: some_id
+    position: 1
+    layout: two_column_left
+    image:
+      style: '{ "border" : "3px solid black" }'
+      shadow: true
+      src: "../../../static/images/testimonials/Mattia-Tozzi-testimonial.jpg"
+    video: "B01-eTfgqqc"
+    heading:
+      text: "La experiencia de Mattia Tozzi en 4Geeks Academy"
+        #xl      lg     md     sm    xs
+      font_size: ["40px", "34px", "34px", "25px", "20px"]
+    content:
+      text: "Mattia Tozzi, quien, en busca de un cambio en su trayectoria profesional, se unió a 4Geeks Academy. Su experiencia es un testimonio de cómo la dedicación y el aprendizaje de este Bootcamp le ayudaron a potenciar su perfil profesional."
+      font_size: ["16px"]
+    button:
+      text: "Solicitar plaza"
+      path: "#leadform_bottom"
+      color: "white"
+      background: "black"
+      hover: "lightBlue"
+
   - name: top_coding_bootcamp
     position: 2
     layout: two_column_left
@@ -143,29 +183,7 @@ components:
       text:
         "Llevamos 5 años consecutivos siendo seleccionados como uno de los mejores coding bootcamps del mundo"
         #xl      lg     md     sm    xs
-      font_size: ["36px", "32px", "30px", "26px", "26px"]
-  - name: some_id
-    position: 7
-    layout: two_column_right
-    image:
-      style: '{ "border" : "3px solid black" }'
-      shadow: true
-      src: "../../../static/images/testimonials/Mattia-Tozzi-testimonial.jpg"
-    video: "B01-eTfgqqc"
-    heading:
-      text:
-        "El viaje de Mattia Tozzi en 4Geeks Academy y como cambió su vida profesional."
-        #xl      lg     md     sm    xs
-      font_size: ["40px", "34px", "34px", "25px", "20px"]
-    content:
-      text: "Descubre la cautivadora historia de Mattia Tozzi, quien, en busca de un cambio en su trayectoria profesional, se unió a 4Geeks Academy. Su experiencia es un testimonio vivo de cómo la dedicación y el aprendizaje en este bootcamp lo llevaron a convertirse en un profesional altamente capacitado."
-      font_size: ["16px"]
-    button:
-      text: "¡Únete a 4Geeks!"
-      path: "#leadform_bottom"
-      color: "white"
-      background: "black"
-      hover: "lightBlue"
+      font_size: ["30px", "30px", "25px", "24px", "20px"]
 
   - name: more_testimonials
     position: 9
