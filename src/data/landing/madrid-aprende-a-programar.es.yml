@@ -35,7 +35,7 @@ form:
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  tagline: '¡Aprende <br>a Programar <br>en <span style="">18 Semanas!'
+  tagline: '¡Aprende <br>a Programar <br>en <span style="">18 Semanas! <img src=https://eretail.uinterbox.com/tracking/cnv?org=4814&evt=10063 height="1" width="1" style="display:none">'
   sub_heading: ""
   tagline_color: "#1c1c1c"
   form_styles:
@@ -180,8 +180,8 @@ components:
       src: "/images/badges/Course-Report-Badge-2024.webp"
       link: "https://www.coursereport.com/schools/4geeks-academy"
     heading:
-      text:
-        "Llevamos 5 años consecutivos siendo seleccionados como uno de los mejores coding bootcamps del mundo"
+      text: |
+        'Llevamos 5 años consecutivos siendo seleccionados como uno de los mejores coding bootcamps del mundo'
         #xl      lg     md     sm    xs
       font_size: ["30px", "30px", "25px", "24px", "20px"]
 
