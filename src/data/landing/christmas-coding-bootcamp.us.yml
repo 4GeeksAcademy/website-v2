@@ -1,0 +1,296 @@
+meta_info:
+  slug: christmas-coding-bootcamp # <--- URL 4geeksacademy.com/us/landing/example
+
+  # This will show on social media when shared
+  title: "happy christmas with 4Geeks Academy"
+  description: "Become a Full Stack Developer with 4Geeks Academy"
+  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  image: "/images/bg/the-academy-bg.jpg"
+  keywords: ""
+
+  template: "landing_a" # <--- choose your landing template
+  redirects:
+    [] # <--- URL redirections to avoid 404 errors
+
+
+    # Set a particular course or location to the landing page
+  # this UTM fields will be also included in the CRM contact
+  utm_course: ["full-stack", "datascience-ml", "cybersecurity", "coding-introduction", "applied-ai"]
+  utm_location: ["atlanta-usa", "austin-usa", "chicago-usa", "downtown-miami", "houston-usa", "losangeles-usa", "newyork-usa", "orlando", "online"]
+  automation: soft # comma separated, "soft" is the default value
+  tag: request_more_info # comma separated, "request_more_info" is the default value
+
+navbar:
+  logoUrl: "#" # relative(/apply), absolute(https://google.com) or id(#componentName)
+  buttonText: "Get More Info"
+  buttonUrl: "#leadform_bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+
+form:
+  # posible fields: "first_name", "last_name", "full_name", "phone", "email"
+  # always the first_name, email and phone will be mandatory if added.
+  fields: ["full_name", "phone", "email"]
+  heading: "Get more Information"
+  motivation: "Fill out the form to receive detailed information about 4Geeks Academy and all the courses we offer, delivered straight to your inbox."
+  button_label: Get More Info
+  redirect: null #you can redirect to another url or entirely diffrent website
+
+apply_schollarship: # form that is displayed at the end of the landing
+  # title: "Apoyo Profesional Ilimitado"
+  imageSide: "left"
+  image: "../../../static/images/landing/hombre-joven-con-laptop-senalando.webp"
+
+# jumbotron on the top (cannot be commented out)
+header_data:
+  background: "#ffffff"
+  tagline: "Christmas is here"
+  tagline_color: "#1c1c1c"
+  sub_heading: "Start A Career In Tech and get our Applied AI course as a gift!"
+  form_styles:
+    background: "#0084FF"
+    color: "white"
+    button:
+      background: "black"
+  # background_image: "../../../static/images/landing-background-men-w-laptop.webp"
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+  image_filter: brightness(0.9)
+
+features:
+  marginTop: 0px #<-- separation between tagline and the bullets
+
+  #                                         up   left down  right
+  styles: '{ "fontSize": "20px", "margin": "10px 0px 0px 0px" }'
+  bullets:
+    - Become a Full-Stack Developer, Data Scientist, or Cybersecurity Specialist!
+    - Step into fast-growing, high-paying tech professions with strong job prospects and future demand.
+    - Learn anywhere, anytime—choose the format that suits you.
+    # - "Part-time: Immerse yourself in a flexible schedule, perfect for busy professionals and students."
+
+short_badges:
+  - name: "Top Online Full-Stack Bootcamps Of 2024"
+    url: ""
+    image: "../../../static/images/badges/forbes-logo-award.png"
+    alt: "We have been selected as one of the Top Online Coding Bootcamps by Forbes."
+  - name: "Best for Spanish speakers Of 2024 by Fortune"
+    url: ""
+    image: "../../../static/images/badges/fortune-logo.png"
+    alt: "Recognized by Fortune as one of the Top Coding Bootcamps"
+  - name: "Top Coding Bootcamps Newsweek"
+    url: ""
+    image: "../../../static/images/badges/newsweek.webp"
+    alt: "Top Coding Bootcamps Newsweek"
+  - name: "Best Coding Bootcamp Course Report 2024"
+    url: ""
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+    alt: "Best Coding Bootcamp Course Report 2024"
+  - name: "Licensed by the Florida Department of Education"
+    url: ""
+    image: "../../../static/images/badges/licensed.png"
+    alt: "Licensed by the Florida Department of Education"
+  - name: "ARP Certificate"
+    url: ""
+    image: "../../../static/images/badges/arp-logo-certification.png"
+    alt: "ARP Certificate"
+
+follow_bar:
+  position: "top" # top, bottom, hidden
+  content:
+    text: "Affordable payment plans starting at $40/week."
+    text_mobile: "Affordable payment plans starting at $40/week."
+    # devices:   XL      LG    MD      SM    XS
+    font_size: ["25px", "25px", "25px", "20px", "18px"]
+  button:
+    text: "Get More Info"
+    path: "#leadform_header"
+  phone:
+    text: "Call "
+
+#
+# ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
+#
+rating_reviews:
+  background: "#FBFBFB"
+  position: 4
+  heading: "Top rated on all available review sites"
+  rating_list:
+    - alt: "Career Karma"
+      image: "../../../static/images/badges/career-karma.png"
+      rating: 4.89
+      url: ""
+    - alt: "Switchup"
+      image: "../../../static/images/badges/switchup-img.png"
+      rating: 4.91
+      url: ""
+    - alt: "Course Report"
+      image: "../../../static/images/badges/course-report.png"
+      rating: 4.84
+      url: ""
+    - alt: "Google"
+      image: "../../../static/images/badges/google.png"
+      rating: 5
+      url: ""
+
+# program_details:
+#   position: 3
+#   background: "#faf2e1"
+#   heading: "Full-Stack Development One of our Coding Courses"
+#   sub_heading: "Dive deep into full-stack development with our detailed program that covers everything from HTML5 to advanced backend frameworks."
+
+# why_python:
+#   position: 5
+#   heading: "Why Python and React.js" # optional or set to white space to hide
+#   sub_heading: "JavaScript has 26x's more job vacancies than Ruby On Rails. Python has 10x's more job vacancies than Node.js" # optional or set to white space to hide
+
+geeks_vs_others:
+  position: 4
+  heading: "Compare our coding bootcamp to the competition"
+  # sub_heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+  total_rows: 5
+
+badges:
+  position: 5
+  heading: "Numerous Awards and Recognitions Celebrate Our Excellence"
+
+who_is_hiring:
+  position: 9
+  limit: 4
+  heading: "Who is hiring our students?"
+  sub_heading: "550+ hiring partners, and 50+ job openings right now for software development"
+
+why_4geeks:
+  position: 6
+  heading: "Why 4Geeks Academy"
+  sub_heading: ""
+
+components:
+  - name: how-it-works-programs
+    position: 1
+    background: "#fbfcfc"
+    layout: iconogram
+    swipable: True
+    heading:
+      text: "You can take it yourself or give to someone who could use some AI magic"
+      font_size: ["28px", "28px", "26px", "24px", "24px"]
+    sub_heading:
+      text: ""
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+      style: '{ "textAlign": "center", "width": "60%" }'
+    icons:
+      - icon: "fullstack"
+        title: "Full Stack Development"
+        content: "Become a Full Stack software developer using Python, React, and Javascript. Master the most sought-after- skills and land a job as a developer."
+
+      - icon: "machine"
+        title: "DATA SCIENCE AND MACHINE LEARNING"
+        content: "Acquire the skills to analyze complex data and leverage machine learning techniques to automate decision-making and uncover actionable insights."
+
+      - icon: "cibersecurity"
+        title: "CyberSecurity Bootcamp"
+        content: "Become a cybersecurity specialist, equipped to identify, manage, and mitigate system vulnerabilities in compliance with ISO and other standards."
+
+      - icon: "applied-ai"
+        title: "Applied AI"
+        content: "Explore how to leverage artificial intelligence to advance your career. Learn best practices to use generative AI to your advantage and become more productive."
+
+
+  - name: why_choose-4geeks
+    position: 2
+    proportions: [6, 6]
+    layout: two_column_left
+    image:
+      style: '{ "backgroundSize": "contain"}'
+      src: "/images/landing/blonde-girl-laptop.png"
+      shadow: false
+    # video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
+    heading:
+      text: "Why Choose Our Coding Courses?"
+        #xl      lg     md     sm    xs
+      font_size: ["40px", "34px", "34px", "25px", "20px"]
+    sub_heading:
+      text: ""
+    content:
+      text: "Our programs are designed to accelerate your learning and ensure your success. Backed by years of research and experience, our teaching methods use a blend of personalized mentorship, hands-on practice, and continuous micro-feedback to keep you motivated and actively engaged in the learning process. \n
+        At 4Geeks Academy, you’ll benefit from a comprehensive support system. Our mentorship and career services offer unlimited 1-on-1 sessions with our industry experts, providing personalized guidance whenever you need it. With instant feedback on your coding exercises from our proprietary AI and 24/7 support through our active community channels, you’re never left to figure things out on your own.\n
+        Many students face self-doubt about succeeding in tech, but we’re here to build your confidence and teach you that mistakes—lots of them—are a natural and essential part of learning. Our curriculum, tools, and exercises are grounded in real-world workplace demands, ensuring that you graduate career-ready and prepared to thrive in the tech industry."
+      font_size: ["16px"]
+    button:
+      text: "Get More Info"
+      background: black
+      color: white
+      hover_color: "#white"
+      path: "#leadform_header"
+
+  - name: geekinfo_2
+    position: 4
+    layout: two_column_right
+    proportions: [6, 6]
+    background: ""
+    image:
+      style: '{ "backgroundSize": "contain"}'
+      src: "/images/landing/meet-windows-group-en.webp"
+      shadow: false
+    section_heading:
+      text: ""
+      style: '{ "font-size": "30px" }'
+    heading:
+      text: "The Unique Features That Set Us Apart"
+      font_size: ["40px", "40px", "40px", "40px", "40px"]
+    sub_heading:
+      text: ""
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+    button:
+      text: "Get More Info"
+      color: white
+      hover_color: "black"
+      background: "black"
+      hover: "blue"
+      path: "#leadform_bottom"
+    content:
+      text: ""
+      font_size: ["16px"]
+      path: ""
+    bullets:
+      items:
+        - heading: "STUDENT-CENTRIC APPROACH"
+          text: "Small classes and 1:1 mentorship ensure personalized attention for each student."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "INDUSTRY-DRIVEN CURRICULUM"
+          text: "Courses designed to meet the demands of today’s tech employers."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "LIFELONG CAREER SUPPORT"
+          text: "Extensive alumni network and career services that continue beyond graduation."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "HANDS-ON LEARNING"
+          text: "Practical experience through project-based learning and real-world scenarios."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+
+  - name: some_id
+    position: 7
+    layout: two_column_left
+    image:
+      style: '{"border": "3px solid black"}'
+      src: "/images/landing/alissa-video.webp"
+      shadow: true
+    video: "EcqasocRKHo"
+    heading:
+      text: "Join Our Bootcamp with Flexible Financing Plans"
+        #xl      lg     md     sm    xs
+      font_size: ["40px", "34px", "34px", "25px", "20px"]
+    content:
+      text: "Based on years of research and experience, we've perfected the method and tools to optimize your learning curve and overall success rate. Listen to our campus manager Alissa as she explains the features that will keep you engaged, motivated, and on track to achieve your career goals."
+      font_size: ["16px"]
+    button:
+      text: "Get More Info"
+      background: black
+      color: white
+      hover_color: "#white"
+      path: "#leadform_header"
+    # bullets:
+    #   items:
+    #     - text: "Lifelong and readily available coding mentorship"
+    #       icon: "check" #string with icon for example ['check', 'cicle', etc]
+    #     - text: "Unlimited and personalized career support"
+    #       icon: "check" #string with icon for example ['check', 'cicle', etc]
+    #     - text: "Award-winning syllabus and methodology"
+    #       icon: "check" #string with icon for example ['check', 'cicle', etc]
+    #     - text: "An extensive network of partners in tech"
+    #       icon: "check" #string with icon for example ['check', 'cicle', etc]
