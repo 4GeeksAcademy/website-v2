@@ -40,14 +40,17 @@ full_time:
     academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
     recomended: false
     scholarship: "Financed"
-    payment_time: "24 months payment"
+    payment_time: |
+      24 months payment <br>
+      *Please see the Ascent website <a href="https://partner.ascentfunding.com/4geeksacademy/" target="_blank">partner page</a> for repayment examples and APRs.*
     price: "~$200 per month"
     bullets:
       - "We're fully committed to making our education accessible and offer multiple payment plans and financing options to uphold our promise."
       - "You can adapt your learning path to your financial needs. Choose to include or exclude our career support services, or enroll with a Job Guarantee."
       - "We also provide several full or partial scholarship options that you may be eligible for. Contact us for further details."
+      - "Payments for Full time Full Stack Development program with Ascent or Climb will not be less than $319.39."
     icons:
-      - "/images/ascent_logo.jpg"
+      - "/images/ascent-logo.png"
       - "/images/climb-logo.png"
 
   - slug: 'usa-fs-ft'
@@ -183,13 +186,16 @@ part_time:
     academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
     recomended: false
     scholarship: "Financed"
-    payment_time: "You can pay in 3, 4 or 5 years"
+    payment_time: |
+      You can pay in 3, 4 or 5 years <br>
+      *Please see the Ascent website <a href="https://partner.ascentfunding.com/4geeksacademy/" target="_blank">partner page</a> for repayment examples and APRs.*
     price: "~$150 p/mo"
     bullets: 
       - "Several partners offering loans and payment plans"
       - "You can get a partial scholarship and the remaining balance with a payment plan"
+      - "Payments for Part time Full Stack Development program with Ascent or Climb will not be less than $245.66."
     icons: 
-      - "/images/ascent_logo.jpg"
+      - "/images/ascent-logo.png"
       - "/images/climb-logo.png"
 
   - slug: 'usa-clark-scholarship-pt'

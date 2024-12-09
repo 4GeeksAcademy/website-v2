@@ -12,9 +12,9 @@ full_time:
       - "Estás ahorrando $1000 USD"
       - "Este descuento aplica a estudiantes que no son elegibles para la Beca de la Universidad Clark (generalmente empleados o con trabajo estable)."
     icons:
-      - "/images/ascent_logo.jpg"
-      - "/images/climb-logo.png"
-      - "/images/quotanda-logo.png"
+      - "/images/visa-mastercard.png"
+      - "/images/ethereum.png"
+      - "/images/bitcoin.png"
 
   - slug: 'plan-1'
     academies: ['downtown-miami', 'orlando']
@@ -40,7 +40,7 @@ full_time:
       - "Con $400 p/ semana de estipendios para gastos de subsistencia"
       - "9% de tu salario hasta que se pague en su totalidad, solo si consigues un trabajo en tecnología."
     icons: 
-      - "/images/ascent_logo.jpg"
+      - "/images/ascent-logo.png"
       - "/images/climb-logo.png"
       - "/images/quotanda-logo.png"
 
@@ -90,7 +90,7 @@ part_time:
       - "Estamos totalmente comprometidos a hacer que nuestra educación sea accesible y ofrecemos múltiples planes de pago y opciones de financiamiento para cumplir con nuestra promesa."
       - "Puedes adaptar tu camino de aprendizaje a tus necesidades financieras. Elige incluir o excluir nuestros servicios de apoyo profesional."
     icons: 
-      - "/images/ascent_logo.jpg"
+      - "/images/ascent-logo.png"
       - "/images/climb-logo.png"
       - "/images/quotanda-logo.png"
 
