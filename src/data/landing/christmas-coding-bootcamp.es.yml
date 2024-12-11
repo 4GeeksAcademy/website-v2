@@ -49,7 +49,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  tagline: "¡La navidad <br>ha llegado!🎅"
+  tagline: "¡La NAVIDAD <br>ha llegado!🎅"
   sub_heading: "Inicia tu carrera en tecnología y obtén nuestro curso de Applied AI como regalo."
   background: "#ffffff"
   tagline_color: "#1c1c1c"
@@ -70,7 +70,7 @@ features:
   bullets:
     - Desde desarrollo Full-Stack hasta Data Science, Ciberseguridad y Applied AI.
     - Obtén una certificación reconocida que abrirá puertas en toda LATAM y más allá.
-    - orientación continua e ilimitada de expertos de la industria de por vida.
+    - Orientación continua e ilimitada de expertos de la industria de por vida.
 
 follow_bar:
   position: "top" # top, bottom, hidden
@@ -83,7 +83,7 @@ follow_bar:
     text: "Más Información"
     path: "#leadform_header"
   phone:
-    text: "llama"
+    text: "llama  "
 
 short_badges:
   - name: "Top Online Full-Stack Bootcamps Of 2024"
@@ -165,7 +165,7 @@ who_is_hiring:
 
 why_4geeks:
   position: 9
-  heading: "Porqué 4Geeks"
+  heading: "¿Por Qué 4Geeks?"
   sub_heading: ""
 
 # Possible layouts: [two_column_left_image, two_column_right_image]
@@ -216,17 +216,17 @@ components:
     sub_heading:
       text: "4Geeks Academy se ha consolidado como una referencia en la formación tecnológica en LATAM y en el mundo. Nuestros programas están diseñados específicamente para satisfacer la creciente demanda de talento en la región, ofreciendo cursos que van desde Desarrollador Full-Stack hasta Data Science y Machine Learning."
     content:
-      text: "En 4Geeks Academy, no solo aprenderás a programar, ¡te convertirás en un verdadero Profesional! Prepárate para enfrentar nuevos desafíos y adquirir habilidades que te harán destacar en el competitivo mundo tecnológico."
+      text: "En 4Geeks Academy, no solo aprenderás a programar, ¡te convertirás en un verdadero profesional! Prepárate para enfrentar nuevos desafíos y adquirir habilidades que te harán destacar en el competitivo mundo tecnológico."
       font_size: ["16px"]
       path: ""
     bullets:
       items:
       - text: "LATAM necesita más de 1 millón de profesionales en tecnología para 2025, lo que significa que hay un vasto mercado laboral esperando por ti."
-        icon: "circle" 
+        icon: "check" 
       - text: "Nuestros graduados son contratados por empresas de primer nivel en toda la región, lo que demuestra la calidad de nuestra formación y la relevancia de nuestras habilidades en el mercado."
-        icon: "circle" 
+        icon: "check" 
       - text: "Desde la inscripción hasta la graduación, te acompañamos en cada paso de tu camino. Además, ofrecemos mentorías personalizadas ilimitadas y de por vida, asegurando que siempre tengas el apoyo que necesitas, incluso después de conseguir tu primer trabajo."
-        icon: "circle" 
+        icon: "check" 
     button:
       text: "Más Información"
       color: white
@@ -266,7 +266,7 @@ components:
     background: "veryLightBlue" 
     image:
       style: '{"backgroundSize": "contain", "background-position": "center"}'
-      src: "/images/landing/landing-programas.webp"
+      src: "/images/landing/landing-programas-bg.png"
       shadow: false
     section_heading:
       text: ""
@@ -291,10 +291,10 @@ components:
         text: "La demanda crece rápidamente, con sueldos de entre $1,500 y $4,500 USD mensuales. Aprende a proteger sistemas y datos críticos usando herramientas como Wireshark y Metasploit."
         icon: "check" 
       - heading: "Applied AI"
-        text: "la inteligencia artificial aplicada transforma industrias a través de soluciones innovadoras, un profesional que sepa aprovechar las herramientas de inteligencia artificial puede multiplicar tus resultados y por consecuencia tus ingresos, muchos profesionales en distintos rubros  utilizan actualmente  la IA."
+        text: "La inteligencia artificial aplicada transforma industrias a través de soluciones innovadoras, un profesional que sepa aprovechar las herramientas de inteligencia artificial puede multiplicar tus resultados y por consecuencia tus ingresos, muchos profesionales en distintos rubros  utilizan actualmente  la IA."
         icon: "check" 
     button:
-      text: "Inscribete hoy!"
+      text: "Inscríbete Hoy!"
       color: white
       hover_color: "white"
       background: "black"
