@@ -47,7 +47,7 @@ full_time:
       - "You can adapt your learning path to your financial needs. Choose to include or exclude our career support services, or enroll with a Job Guarantee."
       - "We also provide several full or partial scholarship options that you may be eligible for. Contact us for further details."
     icons:
-      - "/images/ascent_logo.jpg"
+      - "/images/ascent-logo.png"
       - "/images/climb-logo.png"
 
   - slug: 'usa-fs-ft'
@@ -178,18 +178,21 @@ part_time:
       - "You get to pay this also using one of our payment plans"
       - "We are extremely invested in making quality coding education accessible to everyone"
       - "There are plenty of partial scholarships available, please ask us how to get access to them."
+    extra_disclaimer: "This is a special opportunity to access world-class coding education at an unbeatable price. Don't miss it!"
 
   - slug: 'usa-financed-pt'
     academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
     recomended: false
     scholarship: "Financed"
-    payment_time: "You can pay in 3, 4 or 5 years"
+    payment_time: |
+      Pay in 3, 4 or 5 years <br>
+      *Please see the Ascent website <a href="https://partner.ascentfunding.com/4geeksacademy/" target="_blank">partner page</a> for repayment examples and APRs.*
     price: "~$150 p/mo"
     bullets: 
       - "Several partners offering loans and payment plans"
       - "You can get a partial scholarship and the remaining balance with a payment plan"
     icons: 
-      - "/images/ascent_logo.jpg"
+      - "/images/ascent-logo.png"
       - "/images/climb-logo.png"
 
   - slug: 'usa-clark-scholarship-pt'
