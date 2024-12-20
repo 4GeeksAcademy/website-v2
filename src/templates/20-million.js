@@ -3,7 +3,7 @@ import { graphql } from "gatsby";
 import { Link } from "gatsby";
 import { isCustomBarActive } from "../actions";
 import Icon from "../components/Icon";
-import Iconogram from "../components/Iconogram"
+import Iconogram from "../components/Iconogram";
 import BaseRender from "./_baseLayout";
 import { Div, HR, GridContainer } from "../components/Sections";
 import { H1, H2, Paragraph, SubTitle } from "../components/Heading";
@@ -64,10 +64,8 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
         padding="90px 20px 42px 20px"
         padding_tablet="72px 130px 72px 130px"
         position="relative"
-
         display="block"
       >
-
         <Div display="block" gap="10px">
           <H2
             type="h2"
@@ -113,7 +111,7 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
                   height="auto"
                   fontSize="21px"
                   lineHeight="25.2px"
-                  padding ="16px 24px 16px 24px"
+                  padding="16px 24px 16px 24px"
                   gap="10px"
                   width_tablet="fit-content"
                   color={Colors.black}
@@ -127,7 +125,7 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
                     height="10px"
                     color={Colors.white}
                     style={{ marginLeft: "10px" }}
-                    />
+                  />
                 </Button>
               </Link>
             </Div>
@@ -168,6 +166,7 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
         padding="50px 80px 50px 80px"
       />
       <BenefitsAndChartsV2 data={partnersData} goToForm={goToForm} />
+      <Iconogram yml={yml.iconogram}/>
 
       <Div
         id="two_column_left"
@@ -274,10 +273,11 @@ export const query = graphql`
             }
           }
           iconogram {
-            heading{
+            heading {
               text
               style
             }
+            swipable
             icons {
               icon
               color

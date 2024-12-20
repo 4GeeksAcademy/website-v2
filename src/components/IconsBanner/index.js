@@ -23,15 +23,14 @@ export default ({ icon, title, content, color, content_style, ...rest }) => {
     >
       {(icon || rest.progress) && (
         //set inside div with property relative
-        //p position this as absolute 
+        //p position this as absolute
         ///progress property with color style is over the icon
-        //check with coniditional rendering for progress and paragraph component 
+        //check with coniditional rendering for progress and paragraph component
         <Icon
-          icon={rest.progress ? 'progress':icon}
+          icon={rest.progress ? "progress" : icon}
           width="56px"
           height="56px"
           color={Colors[color] || color}
-          
         />
       )}
       <Div

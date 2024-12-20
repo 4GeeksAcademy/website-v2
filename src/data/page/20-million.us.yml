@@ -38,16 +38,14 @@ iconogram:
     style: '{ "textAlign": "left", "width": "60%" }'
   swipable: false
   icons:
-  - icon: "chart-62"
+  - icon: "newChart62"
     content: "62% of executives believe they will need to retrain or replace more than a quarter of their workforce between now and 2023 due to advancing automation and digitization. A 2018 study by McKinsey report."
   - icon: "newHireMedal"
-    color: "#0084FF"
     content: "According to a 2016 study by the Society for Human Resource Management, it costs an average of $4,129 to hire a new employee, and it takes an average of 42 days to find a new hire."
   - icon: "newBriefcaseUpdate"
-    color: "#25BF6C"
     content: "Coding bootcamps and 4-year colleges have nearly identical percentage of alumni employed"
-  - icon: "chart-72"
-    description: "72% of employers say that hiring bootcamp graduates is comparable to hiring a college graduate."
+  - icon: "newChart72"
+    content: "72% of employers say that hiring bootcamp graduates is comparable to hiring a college graduate."
 
  
   # charts:

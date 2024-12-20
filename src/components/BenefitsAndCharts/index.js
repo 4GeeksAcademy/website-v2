@@ -21,7 +21,6 @@ const BenefitsAndCharts = (props) => {
         margin="0 auto"
         margin_tablet="10px 24px 10px 0"
         textColor="white"
-
         borderRadius="4px"
       >
         {data.benefits_and_charts.button_section.button_text}

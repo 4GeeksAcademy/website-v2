@@ -4,7 +4,6 @@ import { H2, H3, Paragraph } from "../Heading";
 import { Button, Colors } from "../Styling";
 import Icon from "../Icon";
 
-
 const BenefitsAndChartsV2 = (props) => {
   const { data, goToForm } = props;
 
@@ -22,7 +21,6 @@ const BenefitsAndChartsV2 = (props) => {
         margin="0 auto"
         margin_tablet="10px 24px 10px 0"
         textColor="white"
-
         borderRadius="4px"
       >
         {data.benefits_and_charts.button_section.button_text}
@@ -31,7 +29,7 @@ const BenefitsAndChartsV2 = (props) => {
   );
   return (
     <>
-     <Div
+      <Div
         className="benefits_and_charts"
         display="flex"
         flexDirection="row"
@@ -45,10 +43,15 @@ const BenefitsAndChartsV2 = (props) => {
         maxWidth={props.maxWidth || "1280px"}
       >
         <Div flexDirection="column" flex="1" flex_tablet="1">
-          <H2 type="h2" textAlign="left" height="98px" fontSize="45px" lineHeight="48.96px">
+          <H2
+            type="h2"
+            textAlign="left"
+            height="98px"
+            fontSize="45px"
+            lineHeight="48.96px"
+          >
             {data.benefits_and_charts.title}
           </H2>
-         
 
           <ButtonPartner />
         </Div>
@@ -72,7 +75,6 @@ const BenefitsAndChartsV2 = (props) => {
                 alignItems="center"
                 padding="0"
                 padding_tablet="0 10% 0 0"
-
               >
                 <Div
                   flexDirection="column"
@@ -100,10 +102,7 @@ const BenefitsAndChartsV2 = (props) => {
             ))}
           </Div>
         )}
-
-
       </Div>
-      
     </>
   );
 };

@@ -10,7 +10,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { Button } from "../Styling";
 import CarouselV2 from "../CarouselV2";
 
-const ScholarshipSuccessCases = ({ content, maxWidth , padding, ...props}) => {
+const ScholarshipSuccessCases = ({ content, maxWidth, padding, ...props }) => {
   const settings = {
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -89,7 +89,11 @@ const ScholarshipSuccessCases = ({ content, maxWidth , padding, ...props}) => {
                     height="16px"
                     fill="#FFB718"
                   />
-                  <Paragraph fontSize="9px" fontWeight="600" color={Colors.yellow}>
+                  <Paragraph
+                    fontSize="9px"
+                    fontWeight="600"
+                    color={Colors.yellow}
+                  >
                     {student.status}
                   </Paragraph>
                 </Div>
