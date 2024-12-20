@@ -35,7 +35,7 @@ benefits_and_charts:
 iconogram:
   heading:
     text: "Numbers that support us"
-    style: '{ "textAlign": "left", "width": "60%", "alignSelf": "flex-start", "marginLeft": "16px"}'
+    style: '{ "display":"flex","textAlign": "left","alignSelf": "start","width": "60%"}'
   swipable: false
   icons:
   - icon: "newChart62"

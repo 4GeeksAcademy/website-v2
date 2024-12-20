@@ -37,9 +37,9 @@ const BenefitsAndChartsV2 = (props) => {
         padding="30px 20px 80px 20px"
         flexDirection_tablet="row"
         margin="auto"
-        // padding_tablet="40px 40px"
-        // padding_md="60px 80px"
-        // padding_lg="80px 0"
+        padding_tablet="40px 40px"
+        padding_md="60px 80px"
+        padding_lg="80px 0"
         maxWidth={props.maxWidth || "1280px"}
       >
         <Div flexDirection="column" flex="1" flex_tablet="1">

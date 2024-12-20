@@ -153,7 +153,10 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
                 </Button>
               </Link>
             </Div>
+            
           </Div>
+          <Icon
+            icon="scholarshipHeader"/>
         </Div>
       </Div>
       <WeMakeEducation />
@@ -282,7 +285,6 @@ export const query = graphql`
               icon
               content
               content_style
-
             }
           }
           two_column_left {
