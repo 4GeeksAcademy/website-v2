@@ -166,7 +166,7 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
         padding="50px 80px 50px 80px"
       />
       <BenefitsAndChartsV2 data={partnersData} goToForm={goToForm} />
-      <Iconogram yml={yml.iconogram}/>
+      <Iconogram yml={yml.iconogram} />
 
       <Div
         id="two_column_left"
@@ -280,8 +280,9 @@ export const query = graphql`
             swipable
             icons {
               icon
-              color
               content
+              style
+
             }
           }
           two_column_left {
