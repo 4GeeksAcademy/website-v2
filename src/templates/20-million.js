@@ -281,7 +281,7 @@ export const query = graphql`
             icons {
               icon
               content
-              style
+              content_style
 
             }
           }
