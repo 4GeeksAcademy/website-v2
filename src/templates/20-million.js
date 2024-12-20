@@ -2,9 +2,11 @@ import React, { useEffect, useState, useRef } from "react";
 import { graphql } from "gatsby";
 import { Link } from "gatsby";
 import { isCustomBarActive } from "../actions";
+import Icon from "../components/Icon";
+import Iconogram from "../components/Iconogram"
 import BaseRender from "./_baseLayout";
 import { Div, HR, GridContainer } from "../components/Sections";
-import { H2, Paragraph, SubTitle } from "../components/Heading";
+import { H1, H2, Paragraph, SubTitle } from "../components/Heading";
 import { Button, Colors } from "../components/Styling";
 import { beHiringPartner } from "../actions";
 import { SessionContext } from "../session";
@@ -15,7 +17,7 @@ import OurPartners from "../components/OurPartners";
 import WeMakeEducation from "../components/WeMakeEducation";
 import ScholarshipProjects from "../components/ScholarshipProjects";
 import ScholarshipSuccessCases from "../components/ScholarshipSuccessCases";
-import BenefitsAndCharts from "../components/BenefitsAndCharts";
+import BenefitsAndChartsV2 from "../components/BenefitsAndChartsV2";
 import TwoColumn from "../components/TwoColumn/index.js";
 
 const TwentyMillion = ({ data, pageContext, yml }) => {
@@ -23,6 +25,7 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
   const partnersData = data.allPartnerYaml.edges[0].node;
 
   const [applyButtonText, setApplyButtonText] = useState("");
+  const apply_button_text = yml.button.apply_button_text;
   const joinPartnersRef = useRef(null);
   const goToForm = (e) => {
     e.preventDefault();
@@ -61,233 +64,70 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
         padding="90px 20px 42px 20px"
         padding_tablet="72px 130px 72px 130px"
         position="relative"
-        background={Colors.veryLightBlue2}
+
         display="block"
       >
-        <Circle
-          color="yellow"
-          width="17px"
-          height="17px"
-          top="87px"
-          left="74px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="black"
-          width="17px"
-          height="17px"
-          top="116px"
-          left="74px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="white"
-          width="17px"
-          height="17px"
-          top="172px"
-          left="74px"
-          zIndex="-1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="blue"
-          width="17px"
-          height="17px"
-          top="216px"
-          left="74px"
-          zIndex="-1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="white"
-          width="17px"
-          height="17px"
-          top="298px"
-          left="74px"
-          zIndex="-1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="black"
-          width="17px"
-          height="17px"
-          top="116px"
-          left="106px"
-          zIndex="-1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="white"
-          width="17px"
-          height="17px"
-          top="145px"
-          left="106px"
-          zIndex="-1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="white"
-          width="17px"
-          height="17px"
-          top="182px"
-          left="106px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="yellow"
-          width="17px"
-          height="17px"
-          top="246px"
-          left="106px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="blue"
-          width="30px"
-          height="30px"
-          top="120px"
-          right="83px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="white"
-          width="17px"
-          height="17px"
-          top="170px"
-          right="50px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="black"
-          width="17px"
-          height="17px"
-          top="170px"
-          right="89px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="white"
-          width="17px"
-          height="17px"
-          top="170px"
-          right="128px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="yellow"
-          width="21px"
-          height="21px"
-          top="10px"
-          right="320px"
-          zIndex="1"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="blue"
-          width="57px"
-          height="57px"
-          top="32px"
-          right="61px"
-          display="none"
-          display_tablet="inline"
-        />
-        <Circle
-          color="blue"
-          width="15px"
-          height="15px"
-          top="92px"
-          left="9px"
-          zIndex="1"
-          display="inline"
-          display_tablet="none"
-        />
-        <Circle
-          color="white"
-          width="15px"
-          height="15px"
-          top="130px"
-          left="10px"
-          zIndex="1"
-          display="inline"
-          display_tablet="none"
-        />
-        <Circle
-          color="darkGray"
-          width="15px"
-          height="15px"
-          top="195px"
-          left="5px"
-          zIndex="1"
-          display="inline"
-          display_tablet="none"
-        />
-        <Div display="block">
+
+        <Div display="block" gap="10px">
           <H2
             type="h2"
-            color={Colors.black}
-            textAlign="center"
-            textAlign_tablet="center"
-            fontSize="40px"
-            fontSize_tablet="50px"
-            lineHeight="38px"
+            textAlign_tablet="start"
+            textAlign_xxs="start"
+            fontSize="60px"
+            fontSize_tablet="55px"
+            margin="20px 0 0 0"
+            lineHeight_xxs="45px"
             lineHeight_tablet="60px"
-            margin_tablet="40px 0 40px 0"
+            width_tablet="100%"
+            fontFamily="Archivo-Black"
+            color={Colors.black}
           >
             {yml.header.title}
           </H2>
           <SubTitle
             color={Colors.black}
-            margin="20px 0"
+            margin="20px 0 0 0"
             padding="0"
             width="auto"
             letterSpacing="0.05em"
-            textAlign="center"
-            textAlign_tablet="center"
+            textAlign="start"
           >
             {yml.header.paragraph}
           </SubTitle>
           <Div
             flexDirection_tablet="row"
             flexDirection="column"
-            justifyContent="start"
-            justifyContent_tablet="center"
-            alignItems="center"
-            margin_tablet="0 0 50px 0"
+            justifyContent="left"
+            margin="20px 0 0 0"
+            // justifyContent_tablet="center"
+            alignItems="left"
+            gap="24px"
+            // margin_tablet="0 0 50px 0"
           >
-            <Div width="100%" width_tablet="fit-content">
+            <Div width="100%" width_tablet="fit-content" gap="24px">
               <Link to={yml.button.apply_button_link} style={{ width: "100%" }}>
                 <Button
                   variant="full"
                   justifyContent="center"
-                  width="100%"
+                  width="auto%"
+                  height="auto"
+                  fontSize="21px"
+                  lineHeight="25.2px"
+                  padding ="16px 24px 16px 24px"
+                  gap="10px"
                   width_tablet="fit-content"
                   color={Colors.black}
-                  margin_tablet="10px 24px 10px 0"
+                  // margin_tablet="10px 24px 10px 0"
                   textColor="white"
                 >
-                  {applyButtonText}
+                  {apply_button_text}
+                  <Icon
+                    icon="arrowToRight"
+                    width="13px"
+                    height="10px"
+                    color={Colors.white}
+                    style={{ marginLeft: "10px" }}
+                    />
                 </Button>
               </Link>
             </Div>
@@ -295,12 +135,19 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
               <Link to="#fake_bottom" style={{ width: "100%" }}>
                 <Button
                   display="block"
-                  width="100%"
+                  width="auto"
                   width_tablet="fit-content"
+                  height="auto"
+                  borderRadius="3px"
+                  border="2px"
+                  padding="16px 24px 16px 24px"
+                  gap="10px"
+                  fontSize="21px"
+                  lineHeight="25.2px"
                   variant="outline"
                   color={Colors.black}
-                  margin="10px 0 50px 0"
-                  margin_tablet="0"
+                  // margin="10px 0 50px 0"
+                  // margin_tablet="0"
                   textColor={Colors.black}
                   textAlign="center"
                 >
@@ -311,15 +158,16 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
           </Div>
         </Div>
       </Div>
-      <WeMakeEducation/>
+      <WeMakeEducation />
       <ScholarshipProjects
         content={data.allScholarshipProjectsYaml.edges[0].node}
         lang={pageContext.lang}
       />
       <ScholarshipSuccessCases
         content={data.allScholarshipSuccessCasesYaml.edges[0].node}
+        padding="50px 80px 50px 80px"
       />
-      <BenefitsAndCharts data={partnersData} goToForm={goToForm} />
+      <BenefitsAndChartsV2 data={partnersData} goToForm={goToForm} />
 
       <Div
         id="two_column_left"
@@ -413,8 +261,28 @@ export const query = graphql`
             paragraph
           }
           button {
+            apply_button_text
             btn_label
             apply_button_link
+          }
+          benefits_and_charts {
+            title
+            bullets
+            button_section {
+              button_text
+              button_link
+            }
+          }
+          iconogram {
+            heading{
+              text
+              style
+            }
+            icons {
+              icon
+              color
+              content
+            }
           }
           two_column_left {
             proportions

@@ -270,7 +270,7 @@ benefits_and_charts:
     button_link: ""
   bullets:
     - Access to a big pool of high quality and uniue talent.
-    - Increase joob retention with reskilling programs.
+    - Increase job retention with reskilling programs.
     - Bridge the technology divide within the community.
     - Fill tech job openings.
     - Increase brand awarenenss and value with workshop sponsorships and speaking opportunities.
@@ -279,9 +279,9 @@ benefits_and_charts:
     - Tax reduction
 
   charts:
-    title: "Some Numbers worth Considering:"
+    title: "Numbers that support us"
     list:
-      - icon: "chart-62"
+      - icon: "chart-62"  
         description: |
           According to a study by the Society for Human Resource Management, it costs an average of $4,129 to hire a new employee, with an average of 42 days to find a suitable candidate.
       - icon: "job"

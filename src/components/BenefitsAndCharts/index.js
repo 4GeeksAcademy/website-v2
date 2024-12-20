@@ -21,6 +21,7 @@ const BenefitsAndCharts = (props) => {
         margin="0 auto"
         margin_tablet="10px 24px 10px 0"
         textColor="white"
+
         borderRadius="4px"
       >
         {data.benefits_and_charts.button_section.button_text}
@@ -32,7 +33,7 @@ const BenefitsAndCharts = (props) => {
       <Div
         className="benefits_and_charts"
         display="flex"
-        flexDirection="row"
+        flexDirection="column"
         gap="50px"
         padding="30px 20px 80px 20px"
         flexDirection_tablet="row"
@@ -55,11 +56,7 @@ const BenefitsAndCharts = (props) => {
             {data.benefits_and_charts.description}
           </Paragraph>
 
-        
-
-          <ButtonPartner />
-        </Div>
-        {Array.isArray(data.benefits_and_charts.bullets) && (
+          {Array.isArray(data.benefits_and_charts.bullets) && (
             <Div
               display="flex"
               flexDirection="column"
@@ -89,8 +86,8 @@ const BenefitsAndCharts = (props) => {
                     <Icon
                       icon="check"
                       width="18px"
-                      color={Colors.blue}
-                      fill={Colors.blue}
+                      color={Colors.yellow}
+                      fill={Colors.yellow}
                     />
                   </Div>
                   <H3
@@ -106,15 +103,17 @@ const BenefitsAndCharts = (props) => {
               ))}
             </Div>
           )}
-      
-      </Div>
-      <Div
+
+          <ButtonPartner />
+        </Div>
+
+        <Div
           flexDirection="column"
           flex="1"
           flex_tablet="1"
           padding="20px 10px 40px 10px"
           padding_tablet="4% 30px 2% 30px"
-         
+          background={Colors.lightYellow}
         >
           <Div
             height="auto"
@@ -141,7 +140,7 @@ const BenefitsAndCharts = (props) => {
               {data.benefits_and_charts.charts.title}
             </H3>
           </Div>
-          <Div flexDirection="row" gap="48px">
+          <Div flexDirection="column" gap="48px">
             {data.benefits_and_charts.charts.list.map((chart, index) => (
               <Div
                 height="auto"
@@ -149,9 +148,6 @@ const BenefitsAndCharts = (props) => {
                 alignItems="center"
                 padding="0 5px 0 20px"
                 padding_tablet="0 5px 0 10px"
-                border ="4px solid black"
-                borderRadius="2px"
-                boxShadow="4px 4px 8px rgba(0, 0, 0, 1.0)"
                 gap="40px"
               >
                 <Div
@@ -166,6 +162,7 @@ const BenefitsAndCharts = (props) => {
             ))}
           </Div>
         </Div>
+      </Div>
     </>
   );
 };

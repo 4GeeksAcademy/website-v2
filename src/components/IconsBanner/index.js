@@ -4,7 +4,7 @@ import { Div } from "../Sections";
 import { Colors } from "../Styling";
 import Icon from "../Icon";
 
-export default ({ icon, title, content, color, content_style }) => {
+export default ({ icon, title, content, color, content_style, ...rest }) => {
   return (
     <Div
       background="#FFF"
@@ -21,12 +21,17 @@ export default ({ icon, title, content, color, content_style }) => {
       alignItems_tablet="start"
       borderRadius="4px"
     >
-      {icon && (
+      {(icon || rest.progress) && (
+        //set inside div with property relative
+        //p position this as absolute 
+        ///progress property with color style is over the icon
+        //check with coniditional rendering for progress and paragraph component 
         <Icon
-          icon={icon}
+          icon={rest.progress ? 'progress':icon}
           width="56px"
           height="56px"
           color={Colors[color] || color}
+          
         />
       )}
       <Div

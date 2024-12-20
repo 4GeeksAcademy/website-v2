@@ -9,12 +9,61 @@ meta_info:
 
 seo_title: Level up as a developer
 header:
-  title: $20+ Million in Scholarships
-  paragraph: Fueling the Future of Tech Education, Making Coding Accessible to All.
+  title: $20+ Millions in scholarships
+  paragraph: Solving access to coding education. You can be the next!
 
 button:
-  btn_label: I want to Contribute
+  btn_label: I want to contribute
+  apply_button_text: Apply
   apply_button_link: "/us/apply"
+
+benefits_and_charts:
+  title: "Become part of our partnership network"
+  button_section:
+    button_text: "I want to contribute"
+    button_link: ""
+  bullets:
+    - Access to a big pool of high quality and uniue talent.
+    - Increase job retention with reskilling programs.
+    - Bridge the technology divide within the community.
+    - Fill tech job openings.
+    - Increase brand awarenenss and value with workshop sponsorships and speaking opportunities.
+    - Establish your brand as a strong leader in the tech industry.
+    - Community Building.
+    - Tax reduction
+
+iconogram:
+  heading:
+    text: "Numbers that support us"
+    style: '{ "textAlign": "left", "width": "60%" }'
+  swipable: false
+  icons:
+  - icon: "chart-62"
+    content: "62% of executives believe they will need to retrain or replace more than a quarter of their workforce between now and 2023 due to advancing automation and digitization. A 2018 study by McKinsey report."
+  - icon: "newHireMedal"
+    color: "#0084FF"
+    content: "According to a 2016 study by the Society for Human Resource Management, it costs an average of $4,129 to hire a new employee, and it takes an average of 42 days to find a new hire."
+  - icon: "newBriefcaseUpdate"
+    color: "#25BF6C"
+    content: "Coding bootcamps and 4-year colleges have nearly identical percentage of alumni employed"
+  - icon: "chart-72"
+    description: "72% of employers say that hiring bootcamp graduates is comparable to hiring a college graduate."
+
+ 
+  # charts:
+  #   title: "Numbers that support us"
+  #   list:
+  #     - icon: "chart-62"
+  #         progress: "62"  
+  #       description: |
+  #         According to a study by the Society for Human Resource Management, it costs an average of $4,129 to hire a new employee, with an average of 42 days to find a suitable candidate.
+  #     - icon: "job"
+  #       description: "62% of executives believe they will need to retrain or replace more than a quarter of their workforce between now and 2023 due to advancing automation and digitization (McKinsey report, 2018)."
+  #     - icon: "notes-2"
+  #       description: "Coding bootcamp graduates and college graduates exhibit strikingly similar employment rates."
+  #     - icon: "chart-72"
+  #       description: "72% of employers say that hiring bootcamp graduates is comparable to hiring a college graduate."
+ 
 two_column_left:
   proportions:
     - 6

@@ -10,8 +10,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { Button } from "../Styling";
 import CarouselV2 from "../CarouselV2";
 
-
-const ScholarshipSuccessCases = ({ content, maxWidth }) => {
+const ScholarshipSuccessCases = ({ content, maxWidth , padding, ...props}) => {
   const settings = {
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -21,44 +20,41 @@ const ScholarshipSuccessCases = ({ content, maxWidth }) => {
         breakpoint: 1024,
         settings: {
           slidesToShow: 2,
-        }
+        },
       },
       {
         breakpoint: 600,
         settings: {
           slidesToShow: 1,
-        }
-      }
-    ]
+        },
+      },
+    ],
   };
 
-
-
   return (
-    <Div height="590px" display="block" margin="60px 0 60px 0">
+    <Div height="590px" display="block" margin="60px 0 60px 0" {...props}>
       <H2 margin="30px 0">{content.title}</H2>
-
 
       <CarouselV2
         margin="20px 0"
         background="#FBFCFC"
         padding="20px"
-        settings={settings} >
-
+        settings={settings}
+      >
         {content?.cases.map((student, i) => (
           <Div
-          key={`${student.name}-${i}`}
-          display="flex"
-          flexDirection="column"
-          width="282px"
-          minWidth="282px"
-          height="500px" // Set fixed height
-          borderRadius="4px"
-          border={`2px solid ${Colors.lightGray}`}
-          margin="0 10px"
-          overflow="hidden" // Ensure content doesn't overflow
+            key={`${student.name}-${i}`}
+            display="flex"
+            flexDirection="column"
+            width="282px"
+            minWidth="282px"
+            height="500px" // Set fixed height
+            borderRadius="4px"
+            border={`2px solid ${Colors.lightGray}`}
+            margin="0 10px"
+            overflow="hidden" // Ensure content doesn't overflow
           >
-             <Div width="100%" height="162px"> 
+            <Div width="100%" height="162px">
               <StyledBackgroundSection
                 borderRadius="4px 4px 0 0"
                 height="100%"
@@ -67,7 +63,7 @@ const ScholarshipSuccessCases = ({ content, maxWidth }) => {
                   student.img && student.img.childImageSharp.gatsbyImageData
                 }
                 bgSize="cover"
-                style={{ objectFit: 'cover' }} // Ensure image covers the entire space
+                style={{ objectFit: "cover" }} // Ensure image covers the entire space
               />
             </Div>
             <Div
@@ -82,16 +78,18 @@ const ScholarshipSuccessCases = ({ content, maxWidth }) => {
                 </H4>
                 <Div
                   alignItems="center"
-                  padding="3px"
-                  background={Colors.lightYellow}
+                  padding="4px"
+                  radius="4px"
+                  gap="8px"
+                  background="#FFF1D1"
                 >
                   <Icon
                     icon="graduation"
                     width="19px"
                     height="16px"
-                    fill={Colors.yellow}
+                    fill="#FFB718"
                   />
-                  <Paragraph fontSize="10px" color={Colors.yellow}>
+                  <Paragraph fontSize="9px" fontWeight="600" color={Colors.yellow}>
                     {student.status}
                   </Paragraph>
                 </Div>
@@ -152,7 +150,6 @@ const ScholarshipSuccessCases = ({ content, maxWidth }) => {
             </Div>
           </Div>
         ))}
-
       </CarouselV2>
     </Div>
   );
