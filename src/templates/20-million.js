@@ -153,10 +153,8 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
                 </Button>
               </Link>
             </Div>
-            
           </Div>
-          <Icon
-            icon="scholarshipHeader"/>
+          {/* <Icon icon="scholarshipHeader" /> */}
         </Div>
       </Div>
       <WeMakeEducation />
