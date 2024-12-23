@@ -51,22 +51,19 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
   return (
     <>
       <Div
-        margin={
-          isCustomBarActive(session)
-            ? "138px auto 30px auto"
-            : "72px auto 30px auto"
-        }
-        margin_md={
-          isCustomBarActive(session)
-            ? "120px auto 30px auto"
-            : "72px auto 30px auto"
-        }
-        padding="90px 20px 42px 20px"
-        padding_tablet="72px 130px 72px 130px"
+        margin={isCustomBarActive(session) ? "90px auto 30px auto" : "72px auto 30px auto"}
+        margin_md={isCustomBarActive(session) ? "120px auto 30px auto" : "72px auto 30px auto"}
+        padding="90px 80px 0 80px"
+        padding_tablet="72px 80px 0 80px"
         position="relative"
-        display="block"
+        display="flex"
+        flexDirection="row"
+        justifyContent="space-between"
+        alignItems="flex-start"
+        height="421px"
+        width="100%"
       >
-        <Div display="block" gap="10px">
+        <Div display="block" gap="10px" flex="1">
           <H2
             type="h2"
             textAlign_tablet="start"
@@ -85,8 +82,9 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
           <SubTitle
             color={Colors.black}
             margin="20px 0 0 0"
+            textAlign_xxs="start"
             padding="0"
-            width="auto"
+            width="100%"
             letterSpacing="0.05em"
             textAlign="start"
           >
@@ -100,7 +98,7 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
             // justifyContent_tablet="center"
             alignItems="left"
             gap="24px"
-            // margin_tablet="0 0 50px 0"
+          // margin_tablet="0 0 50px 0"
           >
             <Div width="100%" width_tablet="fit-content" gap="24px">
               <Link to={yml.button.apply_button_link} style={{ width: "100%" }}>
@@ -144,8 +142,8 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
                   lineHeight="25.2px"
                   variant="outline"
                   color={Colors.black}
-                  // margin="10px 0 50px 0"
-                  // margin_tablet="0"
+                  margin="10px 0 50px 0"
+                  margin_tablet="0"
                   textColor={Colors.black}
                   textAlign="center"
                 >
@@ -154,7 +152,18 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
               </Link>
             </Div>
           </Div>
-          {/* <Icon icon="scholarshipHeader" /> */}
+        </Div>
+        <Div flex="1" display="flex" justifyContent="flex-end" alignItems="flex-start">
+          <img
+            src={yml.scholarshipImg.src}
+            alt={yml.header.title}
+            style={{
+              width: 'auto',
+              height: '381.67px',
+              objectFit: 'contain',
+              objectPosition: 'top',
+            }}
+          />
         </Div>
       </Div>
       <WeMakeEducation />
@@ -284,6 +293,9 @@ export const query = graphql`
               content
               content_style
             }
+          }
+          scholarshipImg{
+            src
           }
           two_column_left {
             proportions

@@ -11,19 +11,35 @@ const BenefitsAndChartsV2 = (props) => {
     <Div
       flexDirection_tablet="row"
       flexDirection="column"
-      justifyContent="left"
+      
       alignItems="center"
+      
+      gap="10px"
     >
       <Button
         onClick={goToForm}
         variant="full"
         color={Colors.blue}
         margin="0 auto"
+        padding="16px 24px 16px 24px"
+        height="auto"
+        width="auto"
         margin_tablet="10px 24px 10px 0"
+        fontSize="21px"
+        //padding="5px 5px"
+        lineHeight="25.2px"
         textColor="white"
         borderRadius="4px"
       >
         {data.benefits_and_charts.button_section.button_text}
+        <Icon
+          icon="arrowToRight"
+          width="14px"
+          height="14px"
+          gap="10px"
+          color={Colors.white}
+          style={{ marginLeft: "10px" }}
+        />
       </Button>
     </Div>
   );
@@ -34,24 +50,28 @@ const BenefitsAndChartsV2 = (props) => {
         display="flex"
         flexDirection="row"
         gap="24px"
-        padding="30px 20px 80px 20px"
+        padding="30px 20px 30px 20px"
         flexDirection_tablet="row"
         margin="auto"
         padding_tablet="40px 40px"
         padding_md="60px 80px"
         padding_lg="80px 0"
+        width="100%"
+        height="100%"
         maxWidth={props.maxWidth || "1280px"}
       >
-        <Div flexDirection="column" flex="1" flex_tablet="1">
+        <Div flexDirection="column" flex="1" flex_tablet="1" width="100%">
           <H2
             type="h2"
             textAlign="left"
             height="98px"
             fontSize="45px"
             lineHeight="48.96px"
+            width="100%"
           >
             {data.benefits_and_charts.title}
           </H2>
+
 
           <ButtonPartner />
         </Div>
@@ -60,7 +80,7 @@ const BenefitsAndChartsV2 = (props) => {
             display="flex"
             flexDirection="column"
             gridGap="0"
-            padding="0 0 30px 0"
+            padding="0"
             padding_tablet="0 0 30px 0"
           >
             {data.benefits_and_charts.bullets.map((p, index) => (
@@ -80,7 +100,7 @@ const BenefitsAndChartsV2 = (props) => {
                   flexDirection="column"
                   // alignSelf="center"
                   alignSelf="flex-start"
-                  padding="10px 10px 10px 0"
+                  padding="10px 10px 10px 10px"
                 >
                   <Icon
                     icon="check"

@@ -9,7 +9,6 @@ const WeMakeEducation = () => {
     <Div
       display="flex"
       width="100%"
-      maxWidth="1280px"
       height="567px"
       padding="50px 80px 50px 80px"
       gap="16px"
@@ -35,10 +34,10 @@ const WeMakeEducation = () => {
           whiteSpace="pre-wrap"
           overflowWrap="break-word"
         >
-          {"We make education\naccessible to\neveryone"}
+          {"We make education\naccessible to everyone"}
         </H2>
 
-        <H5 color="white" fontWeight="400" fontSize="18px" lineHeight="22px">
+        <H5 color="white" fontWeight="400" fontSize="18px" lineHeight="22px" textAlign="left" justifyContent="left">
           You may qualify if you are a{" "}
           <span fontWeight="900"> Miami resident </span> and belong to one of
           these groups:
@@ -48,15 +47,18 @@ const WeMakeEducation = () => {
       <Div
         display="grid"
         gridTemplateColumns="repeat(3, 1fr)"
-        gap="15px"
+        gap="19px"
         width="100%"
-        padding="19px"
+        height="299px"
+        
       >
         <Div
           background="#E0D1FF"
           borderRadius="4px"
           display="flex"
           alignItems="center"
+          height="100%"
+          weight="100%"
           justifyContent="center"
           padding="8px"
         >
@@ -75,6 +77,8 @@ const WeMakeEducation = () => {
           borderRadius="4px"
           display="flex"
           alignItems="center"
+          height="100%"
+          weight="100%"
           justifyContent="center"
           padding="8px"
         >
@@ -92,6 +96,8 @@ const WeMakeEducation = () => {
           background="#0084FF"
           borderRadius="4px"
           display="flex"
+          height="100%"
+          weight="100%"
           alignItems="center"
           justifyContent="center"
           padding="8px"
@@ -111,6 +117,8 @@ const WeMakeEducation = () => {
           borderRadius="4px"
           display="flex"
           alignItems="center"
+          height="100%"
+          weight="100%"
           justifyContent="center"
           padding="8px"
         >
@@ -131,6 +139,8 @@ const WeMakeEducation = () => {
           borderRadius="4px"
           display="flex"
           alignItems="center"
+          height="100%"
+          weight="100%"
           justifyContent="center"
           padding="8px"
         >
@@ -148,6 +158,8 @@ const WeMakeEducation = () => {
           background="#F15E64"
           borderRadius="4px"
           display="flex"
+          height="100%"
+          weight="100%"
           alignItems="center"
           justifyContent="center"
           padding="8px"

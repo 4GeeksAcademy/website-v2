@@ -17,8 +17,11 @@ button:
   apply_button_text: Apply
   apply_button_link: "/us/apply"
 
+scholarshipImg:
+  src: "/images/landing/scholarshipHeader.png"
+
 benefits_and_charts:
-  title: "Become part of our partnership network"
+  title: "Become part of our Partnership Network"
   button_section:
     button_text: "I want to contribute"
     button_link: ""
@@ -35,7 +38,7 @@ benefits_and_charts:
 iconogram:
   heading:
     text: "Numbers that support us"
-    style: '{ "display":"flex","textAlign": "left","alignSelf": "start","width": "60%"}'
+    style: '{ "display":"flex","textAlign": "left","alignSelf": "start"}'
   swipable: false
   icons:
   - icon: "newChart62"
