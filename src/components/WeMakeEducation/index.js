@@ -37,7 +37,14 @@ const WeMakeEducation = () => {
           {"We make education\naccessible to everyone"}
         </H2>
 
-        <H5 color="white" fontWeight="400" fontSize="18px" lineHeight="22px" textAlign="left" justifyContent="left">
+        <H5
+          color="white"
+          fontWeight="400"
+          fontSize="18px"
+          lineHeight="22px"
+          textAlign="left"
+          justifyContent="left"
+        >
           You may qualify if you are a{" "}
           <span fontWeight="900"> Miami resident </span> and belong to one of
           these groups:
@@ -50,7 +57,6 @@ const WeMakeEducation = () => {
         gap="19px"
         width="100%"
         height="299px"
-        
       >
         <Div
           background="#E0D1FF"

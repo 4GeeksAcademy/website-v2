@@ -51,19 +51,29 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
   return (
     <>
       <Div
-        margin={isCustomBarActive(session) ? "90px auto 30px auto" : "72px auto 30px auto"}
-        margin_md={isCustomBarActive(session) ? "120px auto 30px auto" : "72px auto 30px auto"}
+        margin={
+          isCustomBarActive(session)
+            ? "120px auto 30px auto"
+            : "72px auto 30px auto"
+        }
+        margin_md={
+          isCustomBarActive(session)
+            ? "120px auto 30px auto"
+            : "72px auto 30px auto"
+        }
         padding="90px 80px 0 80px"
         padding_tablet="72px 80px 0 80px"
         position="relative"
-        display="flex"
+        display="inline-flex"
         flexDirection="row"
         justifyContent="space-between"
         alignItems="flex-start"
         height="421px"
         width="100%"
+        minWidth="1280px"
+        maxWidth="1280px"
       >
-        <Div display="block" gap="10px" flex="1">
+        <Div display="block" gap="10px" height="369px" width="100%" alignItems="start">
           <H2
             type="h2"
             textAlign_tablet="start"
@@ -98,7 +108,7 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
             // justifyContent_tablet="center"
             alignItems="left"
             gap="24px"
-          // margin_tablet="0 0 50px 0"
+            // margin_tablet="0 0 50px 0"
           >
             <Div width="100%" width_tablet="fit-content" gap="24px">
               <Link to={yml.button.apply_button_link} style={{ width: "100%" }}>
@@ -153,15 +163,20 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
             </Div>
           </Div>
         </Div>
-        <Div flex="1" display="flex" justifyContent="flex-end" alignItems="flex-start">
+        <Div
+          flex="1"
+          display="flex"
+          justifyContent="flex-end"
+          alignItems="flex-end"
+        >
           <img
             src={yml.scholarshipImg.src}
             alt={yml.header.title}
             style={{
-              width: 'auto',
-              height: '381.67px',
-              objectFit: 'contain',
-              objectPosition: 'top',
+              width: "auto",
+              height: "381.67px",
+              objectFit: "contain",
+              objectPosition: "top",
             }}
           />
         </Div>
@@ -294,7 +309,7 @@ export const query = graphql`
               content_style
             }
           }
-          scholarshipImg{
+          scholarshipImg {
             src
           }
           two_column_left {

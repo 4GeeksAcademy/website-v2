@@ -7,10 +7,7 @@ import Icon from "../Icon";
 import { smartRedirecting } from "../../utils/utils.js";
 import CarouselV2 from "../CarouselV2";
 
-
 const ScholarshipProjects = ({ content, maxWidth }) => {
-
-
   const settings = {
     slidesToShow: 3,
     slidesToScroll: 1,

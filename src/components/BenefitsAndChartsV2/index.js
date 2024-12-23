@@ -11,22 +11,19 @@ const BenefitsAndChartsV2 = (props) => {
     <Div
       flexDirection_tablet="row"
       flexDirection="column"
-      
       alignItems="center"
-      
       gap="10px"
     >
       <Button
         onClick={goToForm}
         variant="full"
         color={Colors.blue}
-        margin="0 auto"
+        margin="24px auto 0 auto"
         padding="16px 24px 16px 24px"
         height="auto"
         width="auto"
         margin_tablet="10px 24px 10px 0"
         fontSize="21px"
-        //padding="5px 5px"
         lineHeight="25.2px"
         textColor="white"
         borderRadius="4px"
@@ -57,7 +54,7 @@ const BenefitsAndChartsV2 = (props) => {
         padding_md="60px 80px"
         padding_lg="80px 0"
         width="100%"
-        height="100%"
+        height="auto"
         maxWidth={props.maxWidth || "1280px"}
       >
         <Div flexDirection="column" flex="1" flex_tablet="1" width="100%">
@@ -68,10 +65,10 @@ const BenefitsAndChartsV2 = (props) => {
             fontSize="45px"
             lineHeight="48.96px"
             width="100%"
+            marginBottom="24px"
           >
             {data.benefits_and_charts.title}
           </H2>
-
 
           <ButtonPartner />
         </Div>
