@@ -34,6 +34,7 @@ const ScholarshipSuccessCases = ({ content, maxWidth, padding, ...props }) => {
   return (
     <Div height="590px" display="block" margin="60px 0 60px 0" {...props}>
       <H2 margin="30px 0">{content.title}</H2>
+      <H2 margin="30px 0" fontSize="28px">{content.subtitle}</H2>
 
       <CarouselV2
         margin="20px 0"
@@ -138,9 +139,9 @@ const ScholarshipSuccessCases = ({ content, maxWidth, padding, ...props }) => {
                 width="fit-content"
                 padding="3px 5px"
                 background={Colors.veryLightBlue}
-                position="absolute"
                 bottom="17px"
                 right="17px"
+                marginLeft="auto"
               >
                 <Icon icon="flag-check" color={Colors.blue} />
                 <Paragraph

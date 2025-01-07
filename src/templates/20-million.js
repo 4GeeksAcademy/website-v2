@@ -70,10 +70,16 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
         alignItems="flex-start"
         height="421px"
         width="100%"
-        minWidth="1280px"
-        maxWidth="1280px"
+        //minWidth="1280px"
+        //maxWidth="1440px"
       >
-        <Div display="block" gap="10px" height="369px" width="100%" alignItems="start">
+        <Div
+          display="block"
+          gap="10px"
+          height="369px"
+          width="100%"
+          alignItems="start"
+        >
           <H2
             type="h2"
             textAlign_tablet="start"
@@ -91,11 +97,12 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
           </H2>
           <SubTitle
             color={Colors.black}
-            margin="20px 0 0 0"
+            style={{marginTop:'20px'}}
             textAlign_xxs="start"
             padding="0"
-            width="100%"
+            width="60%"
             letterSpacing="0.05em"
+            lineHeight="28.85px"
             textAlign="start"
           >
             {yml.header.paragraph}
@@ -104,7 +111,7 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
             flexDirection_tablet="row"
             flexDirection="column"
             justifyContent="left"
-            margin="20px 0 0 0"
+            margin="40px 0 0 0"
             // justifyContent_tablet="center"
             alignItems="left"
             gap="24px"
@@ -186,10 +193,12 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
         content={data.allScholarshipProjectsYaml.edges[0].node}
         lang={pageContext.lang}
       />
-      <ScholarshipSuccessCases
-        content={data.allScholarshipSuccessCasesYaml.edges[0].node}
-        padding="50px 80px 50px 80px"
+      <Testimonials
+        lang={data.allTestimonialsYaml.edges}
+        margin_tablet="75px 0 0 0"
+        margin="45px 0 0 0"
       />
+      
       <BenefitsAndChartsV2 data={partnersData} goToForm={goToForm} />
       <Iconogram yml={yml.iconogram} />
 
@@ -214,12 +223,11 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
           session={session}
         />
       </Div>
-
-      <Testimonials
-        lang={data.allTestimonialsYaml.edges}
-        margin_tablet="75px 0 0 0"
-        margin="45px 0 0 0"
+      <ScholarshipSuccessCases
+        content={data.allScholarshipSuccessCasesYaml.edges[0].node}
+        padding="50px 80px 50px 80px"
       />
+      
 
       <HR
         background={Colors.verylightGray}
@@ -410,6 +418,7 @@ export const query = graphql`
       edges {
         node {
           title
+          subtitle
           contributor
           cases {
             name
