@@ -109,7 +109,7 @@ two_columns_info:
     shadow: false 
     src: "/images/landing/grupo-ventanas.webp"
   section_heading: 
-    text: "Aprende a aplicar el Machine Learning a problemas del mundo real"
+    text: "Get everything you need to succeed"
   heading:
     text: ""
           #xl      lg     md     sm    xs
@@ -119,21 +119,23 @@ two_columns_info:
     text: "Nuestro bootcamp de data science está enfocado en brindar todas las herramientas y el apoyo necesario para que puedas triunfar en este campo."
     font_size: ["16px"]
   content:
-    text: "Fidel Vera siempre tuvo una fascinación por el potencial de los datos. En 4Geeks Academy, encontró el trampolín perfecto para convertir su pasión en una carrera profesional exitosa. Nuestro bootcamp de Data Science le proporcionó las herramientas y el conocimiento necesarios para integrarse en este campo en la industria tech."
+    text: ""
   button:
-    text: "Comparar precios y planes"
-    path: "#prices_and_payment"
+    text: "Compare 4Geeks with other bootcamps"
+    path: "/us/geeks-vs-others"
     color: "white"
     background: "black"
     hover: "lightBlue"
   bullets:
     items: 
-    - heading: "MENTORÍAS ILIMITADAS"
-      text: "Obtén soporte experto para todas tus preguntas. Nuestros mentores están siempre disponibles en línea, listos para ayudarte desde el primer día hasta siempre."
-    - heading: "PROPORCIÓN PROFESOR ESTUDIANTE 1:7"
-      text: "Experimenta una atención perzonalizada con nuestra proporción profesor-alumno superior a la media."
-    - heading: "APOYO PROFESIONAL PERSONALIZADO"
-      text: "Recibe asesoramiento, orientación y formación ilimitados adaptados a tu perfil único y a tus ofertas de trabajo específicas."
+    - heading: "1:1 MENTORING ON DEMAND"
+      text: "Get 1:1 support for all your coding needs. Our expert mentors are available online or in-person, ready to help you from day one to forever."
+    - heading: "HIGH AVAILABILITY"
+      text: "Never get stuck with a coding problem. Our dedicated instructors will respond within 30 minutes or less."
+    - heading: "Code-Centric Education"
+      text: "We exclusively teach code, ensuring a focused and in-depth learning experience."
+    - heading: "TAILOR-MADE CAREER SUPPORT"
+      text: "Receive customized advice, guidance, and training tailored to your unique profile and specific job offers."
 
 # Two Columns - Rigo
 two_columns_rigo:
