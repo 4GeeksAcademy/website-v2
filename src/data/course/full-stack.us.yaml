@@ -102,7 +102,85 @@ two_columns:
     - text: "Exclusive opportunities await residents of Miami-Dade, Broward, and Palm Beach counties, ensuring local talent thrives."
     - text: "We maintain ongoing partnerships with institutions such as Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade County, and many more. "
 
+two_columns_info:
+  proportions: [6, 6]
+  image:
+    style: '{"backgroundSize": "contain", "background-position": "center"}' 
+    shadow: false 
+    src: "/images/landing/grupo-ventanas.webp"
+  section_heading: 
+    text: "Aprende a aplicar el Machine Learning a problemas del mundo real"
+  heading:
+    text: ""
+          #xl      lg     md     sm    xs
+    font_size: ["40px", "34px", "34px", "25px", "20px"]
+  sub_heading:
+    style: '{}'
+    text: "Nuestro bootcamp de data science está enfocado en brindar todas las herramientas y el apoyo necesario para que puedas triunfar en este campo."
+    font_size: ["16px"]
+  content:
+    text: "Fidel Vera siempre tuvo una fascinación por el potencial de los datos. En 4Geeks Academy, encontró el trampolín perfecto para convertir su pasión en una carrera profesional exitosa. Nuestro bootcamp de Data Science le proporcionó las herramientas y el conocimiento necesarios para integrarse en este campo en la industria tech."
+  button:
+    text: "Comparar precios y planes"
+    path: "#prices_and_payment"
+    color: "white"
+    background: "black"
+    hover: "lightBlue"
+  bullets:
+    items: 
+    - heading: "MENTORÍAS ILIMITADAS"
+      text: "Obtén soporte experto para todas tus preguntas. Nuestros mentores están siempre disponibles en línea, listos para ayudarte desde el primer día hasta siempre."
+    - heading: "PROPORCIÓN PROFESOR ESTUDIANTE 1:7"
+      text: "Experimenta una atención perzonalizada con nuestra proporción profesor-alumno superior a la media."
+    - heading: "APOYO PROFESIONAL PERSONALIZADO"
+      text: "Recibe asesoramiento, orientación y formación ilimitados adaptados a tu perfil único y a tus ofertas de trabajo específicas."
 
+# Two Columns - Rigo
+two_columns_rigo:
+  proportions: [5, 7]
+  background: "#FFFFFF"
+  justify: "center" #start,end,center
+  image:
+    style: '{"backgroundSize": "contain", "background-position": "center"}'
+    src: "/images/landing/rigobot-section.webp"
+    shadow: false
+  # video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  heading: 
+    text: "Our AI-powered features make all the difference!"
+    font_size: ["33px", "33px", "33px", "33px", "33px"]
+    style: '{ "lineHeight": "30px" }'
+    heading_image:
+      src: "/images/rigobot-logo.png"
+  sub_heading:
+    text: "Through years of research and experience, we've perfected the strategies and tools to ensure your constant and efficient progress. To optimize your learning curve and empower you to tackle challenges with confidence, we've now incorporated the power of AI."
+    font_size: ["16px","16px","16px","16px","16px"]
+    style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"600" }'
+  content:
+    style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"600"}'
+    text: "Experience the difference our AI-powered features make. Our tried-and-tested approach keeps you engaged, motivated, and on the fast track to achieving your coding goals!"
+  bullets:
+    item_style: '{ "padding": "0", "font-weight": "100", "margin":"0" }'
+    items:
+      - heading: "Meet Rigobot, our AI coding assistant:"
+        text: |
+          • Instant tutoring as you code.
+          <br />
+          • Skill evaluations to track your progress.
+          <br />
+          • Expert bug fixing assistance.
+          <br /><br />
+          It perfectly complements our human mentorship program!
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+        icon_color: '#25BF6C'
+      - heading: "Learnpack, our interactive learning software, provides:"
+        text: |
+          • There are hundreds of interactive exercises to help you master and retain skills.
+          <br />
+          • Automated tests to help track your progress.
+          <br />
+          • Structured practice.
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+        icon_color: '#25BF6C'
 badges:
   paragraph: "Kickstart your career at 4Geeks Academy, where developers grow and thrive. Named among the world’s <a href='/us/coding-bootcamp'>best coding bootcamps of 2024 by Course Report, chosen <a href='/us/trends-and-tech/celebrating-forbes-doble-recognition'>best coding bootcamp for students on a budget in 2024 by Forbes</a>, and rated 4.92/5 on Switchup. Licensed by the Florida Department of Education, USA."
 upcoming:
