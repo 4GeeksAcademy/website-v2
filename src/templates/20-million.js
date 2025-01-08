@@ -97,7 +97,7 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
           </H2>
           <SubTitle
             color={Colors.black}
-            style={{marginTop:'20px'}}
+            style={{ marginTop: "20px" }}
             textAlign_xxs="start"
             padding="0"
             width="60%"
@@ -198,7 +198,7 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
         margin_tablet="75px 0 0 0"
         margin="45px 0 0 0"
       />
-      
+
       <BenefitsAndChartsV2 data={partnersData} goToForm={goToForm} />
       <Iconogram yml={yml.iconogram} />
 
@@ -227,7 +227,6 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
         content={data.allScholarshipSuccessCasesYaml.edges[0].node}
         padding="50px 80px 50px 80px"
       />
-      
 
       <HR
         background={Colors.verylightGray}

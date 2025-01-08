@@ -13,7 +13,7 @@ const BenefitsAndChartsV2 = (props) => {
       flexDirection="column"
       alignItems="center"
       gap="10px"
-      style={{ marginTop: '24px' }}
+      style={{ marginTop: "24px" }}
     >
       <Button
         onClick={goToForm}
@@ -59,7 +59,13 @@ const BenefitsAndChartsV2 = (props) => {
         height="auto"
         maxWidth={props.maxWidth || "1280px"}
       >
-        <Div flexDirection="column" flex="1" flex_tablet="1" width="100%" minWidth="628px">
+        <Div
+          flexDirection="column"
+          flex="1"
+          flex_tablet="1"
+          width="100%"
+          minWidth="628px"
+        >
           <H2
             type="h2"
             textAlign="left"

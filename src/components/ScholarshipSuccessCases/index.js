@@ -9,6 +9,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Button } from "../Styling";
 import CarouselV2 from "../CarouselV2";
+import { Link } from "gatsby";
 
 const ScholarshipSuccessCases = ({ content, maxWidth, padding, ...props }) => {
   const settings = {
@@ -34,7 +35,9 @@ const ScholarshipSuccessCases = ({ content, maxWidth, padding, ...props }) => {
   return (
     <Div height="590px" display="block" margin="60px 0 60px 0" {...props}>
       <H2 margin="30px 0">{content.title}</H2>
-      <H2 margin="30px 0" fontSize="28px">{content.subtitle}</H2>
+      <H2 margin="30px 0" fontSize="28px">
+        {content.subtitle}
+      </H2>
 
       <CarouselV2
         margin="20px 0"
@@ -73,11 +76,18 @@ const ScholarshipSuccessCases = ({ content, maxWidth, padding, ...props }) => {
               height="100%"
               position="relative"
             >
-              <Div justifyContent="between">
-                <H4 fontWeight="700" textAlign="left">
+              <Div display="flex" justifyContent="between" alignItems="center">
+                <H2
+                  textAlign="left"
+                  fontSize="16px"
+                  lineHeight="17.41px"
+                  style={{ fontWeight: "500" }}
+                  color={Colors.black}
+                >
                   {student.name}
-                </H4>
+                </H2>
                 <Div
+                  display="flex"
                   alignItems="center"
                   padding="4px"
                   radius="4px"
@@ -85,10 +95,10 @@ const ScholarshipSuccessCases = ({ content, maxWidth, padding, ...props }) => {
                   background="#FFF1D1"
                 >
                   <Icon
-                    icon="graduation"
+                    icon="graduationOrange"
                     width="19px"
                     height="16px"
-                    fill="#FFB718"
+                    fill="#FFF1D1"
                   />
                   <Paragraph
                     fontSize="9px"
@@ -99,22 +109,25 @@ const ScholarshipSuccessCases = ({ content, maxWidth, padding, ...props }) => {
                   </Paragraph>
                 </Div>
               </Div>
+
               <Div margin="10px 0 0 0" alignItems="center">
                 <Div
                   className="react-tel-input"
                   margin="0"
-                  style={{ width: "25px" }}
+                  style={{ width: "24px", height:"24px" }}
                 >
                   <div className={`flag ${student.country.iso}`} />
                 </Div>
-                <Paragraph
+                <H2
                   margin="0 0 0 10px"
                   textAlign="left"
                   opacity="1"
+                  fontSize="12px"
+                  style={{ fontWeight: "400" }}
                   color={Colors.black}
                 >
                   {student.country.name}
-                </Paragraph>
+                </H2>
               </Div>
               <Div display="block" margin="10px 0">
                 <Paragraph
@@ -122,6 +135,7 @@ const ScholarshipSuccessCases = ({ content, maxWidth, padding, ...props }) => {
                   textAlign="left"
                   opacity="1"
                   color={Colors.black}
+                  style={{fontWeight:"600", fontSize:"9px", lineHeight:"10.89px"}}
                 >
                   {`${content.contributor}: ${student.contributor}`}
                 </Paragraph>
@@ -141,7 +155,7 @@ const ScholarshipSuccessCases = ({ content, maxWidth, padding, ...props }) => {
                 background={Colors.veryLightBlue}
                 bottom="17px"
                 right="17px"
-                marginLeft="auto"
+                style={{ marginLeft: "auto" }}
               >
                 <Icon icon="flag-check" color={Colors.blue} />
                 <Paragraph
@@ -152,6 +166,13 @@ const ScholarshipSuccessCases = ({ content, maxWidth, padding, ...props }) => {
                   {student.achievement}
                 </Paragraph>
               </Div>
+              <Link to="/">
+                <Paragraph margin="25px 0 36px 0" color={Colors.blue} fontWeight="900">
+                  See profile
+                </Paragraph>
+              </Link>
+
+
             </Div>
           </Div>
         ))}
