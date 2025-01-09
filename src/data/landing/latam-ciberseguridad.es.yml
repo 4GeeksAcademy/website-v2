@@ -1,9 +1,9 @@
 meta_info:
-  slug: curso-ciberseguridad-mexico # <--- URL 4geeksacademy.com/us/landing/example
+  slug: curso-ciberseguridad-latam # <--- URL 4geeksacademy.com/us/landing/example
 
   # This will show on social media when shared
-  title: "Curso de Ciberseguridad en México | 4Geeks Academy"
-  description: "Conviertete en un especialista en ciberseguridad con nuestro Bootcamp en México. Inscríbete hoy en 4Geeks Academy y protege el futuro digital."
+  title: "Bootcamp de Ciberseguridad | 4Geeks Academy"
+  description: "Conviertete en un especialista en ciberseguridad con nuestro Bootcamp. Inscríbete hoy en 4Geeks Academy y protege el futuro digital."
   image: "/images/bg/main-bg.jpg"
   keywords: ""
   visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
@@ -14,7 +14,7 @@ meta_info:
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
   utm_course: ["cybersecurity"]
-  utm_location: ["mexicocity-mexico"]
+  utm_location: ["bogota-colombia", "buenosaires-argentina", "caracas-venezuela", "costa-rica", "lapaz-bolivia", "lima-peru", "mexicocity-mexico", "montevideo-uruguay", "panamacity-panama", "quito-ecuador"]
   automation: soft # comma separated, "soft" is the default value
   tag: request_more_info # comma separated, "request_more_info" is the default value
 
@@ -27,8 +27,8 @@ form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
-  heading: "Más Información"
-  motivation: "Una vez que hayas completado el formulario, recibirás detalles completos sobre el bootcamp en tu correo."
+  heading: "Más información"
+  motivation: "Una vez que hayas completado el formulario, recibirás detalles completos sobre el bootcamp de ciberseguridad en tu correo."
   button_label: Más información
   redirect: "/es/gracias/?lang=es"  #you can redirect to another url or entirely diffrent website
 
@@ -40,7 +40,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 # jumbotron on the top (cannot be commented out)
 header_data:
   background: "#ffffff"
-  tagline: "Conviértete en especialista en ciberseguridad en México"
+  tagline: "Conviértete en especialista en ciberseguridad"
   tagline_color: "#1c1c1c"
   form_styles:
     background: "#0084FF"
@@ -163,12 +163,12 @@ components:
       src: "/images/landing/hombre-con-laptop.webp"
       shadow: false
     section_heading: 
-      text: "Creciente Demanda de Expertos en Ciberseguridad en México"
+      text: "Creciente Demanda de Expertos en Ciberseguridad"
       style: '{ "font-size": "30px" }'
     heading: 
       text: ""
     sub_heading:
-      text: "Los especialistas en ciberseguridad ganan entre $22,000 y $555,000 MXN mensuales, dependiendo de la experiencia y el rol."
+      text: "Los especialistas en ciberseguridad en Latinoamérica ganan entre $1.500USD y $2.000USD mensuales, dependiendo de la experiencia y el rol específico."
     # button: 
     #   text: "Descubre por qué somos tu mejor elección"
     #   color: white
@@ -181,11 +181,11 @@ components:
       path: ""
     bullets:
       items:
-      - text: "La demanda de especialistas en ciberseguridad tuvo un crecimiento anual de 6.8% durante 2024 en México."
+      - text: "La demanda de especialistas en ciberseguridad ha tenido un crecimiento de 9.1% en la región durante el 2024."
         icon: "circle" 
-      - text: "El 47% de los directivos, empresas y demás compañías afirman estar preocupados por su seguridad cibernética."
+      - text: "Un alto porcentaje de directivos y empresas en Latinoamérica expresan preocupación por la seguridad cibernética."
         icon: "circle" 
-      - text: "El 91% de las empresas mexicanas reportaron haber sufrido al menos un ciberataque en el último año, lo que demuestra la creciente necesidad de especialistas para proteger los datos y sistemas críticos."
+      - text: "El 25% de las empresas latinoamericanas han reportado haber sufrido ciberataques en el último año, lo que resalta la necesidad creciente de expertos para proteger datos y sistemas críticos."
         icon: "circle" 
 
   - name: porque-bootcamp-de-ciberseguridad
@@ -213,7 +213,7 @@ components:
         text: "Al finalizar el curso, estarás preparado para desempeñar roles clave en el ámbito de la ciberseguridad. Esto incluye posiciones como analista de seguridad, ingeniero de ciberseguridad y consultor, donde podrás contribuir a la defensa de la infraestructura digital de las organizaciones y garantizar su seguridad."
         icon: "check" #string with icon for example ['check', 'cicle', etc]
       - heading: "Comunidad Activa"
-        text: "Únete a una red de más de 5,000 estudiantes y graduados en México y otros países. Aquí podrás compartir experiencias, aprender de otros y construir conexiones valiosas que te apoyarán en tu carrera profesional en ciberseguridad."
+        text: "Únete a una red de más de 5,000 estudiantes y graduados en Latam y otros países. Aquí podrás compartir experiencias, aprender de otros y construir conexiones valiosas que te apoyarán en tu carrera profesional en ciberseguridad."
         icon: "check" #string with icon for example ['check', 'cicle', etc]
 
   # - name: some_id
