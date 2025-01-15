@@ -144,7 +144,7 @@ const Apply = (props) => {
       utm_url: _utm_url,
       // this is the line that automatically sets the location, we don't want that anymore
       // its better if leads choose the location themselves
-      // location: {value: _location || "", valid: typeof (_location) === "string" && _location !== ""},
+      location: {value: _location || "", valid: typeof (_location) === "string" && _location !== ""},
       course: {
         value: _course || null,
         valid: _course && _course.value ? true : false,
@@ -540,9 +540,9 @@ const Apply = (props) => {
                 tabindex="1"
                 bgColor={Colors.black}
                 options={regions}
-                // value={locations?.find(
-                //   (el) => el.value === formData.location.value
-                // )}
+                value={locations?.find(
+                  (el) => el.value === formData.location.value
+                )}
                 placeholder={yml.left.regions_title}
                 inputId="dropdown_region_selector"
                 onChange={(value) => {
