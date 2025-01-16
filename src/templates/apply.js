@@ -121,42 +121,41 @@ const Apply = (props) => {
 
     // Pre-fill the location
     let _location = urlParams.get("location");
-    if (!_location && session.location) {
+    if (!_location && session.location) 
       _location = session.location.active_campaign_location_slug;
-    }
-  
-    if (typeof _location === "string" && session.locations) {
-      const foundLocation = session.locations.find(
+    
+    if (typeof _location === "string" && session.locations)
+      _location = session.locations.find(
         (l) =>
           l.active_campaign_location_slug === _location ||
           l.breathecode_location_slug === _location
       );
-      if (!foundLocation) _location = "";
-      else _location = foundLocation.active_campaign_location_slug;
-    } else _location = "";
+      else _location = null;
+
+    if (_location) _location = _location.active_campaign_location_slug;
   
     // Pre-fill the course
     let _course = urlParams.get("course");
     if (!_course && props.location.state) _course = props.location.state.course;
     if (typeof _course === "string")
       _course = programs.find((p) => p.value === _course);
-  
-    let _utm_url;
-    if (props.location.state) {
+    
+    // Pre-fill the utm_url
+    let _utm_url = undefined;
+    if (props.location.state)
       _utm_url = { value: props.location.state.prevUrl, valid: true };
-    }
 
-    setVal((prev) => ({
-      ...prev,
-      location: {
-        value: _location,
-        valid: !!_location,
+    setVal((_val) => ({
+      ..._val,
+      utm_url: _utm_url,
+      // this is the line that automatically sets the location, we don't want that anymore
+      // its better if leads choose the location themselves
+      location: {value: _location || "", valid: typeof (_location) === "string" && _location !== ""
       },
       course: {
         value: _course || null,
-        valid: !!(_course && _course.value),
+        valid: _course && _course.value ? true : false,
       },
-      utm_url: _utm_url,
       referral_key: { value: session?.utm?.referral_code || null, valid: true },
     }));
 
@@ -559,7 +558,10 @@ const Apply = (props) => {
                 inputId="dropdown_region_selector"
                 onChange={(value) => {
                   setRegionVal(value.value);
-                  setVal({ ...formData, location: { value: "", valid: false } });
+                  setVal({
+                    ...formData,
+                    location: { value: "", valid: false },
+                  });
                 }}
               />
             </Div>
@@ -603,7 +605,7 @@ const Apply = (props) => {
                   inputId={"dropdown_academy_selector"}
                   onChange={(value, valid) => 
                     setVal({ ...formData, location: { value, valid } })}
-                />
+                    />
               </Div>
             )}
             {formData.referral_key.value &&
