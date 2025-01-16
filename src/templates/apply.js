@@ -112,45 +112,55 @@ const Apply = (props) => {
   }, []);
   React.useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
+  
+    // Pre-fill the region
+    let _region = urlParams.get("region");
+    if (!_region && session.location?.meta_info?.region) {
+      _region = session.location.meta_info.region; // e.g. 'latam'
+    }
+
     // Pre-fill the location
     let _location = urlParams.get("location");
-    if (!_location && session.location)
+    if (!_location && session.location) {
       _location = session.location.active_campaign_location_slug;
-
-    if (typeof _location === "string" && session.locations)
-      _location = session.locations.find(
+    }
+  
+    if (typeof _location === "string" && session.locations) {
+      const foundLocation = session.locations.find(
         (l) =>
           l.active_campaign_location_slug === _location ||
           l.breathecode_location_slug === _location
       );
-    else _location = null;
-
-    if (_location) _location = _location.active_campaign_location_slug;
-
+      if (!foundLocation) _location = "";
+      else _location = foundLocation.active_campaign_location_slug;
+    } else _location = "";
+  
     // Pre-fill the course
     let _course = urlParams.get("course");
     if (!_course && props.location.state) _course = props.location.state.course;
-
     if (typeof _course === "string")
       _course = programs.find((p) => p.value === _course);
-
-    // Pre-fill the utm_url
-    let _utm_url = undefined;
-    if (props.location.state)
+  
+    let _utm_url;
+    if (props.location.state) {
       _utm_url = { value: props.location.state.prevUrl, valid: true };
+    }
 
-    setVal((_val) => ({
-      ..._val,
-      utm_url: _utm_url,
-      // this is the line that automatically sets the location, we don't want that anymore
-      // its better if leads choose the location themselves
-      location: {value: _location || "", valid: typeof (_location) === "string" && _location !== ""},
+    setVal((prev) => ({
+      ...prev,
+      location: {
+        value: _location,
+        valid: !!_location,
+      },
       course: {
         value: _course || null,
-        valid: _course && _course.value ? true : false,
+        valid: !!(_course && _course.value),
       },
+      utm_url: _utm_url,
       referral_key: { value: session?.utm?.referral_code || null, valid: true },
     }));
+
+    setRegionVal(_region || null);
   }, [session]);
 
   let privacy = data.privacy.edges.find(
@@ -540,17 +550,16 @@ const Apply = (props) => {
                 tabindex="1"
                 bgColor={Colors.black}
                 options={regions}
-                value={locations?.find(
-                  (el) => el.value === formData.location.value
-                )}
+                value={
+                  regionVal
+                    ? regions.find((r) => r.value === regionVal)
+                    : null
+                }
                 placeholder={yml.left.regions_title}
                 inputId="dropdown_region_selector"
                 onChange={(value) => {
                   setRegionVal(value.value);
-                  setVal({
-                    ...formData,
-                    location: { value: "", valid: false },
-                  });
+                  setVal({ ...formData, location: { value: "", valid: false } });
                 }}
               />
             </Div>
@@ -581,28 +590,19 @@ const Apply = (props) => {
                 margin_tablet="11px 0 23px 0"
               >
                 <SelectRaw
-                  tabindex="1"
                   bgColor={Colors.black}
                   options={
                     regionVal === "online"
-                      ? [
-                          {
-                            dialCode: null,
-                            label: "Online",
-                            region: "online",
-                            value: "online",
-                          },
-                        ]
-                      : locations?.filter(
-                          (academy) => academy.region === regionVal
-                        )
+                      ? [{ dialCode: null, label: "Online", region: "online", value: "online" }]
+                      : locations?.filter((academy) => academy.region === regionVal)
                   }
-                  value={formData.location.value}
+                  value={locations?.find(
+                    (el) => el.value === formData.location.value
+                  )}
                   placeholder={yml.left.locations_title}
                   inputId={"dropdown_academy_selector"}
-                  onChange={(value, valid) => {
-                    setVal({ ...formData, location: { value, valid } });
-                  }}
+                  onChange={(value, valid) => 
+                    setVal({ ...formData, location: { value, valid } })}
                 />
               </Div>
             )}
