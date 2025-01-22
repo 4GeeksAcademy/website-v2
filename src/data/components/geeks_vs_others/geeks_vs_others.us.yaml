@@ -27,7 +27,7 @@ info:
       Getting stuck is the 1st reason that leads to both frustration and to loss of motivation. That is why we have created the "30 min rule" to keep you going. Someone will always be available to help you.
     icon: "clock"
 
-  - features: "Mentoring 1-on-1"
+  - features: "1-on-1 mentoring"
     at4_Geeks: "unlimited"
     industry_average: "limited"
     why_important: "Appointment system where you can request 1-on-1 mentorships from 9am - 9pm. Online and in-person, for the rest of your life."
@@ -35,23 +35,18 @@ info:
 
   - features: "Interview Preparation"
     at4_Geeks: "Tailored for each interview"
-    industry_average: "general"
+    industry_average: "Generic"
     why_important: "Our interview preparation is tailored for each opportunity that you face, our mentors will recommend specific tutorials and other priorities, and our coaching does not end until you find a job."
     icon: "comments"
 
-  - features: "Focus"
-    at4_Geeks: "We only teach code"
-    industry_average: "Diverse Subjects"
-    why_important: "Thanks to our focus on coding-related skills we are able offer the best learning experience possible. You are in good hands - we are all developers, we code every day and we love to teach it."
-    icon: ""
 
   - features: "% Hiring Rate"
-    at4_Geeks: "~90%"
-    industry_average: "~90%"
+    at4_Geeks: "~84%"
+    industry_average: "Unknown"
     why_important: "Our levels are tops amongst global standards, but with 4Geeks you have many other benefits."
     icon: ""
 
-  - features: "Senior Teacher:Student Ratio"
+  - features: "Senior Teacher: Student Ratio"
     at4_Geeks: "1:12 avg"
     industry_average: "1:20 avg"
     why_important: "Senior mentorship makes the difference - it avoids future issues and speeds up the learning process. Our mentors will not only answer your questions but will also recommend better approaches, show you how to avoid potential issues and show you how to solve problems efficiently."
@@ -75,8 +70,8 @@ info:
     why_important: "All of our classes are recorded, and our content is 100% original and avaiable to our students for life.  All of our locations are available for use around the globe: you can keep attending classes after graduation, keep scheduling 1-on-1 mentoring sessions, etc."
     icon: ""
 
-  - features: "Type of class"
-    at4_Geeks: "Blended, Online, Offline, customizadas y grabaciones"
+  - features: "Class Format"
+    at4_Geeks: "Online, offline, and customizable hybrid"
     industry_average: "Online or offline"
     why_important: "Our classes can be taken in-person or online, we stream them all. All part-time classes get recorded and are available for future access."
     icon: ""
@@ -97,6 +92,12 @@ info:
     at4_Geeks: "Not Required"
     industry_average: "Previous test required"
     why_important: "We belive education must be universally accessible. Our courses are specially designed for people from every background. No math or previous coding skills are required."
+    icon: ""
+
+  - features: "Focus"
+    at4_Geeks: "We only teach code"
+    industry_average: "Diverse Subjects"
+    why_important: "Thanks to our focus on coding-related skills we are able offer the best learning experience possible. You are in good hands - we are all developers, we code every day and we love to teach it."
     icon: ""
 
 button:
