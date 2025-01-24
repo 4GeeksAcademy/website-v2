@@ -77,13 +77,22 @@ const View = (props) => {
           }}
           proportions={yml.two_columns?.proportions}
           session={session}
+          />
+        <TwoColumn
+          right={{ image: yml.two_columns_first?.image, video: yml.two_columns_first?.video }}
+          left={{
+            bullets: yml.two_columns_first?.bullets,
+            button: yml.two_columns_first?.button,
+          }}
+          proportions={yml.two_columns_first?.proportions}
+          session={session}
         />
       </Div>
 
       {/* second twocolumns */}
       <TwoColumn
-        right={{ image: yml.two_columns_second?.image, video: yml.two_columns_second?.video }}
-        left={{
+        left={{ image: yml.two_columns_second?.image, video: yml.two_columns_second?.video }}
+        right={{
           heading: yml.two_columns_second?.heading,
           sub_heading: yml.two_columns_second?.sub_heading,
           bullets: yml.two_columns_second?.bullets,
@@ -96,14 +105,14 @@ const View = (props) => {
 
       {/* two_columns_third */}
       <TwoColumn
-        right={{
+        left={{
           heading: yml.two_columns_third?.heading,
           sub_heading: yml.two_columns_third?.sub_heading,
           bullets: yml.two_columns_third?.bullets,
           content: yml.two_columns_third?.content,
           button: yml.two_columns_third?.button,
         }}
-        left={{
+        right={{
           image: yml.two_columns_third?.image,
           video: yml.two_columns_third?.video,
         }}
@@ -154,6 +163,22 @@ export const query = graphql`
             content {
               text
               style
+            }
+            bullets {
+              items {
+                heading
+                text
+                icon
+                icon_color
+              }
+            }
+          }
+          two_columns_first {
+            proportions
+            image {
+              style
+              src
+              shadow
             }
             bullets {
               items {

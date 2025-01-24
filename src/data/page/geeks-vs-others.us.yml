@@ -23,7 +23,7 @@ two_columns:
   justify: "center" #start,end,center
   image:
     style: '{"backgroundSize": "contain", "background-position": "center"}'
-    src: "/images/landing/grupo-ventanas.webp"
+    src: "/images/landing/hombre-joven-con-laptop-senalando.webp"
     shadow: false
   section_heading:
     text: "A Support System Like No Other"
@@ -62,6 +62,32 @@ two_columns:
           Be part of a supportive network of over 6,100 people worldwide. Share advice, get feedback, and grow together in dedicated channels you can access from day one to forever.
         icon: "check"
         icon_color: '#25BF6C'
+
+
+# Two Columns
+two_columns_first:
+  proportions: [5, 7]
+  justify: "center" #start,end,center
+  image:
+    style: '{"backgroundSize": "contain", "background-position": "center"}'
+    src: "/images/landing/community-support-2.webp"
+    shadow: false
+  section_heading:
+    text: "A Support System Like No Other"
+  heading: 
+    text: ""
+    font_size: ["33px", "33px", "33px", "33px", "33px"]
+    style: '{ "lineHeight": "30px" }'
+  sub_heading:
+    text: ""
+    font_size: ["16px", "16px", "16px", "16px", "16px"]
+    style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"600" }'
+  content:
+    style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"600"}'
+    text: ""
+  bullets:
+    item_style: '{ "padding": "0", "font-weight": "100", "margin":"0" }'
+    items:
       - heading: "4Geeks.com"
         text: |
           Your Learning Hub
