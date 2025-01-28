@@ -16,86 +16,100 @@ button:
 
 seo_title: "Trabajo garantizado"
 header:
-  title: Consigue trabajo o te devolvemos tu dinero
-  paragraph: ¡Estamos contigo en cada paso del camino! ¡Encuentra trabajo dentro de los 6 meses de graduación o recibe un reembolso completo!
+  title: "CONSIGUE UN TRABAJO EN TECNOLOGÍA O TE DEVOLVEMOS TU DINERO"
+  sub_title: "Tu éxito es nuestra misión"
+  paragraph: |
+    <ul>
+      <li>Prepárate para tu carrera con nuestro método galardonado.</li>
+      <li>Accede a nuestros servicios de apoyo profesional sin igual.</li>
+      <li>Consigue un empleo dentro de los 6 meses posteriores a tu graduación, o te reembolsaremos la matrícula.</li>
+    </ul>
 
 two_column_left:
-  proportions: [6, 6]
+  proportions: [7, 5]
   image:
     style: '{ "backgroundSize": "contain" }'
-    src: "/images/woman-glasses-laptop.png"
+    src: "/images/landing/hombre-joven-con-laptop.webp"
   heading:
     text: "¿Por qué ofrecemos trabajo garantizado?"
-    font_size: ["30px", "30px", "30px", "30px", "30px"]
+    font_size: ["30px", "30px", "28px", "26px", "26px"]
+  sub_heading:
+    text: "Nuestros bootcamps van más allá de enseñar habilidades relevantes; están diseñados para lanzar carreras exitosas en tecnología."
+    font_size: ["26px", "26px", "28px", "22px", "22px"]
+    style: '{ "font-weight": "500" }'
   content:
     font_size: ["24px", "24px", "24px", "18px", "18px"]
     text: |
-      <p>Estamos desafiando el modelo educativo tradicional. No se trata solo de enseñar las habilidades relevantes; se trata de las oportunidades que crearemos para tu carrera. Juntos.</p>
+      Desde nuestro plan de estudios alineado con la industria hasta nuestro servicio integral de apoyo profesional personalizado, cada una de nuestras características ha sido probada para optimizar tu experiencia de aprendizaje.
       <br>
-      <p><span style="color: #0097CD;">✓</span> Nosotros <strong style="font-weight: bold;">confiamos</strong> en la efectividad del programa</p>
       <br>
-      <p><span style="color: #0097CD;">✓</span> Nosotros <strong style="font-weight: bold;">confiamos</strong> en la industria</p>
+      <span style="color: #0097CD;">✓</span> Efectividad comprobada de nuestro programa
       <br>
-      <p><span style="color: #0097CD;">✓</span> Nosotros <strong style="font-weight: bold;">confiamos</strong> en el proceso</p>
       <br>
-      <p><span style="color: #0097CD;">✓</span> Nosotros <strong style="font-weight: bold;">confiamos</strong> en ti</p>
+      <span style="color: #0097CD;">✓</span> La industria tecnológica está en auge
+      <br>
+      <br>
+      <span style="color: #0097CD;">✓</span> Confiamos en el proceso
+      <br>
+      <br>
+      <span style="color: #0097CD;">✓</span> Confiamos en ti
+      <br>
+      <br>
+      ¡Construyamos juntos tu futuro!
   button:
-      text: "APLICA"
-      color: "white"
-      background: "black"
-      hover_color: "white"
-      path: "#leadform"
+    text: "Aplica"
+    color: "white"
+    background: "black"
+    hover_color: "white"
+    path: "/es/aplica"
 
 we_trust_section:
-  title: ¿Por qué deberías confiar en nosotros?
+  title: ¿Por qué elegir 4Geeks?
   text: |
-    Nuestro programa tiene un historial probado de éxito y lo seguirá haciendo.
+    Con un historial comprobado de éxito y reconocimiento en la industria, nuestro programa empodera a los estudiantes para convertir sus metas profesionales en realidad.
     <br>
     <br>
-    Los números hablan por sí solos.
+    Las cifras hablan por sí solas:
   boxes:
     - icon: briefcase-2
-      title: 82%
-      text: Tasa de inserción laboral
+      title: "84%"
+      text: Tasa de empleo
     - icon: chart
       title: "60K"
-      text: Ingreso promedio
+      text: Ingreso promedio en un nuevo empleo
     - icon: graduation-2
       title: "130"
-      text: Días para conseguir trabajo después de la graduación
+      text: Promedio de días para ser contratado
 
 how_it_works:
   title: ¿Cómo funciona?
-  text: Aquí te explicamos cómo calificar para el trabajo garantizado. Si sigues todos los pasos y no consigues trabajo en los 6 meses posteriores a la graduación, te devolveremos el 100 % de tu matrícula.
+  text: Estos son los compromisos que debes asumir para calificar para la garantía laboral. Si completas cada paso y no consigues empleo dentro de los 6 meses posteriores a la graduación, recibirás el 100% de tu matrícula de vuelta.
   steps:
     - icon: rocket-2
       title: Inicia el programa
     - icon: assignment
-      title: Cumple con las asistencias y las asignaciones
+      title: Cumple con las tareas y asistencia
     - icon: folder
       title: Aprueba el proyecto final
     - icon: graduation-2
       title: Gradúate
       highlight: True
     - icon: handshake
-      title: Completa el proceso de apoyo a la carrera
+      title: Completa el proceso de apoyo profesional
     - icon: briefcase-2
-      title: Consigue trabajo en 6 meses
+      title: Consigue un empleo en 6 meses
   link:
     url: https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/Condiciones%20y%20Requerimientos%20Job%20Guaranteed%20Program.pdf
     label: Condiciones que aplican.
 
 successful_stories:
   title: Historias de éxito
-  text: "Nuestro programa de garantía de empleo está obteniendo excelentes resultados. ¡Echa un vistazo a las historias de algunos de nuestros graduados!"
-  testimonials: 
+  text: "Nuestro programa de garantía laboral está dando excelentes resultados. Conoce algunas historias de nuestros graduados:"
+  testimonials:
     - "nai-kali"
     - "azu-bota"
     - "cha-fabr"
 
 form:
-  title: "Conviértete en Partner de 4Geeks"
-  paragraph: "¡Contáctanos hoy para unirte a nuestra red y comenzar a beneficiarte de las oportunidades que te ofrecemos!
-  Déjanos ayudarte a elegir el camino correcto para alcanzar tus metas.
-
-  ¡Ponte en contacto!"
+  title: "Conviértete en socio de 4Geeks"
+  paragraph: "Contáctanos hoy para unirte a nuestra red y comenzar a beneficiarte de las oportunidades que ofrecemos. Déjanos ayudarte a elegir el camino adecuado para alcanzar tus objetivos. ¡Ponte en contacto!"
