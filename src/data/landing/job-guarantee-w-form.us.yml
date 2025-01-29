@@ -136,10 +136,9 @@ rating_reviews:
 #   heading: "Master Full-Stack Development with Austin Coding Courses"
 #   sub_heading: "Dive deep into full-stack development with our detailed program that covers everything from HTML5 to advanced backend frameworks."
 
-
-why_4geeks:
-  position: 8
-  heading: "Hear It from Our Students"
+# why_4geeks:
+#   position: 8
+#   heading: "Hear It from Our Students"
 
 geeks_vs_others:
   position: 7
@@ -167,8 +166,6 @@ who_is_hiring:
   heading: "Who is hiring our students?"
   sub_heading: "550+ hiring partners, and 50+ job openings right now for software development"
 
-
-
 components:
   - name: why_coding-two-columns
     position: 1
@@ -180,11 +177,13 @@ components:
       shadow: false
     # video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
     heading:
-      text: "Why do we offer a job guarantee?"
+      text:
+        "Why do we offer a job guarantee?"
         #xl      lg     md     sm    xs
       font_size: ["40px", "34px", "34px", "25px", "20px"]
     sub_heading:
-      text: "Our bootcamps go beyond teaching relevant skills; they are designed to launch rewarding tech careers.
+      text:
+        "Our bootcamps go beyond teaching relevant skills; they are designed to launch rewarding tech careers.
         From our industry-aligned syllabus to our comprehensive, personalized career support service, every one of our features has been tried and tested to optimize your learning journey."
     content:
       text: "Let’s shape your future together!"
@@ -234,21 +233,22 @@ components:
 
   - name: geekinfo_2
     position: 7
-    layout: two_column_left
+    layout: two_column_right
     proportions: [6, 6]
-    background: "veryLightBlue"
+    background: "veryLightBlue2"
     image:
-      style: '{ "backgroundSize": "contain"}'
-      src: "/images/landing/jog-guarantee-landing.webp"
-      shadow: false
+      style: '{ "backgroundSize": "cover" }'
+      src: "/images/testimonials/james-testimonial-jg.jpg"
+      shadow: true
+    video: "KgBpH_eDtVU"
     section_heading:
       text: ""
       style: '{ "font-size": "30px" }'
     heading:
-      text: "How it works"
+      text: "James' Experience"
       font_size: ["40px", "40px", "40px", "40px", "40px"]
     sub_heading:
-      text: "These are the commitments you have to make to qualify for the job guarantee. If you complete every step and don’t get hired within 6 months of graduation, you’ll get 100% of your tuition back."
+      text: "James highlights how 4Geeks Academy changed his life, providing ongoing mentorship and a job guarantee that ensured he landed a tech position. The academy supports students post-graduation, offering career assistance to secure employment within two years or a full refund."
       font_size: ["16px", "16px", "16px", "16px", "16px"]
     button:
       text: "Get More Info"
@@ -263,18 +263,18 @@ components:
       path: ""
     bullets:
       items:
-        - heading: " Start the program"
-          icon: "circle" #string with icon for example ['check', 'cicle', etc]
-        - heading: "Comply with assignments and attendance"
-          icon: "circle" #string with icon for example ['check', 'cicle', etc]
-        - heading: "Approve the final project"
-          icon: "circle" #string with icon for example ['check', 'cicle', etc]
-        - heading: "Graduate"
-          icon: "circle" #string with icon for example ['check', 'cicle', etc]
-        - heading: "Complete the career support process"
-          icon: "circle" #string with icon for example ['check', 'cicle', etc]
-        - heading: "Get a job in 6 months"
-          icon: "circle" #string with icon for example ['check', 'cicle', etc]
+      - heading: "Transition to Tech Without a Degree"
+        text: "James found the perfect path to tech, despite lacking a formal degree."
+        icon: "circle"
+      - heading: "Lifetime Mentorship & Career Support"
+        text: "4Geeks Academy provides continuous guidance, even after graduation."
+        icon: "circle"
+      - heading: "Job Guarantee for Career Security"
+        text: "If students don't secure a job within two years, tuition is refunded."
+        icon: "circle"
+      - heading: "Success Through Hands-On Learning"
+        text: "James landed a tech job thanks to 4Geeks' structured training."
+        icon: "circle"
 
   # - name: why-4geeks-icons
   #   position: 2
