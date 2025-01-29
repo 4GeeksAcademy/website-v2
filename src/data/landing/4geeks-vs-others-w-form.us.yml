@@ -1,0 +1,409 @@
+meta_info:
+  slug: 4geeks-vs-others # <--- URL 4geeksacademy.com/us/landing/example
+
+  # This will show on social media when shared
+  title: "4Geeks vs Others"
+  description: "4Geeks Academy vs others."
+  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  image: "/images/bg/the-academy-bg.jpg"
+  keywords: ""
+
+  template: "landing_a" # <--- choose your landing template
+  redirects:
+    [] # <--- URL redirections to avoid 404 errors
+
+
+    # Set a particular course or location to the landing page
+  # this UTM fields will be also included in the CRM contact
+  utm_course:
+    ["full-stack", "datascience-ml", "cybersecurity", "coding-introduction"]
+  utm_location:
+    [
+      "atlanta-usa",
+      "austin-usa",
+      "chicago-usa",
+      "downtown-miami",
+      "houston-usa",
+      "losangeles-usa",
+      "newyork-usa",
+      "orlando",
+      "online",
+      "tampa-usa",
+    ]
+  automation: soft # comma separated, "soft" is the default value
+  tag: request_more_info # comma separated, "request_more_info" is the default value
+
+navbar:
+  logoUrl: "#" # relative(/apply), absolute(https://google.com) or id(#componentName)
+  buttonText: "Get More Info"
+  buttonUrl: "#leadform_bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+
+form:
+  # posible fields: "first_name", "last_name", "full_name", "phone", "email"
+  # always the first_name, email and phone will be mandatory if added.
+  fields: ["full_name", "phone", "email"]
+  heading: "Get more Information"
+  motivation: "Upon completion of the form, you will receive a detailed email providing information about the academy and the wide range of courses offered."
+  button_label: Get More Info
+  redirect: null #you can redirect to another url or entirely diffrent website
+
+apply_schollarship: # form that is displayed at the end of the landing
+  # title: "Apoyo Profesional Ilimitado"
+  imageSide: "right"
+  image: "../../../static/images/landing/apply.png"
+
+# jumbotron on the top (cannot be commented out)
+header_data:
+  background: "#ffffff"
+  tagline: WHY 4GEEKS ACADEMY
+  tagline_color: "#1c1c1c"
+  sub_heading: Find Out What Makes Us Stand Out.
+  form_styles:
+    background: "#FFB718"
+    color: "black"
+    button:
+      background: "black"
+  # background_image: "../../../static/images/landing-background-men-w-laptop.webp"
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+  image_filter: brightness(0.9)
+
+features:
+  marginTop: 0px #<-- separation between tagline and the bullets
+
+  #                                         up   left down  right
+  text: |-
+    We live and breathe code. Helping aspiring techies achieve their career goals is our calling, and we’ve perfected our hands-on teaching methods to ensure you gain the skills and confidence to launch a thriving tech career.
+    <br><br>From our  industry-aligned syllabus to a lifetime career network, here’s why our bootcamps beat the rest.
+  styles: '{ "fontSize": "20px", "margin": "10px 0px 0px 0px" }'
+  # bullets:
+  #   - Get career-ready with our award-winning method.
+  #   - Access our unmatched career support services.
+  #   - Secure a job within 6 months of graduation, or we’ll refund your tuition
+
+  # - "Part-time: Immerse yourself in a flexible schedule, perfect for busy professionals and students."
+
+short_badges:
+  - name: "Top Online Full-Stack Bootcamps Of 2024"
+    url: ""
+    image: "../../../static/images/badges/forbes-logo-award.png"
+    alt: "We have been selected as one of the Top Online Coding Bootcamps by Forbes."
+  - name: "Best for Spanish speakers Of 2024 by Fortune"
+    url: ""
+    image: "../../../static/images/badges/fortune-logo.png"
+    alt: "Recognized by Fortune as one of the Top Coding Bootcamps"
+  - name: "Top Coding Bootcamps Newsweek"
+    url: ""
+    image: "../../../static/images/badges/newsweek.webp"
+    alt: "Top Coding Bootcamps Newsweek"
+  - name: "Best Coding Bootcamp Course Report 2024"
+    url: ""
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+    alt: "Best Coding Bootcamp Course Report 2024"
+  - name: "Licensed by the Florida Department of Education"
+    url: ""
+    image: "../../../static/images/badges/licensed.png"
+    alt: "Licensed by the Florida Department of Education"
+  - name: "ARP Certificate"
+    url: ""
+    image: "../../../static/images/badges/arp-logo-certification.png"
+    alt: "ARP Certificate"
+
+follow_bar:
+  position: "top" # top, bottom, hidden
+  content:
+    text: "Start now and shape your future in technology!"
+    text_mobile: "Start now and shape your future in technology!"
+    # devices:   XL      LG    MD      SM    XS
+    font_size: ["25px", "25px", "25px", "20px", "18px"]
+  button:
+    text: "Get More Info"
+    path: "#leadform_header"
+  phone:
+    text: "Call "
+
+#
+# ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
+#
+rating_reviews:
+  background: "#FBFBFB"
+  position: 4
+  heading: "Top rated on all available review sites"
+  rating_list:
+    - alt: "Career Karma"
+      image: "../../../static/images/badges/career-karma.png"
+      rating: 4.89
+      url: ""
+    - alt: "Switchup"
+      image: "../../../static/images/badges/switchup-img.png"
+      rating: 4.91
+      url: ""
+    - alt: "Course Report"
+      image: "../../../static/images/badges/course-report.png"
+      rating: 4.84
+      url: ""
+    - alt: "Google"
+      image: "../../../static/images/badges/google.png"
+      rating: 5
+      url: ""
+
+# program_details:
+#   position: 3
+#   background: "#faf2e1"
+#   heading: "Master Full-Stack Development with Austin Coding Courses"
+#   sub_heading: "Dive deep into full-stack development with our detailed program that covers everything from HTML5 to advanced backend frameworks."
+
+why_4geeks:
+  position: 8
+  heading: "Hear It from Our Students"
+
+# geeks_vs_others:
+#   position: 7
+#   heading: "Compare Our Miami Coding Courses vs. the Competition"
+#   # sub_heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+#   total_rows: 5
+
+# why_python:
+#   position: 5
+#   heading: "Why Python and React.js" # optional or set to white space to hide
+#   sub_heading: "JavaScript has 26x's more job vacancies than Ruby On Rails. Python has 10x's more job vacancies than Node.js" # optional or set to white space to hide
+
+# why_4geeks:
+#   position: 9
+#   heading: "Why 4Geeks Academy"
+#   sub_heading: ""
+
+# badges:
+#   position: 5
+#   heading: "4Geeks Academy has awards and recognitions that validate its excellence"
+
+who_is_hiring:
+  position: 9
+  limit: 4
+  heading: "Who is hiring our students?"
+  sub_heading: "550+ hiring partners, and 50+ job openings right now for software development"
+
+components:
+    - name: first
+      position: 1
+      proportions: [6, 6]
+      layout: two_column_left
+      image:
+        style: '{ "backgroundSize": "contain", "background-position": "center" }'
+        src: "/images/landing/hombre-joven-con-laptop-senalando.webp"
+        shadow: false
+      heading:
+        text: "A Support System Like No Other"
+        font_size: ["33px", "33px", "33px", "33px", "33px"]
+        style: '{ "lineHeight": "30px" }'
+      bullets:
+        items:
+          - heading: "Geekpal"
+            text: |
+              Unlimited 1:1 Mentorship
+              <br />
+              Weekly study halls and as many 1-on-1 sessions as you need. Our expert mentors are always here to help you tackle coding challenges, big or small.
+            icon: "check"
+            icon_color: "#25BF6C"
+          - heading: "Geekforce"
+            text: |
+              Lifetime Career Support
+              <br />
+              From optimizing your CV, LinkedIn, GitHub, and portfolio to tailored mock interviews, our career experts provide personalized guidance to help you launch your career—even after you’ve landed your first job.
+            icon: "check"
+            icon_color: "#25BF6C"
+          - heading: "Slack Channels"
+            text: |
+              Join Our Global Community
+              <br />
+              Be part of a supportive network of over 6,100 people worldwide. Share advice, get feedback, and grow together in dedicated channels you can access from day one to forever.
+            icon: "check"
+            icon_color: "#25BF6C"
+
+    - name: second
+      position: 2
+      proportions: [5, 7]
+      layout: two_column_right
+      image:
+        style: '{ "backgroundSize": "contain", "background-position": "center" }'
+        src: "/images/landing/community-support-2.webp"
+        shadow: false
+      heading:
+        text: "A Support System Like No Other"
+        font_size: ["33px", "33px", "33px", "33px", "33px"]
+        style: '{ "lineHeight": "30px" }'
+      bullets:
+        items:
+          - heading: "4Geeks.com"
+            text: |
+              Your Learning Hub
+              <br />
+              Access additional resources to accelerate your growth, including live events, interactive exercises, and a wealth of coding tools designed for every skill level.
+            icon: "check"
+            icon_color: "#25BF6C"
+          - heading: "Rigobot"
+            text: |
+              Your AI Coding Assistant
+              <br />
+              Whether you’re debugging code, tracking your progress with skill evaluations, or looking for instant tutoring, Rigobot has you covered 24/7. Our expert AI assistant ensures you stay on track and solve challenges faster, no matter the time of day.
+            icon: "check"
+            icon_color: "#25BF6C"
+
+    - name: third
+      position: 3
+      proportions: [6, 6]
+      layout: two_column_left
+      image:
+        style: '{ "backgroundSize": "contain", "background-position": "center" }'
+        src: "/images/landing/reservation-es.webp"
+        shadow: false
+      heading:
+        text: "Making Tech Careers Accessible"
+        font_size: ["33px", "33px", "33px", "33px", "33px"]
+        style: '{ "lineHeight": "30px" }'
+      sub_heading:
+        text: "At 4Geeks Academy, we believe a tech career should be within everyone’s reach. Our programs are designed to meet real-world needs, with financial options to ensure you can join our bootcamp stress-free."
+        font_size: ["16px", "16px", "16px", "16px", "16px"]
+        style: '{ "font-size": "16px", "margin": "15px 0", "font-weight": "600" }'
+      bullets:
+        items:
+          - heading: "Full and partial scholarships for qualifying applicants."
+            text: ""
+            icon: "check"
+          - heading: "Flexible financing and loan options, starting as low as $150/month."
+            text: ""
+            icon: "check"
+      button:
+        text: "See financing options"
+        color: "white"
+        background: "black"
+        path: "/us/financials"
+
+    # - name: fourth
+    #   position: 4
+    #   proportions: [6, 6]
+    #   layout: two_column_left
+    #   heading:
+    #     text: "Enroll with a Job Guarantee"
+    #     font_size: ["33px", "30px", "26px", "22px", "20px"]
+    #     style: '{ "lineHeight": "30px", "font-weight": "700" }'
+    #   sub_heading:
+    #     text: |
+    #       Your success is our promise. 
+    #       Get hired within 6 months of graduation, or we’ll give you a full refund.
+    #       Here’s how it works:
+    #     font_size: ["20px", "20px", "20px", "20px", "20px"]
+    #     style: '{ "margin": "0", "font-weight": "400" }'
+    #   bullets:
+    #     items:
+    #       - text: "Start the program"
+    #         icon: "check"
+    #       - text: "Stay on track with assignments and attendance"
+    #         icon: "check"
+    #       - text: "Complete and approve your final project"
+    #         icon: "check"
+    #       - text: "Graduate successfully"
+    #         icon: "check"
+    #       - text: "Fully participate in our career support process"
+    #         icon: "check"
+    #   image:
+    #     style: '{ "backgroundSize": "contain", "background-position": "center" }'
+    #     src: "/images/landing/hombre-joven-con-laptop.webp"
+    #   button:
+    #     text: "Learn More"
+    #     color: "white"
+    #     background: "black"
+    #     path: "/us/job-guarantee"
+
+    # - name: geekinfo_2
+    #   position: 7
+    #   layout: two_column_left
+    #   proportions: [6, 6]
+    #   background: "veryLightBlue"
+    #   image:
+    #     style: '{ "backgroundSize": "contain"}'
+    #     src: "/images/landing/jog-guarantee-landing.webp"
+    #     shadow: false
+    #   section_heading:
+    #     text: ""
+    #     style: '{ "font-size": "30px" }'
+    #   heading:
+    #     text: "How it works"
+    #     font_size: ["40px", "40px", "40px", "40px", "40px"]
+    #   sub_heading:
+    #     text: "These are the commitments you have to make to qualify for the job guarantee. If you complete every step and don’t get hired within 6 months of graduation, you’ll get 100% of your tuition back."
+    #     font_size: ["16px", "16px", "16px", "16px", "16px"]
+    #   button:
+    #     text: "Get More Info"
+    #     color: white
+    #     hover_color: "#fcb91a"
+    #     background: "black"
+    #     hover: "blue"
+    #     path: "#leadform_bottom"
+    #   content:
+    #     text: ""
+    #     font_size: ["16px"]
+    #     path: ""
+    #   bullets:
+    #     items:
+    #       - heading: " Start the program"
+    #         icon: "circle" #string with icon for example ['check', 'cicle', etc]
+    #       - heading: "Comply with assignments and attendance"
+    #         icon: "circle" #string with icon for example ['check', 'cicle', etc]
+    #       - heading: "Approve the final project"
+    #         icon: "circle" #string with icon for example ['check', 'cicle', etc]
+    #       - heading: "Graduate"
+    #         icon: "circle" #string with icon for example ['check', 'cicle', etc]
+    #       - heading: "Complete the career support process"
+    #         icon: "circle" #string with icon for example ['check', 'cicle', etc]
+    #       - heading: "Get a job in 6 months"
+    #         icon: "circle" #string with icon for example ['check', 'cicle', etc]
+
+    # - name: why-4geeks-icons
+    #   position: 2
+    #   background: "#fbfcfc"
+    #   layout: iconogram
+    #   swipable: True
+    #   heading:
+    #     text: "Job guarantee commitment"
+    #     font_size: ["30px", "30px", "30px", "30px", "30px"]
+    #   sub_heading:
+    #     text: ""
+    #     font_size: ["16px", "16px", "16px", "16px", "16px"]
+    #     style: '{ "textAlign": "center", "width": "60%" }'
+    #   icons:
+    #     - icon: "mortar-board-icon"
+    #       title: ""
+    #       content: "Get a job within 180 days after graduation or get your money back."
+
+    #     - icon: "stage-dots-icon"
+    #       title: ""
+    #       content: "Go through each phase of our comprehensive career support process for job readiness."
+
+    #     - icon: "people-group-icon"
+    #       title: ""
+    #       content: "Connect with a network of 5,000+ hiring partners across various industries."
+
+    #     - icon: "hands-w-purple"
+    #       title: ""
+    #       content: "We commit to supporting your future career, ensuring your success in tech."
+
+    # - name: some_id
+    #   position: 6
+    #   layout: two_column_right
+    #   image:
+    #     src: "/images/testimonials/allisa-testimonial.jpg"
+    #     shadow: true
+    #   video: "TCHASxvkhpI"
+    #   heading:
+    #     text: "Discover Opportunities in Coding Courses Miami"
+    #       #xl      lg     md     sm    xs
+    #     font_size: ["40px", "34px", "34px", "25px", "20px"]
+    #   content:
+    #     text: "Meet Alissa, the Campus Manager at 4Geeks Academy Miami. In this video, Alissa shares how our team is committed to supporting students throughout South Florida. We partner with organizations like Miami Tech Works, United Way Miami, and Clark University to provide full and partial scholarships for Miami-Dade and Broward county residents. As a bootcamp deeply rooted in Miami, we prioritize making these opportunities accessible to our community. If you’re ready to take advantage of these scholarships and launch your tech career, contact our admissions team today. Alissa and our dedicated staff are here to guide you every step of the way."
+    #     font_size: ["16px"]
+    #   button:
+    #     text: "Get More Info"
+    #     background: black
+    #     color: white
+    #     hover_color: "#white"
+    #     path: "#leadform_header"
