@@ -1052,7 +1052,7 @@ export const landingSections = {
           content: yml.content,
           button: yml.button,
           image: yml.image,
-          video: yml.video,
+          // video: yml.video,
         }}
       />
     </Div>
