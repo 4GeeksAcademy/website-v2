@@ -339,7 +339,7 @@ const Home = (props) => {
             heading_image: yml.two_columns_rigo?.heading_image,
             sub_heading: yml.two_columns_rigo?.sub_heading,
             bullets: yml.two_columns_rigo?.bullets,
-            content: yml.two_columns_rigo?.content
+            content: yml.two_columns_rigo?.content,
           }}
           proportions={yml.two_columns_rigo?.proportions}
           session={session}
