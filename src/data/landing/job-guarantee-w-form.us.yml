@@ -140,12 +140,6 @@ rating_reviews:
 #   position: 8
 #   heading: "Hear It from Our Students"
 
-geeks_vs_others:
-  position: 7
-  heading: "Compare Our Miami Coding Courses vs. the Competition"
-  # sub_heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
-  total_rows: 5
-
 # why_python:
 #   position: 5
 #   heading: "Why Python and React.js" # optional or set to white space to hide

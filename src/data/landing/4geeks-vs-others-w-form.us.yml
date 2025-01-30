@@ -156,11 +156,11 @@ why_4geeks:
   position: 8
   heading: "Hear It from Our Students"
 
-# geeks_vs_others:
-#   position: 7
-#   heading: "Compare Our Miami Coding Courses vs. the Competition"
-#   # sub_heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
-#   total_rows: 5
+geeks_vs_others:
+  position: 7
+  heading: "Compare Our Miami Coding Courses vs. the Competition"
+  # sub_heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+  total_rows: 5
 
 # why_python:
 #   position: 5
