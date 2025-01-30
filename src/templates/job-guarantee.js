@@ -507,7 +507,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           </Paragraph>
         )}
       </Container>
-      <TwoColumnCarousel
+      {/* <TwoColumnCarousel
         background="#FAFAFA"
         title={yml.successful_stories.title}
         text={yml.successful_stories.text}
@@ -593,7 +593,32 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
             </Div>
           );
         })}
-      </TwoColumnCarousel>
+      </TwoColumnCarousel> */}
+
+<Container
+        id="two_column_right"
+        flexDirection="column"
+        margin="0"
+        padding="0 10px"
+        padding_tablet="0 90px"
+        padding_md="0 50px"
+        padding_lg="0"
+      >
+        <TwoColumn
+                  left={{ image: yml.two_columns_video?.image, video: yml.two_columns_video?.video }}
+                  right={{
+                    heading: yml.two_columns_video?.heading,
+                    sub_heading: yml.two_columns_video?.sub_heading,
+                    bullets: yml.two_columns_video?.bullets,
+                    content: yml.two_columns_video?.content,
+                    disclosure: yml.two_columns_video?.disclosure,
+                    button: yml.two_columns_video?.button,
+                  }}
+                  proportions={yml.two_columns_video?.proportions}
+                  session={session}
+                />
+      </Container>
+
       <ScholarshipSuccessCases
         content={data.allScholarshipSuccessCasesYaml.edges[0].node}
       />
@@ -688,6 +713,31 @@ export const query = graphql`
               path
             }
           }
+          two_columns_video {
+            proportions
+            image {
+              style
+              src
+              shadow
+            }
+            
+            video
+            heading {
+              text
+              font_size
+            }
+            sub_heading {
+              text
+              font_size
+            }
+            button {
+              text
+              color
+              background
+              path
+            }
+          }
+          
           we_trust_section {
             title
             text
