@@ -254,16 +254,23 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
             type="h2"
             color={Colors.black}
             textAlign="center"
-            fontSize="36px"
-            fontSize_tablet="80px"
+            fontSize="26px"
+            fontSize_tablet="32px"
+            fontSize_sm="26px" /* Ajuste para pantallas pequeñas */
+            fontSize_xs="24px" /* Ajuste para móviles muy pequeños */
             lineHeight="38px"
-            lineHeight_tablet="87px"
+            lineHeight_tablet="28px"
+            lineHeight_sm="26px" /* Ajuste para pantallas pequeñas */
+            lineHeight_xs="24px" /* Ajuste para móviles muy pequeños */
             margin_tablet="40px 0 40px 0"
+            margin_sm="30px 0 30px 0" /* Ajuste de margen en pantallas pequeñas */
+            margin_xs="20px 0 20px 0" /* Ajuste de margen en móviles pequeños */
             textTransform="uppercase"
             fontFamily="Archivo, Lato, sans-serif"
           >
             {yml.header.title}
           </H2>
+
           <SubTitle
             color={Colors.black}
             margin="15px auto"
@@ -276,19 +283,37 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
             fontWeight="400"
             marginBottom="16px"
             fontSize="26px"
+            fontSize_tablet="22px" /* Reducción en tablets */
+            fontSize_sm="20px" /* Reducción en pantallas pequeñas */
+            fontSize_xs="18px" /* Para móviles pequeños */
+            lineHeight="32px"
+            lineHeight_tablet="28px"
+            lineHeight_sm="26px"
+            lineHeight_xs="24px"
           >
             {yml.header.sub_title}
           </SubTitle>
-          <SubTitle
+
+          <Paragraph
             color={Colors.black}
             margin="15px auto"
             padding="0"
             width="auto"
             letterSpacing="0.05em"
             textAlign="center"
+            justifyItems="center"
             maxWidth="760px"
+            fontSize="20px" /* Un poco menor que el SubTitle */
+            fontSize_tablet="18px"
+            fontSize_sm="16px"
+            fontSize_xs="15px"
+            lineHeight="28px"
+            lineHeight_tablet="26px"
+            lineHeight_sm="24px"
+            lineHeight_xs="22px"
             dangerouslySetInnerHTML={{ __html: yml.header.paragraph }}
           />
+
           <Div
             flexDirection_tablet="row"
             flexDirection="column"
@@ -304,14 +329,27 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
                   justifyContent="center"
                   width="100%"
                   width_tablet="fit-content"
-                  color={Colors.blue}
+                  background="#0085ff"
+                  color="#ffffff"
                   margin_tablet="10px 24px 10px 0"
                   textColor="white"
+                  style={{
+                    transition: "transform 250ms ease-in-out, background-color 250ms ease-in-out",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.target.style.backgroundColor = "#ffb718";
+                    e.target.style.transform = "scale(1.1)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.backgroundColor = Colors.blue;
+                    e.target.style.transform = "scale(1)";
+                  }}
                 >
                   {applyButtonText}
                 </Button>
               </Link>
             </Div>
+
             <Button
               onClick={handleOpen}
               display="block"
@@ -324,10 +362,25 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
               margin_tablet="0"
               textColor={Colors.blue}
               textAlign="center"
+              style={{
+                transition: "transform 250ms ease-in-out, border-color 250ms ease-in-out, color 250ms ease-in-out",
+                border: `2px solid ${Colors.blue}`,
+              }}
+              onMouseEnter={(e) => {
+                e.target.style.color = "#ffb718";
+                e.target.style.borderColor = "#ffb718";
+                e.target.style.transform = "scale(1.1)";
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.color = Colors.blue;
+                e.target.style.borderColor = Colors.blue;
+                e.target.style.transform = "scale(1)";
+              }}
             >
               {yml.button.btn_label}
             </Button>
           </Div>
+
           <Modal
             aria-labelledby="simple-modal-title"
             aria-describedby="simple-modal-description"
@@ -358,13 +411,15 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
         </Container>
       </Div>
       <Container
-        id="two_column_left"
-        flexDirection="column"
-        margin="0"
-        padding="0 10px"
-        padding_tablet="0 90px"
-        padding_md="0 50px"
-        padding_lg="0"
+        margin="40px 0"
+        margin_tablet="40px 0"
+        padding="40px 0"
+        padding_tablet="20px 0"
+        display="flex"
+        flexDirection="row"
+        flexWrap="nowrap"
+        alignItems="center"
+        justifyContent="space-between"
       >
         <TwoColumn
           right={{ image: ymlTwoColumn.image }}
@@ -380,9 +435,27 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
         />
       </Container>
 
-      <Container padding="0" padding_tablet="0 90px" padding_lg="0">
+
+      {/* <Container margin="40px 0" padding="0" padding_tablet="0 90px" padding_lg="0">
         <WeTrust we_trust={yml.we_trust_section} />
-      </Container>
+      </Container> */}
+
+      <div>
+        <WeTrust 
+          id="we-trust-section" 
+          margin="0" 
+          padding="0" 
+          padding_md="0"
+          padding_lg="0" 
+          padding_tablet="0 !important" 
+          width="100%" 
+          width_md="100%" 
+          width_tablet="100%"
+          maxWidth="1280px"
+          we_trust={yml.we_trust_section} 
+        />
+      </div>
+
 
       <Container
         display="block"
@@ -392,13 +465,14 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
         padding_md="40px 130px"
         padding_lg="40px 0"
       >
-        <Div display="block" margin="0px auto 40px 0" padding="0 20px">
+        <Div display="block" margin="0px auto 40px 0" padding="42px 0">
           <H2 margin="0 0 15px 0">{yml.how_it_works.title}</H2>
           <SubTitle>{yml.how_it_works.text}</SubTitle>
         </Div>
         <Div
           margin="auto"
           margin_lg="auto"
+          marginBottom= "50px"
           width="300px"
           width_tablet="fit-content"
           width_md="auto"
@@ -485,12 +559,9 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           ))}
         </Div>
 
-        <FaqCard
-          faqs={data.allFaqYaml.edges[0].node.faq}
-          topicSlug="job_guarantee"
-          // minPriority="3"
-          // locationSlug={yml.breathecode_location_slug}
-        />
+        <Container margin="40px 0" padding="0" padding_tablet="0">
+          <FaqCard faqs={data.allFaqYaml.edges[0].node.faq} topicSlug="job_guarantee" />
+        </Container>
 
         {yml.how_it_works.link && (
           <Paragraph
@@ -595,33 +666,34 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
         })}
       </TwoColumnCarousel> */}
 
-<Container
+      <Container
         id="two_column_right"
         flexDirection="column"
         margin="0"
-        padding="0 10px"
-        padding_tablet="0 90px"
+        padding="80px 0"
+        padding_tablet="0"
         padding_md="0 50px"
         padding_lg="0"
       >
         <TwoColumn
-                  left={{ image: yml.two_columns_video?.image, video: yml.two_columns_video?.video }}
-                  right={{
-                    heading: yml.two_columns_video?.heading,
-                    sub_heading: yml.two_columns_video?.sub_heading,
-                    bullets: yml.two_columns_video?.bullets,
-                    content: yml.two_columns_video?.content,
-                    disclosure: yml.two_columns_video?.disclosure,
-                    button: yml.two_columns_video?.button,
-                  }}
-                  proportions={yml.two_columns_video?.proportions}
-                  session={session}
-                />
+          left={{ image: yml.two_columns_video?.image, video: yml.two_columns_video?.video }}
+          right={{
+            heading: yml.two_columns_video?.heading,
+            sub_heading: yml.two_columns_video?.sub_heading,
+            bullets: yml.two_columns_video?.bullets,
+            content: yml.two_columns_video?.content,
+            disclosure: yml.two_columns_video?.disclosure,
+            button: yml.two_columns_video?.button,
+          }}
+          proportions={yml.two_columns_video?.proportions}
+          session={session}
+        />
       </Container>
 
-      <ScholarshipSuccessCases
-        content={data.allScholarshipSuccessCasesYaml.edges[0].node}
-      />
+      <Container margin="40px 0" padding="0" padding_tablet="0 90px">
+        <ScholarshipSuccessCases content={data.allScholarshipSuccessCasesYaml.edges[0].node} />
+      </Container>
+
       <HR
         background={Colors.verylightGray}
         width="100%"
@@ -704,6 +776,7 @@ export const query = graphql`
             content {
               text
               font_size
+              style
             }
             button {
               text
@@ -713,6 +786,7 @@ export const query = graphql`
               path
             }
           }
+
           two_columns_video {
             proportions
             image {
@@ -729,6 +803,7 @@ export const query = graphql`
             sub_heading {
               text
               font_size
+              style
             }
             button {
               text
