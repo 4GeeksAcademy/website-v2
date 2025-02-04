@@ -1,11 +1,22 @@
 import React, { useEffect, useState, useContext } from "react";
 import { graphql } from "gatsby";
 import { Link } from "gatsby";
-import { isCustomBarActive, requestSyllabus, beHiringPartner } from "../actions";
+import {
+  isCustomBarActive,
+  requestSyllabus,
+  beHiringPartner,
+} from "../actions";
 import BaseRender from "./_baseLayout";
 import { Container, Div, HR, GridContainer } from "../components/Sections";
 import { H2, H4, Paragraph, SubTitle } from "../components/Heading";
-import { Anchor, Button, Colors, Img, ImgV2, StyledBackgroundSection } from "../components/Styling";
+import {
+  Anchor,
+  Button,
+  Colors,
+  Img,
+  ImgV2,
+  StyledBackgroundSection,
+} from "../components/Styling";
 import { SessionContext } from "../session";
 import Modal from "../components/Modal";
 import LeadForm from "../components/LeadForm";
@@ -334,7 +345,8 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
                   margin_tablet="10px 24px 10px 0"
                   textColor="white"
                   style={{
-                    transition: "transform 250ms ease-in-out, background-color 250ms ease-in-out",
+                    transition:
+                      "transform 250ms ease-in-out, background-color 250ms ease-in-out",
                   }}
                   onMouseEnter={(e) => {
                     e.target.style.backgroundColor = "#ffb718";
@@ -363,7 +375,8 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
               textColor={Colors.blue}
               textAlign="center"
               style={{
-                transition: "transform 250ms ease-in-out, border-color 250ms ease-in-out, color 250ms ease-in-out",
+                transition:
+                  "transform 250ms ease-in-out, border-color 250ms ease-in-out, color 250ms ease-in-out",
                 border: `2px solid ${Colors.blue}`,
               }}
               onMouseEnter={(e) => {
@@ -435,27 +448,25 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
         />
       </Container>
 
-
       {/* <Container margin="40px 0" padding="0" padding_tablet="0 90px" padding_lg="0">
         <WeTrust we_trust={yml.we_trust_section} />
       </Container> */}
 
       <div>
-        <WeTrust 
-          id="we-trust-section" 
-          margin="0" 
-          padding="0" 
+        <WeTrust
+          id="we-trust-section"
+          margin="0"
+          padding="0"
           padding_md="0"
-          padding_lg="0" 
-          padding_tablet="0 !important" 
-          width="100%" 
-          width_md="100%" 
+          padding_lg="0"
+          padding_tablet="0 !important"
+          width="100%"
+          width_md="100%"
           width_tablet="100%"
           maxWidth="1280px"
-          we_trust={yml.we_trust_section} 
+          we_trust={yml.we_trust_section}
         />
       </div>
-
 
       <Container
         display="block"
@@ -472,7 +483,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
         <Div
           margin="auto"
           margin_lg="auto"
-          marginBottom= "50px"
+          marginBottom="50px"
           width="300px"
           width_tablet="fit-content"
           width_md="auto"
@@ -560,7 +571,10 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
         </Div>
 
         <Container margin="40px 0" padding="0" padding_tablet="0">
-          <FaqCard faqs={data.allFaqYaml.edges[0].node.faq} topicSlug="job_guarantee" />
+          <FaqCard
+            faqs={data.allFaqYaml.edges[0].node.faq}
+            topicSlug="job_guarantee"
+          />
         </Container>
 
         {yml.how_it_works.link && (
@@ -676,7 +690,10 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
         padding_lg="0"
       >
         <TwoColumn
-          left={{ image: yml.two_columns_video?.image, video: yml.two_columns_video?.video }}
+          left={{
+            image: yml.two_columns_video?.image,
+            video: yml.two_columns_video?.video,
+          }}
           right={{
             heading: yml.two_columns_video?.heading,
             sub_heading: yml.two_columns_video?.sub_heading,
@@ -691,7 +708,9 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
       </Container>
 
       <Container margin="40px 0" padding="0" padding_tablet="0 90px">
-        <ScholarshipSuccessCases content={data.allScholarshipSuccessCasesYaml.edges[0].node} />
+        <ScholarshipSuccessCases
+          content={data.allScholarshipSuccessCasesYaml.edges[0].node}
+        />
       </Container>
 
       <HR
@@ -794,7 +813,7 @@ export const query = graphql`
               src
               shadow
             }
-            
+
             video
             heading {
               text
@@ -812,7 +831,7 @@ export const query = graphql`
               path
             }
           }
-          
+
           we_trust_section {
             title
             text
