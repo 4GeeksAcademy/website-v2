@@ -248,7 +248,7 @@ components:
       text: ""
       style: '{ "font-size": "30px" }'
     heading: 
-      text: "Descubre la historía de uno de nuestros estudiantes"
+      text: "Descubre la historia de uno de nuestros estudiantes"
     sub_heading:
       text: "Descubre la historia de Diego Fernández, ahora Full Stack Developer. Diego nos cuenta su experiencia en 4Geeks Academy, incluyendo las mentorías, la comunidad y su perspectiva."
     content: 
