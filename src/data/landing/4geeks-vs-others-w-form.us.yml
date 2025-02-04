@@ -27,7 +27,6 @@ meta_info:
       "losangeles-usa",
       "newyork-usa",
       "orlando",
-      "online",
       "tampa-usa",
     ]
   automation: soft # comma separated, "soft" is the default value
