@@ -29,7 +29,7 @@ form:
   heading: "Más Información"
   motivation: "Una vez completado el formulario, alguien de nuestro equipo se pondrá en contacto contigo en breves minutos a través de un correo electrónico."
   button_label: Solicita tu Plaza
-  redirect: null #you can redirect to another url or entirely diffrent website
+  redirect: /es/gracias #you can redirect to another url or entirely diffrent website
 
 apply_schollarship: # form that is displayed at the end of the landing
   # title: "Apoyo Profesional Ilimitado"
