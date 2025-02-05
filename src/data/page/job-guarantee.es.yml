@@ -38,7 +38,7 @@ header:
 two_column_left:
   proportions: [7, 5]
   image:
-    style: '{ "backgroundSize": "contain", "background-position": "center" '
+    style: '{ "backgroundSize": "contain", "background-position": "center" }'
     src: "/images/landing/hombre-joven-con-laptop.webp"
   heading:
     text: "¿Por qué ofrecemos trabajo garantizado?"
