@@ -265,14 +265,14 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
             type="h2"
             color={Colors.black}
             textAlign="center"
-            fontSize="26px"
-            fontSize_tablet="32px"
-            fontSize_sm="26px" /* Ajuste para pantallas pequeñas */
-            fontSize_xs="24px" /* Ajuste para móviles muy pequeños */
+            fontSize="32px"
+            fontSize_tablet="46px"
+            fontSize_sm="32px" /* Ajuste para pantallas pequeñas */
+            fontSize_xs="32px" /* Ajuste para móviles muy pequeños */
             lineHeight="38px"
-            lineHeight_tablet="28px"
-            lineHeight_sm="26px" /* Ajuste para pantallas pequeñas */
-            lineHeight_xs="24px" /* Ajuste para móviles muy pequeños */
+            lineHeight_tablet="46px"
+            lineHeight_sm="30px" /* Ajuste para pantallas pequeñas */
+            lineHeight_xs="30px" /* Ajuste para móviles muy pequeños */
             margin_tablet="40px 0 40px 0"
             margin_sm="30px 0 30px 0" /* Ajuste de margen en pantallas pequeñas */
             margin_xs="20px 0 20px 0" /* Ajuste de margen en móviles pequeños */
@@ -294,9 +294,9 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
             fontWeight="400"
             marginBottom="16px"
             fontSize="26px"
-            fontSize_tablet="22px" /* Reducción en tablets */
+            fontSize_tablet="30px" /* Reducción en tablets */
             fontSize_sm="20px" /* Reducción en pantallas pequeñas */
-            fontSize_xs="18px" /* Para móviles pequeños */
+            fontSize_xs="22px" /* Para móviles pequeños */
             lineHeight="32px"
             lineHeight_tablet="28px"
             lineHeight_sm="26px"
@@ -310,18 +310,20 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
             margin="15px auto"
             padding="0"
             width="auto"
-            letterSpacing="0.05em"
             textAlign="center"
             justifyItems="center"
+            justifyContent_tablet="center"
+            justifyContent_sm="left"
+            justifyContent_xs="left"
             maxWidth="760px"
-            fontSize="20px" /* Un poco menor que el SubTitle */
-            fontSize_tablet="18px"
+            fontSize="16px" /* Un poco menor que el SubTitle */
+            fontSize_tablet="16px"
             fontSize_sm="16px"
             fontSize_xs="15px"
-            lineHeight="28px"
-            lineHeight_tablet="26px"
-            lineHeight_sm="24px"
-            lineHeight_xs="22px"
+            lineHeight="17px"
+            lineHeight_tablet="20px"
+            lineHeight_sm="18px"
+            lineHeight_xs="18px"
             dangerouslySetInnerHTML={{ __html: yml.header.paragraph }}
           />
 
@@ -423,7 +425,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           </Modal>
         </Container>
       </Div>
-      <Container
+      {/* <Container
         margin="40px 0"
         margin_tablet="40px 0"
         padding="40px 0"
@@ -433,7 +435,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
         flexWrap="nowrap"
         alignItems="center"
         justifyContent="space-between"
-      >
+      > */}
         <TwoColumn
           right={{ image: ymlTwoColumn.image }}
           left={{
@@ -446,7 +448,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           proportions={ymlTwoColumn.proportions}
           session={session}
         />
-      </Container>
+      
 
       {/* <Container margin="40px 0" padding="0" padding_tablet="0 90px" padding_lg="0">
         <WeTrust we_trust={yml.we_trust_section} />
@@ -570,7 +572,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           ))}
         </Div>
 
-        <Container margin="40px 0" padding="0" padding_tablet="0">
+        <Container margin="0" padding="0" padding_tablet="0" id="faq-card-section">
           <FaqCard
             faqs={data.allFaqYaml.edges[0].node.faq}
             topicSlug="job_guarantee"
@@ -707,17 +709,15 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
         />
       </Container>
 
-      <Container margin="40px 0" padding="0" padding_tablet="0 90px">
-        <ScholarshipSuccessCases
-          content={data.allScholarshipSuccessCasesYaml.edges[0].node}
-        />
-      </Container>
+      <ScholarshipSuccessCases
+        content={data.allScholarshipSuccessCasesYaml.edges[0].node}
+      />
 
       <HR
         background={Colors.verylightGray}
-        width="100%"
-        height="5px"
-        margin="40px 0"
+        width="70%"
+        height="1px"
+        margin="20px"
       />
       <GridContainer
         columns_tablet="12"

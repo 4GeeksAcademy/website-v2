@@ -1,115 +1,121 @@
 meta_info:
   slug: trabajo-garantizado
   title: "Trabajo garantizado con 4Geeks Academy"
-  description: "Trabajo garantizado con 4Geeks Academy"
-  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  description: "Consigue un empleo o te devolvemos tu dinero. En 4Geeks Academy, tu éxito es nuestra misión."
+  visibility: "visible"
   image: "/images/programs-heading.png"
-  keywords: "Trabajo garantizad con 4Geeks Academy"
+  keywords: "Trabajo garantizado con 4Geeks Academy"
   redirects: ["/trabajo-garantizado"]
   utm_course: ["full-stack", "datascience-ml"]
 
 button:
-  syllabus_heading: "Descargar Detalles del Curso"
+  syllabus_heading: "Detalles del Curso"
   syllabus_btn_label: "Descarga Instantánea"
   btn_label: "SOLICITA UN PLAN DE ESTUDIOS"
-  syllabus_motivation: "/us/apply"
+  syllabus_motivation: "Descarga nuestro plan de estudios"
 
 seo_title: "Trabajo garantizado"
+
 header:
-  title: "Consigue trabajo o te devolvemos tu dinero"
+  title: "Consigue un empleo o te devolvemos tu dinero"
   sub_title: "Tu éxito es nuestra misión"
   paragraph: |
-    <ul>
-      <li>Prepárate para tu carrera con nuestro método galardonado.</li>
-      <li>Accede a nuestros servicios de apoyo profesional sin igual.</li>
-      <li>Consigue un empleo dentro de los 6 meses posteriores a tu graduación, o te reembolsaremos la matrícula.</li>
+    <ul style="list-style-type: disc; padding-left: 20px;">
+      <li style="color: #000; font-size: 18px; margin-bottom: 8px; display: flex; align-items: left; justify-content: center;">
+        <span style="color: #ffb718; font-size: 22px; font-weight: bold; margin-right: 10px;">•</span>
+        Prepárate con nuestro método de aprendizaje probado y galardonado.
+      </li>
+      <li style="color: #000; font-size: 18px; margin-bottom: 8px; display: flex; align-items: left; justify-content: center;">
+        <span style="color: #ffb718; font-size: 22px; font-weight: bold; margin-right: 10px;">•</span>
+        Obtén acceso a un acompañamiento profesional integral.
+      </li>
+      <li style="color: #000; font-size: 18px; margin-bottom: 8px; display: flex; align-items: left; justify-content: center;">
+        <span style="color: #ffb718; font-size: 22px; font-weight: bold; margin-right: 10px;">•</span>
+        Si no consigues trabajo en 6 meses después de graduarte, te devolvemos tu inversión.
+      </li>
     </ul>
 
 two_column_left:
   proportions: [7, 5]
   image:
-    style: '{ "backgroundSize": "contain" }'
+    style: '{ "backgroundSize": "contain", "background-position": "center" '
     src: "/images/landing/hombre-joven-con-laptop.webp"
   heading:
     text: "¿Por qué ofrecemos trabajo garantizado?"
-    font_size: ["30px", "30px", "28px", "26px", "26px"]
+    font_size: ["42px", "34px", "34px", "34px", "34px"]
+    style: '{ "font-weight": "600", "text-align": "center", "color": "#000" }'
   sub_heading:
-    text: "Nuestros bootcamps van más allá de enseñar habilidades relevantes; están diseñados para lanzar carreras exitosas en tecnología."
-    font_size: ["26px", "26px", "28px", "22px", "22px"]
-    style: '{ "font-weight": "500" }'
+    text: "Nuestros bootcamps no solo enseñan habilidades relevantes; están diseñados para lanzar carreras exitosas en tecnología."
+    font_size: ["22px", "22px", "22px", "20px", "18px"]
+    style: '{ "font-weight": "500", "text-align": "justify", "color": "#333", "padding": "10px" }'
   content:
-    font_size: ["24px", "24px", "24px", "18px", "18px"]
+    font_size: ["20px", "20px", "18px", "16px", "14px"]
+    style: '{ "text-align": "left", "color": "#444", "line-height": "1.1", "padding": "10px" }'
     text: |
-      Desde nuestro plan de estudios alineado con la industria hasta nuestro servicio integral de apoyo profesional personalizado, cada una de nuestras características ha sido probada para optimizar tu experiencia de aprendizaje.
-      <br>
-      <br>
-      <span style="color: #0097CD;">✓</span> Efectividad comprobada de nuestro programa
-      <br>
-      <br>
-      <span style="color: #0097CD;">✓</span> La industria tecnológica está en auge
-      <br>
-      <br>
-      <span style="color: #0097CD;">✓</span> Confiamos en el proceso
-      <br>
-      <br>
-      <span style="color: #0097CD;">✓</span> Confiamos en ti
-      <br>
-      <br>
-      ¡Construyamos juntos tu futuro!
+      Desde nuestro plan de estudios alineado con la industria hasta nuestro servicio integral de apoyo profesional, cada aspecto de nuestro programa está diseñado para maximizar tu éxito.
+      <br><br>
+      <span style="color: #0097CD;">✓ - </span> Nuestro programa ha demostrado su efectividad
+      <br><br>
+      <span style="color: #0097CD;">✓ - </span> La industria tecnológica sigue en auge
+      <br><br>
+      <span style="color: #0097CD;">✓ - </span> Confiamos en nuestro proceso
+      <br><br>
+      <span style="color: #0097CD;">✓ - </span> Confiamos en ti
+      <br><br>
+      <span style="color: #000;">¡Construyamos juntos tu futuro!</span>
   button:
-    text: "Aplica"
+    text: "Aplica ahora"
     color: "white"
     background: "black"
     hover_color: "white"
     path: "/es/aplica"
 
 we_trust_section:
-  title: ¿Por qué elegir 4Geeks?
+  title: "¿Por qué elegir 4Geeks?"
   text: |
-    Con un historial comprobado de éxito y reconocimiento en la industria, nuestro programa empodera a los estudiantes para convertir sus metas profesionales en realidad.
-    <br>
-    <br>
+    Con un historial comprobado de éxito y reconocimiento en la industria, nuestro programa empodera a los estudiantes para alcanzar sus metas profesionales.
+    <br><br>
     Las cifras hablan por sí solas:
   boxes:
     - icon: briefcase-2
       title: "84%"
-      text: Tasa de empleo
+      text: Tasa de colocación laboral
     - icon: chart
       title: "60K"
-      text: Ingreso promedio en un nuevo empleo
+      text: Salario promedio en un nuevo empleo
     - icon: graduation-2
       title: "130"
-      text: Promedio de días para ser contratado
+      text: Días promedio para conseguir empleo
 
 how_it_works:
-  title: ¿Cómo funciona?
-  text: Estos son los compromisos que debes asumir para calificar para la garantía laboral. Si completas cada paso y no consigues empleo dentro de los 6 meses posteriores a la graduación, recibirás el 100% de tu matrícula de vuelta.
+  title: "¿Cómo funciona?"
+  text: "Estos son los requisitos que debes cumplir para calificar para la garantía de empleo. Si completas cada paso y no consigues trabajo en 6 meses después de graduarte, te devolvemos el 100% de tu matrícula."
   steps:
     - icon: rocket-2
-      title: Inicia el programa
+      title: Comienza el programa
     - icon: assignment
-      title: Cumple con las tareas y asistencia
+      title: Completa las tareas y cumple con la asistencia
     - icon: folder
       title: Aprueba el proyecto final
     - icon: graduation-2
       title: Gradúate
       highlight: True
     - icon: handshake
-      title: Completa el proceso de apoyo profesional
+      title: Participa en el proceso de apoyo profesional
     - icon: briefcase-2
       title: Consigue un empleo en 6 meses
   link:
-    url: https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/Condiciones%20y%20Requerimientos%20Job%20Guaranteed%20Program.pdf
-    label: Condiciones que aplican.
+    url: "https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/Condiciones%20y%20Requerimientos%20Job%20Guaranteed%20Program.pdf"
+    label: "Condiciones y requisitos aplicables."
 
 successful_stories:
-  title: Historias de éxito
-  text: "Nuestro programa de garantía laboral está dando excelentes resultados. Conoce algunas historias de nuestros graduados:"
+  title: "Historias de éxito"
+  text: "Nuestro programa de garantía laboral está transformando vidas. Conoce las historias de quienes lo lograron:"
   testimonials:
     - "nai-kali"
     - "azu-bota"
     - "cha-fabr"
 
 form:
-  title: "Conviértete en socio de 4Geeks"
-  paragraph: "Contáctanos hoy para unirte a nuestra red y comenzar a beneficiarte de las oportunidades que ofrecemos. Déjanos ayudarte a elegir el camino adecuado para alcanzar tus objetivos. ¡Ponte en contacto!"
+  title: "Únete a la red de 4Geeks"
+  paragraph: "Contáctanos hoy y conviértete en parte de nuestra comunidad. Te ayudaremos a encontrar el mejor camino para alcanzar tus objetivos profesionales. ¡Ponte en contacto!"
