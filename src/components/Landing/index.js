@@ -298,8 +298,8 @@ export const landingSections = {
           location
             ? location
             : session &&
-              session.location &&
-              session.location.breathecode_location_slug
+            session.location &&
+            session.location.breathecode_location_slug
         }
         lang={pageContext.lang}
         filter={
@@ -312,7 +312,7 @@ export const landingSections = {
   about4Geeks: ({ session, data, pageContext, yml, index }) => {
     let dataYml =
       data.allLandingYaml.edges.length !== 0 &&
-      data.allLandingYaml.edges[0].node.about4Geeks !== null
+        data.allLandingYaml.edges[0].node.about4Geeks !== null
         ? data.allLandingYaml.edges
         : data.allDownloadableYaml.edges;
     return (
@@ -416,9 +416,8 @@ export const landingSections = {
                     fontWeight="bold"
                     textTransform="lowercase"
                   >
-                    {`${item.rating} ${
-                      pageContext.lang === "us" ? "On Reviews" : "En reseñas"
-                    }`}
+                    {`${item.rating} ${pageContext.lang === "us" ? "On Reviews" : "En reseñas"
+                      }`}
                   </Paragraph>
                 </Div>
               );
@@ -528,6 +527,22 @@ export const landingSections = {
       <React.Fragment key={index}>
         <GeeksVsOthers
           lang={pageContext.lang}
+          mainBackround={Colors.white}
+          limit={5}
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            width: "100%",
+            padding: "20px 40px",
+            margin: "0 auto",
+          }}
+          title={yml.heading}
+          paragraph={yml.paragraph}
+          link
+        />
+        {/* <GeeksVsOthers
+          lang={pageContext.lang}
           limit={yml.total_rows}
           title={yml.heading}
           paragraph={yml.paragraph}
@@ -535,7 +550,7 @@ export const landingSections = {
           thirdBackground="#F9F9F9"
           border={`1px solid ${Colors.lightGray}`}
           borderRadius="4px"
-        />
+        /> */}
       </React.Fragment>
     );
   },
@@ -821,7 +836,7 @@ export const landingSections = {
   who_is_hiring: ({ session, data, pageContext, yml, location, index }) => {
     let dataYml =
       data.allLandingYaml.edges.length !== 0 &&
-      data.allLandingYaml.edges[0].node?.who_is_hiring !== null
+        data.allLandingYaml.edges[0].node?.who_is_hiring !== null
         ? data.allLandingYaml.edges
         : data.allDownloadableYaml.edges;
 
@@ -913,7 +928,7 @@ export const landingSections = {
         // padding_tablet="30px 40px"
         margin_tablet="0 auto"
         width_md="100%"
-        // padding_xs="30px 0px"
+      // padding_xs="30px 0px"
       >
         {yml.section_heading && yml.section_heading !== "" && (
           <H2
@@ -971,7 +986,7 @@ export const landingSections = {
         //padding="40px 0 50px 0"
         margin_tablet="0 auto"
         width_md="100%"
-        // padding_xs="30px 0px"
+      // padding_xs="30px 0px"
       >
         {yml.section_heading && yml.section_heading !== "" && (
           <H2

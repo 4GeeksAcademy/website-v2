@@ -6,6 +6,7 @@ titles:
   featured: "FEATURES"
   at_geeks: "AT 4GEEKS"
   average: "INDUSTRY AVERAGE"
+  logo: "/images/rigobot-logo.png"
 globe_text: Click me!
 info:
   - features: "Career Support"

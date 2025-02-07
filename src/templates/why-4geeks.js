@@ -181,11 +181,28 @@ const Why4Geeks = (props) => {
       <Credentials lang={data.allCredentialsYaml.edges} shadow={false} />
       <GeeksVsOthers
         lang={pageContext.lang}
+        mainBackround={Colors.white}
+        limit={5}
+        style={{
+          background: Colors.veryLightBlue3,
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          width: "100%",
+          padding: "20px 40px",
+          margin: "0 auto",
+        }}
+        title={yml.geeks_vs_others.title}
+        paragraph={yml.geeks_vs_others.paragraph}
+        link
+      />
+      {/* <GeeksVsOthers
+        lang={pageContext.lang}
         link={true}
         limit={4}
         title={yml.geeksvsothers.title}
         paragraph={yml.geeksvsothers.paragraph}
-      />
+      /> */}
 
       <GridContainerWithImage
         height_tablet="100%"
