@@ -72,7 +72,10 @@ const GeeksVsOthers = ({
           <H2
             margin="0 0 15px 0"
             fontWeight="400"
-            lineHeight="29px"
+            fontSize="32px"
+            fontSize_md="36px"
+            fontSize_xs="15x"
+            lineHeight="32px"
             lineHeight_tablet="38px"
             marginTop="30px"
           >
@@ -230,7 +233,7 @@ const GeeksVsOthers = ({
                       {m.at4_Geeks}
                     </Paragraph>
                   </Div>
-                  {i < arr.length - 1 && (
+                  {/* {i < arr.length - 1 && (
                     <HR
                       height="1px"
                       background="white"
@@ -238,7 +241,7 @@ const GeeksVsOthers = ({
                       display_tablet="block"
                       display_xxs="block"
                     />
-                  )}
+                  )} */}
                 </Div>
                 <Div
                   gridColumn_tablet="7 / 10"
@@ -259,7 +262,7 @@ const GeeksVsOthers = ({
                       {m.industry_average}
                     </Paragraph>
                   </Div>
-                  {i < arr.length - 1 && (
+                  {/* {i < arr.length - 1 && (
                     <HR
                       height="1px"
                       background="white"
@@ -267,7 +270,7 @@ const GeeksVsOthers = ({
                       display_tablet="block"
                       display_xxs="block"
                     />
-                  )}
+                  )} */}
                 </Div>
               </React.Fragment>
             );
@@ -280,11 +283,15 @@ const GeeksVsOthers = ({
 
       <Div
         flexWrap="wrap"
-        padding_xs="0 0 20px 0"
+        justifyContent= "center"
+        padding_xs="0 0 40px 0"
         margin_tablet="20px 35px"
-        margin_xxs="30px 20px"
+        margin_xxs="10px 0px"
         gridGap="10px"
         display_md="none"
+        border= "1px solid black"
+        borderRadius= "4px"
+        boxShadow="10px 10px 0px 0px rgba(0,0,0)"
         background={mainBackround || Colors.white}
       >
         <H2
@@ -303,7 +310,7 @@ const GeeksVsOthers = ({
             <React.Fragment key={index}>
               <Div
                 key={index}
-                width="100%"
+                width="90%"
                 height={selected.index === index ? "auto" : "50px"}
                 //padding_xs="15px 0 0 0"
                 margin_xs="0 15px"
@@ -318,6 +325,9 @@ const GeeksVsOthers = ({
                 flexDirection={selected.index === index && "column"}
                 position="relative"
                 alignItems="center"
+                borderBottom="none"  // No hay borde en desktop
+                borderBottom_tablet="1px solid #a4a4a47a" // Aparece en tablet
+                borderBottom_xs="1px solid #a4a4a47a"  // Aparece en mobile
               >
                 <H3
                   textAlign="left"
@@ -344,23 +354,25 @@ const GeeksVsOthers = ({
                     <Div
                       flexDirection="column"
                       width="50%"
-                      background={Colors.veryLightBlue}
+                      background="#e3f2ff"
                       padding="8px"
+                      borderRadius="6px"
+                      justifyContent="center"
                     >
                       <Paragraph
                         textAlign="center"
-                        fontSize="10px"
+                        fontSize="14px"
                         fontWeight="700"
-                        lineHeight="22px"
+                        lineHeight="20px"
                         color={Colors.darkGray}
                       >
                         {geeks.titles.at_geeks}
                       </Paragraph>
                       <Paragraph
                         textAlign="center"
-                        fontSize="10px"
-                        fontWeight="700"
-                        lineHeight="22px"
+                        fontSize="12px"
+                        fontWeight="300"
+                        lineHeight="20px"
                         color={Colors.darkGray}
                       >
                         {item.at4_Geeks}
@@ -372,21 +384,22 @@ const GeeksVsOthers = ({
                       width="50%"
                       background={Colors.white}
                       padding="8px"
+                      justifyContent="center"
                     >
                       <Paragraph
                         textAlign="center"
-                        fontSize="10px"
+                        fontSize="14px"
                         fontWeight="700"
-                        lineHeight="22px"
+                        lineHeight="20px"
                         color={Colors.darkGray}
                       >
                         {geeks.titles.average}
                       </Paragraph>
                       <Paragraph
                         textAlign="center"
-                        fontSize="10px"
-                        fontWeight="700"
-                        lineHeight="22px"
+                        fontSize="12px"
+                        fontWeight="300"
+                        lineHeight="20px"
                         color={Colors.darkGray}
                       >
                         {item.industry_average}
