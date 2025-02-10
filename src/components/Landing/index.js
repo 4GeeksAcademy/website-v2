@@ -527,22 +527,6 @@ export const landingSections = {
       <React.Fragment key={index}>
         <GeeksVsOthers
           lang={pageContext.lang}
-          mainBackround={Colors.white}
-          limit={5}
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            width: "100%",
-            padding: "20px 40px",
-            margin: "0 auto",
-          }}
-          title={yml.heading}
-          paragraph={yml.paragraph}
-          link
-        />
-        {/* <GeeksVsOthers
-          lang={pageContext.lang}
           limit={yml.total_rows}
           title={yml.heading}
           paragraph={yml.paragraph}
@@ -550,7 +534,7 @@ export const landingSections = {
           thirdBackground="#F9F9F9"
           border={`1px solid ${Colors.lightGray}`}
           borderRadius="4px"
-        /> */}
+        />
       </React.Fragment>
     );
   },

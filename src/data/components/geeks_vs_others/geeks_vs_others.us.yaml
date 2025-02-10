@@ -1,7 +1,6 @@
 ## GEEKS VS OTHERS COMPONENT
 ## THIS COMPONENT IS USED IN "/home" AND "/course/..."
 ## THE HEADINGS ALLOW YOU TO SET DIFFERENT HEADINGS IN "/home" AND "/the-academy" TEMPLATES.
-
 titles:
   featured: "FEATURES"
   at_geeks: "AT 4GEEKS"
