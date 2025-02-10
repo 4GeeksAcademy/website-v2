@@ -66,32 +66,35 @@ const GeeksVsOthers = ({
       justifyContent="center"
       style={style}
     >
-      {title && paragraph && (
+      {(title || paragraph) && (
         <Div
           display="flex"
           flexDirection="column"
           alignItems="center"
           padding_tablet="0 4em"
-          padding="0 2em"
+          padding="0"
           margin_tablet="0 auto 38px auto"
           margin="0 auto 24px auto"
           maxWidth="1280px"
         >
-          <H2
-            margin="0 0 15px 0"
-            fontWeight="400"
-            fontSize="32px"
-            fontSize_md="36px"
-            fontSize_xs="15x"
-            lineHeight="32px"
-            lineHeight_tablet="38px"
-            marginTop="30px"
-          >
-            {title}
-          </H2>
-          <SubTitle>{paragraph}</SubTitle>
+          {title && (
+            <H2
+              margin="0 0 15px 0"
+              fontWeight="400"
+              fontSize="32px"
+              fontSize_md="36px"
+              fontSize_xs="15x"
+              lineHeight="32px"
+              lineHeight_tablet="38px"
+              marginTop="30px"
+            >
+              {title}
+            </H2>
+          )}
+          {paragraph && <SubTitle>{paragraph}</SubTitle>}
         </Div>
       )}
+
 
       {/* 3 / span 10 */}
       <Div
@@ -346,7 +349,7 @@ const GeeksVsOthers = ({
                   textTransform="uppercase"
                   color={Colors.darkGray}
                   padding={selected.index === index ? "14px 0 0 0" : "0px"}
-                  //style={{ position: "absolute", left: "0px", top: "15px" }}
+                //style={{ position: "absolute", left: "0px", top: "15px" }}
                 >
                   {item.features}
                 </H3>
