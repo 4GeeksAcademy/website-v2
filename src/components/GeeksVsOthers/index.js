@@ -39,7 +39,7 @@ const GeeksVsOthers = ({
               at_geeks
               average
               logo
-          }
+            }
 
             button {
               button_text
@@ -57,7 +57,15 @@ const GeeksVsOthers = ({
   if (geeks) geeks = geeks.node;
 
   return (
-    <Div padding="40px 0" display="flex" alignItems="center" width="100%" margin="0 auto" justifyContent="center" style={style}>
+    <Div
+      padding="40px 0"
+      display="flex"
+      alignItems="center"
+      width="100%"
+      margin="0 auto"
+      justifyContent="center"
+      style={style}
+    >
       {title && paragraph && (
         <Div
           display="flex"
@@ -147,7 +155,7 @@ const GeeksVsOthers = ({
                   style={{
                     width: "40px",
                     height: "40px",
-                    marginRight: "10px"
+                    marginRight: "10px",
                   }}
                 />
               )}
@@ -245,7 +253,9 @@ const GeeksVsOthers = ({
                 </Div>
                 <Div
                   gridColumn_tablet="7 / 10"
-                  background={i % 2 === 0 ? "#F4F9FF" : thirdBackground || Colors.white}
+                  background={
+                    i % 2 === 0 ? "#F4F9FF" : thirdBackground || Colors.white
+                  }
                   borderRadius={i === arr.length - 1 && "0 0 4px 4px"}
                   padding="0 25px 0 20px"
                   padding_tablet="0 16px"
@@ -275,7 +285,6 @@ const GeeksVsOthers = ({
               </React.Fragment>
             );
           })}
-
         </GridContainer>
       </Div>
 
@@ -283,14 +292,14 @@ const GeeksVsOthers = ({
 
       <Div
         flexWrap="wrap"
-        justifyContent= "center"
+        justifyContent="center"
         padding_xs="0 0 40px 0"
         margin_tablet="20px 35px"
         margin_xxs="10px 0px"
         gridGap="10px"
         display_md="none"
-        border= "1px solid black"
-        borderRadius= "4px"
+        border="1px solid black"
+        borderRadius="4px"
         boxShadow="10px 10px 0px 0px rgba(0,0,0)"
         background={mainBackround || Colors.white}
       >
@@ -325,9 +334,9 @@ const GeeksVsOthers = ({
                 flexDirection={selected.index === index && "column"}
                 position="relative"
                 alignItems="center"
-                borderBottom="none"  // No hay borde en desktop
+                borderBottom="none" // No hay borde en desktop
                 borderBottom_tablet="1px solid #a4a4a47a" // Aparece en tablet
-                borderBottom_xs="1px solid #a4a4a47a"  // Aparece en mobile
+                borderBottom_xs="1px solid #a4a4a47a" // Aparece en mobile
               >
                 <H3
                   textAlign="left"
@@ -337,7 +346,7 @@ const GeeksVsOthers = ({
                   textTransform="uppercase"
                   color={Colors.darkGray}
                   padding={selected.index === index ? "14px 0 0 0" : "0px"}
-                //style={{ position: "absolute", left: "0px", top: "15px" }}
+                  //style={{ position: "absolute", left: "0px", top: "15px" }}
                 >
                   {item.features}
                 </H3>
