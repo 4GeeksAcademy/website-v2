@@ -95,7 +95,6 @@ const GeeksVsOthers = ({
         </Div>
       )}
 
-
       {/* 3 / span 10 */}
       <Div
         width="100%"
@@ -349,7 +348,7 @@ const GeeksVsOthers = ({
                   textTransform="uppercase"
                   color={Colors.darkGray}
                   padding={selected.index === index ? "14px 0 0 0" : "0px"}
-                //style={{ position: "absolute", left: "0px", top: "15px" }}
+                  //style={{ position: "absolute", left: "0px", top: "15px" }}
                 >
                   {item.features}
                 </H3>
