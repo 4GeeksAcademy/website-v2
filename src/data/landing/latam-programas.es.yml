@@ -83,7 +83,8 @@ follow_bar:
     text: "Más Información"
     path: "#leadform_header"
   phone:
-    text: "llama"
+    text: ""
+    number: " "
 
 short_badges:
   - name: "Top Online Full-Stack Bootcamps Of 2024"
