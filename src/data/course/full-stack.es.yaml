@@ -73,7 +73,7 @@ overlaped:
       <strong style="color: #007bff;">Python</strong> y 
       <strong style="color: #007bff;">JavaScript</strong>.  
       <br>
-      <span style="font-weight: bold; ">¿Por qué?</span>  
+      <span style="font-weight: bold;">¿Por qué?</span>  
       En el mercado laboral,  
       <strong style="font-weight: bold;">JavaScript</strong> tiene 
       <span style="font-weight: bold;">
@@ -81,27 +81,30 @@ overlaped:
       </span> 
       de trabajo que <strong>Ruby on Rails</strong>.  
       <br>
+
       Además, <strong style="font-weight: bold;">Python</strong> tiene  
-      <span style="font-weight: bold;> 
-        10 veces más oportunidades
+      <span style="font-weight: bold;">
+          10 veces más oportunidades
       </span>  
       que Node.js.  
-      <br><br>
-      <span style="font-weight: bold; text-decoration: underline;">Otras herramientas que aprenderás en nuestro programa:</span>  
-      <span style="color: #007bff;">GitHub</span>, 
-      <span style="color: #007bff;">Bootstrap</span>, 
-      <span style="color: #007bff;">HTML5</span>, 
-      <span style="color: #007bff;">CSS3</span>, 
-      <span style="color: #007bff;">React</span>, 
-      <span style="color: #007bff;">Flask</span> y mucho más.
-    </p>
+      <br>
 
+      <span style="font-weight: bold;">Otras herramientas que aprenderás en nuestro programa:</span>  
+      <br>
+      <span style="color: #007bff;">GitHub</span>,  
+      <span style="color: #007bff;">Bootstrap</span>,  
+      <span style="color: #007bff;">HTML5</span>,  
+      <span style="color: #007bff;">CSS3</span>,  
+      <span style="color: #007bff;">React</span>,  
+      <span style="color: #007bff;">Flask</span>  
+      y mucho más.
+    </p>
+  image:
+    src: "/images/landing/tres-personas-reloaded.webp"
   button:
     text: "Aplicar"
     color: "blue"
-    link: "/"
-  image:
-    src: "/images/landing/tres-personas-reloaded.webp"
+    link: "/es/aplica"
 
 two_columns:
   proportions: [6, 6]
@@ -144,7 +147,7 @@ two_columns_info:
     text: ""
   button:
     text: "Compara 4Geeks con otros bootcamps"
-    path: "/es/geeks-vs-others"
+    path: "/es/geeks-vs-otros"
     color: "white"
     background: "black"
     hover: "lightBlue"
