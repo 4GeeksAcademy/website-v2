@@ -104,7 +104,7 @@ overlaped:
   button:
     text: "Aplicar"
     color: "blue"
-    link: "/es/aplica"
+    link: "/"
 
 two_columns:
   proportions: [6, 6]
