@@ -67,7 +67,35 @@ course_instructors:
 
 overlaped:
   heading: "Python y JavaScript"
-  paragraph: "Nuestros programa está basado en el uso de Phyton y JavaScript. La razón? En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails. Python tiene 10 veces más trabajos que node.js. Otras herramientas que también aprenderás a usar en nuestro programa: son GitHub, CSS3, HTML5, Flask, etc."
+  paragraph: |-
+    <p style="line-height: 2; font-size: 16px;">
+      Nuestro programa está basado en el uso de 
+      <strong style="color: #007bff;">Python</strong> y 
+      <strong style="color: #007bff;">JavaScript</strong>.  
+      <br>
+      <span style="font-weight: bold; ">¿Por qué?</span>  
+      En el mercado laboral,  
+      <strong style="font-weight: bold;">JavaScript</strong> tiene 
+      <span style="font-weight: bold;">
+          26 veces más vacantes
+      </span> 
+      de trabajo que <strong>Ruby on Rails</strong>.  
+      <br>
+      Además, <strong style="font-weight: bold;">Python</strong> tiene  
+      <span style="font-weight: bold;> 
+        10 veces más oportunidades
+      </span>  
+      que Node.js.  
+      <br><br>
+      <span style="font-weight: bold; text-decoration: underline;">Otras herramientas que aprenderás en nuestro programa:</span>  
+      <span style="color: #007bff;">GitHub</span>, 
+      <span style="color: #007bff;">Bootstrap</span>, 
+      <span style="color: #007bff;">HTML5</span>, 
+      <span style="color: #007bff;">CSS3</span>, 
+      <span style="color: #007bff;">React</span>, 
+      <span style="color: #007bff;">Flask</span> y mucho más.
+    </p>
+
   button:
     text: "Aplicar"
     color: "blue"
@@ -75,30 +103,109 @@ overlaped:
   image:
     src: "/images/landing/tres-personas-reloaded.webp"
 
-## TWO COLUMNS
-# two_columns:
-#   proportions: [6, 6]
-#   image:
-#     style: '{"border" : "3px solid black", "backgroundSize": "contain" }'
-#     src: "/static/images/staff/luisa.png"
-#     shadow: true
-#   video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
-#   heading:
-#     text: "4Geeks Academy and a story full of opportunities"
-#     font_size: ["30px", "30px", "30px", "30px", "30px"]
-#   sub_heading:
-#     text: "We are Miami based and we have been focusing in bringing on more opportunities in South Florida."
-#     font_size: ["16px", "16px", "16px", "16px", "16px"]
-#   button:
-#     text: "Apply now"
-#     color: "white"
-#     background: "black"
-#     path: "#prices_and_payment"
-#   bullets:
-#     items:
-#     - text: "There is always a full or partial scholarship open"
-#     - text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
-#     - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade County and many more."
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "3px solid black", "backgroundSize": "contain" }'
+    src: "/static/images/testimonials/diego-gomez-testimonial.webp"
+    shadow: true  
+  video: "https://www.youtube.com/watch?v=9Vm_xD49MaU&list=PLmBUv425PabWp2htZTrCU2AKkmCzjrFn3"
+  heading:
+    text: "Un camino hacia el éxito profesional en tecnología"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "Diego comparte cómo nuestro bootcamp le proporcionó todo lo que necesitaba para dar el salto al mundo laboral. Independientemente de si tienes conocimientos previos o comienzas desde cero, en 4Geeks Academy recibirás la formación y el apoyo que necesitas para destacar en la industria."
+    font_size: ["16px", "16px", "16px", "16px", "16px"]
+  button:
+    text: "Aplica ahora"
+    color: "white"
+    background: "black"
+    path: "#prices_and_payment"
+  bullets:
+    items: 
+
+
+two_columns_info:
+  proportions: [6, 6]
+  image:
+    style: '{"backgroundSize": "contain", "background-position": "center"}' 
+    shadow: false 
+    src: "/images/landing/grupo-ventanas.webp"
+  section_heading: 
+    text: "Obtén todo lo que necesitas para triunfar"
+  heading:
+    text: ""
+    font_size: ["40px", "34px", "34px", "25px", "20px"]
+  sub_heading:
+    style: '{}'
+    text: "Nuestro bootcamp de Full Stack está diseñado para brindarte todas las herramientas y el apoyo necesario para que tengas éxito en esta industria altamente demandada."
+    font_size: ["16px"]
+  content:
+    text: ""
+  button:
+    text: "Compara 4Geeks con otros bootcamps"
+    path: "/es/geeks-vs-others"
+    color: "white"
+    background: "black"
+    hover: "lightBlue"
+  bullets:
+    items: 
+    - heading: "MENTORÍAS 1:1 BAJO DEMANDA"
+      text: "Recibe apoyo personalizado para todas tus necesidades de programación. Nuestros mentores expertos están disponibles en línea o en persona para guiarte desde el primer día y de por vida."
+    - heading: "ALTA DISPONIBILIDAD"
+      text: "No te quedes atascado con un problema de código. Nuestros instructores responderán en 30 minutos o menos."
+    - heading: "Educación 100% centrada en código"
+      text: "Nuestro enfoque está completamente dirigido a la enseñanza de la programación, garantizando una experiencia de aprendizaje profunda y enfocada."
+    - heading: "APOYO PERSONALIZADO PARA TU CARRERA"
+      text: "Obtén asesoría, orientación y formación adaptada a tu perfil y a las ofertas laborales específicas a las que apliques."
+
+
+two_columns_rigo:
+  proportions: [5, 7]
+  background: "#FFFFFF"
+  justify: "center" #start,end,center
+  image:
+    style: '{"backgroundSize": "contain", "background-position": "center"}'
+    src: "/images/landing/rigobot-section.webp"
+    shadow: false
+  heading: 
+    text: "¡Nuestras herramientas con IA marcan la diferencia!"
+    font_size: ["33px", "33px", "33px", "33px", "33px"]
+    style: '{ "lineHeight": "30px" }'
+    heading_image:
+      src: "/images/rigobot-logo.png"
+  sub_heading:
+    text: "Luego de años de investigación y experiencia, hemos perfeccionado las estrategias y herramientas para garantizar tu progreso constante y eficiente. Para optimizar tu curva de aprendizaje e impulsarte a enfrentar desafíos con confianza, ahora hemos incorporado el poder de la inteligencia artificial."
+    font_size: ["18px","18px","18px","18px","18px"]
+    style: '{ "margin":"15px 0", "font-weight":"400" }'
+  content:
+    style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"400"}'
+    text: "Descubre la diferencia que hacen nuestras herramientas con IA. Nuestro enfoque probado te mantiene comprometido, motivado y en el camino correcto para lograr tus objetivos en programación."
+  bullets:
+    item_style: '{ "padding": "0", "font-weight": "100", "margin":"0" }'
+    items:
+      - heading: "Conoce a Rigobot, nuestro asistente de código con IA:"
+        text: |
+          • Tutoría instantánea mientras programas.
+          <br />
+          • Evaluaciones de habilidades para monitorear tu progreso.
+          <br />
+          • Asistencia experta para la corrección de errores.
+          <br /><br />
+          ¡Complementa perfectamente nuestro programa de mentoría humana!
+        icon: "check"
+        icon_color: '#25BF6C'
+      - heading: "Learnpack, nuestro software de aprendizaje interactivo, ofrece:"
+        text: |
+          • Cientos de ejercicios interactivos para que domines y retengas habilidades.
+          <br />
+          • Pruebas automatizadas para hacer seguimiento a tu progreso.
+          <br />
+          • Práctica estructurada y guiada.
+        icon: "check"
+        icon_color: '#25BF6C'
+
+
 
 badges:
   paragraph: "4Geeks Academy es el lugar idóneo para <a href='/es/curso-de-programacion-desde-cero'>aprender a programar desde cero</a>. Estamos avalados y autorizados por el Departamento de Educación de Florida y hemos sido reconocidos como el mejor de Miami, según SwitchUp y de los 10 mejores cursos de programación, según Newsweek. En España, hemos recibido el Premio Excelencia Educativa durante dos años consecutivos. Y a nivel global formamos parte del top 35 de cursos de programación en el mundo."
