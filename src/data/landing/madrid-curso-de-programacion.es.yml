@@ -31,7 +31,7 @@ form:
   heading: "Solicita tu beca"
   motivation: "Conviértete en Full-Stack Developer con financiación a tu medida, becas y ayuda al estudio."
   button_label: Solicita una beca
-  redirect: null #you can redirect to another url or entirely diffrent website
+  redirect: "/es/gracias" #you can redirect to another url or entirely diffrent website
 
 apply_schollarship: # form that is displayed at the end of the landing
   # title: "Apoyo Profesional Ilimitado"

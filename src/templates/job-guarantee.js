@@ -1,22 +1,11 @@
 import React, { useEffect, useState, useContext } from "react";
 import { graphql } from "gatsby";
 import { Link } from "gatsby";
-import {
-  isCustomBarActive,
-  requestSyllabus,
-  beHiringPartner,
-} from "../actions";
+import { isCustomBarActive, requestSyllabus, beHiringPartner } from "../actions";
 import BaseRender from "./_baseLayout";
 import { Container, Div, HR, GridContainer } from "../components/Sections";
 import { H2, H4, Paragraph, SubTitle } from "../components/Heading";
-import {
-  Anchor,
-  Button,
-  Colors,
-  Img,
-  ImgV2,
-  StyledBackgroundSection,
-} from "../components/Styling";
+import { Anchor, Button, Colors, Img, ImgV2, StyledBackgroundSection } from "../components/Styling";
 import { SessionContext } from "../session";
 import Modal from "../components/Modal";
 import LeadForm from "../components/LeadForm";
@@ -26,6 +15,7 @@ import ScholarshipSuccessCases from "../components/ScholarshipSuccessCases";
 import TwoColumnCarousel from "../components/TwoColumnCarousel";
 import TwoColumn from "../components/TwoColumn/index.js";
 import WeTrust from "../components/WeTrust/index.js";
+import FaqCard from "../components/FaqCard";
 
 const JobGuarantee = ({ data, pageContext, yml }) => {
   const { session } = useContext(SessionContext);
@@ -282,9 +272,23 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
             letterSpacing="0.05em"
             textAlign="center"
             maxWidth="760px"
+            fontFamily="Lato, sans-serif"
+            fontWeight="400"
+            marginBottom="16px"
+            fontSize="26px"
           >
-            {yml.header.paragraph}
+            {yml.header.sub_title}
           </SubTitle>
+          <SubTitle
+            color={Colors.black}
+            margin="15px auto"
+            padding="0"
+            width="auto"
+            letterSpacing="0.05em"
+            textAlign="center"
+            maxWidth="760px"
+            dangerouslySetInnerHTML={{ __html: yml.header.paragraph }}
+          />
           <Div
             flexDirection_tablet="row"
             flexDirection="column"
@@ -480,6 +484,14 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
             </Div>
           ))}
         </Div>
+
+        <FaqCard
+          faqs={data.allFaqYaml.edges[0].node.faq}
+          topicSlug="job_guarantee"
+          // minPriority="3"
+          // locationSlug={yml.breathecode_location_slug}
+        />
+
         {yml.how_it_works.link && (
           <Paragraph
             margin="30px 0 0 0"
@@ -495,7 +507,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           </Paragraph>
         )}
       </Container>
-      <TwoColumnCarousel
+      {/* <TwoColumnCarousel
         background="#FAFAFA"
         title={yml.successful_stories.title}
         text={yml.successful_stories.text}
@@ -581,7 +593,32 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
             </Div>
           );
         })}
-      </TwoColumnCarousel>
+      </TwoColumnCarousel> */}
+
+<Container
+        id="two_column_right"
+        flexDirection="column"
+        margin="0"
+        padding="0 10px"
+        padding_tablet="0 90px"
+        padding_md="0 50px"
+        padding_lg="0"
+      >
+        <TwoColumn
+                  left={{ image: yml.two_columns_video?.image, video: yml.two_columns_video?.video }}
+                  right={{
+                    heading: yml.two_columns_video?.heading,
+                    sub_heading: yml.two_columns_video?.sub_heading,
+                    bullets: yml.two_columns_video?.bullets,
+                    content: yml.two_columns_video?.content,
+                    disclosure: yml.two_columns_video?.disclosure,
+                    button: yml.two_columns_video?.button,
+                  }}
+                  proportions={yml.two_columns_video?.proportions}
+                  session={session}
+                />
+      </Container>
+
       <ScholarshipSuccessCases
         content={data.allScholarshipSuccessCasesYaml.edges[0].node}
       />
@@ -640,6 +677,7 @@ export const query = graphql`
           seo_title
           header {
             title
+            sub_title
             paragraph
           }
           button {
@@ -658,6 +696,11 @@ export const query = graphql`
               text
               font_size
             }
+            sub_heading {
+              text
+              font_size
+              style
+            }
             content {
               text
               font_size
@@ -670,6 +713,31 @@ export const query = graphql`
               path
             }
           }
+          two_columns_video {
+            proportions
+            image {
+              style
+              src
+              shadow
+            }
+            
+            video
+            heading {
+              text
+              font_size
+            }
+            sub_heading {
+              text
+              font_size
+            }
+            button {
+              text
+              color
+              background
+              path
+            }
+          }
+          
           we_trust_section {
             title
             text
@@ -842,6 +910,23 @@ export const query = graphql`
             content
             source_url
             source_url_text
+          }
+        }
+      }
+    }
+    allFaqYaml(filter: { fields: { lang: { eq: $lang } } }) {
+      edges {
+        node {
+          faq {
+            topic
+            slug
+            questions {
+              question
+              answer
+            }
+          }
+          fields {
+            lang
           }
         }
       }
