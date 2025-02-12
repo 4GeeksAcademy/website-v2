@@ -350,7 +350,15 @@ const Home = (props) => {
         lang={pageContext.lang}
         mainBackround={Colors.white}
         limit={5}
-        style={{ background: Colors.veryLightBlue3 }}
+        style={{
+          background: Colors.veryLightBlue3,
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          width: "100%",
+          padding: "20px 40px",
+          margin: "0 auto",
+        }}
         title={yml.geeks_vs_others.heading}
         paragraph={yml.geeks_vs_others.sub_heading}
         link
