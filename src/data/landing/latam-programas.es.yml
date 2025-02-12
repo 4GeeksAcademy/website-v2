@@ -49,8 +49,8 @@ apply_schollarship: # form that is displayed at the end of the landing
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  tagline: ¡Impulsa tu carrera en tecnología con 4Geeks!
-  sub_heading: ""
+  tagline: ¡Transforma tu futuro con 4Geeks Academy!
+  sub_heading: "Más de 5.000 estudiantes comprueban que somos los mejores"
   background: "#ffffff"
   tagline_color: "#1c1c1c"
   form_styles:
@@ -70,7 +70,7 @@ features:
   bullets:
     - Desde desarrollo Full-Stack hasta Data Science, Ciberseguridad y Applied AI.
     - Obtén una certificación reconocida que abrirá puertas en toda LATAM y más allá.
-    - orientación continua e ilimitada de expertos de la industria de por vida.
+    - Orientación continua e ilimitada de expertos de la industria de por vida.
 
 follow_bar:
   position: "top" # top, bottom, hidden
@@ -83,7 +83,8 @@ follow_bar:
     text: "Más Información"
     path: "#leadform_header"
   phone:
-    text: "llama"
+    text: ""
+    number: " "
 
 short_badges:
   - name: "Top Online Full-Stack Bootcamps Of 2024"
@@ -116,10 +117,10 @@ short_badges:
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
 #
 
-program_details:
-  position: 5
-  heading: "Programa de Contenido Full-Stack: Tu Puerta de Entrada al Futuro Tecnológico"
-  sub_heading: "Conviértete en un profesional altamente demandado en la región, dominando las habilidades clave para el desarrollo web y mucho más."
+# program_details:
+#   position: 5
+#   heading: "Programa de Contenido Full-Stack: Tu Puerta de Entrada al Futuro Tecnológico"
+#   sub_heading: "Conviértete en un profesional altamente demandado en la región, dominando las habilidades clave para el desarrollo web y mucho más."
 
 badges:
   position: 4
