@@ -9,31 +9,17 @@ meta_info:
   utm_course: ["full-stack", "datascience-ml"]
 
 button:
-  syllabus_heading: "Detalles del Curso"
+  syllabus_heading: "SOLICITA UN PLAN DE ESTUDIOS"
   syllabus_btn_label: "Descarga Instantánea"
-  btn_label: "SOLICITA UN PLAN DE ESTUDIOS"
-  syllabus_motivation: "Descarga nuestro plan de estudios"
+  btn_label: "Descargar Detalles del Curso"
+  syllabus_motivation: "SOLICITA UN PLAN DE ESTUDIOS"
 
 seo_title: "Trabajo garantizado"
 
 header:
-  title: "Consigue un empleo o te devolvemos tu dinero"
-  sub_title: "Tu éxito es nuestra misión"
-  paragraph: |
-    <ul style="list-style-type: disc; padding-left: 20px;">
-      <li style="color: #000; font-size: 18px; margin-bottom: 8px; display: flex; align-items: left; justify-content: center;">
-        <span style="color: #ffb718; font-size: 22px; font-weight: bold; margin-right: 10px;">•</span>
-        Prepárate con nuestro método de aprendizaje probado y galardonado.
-      </li>
-      <li style="color: #000; font-size: 18px; margin-bottom: 8px; display: flex; align-items: left; justify-content: center;">
-        <span style="color: #ffb718; font-size: 22px; font-weight: bold; margin-right: 10px;">•</span>
-        Obtén acceso a un acompañamiento profesional integral.
-      </li>
-      <li style="color: #000; font-size: 18px; margin-bottom: 8px; display: flex; align-items: left; justify-content: center;">
-        <span style="color: #ffb718; font-size: 22px; font-weight: bold; margin-right: 10px;">•</span>
-        Si no consigues trabajo en 6 meses después de graduarte, te devolvemos tu inversión.
-      </li>
-    </ul>
+  title: "Tu futuro en tecnología asegurado: Empleo o reembolso"
+  sub_title: ""
+  paragraph: "Aprende las habilidades que las empresas demandan, recibe apoyo profesional personalizado y consigue el trabajo de tus sueños. Si no, te devolvemos todo tu dinero."
 
 two_column_left:
   proportions: [7, 5]
@@ -42,29 +28,55 @@ two_column_left:
     src: "/images/landing/hombre-joven-con-laptop.webp"
   heading:
     text: "¿Por qué ofrecemos trabajo garantizado?"
-    font_size: ["42px", "34px", "34px", "34px", "34px"]
-    style: '{ "font-weight": "600", "text-align": "center", "color": "#000" }'
+    font_size: ["35px", "35px", "35px", "32px", "32px"]
   sub_heading:
-    text: "Nuestros bootcamps no solo enseñan habilidades relevantes; están diseñados para lanzar carreras exitosas en tecnología."
-    font_size: ["22px", "22px", "22px", "20px", "18px"]
-    style: '{ "font-weight": "500", "text-align": "justify", "color": "#333", "padding": "10px" }'
+    text: "No solo te enseñamos a programar, te preparamos para el éxito. Nuestros bootcamps están diseñados para lanzarte a una carrera tecnológica brillante."
+    font_size: ["26px", "26px", "26px", "22px", "22px"]
+    style: '{ "font-weight": "500" }'
   content:
     font_size: ["20px", "20px", "18px", "16px", "14px"]
     style: '{ "text-align": "left", "color": "#444", "line-height": "1.1", "padding": "10px" }'
     text: |
-      Desde nuestro plan de estudios alineado con la industria hasta nuestro servicio integral de apoyo profesional, cada aspecto de nuestro programa está diseñado para maximizar tu éxito.
-      <br><br>
-      <span style="color: #0097CD;">✓ - </span> Nuestro programa ha demostrado su efectividad
-      <br><br>
-      <span style="color: #0097CD;">✓ - </span> La industria tecnológica sigue en auge
-      <br><br>
-      <span style="color: #0097CD;">✓ - </span> Confiamos en nuestro proceso
-      <br><br>
-      <span style="color: #0097CD;">✓ - </span> Confiamos en ti
-      <br><br>
-      <span style="color: #000;">¡Construyamos juntos tu futuro!</span>
+      <div class="dropdown-section" style="margin-top: 15px">
+        <p style="margin-bottom: 15px">Desde el primer día, tendrás todo lo que necesitas para triunfar: plan de estudios actualizado, mentores expertos, preparación para entrevistas y más.</p>
+        <details>
+          <summary ><span style="color: #0097CD">✓ Resultados comprobados</span></summary>
+          <p>Hemos lanzado con éxito las carreras de cientos de profesionales tecnológicos.</p>
+        </details>
+        <details>
+          <summary><span style="color: #0097CD;">✓ El sector tecnológico te espera</span></summary>
+          <p>Las empresas están buscando profesionales como tú, con las habilidades que te enseñaremos.</p>
+        </details>
+        <details>
+          <summary><span style="color: #0097CD;">✓ Confianza total</span></summary>
+          <p>Nuestro método de enseñanza funciona, y estamos tan seguros que te ofrecemos una garantía de empleo.</p>
+        </details>
+        <details>
+          <summary><span style="color: #0097CD;">✓ Creemos en tu potencial</span></summary>
+          <p>Te daremos las herramientas y el apoyo para que alcances tus metas.</p>
+        </details>
+      </div>
+
+      <style>
+        details {
+          margin-bottom: 10px;
+          border: 1px solid #0097CD;
+          padding: 10px;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+
+        summary {
+          font-weight: bold;
+          cursor: pointer;
+        }
+
+        details p {
+          margin: 5px 0 0;
+        }
+      </style>
   button:
-    text: "Aplica ahora"
+    text: "APLICAR AHORA"
     color: "white"
     background: "black"
     hover_color: "white"
@@ -73,37 +85,38 @@ two_column_left:
 we_trust_section:
   title: "¿Por qué elegir 4Geeks?"
   text: |
-    Con un historial comprobado de éxito y reconocimiento en la industria, nuestro programa empodera a los estudiantes para alcanzar sus metas profesionales.
-    <br><br>
+    4Geeks es tu camino al éxito en tecnología. Tenemos la experiencia, los contactos y los recursos para convertirte en un profesional altamente demandado.
+    <br>
+    <br>
     Las cifras hablan por sí solas:
   boxes:
     - icon: briefcase-2
       title: "84%"
-      text: Tasa de colocación laboral
+      text: de nuestros graduados consiguen empleo en tecnología
     - icon: chart
       title: "60K"
-      text: Salario promedio en un nuevo empleo
+      text: es el salario promedio inicial de nuestros graduados
     - icon: graduation-2
       title: "130"
       text: Días promedio para conseguir empleo
 
 how_it_works:
-  title: "¿Cómo funciona?"
-  text: "Estos son los requisitos que debes cumplir para calificar para la garantía de empleo. Si completas cada paso y no consigues trabajo en 6 meses después de graduarte, te devolvemos el 100% de tu matrícula."
+  title: ¿Cómo funciona?
+  text: "Así funciona nuestra garantía de empleo: Cumple estos sencillos requisitos, y si no encuentras trabajo en 6 meses, te reembolsamos el 100% de tu matrícula."
   steps:
     - icon: rocket-2
       title: Comienza el programa
     - icon: assignment
-      title: Completa las tareas y cumple con la asistencia
+      title: Asiste a clases y completa tus tareas.
     - icon: folder
-      title: Aprueba el proyecto final
+      title: Aprueba el proyecto final con éxito.
     - icon: graduation-2
-      title: Gradúate
+      title: ¡Gradúate y celebra tus logros!
       highlight: True
     - icon: handshake
-      title: Participa en el proceso de apoyo profesional
+      title: Participa activamente en nuestro programa de apoyo profesional.
     - icon: briefcase-2
-      title: Consigue un empleo en 6 meses
+      title: ¡Consigue tu empleo soñado en tecnología en 6 meses!
   link:
     url: "https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/Condiciones%20y%20Requerimientos%20Job%20Guaranteed%20Program.pdf"
     label: "Condiciones y requisitos aplicables."
