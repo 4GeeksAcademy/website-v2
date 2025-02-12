@@ -436,22 +436,21 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
         alignItems="center"
         justifyContent="space-between"
       > */}
-        <TwoColumn
-          padding="60px 80px"
-          padding_md="60px 80px"
-          padding_lg="60px 80px"
-          right={{ image: ymlTwoColumn.image }}
-          left={{
-            heading: ymlTwoColumn.heading,
-            sub_heading: ymlTwoColumn.sub_heading,
-            bullets: ymlTwoColumn.bullets,
-            content: ymlTwoColumn.content,
-            button: ymlTwoColumn.button,
-          }}
-          proportions={ymlTwoColumn.proportions}
-          session={session}
-        />
-      
+      <TwoColumn
+        padding="60px 80px"
+        padding_md="60px 80px"
+        padding_lg="60px 80px"
+        right={{ image: ymlTwoColumn.image }}
+        left={{
+          heading: ymlTwoColumn.heading,
+          sub_heading: ymlTwoColumn.sub_heading,
+          bullets: ymlTwoColumn.bullets,
+          content: ymlTwoColumn.content,
+          button: ymlTwoColumn.button,
+        }}
+        proportions={ymlTwoColumn.proportions}
+        session={session}
+      />
 
       {/* <Container margin="40px 0" padding="0" padding_tablet="0 90px" padding_lg="0">
         <WeTrust we_trust={yml.we_trust_section} />
@@ -575,7 +574,12 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           ))}
         </Div>
 
-        <Container margin="0" padding="0" padding_tablet="0" id="faq-card-section">
+        <Container
+          margin="0"
+          padding="0"
+          padding_tablet="0"
+          id="faq-card-section"
+        >
           <FaqCard
             faqs={data.allFaqYaml.edges[0].node.faq}
             topicSlug="job_guarantee"
