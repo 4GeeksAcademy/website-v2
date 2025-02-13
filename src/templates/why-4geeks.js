@@ -17,7 +17,6 @@ import GeeksVsOthers from "../components/GeeksVsOthers";
 import BaseRender from "./_baseLayout";
 import { SessionContext } from "../session.js";
 import Staff from "../components/Staff";
-
 const RedPin = ({ style }) => (
   <svg
     width="8"
@@ -32,7 +31,6 @@ const RedPin = ({ style }) => (
     <path d="M4 10V5.09091M4 5.09091V1L7 3.04545L4 5.09091Z" stroke="#CD0000" />
   </svg>
 );
-
 const Why4Geeks = (props) => {
   const { data, pageContext, yml } = props;
   const { session } = React.useContext(SessionContext);
@@ -185,6 +183,15 @@ const Why4Geeks = (props) => {
         limit={4}
         title={yml.geeksvsothers.title}
         paragraph={yml.geeksvsothers.paragraph}
+        style={{
+          background: Colors.veryLightBlue3,
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          width: "100%",
+          padding: "20px",
+          margin: "0 auto",
+        }}
       />
 
       <GridContainerWithImage
@@ -247,7 +254,6 @@ const Why4Geeks = (props) => {
     </>
   );
 };
-
 export const query = graphql`
   query Why4GeeksQuery($file_name: String!, $lang: String!) {
     allPageYaml(
@@ -336,5 +342,4 @@ export const query = graphql`
     }
   }
 `;
-
 export default BaseRender(Why4Geeks);
