@@ -1,0 +1,231 @@
+meta_info:
+  slug: 4geeks-acapi
+  title: "Conviértete en Full Stack Developer o Data Scientist con ACAPI & 4Geeks Academy"
+  description: "Un programa intensivo para impulsar tu futuro en tecnología."
+  image: "/images/bg/main-bg.jpg"
+  keywords: "Bootcamp de programación, Full Stack Developer, Data Science, 4Geeks Academy, ACAPI, Desarrollo Web, Ciencia de Datos"
+  visibility: "visible"
+  template: "landing_a"
+  redirects: []
+  utm_course: ["full-stack-ft", "datascience-ml"]
+  utm_location: ["mexicocity-mexico"]
+  automation: soft
+  tag: request_more_info
+
+navbar:
+  buttonText: "Postula Ahora"
+  buttonUrl: "#leadform_bottom"
+  logoUrl: "#"
+
+form:
+  hide_form: False
+  side_image: ''
+  fields: ["full_name", "phone", "email"]
+  heading: "Postula Ahora y Transforma Tu Futuro 🚀"
+  motivation: "📩 ¿Tienes preguntas? Contáctanos y con gusto te ayudamos."
+  button_label: "🔗 Aplica aquí"
+
+apply_schollarship: # form that is displayed at the end of the landing
+  # title: "Get more info about this award-winning development course"
+  imageSide: "left"
+  image: "../../../static/images/landing/blonde-girl-laptop.png"
+
+header_data:
+  background: "#ffffff"
+  partner_logo_url: "../../../static/images/partner/acapi-logo.png"
+  tagline: "ACAPI & 4Geeks Academy"
+  sub_heading: "Conviértete en Full Stack Developer o Data Scientist "
+  tagline_color: "#1c1c1c"
+  form_styles:
+    background: "#0084FF"
+    color: "white"
+    button:
+      background: "black"
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+  image_filter: brightness(0.3)
+
+features:
+  marginTop: 0px
+  styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
+  bullets:
+    - "Subsidio del 90% cubierto por la fundación."
+    - "80% de empleabilidad después del programa."
+    - "Mentoría y career support de por vida."
+
+follow_bar:
+  position: "top"
+  content:
+    text: "Postula ahora y accede a una educación de calidad."
+    text_mobile: "Postula ahora y accede a una educación de calidad."
+    font_size: ["22px", "22px", "22px", "16px", "4vw"]
+  button:
+    text: "Inicia tu postulación"
+    path: "#leadform_bottom"
+  phone:
+    text: ""
+    number: ""
+
+short_badges:
+  - name: "Top Online Full-Stack Bootcamps Of 2024"
+    url: ""
+    image: "../../../static/images/badges/forbes-logo-award.png"
+    alt: "We have been selected as one of the Top Online Coding Bootcamps by Forbes."
+  - name: "Best for Spanish speakers Of 2024 by Fortune"
+    url: ""
+    image: "../../../static/images/badges/fortune-logo.png"
+    alt: "Recognized by Fortune as one of the Top Coding Bootcamps"
+  - name: "Top Coding Bootcamps Newsweek"
+    url: ""
+    image: "../../../static/images/badges/newsweek.webp"
+    alt: "Top Coding Bootcamps Newsweek"
+  - name: "Best Coding Bootcamp Course Report 2024"
+    url: ""
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+    alt: "Best Coding Bootcamp Course Report 2024"
+  - name: "Licensed by the Florida Department of Education"
+    url: ""
+    image: "../../../static/images/badges/licensed.png"
+    alt: "Licensed by the Florida Department of Education"
+  - name: "ARP Certificate"
+    url: ""
+    image: "../../../static/images/badges/arp-logo-certification.png"
+    alt: "ARP Certificate"
+
+# program_details:
+#   position: 2
+#   heading: "Nuestros Programas"
+#   sub_heading: "Full Stack Developer & Data Science"
+#   weeks:
+#     duration: 10
+
+why_4geeks:
+  position: 9
+  heading: "Historias de éxito con 4Geeks Academy"
+
+components:
+  - name: first_two_column
+    position: 1
+    layout: two_column_right
+    background: "lightBlue"
+    image:
+      src: "/images/landing/rigobot-logo-confondo.jpg"
+      style: '{ "background-size": "contain", "background-position": "center", "background-color": "#0084ff"}'
+      shadow: true
+    heading:
+      text: "¿Cómo funciona el programa?"
+    sub_heading:
+      text: "Nuestro proceso de selección y formación está diseñado para garantizar que cada estudiante tenga éxito en su aprendizaje y desarrollo profesional. A continuación, te explicamos cómo funciona paso a paso."
+      font_size: ["18px"]
+    bullets:
+      items:
+        - heading: "📝 Aplica y completa el test lógico"
+          text: "Realiza una prueba para evaluar tu adecuación al programa."
+          icon: "circle"
+        - heading: "📚 Completa el Prework"
+          text: "Si apruebas el test, recibirás acceso al Prework, el cual debes completar en 10 días."
+          icon: "circle"
+        - heading: "🎤 Entrevista con nuestro equipo"
+          text: "Tendrás una entrevista con nuestro equipo para conocerte mejor y asegurarnos de que el programa es adecuado para ti."
+          icon: "circle"
+        - heading: "🚀 ¡Inicia tu formación!"
+          text: "Comienza tu proceso de aprendizaje con clases en vivo, mentoría personalizada y un enfoque 100% práctico."
+          icon: "circle"
+
+
+  - name: program_fullstack
+    position: 2
+    layout: two_column_left
+    background: "#fff"
+    image:
+      src: "/images/landing/Group-6626.webp"
+      style: '{ "background-size": "contain", "background-position": "center"}'
+    section_heading:
+      text: "Nuestros Programas"
+    heading:
+      text: "Full Stack Developer"
+      font_size: ["50px", "50px", "50px", "50px", "50px"]
+    content:
+      text: "Aprende a construir aplicaciones web modernas y funcionales desde cero, dominando tecnologías como HTML, CSS, JavaScript, React, Python y más."
+      font_size: ["18px"]
+    bullets:
+      items:
+        - heading: "📅 Duración: 10 semanas"
+          text: "Incluye 10 semanas de formación intensiva."
+          icon: "circle"
+        - heading: "🖥️ Clases"
+          text: "5 clases semanales con profesores expertos."
+          icon: "circle"
+        - heading: "👨‍🏫 Ratio de enseñanza"
+          text: "1 profesor por cada 7 estudiantes."
+          icon: "circle"
+        - heading: "📌 Requisitos"
+          text: "No se requieren conocimientos previos en programación ni matemáticas avanzadas."
+          icon: "circle"
+    button:
+      text: "Postula Ahora"
+      color: white
+      hover_color: "white"
+      background: "black"
+      path: "#leadform_bottom"
+
+  - name: datascience-program
+    position: 3
+    layout: two_column_right
+    background: "#fbfbfb"
+    image:
+      src: "/images/landing/hombre-con-laptop.png"
+      style: '{"backgroundSize": "contain;"}'
+    heading:
+      text: "Data Science"
+    content:
+      text: "Desarrolla habilidades para analizar grandes volúmenes de datos, generar insights estratégicos y utilizar herramientas como Python, SQL, Machine Learning y más."
+      font_size: ["18px"]
+    bullets:
+      items:
+        - heading: "📅 Duración: 10 Semanas"
+          text: "Un programa intensivo de 10 Semanas para desarrollar habilidades avanzadas."
+          icon: "circle"
+        - heading: "🖥️ Clases"
+          text: "5 clases semanales con profesores expertos."
+          icon: "circle"
+        - heading: "👨‍🏫 Ratio de enseñanza"
+          text: "1 profesor por cada 7 estudiantes."
+          icon: "circle"
+        - heading: "📌 Requisitos"
+          text: "No se necesita experiencia previa en programación."
+          icon: "circle"
+    button:
+      text: "Postula Ahora"
+      color: white
+      hover_color: "white"
+      background: "black"
+      path: "#leadform_bottom"
+
+
+
+who_is_hiring:
+  position: 10
+  limit: 4
+  heading: "¿Quién contrata a nuestros alumnos?"
+  sub_heading: "Nuestros egresados trabajan en empresas de tecnología de primer nivel."
+
+rating_reviews:
+  position: 3
+  heading: "Lee acerca de nosotros"
+  rating_list:
+    - alt: "Career Karma"
+      image: "../../../static/images/badges/career-karma.png"
+      rating: 4.8
+      url: "https://careerkarma.com/schools/4geeks-academy/"
+    - alt: "Switchup"
+      image: "../../../static/images/badges/switchup-img.png"
+      rating: 4.89
+      url: "https://www.switchup.org/bootcamps/4geeks-academy"
+    - alt: "Course Report"
+      image: "../../../static/images/badges/course-report.png"
+      rating: 4.84
+      url: "https://www.coursereport.com/schools/4geeks-academy"
+    - alt: "Google"
+      image: "../../../static/images/badges/google.png"
+      rating: 4.9
+      url: ""
