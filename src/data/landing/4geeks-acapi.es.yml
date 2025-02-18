@@ -7,8 +7,8 @@ meta_info:
   visibility: "visible"
   template: "landing_a"
   redirects: []
-  utm_course: ["full-stack", "datascience-ml"]
-  utm_location: ["lima-peru"]
+  utm_course: ["full-stack-ft", "datascience-ml"]
+  utm_location: ["mexicocity-mexico"]
   automation: soft
   tag: request_more_info
 
@@ -149,11 +149,11 @@ components:
       font_size: ["18px"]
     bullets:
       items:
-        - heading: "📅 Duración: 18 semanas"
-          text: "Incluye 16 semanas de formación más 2 semanas de preparación adicional."
+        - heading: "📅 Duración: 10 semanas"
+          text: "Incluye 10 semanas de formación intensiva."
           icon: "circle"
         - heading: "🖥️ Clases"
-          text: "3 clases semanales con profesores expertos."
+          text: "5 clases semanales con profesores expertos."
           icon: "circle"
         - heading: "👨‍🏫 Ratio de enseñanza"
           text: "1 profesor por cada 7 estudiantes."
@@ -182,14 +182,14 @@ components:
       font_size: ["18px"]
     bullets:
       items:
-        - heading: "📅 Duración: 16 semanas"
-          text: "Un programa intensivo de 16 semanas para desarrollar habilidades avanzadas."
+        - heading: "📅 Duración: 10 Semanas"
+          text: "Un programa intensivo de 10 Semanas para desarrollar habilidades avanzadas."
           icon: "circle"
         - heading: "🖥️ Clases"
-          text: "3 clases semanales con instructores especializados."
+          text: "5 clases semanales con profesores expertos."
           icon: "circle"
-        - heading: "👨‍🏫 Tamaño de la clase"
-          text: "Máximo 12 estudiantes por clase para una enseñanza personalizada."
+        - heading: "👨‍🏫 Ratio de enseñanza"
+          text: "1 profesor por cada 7 estudiantes."
           icon: "circle"
         - heading: "📌 Requisitos"
           text: "No se necesita experiencia previa en programación."
