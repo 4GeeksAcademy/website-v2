@@ -109,17 +109,20 @@ const Financial = (props) => {
         </Div>
       </Div>
 
+
       <Iconogram yml={yml.iconogram} />
-      <PricesAndPayment
-        type={pageContext.slug}
-        lang={pageContext.lang}
-        locations={data.allLocationYaml.edges}
-        programs={data.allCourseYaml.edges}
-        defaultCourse={defaultCourse}
-        title={yml.prices.heading}
-        paragraph={yml.prices.sub_heading}
-        chooseProgram // Allow choosing the program (used in financial.js)
-        financial
+
+      <TwoColumn
+        left={{ image: ymlTwoColumn[1].image }}
+        right={{
+          heading: ymlTwoColumn[1].heading,
+          sub_heading: ymlTwoColumn[1].sub_heading,
+          bullets: ymlTwoColumn[1].bullets,
+          content: ymlTwoColumn[1].content,
+          button: ymlTwoColumn[1].button,
+          gap_tablet: "40px",
+        }}
+        session={session}
       />
 
       <TwoColumn
@@ -136,6 +139,25 @@ const Financial = (props) => {
         proportions={ymlTwoColumn.proportions}
         session={session}
       />
+
+      <WeTrust
+        we_trust={yml.we_trust_section}
+        background="none"
+        titleProps={{ textAlign: "center" }}
+        paragraphProps={{ textAlign: "center" }}
+      />
+      <PricesAndPayment
+        type={pageContext.slug}
+        lang={pageContext.lang}
+        locations={data.allLocationYaml.edges}
+        programs={data.allCourseYaml.edges}
+        defaultCourse={defaultCourse}
+        title={yml.prices.heading}
+        paragraph={yml.prices.sub_heading}
+        chooseProgram // Allow choosing the program (used in financial.js)
+        financial
+      />
+
       <CarouselV2
         margin="20px 0"
         background="#FBFCFC"
@@ -165,24 +187,8 @@ const Financial = (props) => {
           </Div>
         ))}
       </CarouselV2>
-      <TwoColumn
-        left={{ image: ymlTwoColumn[1].image }}
-        right={{
-          heading: ymlTwoColumn[1].heading,
-          sub_heading: ymlTwoColumn[1].sub_heading,
-          bullets: ymlTwoColumn[1].bullets,
-          content: ymlTwoColumn[1].content,
-          button: ymlTwoColumn[1].button,
-          gap_tablet: "40px",
-        }}
-        session={session}
-      />
-      <WeTrust
-        we_trust={yml.we_trust_section}
-        background="none"
-        titleProps={{ textAlign: "center" }}
-        paragraphProps={{ textAlign: "center" }}
-      />
+
+
       {academyHasJobGuarantee && (
         <TwoColumn
           right={{ image: ymlTwoColumn[2].image }}

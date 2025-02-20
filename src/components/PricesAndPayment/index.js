@@ -230,9 +230,8 @@ const PricingCard = ({
                   color={Colors.black}
                   opacity="1"
                   textAlign="left"
-                >
-                  {bullet}
-                </Paragraph>
+                  dangerouslySetInnerHTML={{ __html: bullet }}
+                />
               </Div>
             ))}
           <Link
@@ -240,9 +239,8 @@ const PricingCard = ({
               marginTop: "21px",
               display: "block",
             }}
-            to={`${info.apply_button.link}${
-              selectedPlan ? `?utm_plan=${selectedPlan}` : ""
-            }`}
+            to={`${info.apply_button.link}${selectedPlan ? `?utm_plan=${selectedPlan}` : ""
+              }`}
           >
             <Button
               variant="full"
@@ -295,7 +293,7 @@ const ChartSection = ({ info, currentLocation }) => {
           width="100%"
           width_xs="300px"
           margin="auto"
-          // height="256px"
+        // height="256px"
         >
           <Icon icon="payments_chart" style={{ margin: "auto" }} />
         </Div>
@@ -473,15 +471,15 @@ const PricesAndPayment = (props) => {
   const programs = !Array.isArray(props.programs)
     ? []
     : props.programs
-        .filter(
-          ({ node }) =>
-            !["unlisted", "hidden"].includes(node.meta_info.visibility) &&
-            node.meta_info.show_in_apply
-        )
-        .map(({ node }) => ({
-          label: node.apply_form.label,
-          value: node.meta_info.bc_slug,
-        }));
+      .filter(
+        ({ node }) =>
+          !["unlisted", "hidden"].includes(node.meta_info.visibility) &&
+          node.meta_info.show_in_apply
+      )
+      .map(({ node }) => ({
+        label: node.apply_form.label,
+        value: node.meta_info.bc_slug,
+      }));
 
   const getAvailablePlans = () => {
     const currentPlans = getCurrentPlans();
@@ -850,8 +848,8 @@ const PricesAndPayment = (props) => {
                   background="#F9F9F9"
                   border="1px solid #EBEBEB"
                   padding="24px 15px"
-                  margin_tablet="0 8px 0 0"
-                  gridColumn_tablet="1/11"
+                  margin_tablet="0 0 0 15px"
+                  gridColumn_tablet="11/21"
                   gridRow_tablet="2"
                 >
                   <H3 textAlign="center" margin="0 0 16px 0">
@@ -859,21 +857,19 @@ const PricesAndPayment = (props) => {
                   </H3>
                   <hr style={{ border: "1px solid #ebebeb", width: "60%" }} />
                   {selected?.bullets &&
-                    selected.bullets.map((bullet) => (
-                      <Div alignItems="center" margin="21px 0 0 0">
-                        <Icon
-                          icon="check"
-                          width="17px"
-                          height="17px"
-                          style={{ marginRight: "10px" }}
-                          color={Colors.blue}
-                          fill={Colors.blue}
-                        />
-                        <Paragraph color={Colors.black} textAlign="left">
-                          {bullet}
-                        </Paragraph>
-                      </Div>
-                    ))}
+                  selected.bullets.map((bullet, index) => (
+                    <Div alignItems="center" margin="21px 0 0 0" key={index}>
+                      <Icon
+                        icon="check"
+                        width="17px"
+                        height="17px"
+                        style={{ marginRight: "10px" }}
+                        color={Colors.blue}
+                        fill={Colors.blue}
+                      />
+                      <Paragraph color={Colors.black} textAlign="left" dangerouslySetInnerHTML={{ __html: bullet }} />
+                    </Div>
+                  ))}
                 </Div>
               )}
               <Div
@@ -883,7 +879,7 @@ const PricesAndPayment = (props) => {
                 justifyContent_xs="evenly"
                 gap="16px"
                 margin_tablet="0 0 0 8px"
-                gridColumn_tablet="11/21"
+                gridColumn_tablet="1/11"
                 gridRow="2"
               >
                 {availablePlans &&
@@ -913,9 +909,8 @@ const PricesAndPayment = (props) => {
                     style={{
                       display: "block",
                     }}
-                    to={`${info.apply_button.link}${
-                      selectedPlan ? `?utm_plan=${selectedPlan}` : ""
-                    }`}
+                    to={`${info.apply_button.link}${selectedPlan ? `?utm_plan=${selectedPlan}` : ""
+                      }`}
                   >
                     <Button
                       variant="full"
@@ -985,8 +980,8 @@ const PricesAndPayment = (props) => {
             session && session?.location && session?.location.phone
               ? `https://wa.me/${phoneNumberClean(session?.location?.phone)}`
               : session?.email
-              ? `mailto:${session?.email}`
-              : `${info?.contact_link}`
+                ? `mailto:${session?.email}`
+                : `${info?.contact_link}`
           }
         >
           {info.contact_carrer_advisor}
