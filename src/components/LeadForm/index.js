@@ -551,7 +551,7 @@ const LeadForm = ({
               session.location.consents.map((consent, index) => {
                 if (consent.active)
                   return (
-                    <Div position="relative" margin="10px 0 0 0">
+                    <Div key={index} position="relative" margin="10px 0 0 0">
                       <input
                         required
                         name="isGoing"
@@ -587,7 +587,9 @@ const LeadForm = ({
                       />
                     </Div>
                   );
-              })}
+              })
+            }
+
             {formStatus.status === "error" && (
               <Alert color="red" margin="20px 0 0 0" padding="5px 0 0 0">
                 {formStatus.msg}

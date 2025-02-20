@@ -258,6 +258,7 @@ export const Container = styled(Fragment)`
   }
   @media ${Devices.lg} {
     display: ${(props) => props.display_lg};
+    flex-direction: ${(props) => props.flexDirection_lg};
     width: ${(props) => props.width_lg};
     justify-content: ${(props) =>
       justifyContentOptions[props.justifyContent_lg]};
@@ -407,6 +408,7 @@ export const Div = styled.div`
   @media ${Devices.xxs} {
     column-count: ${(props) => props.columnCount_xxs};
     padding: ${(props) => props.padding_xxs};
+    align-self: ${(props) => props.alignSelf_xxs};
     background: ${(props) => props.background_xxs};
     display: ${(props) => props.display_xxs};
     top: ${(props) => props.top_xxs};
@@ -418,6 +420,7 @@ export const Div = styled.div`
   }
   @media ${Devices.xs} {
     padding: ${(props) => props.padding_xs};
+    gap: ${(props) => props.gap_xs};
     column-count: ${(props) => props.columnCount_xs};
     flex-direction: ${(props) => props.flexDirection_xs};
     flex-wrap: ${(props) => props.flexWrap_xs};
@@ -609,7 +612,9 @@ export const Grid = styled(Div)`
   @media ${Devices.xxs} {
     grid-gap: ${(props) => props.gridGap_xxs};
     grid-template-columns: ${(props) =>
-      props.columns_xxs ? `repeat(${props.columns_xxs}, 1fr)` : null};
+      props.gridTemplateColumns_xxs
+        ? `${props.gridTemplateColumns_xxs}`
+        : "2fr repeat(12, 1fr) 2fr"};
     padding: ${(props) => props.padding_xxs};
     width: ${(props) => props.width_xxs};
     margin: ${(props) => props.margin_xxs};
@@ -617,15 +622,17 @@ export const Grid = styled(Div)`
   }
   @media ${Devices.xs} {
     grid-template-columns: ${(props) =>
-      props.columns_xs ? `repeat(${props.columns_xs}, 1fr)` : null};
+      props.gridTemplateColumns_xs
+        ? `${props.gridTemplateColumns_xs}`
+        : "2fr repeat(12, 1fr) 2fr"};
     width: ${(props) => props.width_xs};
     display: ${(props) => props.display_xs};
   }
   @media ${Devices.sm} {
     grid-template-columns: ${(props) =>
       props.gridTemplateColumns_sm
-        ? `repeat(${props.gridTemplateColumns_sm}, 1fr)`
-        : null};
+        ? `${props.gridTemplateColumns_sm}`
+        : "2fr repeat(12, 1fr) 2fr"};
     width: ${(props) => props.width_sm};
     display: ${(props) => props.display_sm};
   }
@@ -654,7 +661,10 @@ export const Grid = styled(Div)`
   @media ${Devices.md} {
     margin: ${(props) => props.margin_md};
     padding: ${(props) => props.padding_md};
-    grid-template-columns: ${(props) => props.gridTemplateColumns_md};
+   grid-template-columns: ${(props) =>
+      props.gridTemplateColumns_md
+        ? `${props.gridTemplateColumns_md}`
+        : "2fr repeat(12, 1fr) 2fr"};
     grid-template-rows: ${(props) =>
       props.gridTemplateRows_md
         ? `repeat(${props.gridTemplateRows_md})`
@@ -664,7 +674,10 @@ export const Grid = styled(Div)`
     display: ${(props) => props.display_md || "grid"};
   }
   @media ${Devices.lg} {
-    grid-template-columns: ${(props) => props.gridTemplateColumns_lg};
+   grid-template-columns: ${(props) =>
+      props.gridTemplateColumns_lg
+        ? `${props.gridTemplateColumns_lg}`
+        : "2fr repeat(12, 1fr) 2fr"};
     padding: ${(props) => props.padding_lg};
   }
   @media ${Devices.xl} {

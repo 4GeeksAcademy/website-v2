@@ -726,6 +726,7 @@ export const query = graphql`
       edges {
         node {
           title
+          subtitle
           contributor
           cases {
             name

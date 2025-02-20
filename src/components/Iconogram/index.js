@@ -4,7 +4,7 @@ import { H2, Paragraph } from "../Heading";
 import { Colors, Anchor } from "../Styling";
 import IconsBanner from "../IconsBanner";
 
-const Iconogram = ({ yml, index }) => {
+const Iconogram = ({ yml, index , style}) => {
   const { heading, sub_heading, icons, button, swipable, background } = yml;
 
   return (
@@ -46,8 +46,11 @@ const Iconogram = ({ yml, index }) => {
       )}
       <Div
         display="flex"
+        width_xs="350px"
+        width_lg="100%"
+        width_tablet="100%"
         flexDirection="column"
-        flexDirection_xs="row"
+        flexDirection_xs="column"
         flexDirection_tablet="row "
         flexWrap_xs="wrap"
         flexWrap_tablet="nowrap"
@@ -56,6 +59,8 @@ const Iconogram = ({ yml, index }) => {
         maxWidth="1280px"
         margin="0 auto "
         padding="32px 0 10px 0"
+        padding_xs="30px 0 10px 0"
+        gap_xs="15px"
         className={swipable && "badge-slider hideOverflowX__"}
       >
         {Array.isArray(icons) &&

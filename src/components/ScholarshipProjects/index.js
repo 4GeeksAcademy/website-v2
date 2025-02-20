@@ -1,32 +1,39 @@
-import React, { useRef } from "react";
+import React from "react";
 import { H2, H3, H4, Paragraph, SubTitle } from "../Heading";
-import Slider from "react-slick";
 import { Div, HR } from "../Sections";
 import { StyledBackgroundSection } from "../Styling";
 import { Button, Colors } from "../Styling";
 import Icon from "../Icon";
 import { smartRedirecting } from "../../utils/utils.js";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import CarouselV2 from "../CarouselV2";
 
 const ScholarshipProjects = ({ content, maxWidth }) => {
-  const sliderRef = useRef();
-
   const settings = {
-    dots: false,
-    infinite: true,
-    autoplay: true,
-    autoplaySpeed: 6000,
-    speed: 500,
-    slidesToShow: 1,
+    slidesToShow: 3,
     slidesToScroll: 1,
-    arrows: false,
+    infinite: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
 
   return (
     <Div
       display="block"
       position="relative"
+      width="100%"
+      height="auto"
       maxWidth={maxWidth || "1280px"}
       margin="auto"
       padding_xxs="20px"
@@ -35,61 +42,44 @@ const ScholarshipProjects = ({ content, maxWidth }) => {
       padding_lg="70px 0px"
     >
       <H2 margin="0 0 10px 0">{content.title}</H2>
-      <SubTitle margin="0 0 25px 0">{content.description}</SubTitle>
-      <Button
-        display="none"
-        display_tablet="block"
-        variant="empty"
-        padding="0"
-        padding_xs="0"
-        padding_tablet="0"
-        position="absolute"
-        zIndex="99"
-        top="50%"
-        left="5%"
-        left_md="3%"
-        left_lg="0%"
-        left_tablet="0%"
-        width="12px"
-        height="20px"
-        width_tablet="35px"
-        height_tablet="62px"
-        onClick={() => sliderRef.current.slickPrev()}
+      <SubTitle margin="0 0 10px 0">{content.description}</SubTitle>
+      <CarouselV2
+        margin="20px 0"
+        background="#FBFCFC"
+        settings={{
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          autoplay: true,
+          autoplaySpeed: 6000,
+          speed: 500,
+          responsive: [
+            {
+              breakpoint: 1024, // Tablet breakpoint
+              settings: {
+                slidesToShow: 1, // Show 1 slide at a time on tablets
+              },
+            },
+            {
+              breakpoint: 600, // Mobile breakpoint
+              settings: {
+                slidesToShow: 1, // Show 1 slide at a time on mobile
+              },
+            },
+          ],
+        }}
       >
-        <Icon width="100%" height="100%" icon="arrowleft" />
-      </Button>
-      <Button
-        display="none"
-        display_tablet="block"
-        variant="empty"
-        padding="0"
-        padding_xs="0"
-        padding_tablet="0"
-        position="absolute"
-        zIndex="99"
-        top="50%"
-        right="5%"
-        right_md="3%"
-        right_lg="0%"
-        right_tablet="0%"
-        width="12px"
-        height="20px"
-        width_tablet="35px"
-        height_tablet="62px"
-        onClick={() => sliderRef.current.slickNext()}
-      >
-        <Icon width="100%" height="100%" icon="arrow-right" />
-      </Button>
-      <Slider {...settings} ref={sliderRef}>
-        {content?.projects.map((project) => (
-          <Div margin_md="50px auto">
+        {content?.projects.map((project, index) => (
+          <Div key={`${project.name}-${index}`} margin_md="50px auto">
             <Div
               padding="15px"
+              height="100%"
+              width="100%"
               padding_tablet="0"
               margin="auto"
               width_tablet="100%"
               width_lg="90%"
-              // width_md="900px"
+              //width_md="900px"
               minHeight_tablet="605px"
               border_tablet="1px solid #000000"
               flexDirection_tablet="row"
@@ -288,7 +278,7 @@ const ScholarshipProjects = ({ content, maxWidth }) => {
             </Div>
           </Div>
         ))}
-      </Slider>
+      </CarouselV2>
     </Div>
   );
 };

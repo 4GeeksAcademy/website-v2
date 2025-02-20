@@ -4,16 +4,18 @@ import { Div } from "../Sections";
 import { Colors } from "../Styling";
 import Icon from "../Icon";
 
-export default ({ icon, title, content, color, content_style }) => {
+export default ({ icon, title, content, color, content_style, ...rest }) => {
   return (
     <Div
       background="#FFF"
       border="3px solid #000"
       width="100%"
       width_md="320px"
+      
       width_tablet="200px"
       boxShadow="6px 6px 0px 0px rgba(0,0,0,1)"
       boxShadow_tablet="9px 8px 0px 0px rgba(0,0,0,1)"
+      flexDirection_xs="column"
       flexDirection_tablet="column"
       justifyContent_tablet="start"
       padding="15px"
@@ -21,9 +23,13 @@ export default ({ icon, title, content, color, content_style }) => {
       alignItems_tablet="start"
       borderRadius="4px"
     >
-      {icon && (
+      {(icon || rest.progress) && (
+        //set inside div with property relative
+        //p position this as absolute
+        ///progress property with color style is over the icon
+        //check with coniditional rendering for progress and paragraph component
         <Icon
-          icon={icon}
+          icon={rest.progress ? "progress" : icon}
           width="56px"
           height="56px"
           color={Colors[color] || color}

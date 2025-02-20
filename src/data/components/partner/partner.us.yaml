@@ -263,24 +263,25 @@ work_together:
       description: "Your go-to partner for tech candidates, have a constant flow of high- quality candidates with our amazing talent pipeline!"
 
 benefits_and_charts:
-  title: "BECOME A PARTNER"
-  description: "Collaborate with our mission and leverage yours!"
+  title: "Become part of our Partnership Network"
+  
   button_section:
-    button_text: "JOIN OUR PARTNERSHIP NETWORK"
+    button_text: "I want to contribute"
     button_link: ""
   bullets:
-    - Elevate your brand's visibility and exposure.
-    - Establish your brand as a leading force in the tech industry.
-    - Foster a spirit of community and collaboration.
-    - Strengthen job retention through our impactful reskilling programs.
-    - Bridge the technology divide within your community.
-    - Fill vital tech roles within your organization with our highly skilled bootcamp graduates.
-    - Enhance brand recognition and add value by sponsoring significant events.
+    - Access to a big pool of high quality and uniue talent.
+    - Increase job retention with reskilling programs.
+    - Bridge the technology divide within the community.
+    - Fill tech job openings.
+    - Increase brand awarenenss and value with workshop sponsorships and speaking opportunities.
+    - Establish your brand as a strong leader in the tech industry.
+    - Community Building.
+    - Tax reduction
 
   charts:
-    title: "Some Numbers worth Considering:"
+    title: "Numbers that support us"
     list:
-      - icon: "chart-62"
+      - icon: "chart-62"  
         description: |
           According to a study by the Society for Human Resource Management, it costs an average of $4,129 to hire a new employee, with an average of 42 days to find a suitable candidate.
       - icon: "job"

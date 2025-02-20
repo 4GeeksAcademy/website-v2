@@ -121,6 +121,12 @@ export const H2 = styled(BaseHeading)`
   @media ${Devices.tablet} {
     text-align: ${(props) => props.textAlign_tablet};
   }
+  @media ${Devices.md} {
+    text-align: ${(props) => props.textAlign_md};
+  }
+  @media ${Devices.lg} {
+    text-align: ${(props) => props.textAlign_lg};
+  }
 `;
 export const H3 = styled(BaseHeading)`
   font-weight: ${(props) => props.fontWeight || "700"};
@@ -145,6 +151,24 @@ export const H4 = styled(BaseHeading)`
 export const H5 = styled(BaseHeading)`
   font-weight: 700;
   letter-spacing: 0px;
+  @media ${Devices.xxs} {
+    text-align: ${(props) => props.textAlign_xxs};
+  }
+  @media ${Devices.xs} {
+    text-align: ${(props) => props.textAlign_xs};
+  }
+  @media ${Devices.tablet} {
+    text-align: ${(props) => props.textAlign_tablet};
+  }
+  @media ${Devices.md} {
+    text-align: ${(props) => props.textAlign_md};
+    justify-content: ${(props) => props.justifyContent_md};
+  }
+  @media ${Devices.lg} {
+    text-align: ${(props) => props.textAlign_lg};
+    justify-content: ${(props) => props.justifyContent_lg};
+
+  }
 `;
 
 export const Span = styled.span`
