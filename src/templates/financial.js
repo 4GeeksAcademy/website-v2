@@ -109,7 +109,6 @@ const Financial = (props) => {
         </Div>
       </Div>
 
-
       <Iconogram yml={yml.iconogram} />
 
       <TwoColumn
@@ -187,7 +186,6 @@ const Financial = (props) => {
           </Div>
         ))}
       </CarouselV2>
-
 
       {academyHasJobGuarantee && (
         <TwoColumn

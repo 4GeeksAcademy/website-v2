@@ -239,8 +239,9 @@ const PricingCard = ({
               marginTop: "21px",
               display: "block",
             }}
-            to={`${info.apply_button.link}${selectedPlan ? `?utm_plan=${selectedPlan}` : ""
-              }`}
+            to={`${info.apply_button.link}${
+              selectedPlan ? `?utm_plan=${selectedPlan}` : ""
+            }`}
           >
             <Button
               variant="full"
@@ -293,7 +294,7 @@ const ChartSection = ({ info, currentLocation }) => {
           width="100%"
           width_xs="300px"
           margin="auto"
-        // height="256px"
+          // height="256px"
         >
           <Icon icon="payments_chart" style={{ margin: "auto" }} />
         </Div>
@@ -471,15 +472,15 @@ const PricesAndPayment = (props) => {
   const programs = !Array.isArray(props.programs)
     ? []
     : props.programs
-      .filter(
-        ({ node }) =>
-          !["unlisted", "hidden"].includes(node.meta_info.visibility) &&
-          node.meta_info.show_in_apply
-      )
-      .map(({ node }) => ({
-        label: node.apply_form.label,
-        value: node.meta_info.bc_slug,
-      }));
+        .filter(
+          ({ node }) =>
+            !["unlisted", "hidden"].includes(node.meta_info.visibility) &&
+            node.meta_info.show_in_apply
+        )
+        .map(({ node }) => ({
+          label: node.apply_form.label,
+          value: node.meta_info.bc_slug,
+        }));
 
   const getAvailablePlans = () => {
     const currentPlans = getCurrentPlans();
@@ -857,19 +858,23 @@ const PricesAndPayment = (props) => {
                   </H3>
                   <hr style={{ border: "1px solid #ebebeb", width: "60%" }} />
                   {selected?.bullets &&
-                  selected.bullets.map((bullet, index) => (
-                    <Div alignItems="center" margin="21px 0 0 0" key={index}>
-                      <Icon
-                        icon="check"
-                        width="17px"
-                        height="17px"
-                        style={{ marginRight: "10px" }}
-                        color={Colors.blue}
-                        fill={Colors.blue}
-                      />
-                      <Paragraph color={Colors.black} textAlign="left" dangerouslySetInnerHTML={{ __html: bullet }} />
-                    </Div>
-                  ))}
+                    selected.bullets.map((bullet, index) => (
+                      <Div alignItems="center" margin="21px 0 0 0" key={index}>
+                        <Icon
+                          icon="check"
+                          width="17px"
+                          height="17px"
+                          style={{ marginRight: "10px" }}
+                          color={Colors.blue}
+                          fill={Colors.blue}
+                        />
+                        <Paragraph
+                          color={Colors.black}
+                          textAlign="left"
+                          dangerouslySetInnerHTML={{ __html: bullet }}
+                        />
+                      </Div>
+                    ))}
                 </Div>
               )}
               <Div
@@ -909,8 +914,9 @@ const PricesAndPayment = (props) => {
                     style={{
                       display: "block",
                     }}
-                    to={`${info.apply_button.link}${selectedPlan ? `?utm_plan=${selectedPlan}` : ""
-                      }`}
+                    to={`${info.apply_button.link}${
+                      selectedPlan ? `?utm_plan=${selectedPlan}` : ""
+                    }`}
                   >
                     <Button
                       variant="full"
@@ -980,8 +986,8 @@ const PricesAndPayment = (props) => {
             session && session?.location && session?.location.phone
               ? `https://wa.me/${phoneNumberClean(session?.location?.phone)}`
               : session?.email
-                ? `mailto:${session?.email}`
-                : `${info?.contact_link}`
+              ? `mailto:${session?.email}`
+              : `${info?.contact_link}`
           }
         >
           {info.contact_carrer_advisor}
