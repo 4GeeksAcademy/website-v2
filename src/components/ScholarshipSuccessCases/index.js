@@ -1,5 +1,5 @@
-import React, { useRef } from "react";
-import { H2, H4, Paragraph } from "../Heading";
+import React from "react";
+import { H2, Paragraph } from "../Heading";
 import { Div, HR } from "../Sections";
 import { StyledBackgroundSection } from "../Styling";
 import { Colors } from "../Styling";
@@ -7,26 +7,36 @@ import Icon from "../Icon";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Button } from "../Styling";
 import CarouselV2 from "../CarouselV2";
 import { Link } from "gatsby";
 
+// Custom CSS for spacing between cards
+const customStyles = `
+  .slick-slide {
+    padding: 0 10px !important; /* Add 10px padding on both sides of each card */
+  }
+`;
+
 const ScholarshipSuccessCases = ({ content, maxWidth, padding, ...props }) => {
   const settings = {
-    slidesToShow: 3,
+    slidesToShow: 3, // Show 3 cards at a time
     slidesToScroll: 1,
     infinite: true,
+    centerMode: true, // Enable center mode
+    centerPadding: "5%", // Add padding to center the card
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 2, // Show 2 cards on tablets
+          centerPadding: "5%",
         },
       },
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 1, // Show 1 card on mobile
+          centerPadding: "5%",
         },
       },
     ],
@@ -34,13 +44,16 @@ const ScholarshipSuccessCases = ({ content, maxWidth, padding, ...props }) => {
 
   return (
     <Div height="590px" display="block" margin="60px 0 60px 0" {...props}>
+      {/* Inject custom CSS for spacing */}
+      <style>{customStyles}</style>
+
       <H2 margin="30px 0">{content.title}</H2>
       <H2 margin="30px 0" fontSize="28px">
         {content.subtitle}
       </H2>
 
       <CarouselV2
-        margin="20px 0"
+        margin="20px 0px"
         background="#FBFCFC"
         padding="20px"
         settings={settings}
@@ -50,18 +63,16 @@ const ScholarshipSuccessCases = ({ content, maxWidth, padding, ...props }) => {
             key={`${student.name}-${i}`}
             display="flex"
             flexDirection="column"
-            width="282px"
-            minWidth="282px"
-            height="500px" // Set fixed height
+            height="500px"
             borderRadius="4px"
             border={`2px solid ${Colors.lightGray}`}
-            margin="0 10px"
-            overflow="hidden" // Ensure content doesn't overflow
+            overflow="hidden"
+            style={{ width: "90%" }} // Set card width to 90%
           >
-            <Div width="100%" height="162px">
+            <Div width="100%" height="161px">
               <StyledBackgroundSection
                 borderRadius="4px 4px 0 0"
-                height="100%"
+                height="161px"
                 width="100%"
                 image={
                   student.img && student.img.childImageSharp.gatsbyImageData
@@ -89,7 +100,7 @@ const ScholarshipSuccessCases = ({ content, maxWidth, padding, ...props }) => {
                 <Div
                   display="flex"
                   alignItems="center"
-                  padding="4px"
+                  padding="3px"
                   radius="4px"
                   gap="8px"
                   background="#FFF1D1"
@@ -114,7 +125,7 @@ const ScholarshipSuccessCases = ({ content, maxWidth, padding, ...props }) => {
                 <Div
                   className="react-tel-input"
                   margin="0"
-                  style={{ width: "24px", height:"24px" }}
+                  style={{ width: "24px", height: "24px" }}
                 >
                   <div className={`flag ${student.country.iso}`} />
                 </Div>
@@ -135,14 +146,18 @@ const ScholarshipSuccessCases = ({ content, maxWidth, padding, ...props }) => {
                   textAlign="left"
                   opacity="1"
                   color={Colors.black}
-                  style={{fontWeight:"600", fontSize:"9px", lineHeight:"10.89px"}}
+                  style={{
+                    fontWeight: "600",
+                    fontSize: "9px",
+                    lineHeight: "10.89px",
+                  }}
                 >
                   {`${content.contributor}: ${student.contributor}`}
                 </Paragraph>
                 <HR background={Colors.lightGray} width="100%" height="1px" />
               </Div>
               <Div>
-                <Paragraph textAlign="left" color={Colors.black} opacity="1">
+                <Paragraph textAlign="left" color={Colors.black} opacity="1" style={{ paddingBottom: "3px" }}>
                   {student.description.length > 280
                     ? student.description.substring(0, 280) + "..."
                     : student.description}
@@ -167,12 +182,14 @@ const ScholarshipSuccessCases = ({ content, maxWidth, padding, ...props }) => {
                 </Paragraph>
               </Div>
               <Link to="/">
-                <Paragraph margin="25px 0 36px 0" color={Colors.blue} fontWeight="900">
+                <Paragraph
+                  margin="25px 0 36px 0"
+                  color={Colors.blue}
+                  fontWeight="900"
+                >
                   See profile
                 </Paragraph>
               </Link>
-
-
             </Div>
           </Div>
         ))}

@@ -23,6 +23,7 @@ import TwoColumn from "../components/TwoColumn/index.js";
 const TwentyMillion = ({ data, pageContext, yml }) => {
   const { session } = React.useContext(SessionContext);
   const partnersData = data.allPartnerYaml.edges[0].node;
+  
 
   const [applyButtonText, setApplyButtonText] = useState("");
   const apply_button_text = yml.button.apply_button_text;
@@ -46,161 +47,203 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
     }
   }, [currentLocation]);
 
+  const programs = data.allCourseYaml.edges
+  .filter(
+    ({ node }) =>
+      !["unlisted", "hidden"].includes(node.meta_info.visibility) &&
+      node.meta_info.show_in_apply
+  )
+  .map(({ node }) => ({
+    label: node.apply_form.label,
+    value: node.meta_info.bc_slug,
+  }));
+
+
   const ymlTwoColumn = yml?.two_column_left;
+  
 
   return (
     <>
-      <Div
-        margin={
-          isCustomBarActive(session)
-            ? "120px auto 30px auto"
-            : "72px auto 30px auto"
-        }
-        margin_md={
-          isCustomBarActive(session)
-            ? "120px auto 30px auto"
-            : "72px auto 30px auto"
-        }
-        padding="90px 80px 0 80px"
-        padding_tablet="72px 80px 0 80px"
-        position="relative"
-        display="inline-flex"
-        flexDirection="row"
-        justifyContent="space-between"
-        alignItems="flex-start"
-        height="421px"
-        width="100%"
-        //minWidth="1280px"
-        //maxWidth="1440px"
-      >
-        <Div
-          display="block"
-          gap="10px"
-          height="369px"
-          width="100%"
-          alignItems="start"
-        >
-          <H2
-            type="h2"
-            textAlign_tablet="start"
-            textAlign_xxs="start"
-            fontSize="60px"
-            fontSize_tablet="55px"
-            margin="20px 0 0 0"
-            lineHeight_xxs="45px"
-            lineHeight_tablet="60px"
-            width_tablet="100%"
-            fontFamily="Archivo-Black"
+     <Div
+  margin={
+    isCustomBarActive(session)
+      ? "120px auto 30px auto"
+      : "72px auto 30px auto"
+  }
+  margin_md={
+    isCustomBarActive(session)
+      ? "120px auto 30px auto"
+      : "72px auto 30px auto"
+  }
+  margin_xs={
+    isCustomBarActive(session)
+      ? "0px auto 40px auto"
+      : "62px auto 30px auto"
+  }
+  padding="40px 80px 0 80px" // Reduced top padding for all screens
+  padding_tablet="40px 40px 0 40px" // Reduced top padding for tablets
+  padding_xs="20px 20px 0 20px" // Reduced top padding for mobile
+  position="relative"
+  display="inline-flex"
+  display_md="inline-flex"
+  display_lg="inline flex"
+  flexDirection="row"
+  flexDirection_md="row"
+  flexDirection_lg="row"
+  display_xxs="block"
+  display_tablet="block"
+  flexDirection_xxs="column"
+  flexDirection_tablet="column"
+  justifyContent="space-between"
+  alignItems="flex-start"
+  height="auto" // Changed to auto to avoid fixed height issues
+  minHeight="421px" // Use minHeight instead of height
+  width="100%"
+>
+  <Div
+    display="block"
+    gap="10px"
+    height="369px"
+    height_tablet="300px"
+    width="100%"
+    alignItems="start"
+    alignItems_tablet="start"
+  >
+    <H2
+      type="h2"
+      textAlign_tablet="start"
+      textAlign_xxs="start"
+      fontSize="60px"
+      fontSize_tablet="55px"
+      fontSize_xs="40px"
+      margin="20px 0 0 0"
+      lineHeight_xxs="45px"
+      lineHeight_tablet="60px"
+      width_tablet="100%"
+      fontFamily="Archivo-Black"
+      color={Colors.black}
+    >
+      {yml.header.title}
+    </H2>
+    <SubTitle
+      color={Colors.black}
+      style={{ marginTop: "20px" }}
+      textAlign_xxs="start"
+      padding="0"
+      width="60%"
+      letterSpacing="0.05em"
+      lineHeight="28.85px"
+      textAlign="start"
+    >
+      {yml.header.paragraph}
+    </SubTitle>
+    <Div
+      flexDirection_tablet="row"
+      flexDirection_xxs="row"
+      flexDirection="column"
+      justifyContent="left"
+      margin="40px 0 0 0"
+      margin_xs="20px 0 0 0"
+      alignItems="left"
+      gap="24px"
+    >
+      <Div width="100%" width_tablet="fit-content" gap="24px">
+        <Link to={yml.button.apply_button_link} style={{ width: "100%" }}>
+          <Button
+            variant="full"
+            justifyContent="center"
+            width="auto"
+            height="auto"
+            fontSize="21px"
+            lineHeight="25.2px"
+            padding="16px 24px 16px 24px"
+            gap="10px"
+            width_tablet="fit-content"
             color={Colors.black}
+            textColor="white"
           >
-            {yml.header.title}
-          </H2>
-          <SubTitle
-            color={Colors.black}
-            style={{ marginTop: "20px" }}
-            textAlign_xxs="start"
-            padding="0"
-            width="60%"
-            letterSpacing="0.05em"
-            lineHeight="28.85px"
-            textAlign="start"
-          >
-            {yml.header.paragraph}
-          </SubTitle>
-          <Div
-            flexDirection_tablet="row"
-            flexDirection="column"
-            justifyContent="left"
-            margin="40px 0 0 0"
-            // justifyContent_tablet="center"
-            alignItems="left"
-            gap="24px"
-            // margin_tablet="0 0 50px 0"
-          >
-            <Div width="100%" width_tablet="fit-content" gap="24px">
-              <Link to={yml.button.apply_button_link} style={{ width: "100%" }}>
-                <Button
-                  variant="full"
-                  justifyContent="center"
-                  width="auto%"
-                  height="auto"
-                  fontSize="21px"
-                  lineHeight="25.2px"
-                  padding="16px 24px 16px 24px"
-                  gap="10px"
-                  width_tablet="fit-content"
-                  color={Colors.black}
-                  // margin_tablet="10px 24px 10px 0"
-                  textColor="white"
-                >
-                  {apply_button_text}
-                  <Icon
-                    icon="arrowToRight"
-                    width="13px"
-                    height="10px"
-                    color={Colors.white}
-                    style={{ marginLeft: "10px" }}
-                  />
-                </Button>
-              </Link>
-            </Div>
-            <Div width="100%" width_tablet="fit-content">
-              <Link to="#fake_bottom" style={{ width: "100%" }}>
-                <Button
-                  display="block"
-                  width="auto"
-                  width_tablet="fit-content"
-                  height="auto"
-                  borderRadius="3px"
-                  border="2px"
-                  padding="16px 24px 16px 24px"
-                  gap="10px"
-                  fontSize="21px"
-                  lineHeight="25.2px"
-                  variant="outline"
-                  color={Colors.black}
-                  margin="10px 0 50px 0"
-                  margin_tablet="0"
-                  textColor={Colors.black}
-                  textAlign="center"
-                >
-                  {yml.button.btn_label}
-                </Button>
-              </Link>
-            </Div>
-          </Div>
-        </Div>
-        <Div
-          flex="1"
-          display="flex"
-          justifyContent="flex-end"
-          alignItems="flex-end"
-        >
-          <img
-            src={yml.scholarshipImg.src}
-            alt={yml.header.title}
-            style={{
-              width: "auto",
-              height: "381.67px",
-              objectFit: "contain",
-              objectPosition: "top",
-            }}
-          />
-        </Div>
+            {apply_button_text}
+            <Icon
+              icon="arrowToRight"
+              width="13px"
+              height="10px"
+              color={Colors.white}
+              style={{ marginLeft: "10px" }}
+            />
+          </Button>
+        </Link>
       </Div>
+      <Div width="100%" width_tablet="fit-content">
+        <Link to="#fake_bottom" style={{ width: "100%" }}>
+          <Button
+            display="block"
+            width="auto"
+            width_tablet="fit-content"
+            height="auto"
+            borderRadius="3px"
+            border="2px"
+            padding="16px 24px 16px 24px"
+            gap="10px"
+            fontSize="21px"
+            lineHeight="25.2px"
+            variant="outline"
+            color={Colors.black}
+            margin="10px 0 50px 0"
+            margin_tablet="0 0 20px 0"
+            margin_xxs="0 0 20px 0"
+            textColor={Colors.black}
+            textAlign="center"
+          >
+            {yml.button.btn_label}
+          </Button>
+        </Link>
+      </Div>
+    </Div>
+    </Div>
+    <Div
+  flex="1"
+  display="contents"
+  display_tablet="flex"
+  display_xs="flex"
+  height_xs="300px"
+  height="381.67px" // Set a fixed height for the container
+  height_lg="381.67px"
+  height_md="381.67px" 
+  //height and width fixed to 100% 
+  width_tablet="70%"
+  height_tablet="300px"
+  height_xxs="200px"
+  justifyContent="flex-end"
+  alignItems="flex-end"
+>
+  <img
+    src={yml.scholarshipImg.src}
+    alt={yml.header.title}
+    style={{
+      width: "100%", // Ensure the image takes up the full width of the container
+      maxWidth: "100%", // Prevent the image from exceeding the container's width
+      maxHeight: "100%", // Prevent the image from exceeding the container's height
+      objectFit: "contain", // Scale the image proportionally to fit within the container
+      objectPosition: "top", // Align the image to the top of the container
+    }}
+  />
+</Div>
+  
+
+</Div>
       <WeMakeEducation />
       <ScholarshipProjects
         content={data.allScholarshipProjectsYaml.edges[0].node}
         lang={pageContext.lang}
       />
-      <Testimonials
+      {/* <Testimonials
         lang={data.allTestimonialsYaml.edges}
         margin_tablet="75px 0 0 0"
         margin="45px 0 0 0"
-      />
+      /> */}
 
       <BenefitsAndChartsV2 data={partnersData} goToForm={goToForm} />
-      <Iconogram yml={yml.iconogram} />
+      <Iconogram yml={yml.iconogram} style={{padding_xxs:"50px 0"}}/>
 
       <Div
         id="two_column_left"
@@ -239,11 +282,13 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
       <GridContainer
         columns_tablet="12"
         containerColumns_tablet="none"
-        padding="30px 20px"
-        padding_tablet="40px 40px"
+        padding="50px 20px"
+        padding_xxs="120px 20px"
+        padding_xs="120px 20px"
+        padding_tablet="80px 40px"
         padding_md="60px 80px"
         padding_lg="80px 0"
-        margin_tablet="0 auto 81px auto"
+        margin_tablet="10px auto 81px auto"
         style={{ maxWidth: "1280px" }}
         containerGridGap="0px"
       >
@@ -264,13 +309,16 @@ const TwentyMillion = ({ data, pageContext, yml }) => {
             />
           ))}
         </Div>
-        <Div flexDirection="column" gridColumn_tablet="7 / 13" id="bottom">
+        <Div flexDirection="column" gridColumn_tablet="7 / 13" id="bottom" flexDirection_xs="row">
           <LeadForm
             formHandler={beHiringPartner}
             // handleClose={handleClose}
             enableAreaCodes={false}
             lang={pageContext.lang}
             inputBgColor={Colors.white}
+            sendLabel={"Apply"}
+            buttonStyles={{background: Colors.blue}}
+            selectProgram={programs}
             fields={["full_name", "email", "phone"]}
           />
         </Div>
@@ -348,6 +396,22 @@ export const query = graphql`
           form {
             title
             paragraph
+          }
+        }
+      }
+    }
+      allCourseYaml(filter: { fields: { lang: { eq: $lang } } }) {
+      edges {
+        node {
+          meta_info {
+            slug
+            title
+            bc_slug
+            visibility
+            show_in_apply
+          }
+          apply_form {
+            label
           }
         }
       }

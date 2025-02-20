@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import { Div } from "../Sections";
 import { H2, H3, Paragraph } from "../Heading";
 import { Button, Colors } from "../Styling";
@@ -12,6 +12,8 @@ const BenefitsAndChartsV2 = (props) => {
       flexDirection_tablet="row"
       flexDirection="column"
       alignItems="center"
+      alignItems_xs="flex-start"
+      alignSelf_xxs="start"
       gap="10px"
       style={{ marginTop: "24px" }}
     >
@@ -20,6 +22,9 @@ const BenefitsAndChartsV2 = (props) => {
         variant="full"
         color={Colors.blue}
         margin="24px auto 0 auto"
+        margin_xxs="18px auto 0 0"
+        margin_xs="18px auto 0 0"
+
         padding="16px 24px 16px 24px"
         height="auto"
         width="auto"
@@ -41,21 +46,24 @@ const BenefitsAndChartsV2 = (props) => {
       </Button>
     </Div>
   );
+
   return (
     <>
       <Div
         className="benefits_and_charts"
         display="flex"
-        flexDirection="row"
+        flexDirection="row" // Stack everything vertically by default
+        flexDirection_lg="row"
+        flexDirection_md="row"
+        flexDirection_tablet="column" // Stack vertically on tablets
+        flexDirection_xs="column"
         gap="24px"
         padding="30px 20px 30px 20px"
-        flexDirection_tablet="row"
         margin="auto"
         padding_tablet="40px 40px"
         padding_md="60px 80px"
         padding_lg="80px 0 0 0"
         width="100%"
-        // minWidth="628px"
         height="auto"
         maxWidth={props.maxWidth || "1280px"}
       >
@@ -69,17 +77,31 @@ const BenefitsAndChartsV2 = (props) => {
           <H2
             type="h2"
             textAlign="left"
-            height="98px"
-            fontSize="40px"
+            fontSize="40px" // Default font size
+            fontSize_tablet="40px" // Font size for tablets
+            fontSize_xs="32px" // Smaller font size for mobile
             lineHeight="48.96px"
+            lineHeight_xs="40px" // Adjusted line height for mobile
             width="100%"
+            width_xxs="50%"
+            width_xs="50%"
+            width_tablet="100%"
+            width_md="100%"
+            width_lg="100%"
             marginBottom="24px"
+            whiteSpace="normal" // Allow text to wrap
+            whiteSpace_tablet="normal"
+            whiteSpace_xxs="normal"
+            style={{ wordWrap: "break-word",
+                     wordWrap_xs:"break-word"
+             }} // Ensure long words break and wrap
           >
             {data.benefits_and_charts.title}
           </H2>
 
           <ButtonPartner />
         </Div>
+
         {Array.isArray(data.benefits_and_charts.bullets) && (
           <Div
             display="flex"
@@ -87,15 +109,14 @@ const BenefitsAndChartsV2 = (props) => {
             gridGap="0"
             padding="0"
             padding_tablet="0 0 30px 0"
+            order_tablet="1" // Move bullets below the button on tablets
+            flex="1" // Take up remaining space on larger screens
+            width="100%" // Full width on mobile and tablet
+            width_lg="auto" // Auto width on larger screens
           >
             {data.benefits_and_charts.bullets.map((p, index) => (
               <Div
                 key={index}
-                // borderBottom={`${
-                //   index !== data.benefits_and_charts.bullets.length - 1
-                //     ? "1px solid #EBEBEB"
-                //     : "0"
-                // }`}
                 height="auto"
                 alignItems="center"
                 padding="0"
@@ -103,7 +124,6 @@ const BenefitsAndChartsV2 = (props) => {
               >
                 <Div
                   flexDirection="column"
-                  // alignSelf="center"
                   alignSelf="flex-start"
                   padding="10px 10px 10px 10px"
                 >
@@ -116,7 +136,6 @@ const BenefitsAndChartsV2 = (props) => {
                 </Div>
                 <H3
                   type="h3"
-                  // padding="20px 0"
                   textAlign="left"
                   fontSize="16px"
                   fontWeight="400"

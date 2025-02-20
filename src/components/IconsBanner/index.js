@@ -11,9 +11,11 @@ export default ({ icon, title, content, color, content_style, ...rest }) => {
       border="3px solid #000"
       width="100%"
       width_md="320px"
+      
       width_tablet="200px"
       boxShadow="6px 6px 0px 0px rgba(0,0,0,1)"
       boxShadow_tablet="9px 8px 0px 0px rgba(0,0,0,1)"
+      flexDirection_xs="column"
       flexDirection_tablet="column"
       justifyContent_tablet="start"
       padding="15px"

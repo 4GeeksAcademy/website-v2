@@ -53,6 +53,20 @@ const ScholarshipProjects = ({ content, maxWidth }) => {
           autoplay: true,
           autoplaySpeed: 6000,
           speed: 500,
+          responsive: [
+            {
+              breakpoint: 1024, // Tablet breakpoint
+              settings: {
+                slidesToShow: 1, // Show 1 slide at a time on tablets
+              },
+            },
+            {
+              breakpoint: 600, // Mobile breakpoint
+              settings: {
+                slidesToShow: 1, // Show 1 slide at a time on mobile
+              },
+            },
+          ],
         }}
       >
         {content?.projects.map((project, index) => (
@@ -65,7 +79,7 @@ const ScholarshipProjects = ({ content, maxWidth }) => {
               margin="auto"
               width_tablet="100%"
               width_lg="90%"
-              // width_md="900px"
+              //width_md="900px"
               minHeight_tablet="605px"
               border_tablet="1px solid #000000"
               flexDirection_tablet="row"
