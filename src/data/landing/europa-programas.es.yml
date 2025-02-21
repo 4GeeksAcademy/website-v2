@@ -39,7 +39,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 # jumbotron on the top (cannot be commented out)
 header_data:
   background: "#ffffff"
-  tagline: ¡Transforma tu futuro con 4Geeks Academy!
+  tagline: ¡Transforma <br>tu futuro <br>con 4Geeks!
   tagline_color: "#1c1c1c"
   form_styles:
     background: "#0084FF"

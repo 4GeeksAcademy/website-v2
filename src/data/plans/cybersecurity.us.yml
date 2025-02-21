@@ -12,6 +12,7 @@ part_time:
     bullets:
       - "You're saving $6,000 USD."
       - "We are extremely invested in making quality coding education accessible to everyone"
+    extra_disclaimer: "Payments for Data Science and Machine Learning program with Ascent or Climb will not be less than $270.22."
     icons:
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
@@ -28,7 +29,7 @@ part_time:
       - "Several partners offering loans and payment plans"
       - "You can get a partial scholarship and the remaining balance with a payment plan"
     icons: 
-      - "/images/ascent_logo.jpg"
+      - "/images/ascent-logo.png"
       - "/images/climb-logo.png"
       - "/images/quotanda-logo.png"
     
