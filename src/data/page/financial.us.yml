@@ -11,7 +11,7 @@ meta_info:
 seo_title: "Bootcamp Financing"
 header:
   title: Finance your future
-  paragraph: Finance your future with diverse education funding options, from scholarships to inclusive payment methods. Explore our platform for inclusive financing solutions tailored to your academic journey.
+  paragraph: Finance your future with diverse options to fund your education, from scholarships to affordable loans and payment plans. Explore our financing options and  choose the solution that meets your needs!
   tagline: CELEBRATE THE BEST PRICE IN TOWN
   sub_heading: We never stopped trying until we mastered a real premium but affordable program. Our philosophy is rooted in making coding education available to everyone.
   image: "../../../static/images/Group-6663.png"
@@ -74,7 +74,7 @@ iconogram:
   - icon: "hands-group"
     color: "#25BF6C"
     title: Scholarships and partnerships
-    content: "We are working with several organizations to reduce your tuition fee."
+    content: "Full and partial scholarships thanks to institutional partners."
   # - icon: "contract-2"
   #   color: "#BE8BFF"
   #   title: Income Sharing Agreement
@@ -188,7 +188,7 @@ two_column:
       src: "/images/pretty-woman-in-a-computer.png"
     heading:
       style: '{ "fontWeight": 400 }'
-      text: "Why are we offering a job guarantee?"
+      text: "Why do we offer a job guarantee?"
       font_size:
         - 35px
         - 35px
@@ -196,8 +196,9 @@ two_column:
         - 21px
         - 21px
     sub_heading:
-      style: '{ "color": "#4D4D5C", "fontWeight": 400 }'
-      text: "We're challenging the traditional education model. It's not just about teaching the relevant skills; it's about the opportunities we’ll create for your career. Together"
+      style: '{ "color": "#4D4D5C", "fontWeight": 400, "textAlign": "justify" }'
+      text: "Our bootcamps go beyond teaching relevant skills; they are designed to launch rewarding tech careers.
+            From our  industry-aligned syllabus to our comprehensive, personalized career support service, every one of our features has been tried and tested to optimize your learning journey."
       font_size:
         - 16px
         - 16px
@@ -208,10 +209,13 @@ two_column:
       item_style: ""
       items:
         - heading: ""
-          text: "We trust the effectiveness of the program"
+          text: "Proven effectiveness of our program"
           icon: "check" #string with icon for example ['check', 'cicle', etc]
         - heading: ""
-          text: "We trust the industry"
+          text: "Let’s shape your future together!"
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: ""
+          text: "The tech industry is booming"
           icon: "check" #string with icon for example ['check', 'cicle', etc]
         - heading: ""
           text: "We trust the process"
