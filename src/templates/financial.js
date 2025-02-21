@@ -38,7 +38,7 @@ const Financial = (props) => {
         l &&
         l.node &&
         l.node.active_campaign_location_slug ===
-          session.location.active_campaign_location_slug
+        session.location.active_campaign_location_slug
     );
     if (location) location = location.node;
   }
@@ -58,7 +58,9 @@ const Financial = (props) => {
         flexDirection="column"
         flexDirection_tablet="row"
         padding_lg="0"
-        padding="0 20px"
+        padding="40px 80px"
+        padding_tablet="60px"
+        padding_xxs="20px"
       >
         <Div display="block">
           <H1 type="h1" textAlign="left">
@@ -140,13 +142,15 @@ const Financial = (props) => {
 
       <CarouselV2
         margin="20px 0"
-        background="#FBFCFC"
+        background="#F4F9FF"
         padding="20px"
         heading={yml.who_is_hiring.title}
         content={yml.who_is_hiring.paragraph}
       >
         {yml.who_is_hiring.images.map((image) => (
-          <Div key={image}>
+          <Div key={image}
+            marginBottom= "80px"
+          >
             <Div
               border="1px solid #C4C4C4"
               width="240px !important"
@@ -188,20 +192,18 @@ const Financial = (props) => {
         paragraphProps={{ textAlign: "center" }}
       />
 
-      {academyHasJobGuarantee && (
-        <TwoColumn
-          right={{ image: ymlTwoColumn[2].image }}
-          left={{
-            heading: ymlTwoColumn[2].heading,
-            sub_heading: ymlTwoColumn[2].sub_heading,
-            bullets: ymlTwoColumn[2].bullets,
-            content: ymlTwoColumn[2].content,
-            button: ymlTwoColumn[2].button,
-            gap_tablet: "40px",
-          }}
-          session={session}
-        />
-      )}
+      <TwoColumn
+        right={{ image: ymlTwoColumn[2].image }}
+        left={{
+          heading: ymlTwoColumn[2].heading,
+          sub_heading: ymlTwoColumn[2].sub_heading,
+          bullets: ymlTwoColumn[2].bullets,
+          content: ymlTwoColumn[2].content,
+          button: ymlTwoColumn[2].button,
+          gap_tablet: "40px",
+        }}
+        session={session}
+      />
     </>
   );
 };
