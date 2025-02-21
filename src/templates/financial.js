@@ -38,7 +38,7 @@ const Financial = (props) => {
         l &&
         l.node &&
         l.node.active_campaign_location_slug ===
-        session.location.active_campaign_location_slug
+          session.location.active_campaign_location_slug
     );
     if (location) location = location.node;
   }
@@ -167,27 +167,26 @@ const Financial = (props) => {
           </Div>
         ))}
       </CarouselV2>
-      
-        <TwoColumn
-          left={{ image: ymlTwoColumn[1].image }}
-          right={{
-            heading: ymlTwoColumn[1].heading,
-            sub_heading: ymlTwoColumn[1].sub_heading,
-            bullets: ymlTwoColumn[1].bullets,
-            content: ymlTwoColumn[1].content,
-            button: ymlTwoColumn[1].button,
-            gap_tablet: "40px",
-          }}
-          session={session}
-        />
 
-        <WeTrust
-          we_trust={yml.we_trust_section}
-          background="none"
-          titleProps={{ textAlign: "center" }}
-          paragraphProps={{ textAlign: "center" }}
-        />
+      <TwoColumn
+        left={{ image: ymlTwoColumn[1].image }}
+        right={{
+          heading: ymlTwoColumn[1].heading,
+          sub_heading: ymlTwoColumn[1].sub_heading,
+          bullets: ymlTwoColumn[1].bullets,
+          content: ymlTwoColumn[1].content,
+          button: ymlTwoColumn[1].button,
+          gap_tablet: "40px",
+        }}
+        session={session}
+      />
 
+      <WeTrust
+        we_trust={yml.we_trust_section}
+        background="none"
+        titleProps={{ textAlign: "center" }}
+        paragraphProps={{ textAlign: "center" }}
+      />
 
       {academyHasJobGuarantee && (
         <TwoColumn
