@@ -38,7 +38,7 @@ const Financial = (props) => {
         l &&
         l.node &&
         l.node.active_campaign_location_slug ===
-        session.location.active_campaign_location_slug
+          session.location.active_campaign_location_slug
     );
     if (location) location = location.node;
   }
@@ -148,9 +148,7 @@ const Financial = (props) => {
         content={yml.who_is_hiring.paragraph}
       >
         {yml.who_is_hiring.images.map((image) => (
-          <Div key={image}
-            marginBottom= "80px"
-          >
+          <Div key={image} marginBottom="80px">
             <Div
               border="1px solid #C4C4C4"
               width="240px !important"

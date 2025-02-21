@@ -60,7 +60,7 @@ const WeTrust = ({ we_trust, background, titleProps, paragraphProps }) => {
               padding="15px"
               alignItems="center"
               alignItems_tablet="normal"
-              overflow= "hidden"
+              overflow="hidden"
             >
               <Icon icon={box.icon} width="89px" height="89px" color={null} />
               <Div
