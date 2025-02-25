@@ -46,13 +46,13 @@ const CustomBar = ({
         seconds: intervalDurationObj.seconds,
       });
     };
-  
+
     updateTimer();
-  
+
     const interval = setInterval(() => {
       updateTimer();
     }, 1000);
-  
+
     return () => clearInterval(interval);
   }, []);
 
