@@ -304,9 +304,9 @@ const createBlog = async ({ actions, graphql }) => {
   // Eliminate duplicate clusters
   Object.keys(clusters).forEach(
     (lang) =>
-      (clusters[lang] = clusters[lang].filter(
-        (value, index) => clusters[lang].indexOf(value) === index
-      ))
+    (clusters[lang] = clusters[lang].filter(
+      (value, index) => clusters[lang].indexOf(value) === index
+    ))
   );
   // Make clusters pages
   const langSwitcher = {
@@ -378,8 +378,7 @@ const createEntityPagesfromYml = async (
 
   result.data[`all${entity}Yaml`].edges.forEach(({ node }) => {
     logger.debug(
-      `Creating entity ${entity} ${node.fields.pagePath} with template ${
-        node.meta_info.template || node.fields.defaultTemplate
+      `Creating entity ${entity} ${node.fields.pagePath} with template ${node.meta_info.template || node.fields.defaultTemplate
       }.js`
     );
     const _extraContext = extraContext ? extraContext(node) : {};
@@ -398,9 +397,7 @@ const createEntityPagesfromYml = async (
     createPage({
       path: node.fields.pagePath,
       component: path.resolve(
-        `./src/templates/${
-          node.meta_info.template || node.fields.defaultTemplate
-        }.js`
+        `./src/templates/${node.meta_info.template || node.fields.defaultTemplate}.js`
       ),
       context: {
         ...node.meta_info,
@@ -629,49 +626,66 @@ const addAdditionalRedirects = ({ graphql, actions }) => {
 };
 
 const getMetaFromPath = ({ url, meta_info, frontmatter }) => {
-  let slugigy = (entity) => {
-    let slugMap = {
-      location: "coding-campus",
-      course: "coding-bootcamps",
-    };
-    return slugMap[entity] || entity;
+  // Este mapa es SOLO para la parte media de la URL
+  let slugMap = {
+    course: "coding-bootcamps",
+    location: "coding-campus",
   };
 
-  //if its a blog post the meta_info comes from the front-matter
-  if (typeof meta_info == "undefined") meta_info = frontmatter;
+  // Por si meta_info está vacío pero frontmatter existe
+  if (!meta_info && frontmatter) meta_info = frontmatter;
 
+  // Captura: [1] -> type, [2] -> file_name, [3] -> lang
   const regex = /.*\/([\w-]*)\/([\w-]+)\.?(\w{2})?\//gm;
   let m = regex.exec(url);
   if (!m) return false;
-  const _cluster =
-    meta_info !== undefined && typeof meta_info.cluster === "string"
-      ? meta_info.cluster
-      : "post";
+
+  // Si es un blog, cluster, etc. 
+  // o si meta_info indica un cluster personalizado (p.ej. "post", "landing_cluster"…)
+  const _cluster = meta_info?.cluster || "post";
+  // Determina "type" base
   const type = frontmatter ? _cluster : m[1];
 
   const lang = m[3] || "us";
-  const customSlug =
-    meta_info !== undefined && typeof meta_info.slug === "string";
-  const file_name = m[2]; // + (lang == "es" ? "-es": "");
-  const slug = customSlug ? meta_info.slug : file_name;
-  const template = type === "page" ? file_name : type;
+  const file_name = m[2];
+  // Toma slug del YAML si existe, sino usa el file_name
+  const slug = meta_info?.slug ? meta_info.slug : file_name;
 
-  const pagePath =
-    type === "page"
-      ? `/${lang}/${slug}`
-      : `/${lang}/${slugigy(template)}/${slug}`;
+  // Para la **URL** usaremos el type “puro” ("course", "location", "page", etc.),
+  // y un map que fuerce "course" => "coding-bootcamps", "location" => "coding-campus"
+  // (Ignoramos meta_info.template para la URL)
+  let middle = "";
+  if (type === "page") {
+    // p.ej. /es/<slug> 
+    // no pasa por slugMap
+    middle = "";
+  } else {
+    // si no es page => "course" => "coding-bootcamps", "location" => "coding-campus", etc.
+    middle = slugMap[type] || type;
+  }
 
-  const meta = {
+  // Ej: /us/coding-bootcamps/my-slug  o  /es/<slug>
+  const pagePath = middle
+    ? `/${lang}/${middle}/${slug}`
+    : `/${lang}/${slug}`;
+
+  // A efectos de crear la “plantilla” final, no forzamos "course" 
+  // sino sí podemos usar meta_info.template si existe, 
+  // (o default “page”/“type”).
+  // PERO ***sólo lo usaremos al crear la página en createPage***
+  const finalTemplate = meta_info?.template
+    ? meta_info.template
+    : (type === "page" ? file_name : type);
+
+  return {
     lang,
     slug,
     file_name: `${file_name}.${lang}`,
-    template,
-    type,
+    template: finalTemplate,  // Esto es para saber qué .js usar
+    type,                     // "course", "location", "page", "post", ...
     url,
-    pagePath,
+    pagePath,                 // Esto es la ruta final
   };
-
-  return meta;
 };
 
 const buildTranslations = ({ edges }) => {
