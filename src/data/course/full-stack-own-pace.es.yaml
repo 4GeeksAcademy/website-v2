@@ -5,6 +5,7 @@ meta_info:
   image: "/images/og-preview/full-stack.es.png"
   bc_slug: "full-stack-own-pace"
   visibility: "hidden"
+  template: "course-full-stack-own-pace"
   keywords: null
   show_in_apply: false
   redirects: []

@@ -1,10 +1,11 @@
 meta_info:
   slug: desarrollador-full-stack
-  title: "Curso de Desarrollador Full Stack en 4Geeks Academy"
+  title: "Curso de Desarrollador Full Stack en "
   description: "Conoce los detalles de uno de los cursos full stack más reconocidos a nivel mundial. Convertirte en programador con trabajo Garantizado."
   image: "/images/og-preview/full-stack.es.png"
   bc_slug: "full-stack"
   visibility: "visible"
+  template: "course"
   keywords: "Bootcamp, Full Stack, part time"
   show_in_apply: true
   redirects:

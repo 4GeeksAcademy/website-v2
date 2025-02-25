@@ -5,6 +5,7 @@ meta_info:
   image: "/images/og-preview/full-stack-ft.us.png"
   bc_slug: "full-stack-ft"
   visibility: "unlisted"
+  template: "course-full-stack-ft"
   keywords: "Full Sack Developer Full-Time"
   show_in_apply: false
   redirects:

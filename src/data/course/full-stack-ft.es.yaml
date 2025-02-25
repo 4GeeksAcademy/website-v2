@@ -4,6 +4,7 @@ meta_info:
   description: "Conviértete en Desarrollador Full Stack en tan solo 10 semanas, estudia a tiempo completo y acelera tu aprendizaje de la manera más rápida posible"
   image: "/images/og-preview/full-stack-ft.es.png"
   visibility: "visible"
+  template: "course-full-stack-ft"
   bc_slug: "full-stack-ft"
   keywords: ""
   show_in_apply: false

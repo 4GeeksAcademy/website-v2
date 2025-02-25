@@ -1,10 +1,11 @@
 meta_info:
   slug: part-time-full-stack-developer
-  title: "Full Stack Developer Bootcamp | 4Geeks Academy"
+  title: "Full Stack Developer Bootcamp "
   bc_slug: "full-stack"
   description: "Become a Full Stack Developer with 4Geeks Academy. Master essential technologies like JavaScript and Python to launch your tech career with confidence today!"
   image: "/images/og-preview/full-stack.us.png"
   visibility: "visible"
+  template: "course"
   keywords: ""
   show_in_apply: true
   related_clusters: ["full-stack-developer"]

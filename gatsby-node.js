@@ -304,9 +304,9 @@ const createBlog = async ({ actions, graphql }) => {
   // Eliminate duplicate clusters
   Object.keys(clusters).forEach(
     (lang) =>
-      (clusters[lang] = clusters[lang].filter(
-        (value, index) => clusters[lang].indexOf(value) === index
-      ))
+    (clusters[lang] = clusters[lang].filter(
+      (value, index) => clusters[lang].indexOf(value) === index
+    ))
   );
   // Make clusters pages
   const langSwitcher = {
@@ -395,18 +395,18 @@ const createEntityPagesfromYml = async (
       if (node.meta_info.visibility === "hidden") return;
     }
 
+    const finalTemplate = node.meta_info.template || node.fields.defaultTemplate;
+
+    const translationKey = node.meta_info.template || node.fields.defaultTemplate;
+
     createPage({
       path: node.fields.pagePath,
-      component: path.resolve(
-        `./src/templates/${
-          node.meta_info.template || node.fields.defaultTemplate
-        }.js`
-      ),
+      component: path.resolve(`./src/templates/${finalTemplate}.js`),
       context: {
         ...node.meta_info,
         ...node.fields,
         ..._extraContext,
-        translations: translations[node.fields.defaultTemplate],
+        translations: translations[translationKey] || {},
       },
     });
 
@@ -456,13 +456,14 @@ const createEntityPagesfromYml = async (
   return true;
 };
 
+
 const createPagesfromYml = async ({ graphql, actions }) => {
   const { createPage, createRedirect } = actions;
   const _createRedirect = (args) => {
     redirects.push(`Redirect from ${args.fromPath} to ${args.toPath}`);
-    logger.debug(`Redirect from ${args.fromPath} to ${args.toPath}`);
     createRedirect(args);
   };
+
   const result = await graphql(`
     {
       allPageYaml {
@@ -489,7 +490,7 @@ const createPagesfromYml = async ({ graphql, actions }) => {
   `);
   if (result.errors) throw new Error(result.errors);
 
-  const translations = buildTranslations(result.data[`allPageYaml`]);
+  const pageTranslations = buildTranslations(result.data[`allPageYaml`]);
 
   //for each page found on the YML
   for (let i = 0; i < result.data[`allPageYaml`].edges.length; i++) {
@@ -499,38 +500,47 @@ const createPagesfromYml = async ({ graphql, actions }) => {
     if (node.fields.visibility == "hidden") continue;
 
     const _targetPath = node.fields.pagePath;
-    logger.debug(
-      `Creating page ${node.fields.pagePath} in ${node.fields.lang}`
-    );
+    logger.debug(`Creating page ${node.fields.pagePath} in ${node.fields.lang}`);
+
+    // 1) Tomamos la key de la plantilla
+    const templateKey = node.fields.defaultTemplate;
+
+    // 2) Obtenemos la traduccion base o {}
+    let templateTranslations = pageTranslations[templateKey] || {};
+
+    // 3) Forzamos fallback si es "index"
+    if (node.fields.slug === "index") {
+      templateTranslations["us"] = templateTranslations["us"] || "/";
+      templateTranslations["es"] = templateTranslations["es"] || "/es/inicio";
+    }
 
     createPage({
       path: _targetPath,
       component: path.resolve(
-        `./src/templates/${node.fields.defaultTemplate}.js`
+        `./src/templates/${node.meta_info.template || node.fields.defaultTemplate}.js`
       ),
       context: {
         ...node.fields,
         ...node.meta_info,
-        translations: translations[node.fields.defaultTemplate],
+        translations: templateTranslations,
         clusters: clusters[node.fields.lang],
       },
     });
 
+    // Redirecciones
     if (node.fields.lang === "us") {
       _createRedirect({
         fromPath: "/" + node.fields.slug,
         toPath: _targetPath,
-        // redirectInBrowser: true,
         isPermanent: true,
       });
-
       _createRedirect({
         fromPath: "/en/" + node.fields.slug,
         toPath: _targetPath,
-        // redirectInBrowser: true,
         isPermanent: true,
       });
 
+      // "index"
       if (node.fields.slug === "index") {
         createPage({
           path: "/",
@@ -540,7 +550,7 @@ const createPagesfromYml = async ({ graphql, actions }) => {
           context: {
             ...node.fields,
             ...node.meta_info,
-            translations: translations[node.fields.defaultTemplate],
+            translations: templateTranslations,
             clusters: clusters[node.fields.lang],
           },
         });
@@ -548,33 +558,24 @@ const createPagesfromYml = async ({ graphql, actions }) => {
         _createRedirect({
           fromPath: "/en",
           toPath: _targetPath,
-          // redirectInBrowser: true,
           isPermanent: true,
         });
-
         _createRedirect({
           fromPath: "/",
           toPath: _targetPath,
-          // redirectInBrowser: true,
           isPermanent: true,
         });
       }
     }
-    if (node.fields.lang === "es") {
+    else if (node.fields.lang === "es") {
       _createRedirect({
         fromPath: "/" + node.fields.slug,
         toPath: _targetPath,
-        // redirectInBrowser: true,
         isPermanent: true,
       });
-      // _createRedirect({
-      //     fromPath: "/es/" + node.fields.slug,
-      //     toPath: _targetPath,
-      //     // redirectInBrowser: true,
-      //     isPermanent: true
-      // });
     }
 
+    // meta_info.redirects
     if (node.meta_info && node.meta_info.redirects) {
       node.meta_info.redirects.forEach((path) => {
         if (typeof path !== "string") {
@@ -586,11 +587,10 @@ const createPagesfromYml = async ({ graphql, actions }) => {
         const exists = redirects.find(
           (p) => p === `Redirect from ${path} to ${_targetPath}`
         );
-        if (!exists || exists === undefined)
+        if (!exists)
           _createRedirect({
             fromPath: path,
             toPath: _targetPath,
-            // redirectInBrowser: true,
             isPermanent: true,
           });
       });
@@ -674,12 +674,15 @@ const getMetaFromPath = ({ url, meta_info, frontmatter }) => {
   return meta;
 };
 
-const buildTranslations = ({ edges }) => {
+function buildTranslations({ edges }) {
   let translations = {};
   edges.forEach(({ node }) => {
     const meta = getMetaFromPath({ url: node.fields.filePath, ...node });
-    if (typeof translations[meta.template] === "undefined")
+    meta.template = node.meta_info.template || meta.template; 
+
+    if (!translations[meta.template]) {
       translations[meta.template] = {};
+    }
     translations[meta.template][meta.lang] = meta.pagePath;
   });
   return translations;

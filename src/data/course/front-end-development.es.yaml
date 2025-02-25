@@ -5,6 +5,7 @@ meta_info:
   image: "/images/og-preview/full-stack.es.png"
   bc_slug: "front-end-development"
   visibility: "hidden"
+  template: "course-front-end-development"
   keywords: null
   show_in_apply: false
   redirects: []

@@ -3,7 +3,7 @@ meta_info:
   title: "Aprende sobre backend en Node-Js at 4Geeks Academy"
   description: "Descripcion del curso node-js"
   bc_slug: "node-js"
-  template: "course-engineering"
+  template: "course-node-js"
   image: ""
   visibility: "hidden"
   keywords: ""
