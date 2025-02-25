@@ -304,9 +304,9 @@ const createBlog = async ({ actions, graphql }) => {
   // Eliminate duplicate clusters
   Object.keys(clusters).forEach(
     (lang) =>
-    (clusters[lang] = clusters[lang].filter(
-      (value, index) => clusters[lang].indexOf(value) === index
-    ))
+      (clusters[lang] = clusters[lang].filter(
+        (value, index) => clusters[lang].indexOf(value) === index
+      ))
   );
   // Make clusters pages
   const langSwitcher = {
@@ -378,7 +378,8 @@ const createEntityPagesfromYml = async (
 
   result.data[`all${entity}Yaml`].edges.forEach(({ node }) => {
     logger.debug(
-      `Creating entity ${entity} ${node.fields.pagePath} with template ${node.meta_info.template || node.fields.defaultTemplate
+      `Creating entity ${entity} ${node.fields.pagePath} with template ${
+        node.meta_info.template || node.fields.defaultTemplate
       }.js`
     );
     const _extraContext = extraContext ? extraContext(node) : {};
@@ -397,7 +398,9 @@ const createEntityPagesfromYml = async (
     createPage({
       path: node.fields.pagePath,
       component: path.resolve(
-        `./src/templates/${node.meta_info.template || node.fields.defaultTemplate}.js`
+        `./src/templates/${
+          node.meta_info.template || node.fields.defaultTemplate
+        }.js`
       ),
       context: {
         ...node.meta_info,
@@ -640,7 +643,7 @@ const getMetaFromPath = ({ url, meta_info, frontmatter }) => {
   let m = regex.exec(url);
   if (!m) return false;
 
-  // Si es un blog, cluster, etc. 
+  // Si es un blog, cluster, etc.
   // o si meta_info indica un cluster personalizado (p.ej. "post", "landing_cluster"…)
   const _cluster = meta_info?.cluster || "post";
   // Determina "type" base
@@ -656,7 +659,7 @@ const getMetaFromPath = ({ url, meta_info, frontmatter }) => {
   // (Ignoramos meta_info.template para la URL)
   let middle = "";
   if (type === "page") {
-    // p.ej. /es/<slug> 
+    // p.ej. /es/<slug>
     // no pasa por slugMap
     middle = "";
   } else {
@@ -665,26 +668,26 @@ const getMetaFromPath = ({ url, meta_info, frontmatter }) => {
   }
 
   // Ej: /us/coding-bootcamps/my-slug  o  /es/<slug>
-  const pagePath = middle
-    ? `/${lang}/${middle}/${slug}`
-    : `/${lang}/${slug}`;
+  const pagePath = middle ? `/${lang}/${middle}/${slug}` : `/${lang}/${slug}`;
 
-  // A efectos de crear la “plantilla” final, no forzamos "course" 
-  // sino sí podemos usar meta_info.template si existe, 
+  // A efectos de crear la “plantilla” final, no forzamos "course"
+  // sino sí podemos usar meta_info.template si existe,
   // (o default “page”/“type”).
   // PERO ***sólo lo usaremos al crear la página en createPage***
   const finalTemplate = meta_info?.template
     ? meta_info.template
-    : (type === "page" ? file_name : type);
+    : type === "page"
+    ? file_name
+    : type;
 
   return {
     lang,
     slug,
     file_name: `${file_name}.${lang}`,
-    template: finalTemplate,  // Esto es para saber qué .js usar
-    type,                     // "course", "location", "page", "post", ...
+    template: finalTemplate, // Esto es para saber qué .js usar
+    type, // "course", "location", "page", "post", ...
     url,
-    pagePath,                 // Esto es la ruta final
+    pagePath, // Esto es la ruta final
   };
 };
 
