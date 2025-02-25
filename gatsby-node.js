@@ -304,9 +304,9 @@ const createBlog = async ({ actions, graphql }) => {
   // Eliminate duplicate clusters
   Object.keys(clusters).forEach(
     (lang) =>
-    (clusters[lang] = clusters[lang].filter(
-      (value, index) => clusters[lang].indexOf(value) === index
-    ))
+      (clusters[lang] = clusters[lang].filter(
+        (value, index) => clusters[lang].indexOf(value) === index
+      ))
   );
   // Make clusters pages
   const langSwitcher = {
@@ -395,9 +395,11 @@ const createEntityPagesfromYml = async (
       if (node.meta_info.visibility === "hidden") return;
     }
 
-    const finalTemplate = node.meta_info.template || node.fields.defaultTemplate;
+    const finalTemplate =
+      node.meta_info.template || node.fields.defaultTemplate;
 
-    const translationKey = node.meta_info.template || node.fields.defaultTemplate;
+    const translationKey =
+      node.meta_info.template || node.fields.defaultTemplate;
 
     createPage({
       path: node.fields.pagePath,
@@ -456,7 +458,6 @@ const createEntityPagesfromYml = async (
   return true;
 };
 
-
 const createPagesfromYml = async ({ graphql, actions }) => {
   const { createPage, createRedirect } = actions;
   const _createRedirect = (args) => {
@@ -500,7 +501,9 @@ const createPagesfromYml = async ({ graphql, actions }) => {
     if (node.fields.visibility == "hidden") continue;
 
     const _targetPath = node.fields.pagePath;
-    logger.debug(`Creating page ${node.fields.pagePath} in ${node.fields.lang}`);
+    logger.debug(
+      `Creating page ${node.fields.pagePath} in ${node.fields.lang}`
+    );
 
     // 1) Tomamos la key de la plantilla
     const templateKey = node.fields.defaultTemplate;
@@ -517,7 +520,9 @@ const createPagesfromYml = async ({ graphql, actions }) => {
     createPage({
       path: _targetPath,
       component: path.resolve(
-        `./src/templates/${node.meta_info.template || node.fields.defaultTemplate}.js`
+        `./src/templates/${
+          node.meta_info.template || node.fields.defaultTemplate
+        }.js`
       ),
       context: {
         ...node.fields,
@@ -566,8 +571,7 @@ const createPagesfromYml = async ({ graphql, actions }) => {
           isPermanent: true,
         });
       }
-    }
-    else if (node.fields.lang === "es") {
+    } else if (node.fields.lang === "es") {
       _createRedirect({
         fromPath: "/" + node.fields.slug,
         toPath: _targetPath,
@@ -678,7 +682,7 @@ function buildTranslations({ edges }) {
   let translations = {};
   edges.forEach(({ node }) => {
     const meta = getMetaFromPath({ url: node.fields.filePath, ...node });
-    meta.template = node.meta_info.template || meta.template; 
+    meta.template = node.meta_info.template || meta.template;
 
     if (!translations[meta.template]) {
       translations[meta.template] = {};
@@ -686,7 +690,7 @@ function buildTranslations({ edges }) {
     translations[meta.template][meta.lang] = meta.pagePath;
   });
   return translations;
-};
+}
 
 // This section was commented during the migration from GatsbyV2 to GatsbyV5
 // Now the worker is being loded with the webpack 5 native method
