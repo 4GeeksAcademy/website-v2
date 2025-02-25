@@ -17,15 +17,9 @@ const CustomBar = ({
   const [timer, setTimer] = useState({});
 
   const differenceInWeeks = (date1, date2) => {
-    // Convert both dates to milliseconds
     const date1_ms = date1.getTime();
     const date2_ms = date2.getTime();
-
-    // Calculate the difference in milliseconds
     const difference_ms = Math.abs(date1_ms - date2_ms);
-
-    // Convert the difference to weeks
-    // const difference_weeks = Math.floor(difference_ms / (1000 * 60 * 60 * 24 * 7));
     const difference_weeks = difference_ms / (1000 * 60 * 60 * 24 * 7);
 
     return difference_weeks;
@@ -37,30 +31,31 @@ const CustomBar = ({
   };
 
   useEffect(() => {
-    let interval;
-
-    interval = setInterval(() => {
+    const updateTimer = () => {
       const initialReferenceDate = new Date("2024-04-01");
       const now = new Date();
       let referenceDate = addWeeks(
         initialReferenceDate,
         Math.ceil(differenceInWeeks(initialReferenceDate, now) / 2) * 2
       );
-
       const intervalDurationObj = dateDifference(referenceDate, now);
-
       setTimer({
         days: intervalDurationObj.days,
         hours: intervalDurationObj.hours,
         minutes: intervalDurationObj.minutes,
         seconds: intervalDurationObj.seconds,
       });
-    }, 1000);
-
-    return () => {
-      clearInterval(interval);
     };
+  
+    updateTimer();
+  
+    const interval = setInterval(() => {
+      updateTimer();
+    }, 1000);
+  
+    return () => clearInterval(interval);
   }, []);
+
   return (
     <Div
       id="custom-bar"
