@@ -629,13 +629,12 @@ const addAdditionalRedirects = ({ graphql, actions }) => {
 };
 
 const getMetaFromPath = ({ url, meta_info, frontmatter }) => {
-  // Este mapa es SOLO para la parte media de la URL
   let slugMap = {
     course: "coding-bootcamps",
     location: "coding-campus",
   };
 
-  // Por si meta_info está vacío pero frontmatter existe
+  //if its a blog post the meta_info comes from the front-matter
   if (!meta_info && frontmatter) meta_info = frontmatter;
 
   // Captura: [1] -> type, [2] -> file_name, [3] -> lang
@@ -643,37 +642,21 @@ const getMetaFromPath = ({ url, meta_info, frontmatter }) => {
   let m = regex.exec(url);
   if (!m) return false;
 
-  // Si es un blog, cluster, etc.
-  // o si meta_info indica un cluster personalizado (p.ej. "post", "landing_cluster"…)
   const _cluster = meta_info?.cluster || "post";
-  // Determina "type" base
   const type = frontmatter ? _cluster : m[1];
 
   const lang = m[3] || "us";
   const file_name = m[2];
-  // Toma slug del YAML si existe, sino usa el file_name
   const slug = meta_info?.slug ? meta_info.slug : file_name;
 
-  // Para la **URL** usaremos el type “puro” ("course", "location", "page", etc.),
-  // y un map que fuerce "course" => "coding-bootcamps", "location" => "coding-campus"
-  // (Ignoramos meta_info.template para la URL)
   let middle = "";
   if (type === "page") {
-    // p.ej. /es/<slug>
-    // no pasa por slugMap
     middle = "";
   } else {
-    // si no es page => "course" => "coding-bootcamps", "location" => "coding-campus", etc.
     middle = slugMap[type] || type;
   }
 
-  // Ej: /us/coding-bootcamps/my-slug  o  /es/<slug>
   const pagePath = middle ? `/${lang}/${middle}/${slug}` : `/${lang}/${slug}`;
-
-  // A efectos de crear la “plantilla” final, no forzamos "course"
-  // sino sí podemos usar meta_info.template si existe,
-  // (o default “page”/“type”).
-  // PERO ***sólo lo usaremos al crear la página en createPage***
   const finalTemplate = meta_info?.template
     ? meta_info.template
     : type === "page"
@@ -684,10 +667,10 @@ const getMetaFromPath = ({ url, meta_info, frontmatter }) => {
     lang,
     slug,
     file_name: `${file_name}.${lang}`,
-    template: finalTemplate, // Esto es para saber qué .js usar
-    type, // "course", "location", "page", "post", ...
+    template: finalTemplate,
+    type,
     url,
-    pagePath, // Esto es la ruta final
+    pagePath,
   };
 };
 
