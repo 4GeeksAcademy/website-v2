@@ -179,8 +179,3 @@ redirects:
     toPath: "/us/programs"
     #redirectInBrowser: true
     isPermanent: true # if permanent google will erase the original url from its results 
-
-  - fromPath: "/us/learn-to-code/all-you-need-to-know-about-artificial-intelligence"
-    toPath: "/us/trends-and-tech/all-you-need-to-know-about-artificial-intelligence"
-    #redirectInBrowser: true
-    isPermanent: true # if permanent google will erase the original url from its results 
