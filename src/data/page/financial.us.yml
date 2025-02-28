@@ -11,7 +11,7 @@ meta_info:
 seo_title: "Bootcamp Financing"
 header:
   title: Finance your future
-  paragraph: Finance your future with diverse options to fund your education, from scholarships to affordable loans and payment plans. Explore our financing options and  choose the solution that meets your needs!
+  paragraph: Invest in your education with flexible financing options—scholarships, affordable loans, and payment plans designed to fit your needs. Choose the path that works for you and start building your tech career today.
   tagline: CELEBRATE THE BEST PRICE IN TOWN
   sub_heading: We never stopped trying until we mastered a real premium but affordable program. Our philosophy is rooted in making coding education available to everyone.
   image: "../../../static/images/Group-6663.png"
@@ -65,20 +65,20 @@ iconogram:
   swipable: false
   icons:
   - icon: "bill"
-    title: Payment Plans - No interest
-    content: " No interest: you can pay in up to 6 months"
+    title: Interest Free Payment Plans
+    content: "Pay in up to 6 months with no interest"
   - icon: "money"
     color: "#0084FF"
-    title: Loans - long term
-    content: "long term: 3, 4 or 5 year loans"
+    title: Long Term Loans
+    content: "3, 4 or 5 year loans"
   - icon: "hands-group"
     color: "#25BF6C"
-    title: Scholarships and partnerships
-    content: "Full and partial scholarships thanks to institutional partners."
-  # - icon: "contract-2"
-  #   color: "#BE8BFF"
-  #   title: Income Sharing Agreement
-  #   content: "Pay only when you secure a well-paying job."
+    title: Scholarships
+    content: "Full and partial scholarships for qualifying students"
+  - icon: "contract-2"
+    color: "#BE8BFF"
+    title: Partnerships
+    content: "Special programs funded by institutional partners."
   button:
     text: "Conditions apply."
     color: ""
@@ -257,9 +257,9 @@ partners:
   link_to: "/us/partners"
 
 we_trust_section:
-  title: The numbers speak for themselves
+  title: Invest in a coding bootcamp with proven results
   text: |
-    Invest in a coding bootcamp with proven results. 
+   The numbers speak for themselves
   boxes:
     - icon: briefcase-2
       title: "84%"
