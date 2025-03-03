@@ -391,6 +391,7 @@ const UpcomingDates = ({
                         minWidth="120px"
                       >
                         <H4 textAlign="left" textTransform="uppercase">
+                          {console.log("Location label:", content.info.location_label)}
                           {content.info.location_label}
                         </H4>
                         <Div>
@@ -409,13 +410,8 @@ const UpcomingDates = ({
                           {cohort.academy.slug !== "online" &&
                             cohort.academy.city.name !== "Remote" && (
                               <Paragraph textAlign="left" margin="0 0 0 3px">
-                                {content.conector}{" "}
-                                <Link
-                                  color={Colors.blue}
-                                  to={content.online_bootcamp}
-                                >
-                                  {content.remote}
-                                </Link>
+                              
+                                ({content.remote})
                               </Paragraph>
                             )}
                         </Div>
