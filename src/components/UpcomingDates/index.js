@@ -385,37 +385,34 @@ const UpcomingDates = ({
                         </Link>
                       </Div>
                       <Div
-                        flexDirection="column"
-                        display="none"
-                        display_tablet="flex"
-                        minWidth="120px"
-                      >
-                        <H4 textAlign="left" textTransform="uppercase">
-                          {console.log("Location label:", content.info.location_label)}
-                          {content.info.location_label}
-                        </H4>
-                        <Div>
-                          <Link
-                            to={
-                              loc
-                                ? `/${lang}/coding-campus/${loc.node.meta_info.slug}`
-                                : ""
-                            }
-                          >
-                            <Paragraph textAlign="left" color={Colors.blue}>
-                              {cohort.academy.city.name}
-                            </Paragraph>
-                          </Link>
+    flexDirection="column"
+    display="none"
+    display_tablet="flex"
+    minWidth="120px"
+  >
+    <H4 textAlign="left" textTransform="uppercase">
+      {content.info.location_label}
+    </H4>
+    <Div>
+      <Link
+        to={
+          loc
+            ? `/${lang}/coding-campus/${loc.node.meta_info.slug}`
+            : ""
+        }
+      >
+        <Paragraph textAlign="left" color={Colors.blue}>
+          {cohort.academy.city.name === "Remote"
+            ? `${cohort.academy.city.name} ${content.remote}`
+            : cohort.academy.city.name}
+          {cohort.academy.slug !== "online" &&
+            cohort.academy.city.name !== "Remote" &&
+            ` ${content.remote}`}
+        </Paragraph>
+      </Link>
+    </Div>
+  </Div>
 
-                          {cohort.academy.slug !== "online" &&
-                            cohort.academy.city.name !== "Remote" && (
-                              <Paragraph textAlign="left" margin="0 0 0 3px">
-                              
-                                ({content.remote})
-                              </Paragraph>
-                            )}
-                        </Div>
-                      </Div>
 
                       <Div
                         flexDirection="column"
@@ -432,50 +429,44 @@ const UpcomingDates = ({
                       </Div>
 
                       <Div
-                        display="flex"
-                        display_tablet="none"
-                        justifyContent="between"
-                        margin="0 0 20px 0"
-                      >
-                        <Div flexDirection="column" width="50%">
-                          <H4 textAlign="left" textTransform="uppercase">
-                            {content.info.location_label}
-                          </H4>
-                          <Div>
-                            <Link
-                              to={
-                                loc
-                                  ? `/${lang}/coding-campus/${loc.node.meta_info.slug}`
-                                  : ""
-                              }
-                            >
-                              <Paragraph textAlign="left" color={Colors.blue}>
-                                {cohort.academy.city.name}
-                              </Paragraph>
-                            </Link>
-                            {cohort.academy.slug !== "online" && (
-                              <Link to={content.online_bootcamp}>
-                                <Paragraph
-                                  textAlign="left"
-                                  margin="0 0 0 3px"
-                                  color={Colors.blue}
-                                >
-                                  {`${content.conector} ${content.remote}`}
-                                </Paragraph>
-                              </Link>
-                            )}
-                          </Div>
-                        </Div>
-                        <Div flexDirection="column" width="50%">
-                          <H4 textAlign="left" textTransform="uppercase">
-                            {content.info.duration_label}
-                          </H4>
-                          <Paragraph textAlign="left">
-                            {cohort?.syllabus_version?.duration ||
-                              content.info.duration_weeks}
-                          </Paragraph>
-                        </Div>
-                      </Div>
+  display="flex"
+  display_tablet="none"
+  justifyContent="between"
+  margin="0 0 20px 0"
+>
+  <Div flexDirection="column" width="50%">
+    <H4 textAlign="left" textTransform="uppercase">
+      {content.info.location_label}
+    </H4>
+    <Div>
+      <Link
+        to={
+          loc
+            ? `/${lang}/coding-campus/${loc.node.meta_info.slug}`
+            : ""
+        }
+      >
+        <Paragraph textAlign="left" color={Colors.blue}>
+          {cohort.academy.city.name === "Remote"
+            ? `${cohort.academy.city.name} ${content.remote}`
+            : cohort.academy.city.name}
+          {cohort.academy.slug !== "online" &&
+            cohort.academy.city.name !== "Remote" &&
+            ` (${content.remote})`}
+        </Paragraph>
+      </Link>
+    </Div>
+  </Div>
+  <Div flexDirection="column" width="50%">
+    <H4 textAlign="left" textTransform="uppercase">
+      {content.info.duration_label}
+    </H4>
+    <Paragraph textAlign="left">
+      {cohort?.syllabus_version?.duration || content.info.duration_weeks}
+    </Paragraph>
+  </Div>
+</Div>
+
                       <Div flexDirection="column">
                         <Link to={content.info.button_link}>
                           <Button
