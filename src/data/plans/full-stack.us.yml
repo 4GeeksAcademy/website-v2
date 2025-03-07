@@ -168,19 +168,20 @@ part_time:
     recomended: true
     academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
     scholarship: "Pay upfront"
-    payment_time: "Get a 40% discount"
+    payment_time: "Get a 10% discount"
     price: "$9,000"
-    original_price: "$15,000"
-    offer: "40% OFF"
+    original_price: "$9,999"
+    offer: "10% OFF"
     bullets:
-      - "Pay upfront and save $6,000!"
+      - Pay upfront and save 10%
+      - Regular tuition is $ 9,999 and can be financed interest free-up to 6 months.
 
   - slug: 'usa-financed-pt'
     academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
     recomended: false
     scholarship: "Financed"
     payment_time: "Pay in 3, 4 or 5 years"
-    price: "$150 p/mo"
+    price: "~$150 /m"
     bullets: 
       - "Choose among short or long term financing plans."
       - "Affordable long term loans based on credit score."
@@ -214,7 +215,7 @@ part_time:
     bullets: 
       - "Enroll, agreeing to terms and conditions."
       - "Fulfill required coursework and attendance."
-      - "Get hired within 6 months of graduation or we’ll refund 100% of your tuition."
+      - "Get hired within 9 months of graduation or we’ll refund 100% of your tuition."
     icons: 
       # - "/images/clarkuniversity.png"
 
