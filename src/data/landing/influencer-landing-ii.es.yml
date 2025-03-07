@@ -124,7 +124,7 @@ components:
     position: 1
     layout: two_column_left
     proportions: [5, 7]
-    background: "#FFF8E8"
+    background: "veryLightBlue2"
     image:
       style: '{ "backgroundSize": "contain", "width": "auto"}'
       src: "/images/landing/hombre-con-laptop.png"
