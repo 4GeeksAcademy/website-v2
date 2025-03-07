@@ -181,7 +181,7 @@ part_time:
     recomended: false
     scholarship: "Financed"
     payment_time: "Pay in 3, 4 or 5 years"
-    price: "$150 p/mo"
+    price: "~$150 /m"
     bullets: 
       - "Choose among short or long term financing plans."
       - "Affordable long term loans based on credit score."
