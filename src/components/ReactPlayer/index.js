@@ -67,7 +67,7 @@ const Iframe = styled(YouTube)`
 
 const Thumbnail = styled.img`
   display: block;
-  object-fit: cover;
+  object-fit: contain;
 `;
 
 const Image = styled.div`
