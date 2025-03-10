@@ -196,7 +196,7 @@ part_time:
     scholarship: "Scholarship"
     payment_time: "Full or partial funding if you qualify"
     price: ""
-    original_price: "$15,000"
+    original_price: ""
     warning_message: "Limited availability!"
     bullets: 
       - "Remaining balance can be financed"

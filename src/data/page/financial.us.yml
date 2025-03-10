@@ -205,14 +205,13 @@ two_column:
         - 16px
         - 16px
         - 16px
+    content:
+      text: "Let’s shape your future together!"  
     bullets:
       item_style: ""
       items:
         - heading: ""
           text: "Proven effectiveness of our program"
-          icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - heading: ""
-          text: "Let’s shape your future together!"
           icon: "check" #string with icon for example ['check', 'cicle', etc]
         - heading: ""
           text: "The tech industry is booming"
