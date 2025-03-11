@@ -8,10 +8,23 @@ function formatCohortDates(cohorts) {
     output += `For the program and syllabus: ${syllabus} we have the following upcoming dates:\n`;
 
     for (const session of cohorts[syllabus]) {
-      const kickoffDate = new Date(session.kickoff).toLocaleDateString(
-        "en-US",
-        { timeZone: session.timezone }
-      );
+      let kickoffDate;
+      try {
+        kickoffDate = new Date(session.kickoff).toLocaleDateString("en-US", {
+          timeZone: session.timezone,
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        });
+      } catch (error) {
+        console.error(`Invalid time zone specified for ${syllabus}: ${session.timezone | undefined}. Assumint UTC instead.`);
+        kickoffDate = new Date(session.kickoff).toLocaleDateString("en-US", {
+          timeZone: "UTC",
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        });
+      }
       output += `- Starting on ${kickoffDate} on ${session.timezone} timezone and ${session.schedule} schedule.\n`;
     }
   }

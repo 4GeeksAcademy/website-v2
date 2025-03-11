@@ -1,19 +1,24 @@
-**Spain:**
-- Pay upfront. Price: €3000*. Discount from €3500 to €3000.
+**Spain**
+- Part-time: Pay Upfront, Pay today, Price: €3000, Original Price: €3500
+- Scholarship: Full Payment, Pay today, Price: $6999, Original Price: $8000 (Note: not present in provided yml data but the plan is part-time.)
+- Full Payment: Pay upfront, And get a discount, Price: €3000*, Original Price: €3500, Offer: 500$ OFF *Discount up to €500.
 
-**USA:**
-- Full Payment. Pay today. Price: $3000. Original price $3500 (Offer: $500 OFF).
-- Financed. Pay in 12 months. Price: ~$266 p/m.
-- Financed. Pay in 24 months. Price: ~$145 p/m.
+**USA**
+- Part-time: Full Payment, Pay today, Price: $6999, Original Price: $8000
+- Income Share, Pay after you get a job, Price: $0
+- Full Payment, Pay upfront, And get a discount, Price: $3000, Original Price: $3500, Offer: 500$ OFF
+- Financed, Pay in 12 months, Price: "~$266 p/m"
+- Financed, Pay in 24 months, Price: "~$145 p/m"
 
-**Chile:**
-- Pay Upfront. Price: 700.000 CLP*. Discount from 1.000.000 CLP (Offer: 30% OFF).
-- Financed. 12 months payment. Starting from 58.000 CLP.
+**Europe**
+- Full Payment, Pay upfront, And get a discount, Price: "€3000*", Original Price: "€3500", Offer: "500$ OFF"
+- Pay upfront, And get a discount, Price: "€3000*", Original Price: "€3500", Offer: "500$ OFF"
 
-**Europe:**
-- Pay upfront. Price: €3000*. Discount from €3500 to €3000.
+**Latam**
+- Full upfront discount, Pay upfront and save $500, Price: "USD $1.399", Original Price: "USD $2.500", 44% OFF
 
-**Latam:**
-- Pay upfront and save $500. Price: USD $1.399. Discount from $2.500 to $1.399. 
+**Chile**
+- Pay Upfront, Pay today, Price: "700.000 CLP", Original Price: "1.000.000 CLP"
+- Financed, 12 months payment, Starting from 58.000 CLP, 20% advance payment required.
 
-stop
+stop.
