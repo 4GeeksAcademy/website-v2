@@ -6,6 +6,7 @@ titles:
   featured: "CARACTERÍSTICAS"
   at_geeks: "EN 4GEEKS"
   average: "PROMEDIO DE LA INDUSTRIA"
+  logo: "/images/rigobot-logo.png"
 globe_text: ¡Clic aquí!
 info:
   - features: "Apoyo Profesional"
@@ -35,7 +36,7 @@ info:
   - features: "Preparación a la Entrevista"
     at4_Geeks: "Personalizada para cada oportunidad"
     industry_average: "General"
-    why_important: "No nos conformamos con un workshop sobre cómo hacer una buena entrevista de trabajo. ¡NO! Nosotros te preparamos personalmente con entrevistas de verdad. Además, te daremos consejos antes de la real, para que tu entrevista verdadera sea exitosa y tus probabilidades de conseguir trabajo sean altísimas "
+    why_important: "No nos conformamos con un workshop sobre cómo hacer una buena entrevista de trabajo. ¡NO! Nosotros te preparamos personalmente con entrevistas de verdad. Además, te daremos consejos antes de la real, para que tu entrevista verdadera sea exitosa y tus probabilidades de conseguir trabajo sean altísimas."
     icon: "comments"
 
   - features: "Enfoque"
@@ -65,7 +66,7 @@ info:
   - features: "Soporte en el trabajo (Luego de contratado)"
     at4_Geeks: "Ilimitado"
     industry_average: "limitado o no existe"
-    why_important: "Una vez que nuestros miembros consiguen trabajo, la mentoría y el acompañamiento no se detienen. Todos tienen la posibilidad y están invitados a seguir siendo entrenados, ahora bajo el ambiente de trabajo real, junto a nosotros. "
+    why_important: "Una vez que nuestros miembros consiguen trabajo, la mentoría y el acompañamiento no se detienen. Todos tienen la posibilidad y están invitados a seguir siendo entrenados, ahora bajo el ambiente de trabajo real, junto a nosotros."
     icon: ""
 
   - features: "Soporte Online/Offline"
@@ -83,7 +84,7 @@ info:
   - features: "Lenguajes"
     at4_Geeks: "Python + React + Javascript"
     industry_average: "Ruby/Node + React + JS"
-    why_important: "Todo desarrollador debe saber programar en Python y en JavaScript. Es el lenguaje backend de más crecimiento del mundo, el que se utiliza en más industrias y el que mejores oportunidades ofrece. "
+    why_important: "Todo desarrollador debe saber programar en Python y en JavaScript. Es el lenguaje backend de más crecimiento del mundo, el que se utiliza en más industrias y el que mejores oportunidades ofrece."
     icon: ""
 
   - features: "Actualización del programa"
@@ -95,7 +96,7 @@ info:
   - features: "Conocimiento previo"
     at4_Geeks: "No requerido"
     industry_average: "Muchas veces requerido"
-    why_important: "En 4Geeks Academy creemos que todo el mundo puede programar. Solo necesitas compromiso, constancia, estudiar, practicar y preguntar mucho. "
+    why_important: "En 4Geeks Academy creemos que todo el mundo puede programar. Solo necesitas compromiso, constancia, estudiar, practicar y preguntar mucho."
     icon: ""
 
 button:

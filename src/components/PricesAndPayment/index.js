@@ -232,9 +232,8 @@ const PricingCard = ({
                   color={Colors.black}
                   opacity="1"
                   textAlign="left"
-                >
-                  {bullet}
-                </Paragraph>
+                  dangerouslySetInnerHTML={{ __html: bullet }}
+                />
               </Div>
             ))}
           <Link
@@ -852,8 +851,8 @@ const PricesAndPayment = (props) => {
                   background="#F9F9F9"
                   border="1px solid #EBEBEB"
                   padding="24px 15px"
-                  margin_tablet="0 8px 0 0"
-                  gridColumn_tablet="1/11"
+                  margin_tablet="0 0 0 15px"
+                  gridColumn_tablet="11/21"
                   gridRow_tablet="2"
                 >
                   <H3 textAlign="center" margin="0 0 16px 0">
@@ -903,7 +902,7 @@ const PricesAndPayment = (props) => {
                 justifyContent_xs="evenly"
                 gap="16px"
                 margin_tablet="0 0 0 8px"
-                gridColumn_tablet="11/21"
+                gridColumn_tablet="1/11"
                 gridRow="2"
               >
                 {availablePlans &&

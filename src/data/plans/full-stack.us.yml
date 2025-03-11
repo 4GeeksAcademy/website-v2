@@ -3,8 +3,8 @@ full_time:
   - slug: 'usa-upfront-ft'
     academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
     recomended: true
-    scholarship: "Full Payment"
-    payment_time: "Pay today"
+    scholarship: "Pay upfront"
+    payment_time: "Get a 40% discount"
     price: "$10,999"
     original_price: "$18,300"
     offer: "40% OFF"
@@ -24,7 +24,7 @@ full_time:
   #   payment_time: "There is nothing like this"
   #   price: "$9,000"
   #   original_price: "$15,000"
-  #   warning_message: "Limited seats!"
+  #   warning_message: "Limited availability!"
   #   offer: "40% OFF"
   #   bullets:
   #     - "You're saving ~$6,666 USD"
@@ -83,7 +83,7 @@ full_time:
   - slug: 'spain-upfront-fs-ft'
     academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
     recomended: true
-    scholarship: "Pay Upfront"
+    scholarship: "Pay upfront"
     payment_time: "Get a better price"
     price: "€4,750*"
     bullets:
@@ -126,7 +126,7 @@ full_time:
   - slug: 'chile-contado-fs-ft'
     academies: ['santiago-chile']
     recomended: true
-    scholarship: "Pay Upfront"
+    scholarship: "Pay upfront"
     payment_time: "Pay upfront and get 20% OFF!"
     price: "3.040.000 CLP"
     original_price: "3.800.000 CLP"
@@ -167,18 +167,16 @@ part_time:
   - slug: 'usa-upfront-pt'
     recomended: true
     academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
-    scholarship: "Full Payment"
-    payment_time: "Pay today"
+    scholarship: "Pay upfront"
+    payment_time: "Get a 10% discount"
     price: "$9,000"
-    original_price: "$15,000"
-    offer: "40% OFF"
+    original_price: "$9,999"
+    offer: "10% OFF"
     bullets:
-      - "You are saving $6,000 right away!"
-      - "The tuition fee for a program like ours is $15,000"
-      - "You get to pay this also using one of our payment plans"
-      - "We are extremely invested in making quality coding education accessible to everyone"
-      - "There are plenty of partial scholarships available, please ask us how to get access to them."
+      - "Pay upfront and save 10%"
+      - "Regular tuition is $ 9,999 and can be financed interest free-up to 6 months."
     extra_disclaimer: "This is a special opportunity to access world-class coding education at an unbeatable price. Don't miss it!"
+
 
   - slug: 'usa-financed-pt'
     academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
@@ -187,10 +185,11 @@ part_time:
     payment_time: |
       Pay in 3, 4 or 5 years <br>
       *Please see the Ascent website <a href="https://partner.ascentfunding.com/4geeksacademy/" target="_blank">partner page</a> for repayment examples and APRs.*
-    price: "~$150 p/mo"
+    price: "~$150 /m"
     bullets: 
-      - "Several partners offering loans and payment plans"
-      - "You can get a partial scholarship and the remaining balance with a payment plan"
+      - "Choose among short or long term financing plans."
+      - "Affordable long term loans based on credit score."
+      - "Explore available options <a href=\"https://partner.ascentfunding.com/4geeksacademy/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\" style=\"color: #007bff; \">here</a>."
     icons: 
       - "/images/ascent-logo.png"
       - "/images/climb-logo.png"
@@ -199,14 +198,28 @@ part_time:
     academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
     recomended: false
     scholarship: "Scholarship"
-    payment_time: "You can be saving more than the $5k already discounted."
+    payment_time: "Full or partial funding if you qualify"
     price: ""
-    original_price: "$15,000"
-    warning_message: "Limited seats!"
+    original_price: ""
+    warning_message: "Limited availability!"
     bullets: 
-      - "You are saving more than $5,000"
-      - "Partial scholarships available. Give us a call or apply below and we'll guide you through it."
-      - "You have to be underemployed or unemployed, and provide a valid US Work permit."
+      - "Remaining balance can be financed"
+      - "<a href=\"https://4geeksacademy.com/us/contact\" target=\"_blank\" style=\"color: #007bff; \">Contact us</a> to check your eligibility."
+    icons: 
+      # - "/images/clarkuniversity.png"
+
+  - slug: 'usa-job-guarantee-pt'
+    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'tampa-usa']
+    recomended: false
+    scholarship: "Job Guarantee"
+    payment_time: "Get hired or your money back"
+    price: "Tuition"
+    original_price: ""
+    warning_message: "+ 2,000 USD"
+    bullets: 
+      - "Enroll, agreeing to terms and conditions."
+      - "Fulfill required coursework and attendance."
+      - "Get hired within 9 months of graduation or we’ll refund 100% of your tuition."
     icons: 
       # - "/images/clarkuniversity.png"
 
@@ -365,7 +378,7 @@ part_time:
     academies: ['santiago-chile']
     recomended: true
     scholarship: "Full Stack + Career Support"
-    payment_time: "Pay Upfront and get a discount"
+    payment_time: "Pay upfront and get a discount"
     price: "2.760.000 CLP*"
     original_price: "3.450.000 CLP*"
     offer: "20% OFF"
@@ -395,7 +408,7 @@ part_time:
     scholarship: "Financed"
     payment_time: "18 months payment"
     price: "~168.000 CLP"
-    warning_message: "Limited seats!"
+    warning_message: "Limited availability!"
     bullets:
       - "Tailor-made financing from 6 to 18 months"  
       - "An advance payment corresponding to 20% of the value of the program must be paid."

@@ -34,6 +34,8 @@ export const save_form = async (
     return undefined;
   };
 
+  const ab_test_variant = (typeof window !== "undefined" && window.PageSenseAPI?.getVariationName) ? window.PageSenseAPI.getVariationName() : null;
+
   const resp = await fetch(`${getEnvironmentAPI()}/marketing/lead`, {
     headers: new Headers({ "content-type": "application/json" }),
     method: "POST",
@@ -55,6 +57,9 @@ export const save_form = async (
         formData.location ||
         session.location.active_campaign_location_slug,
       utm_url: formData.utm_url || window.location.href,
+      custom_fields: {
+        ab_test_variant: ab_test_variant
+      }
     }),
   });
   if (resp.status >= 200 && resp.status < 400) {

@@ -78,7 +78,7 @@ part_time:
     academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online']
     recomended: false
     scholarship: "Scholarship"
-    payment_time: "There is nothing like this"
+    payment_time: "Full or partial funding  if you qualify"
     price: "$7,999"
     original_price: "$16,665"
     warning_message: "Limited seats!"

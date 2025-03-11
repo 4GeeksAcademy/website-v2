@@ -112,6 +112,13 @@ const Apply = (props) => {
   }, []);
   React.useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
+
+    // Pre-fill the region
+    let _region = urlParams.get("region");
+    if (!_region && session.location?.meta_info?.region) {
+      _region = session.location.meta_info.region; // e.g. 'latam'
+    }
+
     // Pre-fill the location
     let _location = urlParams.get("location");
     if (!_location && session.location)
@@ -130,7 +137,6 @@ const Apply = (props) => {
     // Pre-fill the course
     let _course = urlParams.get("course");
     if (!_course && props.location.state) _course = props.location.state.course;
-
     if (typeof _course === "string")
       _course = programs.find((p) => p.value === _course);
 
@@ -144,13 +150,18 @@ const Apply = (props) => {
       utm_url: _utm_url,
       // this is the line that automatically sets the location, we don't want that anymore
       // its better if leads choose the location themselves
-      // location: {value: _location || "", valid: typeof (_location) === "string" && _location !== ""},
+      location: {
+        value: _location || "",
+        valid: typeof _location === "string" && _location !== "",
+      },
       course: {
         value: _course || null,
         valid: _course && _course.value ? true : false,
       },
       referral_key: { value: session?.utm?.referral_code || null, valid: true },
     }));
+
+    setRegionVal(_region || null);
   }, [session]);
 
   let privacy = data.privacy.edges.find(
@@ -540,9 +551,9 @@ const Apply = (props) => {
                 tabindex="1"
                 bgColor={Colors.black}
                 options={regions}
-                // value={locations?.find(
-                //   (el) => el.value === formData.location.value
-                // )}
+                value={
+                  regionVal ? regions.find((r) => r.value === regionVal) : null
+                }
                 placeholder={yml.left.regions_title}
                 inputId="dropdown_region_selector"
                 onChange={(value) => {
@@ -581,7 +592,6 @@ const Apply = (props) => {
                 margin_tablet="11px 0 23px 0"
               >
                 <SelectRaw
-                  tabindex="1"
                   bgColor={Colors.black}
                   options={
                     regionVal === "online"
@@ -597,12 +607,14 @@ const Apply = (props) => {
                           (academy) => academy.region === regionVal
                         )
                   }
-                  value={formData.location.value}
+                  value={locations?.find(
+                    (el) => el.value === formData.location.value
+                  )}
                   placeholder={yml.left.locations_title}
                   inputId={"dropdown_academy_selector"}
-                  onChange={(value, valid) => {
-                    setVal({ ...formData, location: { value, valid } });
-                  }}
+                  onChange={(value, valid) =>
+                    setVal({ ...formData, location: { value, valid } })
+                  }
                 />
               </Div>
             )}

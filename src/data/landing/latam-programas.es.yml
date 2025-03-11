@@ -49,8 +49,8 @@ apply_schollarship: # form that is displayed at the end of the landing
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  tagline: ¡Impulsa tu carrera en tecnología con 4Geeks!
-  sub_heading: ""
+  tagline: Los Mejores Programas de Tecnología en LATAM
+  sub_heading: "Más de 5.000 estudiantes comprueban que somos los mejores"
   background: "#ffffff"
   tagline_color: "#1c1c1c"
   form_styles:
@@ -68,9 +68,9 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-    - Desde desarrollo Full-Stack hasta Data Science, Ciberseguridad y Applied AI.
-    - Obtén una certificación reconocida que abrirá puertas en toda LATAM y más allá.
-    - orientación continua e ilimitada de expertos de la industria de por vida.
+    - "Elige uno: Full Stack Development, Data Science & Machine Learning, Ciberseguridad o Inteligencia Artificial Aplicada"
+    - "Gradúate y obtén el mejor certificado de la industria"
+    - "Acceso ilimitado y de por vida a Mentores, Profesores y Acompañamiento Profesional"
 
 follow_bar:
   position: "top" # top, bottom, hidden
@@ -83,7 +83,8 @@ follow_bar:
     text: "Más Información"
     path: "#leadform_header"
   phone:
-    text: "llama"
+    text: ""
+    number: " "
 
 short_badges:
   - name: "Top Online Full-Stack Bootcamps Of 2024"
@@ -116,10 +117,10 @@ short_badges:
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
 #
 
-program_details:
-  position: 5
-  heading: "Programa de Contenido Full-Stack: Tu Puerta de Entrada al Futuro Tecnológico"
-  sub_heading: "Conviértete en un profesional altamente demandado en la región, dominando las habilidades clave para el desarrollo web y mucho más."
+# program_details:
+#   position: 5
+#   heading: "Programa de Contenido Full-Stack: Tu Puerta de Entrada al Futuro Tecnológico"
+#   sub_heading: "Conviértete en un profesional altamente demandado en la región, dominando las habilidades clave para el desarrollo web y mucho más."
 
 badges:
   position: 4
@@ -205,27 +206,29 @@ components:
     swipable: False
     background: "#fbfbfb" 
     image:
-      style: '{"backgroundSize": "cover", "background-position": "center", "border": "2px solid black"}'
-      src: "/images/landing/grupo-varias-nacionalidades.jpg"
-      shadow: true
+      style: '{"backgroundSize": "contain", "background-position": "center"}'
+      src: "/images/landing/Group-6626.webp"
+      shadow: false
     section_heading:
-      text: "¿Por Qué Estudiar con 4Geeks Academy en LATAM?"
+      text: "¿por qué elegir 4geeks academy?"
       style: '{ "font-size": "30px"}'
     heading:
       text: ""
     sub_heading:
-      text: "4Geeks Academy se ha consolidado como una referencia en la formación tecnológica en LATAM y en el mundo. Nuestros programas están diseñados específicamente para satisfacer la creciente demanda de talento en la región, ofreciendo cursos que van desde Desarrollador Full-Stack hasta Data Science y Machine Learning."
+      text: "Somos una referencia en la formación tecnológica en LATAM y en el mundo. Te ofrecemos programas intensivos y actualizados, diseñados para brindarte las habilidades más demandadas por la industria y convertirte en un profesional de la tecnología altamente cotizado."
     content:
-      text: "En 4Geeks Academy, no solo aprenderás a programar, ¡te convertirás en un verdadero Profesional! Prepárate para enfrentar nuevos desafíos y adquirir habilidades que te harán destacar en el competitivo mundo tecnológico."
+      text: "¡Inscríbete hoy y conviértete en un experto con 4Geeks Academy!"
       font_size: ["16px"]
       path: ""
     bullets:
       items:
-      - text: "LATAM necesita más de 1 millón de profesionales en tecnología para 2025, lo que significa que hay un vasto mercado laboral esperando por ti."
+      - text: "Carreras con futuro: Elige tu camino entre Desarrollo Full-Stack, Data Science o Machine Learning, Ciberseguridad o IA Aplicada."
         icon: "circle" 
-      - text: "Nuestros graduados son contratados por empresas de primer nivel en toda la región, lo que demuestra la calidad de nuestra formación y la relevancia de nuestras habilidades en el mercado."
+      - text: "¡El mercado laboral te espera! LATAM necesita 1 millón de profesionales de tecnología para 2025."
         icon: "circle" 
-      - text: "Desde la inscripción hasta la graduación, te acompañamos en cada paso de tu camino. Además, ofrecemos mentorías personalizadas ilimitadas y de por vida, asegurando que siempre tengas el apoyo que necesitas, incluso después de conseguir tu primer trabajo."
+      - text: Graduados exitosos en empresas líderes en toda la región."
+        icon: "circle" 
+      - text: Mentorías ilimitadas para tu crecimiento profesional continuo."
         icon: "circle" 
     button:
       text: "Más Información"
@@ -263,10 +266,10 @@ components:
     position: 6
     layout: two_column_left
     swipable: False
-    background: "veryLightBlue" 
+    background: "#E3F9FE" 
     image:
       style: '{"backgroundSize": "contain", "background-position": "center"}'
-      src: "/images/landing/landing-programas.webp"
+      src: "/images/landing/landing-programas-bg.png"
       shadow: false
     section_heading:
       text: ""

@@ -1,9 +1,9 @@
 meta_info:
-  slug: europa-programas # <--- URL 4geeksacademy.com/us/landing/example
+  slug: espana-programas # <--- URL 4geeksacademy.com/us/landing/example
 
   # This will show on social media when shared
-  title: "Bootcamps de programación en Europa"
-  description: "Entra de lleno al campo laboral en europa con cualquiera de nuestros bootcamps de programación, Data sicence, ciberseguridad e Inteligencia Artificial"
+  title: "Bootcamps de programación en Espana"
+  description: "Entra de lleno al campo laboral en España con cualquiera de nuestros bootcamps de programación, Data sicence, ciberseguridad e Inteligencia Artificial"
   image: "/images/bg/community.png"
   keywords: ""
   visibility: "unlisted" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
@@ -13,7 +13,7 @@ meta_info:
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
   utm_course: ["full-stack", "datascience-ml", "cybersecurity"]
-  utm_location: ["malaga-spain", "valencia-spain","barcelona-spain", "madrid-spain"]
+  utm_location: ["madrid-spain"]
   automation: soft # comma separated, "soft" is the default value
   tag: request_more_info # comma separated, "request_more_info" is the default value
 
@@ -39,7 +39,8 @@ apply_schollarship: # form that is displayed at the end of the landing
 # jumbotron on the top (cannot be commented out)
 header_data:
   background: "#ffffff"
-  tagline: ¡Transforma <br>tu futuro <br>con 4Geeks!
+  tagline: |
+    Los Mejores Programas de Tecnología en España
   tagline_color: "#1c1c1c"
   form_styles:
     background: "#0084FF"
@@ -203,8 +204,45 @@ components:
       background: "black"
       path: "#leadform_header"
 
-  - name: how-it-works
+  - name: the-academy
     position: 2
+    layout: two_column_right
+    swipable: False
+    background: "#fbfbfb" 
+    image:
+      style: '{"backgroundSize": "contain", "background-position": "center"}'
+      src: "/images/landing/Group-6626.webp"
+      shadow: false
+    section_heading:
+      text: "¿por qué elegir 4geeks academy?"
+      style: '{ "font-size": "30px"}'
+    heading:
+      text: ""
+      style: '{ "display": "none"}'
+    sub_heading:
+      text: "Somos una referencia en la formación tecnológica en España y en el mundo. Te ofrecemos programas intensivos y actualizados, diseñados para brindarte las habilidades más demandadas por la industria y convertirte en un profesional de la tecnología altamente cotizado."
+      style: '{"font-weight": "300"}'
+    content:
+      text: "¡Inscríbete hoy y conviértete en un experto con 4Geeks Academy!"
+      font_size: ["16px"]
+      path: ""
+    bullets:
+      items:
+      - text: "Carreras con futuro: Elige tu camino entre Desarrollo Full-Stack, Data Science o Machine Learning, Ciberseguridad o IA Aplicada."
+        icon: "circle" 
+      - text: Graduados exitosos en empresas líderes en toda la región."
+        icon: "circle" 
+      - text: Mentorías ilimitadas para tu crecimiento profesional continuo."
+        icon: "circle" 
+    button:
+      text: "Más Información"
+      color: white
+      hover_color: "white"
+      background: "black"
+      path: "#leadform_header"
+
+  - name: how-it-works
+    position: 3
     background: "veryLightBlue2"
     layout: iconogram
     swipable: True
@@ -249,8 +287,10 @@ components:
       style: '{ "font-size": "30px" }'
     heading: 
       text: "Descubre la historia de uno de nuestros estudiantes"
+      style: '{ "margin-top": "0", "font-size": "30px" }'
     sub_heading:
       text: "Descubre la historia de Diego Fernández, ahora Full Stack Developer. Diego nos cuenta su experiencia en 4Geeks Academy, incluyendo las mentorías, la comunidad y su perspectiva."
+      style: '{ "font-weight": "300" }'
     content: 
       text: ""
       font_size: ["16px"]

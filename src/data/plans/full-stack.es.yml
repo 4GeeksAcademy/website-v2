@@ -274,6 +274,23 @@ part_time:
     icons: 
       # - "/images/clarkuniversity.png"
 
+
+  - slug: 'usa-job-guarantee-pt'
+    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'tampa-usa']
+    recomended: false
+    scholarship: "Garantía de Empleo"
+    payment_time: "Consigue empleo o te devolvemos tu dinero"
+    price: "Matrícula"
+    original_price: ""
+    warning_message: "+ 2,000 USD"
+    bullets: 
+      - "Inscríbete aceptando los términos y condiciones."
+      - "Cumple con la carga académica y asistencia requeridas."
+      - "Si no consigues empleo en los 6 meses posteriores a la graduación, te reembolsamos el 100% de la matrícula."
+    icons: 
+      # - "/images/clarkuniversity.png"
+
+
   # - slug: 'usa-isa-pt'
   #   academies: ['downtown-miami', 'orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
   #   recomended: false

@@ -368,6 +368,7 @@ export const query = graphql`
             }
             phone {
               text
+              number
             }
           }
           navbar {
