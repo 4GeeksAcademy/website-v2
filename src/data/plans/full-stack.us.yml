@@ -185,7 +185,7 @@ part_time:
     bullets: 
       - "Choose among short or long term financing plans."
       - "Affordable long term loans based on credit score."
-      - "Loan terms displayed are effective as of 3/11/2025. To see full repayment examples, visit <a href=\"https://partner.ascentfunding.com/4geeksacademy/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\" style=\"color: #007bff; \">link to Ascent partnership page</a>."
+      - "loan terms displayed are effective as of 3/11/2025. To see full repayment examples, visit <a href=\"https://partner.ascentfunding.com/4geeksacademy/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\" style=\"color: #007bff; \">our 4Geeks and Ascent page</a>."
       # - "Explore available options <a href=\"https://partner.ascentfunding.com/4geeksacademy/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\" style=\"color: #007bff; \">here</a>."
     icons: 
       - "/images/ascent_logo.png"
@@ -201,8 +201,11 @@ part_time:
     original_price: ""
     warning_message: "Limited availability!"
     bullets: 
-      - "Remaining balance can be financed"
-      - "<a href=\"https://4geeksacademy.com/us/contact\" target=\"_blank\" style=\"color: #007bff; \">Contact us</a> to check your eligibility."
+      - "Ask about your region! We're part of several special workforce development incentives."
+      - "If you're earning less than your potential or unemployed, there are options for you!"
+      - "Any remaining balance can be financed."
+      - "Get in touch and we’ll help you with the application process!"
+      # - "<a href=\"https://4geeksacademy.com/us/contact\" target=\"_blank\" style=\"color: #007bff; \">Contact us</a> to check your eligibility."
     icons: 
       # - "/images/clarkuniversity.png"
 
