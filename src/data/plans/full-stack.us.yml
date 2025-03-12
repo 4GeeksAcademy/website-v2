@@ -47,7 +47,7 @@ full_time:
       - "You can adapt your learning path to your financial needs. Choose to include or exclude our career support services, or enroll with a Job Guarantee."
       - "We also provide several full or partial scholarship options that you may be eligible for. Contact us for further details."
     icons:
-      - "/images/ascent_logo.jpg"
+      - "/images/ascent-logo.png"
       - "/images/climb-logo.png"
 
   - slug: 'usa-fs-ft'
@@ -173,21 +173,25 @@ part_time:
     original_price: "$9,999"
     offer: "10% OFF"
     bullets:
-      - Pay upfront and save 10%
-      - Regular tuition is $ 9,999 and can be financed interest free-up to 6 months.
+      - "Pay upfront and save 10%"
+      - "Regular tuition is $ 9,999 and can be financed interest free-up to 6 months."
+    extra_disclaimer: "This is a special opportunity to access world-class coding education at an unbeatable price. Don't miss it!"
+
 
   - slug: 'usa-financed-pt'
     academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
     recomended: false
     scholarship: "Financed"
-    payment_time: "Pay in 3, 4 or 5 years"
+    payment_time: |
+      Pay in 3, 4 or 5 years <br>
+      *Please see the Ascent website <a href="https://partner.ascentfunding.com/4geeksacademy/" target="_blank">partner page</a> for repayment examples and APRs.*
     price: "~$150 /m"
     bullets: 
       - "Choose among short or long term financing plans."
       - "Affordable long term loans based on credit score."
       - "Explore available options <a href=\"https://partner.ascentfunding.com/4geeksacademy/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\" style=\"color: #007bff; \">here</a>."
     icons: 
-      - "/images/ascent_logo.jpg"
+      - "/images/ascent-logo.png"
       - "/images/climb-logo.png"
 
   - slug: 'usa-clark-scholarship-pt'
