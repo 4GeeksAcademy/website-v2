@@ -49,7 +49,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  tagline: Los Mejores Programas de Tecnología en LATAM
+  tagline: "Cambia tu carrera con el bootcamp #1 en LATAM"
   sub_heading: "Más de 5.000 estudiantes comprueban que somos los mejores"
   background: "#ffffff"
   tagline_color: "#1c1c1c"
@@ -59,7 +59,7 @@ header_data:
     button:
       background: "black"
   # background_image: "../../../static/images/bg/pricing-bg.jpg"
-  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+  badge: "../../../static/images/badges/course-report-best-coding-bootcamps-badge-2025.png"
   image_filter: brightness(0.1)
 
 features:
@@ -166,7 +166,7 @@ who_is_hiring:
 
 why_4geeks:
   position: 9
-  heading: "Porqué 4Geeks"
+  heading: "¡Escúchalo de nuestros alumnos!"
   sub_heading: ""
 
 # Possible layouts: [two_column_left_image, two_column_right_image]

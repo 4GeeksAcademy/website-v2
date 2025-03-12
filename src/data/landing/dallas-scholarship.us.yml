@@ -50,7 +50,7 @@ header_data:
     color: "white"
     button:
       background: "black"
-  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+  badge: "../../../static/images/badges/course-report-best-coding-bootcamps-badge-2025.png"
   image_filter: brightness(0.3)
   
 
