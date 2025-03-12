@@ -37,17 +37,17 @@ full_time:
 
 
   - slug: 'usa-financed-ft'
-    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
+    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'tampa-usa', 'toronto-canada']
     recomended: false
     scholarship: "Financed"
     payment_time: "24 months payment"
-    price: "~$200 per month"
-    bullets:
-      - "We're fully committed to making our education accessible and offer multiple payment plans and financing options to uphold our promise."
-      - "You can adapt your learning path to your financial needs. Choose to include or exclude our career support services, or enroll with a Job Guarantee."
-      - "We also provide several full or partial scholarship options that you may be eligible for. Contact us for further details."
-    icons:
-      - "/images/ascent_logo.jpg"
+    price: "from $200/mo"
+    bullets: 
+      - "Affordable long term loans based on credit score."
+      - "Loan terms displayed are effective as of 3/11/2025. To see full repayment examples, visit <a href=\"https://partner.ascentfunding.com/4geeksacademy/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\" style=\"color: #007bff; \">link to Ascent partnership page</a>."
+    icons: 
+      - "/images/ascent_logo.png"
+      - "/images/tfc-logo.png"
       - "/images/climb-logo.png"
 
   - slug: 'usa-fs-ft'
@@ -177,17 +177,19 @@ part_time:
       - Regular tuition is $ 9,999 and can be financed interest free-up to 6 months.
 
   - slug: 'usa-financed-pt'
-    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
+    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'tampa-usa', 'toronto-canada']
     recomended: false
     scholarship: "Financed"
     payment_time: "Pay in 3, 4 or 5 years"
-    price: "~$150 /m"
+    price: "from $150/mo"
     bullets: 
       - "Choose among short or long term financing plans."
       - "Affordable long term loans based on credit score."
-      - "Explore available options <a href=\"https://partner.ascentfunding.com/4geeksacademy/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\" style=\"color: #007bff; \">here</a>."
+      - "Loan terms displayed are effective as of 3/11/2025. To see full repayment examples, visit <a href=\"https://partner.ascentfunding.com/4geeksacademy/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\" style=\"color: #007bff; \">link to Ascent partnership page</a>."
+      # - "Explore available options <a href=\"https://partner.ascentfunding.com/4geeksacademy/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\" style=\"color: #007bff; \">here</a>."
     icons: 
-      - "/images/ascent_logo.jpg"
+      - "/images/ascent_logo.png"
+      - "/images/tfc-logo.png"
       - "/images/climb-logo.png"
 
   - slug: 'usa-clark-scholarship-pt'
