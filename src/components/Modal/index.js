@@ -37,7 +37,7 @@ const ModalBox = styled.div`
   z-index: 1000;
   background: white;
   overflow-y: auto;
-  border: 3px solid #000;
+  border: 1px solid #000;
   border-radius: 15px;
   display: ${(props) => (props.open ? "block" : "none")};
 
