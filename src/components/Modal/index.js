@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Devices } from "../Responsive";
 
-// background 
+// background
 const Overlay = styled.div`
   position: fixed;
   top: 0;
