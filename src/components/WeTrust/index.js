@@ -19,7 +19,7 @@ const WeTrust = ({ we_trust, background, titleProps, paragraphProps }) => {
         padding="50px 30px"
         padding_md="40px 90px"
         padding_lg="40px"
-        padding_tablet="40px 40px"
+        padding_tablet="40px 0"
         margin="0 auto"
         background={background || Colors.lightBlue}
         display="block"
@@ -60,6 +60,7 @@ const WeTrust = ({ we_trust, background, titleProps, paragraphProps }) => {
               padding="15px"
               alignItems="center"
               alignItems_tablet="normal"
+              overflow="hidden"
             >
               <Icon icon={box.icon} width="89px" height="89px" color={null} />
               <Div
