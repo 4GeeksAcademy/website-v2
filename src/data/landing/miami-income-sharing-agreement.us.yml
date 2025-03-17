@@ -6,7 +6,7 @@ meta_info:
   description: "With our income share agreement you can become a software developer and build your new Career without upfront investment."
   image: "/images/bg/main-bg.jpg"
   keywords: "Income Share Agreement, Coding Classes, Learn to code, 4Geeks Academy"
-
+  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   template: "landing_a" # <--- choose your landing template
   redirects: # <--- URL redirections to avoid 404 errors
     ["/landing/income-sharing-agreement"]
@@ -36,7 +36,14 @@ apply_schollarship: # form that is displayed at the end of the landing
 header_data:
   tagline: Pay nothing until you make it
   sub_heading: Become a software developer without upfront investment.
-  background_image: "../../../static/images/4geeks-main.jpg"
+  background: "#ffffff"
+  tagline_color: "#1c1c1c"
+  form_styles:
+    background: "#0084FF"
+    color: "white"
+    button:
+      background: "black"
+  # background_image: "../../../static/images/4geeks-main.jpg"
   image_filter: brightness(0.25)
 
 features:

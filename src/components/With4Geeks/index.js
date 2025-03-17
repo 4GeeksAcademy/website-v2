@@ -6,7 +6,7 @@ import { RoundImage, Colors } from "../Styling";
 import ReactPlayer from "../ReactPlayer";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
-export default ({
+const With4Geeks = ({
   lang,
   title,
   subtitle,
@@ -89,12 +89,7 @@ export default ({
           padding_tablet="0 40px 32px 40px"
           {...headerProps}
         >
-          <H2
-            margin_tablet="0 0 15px 0"
-            margin_xs="0px"
-            textTransform={title ? "" : "uppercase"}
-            textAlign={title ? "center" : "left"}
-          >
+          <H2 margin_tablet="0 0 15px 0" margin_xs="0px" textAlign="center">
             {title || info?.header?.title}
           </H2>
           {paragraph && (
@@ -251,3 +246,5 @@ export default ({
     </Div>
   );
 };
+
+export default With4Geeks;

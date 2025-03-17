@@ -1,19 +1,24 @@
-- Spain: 
-  - Scholarship "Pay upfront". Price: €3000 (Discounted from €3500).
-  
-- USA: 
-  - Scholarship "Full Payment". Price: $3000 (Discounted from $3500).
-  - Scholarship "Financed". Price: ~$266 p/m for 12 months.
-  - Scholarship "Financed". Price: ~$145 p/m for 24 months.
+**Spain**
+- Part-time: Pay Upfront, Pay today, Price: €3000, Original Price: €3500
+- Scholarship: Full Payment, Pay today, Price: $6999, Original Price: $8000 (Note: not present in provided yml data but the plan is part-time.)
+- Full Payment: Pay upfront, And get a discount, Price: €3000*, Original Price: €3500, Offer: 500$ OFF *Discount up to €500.
 
-- Chile: 
-  - Scholarship "Pay Upfront". Price: 700,000 CLP (Discounted from 1,000,000 CLP).
-  - Scholarship "Financed". Starting from 58,000 CLP for 12 months.
+**USA**
+- Part-time: Full Payment, Pay today, Price: $6999, Original Price: $8000
+- Income Share, Pay after you get a job, Price: $0
+- Full Payment, Pay upfront, And get a discount, Price: $3000, Original Price: $3500, Offer: 500$ OFF
+- Financed, Pay in 12 months, Price: "~$266 p/m"
+- Financed, Pay in 24 months, Price: "~$145 p/m"
 
-- Europe: 
-  - Scholarship "Pay upfront". Price: €3000 (Discounted from €3500).
+**Europe**
+- Full Payment, Pay upfront, And get a discount, Price: "€3000*", Original Price: "€3500", Offer: "500$ OFF"
+- Pay upfront, And get a discount, Price: "€3000*", Original Price: "€3500", Offer: "500$ OFF"
 
-- Latam: 
-  - Scholarship "Pay upfront and save $500". Price: $1,399 (Discounted from $2,500).
+**Latam**
+- Full upfront discount, Pay upfront and save $500, Price: "USD $1.399", Original Price: "USD $2.500", 44% OFF
 
-stop
+**Chile**
+- Pay Upfront, Pay today, Price: "700.000 CLP", Original Price: "1.000.000 CLP"
+- Financed, 12 months payment, Starting from 58.000 CLP, 20% advance payment required.
+
+stop.

@@ -5,7 +5,7 @@ meta_info:
   description: "At 4Geeks Boca Code, we offer comprehensive training programs designed to help you land the job of your dreams." # under 255 characters, will show on social media when shared
   image: "" # description will show on social media when shared
   keywords: "" # SEO optimized keywords
-  visibility: "unlisted" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   template: "landing_a" # <--- choose your landing template
   redirects: [] # <--- URL redirections to avoid 404 errors
   

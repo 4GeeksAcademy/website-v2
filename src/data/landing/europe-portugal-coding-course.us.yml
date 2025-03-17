@@ -1,6 +1,7 @@
 meta_info:
   slug: europe-portugal-coding-course # <--- URL 4geeksacademy.com/us/landing/example
 
+  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   # This will show on social media when shared
   title: "Coding Course On-line and In-person, learn to code and get a better professional career"
   description: "4Geeks Academy coding course is one of the most awarded in the world, learn to code and have a better life."
@@ -34,9 +35,15 @@ apply_schollarship: # form that is displayed at the end of the landing
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  background: "#FFF1D1"
+  background: "#ffffff"
   tagline: Become a full-stack developer in 18 weeks through work on real projects and mentorship by experienced professionals
   sub_heading: "86% of our graduates have already started their future-proof, tech careers with an average entry salary of 30.000€ per year. Classes are in English"
+  tagline_color: "#1c1c1c"
+  form_styles:
+    background: "#0084FF"
+    color: "white"
+    button:
+      background: "black"
   badge: "../../../static/images/badges/european_excellence_education_black.png"
   image_filter: brightness(0.3)
 

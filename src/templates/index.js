@@ -326,11 +326,39 @@ const Home = (props) => {
         />
       </Div>
       <Iconogram yml={yml.iconogram} background={Colors.veryLightBlue3} />
+
+      {/* Two Columns Rigo */}
+      <Div background={Colors.veryLightBlue3} display="block">
+        <TwoColumn
+          right={{
+            image: yml.two_columns_rigo?.image,
+            video: yml.two_columns_rigo?.video,
+          }}
+          left={{
+            heading: yml.two_columns_rigo?.heading,
+            heading_image: yml.two_columns_rigo?.heading_image,
+            sub_heading: yml.two_columns_rigo?.sub_heading,
+            bullets: yml.two_columns_rigo?.bullets,
+            content: yml.two_columns_rigo?.content,
+          }}
+          proportions={yml.two_columns_rigo?.proportions}
+          session={session}
+        />
+      </Div>
+
       <GeeksVsOthers
         lang={pageContext.lang}
         mainBackround={Colors.white}
         limit={5}
-        style={{ background: Colors.veryLightBlue3 }}
+        style={{
+          background: Colors.veryLightBlue3,
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          width: "100%",
+          padding: "20px 40px",
+          margin: "0 auto",
+        }}
         title={yml.geeks_vs_others.heading}
         paragraph={yml.geeks_vs_others.sub_heading}
         link
@@ -555,6 +583,30 @@ export const query = graphql`
               icon
               title
               text
+            }
+          }
+          two_columns_rigo {
+            proportions
+            image {
+              style
+              src
+              shadow
+            }
+            heading {
+              text
+              font_size
+              style
+              heading_image {
+                src
+              }
+            }
+            sub_heading {
+              text
+              font_size
+            }
+            content {
+              text
+              style
             }
           }
           geeks_vs_others {

@@ -1,0 +1,301 @@
+meta_info:
+  slug: navidad-4Geeks-2024 # <--- URL 4geeksacademy.com/us/landing/example
+
+  # This will show on social media when shared
+  title: "4Geeks Academy LATAM"
+  description: "Descubre los programas de 4Geeks Academy en LATAM: Full-Stack, Data Science, Ciberseguridad y Applied AI. ¡Inscríbete hoy y lleva tu carrera al siguiente nivel."
+  image: "/images/bg/pricing-bg.jpg"
+  keywords: ""
+  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  template: "landing_a" # <--- choose your landing template
+  redirects: []
+
+  # Set a particular course or location to the landing page
+  # this UTM fields will be also included in the CRM contact
+  utm_course: ["full-stack", "datascience-ml", "cybersecurity", "applied-ai", "coding-introduction"]
+  utm_location: [
+    "bogota-colombia",
+    "buenosaires-argentina",
+    "caracas-venezuela",
+    "costa-rica",
+    "lapaz-bolivia",
+    "lima-peru",
+    "mexicocity-mexico",
+    "montevideo-uruguay",
+    "panamacity-panama",
+    "quito-ecuador"
+  ]
+  automation: soft # comma separated, "soft" is the default value
+  tag: request_more_info # comma separated, "request_more_info" is the default value
+
+navbar:
+  logoUrl: "#"
+  buttonText: "Solicitar más información" # this modifies the button text in the navbar
+  buttonUrl: "#leadform_bottom" #accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+
+form:
+  # posible fields: "first_name", "last_name", "full_name", "phone", "email"
+  # always the first_name, email and phone will be mandatory if added.
+  fields: ["full_name", "phone", "email"]
+  heading: "Obtén más información"
+  motivation: "Una vez que hayas completado el formulario, recibirás detalles completos sobre los programas, opciones de financiamiento y certificaciones disponibles."
+  button_label: Más información
+  redirect: null #you can redirect to another url or entirely diffrent website
+
+apply_schollarship: # form that is displayed at the end of the landing
+  # title: "Apoyo Profesional Ilimitado"
+  imageSide: "left"
+  image: "../../../static/images/landing/apply.png"
+
+# jumbotron on the top (cannot be commented out)
+header_data:
+  tagline: "¡La NAVIDAD <br>ha llegado!🎅"
+  sub_heading: "Inicia tu carrera en tecnología y obtén nuestro curso de Applied AI como regalo."
+  background: "#ffffff"
+  tagline_color: "#1c1c1c"
+  form_styles:
+    background: "#0084FF"
+    color: "white"
+    button:
+      background: "black"
+  # background_image: "../../../static/images/bg/pricing-bg.jpg"
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+  image_filter: brightness(0.1)
+
+features:
+  marginTop: 0px #<-- separation between tagline and the bullets
+
+  #                                         up   left down  right
+  styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
+  bullets:
+    - Desde desarrollo Full-Stack hasta Data Science, Ciberseguridad y Applied AI.
+    - Obtén una certificación reconocida que abrirá puertas en toda LATAM y más allá.
+    - Orientación continua e ilimitada de expertos de la industria de por vida.
+
+follow_bar:
+  position: "top" # top, bottom, hidden
+  content:
+    text: "Descubre nuestros programas y especialízate en Full-Stack, Data Science, Ciberseguridad o Applied AI. "
+    text_mobile: "Descubre nuestros programas y especialízate en Full-Stack, Data Science, Ciberseguridad o Applied AI. "
+    # devices:   XL      LG    MD      SM    XS
+    font_size: ["22px", "22px", "22px", "20px", "18px"]
+  button:
+    text: "Más Información"
+    path: "#leadform_header"
+  phone:
+    text: "llama  "
+
+short_badges:
+  - name: "Top Online Full-Stack Bootcamps Of 2024"
+    url: ""
+    image: "../../../static/images/badges/forbes-logo-award.png"
+    alt: "We have been selected as one of the Top Online Coding Bootcamps by Forbes."
+  - name: "Best for Spanish speakers Of 2024 by Fortune"
+    url: ""
+    image: "../../../static/images/badges/fortune-logo.png"
+    alt: "Recognized by Fortune as one of the Top Coding Bootcamps"
+  - name: "Top Coding Bootcamps Newsweek"
+    url: ""
+    image: "../../../static/images/badges/newsweek.webp"
+    alt: "Top Coding Bootcamps Newsweek"
+  - name: "Best Coding Bootcamp Course Report 2024"
+    url: ""
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+    alt: "Best Coding Bootcamp Course Report 2024"
+  - name: "Licensed by the Florida Department of Education"
+    url: ""
+    image: "../../../static/images/badges/licensed.png"
+    alt: "Licensed by the Florida Department of Education"
+  - name: "ARP Certificate"
+    url: ""
+    image: "../../../static/images/badges/arp-logo-certification.png"
+    alt: "ARP Certificate"
+
+
+#
+# ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
+#
+
+program_details:
+  position: 5
+  heading: "Programa de Contenido Full-Stack: Tu Puerta de Entrada al Futuro Tecnológico"
+  sub_heading: "Conviértete en un profesional altamente demandado en la región, dominando las habilidades clave para el desarrollo web y mucho más."
+
+badges:
+  position: 4
+  heading: "Premios y Reconocimientos que avalan nuestra excelencia"
+
+geeks_vs_others:
+  position: 7
+  heading: "Compara Nuestros Programas con Otros en LATAM"
+  paragraph: ""
+  total_rows: 5
+
+rating_reviews:
+  position: 11
+  heading: "¡Los mejor valorados en todos los sitios de reseñas!"
+  rating_list:
+    - alt: "Career Karma"
+      image: "../../../static/images/badges/career-karma.png"
+      rating: 4.89
+      url: ""
+    - alt: "Switchup"
+      image: "../../../static/images/badges/switchup-img.png"
+      rating: 4.91
+      url: ""
+    - alt: "Course Report"
+      image: "../../../static/images/badges/course-report.png"
+      rating: 4.84
+      url: ""
+    - alt: "Google"
+      image: "../../../static/images/badges/google.png"
+      rating: 5
+      url: ""
+
+# alumni_projects:
+#   position: 14
+#   heading: "Proyectos que podrás crear luego de haberte graduado"
+#   sub_heading: ""
+
+who_is_hiring:
+  position: 15
+  limit: 4
+  heading: "Empresas que Contratan a Nuestros Alumnos"
+  sub_heading: "Nos encanta ver crecer a nuestros estudiantes, por eso nos esforzamos cada día por tener más aliados, para que puedas trabajar en empresas que te ayuden a seguir creciendo profesionalmente."
+
+why_4geeks:
+  position: 9
+  heading: "¿Por Qué 4Geeks?"
+  sub_heading: ""
+
+# Possible layouts: [two_column_left_image, two_column_right_image]
+components:
+  - name: how-it-works
+    position: 1
+    background: "veryLightBlue2"
+    layout: iconogram
+    swipable: True
+    heading:
+      text: 'Puedes tomar el curso tú mismo o regalarlo a algún amigo interesado en apreder sobre IA.'
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      text: 'Programas para incursionar al campo laboral TI como un especialista en tu area'
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+      style: '{ "textAlign": "center", "width": "60%" }'
+    icons:
+      - icon: "fullstack" 
+        title: "Full-Stack Dev"
+        content: "Aprende a crear aplicaciones web completas, dominando tanto el frontend como el backend de un proyecto."
+
+      - icon: "machine"
+        title: "Data Science"
+        content: "Entra al mundo de la ciencia de datos y el machine learning, adquiriendo habilidades para analizar y visualizar información."
+
+      - icon: "cibersecurity"
+        title: "Ciberseguridad"
+        content: "Conviértete en un especialista en ciberseguridad y prepárate contra posibles ataques en sistemas como Windows o Linux."
+
+      - icon: "applied-ai"
+        title: "IA para Profesionales"
+        content: "Aprende a utilizar la Inteligencia Artificial como herramienta para potenciar tus resultados y optimizar procesos."
+      
+  - name: the-academy
+    position: 2
+    layout: two_column_right
+    swipable: False
+    background: "#fbfbfb" 
+    image:
+      style: '{"backgroundSize": "cover", "background-position": "center", "border": "2px solid black"}'
+      src: "/images/landing/grupo-varias-nacionalidades.jpg"
+      shadow: true
+    section_heading:
+      text: "¿Por Qué Estudiar con 4Geeks Academy en LATAM?"
+      style: '{ "font-size": "30px"}'
+    heading:
+      text: ""
+    sub_heading:
+      text: "4Geeks Academy se ha consolidado como una referencia en la formación tecnológica en LATAM y en el mundo. Nuestros programas están diseñados específicamente para satisfacer la creciente demanda de talento en la región, ofreciendo cursos que van desde Desarrollador Full-Stack hasta Data Science y Machine Learning."
+    content:
+      text: "En 4Geeks Academy, no solo aprenderás a programar, ¡te convertirás en un verdadero profesional! Prepárate para enfrentar nuevos desafíos y adquirir habilidades que te harán destacar en el competitivo mundo tecnológico."
+      font_size: ["16px"]
+      path: ""
+    bullets:
+      items:
+      - text: "LATAM necesita más de 1 millón de profesionales en tecnología para 2025, lo que significa que hay un vasto mercado laboral esperando por ti."
+        icon: "check" 
+      - text: "Nuestros graduados son contratados por empresas de primer nivel en toda la región, lo que demuestra la calidad de nuestra formación y la relevancia de nuestras habilidades en el mercado."
+        icon: "check" 
+      - text: "Desde la inscripción hasta la graduación, te acompañamos en cada paso de tu camino. Además, ofrecemos mentorías personalizadas ilimitadas y de por vida, asegurando que siempre tengas el apoyo que necesitas, incluso después de conseguir tu primer trabajo."
+        icon: "check" 
+    button:
+      text: "Más Información"
+      color: white
+      hover_color: "white"
+      background: "black"
+      path: "#leadform_header"
+
+
+  - name: how-it-works-2
+    position: 8
+    background: "#E3F9FE !important"
+    layout: iconogram
+    swipable: True
+    heading:
+      text: "Objetivos de nuestra academia"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      text: ""
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+      style: '{ "textAlign": "center", "width": "60%" }'
+    text_link: "/"
+    icons:
+      - icon: "stairswflag"
+        title: "Aprendizaje práctico y orientado a la realidad"
+        content: "Nos enfocamos en las herramientas y tecnologías más demandadas por las empresas líderes del sector, lo que te permitirá estar preparado para cualquier trabajo una vez que te gradues."
+      - icon: "timer"
+        title: "Horarios y métodos de pago Flexibles"
+        content: "Ofrecemos un modelo de formación a medio tiempo, para que puedas conciliar tus estudios con otras actividades. Además, también contamos con múltiples formas de financiación para hacer más accesibles los costos de un curso de esta calidad."
+      - icon: "community"
+        title: "Una comunidad apasionada por la tecnología"
+        content: "Desde un principio decidimos crear una comunidad de programadores de calidad con el propósito de que puedas encontrar apoyo, colaboración y oportunidades de networking que te ayudarán a alcanzar tus metas."
+
+  - name: programs-academy
+    position: 6
+    layout: two_column_left
+    swipable: False
+    background: "veryLightBlue" 
+    image:
+      style: '{"backgroundSize": "contain", "background-position": "center"}'
+      src: "/images/landing/landing-programas-bg.png"
+      shadow: false
+    section_heading:
+      text: ""
+      style: '{ "font-size": "30px"}'
+    heading:
+      text: "Formación para el Futuro"
+    sub_heading:
+      text: "Los programas de 4Geeks Academy están diseñados para cubrir la creciente demanda de talento en LATAM, ofreciendo una formación práctica y relevante en las tecnologías más solicitadas:"
+    # content:
+      # text: "Cada uno de nuestros programas está diseñado para brindarte una educación práctica y relevante, asegurando que estés listo para enfrentar los desafíos del mundo laboral. ¡Únete a nosotros y comienza tu camino hacia una carrera exitosa en tecnología!"
+      font_size: ["16px"]
+      path: ""
+    bullets:
+      items:
+      - heading: "Full Stack Developer"
+        text: "Con salarios entre $800 y $6,500 USD al mes, este campo te permite dominar tecnologías clave como JavaScript y Python, utilizadas ampliamente en el desarrollo de aplicaciones completas tanto en el frontend como en el backend"
+        icon: "check" 
+      - heading: "Data Science y Machine Learning"
+        text: "Crece a un 16% anual, con salarios de hasta $12,000 USD. Los científicos de datos son esenciales en la toma de decisiones basadas en datos, utilizando herramientas como Python, Numpy y Pandas."
+        icon: "check" 
+      - heading: "Especialista en ciberseguridad"
+        text: "La demanda crece rápidamente, con sueldos de entre $1,500 y $4,500 USD mensuales. Aprende a proteger sistemas y datos críticos usando herramientas como Wireshark y Metasploit."
+        icon: "check" 
+      - heading: "Applied AI"
+        text: "La inteligencia artificial aplicada transforma industrias a través de soluciones innovadoras, un profesional que sepa aprovechar las herramientas de inteligencia artificial puede multiplicar tus resultados y por consecuencia tus ingresos, muchos profesionales en distintos rubros  utilizan actualmente  la IA."
+        icon: "check" 
+    button:
+      text: "Inscríbete Hoy!"
+      color: white
+      hover_color: "white"
+      background: "black"
+      path: "#leadform_header"

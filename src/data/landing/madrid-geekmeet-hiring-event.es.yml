@@ -6,7 +6,7 @@ meta_info:
   description: "Queremos presentarte al mejor talento tech junior y que tu empresa sea reconocido por cada uno de ellos."
   image: "/images/bg/main-bg.jpg"
   keywords: "Curso de programación, Bootcamp, Bootcamp de Programación, Clases de programación, Aprende a programar, 4Geeks Academy"
-
+  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   template: "landing_a" # <--- choose your landing template
   redirects: # <--- URL redirections to avoid 404 errors
     ["/landing/coding-course"]
@@ -39,9 +39,15 @@ apply_schollarship: # form that is displayed at the end of the landing
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  background: "#FFF1D1"
+  background: "#ffffff"
   tagline: En Marzo llega el evento más esperado del año.
   sub_heading: "GeekMeet primera edición: punto de encuentro entre empresas y el mejor talento tech junior."
+  tagline_color: "#1c1c1c"
+  form_styles:
+    background: "#0084FF"
+    color: "white"
+    button:
+      background: "black"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
 

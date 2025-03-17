@@ -19,7 +19,7 @@ meta_info:
   tag: request_more_info # comma separated, "request_more_info" is the default value
 
 navbar:
-  buttonText: "Descargar información"
+  buttonText: "Solicita más información"
   buttonUrl: "#leadform_bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
   logoUrl: "#"
 
@@ -27,9 +27,9 @@ form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
-  heading: "Descarga más información"
-  motivation: "En minutos, descarga PDF que llegará a tu correo con detalles completos del curso y financiamiento disponible."
-  button_label: Descargar información
+  heading: "Más Información"
+  motivation: "Una vez que hayas completado el formulario, recibirás detalles completos sobre el bootcamp en tu correo."
+  button_label: Más información
   redirect: "/es/gracias/?lang=es"  #you can redirect to another url or entirely diffrent website
 
 apply_schollarship: # form that is displayed at the end of the landing
@@ -39,11 +39,12 @@ apply_schollarship: # form that is displayed at the end of the landing
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  background: "lightBlue"
-  tagline: "Conviertete en especialista en ciberseguridad en México"
-  tagline_color: "#1b1b1b"
+  background: "#ffffff"
+  tagline: "Conviértete en especialista en ciberseguridad en México"
+  tagline_color: "#1c1c1c"
   form_styles:
-    background: "#E3F9FE"
+    background: "#0084FF"
+    color: "white"
     button:
       background: "black"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
@@ -58,7 +59,6 @@ features:
     - Aprende técnicas de seguridad digital y protección de datos.
     - Recibe orientación continua de profesionales en el campo.
     - Proyectos prácticos y mentorías ilimitadas y de por vida.
-    - El salario promedio de un especialista en ciberseguridad es de $36,000 pesos mensuales.
 
 follow_bar:
   position: "top" # top, bottom, hidden
@@ -68,7 +68,7 @@ follow_bar:
     # devices:    XL      LG      MD      SM       XS
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:
-    text: "Descargar información"
+    text: "Solicita más información"
     path: "#leadform_header"
   phone: 
     text: ""
@@ -155,20 +155,20 @@ components:
   - name: new_design_with_bullets
     position: 1
     layout: two_column_right
-    proportions: [7, 5] 
+    proportions: [6, 6] 
     swipable: False
     background: "#fbfbfb"
     image:
-      style: '{"backgroundSize": "cover", "border": "2px solid black"}'
-      src: "/images/landing/ciberseguridad-mexico.webp"
-      shadow: true
+      style: '{"backgroundSize": "contain", "filter":"drop-shadow(10px 10px 0px rgba(0, 132, 255, 1))"}'
+      src: "/images/landing/hombre-con-laptop.webp"
+      shadow: false
     section_heading: 
       text: "Creciente Demanda de Expertos en Ciberseguridad en México"
       style: '{ "font-size": "30px" }'
     heading: 
       text: ""
     sub_heading:
-      text: "La ciberseguridad se ha convertido en un campo esencial en el entorno tecnológico actual, con una alta demanda de especialistas en México. A medida que las amenazas digitales evolucionan, las empresas necesitan profesionales capacitados para proteger sus sistemas y datos. Este curso te prepara para enfrentar los desafíos actuales y aprovechar las oportunidades en un sector en expansión."
+      text: "Los especialistas en ciberseguridad ganan entre $22,000 y $555,000 MXN mensuales, dependiendo de la experiencia y el rol."
     # button: 
     #   text: "Descubre por qué somos tu mejor elección"
     #   color: white
@@ -181,11 +181,11 @@ components:
       path: ""
     bullets:
       items:
-      - text: "La demanda de especialistas en ciberseguridad tuvo un crecimiento anual de 6.8 % durante 2024 en México."
+      - text: "La demanda de especialistas en ciberseguridad tuvo un crecimiento anual de 6.8% durante 2024 en México."
         icon: "circle" 
       - text: "El 47% de los directivos, empresas y demás compañías afirman estar preocupados por su seguridad cibernética."
         icon: "circle" 
-      - text: "Los especialistas en ciberseguridad ganan entre $22,000 y $55,000 MXN mensuales, dependiendo de la experiencia y el rol."
+      - text: "El 91% de las empresas mexicanas reportaron haber sufrido al menos un ciberataque en el último año, lo que demuestra la creciente necesidad de especialistas para proteger los datos y sistemas críticos."
         icon: "circle" 
 
   - name: porque-bootcamp-de-ciberseguridad

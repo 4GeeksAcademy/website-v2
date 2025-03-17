@@ -39,11 +39,12 @@ apply_schollarship: # form that is displayed at the end of the landing
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  background: "lightBlue"
+  background: "#ffffff"
   tagline: "Curso de Ciberseguridad en Chile con 4Geeks Academy"
-  tagline_color: "#1b1b1b"
+  tagline_color: "#1c1c1c"
   form_styles:
-    background: "#E3F9FE"
+    background: "#0084FF"
+    color: "white"
     button:
       background: "black"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
@@ -159,9 +160,9 @@ components:
     swipable: False
     background: "#fbfbfb"
     image:
-      style: '{"backgroundSize": "contain", "border": "2px solid black"}'
-      src: "/images/landing/grafica-necesidad-de-especialistas-en-ciberseguridad-chile-2024-2035.jpg"
-      shadow: true
+      style: '{"backgroundSize": "contain", "filter":"drop-shadow(10px 10px 0px rgba(0, 132, 255, 1))"}'
+      src: "/images/landing/hombre-con-laptop.webp"
+      shadow: false
     section_heading: 
       text: "Oportunidades en el Campo de la Ciberseguridad en Chile"
       style: '{ "font-size": "30px" }'

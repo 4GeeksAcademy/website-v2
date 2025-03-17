@@ -6,7 +6,7 @@ meta_info:
   description: "Aprende ciberseguridad en Uruguay con 4Geeks Academy. Inscríbete hoy y adquiere las habilidades para proteger el futuro digital."
   image: "/images/bg/main-bg.jpg"
   keywords: ""
-  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   template: "landing_a" # <--- choose your landing template
   # <--- URL redirections to avoid 404 errors
   redirects: []
@@ -52,12 +52,13 @@ apply_schollarship: # form that is displayed at the end of the landing
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  background: "lightBlue"
+  background: "#ffffff"
   tagline: "Curso de Ciberseguridad en Uruguay"
-  tagline_color: "#1b1b1b"
   sub_heading: ""
+  tagline_color: "#1c1c1c"
   form_styles:
-    background: "#E3F9FE"
+    background: "#0084FF"
+    color: "white"
     button:
       background: "black"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
@@ -159,9 +160,9 @@ components:
     swipable: False
     background: "#fbfbfb"
     image:
-      style: '{"backgroundSize": "cover", "border": "2px solid black"}'
-      src: "/images/landing/ciberseguridad-uruguay.webp"
-      shadow: true
+      style: '{"backgroundSize": "contain", "filter":"drop-shadow(10px 10px 0px rgba(0, 132, 255, 1))"}'
+      src: "/images/landing/hombre-con-laptop.webp"
+      shadow: false
     section_heading: 
       text: "La Necesidad de Especialistas en Ciberseguridad en Uruguay"
       style: '{ "font-size": "30px" }'

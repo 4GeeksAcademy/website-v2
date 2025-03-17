@@ -9,6 +9,7 @@ meta_info:
   show_in_apply: false
   redirects: []
   related_clusters: [""]
+  template: "course-fullstack-at-your-own"
 
 apply_form:
   label: Curso Full Stack Developer a tu propio ritmo
@@ -186,7 +187,7 @@ geeks_vs_others:
   sub_heading_link: ""
 
 why_4geeks:
-  heading: Porqué 4Geeks Academy
+  heading: Por qué 4Geeks Academy
   sub_heading: ""
 
 ## GEEK PAL AND GEEK FORCE BOXES

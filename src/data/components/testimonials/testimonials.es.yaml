@@ -73,7 +73,7 @@ testimonials:
     testimonial_date: ""
     rating: 5
     student_thumb: "../../../../static/images/testimonials/alan-gaston-sosa.webp"
-    student_video: "https://www.youtube.com/watch?v=V8LPdbQJ2hM" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    student_video: "https://www.youtube.com/watch?v=mj_wlbB5koY" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     hidden: false
     linkedin_url: "https://www.linkedin.com/in/gaston-sosa-458658269/"

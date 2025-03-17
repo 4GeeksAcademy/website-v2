@@ -1,12 +1,11 @@
 meta_info:
   slug: conding-bootcamp-colombia # <--- URL 4geeksacademy.com/es/landing/conding-bootcamp-colombia
-
-  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   # This will show on social media when shared
-  title: "Bootcamp de programación en Colombia."
+  title: "Bootcamp de programación en Colombia"
   description: "Mejora tus habilidades en programación o aprende a programar desde cero y recibe soporte técnivo y profesional de por vida."
   image: "/images/bg/main-bg.jpg"
-  keywords: "Bootcamp de Programación, Bootcamp programacion Colombia, Bootcamp de python, Bootcamp de React y Javascript, Bootcamp de Informática, Coding Bootcamp, 4Geeks Academy"
+  keywords: ""
 
   template: "landing_a" # <--- choose your landing template
   redirects: # <--- URL redirections to avoid 404 errors
@@ -39,10 +38,15 @@ apply_schollarship: # form that is displayed at the end of the landing
   image: "../../../static/images/landing/apply.png"
 
 header_data:
-  background: "#FFF1D1"
-  tagline: ¡Bienvenido a 4Geeks Academy! La academia de programación líder en el mundo
-  tagline_color: "black"
-  sub_heading: Con más de 7 años de experiencia tenemos presencia en USA, Europa y Latinoamérica. En nuestra academia, te enseñamos habilidades y destrezas relevantes para el futuro
+  background: "#ffffff"
+  tagline: Bootcamp de programación en Colombia
+  sub_heading: ""
+  tagline_color: "#1c1c1c"
+  form_styles:
+    background: "#0084FF"
+    color: "white"
+    button:
+      background: "black"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   # background_image: "../../../static/images/bg/main-bg.jpg"
   #video: "https://www.videoask.com/fm984j5nz"
@@ -53,27 +57,35 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-    - Un Desarrollador en Madrid gana 24.000€ al año.
+    - Un programador Full Stack Developer en Colombia gana en promedio es de COP 4,966,667
     - Hay más vacantes que en cualquier otra industria
     - Impulsa tu Carrera y hazte programador de software
 
 short_badges:
-  - name: "Premios Tecnologia Siglo XXI"
+  - name: "Top Online Full-Stack Bootcamps Of 2024"
     url: ""
-    image: "../../../static/images/awards/premios_tecnologia_sigloxxi.png"
-    alt: "Mejor centro de Coding Bootcamp"
-  - name: "Course Report"
+    image: "../../../static/images/badges/forbes-logo-award.png"
+    alt: "We have been selected as one of the Top Online Coding Bootcamps by Forbes."
+  - name: "Best for Spanish speakers Of 2024 by Fortune"
+    url: ""
+    image: "../../../static/images/badges/fortune-logo.png"
+    alt: "Recognized by Fortune as one of the Top Coding Bootcamps"
+  - name: "Top Coding Bootcamps Newsweek"
+    url: ""
+    image: "../../../static/images/badges/newsweek.webp"
+    alt: "Top Coding Bootcamps Newsweek"
+  - name: "Best Coding Bootcamp Course Report 2024"
     url: ""
     image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
-    alt: "Top Coding Bootcamps Course Report"
-  - name: "Switchup"
-    url: ""
-    image: "../../../static/images/badges/switchup-badge-2023.png"
-    alt: "Best coding bootcamp Switchup 2023"
-  - name: "Florida Department of Education"
+    alt: "Best Coding Bootcamp Course Report 2024"
+  - name: "Licensed by the Florida Department of Education"
     url: ""
     image: "../../../static/images/badges/licensed.png"
-    alt: "Florida Department of Education"
+    alt: "Licensed by the Florida Department of Education"
+  - name: "ARP Certificate"
+    url: ""
+    image: "../../../static/images/badges/arp-logo-certification.png"
+    alt: "ARP Certificate"
 
 follow_bar:
   position: "top" # top, bottom, hidden
@@ -107,7 +119,7 @@ why_4geeks:
 
 badges:
   position: 3
-  heading: "4Geeks Academy cuenta con premios y reconocimientos de validan su excelencia"
+  heading: "Premios y reconocimientos de validan nuestra excelencia"
 
 who_is_hiring:
   position: 6
@@ -126,7 +138,7 @@ components:
     content:
       text: "Al aprender a programar con 4Geeks Academy tendrás clases online completamente en vivo, la oportunidad de certificarte internacionalmente en poco tiempo y de conseguir tu primer empleo como programador con nuestro apoyo. Descubre cómo puede ser tu vida como un profesional en programación con 4Geeks Academy, ¡comienza ahora!"
     button:
-      text: "Aplicar"
+      text: "Más Información"
       color: "blue"  
       path: "#leadform_header"
 
@@ -146,8 +158,8 @@ components:
       text: "Desde su creación en Colombia, 4Geeks Academy siempre ha tenido como objetivo brindar oportunidades de aprendizaje, facilitar opciones de financiamiento y establecer asociaciones públicas para ofrecer oportunidades laborales. Si tienes alguna pregunta sobre cómo podemos contribuir a tu futuro profesional, no dudes en contactarnos. Estaremos encantados de ayudarte en todo lo posible."
       font_size: ["16px"]
     button:
-      text: "Experiencias reales"
+      text: "Más Información"
       background: black
       color: white
       hover_color: "#white"
-      path: "#why_4geeks"
+      path: "#leadform_bottom"

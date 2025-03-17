@@ -35,7 +35,13 @@ form:
 header_data:
   tagline: Learn To Code
   sub_heading: "Become a software developer and get a job in tech in one of the best coding bootcamps around the world."
-  background_image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg"
+  tagline_color: "#1c1c1c"
+  form_styles:
+    background: "#0084FF"
+    color: "white"
+    button:
+      background: "black"
+  # background_image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg"
   image_filter: brightness(0.25)
 
 features:
