@@ -67,7 +67,7 @@ const Iframe = styled(YouTube)`
 
 const Thumbnail = styled.img`
   display: block;
-  object-fit: cover;
+  object-fit: contain;
 `;
 
 const Image = styled.div`
@@ -223,8 +223,12 @@ const Player = ({
                 onPlaybackQualityChange={onPlaybackQualityChange}
                 height_xxs="300px"
                 height_tablet="400px"
-                height_md="520px"
-                height_lg="675px"
+                height_md="420px"
+                height_lg="450px"
+                width="560px"
+                width_tablet="560px"
+                width_md="560px"
+                width_lg="560px"
                 opts={{
                   // padding: "125px 0 0",
                   width: "100%",

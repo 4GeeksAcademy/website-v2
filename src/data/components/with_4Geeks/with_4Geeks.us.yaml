@@ -47,11 +47,9 @@ with:
     description: "Joao shares his experience receiving coding mentorship as a student, after graduating, and in his current job."
     image: ../../../../static/images/staff/joao.png
     alt: ""
-    # video: "https://www.youtube.com/watch?v=MBXqEnhodx0" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
-    video: "https://www.youtube.com/watch?v=DrzRJICxjOU" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     video_height: 173px
     location: ["downtown-miami", "all"]
-    # video: "https://www.youtube.com/watch?v=_rtJgxuY4i4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    video: "https://www.youtube.com/watch?v=MBXqEnhodx0" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     icon: address
     footer:
       is_image: true

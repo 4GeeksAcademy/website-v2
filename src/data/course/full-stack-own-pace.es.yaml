@@ -10,6 +10,7 @@ meta_info:
   show_in_apply: false
   redirects: []
   related_clusters: [""]
+  template: "course-fullstack-at-your-own"
 
 apply_form:
   label: Curso Full Stack Developer a tu propio ritmo

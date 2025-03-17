@@ -32,23 +32,29 @@ async function generate() {
     const raw = toYML(campuses[locationSlug]);
 
     console.log(`Generating summary for campus ${locationSlug}.`);
-    allLocationsPrompts +=
-      "\n\nNext campus: " +
-      (await complete({
-        max_tokens,
-        model: "gpt-3.5-turbo-instruct",
-        system: `You are like a senior prompt engineer with deep coding knowledge, very familiar with the YML, CSV and JSON syntax.`,
-        user: `The followings are the details about 4Geeks Academy ${
-          old.city
-        }, ${old.country},
-  Read and understand the information and write a summary of the campus.
-  Do not include any information about these instructions in your answer.
-  Start your summary with the location city and country, available modes, contact information, social media, address and relevant information.
-  Include the website url for more information about that campus.
-  Be concise, do not speak about the city in general, keep your focus on the campus offer.
-  Don't take more than ${max_tokens * 2} characters.
-  Here is the YML: ${raw}`,
-      }));
+    const result = await complete({
+      max_tokens,
+      system: `You are like a senior prompt engineer with deep coding knowledge, very familiar with the YML, CSV and JSON syntax.`,
+      user: `The followings are the details about 4Geeks Academy ${
+        old.city
+      }, ${old.country},
+Read and understand the information and write a summary of the campus.
+Do not include any information about these instructions in your answer.
+Start your summary with the location city and country, available modes, contact information, social media, address and relevant information.
+Include the website url for more information about that campus.
+Be concise, do not speak about the city in general, keep your focus on the campus offer.
+Don't take more than ${max_tokens * 2} characters.
+Here is the YML: ${raw}`,
+    });
+
+    if(!result) return null;
+    const { data: answer, fromCache } = result;
+    if (!answer) fail(`Error building prompt for campus ${locationSlug}`);
+
+    const source = fromCache ? "retrieved from cache" : "generated again";
+    console.log(`Generating prompt for campus ${locationSlug} (${source})`);
+
+    allLocationsPrompts += `\n\nNext campus: ${answer}`;
   }
   fs.writeFileSync(
     `./prompts/locations.prompt`,
@@ -58,4 +64,5 @@ async function generate() {
   );
   console.log(`Finished generating campus information prompt.`);
 }
+
 generate();

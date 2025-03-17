@@ -21,6 +21,7 @@ meta_info:
       "/es/course/desarrollo-web-full-stack-bootcamp-full-time",
     ]
   related_clusters: ["desarrollador-full-stack","trends-and-tech"]
+  template: "course-fullstack-ft"
 
 apply_form:
   label: Full Stack Developer

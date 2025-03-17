@@ -633,49 +633,49 @@ const addAdditionalRedirects = ({ graphql, actions }) => {
 };
 
 const getMetaFromPath = ({ url, meta_info, frontmatter }) => {
-  let slugigy = (entity) => {
-    let slugMap = {
-      location: "coding-campus",
-      course: "coding-bootcamps",
-    };
-    return slugMap[entity] || entity;
+  let slugMap = {
+    course: "coding-bootcamps",
+    location: "coding-campus",
   };
 
   //if its a blog post the meta_info comes from the front-matter
-  if (typeof meta_info == "undefined") meta_info = frontmatter;
+  if (!meta_info && frontmatter) meta_info = frontmatter;
 
+  // Captura: [1] -> type, [2] -> file_name, [3] -> lang
   const regex = /.*\/([\w-]*)\/([\w-]+)\.?(\w{2})?\//gm;
   let m = regex.exec(url);
   if (!m) return false;
-  const _cluster =
-    meta_info !== undefined && typeof meta_info.cluster === "string"
-      ? meta_info.cluster
-      : "post";
+
+  const _cluster = meta_info?.cluster || "post";
   const type = frontmatter ? _cluster : m[1];
 
   const lang = m[3] || "us";
-  const customSlug =
-    meta_info !== undefined && typeof meta_info.slug === "string";
-  const file_name = m[2]; // + (lang == "es" ? "-es": "");
-  const slug = customSlug ? meta_info.slug : file_name;
-  const template = type === "page" ? file_name : type;
+  const file_name = m[2];
+  const slug = meta_info?.slug ? meta_info.slug : file_name;
 
-  const pagePath =
-    type === "page"
-      ? `/${lang}/${slug}`
-      : `/${lang}/${slugigy(template)}/${slug}`;
+  let middle = "";
+  if (type === "page") {
+    middle = "";
+  } else {
+    middle = slugMap[type] || type;
+  }
 
-  const meta = {
+  const pagePath = middle ? `/${lang}/${middle}/${slug}` : `/${lang}/${slug}`;
+  const finalTemplate = meta_info?.template
+    ? meta_info.template
+    : type === "page"
+    ? file_name
+    : type;
+
+  return {
     lang,
     slug,
     file_name: `${file_name}.${lang}`,
-    template,
+    template: finalTemplate,
     type,
     url,
     pagePath,
   };
-
-  return meta;
 };
 
 function buildTranslations({ edges }) {
