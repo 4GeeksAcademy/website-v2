@@ -637,45 +637,47 @@ const Apply = (props) => {
             />
             {session?.location &&
               formData.location.value &&
-              locations?.find(({ value }) => value === formData.location.value).consents?.map((consent, index) => {
-                if (consent.active)
-                  return (
-                    <Div position="relative" margin="10px 0 0 0">
-                      <input
-                        required
-                        name="isGoing"
-                        type="checkbox"
-                        checked={consentValue[index]}
-                        onChange={() => {
-                          const updatedConsentValue = [...consentValue];
-                          updatedConsentValue[index] = !consentValue[index];
-                          setConsentValue(updatedConsentValue);
-                          setVal({
-                            ...formData,
-                            consents: {
-                              ...formData.consents,
-                              value: updatedConsentValue,
-                            },
-                          });
-                        }}
-                        style={{
-                          width: "24px",
-                          height: "24px",
-                          top: "10px",
-                          left: "7px",
-                        }}
-                      />
-                      <Paragraph
-                        fontSize="11px"
-                        margin="5px 0 0 5px"
-                        textAlign="left"
-                        dangerouslySetInnerHTML={{
-                          __html: consent.message,
-                        }}
-                      />
-                    </Div>
-                  );
-              })}
+              locations
+                ?.find(({ value }) => value === formData.location.value)
+                .consents?.map((consent, index) => {
+                  if (consent.active)
+                    return (
+                      <Div position="relative" margin="10px 0 0 0">
+                        <input
+                          required
+                          name="isGoing"
+                          type="checkbox"
+                          checked={consentValue[index]}
+                          onChange={() => {
+                            const updatedConsentValue = [...consentValue];
+                            updatedConsentValue[index] = !consentValue[index];
+                            setConsentValue(updatedConsentValue);
+                            setVal({
+                              ...formData,
+                              consents: {
+                                ...formData.consents,
+                                value: updatedConsentValue,
+                              },
+                            });
+                          }}
+                          style={{
+                            width: "24px",
+                            height: "24px",
+                            top: "10px",
+                            left: "7px",
+                          }}
+                        />
+                        <Paragraph
+                          fontSize="11px"
+                          margin="5px 0 0 5px"
+                          textAlign="left"
+                          dangerouslySetInnerHTML={{
+                            __html: consent.message,
+                          }}
+                        />
+                      </Div>
+                    );
+                })}
             <Div width="fit-content" margin="10px auto 0 auto">
               <ReCAPTCHA
                 ref={captcha}
