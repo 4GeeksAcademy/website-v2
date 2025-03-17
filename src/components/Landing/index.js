@@ -9,6 +9,7 @@ import { requestSyllabus } from "../../actions";
 import ReactPlayer from "../ReactPlayer";
 import TestimonialsCarrousel from "../Testimonials";
 import With4Geeks from "../With4Geeks";
+import FaqCard from "../FaqCard";
 // import WhyPython from '../WhyPython';
 import AlumniProjects from "../AlumniProjects";
 import SuccessStories from "../SuccessStories";
@@ -22,6 +23,7 @@ import About4Geeks from "../About4Geeks";
 import IconsBanner from "../IconsBanner";
 import Icon from "../Icon";
 import ChooseYourProgram from "../ChooseYourProgram";
+import JobGuaranteeSmall from "../JobGuaranteeSmall";
 import StarRating from "../StarRating";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { smartRedirecting, transferQuerystrings } from "../../utils/utils.js";
@@ -38,7 +40,6 @@ const Title = ({ id, title, paragraph }) => {
     <GridContainer
       id={id}
       margin={paragraph ? "40px 0 20px 0" : "40px 0 30px 0"}
-      margin_tablet={paragraph ? "80px 0 20px 0" : "80px 0 60px 0"}
     >
       <H2 type="h2">{title}</H2>
       {paragraph && <Paragraph margin="26px 0">{paragraph}</Paragraph>}
@@ -321,27 +322,24 @@ export const landingSections = {
     );
   },
 
-  iconogram: ({ pageContext, yml, index }) => {
+  iconogram: ({ yml, index }) => {
     return <Iconogram yml={yml} index={index} />;
   },
 
-  badges: ({ session, data, pageContext, yml, course, index }) => {
-    let dataYml =
-      data.allLandingYaml.edges.length !== 0 &&
-      data.allLandingYaml.edges[0].node.badges !== null
-        ? data.allLandingYaml.edges
-        : data.allDownloadableYaml.edges;
-    let badges = dataYml[0].node.badges;
+  badges: ({ pageContext, yml, index }) => {
+    const title = yml.heading?.text || yml.heading;
+    const subHeading = yml.sub_heading?.text || yml.sub_heading;
     return (
       <React.Fragment key={index}>
-        <Div background={Colors.verylightGray2} width="100%">
+        <Div width="100%">
           <Badges
             link
-            // wrapped_images={true}
             id="badges"
+            variant="squares"
             lang={pageContext.lang}
-            background={Colors.verylightGray2}
-            paragraph={badges.heading}
+            title={title}
+            paragraph={subHeading}
+            imageBorder={`1px solid ${Colors.lightGray2}`}
             short_text
             padding="60px 0"
             padding_tablet="68px 0"
@@ -353,7 +351,7 @@ export const landingSections = {
     );
   },
 
-  rating_reviews: ({ session, data, pageContext, yml, course, index }) => {
+  rating_reviews: ({ data, pageContext, yml, course, index }) => {
     let dataYml =
       data.allLandingYaml.edges[0] || data.allDownloadableYaml.edges[0];
     let ratingReviews = dataYml.node.rating_reviews;
@@ -370,7 +368,6 @@ export const landingSections = {
           padding="60px 0 60px 0"
           display="flex"
           flexDirection="column"
-          borderBottom="3px solid #F5F5F5"
           margin="auto"
           width="100%"
           maxWidth="1280px"
@@ -529,16 +526,26 @@ export const landingSections = {
   geeks_vs_others: ({ session, pageContext, yml, course, index }) => {
     return (
       <React.Fragment key={index}>
-        <Title
-          id="geeks_vs_others"
-          title={yml.heading}
-          paragraph={yml.paragraph}
-        />
         <GeeksVsOthers
           lang={pageContext.lang}
-          limit={yml.total_rows}
-          title={yml.heading}
-          paragraph={yml.sub_heading}
+          limit={yml?.total_rows || 5}
+          title={yml?.heading}
+          paragraph={yml?.sub_heading}
+          mainBackround={Colors.white}
+          thirdBackground="#F9F9F9"
+          border={`1px solid ${Colors.lightGray}`}
+          borderRadius="4px"
+          style={{
+            background: Colors.veryLightBlue3,
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            width: "100%",
+            padding: "20px",
+            padding_table: "20px",
+            padding_lg: "20px 40px",
+            margin: "0 auto",
+          }}
         />
       </React.Fragment>
     );
@@ -739,27 +746,59 @@ export const landingSections = {
     );
   },
 
-  why_4geeks: ({ session, pageContext, yml, index }) => (
-    <Div
-      id="why_4geeks"
-      key={index}
-      flexDirection="column"
-      margin="0"
-      padding="0"
-    >
-      <With4Geeks
-        text={yml.footer?.text}
-        sessionLocation={
-          session &&
-          session.location &&
-          session.location.breathecode_location_slug
-        }
-        text_link={yml.footer?.text_link}
-        lang={pageContext.lang}
-        playerHeight="auto"
+  job_guarantee_small: ({ data, yml, index }) => {
+    const { heading } = yml;
+
+    const { icons, link, title } = data.allJobGuaranteeSmallYaml.edges[0].node;
+    const formatedIcons = icons.map(({ title, icon }) => ({
+      icon,
+      content: title,
+    }));
+    return (
+      <JobGuaranteeSmall
+        key={`job-guarantee-small-${index}`}
+        content={{
+          title: heading?.text || title,
+          link,
+          icons: formatedIcons,
+        }}
       />
-    </Div>
+    );
+  },
+
+  faq: ({ data, yml, index }) => (
+    <FaqCard
+      key={`faq-${index}`}
+      faqs={data.allFaqYaml.edges[0].node.faq}
+      topicSlug={yml.topic}
+    />
   ),
+
+  why_4geeks: ({ session, pageContext, yml, index }) => {
+    const title = yml.heading?.text || yml.heading;
+    return (
+      <Div
+        id="why_4geeks"
+        key={index}
+        flexDirection="column"
+        margin="0"
+        padding="0"
+      >
+        <With4Geeks
+          text={yml.footer?.text}
+          sessionLocation={
+            session &&
+            session.location &&
+            session.location.breathecode_location_slug
+          }
+          text_link={yml.footer?.text_link}
+          lang={pageContext.lang}
+          playerHeight="auto"
+          title={title}
+        />
+      </Div>
+    );
+  },
   alumni_projects: ({ session, data, pageContext, yml, index }) => (
     <Div
       id="alumni_projects"
@@ -812,6 +851,8 @@ export const landingSections = {
         margin_xs="60px 0 40px 0"
       >
         <OurPartners
+          multiLine
+          variant="carousel"
           images={hiring.partners.images}
           margin="0"
           padding="0 ​0 75px 0"
@@ -1029,15 +1070,6 @@ export const landingSections = {
   ),
   columns: ({ session, data, pageContext, yml, index }) => (
     <Div id="columns" key={index} flexDirection="column" margin="50px 0">
-      {/* <Title
-            size="10"
-            title={yml.heading.text}
-            paragraph={yml.sub_heading}
-            paragraphColor={Colors.darkGray}
-            maxWidth="800px"
-            margin="auto"
-            variant="primary"
-        /> */}
       <Columns columns={yml.columns} proportions={yml.proportions} />
     </Div>
   ),

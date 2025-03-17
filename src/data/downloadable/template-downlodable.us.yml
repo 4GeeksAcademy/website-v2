@@ -96,7 +96,7 @@ in_the_news:
 
 why_4geeks:
   position: 2
-  heading: "Porqué 4Geeks"
+  heading: "Por qué 4Geeks"
   sub_heading: "Porque somos los mejores"
   footer:
     text: "Ver opciones de financiación"
@@ -332,7 +332,7 @@ components:
 
 why_python:
   position: 7
-  heading: "¿Porqué enseñamos Python?" # optional or set to white space to hide
+  heading: "Por qué enseñamos Python?" # optional or set to white space to hide
   sub_heading: " " # optional or set to white space to hide
 
 testimonial:

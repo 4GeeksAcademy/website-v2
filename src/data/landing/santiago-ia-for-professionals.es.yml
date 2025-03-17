@@ -40,10 +40,16 @@ apply_schollarship: # form that is displayed at the end of the landing
 # jumbotron on the top (cannot be commented out)
 header_data:
   tagline: Aprende a utilizar inteligencia artificial en tu día a día y potencia tus resultados
-  tagline_color: "#FFFFFF"
   sub_heading: "Aprende a sacar provecho a las herramientas actuales y optimiza tus resultados en tiempo record"
+  background: "#ffffff"
+  tagline_color: "#1c1c1c"
+  form_styles:
+    background: "#0084FF"
+    color: "white"
+    button:
+      background: "black"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
-  background_image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg"
+  # background_image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg"
   image_filter: brightness(0.1)
 
 features:

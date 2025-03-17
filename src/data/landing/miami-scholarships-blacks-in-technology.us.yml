@@ -8,7 +8,7 @@ meta_info:
   image: "/images/bg/remote.jpeg"
   keywords: "Learn to code, 4Geeks academy, scholarship"
 
-  template: "landing_nonav" # <--- choose your landing template
+  template: "landing_a" # <--- choose your landing template
   redirects: ["/bit"] # <--- URL redirections to avoid 404 errors
 
   # Set a particular course or location to the landing page
@@ -35,19 +35,24 @@ form:
 # jumbotron on the top (cannot be commented out)
 header_data:
   tagline: "$30k+ in scholarships"
-  tagline_color: "white"
+  tagline_color: "#1c1c1c"
+  form_styles:
+    background: "#0084FF"
+    color: "white"
+    button:
+      background: "black"
   sub_heading: ""
-  partner_logo_url: "../../../static/images/partner/bit-logo.png" # optional
+  partner_logo_url: "../../../static/images/partner/bit-logo-black.png" # optional
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
-  background_image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg" # optional
-  background: "#000000" #background property, it can be a hex color
+  # background_image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg" # optional
+  background: "#ffffff" #background property, it can be a hex color
   image_filter: brightness(0.25)
 
 features:
   marginTop: 20px #<-- separation between tagline and the bullets
 
   #                                         up   left down  right
-  styles: '{ "fontSize": "15px", "margin": "10px 0px 10px 0px", "color": "white" }'
+  styles: '{ "fontSize": "15px", "margin": "10px 0px 10px 0px"}'
   text: BIT is offering more than $30k in scholarships to study Web Development or AI at 4Geeks Academy. 8 scholaships will be awarded based on the results of the selection process. Whether you want to start your career as a Junior programmer or upskill and become a Senior Developer or AI/ML Engineer, don't miss out on this amazing opportunity.
   bullets:
     - 8 scholarships in total

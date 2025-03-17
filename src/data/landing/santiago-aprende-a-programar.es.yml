@@ -6,7 +6,7 @@ meta_info:
   description: "La programación es un conocimiento escencial para tu éxito, aprende a programar con 4Geeks Academy."
   image: "/images/bg/main-bg.jpg"
   keywords: "Aprende a programar, aprende programación, Aprende a codificar, Aprende python y javascript, Curso de Informática, Coding Bootcamp, 4Geeks Academy"
-
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   template: "landing_a" # <--- choose your landing template
   redirects: # <--- URL redirections to avoid 404 errors
     ["/landing/aprende-a-programar-santiago"]
@@ -40,9 +40,15 @@ apply_schollarship: # form that is displayed at the end of the landing
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  background: "#FFF1D1"
+  background: "#ffffff"
   tagline: Aprende a programar 
   sub_heading: ""
+  tagline_color: "#1c1c1c"
+  form_styles:
+    background: "#0084FF"
+    color: "white"
+    button:
+      background: "black"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
 

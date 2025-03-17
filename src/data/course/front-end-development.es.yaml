@@ -105,21 +105,19 @@ details:
     
       list:
         - label: "Duración"
-          content:  "12 semanas"
+          content: "12 semanas"
           icon: "duration-icon"
         - label: "Clases"
-          content: "3 Clases semanales"
-          icon: "book"
+          content: "3 clases semanales"
+          icon: "book-2"
         - label: "Certificado"
-          content: "Nuestros certificados son  reconocidos por múltiples instituciones."
-          link_text: ""
-          link: ""
-          icon: "certificate-icon"
+          content: "Nuestros certificados son reconocidos por múltiples instituciones."
+          icon: "certification"
         - label: "Requisitos"
-          content: "Tan solo necesitas un ordenador y una conexión a internet"
+          content: "Tan solo necesitas un ordenador y una conexión a internet."
           icon: "contract-checked"
         - label: "Idioma"
-          content: "Puedes elegir entre inglés y español para consumir el plan de estudios y el contenido. Las clases se imparten en el idioma oficial de tú campus."
+          content: "Puedes elegir entre inglés y español para consumir el plan de estudios y el contenido."
           icon: "language"
           
   heading: DETALLES DEL PROGRAMA PART-TIME
@@ -201,7 +199,7 @@ geeks_vs_others:
   sub_heading_link: ""
 
 why_4geeks:
-  heading: Porqué 4Geeks Academy
+  heading: Por qué 4Geeks Academy
   sub_heading: ""
 
 ## GEEK PAL AND GEEK FORCE BOXES

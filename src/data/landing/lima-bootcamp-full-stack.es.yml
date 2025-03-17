@@ -41,10 +41,16 @@ apply_schollarship: # form that is displayed at the end of the landing
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  background: "#FFF1D1"
+  background: "#ffffff"
   partner_logo_url: "../../../static/images/landing/logos-promin2.png"
   tagline: ProInnóvate y 4Geeks Academy
   sub_heading: "Si estás interesado en unirte a 4Geeks y vienes motivado por el proyecto con Proinnóvate, por favor aplica, agrega el Referral Key  'Proinnóvate' y te daremos una oferta muy especial"
+  tagline_color: "#1c1c1c"
+  form_styles:
+    background: "#0084FF"
+    color: "white"
+    button:
+      background: "black"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
 

@@ -13,7 +13,7 @@ meta_info:
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
   utm_course: ["full-stack", "datascience-ml", "cybersecurity"]
-  utm_location: ["barcelona-spain", "europe", "madrid-spain", "malaga-spain", "valencia-spain"]
+  utm_location: ["malaga-spain", "valencia-spain","barcelona-spain", "madrid-spain"]
   automation: soft # comma separated, "soft" is the default value
   tag: request_more_info # comma separated, "request_more_info" is the default value
 
@@ -26,23 +26,28 @@ form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
-  heading: "Rellena el formulario y optén más información"
+  heading: "Más Información"
   motivation: "Una vez completado el formulario, alguien de nuestro equipo se pondrá en contacto contigo en breves minutos a través de un correo electrónico."
   button_label: Solicita tu Plaza
-  redirect: null #you can redirect to another url or entirely diffrent website
+  redirect: /es/gracias #you can redirect to another url or entirely diffrent website
 
 apply_schollarship: # form that is displayed at the end of the landing
   # title: "Apoyo Profesional Ilimitado"
   imageSide: "left"
-  image: "../../../static/images/landing/apply.png"
+  image: "../../../static/images/landing/hombre-joven-con-laptop.webp"
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  background: "#FFF1D1"
+  background: "#ffffff"
   tagline: ¡Transforma tu futuro con 4Geeks Academy!
-  tagline_color: "black"
+  tagline_color: "#1c1c1c"
+  form_styles:
+    background: "#0084FF"
+    color: "white"
+    button:
+      background: "black"
   sub_heading: "Aprende, Crece y Conviértete en un Profesional del mundo Tech"
-  badge: "../../../static/images/badges/european_excellence_education_w_bg.png"
+  badge: "../../../static/images/badges/logo-excel.png"
   # image_filter: brightness(0.1)
 
 features:
@@ -117,7 +122,7 @@ badges:
 
 geeks_vs_others:
   position: 7
-  heading: "¿Qué diferencia a nuestro bootcamp de programación de los demás?"
+  heading: "Compara a 4Geeks con otros Bootcamps"
   paragraph: ""
   total_rows: 5
 
@@ -162,13 +167,13 @@ why_4geeks:
 components:
   - name: new_design_with_bullets
     position: 1
-    proportions: [6, 4]
-    layout: two_column_right 
+    proportions: [6, 6]
+    layout: two_column_left 
     swipable: False
     background: "#fbfbfb"
     image:
       style: '{"backgroundSize": "contain;"}'
-      src: "/images/landing/hombre-con-laptop.png"
+      src: "/images/landing/hombre-joven-con-laptop-senalando.webp"
       shadow: false
     section_heading: 
       text: ""
@@ -223,12 +228,17 @@ components:
         title: "Ciberseguridad"
         content: "Conviértete en un especialista en ciberseguridad y prepárate contra posibles ataques en sistemas como Windows o Linux."
 
+      - icon: "applied-ai"
+        title: "IA para Profesionales"
+        content: "Aprende a utilizar la Inteligencia Artificial como herramienta para potenciar tus resultados y optimizar procesos."
+      
+
   - name: two_columns_video
     position: 7
-    proportions: [7, 5]
-    layout: two_column_left 
+    proportions: [5, 7]
+    layout: two_column_right
     swipable: False
-    background: "veryLightBlue2"
+    background: "#fbfbfb"
     image:
       style: '{"backgroundSize": "cover"}'
       src: "/images/testimonials/diego-fernandez-testimonial.jpg"
@@ -238,7 +248,7 @@ components:
       text: ""
       style: '{ "font-size": "30px" }'
     heading: 
-      text: "Descubre la historía de uno de nuestros estudiantes"
+      text: "Descubre la historia de uno de nuestros estudiantes"
     sub_heading:
       text: "Descubre la historia de Diego Fernández, ahora Full Stack Developer. Diego nos cuenta su experiencia en 4Geeks Academy, incluyendo las mentorías, la comunidad y su perspectiva."
     content: 

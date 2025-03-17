@@ -12,7 +12,7 @@ meta_info:
 
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
-  utm_course: ["full-stack", "datascience-ml", "cybersecurity", "applied-ai", "coding-introduction"]
+  utm_course: ["full-stack", "datascience-ml", "cybersecurity", "applied-ai"]
   utm_location: [
     "bogota-colombia",
     "buenosaires-argentina",
@@ -49,13 +49,17 @@ apply_schollarship: # form that is displayed at the end of the landing
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  tagline: ¡Impulsa tu carrera en tecnología con 4Geeks!
-  sub_heading: ""
-  background: "lightBlue"
+  tagline: "Cambia tu carrera con el bootcamp #1 en LATAM"
+  sub_heading: "Más de 5.000 estudiantes comprueban que somos los mejores"
+  background: "#ffffff"
+  tagline_color: "#1c1c1c"
   form_styles:
-    background: "#E3F9FE"
+    background: "#0084FF"
+    color: "white"
+    button:
+      background: "black"
   # background_image: "../../../static/images/bg/pricing-bg.jpg"
-  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+  badge: "../../../static/images/badges/course-report-best-coding-bootcamps-badge-2025.png"
   image_filter: brightness(0.1)
 
 features:
@@ -64,9 +68,9 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-    - Desde desarrollo Full-Stack hasta Data Science, Ciberseguridad y Applied AI.
-    - Obtén una certificación reconocida que abrirá puertas en toda LATAM y más allá.
-    - orientación continua e ilimitada de expertos de la industria de por vida.
+    - "Elige uno: Full Stack Development, Data Science & Machine Learning, Ciberseguridad o Inteligencia Artificial Aplicada"
+    - "Gradúate y obtén el mejor certificado de la industria"
+    - "Acceso ilimitado y de por vida a Mentores, Profesores y Acompañamiento Profesional"
 
 follow_bar:
   position: "top" # top, bottom, hidden
@@ -79,7 +83,8 @@ follow_bar:
     text: "Más Información"
     path: "#leadform_header"
   phone:
-    text: "llama"
+    text: ""
+    number: " "
 
 short_badges:
   - name: "Top Online Full-Stack Bootcamps Of 2024"
@@ -112,10 +117,10 @@ short_badges:
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
 #
 
-program_details:
-  position: 5
-  heading: "Programa de Contenido Full-Stack: Tu Puerta de Entrada al Futuro Tecnológico"
-  sub_heading: "Conviértete en un profesional altamente demandado en la región, dominando las habilidades clave para el desarrollo web y mucho más."
+# program_details:
+#   position: 5
+#   heading: "Programa de Contenido Full-Stack: Tu Puerta de Entrada al Futuro Tecnológico"
+#   sub_heading: "Conviértete en un profesional altamente demandado en la región, dominando las habilidades clave para el desarrollo web y mucho más."
 
 badges:
   position: 4
@@ -161,7 +166,7 @@ who_is_hiring:
 
 why_4geeks:
   position: 9
-  heading: "Porqué 4Geeks"
+  heading: "¡Escúchalo de nuestros alumnos!"
   sub_heading: ""
 
 # Possible layouts: [two_column_left_image, two_column_right_image]
@@ -201,27 +206,29 @@ components:
     swipable: False
     background: "#fbfbfb" 
     image:
-      style: '{"backgroundSize": "cover", "background-position": "center", "border": "2px solid black"}'
-      src: "/images/landing/grupo-varias-nacionalidades.jpg"
-      shadow: true
+      style: '{"backgroundSize": "contain", "background-position": "center"}'
+      src: "/images/landing/Group-6626.webp"
+      shadow: false
     section_heading:
-      text: "¿Por Qué Estudiar con 4Geeks Academy en LATAM?"
+      text: "¿Por qué 4Geeks Academy?"
       style: '{ "font-size": "30px"}'
     heading:
       text: ""
     sub_heading:
-      text: "4Geeks Academy se ha consolidado como una referencia en la formación tecnológica en LATAM y en el mundo. Nuestros programas están diseñados específicamente para satisfacer la creciente demanda de talento en la región, ofreciendo cursos que van desde Desarrollador Full-Stack hasta Data Science y Machine Learning."
+      text: "Somos una referencia en la formación tecnológica en LATAM y en el mundo. Te ofrecemos programas intensivos y actualizados, diseñados para brindarte las habilidades más demandadas por la industria y convertirte en un profesional de la tecnología altamente cotizado."
     content:
-      text: "En 4Geeks Academy, no solo aprenderás a programar, ¡te convertirás en un verdadero Profesional! Prepárate para enfrentar nuevos desafíos y adquirir habilidades que te harán destacar en el competitivo mundo tecnológico."
+      text: "¡Aplica hoy y cambia tu futuro!"
       font_size: ["16px"]
       path: ""
     bullets:
       items:
-      - text: "LATAM necesita más de 1 millón de profesionales en tecnología para 2025, lo que significa que hay un vasto mercado laboral esperando por ti."
+      - text: "Carreras con futuro: Elige tu camino entre Desarrollo Full-Stack, Data Science o Machine Learning, Ciberseguridad o IA Aplicada."
         icon: "circle" 
-      - text: "Nuestros graduados son contratados por empresas de primer nivel en toda la región, lo que demuestra la calidad de nuestra formación y la relevancia de nuestras habilidades en el mercado."
+      - text: "¡El mercado laboral te espera! LATAM necesita 1 millón de profesionales de tecnología para 2025."
         icon: "circle" 
-      - text: "Desde la inscripción hasta la graduación, te acompañamos en cada paso de tu camino. Además, ofrecemos mentorías personalizadas ilimitadas y de por vida, asegurando que siempre tengas el apoyo que necesitas, incluso después de conseguir tu primer trabajo."
+      - text: "Graduados exitosos en empresas líderes en toda la región."
+        icon: "circle" 
+      - text: "Mentorías ilimitadas para tu crecimiento profesional continuo."
         icon: "circle" 
     button:
       text: "Más Información"
@@ -259,10 +266,10 @@ components:
     position: 6
     layout: two_column_left
     swipable: False
-    background: "veryLightBlue" 
+    background: "#E3F9FE" 
     image:
       style: '{"backgroundSize": "contain", "background-position": "center"}'
-      src: "/images/landing/landing-programas.webp"
+      src: "/images/landing/landing-programas-bg.png"
       shadow: false
     section_heading:
       text: ""
@@ -277,20 +284,20 @@ components:
       path: ""
     bullets:
       items:
-      - heading: "Full Stack Developer"
-        text: "Con salarios entre $800 y $6,500 USD al mes, este campo te permite dominar tecnologías clave como JavaScript y Python, utilizadas ampliamente en el desarrollo de aplicaciones completas tanto en el frontend como en el backend"
+      - heading: "FULL STACK DEVELOPER"
+        text: "Con salarios que oscilan entre $800 y $2,000 USD mensuales, este campo te permite convertirte en un experto en tecnologías clave como JavaScript y Python, indispensables en el desarrollo de aplicaciones completas que abarcan tanto el Front-End como el Back-End."
         icon: "check" 
-      - heading: "Data Science y Machine Learning"
-        text: "Crece a un 16% anual, con salarios de hasta $12,000 USD. Los científicos de datos son esenciales en la toma de decisiones basadas en datos, utilizando herramientas como Python, Numpy y Pandas."
+      - heading: "DATA SCIENCE Y MACHINE LEARNING"
+        text: "Con un crecimiento anual del 16% y salarios que pueden alcanzar los $3,000 USD mensuales, esta área es fundamental para la toma de decisiones basadas en datos. Los científicos de datos dominan herramientas como Python, Numpy y Pandas, que son esenciales para procesar y analizar información con precisión."
         icon: "check" 
-      - heading: "Especialista en ciberseguridad"
-        text: "La demanda crece rápidamente, con sueldos de entre $1,500 y $4,500 USD mensuales. Aprende a proteger sistemas y datos críticos usando herramientas como Wireshark y Metasploit."
+      - heading: "ESPECIALISTA EN CIBERSEGURIDAD"
+        text: "En un mundo cada vez más digital, la demanda por estos profesionales está en pleno auge, con sueldos de entre $1,000 y $1,500 USD al mes. Aprende a proteger sistemas y datos críticos utilizando herramientas avanzadas como Wireshark y Metasploit, y conviértete en un pilar fundamental para la seguridad informática."
         icon: "check" 
-      - heading: "Applied AI"
-        text: "la inteligencia artificial aplicada transforma industrias a través de soluciones innovadoras, un profesional que sepa aprovechar las herramientas de inteligencia artificial puede multiplicar tus resultados y por consecuencia tus ingresos, muchos profesionales en distintos rubros  utilizan actualmente  la IA."
+      - heading: "INTELIGENCIA ARTIFICIAL APLICADA"
+        text: "La inteligencia artificial aplicada está revolucionando industrias al ofrecer soluciones innovadoras. Ser un profesional capacitado en herramientas de inteligencia artificial no solo incrementa tu productividad, sino que también puede multiplicar tus ingresos. Hoy en día, expertos de diversos sectores ya están integrando la IA en sus procesos diarios."
         icon: "check" 
     button:
-      text: "Inscribete hoy!"
+      text: "¡ Más información !"
       color: white
       hover_color: "white"
       background: "black"

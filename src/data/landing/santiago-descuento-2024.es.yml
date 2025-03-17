@@ -1,0 +1,271 @@
+meta_info:
+  slug: santiago-descuento-2024 # <--- URL 4geeksacademy.com/us/landing/example
+
+  # This will show on social media when shared
+  title: "Aprovecha un 20% de descuento en nuestros programas en chile"
+  description: "20% OFF en chile - 4Geeks Academy"
+  image: "/images/bg/follow-that-dream-digital-nomad.webp"
+  keywords: ""
+  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  template: "landing_a" # <--- choose your landing template
+  redirects: []
+
+  # Set a particular course or location to the landing page
+  # this UTM fields will be also included in the CRM contact
+  utm_course: ["full-stack", "datascience-ml", "cybersecurity", "applied-ai"]
+  utm_location: ["santiago-chile"]
+  automation: soft # comma separated, "soft" is the default value
+  tag: request_more_info # comma separated, "request_more_info" is the default value
+
+navbar:
+  logoUrl: "#"
+  buttonText: "Aplicar a la academia" # this modifies the button text in the navbar
+  buttonUrl: "/es/aplica" #accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+
+form:
+  # posible fields: "first_name", "last_name", "full_name", "phone", "email"
+  # always the first_name, email and phone will be mandatory if added.
+  fields: ["full_name", "phone", "email"]
+  heading: "Completa el formulario"
+  motivation: "Una vez completado el formulario, alguien de nuestro equipo se pondrá en contacto contigo en breves minutos a través de tu correo electrónico."
+  button_label: Aplica a la Academia
+  redirect: null #you can redirect to another url or entirely diffrent website
+
+apply_schollarship: # form that is displayed at the end of the landing
+  # title: "Apoyo Profesional Ilimitado"
+  imageSide: "left"
+  image: "../../../static/images/landing/apply.png"
+
+# jumbotron on the top (cannot be commented out)
+header_data:
+  tagline: 20% de descuento en 4Geeks Academy
+  tagline_color: "#1b1b1b"
+  sub_heading: ""
+  form_styles:
+    background: "#fff1d1"
+    color: "black"
+  # background_image: "../../../static/images/bg/pricing-bg.jpg"
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+  image_filter: brightness(0.1)
+
+features:
+  marginTop: 0px #<-- separation between tagline and the bullets
+
+  #                                         up   left down  right
+  styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px", "color": "black" }'
+  bullets:
+    - Desarrolla habilidades de aprendizaje autodidacta
+    - Accede a mentorías personalizadas ilimitadas y de por vida
+    - Forma parte de una comunidad internacional de más de 5,000 personas
+    - Aprovecha este descuento especial de 20%
+
+follow_bar:
+  position: "top" # top, bottom, hidden
+  content:
+    text: "Aprovecha hoy un 20% de descuento en nuestros programas"
+    text_mobile: "Aprovecha hoy un 20% de descuento en nuestros programas"
+    # devices:   XL      LG    MD      SM    XS
+    font_size: ["22px", "22px", "22px", "20px", "18px"]
+  button:
+    text: "Escribir por WhatsApp"
+    path: "https://api.whatsapp.com/send/?phone=56972848039&text&type=phone_number&app_absent=0&utm_source=GADS&utm_medium=GADS&utm_campaign=GADS&utm_id=GADS&utm_term=GADS&utm_content=GADS"
+  phone:
+    text: "llama"
+
+short_badges:
+  - name: "Ebootcamp"
+    url: ""
+    image: "../../../static/images/badges/ebootcamp-top.png"
+    alt: "Top Coding Bootcamp"
+  - name: "Premios Tecnologia Siglo XXI"
+    url: ""
+    image: "../../../static/images/awards/premios_tecnologia_sigloxxi.png"
+    alt: "Mejor centro de Coding Bootcamp"
+  - name: "Course Report"
+    url: ""
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+    alt: "Top Coding Bootcamps Course Report"
+  - name: "Switchup"
+    url: ""
+    image: "../../../static/images/badges/switchup-badge-2023.png"
+    alt: "Best coding bootcamp Switchup 2023"
+  - name: "Florida Department of Education"
+    url: ""
+    image: "../../../static/images/badges/licensed-inverted.png"
+    alt: "Florida Department of Education"
+
+#
+# ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
+#
+
+# program_details:
+#   position: 2
+#   heading: "Master Python, JS and React"
+#   sub_heading: "The programming languages with the highest demand worldwide"
+
+badges:
+  position: 5
+  heading: "Premios y Reconocimientos que avalan nuestra excelencia"
+
+geeks_vs_others:
+  position: 7
+  heading: "¿Qué diferencia a nuestro bootcamp de programación de los demás?"
+  paragraph: ""
+  total_rows: 5
+
+rating_reviews:
+  position: 11
+  heading: "¡Los mejor valorados en todos los sitios de reseñas!"
+  rating_list:
+    - alt: "Career Karma"
+      image: "../../../static/images/badges/career-karma.png"
+      rating: 4.89
+      url: ""
+    - alt: "Switchup"
+      image: "../../../static/images/badges/switchup-img.png"
+      rating: 4.91
+      url: ""
+    - alt: "Course Report"
+      image: "../../../static/images/badges/course-report.png"
+      rating: 4.84
+      url: ""
+    - alt: "Google"
+      image: "../../../static/images/badges/google.png"
+      rating: 5
+      url: ""
+
+# alumni_projects:
+#   position: 14
+#   heading: "Proyectos que podrás crear luego de haberte graduado"
+#   sub_heading: ""
+
+who_is_hiring:
+  position: 15
+  limit: 4
+  heading: "¿Quién contrata a nuestros alumnos?"
+  sub_heading: ""
+
+why_4geeks:
+  position: 9
+  heading: "Por qué 4Geeks"
+  sub_heading: ""
+
+# Possible layouts: [two_column_left_image, two_column_right_image]
+components:
+  - name: new_design
+    position: 3
+    layout: two_column_left
+    swipable: False
+    background: "#FFFFFF"
+    justify: "center" #start,end,center
+    image:
+      style: '{ "backgroundSize": "contain", "background-position": "center", "filter": "drop-shadow(8px 8px 0px #fff1d1)"}'
+      src: "/images/landing/hombre-joven-con-laptop-senalando.webp"
+      shadow: false
+    heading: 
+      text: "Programa tu futuro"
+    sub_heading:
+      text: "En 4Geeks Academy, estamos comprometidos con hacer que nuestra educación de alta calidad sea accesible para todos. Aprovecha nuestro descuento exclusivo del 20% y transforma tu carrera hoy mismo."
+    button: 
+      text: "aplica a la academia"
+      color: white
+      hover_color: "white"
+      background: "black"
+      path: "#leadform_bottom"
+    content: 
+      text: ""
+      font_size: ["16px"]
+      path: ""
+    bullets:
+      item_style: '{ "padding": 0, "font-weight": "300" }'
+      items:
+        - text: "Utiliza el código <br>Webstarted&4Geeks20 para obtener un 20% de descuento en nuestros programas de Full Stack Development, Data Science, Ciberseguridad y Applied AI."
+          icon: "circle" #string with icon for example ['check', 'cicle', etc]
+        - text: "Ofrecemos planes de financiación para que puedas cubrir el costo restante de tu programa de forma cómoda y enfocarte en tu aprendizaje."
+          icon: "circle" #string with icon for example ['check', 'cicle', etc]
+        - text: "Equilibra tus estudios con tu trabajo y vida personal. Nuestro formato part-time te permite aprender sin renunciar a tus responsabilidades actuales."
+          icon: "circle" #string with icon for example ['check', 'cicle', etc]
+
+
+  - name: how-it-works
+    position: 2
+    background: "lightYellow"
+    layout: iconogram
+    swipable: True
+    heading:
+      text: "Descubre tu potencial en 4Geeks Academy"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      text: 'Programas para convertirte en un experto en programación y complementar tu perfil profesional'
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+      style: '{ "textAlign": "center", "width": "60%" }'
+    icons:
+      - icon: "fullstack" 
+        title: "Full-Stack Dev"
+        content: "Aprende a crear aplicaciones web completas, dominando tanto el frontend como el backend de un proyecto."
+
+      - icon: "machine"
+        title: "Data Science"
+        content: "Entra al mundo de la ciencia de datos y el machine learning, adquiriendo habilidades para analizar y visualizar información."
+
+      - icon: "applied-ai"
+        title: "IA para Profesionales"
+        content: "Aprende a utilizar la Inteligencia Artificial como herramienta para potenciar tus resultados y optimizar procesos."
+
+      - icon: "cibersecurity"
+        title: "Ciberseguridad"
+        content: "Conviértete en un especialista en ciberseguridad y prepárate contra posibles ataques en sistemas como Windows o Linux."
+      
+  # - name: the-academy
+  #   position: 2
+  #   layout: two_column_right
+  #   swipable: False
+  #   background: "#C9F9F9" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9
+  #   image:
+  #     style: '{ "background-size": "cover", "height":"300px", "min-height":"auto", "background-position": "top"}'
+  #     src: "/images/the-academy/what-is-4geeks.jpg"
+  #     shadow: true
+  #   section_heading:
+  #     text: ""
+  #     style: '{ "font-size": "30px"}'
+  #   heading:
+  #     text: "Sin embargo, no nos quedamos ahí"
+  #   sub_heading:
+  #     text: |
+  #       En 2014, decidimos dar un paso más y crear 4Geeks Academy, una academia no convencional con un objetivo claro: formar desarrolladores de software de alto nivel que pudieran adaptarse a las demandas del mercado laboral actual.
+  #   content:
+  #     text: ""
+  #     font_size: ["16px"]
+  #     path: ""
+    # button:
+    #   text: "Send me more information"
+    #   color: white
+    #   hover_color: "white"
+    #   background: "black"
+    #   path: "#leadform_header"
+
+
+  - name: how-it-works-2
+    position: 8
+    background: "#fff1d1 !important"
+    layout: iconogram
+    swipable: True
+    heading:
+      text: "Objetivos de nuestra academia"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      text: '¿Qué nos hace diferentes?'
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+      style: '{ "textAlign": "center", "width": "60%" }'
+    text_link: "/"
+    icons:
+      - icon: "stairswflag"
+        title: "Aprendizaje práctico y orientado a la realidad"
+        content: "Nos enfocamos en las herramientas y tecnologías más demandadas por las empresas líderes del sector, lo que te permitirá estar preparado para cualquier trabajo una vez que te gradues."
+      - icon: "timer"
+        title: "Horarios y métodos de pago Flexibles"
+        content: "Ofrecemos un modelo de formación a medio tiempo, para que puedas conciliar tus estudios con otras actividades. Además, también contamos con múltiples formas de financiación para hacer más accesibles los costos de un curso de esta calidad."
+      - icon: "community"
+        title: "Una comunidad apasionada por la tecnología"
+        content: "Desde un principio decidimos crear una comunidad de programadores de calidad con el propósito de que puedas encontrar apoyo, colaboración y oportunidades de networking que te ayudarán a alcanzar tus metas."
+

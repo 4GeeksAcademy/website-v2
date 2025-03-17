@@ -41,10 +41,15 @@ navbar:
 
 header_data:
   partner_logo_url: "../../../static/images/partner/logo-de-banco-de-chile.jpg"
-  background_image: "../../../static/images/landing/GrupoVariasNacionalidades.webp"
+  background: "#ffffff"
   tagline: Bootcamp de Programación Web
-  tagline_color: "white"
   sub_heading: ""
+  tagline_color: "#1c1c1c"
+  form_styles:
+    background: "#0084FF"
+    color: "white"
+    button:
+      background: "black"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.15)
   # right_image: "../../../static/images/landing/header_united_way.png"
@@ -146,8 +151,8 @@ components:
       icon: "fullstack_2"
       description: |
         Programa intensivo de 10 semanas, con clases de lunes a viernes durante todo el día, para vivir una experiencia inmersiva en el mundo del código.
-      text_link: Obtener más información
       link: "#leadform_header"
+      text_link: Obtener más información
 
   # - name: geeksinfo
   #   position: 4

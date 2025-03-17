@@ -34,13 +34,19 @@ form:
 apply_schollarship: # form that is displayed at the end of the landing
   # title: "Apoyo Profesional Ilimitado"
   imageSide: "left"
-  image: "../../../static/images/landing/apply.png"
+  image: "../../../static/images/landing/blonde-girl-laptop.png"
 
 # jumbotron on the top (cannot be commented out)
 header_data:
   tagline: Elevate Your Skills with Our Coding Classes
-  sub_heading: "Become a Full Stack Developer in just 18 weeks."
-  background: "#FFF1D1"
+  background: "#ffffff"
+  tagline_color: "#1b1b1b"
+  sub_heading: ""
+  form_styles:
+    background: "#0084FF"
+    color: "white"
+    button:
+      background: "black"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
 
@@ -50,10 +56,9 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-    - No previous experience or coding skills required.
-    - Choose the schedule and format that suits you best — part-time, online, in-person, or hybrid.
-    - Flexible payment plans starting at $150 a month, with the option to start paying after landing a job.
-    - Get lifelong access to our mentors and career support.
+    - No previous experience or coding skills required
+    - Choose the schedule and format that suits you best — part-time, online, in-person, or hybrid
+    - Flexible payment plans starting at $150 a month, with the option to start paying after landing a job
 
 follow_bar:
   position: "top" # top, bottom, hidden
@@ -69,26 +74,30 @@ follow_bar:
     text: "Call"
 
 short_badges:
-  - name: "Ebootcamp"
+  - name: "Top Online Full-Stack Bootcamps Of 2024"
     url: ""
-    image: "../../../static/images/badges/ebootcamp-top.png"
-    alt: "Top Coding Bootcamp"
-  - name: "Premios Tecnologia Siglo XXI"
+    image: "../../../static/images/badges/forbes-logo-award.png"
+    alt: "We have been selected as one of the Top Online Coding Bootcamps by Forbes."
+  - name: "Best for Spanish speakers Of 2024 by Fortune"
     url: ""
-    image: "../../../static/images/awards/premios_tecnologia_sigloxxi.png"
-    alt: "Mejor centro de Coding Bootcamp"
-  - name: "Course Report"
+    image: "../../../static/images/badges/fortune-logo.png"
+    alt: "Recognized by Fortune as one of the Top Coding Bootcamps"
+  - name: "Top Coding Bootcamps Newsweek"
+    url: ""
+    image: "../../../static/images/badges/newsweek.webp"
+    alt: "Top Coding Bootcamps Newsweek"
+  - name: "Best Coding Bootcamp Course Report 2024"
     url: ""
     image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
-    alt: "Top Coding Bootcamps Course Report"
-  - name: "Switchup"
-    url: ""
-    image: "../../../static/images/badges/switchup-badge-2023.png"
-    alt: "Best coding bootcamp Switchup 2023"
-  - name: "Florida Department of Education"
+    alt: "Best Coding Bootcamp Course Report 2024"
+  - name: "Licensed by the Florida Department of Education"
     url: ""
     image: "../../../static/images/badges/licensed.png"
-    alt: "Florida Department of Education"
+    alt: "Licensed by the Florida Department of Education"
+  - name: "ARP Certificate"
+    url: ""
+    image: "../../../static/images/badges/arp-logo-certification.png"
+    alt: "ARP Certificate"
 
 #
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
@@ -100,7 +109,7 @@ program_details:
   sub_heading: "Combine both front-end and back-end skills for complete web development"
 
 badges:
-  position: 5
+  position: 6
   heading: "Awards and recognitions that validate Our excellence"
 
 geeks_vs_others:
@@ -184,26 +193,27 @@ components:
     layout: iconogram
     swipable: True
     heading:
-      text: "The 3 Steps of our Coding Classes"
-      font_size: ["30px", "30px", "30px", "30px", "30px"]
-    sub_heading:
-      text: 'According to the U.S. Bureau of Labor Statistics, software developers in the U.S. have a higher-than-average job outlook and earn a median salary of $110,140 a year. Here’s how to join the ranks of successful programmers!'
-      font_size: ["16px", "16px", "16px", "16px", "16px"]
-      style: '{ "textAlign": "center", "width": "60%" }'
-    text_link: "/"
+      text: How your tuition is no longer a concern
+    button:
+      text: Conditions apply
+      path: "https://www.youtube.com/watch?v=plwPwyrxX84"
     icons:
       - icon: "graduation-2"
         title: "Join 4Geeks Academy"
-        content: "Develop your full techie potential! Learn industry-relevant skills from true coding experts, connect with a vibrant community, and get a support network like no other."
-      - icon: "laptop_new"
+        content: "Develop your full techie potential!"
+      - icon: "money"
+        color: "blue"
         title: "Dive in & Code"
-        content: "Experience interactive, hands-on learning with live online classes and access to recorded materials to deepen your understanding. Tackle challenging projects using the most important tools and frameworks in the tech industry."
+        content: "Experience interactive, hands-on learning with live online classes"
       - icon: "stairswflag"
         title: "Job placement"
-        content: "Thanks to our program you’ll be equipped with the most sought-after skills in the job market and a portfolio to show it. We’ll help you prepare your professional profile, portfolio and CV like a pro, connect you with top companies, and help you land your dream job. You’ll have all you need to launch a fulfilling coding career!"
-
+        content: "Thanks to our program you'll be equipped"
+      - icon: "contract-2"
+        title: "Job placement"
+        content: "Thanks to our program you'll be equipped"
+  
   - name: geekinfo_2
-    position: 4
+    position: 5
     layout: two_column_right
     proportions: [7, 5]
     background: ""
@@ -220,12 +230,6 @@ components:
     sub_heading:
       text: "The Unique Advantages of 4Geeks Academy"
       font_size: ["16px", "16px", "16px", "16px", "16px"]
-    button:
-      text: "Compare 4Geeks Vs others"
-      color: white
-      hover_color: "white"
-      background: "black"
-      path: "#geeks_vs_others"
     content:
       text: ""
       font_size: ["16px"]
@@ -246,7 +250,7 @@ components:
           icon: "check" #string with icon for example ['check', 'cicle', etc]
 
   - name: passion
-    position: 10
+    position: 4
     background: "#fbfbfb"
     layout: two_column_left
     proportions: [6, 6]

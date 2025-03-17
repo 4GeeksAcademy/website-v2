@@ -6,7 +6,7 @@ meta_info:
   description: "Learn in-demand programming skills close to home with our convenient bootcamp locations."
   image: "/images/bg/main-bg.jpg"
   keywords: "programming bootcamp near me, programming bootcamp, Coding Classes, Learn to code, 4Geeks Academy"
-  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   template: "landing_a" # <--- choose your landing template
   redirects: []
 
@@ -41,7 +41,13 @@ apply_schollarship: # form that is displayed at the end of the landing
 header_data:
   tagline: Explore 4Geeks Academy's programming bootcamps near you
   sub_heading: "Master in-demand coding skills with our immersive programming bootcamps near you. We have several locations around the world and online."
-  background: "#FFF1D1"
+  background: "#ffffff"
+  tagline_color: "#1c1c1c"
+  form_styles:
+    background: "#0084FF"
+    color: "white"
+    button:
+      background: "black"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
 

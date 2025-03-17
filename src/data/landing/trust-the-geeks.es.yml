@@ -6,8 +6,8 @@ meta_info:
   description: "Lanza tu carrera tech de la mano de los expertos. Disfruta beneficios que no encontrarás en ningún otro lugar"
   image: "/images/bg/main-bg.jpg"
   keywords: "Bootcamp de Programación, Bootcamp programacion Colombia, Bootcamp de python, Bootcamp de React y Javascript, Bootcamp de Informática, Coding Bootcamp, 4Geeks Academy"
-
-  template: "landing_nonav" # <--- choose your landing template
+  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  template: "landing_a" # <--- choose your landing template
   redirects: # <--- URL redirections to avoid 404 errors
     []
 
@@ -40,9 +40,15 @@ apply_schollarship: # form that is displayed at the end of the landing
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  background: "#FFF1D1"
+  background: "#ffffff"
   tagline: Impulsa tu carrera en Tech y confía en los expertos
   sub_heading: Disfruta beneficios que no encontrarás en ningún otro lugar
+  tagline_color: "#1c1c1c"
+  form_styles:
+    background: "#0084FF"
+    color: "white"
+    button:
+      background: "black"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
 

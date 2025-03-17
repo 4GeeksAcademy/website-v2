@@ -9,6 +9,7 @@ meta_info:
   show_in_apply: false
   redirects: []
   related_clusters: [""]
+  template: "course-fullstack-at-your-own"
 
 apply_form:
   label: Full Stack Developer Course at Your Own Pace
@@ -109,12 +110,12 @@ details:
           content: "Our certificates are recognized by multiple institutions."
           link_text: "View certificate"
           link: "https://certificate.breatheco.de/4ae7a46bba78dc19b823e124fea120c17b45e044"
-          icon: "certificate-icon"
+          icon: "certification"
         - label: "Requirements"
-          content: "All you need is a computer and an internet connection"
+          content: "All you need is a computer and an internet connection."
           icon: "contract-checked"
         - label: "Language"
-          content: "You can choose between English and Spanish to consume the curriculum and content. Classes are taught in the official language of your campus."
+          content: "You can choose between English and Spanish to consume the curriculum and content."
           icon: "language"
           
   heading: PROGRAM DETAILS AT YOUR OWN PACE

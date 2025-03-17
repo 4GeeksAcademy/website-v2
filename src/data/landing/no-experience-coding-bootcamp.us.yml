@@ -40,7 +40,13 @@ apply_schollarship: # form that is displayed at the end of the landing
 header_data:
   tagline: Join our Coding Bootcamp without any Previous Experience
   sub_heading: "Become a professional full stack developer in 18 weeks, independent of your background."
-  background: "#FFF1D1"
+  background: "#ffffff"
+  tagline_color: "#1c1c1c"
+  form_styles:
+    background: "#0084FF"
+    color: "white"
+    button:
+      background: "black"
   badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
 

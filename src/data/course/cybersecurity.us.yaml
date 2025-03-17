@@ -1,7 +1,7 @@
 meta_info:
   slug: cybersecurity
   title: "Cybersecurity Bootcamp at 4Geeks Academy"
-  description: "With cybersecurity bootcamp, you can speed up your timeline to become a cybersecurity specialist with no prior knowledge and protect the digital future."
+  description: "With our cybersecurity bootcamp, you can fast-track your journey to becoming a cybersecurity specialist, even with no prior knowledge."
   bc_slug: "cybersecurity"
   template: "course-cybersecurity"
   image: "/images/landing/4Geeks-Espana.jpg"
@@ -18,14 +18,14 @@ seo_title: "Cybersecurity Bootcamp"
 
 header:
   title: "Become a Cybersecurity Specialist"
-  paragraph: "The median annual salary for cybersecurity professionals in the United States is $103,560."
+  paragraph: "The median annual salary for cybersecurity professionals in the U.S. is $103,560."
   image: "../../../static/images/bg/apple-building.jpg"
   image_alt: "apple-building"
 
 button:
   syllabus_heading: "Download Syllabus"
   syllabus_btn_label: "Instant Download"
-  syllabus_motivation: "Get it in just a few seconds"
+  syllabus_motivation: "Receive it in just a few seconds"
   apply_button_link: "/us/apply"
   apply_button_text: "Apply"
 
@@ -45,17 +45,19 @@ instructors:
 
   - name: "Daniela Maissi"
     sub_title: "Ethical Hacking & Cybersecurity Educator"
-    degree: "Master in business Intelligence and Big Data"
+    degree: "Master's in Business Intelligence and Big Data"
     image: "../../../static/images/instructors/sayyed.jpeg"
     bio: "Daniela Maissi is a Cyber Security Lead Instructor at The Bridge, with expertise in ethical hacking, penetration testing, research, and back-end development. "
     github: ""
     linkedin: "https://www.linkedin.com/in/daniela-maissi-43045510b/"
 
 badges:
-  paragraph: "Kickstart your career at 4Geeks Academy, where developers grow and thrive. Listed among the world’s <a href='/us/coding-bootcamp'>best coding bootcamps</a> of 2024 by Course Report, the 5 best coding bootcamp in 2024 by Forbes, named best center for coding bootcamps 2023 by Premios de Excelencia Educativa in Spain, rated 4.92/5 on Switchup and more. Licensed by the Florida Department of Education, USA. "
+  paragraph: "Kickstart your career at 4Geeks Academy, where developers grow and thrive. Listed among the world’s <a href='/us/coding-bootcamp'>best coding bootcamps</a> of 2024 by Course Report, one of the top 5 coding bootcamps of 2024 according to Forbes, named best center for coding bootcamps 2023 by Premios de Excelencia Educativa in Spain, rated 4.92/5 on Switchup and more. Licensed by the Florida Department of Education, USA. "
 
 two_columns_first:
   proportions: [6, 6]
+  #IMPORTANT: Only the locations listed here will be able to see this section
+  available_locations: ["madrid-spain", "malaga-spain", "barcelona-spain", "valencia-spain"]
   image:
     style: '{"border" : "0px solid black", "backgroundSize": "contain", "background-position": "center" }'
     src: "../../images/staff/chema-alonso.webp"
@@ -70,7 +72,7 @@ two_columns_first:
       As part of our partnership, students from our campus in Spain will gain access to:  
     font_size: ["16px", "16px", "16px", "16px", "16px"]
   disclosure: 
-    text: '* These benefits related to our partnership with Chema Alonso are <span style="font-weight: 600;" >only Available</span> for our students attending classes at any of our campuses in 🇪🇸 Spain.'
+    text: '* These benefits related to our partnership with Chema Alonso are <span style="font-weight: 600;" >only available</span> for our students attending classes at any of our campuses in 🇪🇸 Spain.'
     style: '{"margin-top": "0px"}'
   button:
     text: "APPLY NOW"
@@ -112,9 +114,9 @@ two_columns_second:
 
 # OVERLAPED
 overlaped:
-  heading: "Cybersecurity Specialists are in High Demand"
+  heading: "Cybersecurity Specialists Are in High Demand"
   paragraph: |
-    <strong style="font-weight: 800;">Job Opportunities Galore</strong>: The demand for cybersecurity professionals continues to surge, with 3.5 million unfilled positions globally in 2023. <br>
+    <strong style="font-weight: 800;">Abundant Job Opportunities</strong>: The demand for cybersecurity professionals continues to surge, with 3.5 million unfilled positions globally in 2023. <br>
     According to <strong style="font-weight: 800;">the U.S. Bureau of Labor Statistics</strong>, in the U.S. alone, cybersecurity job openings are projected to grow by 32% between 2022 and 2032.<br><br>
     <strong style="font-weight: 800;">A sector on the rise</strong>: Gartner's forecast report predicts the information security and risk management market will grow from $185 billion in 2023 to $287 billion in 2027.
   image:
@@ -154,7 +156,7 @@ two_columns:
     font_size: ["30px", "30px", "30px", "26px", "24px"]
   sub_heading:
     text: |-
-      Acquire cutting-edge knowledge to safeguard systems against cyber threats. Our intensive bootcamp equips you with essential skills to identify, analyze, and prevent attacks, utilizing tools such as Nessus, Nmap, Wireshark, and Metasploit.
+      Gain cutting-edge knowledge to protect systems from cyber threats. Our intensive bootcamp equips you with essential skills to identify, analyze, and prevent attacks, utilizing tools such as Nessus, Nmap, Wireshark, and Metasploit.
       Cybersecurity is a high-stakes industry, and we've partnered with the best. Besides being approved and co-taught by top international expert Chema Alonso, the syllabus was co-created with Daniela Maissi, an EC-Cybersecurity Council member and malware expert with over 5 years of experience and 12+ certifications in cloud computing, OSINT, and IT solutions.
     font_size: ["16px", "16px", "16px", "16px", "16px"]
   button:
@@ -186,18 +188,21 @@ details:
         icon: "duration-icon"
       - label: "Classes"
         content: "3 live online classes per week"
-        icon: "book"
+        icon: "book-2"
       - label: "Class Size"
-        content: "Up to 16 people"
-        icon: "people-class-icon"
+        content: "Up to 18 people"
+        icon: "people"
       - label: "Certificate"
         content: "Official 4Geeks Completion Certificate, recognized by multiple institutions."
         link_text: "See Example"
         link: "https://certificate.4geeks.com/07d337ab332f79383002d1f7cf722e3642289a40"
-        icon: "certificate-icon"
+        icon: "certification"
       - label: "Requirements"
         content: "No previous experience is required"
         icon: "contract-checked"
+      - label: "Language"
+        content: "You can choose between English and Spanish for the syllabus and content. Live classes are taught in the language of your campus."
+        icon: "language"
 
   heading: PROGRAM DETAILS
   weeks: 14
@@ -330,7 +335,7 @@ potential_companies:
     - name: "Oracle"
       image: "../../../static/images/partner/oracle.png"
       alt: ""
-    - name: "AirBnB"
+    - name: "Airbnb"
       image: "../../../static/images/partner/airbnb.png"
       alt: ""
     - name: "Uber"
@@ -339,7 +344,7 @@ potential_companies:
 
 ## 4GEEKS VS OTHERS SECTION
 geeks_vs_others:
-  heading: "WHAT MAKES US SO SUCCESSFULL?"
+  heading: "WHAT MAKES US SO SUCCESSFUL?"
   sub_heading: "The unique features of 4Geeks Academy"
   sub_heading_link: ""
 ## GEEK PAL AND GEEK FORCE BOXES

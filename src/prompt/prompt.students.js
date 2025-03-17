@@ -11,7 +11,7 @@ async function generate() {
     `${__dirname}/../data/components/testimonials/testimonials.us.yaml`
   );
   let testimonials = doc.yaml.testimonials.map((old) => {
-    let _new = [`Name: ${old.student_name}`, `Hired as ${old.short_content}`];
+    let _new = [`Student alumni name: ${old.student_name}`, `Hired as ${old.short_content}`];
     if (old.linkedin_url)
       _new.push(`LinkedIn profile URL: ${old.linkedin_url}`);
     if (old.country) _new.push(`Studied in the ${old.country.name} campus`);
@@ -55,7 +55,7 @@ async function generate() {
 
   fs.writeFileSync(
     `./prompts/students.prompt`,
-    `The following are 4Geeks Academy students:\n` +
+    `The following are 4Geeks Academy students that have graduated in different programs:\n\n` +
       testimonials.concat(alumni_form_projects).join("\n\n---\n\n"),
     "utf8"
   );

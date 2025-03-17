@@ -1,9 +1,9 @@
 meta_info:
-  slug: miami-coding-courses # <--- URL 4geeksacademy.com/us/landing/example
+  slug: tech-career-4geeks # <--- URL 4geeksacademy.com/us/landing/example
 
   # This will show on social media when shared
-  title: "Start Your Career in Tech for Just $40/Week"
-  description: "Become a Full Stack Developer with 4Geeks Academy for only $40/week. Get certified and start your tech career today."
+  title: "Start Your Tech Career With 4Geeks Academy"
+  description: "Get certified and start your tech career today."
   visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   image: "/images/bg/the-academy-bg.jpg"
   keywords: ""
@@ -16,7 +16,7 @@ meta_info:
     # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
   utm_course: ["full-stack", "datascience-ml", "cybersecurity", "coding-introduction", "applied-ai"]
-  utm_location: ["downtown-miami"]
+  utm_location: ["atlanta-usa", "austin-usa", "chicago-usa", "downtown-miami", "houston-usa", "losangeles-usa", "newyork-usa", "orlando", "online"]
   automation: soft # comma separated, "soft" is the default value
   tag: request_more_info # comma separated, "request_more_info" is the default value
 
@@ -42,9 +42,9 @@ apply_schollarship: # form that is displayed at the end of the landing
 # jumbotron on the top (cannot be commented out)
 header_data:
   background: "#ffffff"
-  tagline: Start A Career In Tech for $40/Week
+  tagline: Start a <br>tech career <br>in record time
+  sub_heading: "Professionals are in high demand, with entry-level salaries around $90,000 waiting for you!"
   tagline_color: "#1c1c1c"
-  sub_heading: " Step into fast-growing, high-paying tech professions with strong job prospects and future demand."
   form_styles:
     background: "#0084FF"
     color: "white"
@@ -60,9 +60,9 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 0px 0px" }'
   bullets:
-    - Become a Full-Stack Developer, Data Scientist, or Cybersecurity Specialist!
-    - Enjoy unlimited mentorship and lifetime access to career services.
-    - Learn anywhere, anytime—choose the format that suits you.
+    - Become a Full-Stack Developer, Data Scientist, Machine Learning Engineer or Cybersecurity Specialist!
+    - Affordable tuition and unbeatable financing plans
+    - Unlimited mentorship and career support to ensure your success
     # - "Part-time: Immerse yourself in a flexible schedule, perfect for busy professionals and students."
 
 short_badges:
@@ -161,6 +161,7 @@ why_4geeks:
   heading: "Why 4Geeks Academy"
   sub_heading: ""
 
+
 components:
   - name: how-it-works-programs
     position: 1
@@ -218,6 +219,55 @@ components:
       color: white
       hover_color: "#white"
       path: "#leadform_header"
+
+  # Two Columns - Rigo
+  - name: two_columns_rigo
+    position: 7
+    layout: two_column_right
+    proportions: [7, 5]
+    background: "#FFFFFF"
+    justify: "center" #start,end,center
+    image:
+      style: '{"backgroundSize": "contain", "background-position": "center"}'
+      src: "/images/landing/rigobot-section.webp"
+      shadow: false
+    # video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+    heading: 
+      text: "Our AI-powered features make all the difference!"
+      font_size: ["33px", "33px", "33px", "33px", "33px"]
+      style: '{ "lineHeight": "30px" }'
+      heading_image:
+        src: "/images/rigobot-logo.png"
+    sub_heading:
+      text: "Through years of research and experience, we've perfected the strategies and tools to ensure your constant and efficient progress. To optimize your learning curve and empower you to tackle challenges with confidence, we've now incorporated the power of AI."
+      font_size: ["16px","16px","16px","16px","16px"]
+      style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"300" }'
+    content:
+      style: '{ "font-size":"16px", "margin":"15px 0"}'
+      text: "Experience the difference our AI-powered features make. Our tried-and-tested approach keeps you engaged, motivated, and on the fast track to achieving your coding goals!"
+    bullets:
+      item_style: '{ "padding": "0", "font-weight": "100", "margin":"0" }'
+      items:
+        - heading: "Meet Rigobot, our AI coding assistant:"
+          text: |
+            • Instant tutoring as you code.
+            <br />
+            • Skill evaluations to track your progress.
+            <br />
+            • Expert bug fixing assistance.
+            <br /><br />
+            It perfectly complements our human mentorship program!
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+          icon_color: '#25BF6C'
+        - heading: "Learnpack, our interactive learning software, provides:"
+          text: |
+            • There are hundreds of interactive exercises to help you master and retain skills.
+            <br />
+            • Automated tests to help track your progress.
+            <br />
+            • Structured practice.
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+          icon_color: '#25BF6C'
 
   - name: geekinfo_2
     position: 4
