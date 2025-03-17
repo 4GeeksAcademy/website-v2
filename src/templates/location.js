@@ -520,6 +520,7 @@ export const query = graphql`
               src
               shadow
             }
+            video
             heading {
               text
               font_size

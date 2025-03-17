@@ -141,9 +141,14 @@ redirects:
     isPermanent: true # if permanent google will erase the original url from its results 
 
   - fromPath: "/es/full-stack-developer/desarrollador-full-stack"
-    toPath: "/es/desarrollador-full-stack/desarrollador-full-stack"
+    toPath: "/es/coding-bootcamps/desarrollador-full-stack"
     #redirectInBrowser: true
-    isPermanent: true # if permanent google will erase the original url from its results 
+    isPermanent: true
+
+  - fromPath: "/es/desarrollador-full-stack/desarrollador-full-stack"
+    toPath: "/es/coding-bootcamps/desarrollador-full-stack"
+    #redirectInBrowser: true
+    isPermanent: true
     
   - fromPath: "/us/aprender-a-programar/como-pagar-bootcamp-de-programacion"
     toPath: "/es/aprender-a-programar/como-pagar-bootcamp-de-programacion"
@@ -162,5 +167,20 @@ redirects:
     
   - fromPath: "/us/coding-bootcamps/machine-learning-engineering"
     toPath: "/us/machine-learning-engineer/machine-learning-engineer"
+    #redirectInBrowser: true
+    isPermanent: true # if permanent google will erase the original url from its results 
+
+  - fromPath: "/en/courses"
+    toPath: "/us/programs"
+    #redirectInBrowser: true
+    isPermanent: true # if permanent google will erase the original url from its results 
+
+  - fromPath: "/us/blog/learn-to-code"
+    toPath: "/us/programs"
+    #redirectInBrowser: true
+    isPermanent: true # if permanent google will erase the original url from its results 
+
+  - fromPath: "/us/learn-to-code/all-you-need-to-know-about-artificial-intelligence"
+    toPath: "/us/trends-and-tech/all-you-need-to-know-about-artificial-intelligence"
     #redirectInBrowser: true
     isPermanent: true # if permanent google will erase the original url from its results 

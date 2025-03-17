@@ -556,12 +556,14 @@ button.active p {
 .star-rating div.on {
   background: #ffb718;
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: rgb(0 0 0 / 0%);
   -webkit-text-stroke-width: 0.4px;
   -webkit-text-stroke-color: rgb(169 169 169);
 }
 .star-rating div.off {
   background: #ffffff;
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: rgb(0 0 0 / 0%);
   -webkit-text-stroke-width: 0.4px;
@@ -574,6 +576,7 @@ button.active p {
     rgb(255 165 0) 50%,
     rgb(255 255 255) 50%
   );
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: rgb(0 0 0 / 0%);
   -webkit-text-stroke-width: 0.4px;

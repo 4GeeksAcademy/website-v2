@@ -1,7 +1,7 @@
 meta_info:
   slug: curso-ciberseguridad
   title: "Curso de Ciberseguridad en 4Geeks Academy"
-  description: "Sin conocimientos previos, haz un curso de ciberseguridad que te conviérte en especialista, consigue trabajo, únete al mundo tech y protege el futuro digital"
+  description: "Sin conocimientos previos, haz un curso de ciberseguridad que te convierta en especialista, consigue trabajo, únete al mundo tech y protege el futuro digital"
   bc_slug: "cybersecurity"
   template: "course-cybersecurity"
   image: "/images/og-preview/cybersecurity-bg-es.jpg"
@@ -23,8 +23,8 @@ header:
 
 button:
   syllabus_heading: "DESCARGAR DETALLES DEL CURSO" 
-  syllabus_btn_label: "Descarga Instantanea"
-  syllabus_motivation: "En 2 min. recibirás en tu buzón de correo un PDF con información muy detallada sobre nuestra metodología, tecnologías, becas, financiación e información del curso."
+  syllabus_btn_label: "Descarga Instantánea"
+  syllabus_motivation: "En 2 min. recibirás en tu buzón de correo un PDF con información detallada sobre nuestra metodología, tecnologías, becas, financiación y detalles del curso."
   apply_button_link: "/es/aplica"
   apply_button_text: "Postúlate a la Academia"
 
@@ -52,7 +52,7 @@ instructors:
 
 
 badges:
-  paragraph: "Gracias a un enfoque hacia la programación, nuestros programas han sido galardonados como TOP Coding Bootcamp en <a href='/es/premios'>España, USA y otros países</a>. Nuestros certificados estan avalados por el Departamento de Educación de Estado Unidos en Florida."
+  paragraph: "Gracias a un enfoque hacia la programación, nuestros programas han sido galardonados como TOP Coding Bootcamp en <a href='/es/premios'>España, USA y otros países</a>. Nuestros certificados están avalados por el Departamento de Educación de Estados Unidos en Florida."
 
 
 two_columns_first:
@@ -61,14 +61,15 @@ two_columns_first:
   available_locations: ["madrid-spain", "malaga-spain", "barcelona-spain", "valencia-spain"]
   image:
     style: '{"border" : "0px solid black", "backgroundSize": "contain", "background-position": "center" }'
-    src: "../../images/staff/chema-alonso.webp" 
-    link: "https://www.mypublicinbox.com/chemaalonso"
-    shadow: false
+    src: "../../images/partner/chema-videoI.jpg" 
+    # link: "https://www.mypublicinbox.com/chemaalonso" # Link De la imagen  hacia cualquier URL.
+    shadow: true
+  video: "https://youtu.be/r0P4PwmOra0"
   heading:
     text: "Curso de Ciberseguridad validado por Chema Alonso el Hacker más Reconocido de España"
     font_size: ["28px", "28px", "28px", "23px", "23px"]
   sub_heading:
-    text: "Tanto los contenidos, como los docentes del bootcamp de ciberseguridad de 4Geeks Academy han sido validados por Chema Alonso, experto en ciberseguridad. Se trata de un curso de alta calidad, con contenido actualizado en el que aprenderás a trabajar con los estándares ISO y NIST, y adquirirás experiencia práctica en técnicas de prevención de pérdida de datos (DLP), pruebas de penetración, etc. Además nuestros estudiantes de cualquier campus en España tendrán:"
+    text: "Tanto los contenidos como los docentes del bootcamp de ciberseguridad de 4Geeks Academy han sido validados por Chema Alonso, experto en ciberseguridad. Se trata de un curso de alta calidad, con contenido actualizado en el que aprenderás a trabajar con los estándares ISO y NIST, y adquirirás experiencia práctica en técnicas de prevención de pérdida de datos (DLP), pruebas de penetración, etc. Además, nuestros estudiantes de cualquier campus en España tendrán:"
     font_size: ["16px", "16px", "16px", "16px", "16px"]
   disclosure: 
     text: '* Estos beneficios relacionados con nuestra colaboración con Chema Alonso están disponibles <span style="font-weight: 600;" >únicamente</span> para nuestros estudiantes que asisten a clases en cualquiera de nuestros campus en 🇪🇸 España.'
@@ -98,7 +99,7 @@ two_columns_second:
     font_size: ["28px", "28px", "28px", "23px", "23px"]
   sub_heading:
     text: |
-      Si bien ningún Curso te garantiza la certificación (EJPT, CEH, etc.), al finalizar, habrás adquirido una sólida base para aprobar los exámenes.
+      Si bien ningún curso te garantiza la certificación (EJPT, CEH, etc.), al finalizar, habrás adquirido una sólida base para aprobar los exámenes.
       Domina las amenazas del mundo digital actual con el Curso de Ciberseguridad de 4Geeks Academy. Aprende las habilidades y conocimientos claves para protegerte. Las prácticas de pentesting se basan en los laboratorios de certificación EJPT.
     font_size: ["16px", "16px", "16px", "16px", "16px"]
   button:
@@ -111,8 +112,8 @@ two_columns_second:
 overlaped:
   heading: "Oportunidades Lucrativas y Retos Constantes en la industria de Ciberseguridad"
   paragraph: |
-    <strong style="font-weight: 800;">Mercado en crecimiento</strong>: La inversión global en ciberseguridad superó el billón de dólares en 2021 y se prevé que alcance los $314.28 mil millones para el año 2029.<br><br>
-    <strong style="font-weight: 800;">Gran cantidad de posiciones sin cubrir</strong>: Se estima que existe una brecha de talento en ciberseguridad de alrededor del 98.52%. Esto significa que hay una gran cantidad de puestos vacantes que necesitan ser cubiertos por profesionales cualificados.
+    <strong style="font-weight: 800;">Mercado en crecimiento</strong>: La inversión global en ciberseguridad alcanzará entre 300.000 y 600.000 millones de dólares para 2030, impulsada por el aumento de amenazas digitales (El País, 2025).<br><br>
+    <strong style="font-weight: 800;">Gran cantidad de posiciones sin cubrir</strong>: Actualmente hay una escasez de casi 4 millones de profesionales en ciberseguridad a nivel mundial (Foro Económico Mundial, 2024).
   image:
     src: "/images/landing/feliz-empresario.png"
 
@@ -146,10 +147,10 @@ two_columns:
     src: "../../images/staff/chema-daniela.webp"  
     shadow: false
   heading:
-    text: "conviértete en un especialista con nuestro curso en Ciberseguridad"
+    text: "Conviértete en un especialista con nuestro curso en ciberseguridad"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "Adquiere los conocimientos para proteger sistemas contra amenazas cibernéticas. Este curso intensivo te brindará las habilidades necesarias para identificar, analizar y prevenir ataques, usando herramientas como Nessus, Nmap, Wireshark y Metasploit. Este programa de estudios fue cocreado por Daniela Maissi, una hacker ética del EC-Council como investigadora de malware y hábil desarrolladora web experta en ciberseguridad con más de 5 años de experiencia y 12+ certificaciones en computación en la nube, OSINT y soluciones de TI." 
+    text: "Adquiere los conocimientos para proteger sistemas contra amenazas cibernéticas. Este curso intensivo te brindará las habilidades necesarias para identificar, analizar y prevenir ataques, usando herramientas como Nessus, Nmap, Wireshark y Metasploit. Este programa de estudios fue cocreado por Daniela Maissi, una hacker ética del EC-Council, investigadora de malware y desarrolladora web experta en ciberseguridad con más de 5 años de experiencia y 12+ certificaciones en computación en la nube, OSINT y soluciones de TI." 
     font_size: ["16px", "16px", "16px", "16px", "16px"]
   button:
     text: "Postúlate a la Academia"
@@ -194,7 +195,7 @@ details:
           content: "3 clases semanales"
           icon: "book-2"
         - label: "Tamaño de la clase"
-          content: "16 personas máx"
+          content: "18 personas máx"
           icon: "people"
         - label: "Certificado"
           content: "Nuestros certificados son reconocidos por múltiples instituciones."
@@ -236,7 +237,7 @@ details:
   details_modules:
     - module_name: "PreWork"
       title: "Introducción a la ciberseguridad"
-      description: "Empezaremos con un 'prework', donde aprenderás  los conceptos básicos de la seguridad informática, incluyendo las principales amenazas, vulnerabilidades y también conocerás la importancia de la ciberseguridad en el mundo actual."
+      description: "Empezaremos con un 'prework', donde aprenderás los conceptos básicos de la seguridad informática, incluyendo las principales amenazas, vulnerabilidades y también conocerás la importancia de la ciberseguridad en el mundo actual."
       projects: "Introducción a la ciberseguridad, a las tecnologías de Información [TI] y a las buenas prácticas de seguridad de la información además de tener una introducción al Packet Tracer una herramienta de simulación visual para rastrear paquetes."
       slug: "security-intro"
       duration: "1 sem"
@@ -270,7 +271,7 @@ details:
       step: 2
     - module_name: "Pentesting"
       title: "Fundamentos de Pentesting"
-      description: "Adquirirás los conocimientos básicos de las pruebas de penetración, incluyendo las diferentes metodologías, herramientas y técnicas, Aprenderás a realizar pruebas básicas de pentesting, como escaneo de vulnerabilidades, ataques a aplicaciones web y ataques a redes y sistemas, lo que se conoce como Blue Team (que se centra en la defenza) o Red Team (que se centra en el ataque)"
+      description: "Adquirirás los conocimientos básicos de las pruebas de penetración, incluyendo las diferentes metodologías, herramientas y técnicas, Aprenderás a realizar pruebas básicas de pentesting, como escaneo de vulnerabilidades, ataques a aplicaciones web y ataques a redes y sistemas, lo que se conoce como Blue Team (que se centra en la defensa) o Red Team (que se centra en el ataque)"
       projects: "Aprenderás a monitorizar redes y sistemas, analizar incidentes de seguridad y desarrollar planes de respuesta. Te familiarizarás con el enfoque Blue Team, que se centra en la defensa y respuesta a ataques y también Adquirirás los conocimientos del enfoque Red Team, que se centra en la simulación de ataques avanzados."
       slug: "pentesting-module"
       duration: "3 sem"
@@ -323,7 +324,7 @@ potential_companies:
     - name: "Oracle"
       image: "../../../static/images/partner/oracle.png"
       alt: ""
-    - name: "AirBnB"
+    - name: "Airbnb"
       image: "../../../static/images/partner/airbnb.png"
       alt: ""
     - name: "Uber"
@@ -367,6 +368,6 @@ alumni:
   sub_heading: "Algunos de los proyectos de nuestros estudiantes que se han graduado"
 
 faq:
-  title: "Preguntas Frecuentes"
+  title: "Preguntas frecuentes"
   read_more: "Ver más preguntas"
   link: "/faq"
