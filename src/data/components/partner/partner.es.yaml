@@ -191,7 +191,7 @@ financials:
       image: "../../../../static/images/climb-logo.png"
       featured: false
     - name: "Ascent"
-      image: "../../../../static/images/ascent_logo.jpg"
+      image: "../../../../static/images/ascent_logo.png"
       featured: false
 
 work_together:

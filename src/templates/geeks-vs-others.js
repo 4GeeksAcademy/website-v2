@@ -10,7 +10,6 @@ import { Div } from "../components/Sections";
 import { Colors } from "../components/Styling";
 import { H2 } from "../components/Heading";
 
-
 const View = (props) => {
   const { data, pageContext, yml } = props;
   const { session } = React.useContext(SessionContext);
@@ -53,12 +52,11 @@ const View = (props) => {
       />
 
       {/* Section Title */}
-      <Div display="block" >
+      <Div display="block">
         <H2 type="h2" textAlign_tablet="center">
           {yml.section_heading?.text}
         </H2>
       </Div>
-
 
       <GeeksVsOthers lang={pageContext.lang} link={false} />
 
@@ -68,7 +66,10 @@ const View = (props) => {
           {yml.two_columns.section_heading.text}
         </H2>
         <TwoColumn
-          left={{ image: yml.two_columns?.image, video: yml.two_columns?.video }}
+          left={{
+            image: yml.two_columns?.image,
+            video: yml.two_columns?.video,
+          }}
           right={{
             sub_heading: yml.two_columns?.sub_heading,
             bullets: yml.two_columns?.bullets,
@@ -77,9 +78,12 @@ const View = (props) => {
           }}
           proportions={yml.two_columns?.proportions}
           session={session}
-          />
+        />
         <TwoColumn
-          right={{ image: yml.two_columns_first?.image, video: yml.two_columns_first?.video }}
+          right={{
+            image: yml.two_columns_first?.image,
+            video: yml.two_columns_first?.video,
+          }}
           left={{
             bullets: yml.two_columns_first?.bullets,
             button: yml.two_columns_first?.button,
@@ -91,7 +95,10 @@ const View = (props) => {
 
       {/* second twocolumns */}
       <TwoColumn
-        left={{ image: yml.two_columns_second?.image, video: yml.two_columns_second?.video }}
+        left={{
+          image: yml.two_columns_second?.image,
+          video: yml.two_columns_second?.video,
+        }}
         right={{
           heading: yml.two_columns_second?.heading,
           sub_heading: yml.two_columns_second?.sub_heading,

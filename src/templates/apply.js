@@ -112,7 +112,7 @@ const Apply = (props) => {
   }, []);
   React.useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
-  
+
     // Pre-fill the region
     let _region = urlParams.get("region");
     if (!_region && session.location?.meta_info?.region) {
@@ -121,25 +121,25 @@ const Apply = (props) => {
 
     // Pre-fill the location
     let _location = urlParams.get("location");
-    if (!_location && session.location) 
+    if (!_location && session.location)
       _location = session.location.active_campaign_location_slug;
-    
+
     if (typeof _location === "string" && session.locations)
       _location = session.locations.find(
         (l) =>
           l.active_campaign_location_slug === _location ||
           l.breathecode_location_slug === _location
       );
-      else _location = null;
+    else _location = null;
 
     if (_location) _location = _location.active_campaign_location_slug;
-  
+
     // Pre-fill the course
     let _course = urlParams.get("course");
     if (!_course && props.location.state) _course = props.location.state.course;
     if (typeof _course === "string")
       _course = programs.find((p) => p.value === _course);
-    
+
     // Pre-fill the utm_url
     let _utm_url = undefined;
     if (props.location.state)
@@ -150,7 +150,9 @@ const Apply = (props) => {
       utm_url: _utm_url,
       // this is the line that automatically sets the location, we don't want that anymore
       // its better if leads choose the location themselves
-      location: {value: _location || "", valid: typeof (_location) === "string" && _location !== ""
+      location: {
+        value: _location || "",
+        valid: typeof _location === "string" && _location !== "",
       },
       course: {
         value: _course || null,
@@ -550,9 +552,7 @@ const Apply = (props) => {
                 bgColor={Colors.black}
                 options={regions}
                 value={
-                  regionVal
-                    ? regions.find((r) => r.value === regionVal)
-                    : null
+                  regionVal ? regions.find((r) => r.value === regionVal) : null
                 }
                 placeholder={yml.left.regions_title}
                 inputId="dropdown_region_selector"
@@ -595,17 +595,27 @@ const Apply = (props) => {
                   bgColor={Colors.black}
                   options={
                     regionVal === "online"
-                      ? [{ dialCode: null, label: "Online", region: "online", value: "online" }]
-                      : locations?.filter((academy) => academy.region === regionVal)
+                      ? [
+                          {
+                            dialCode: null,
+                            label: "Online",
+                            region: "online",
+                            value: "online",
+                          },
+                        ]
+                      : locations?.filter(
+                          (academy) => academy.region === regionVal
+                        )
                   }
                   value={locations?.find(
                     (el) => el.value === formData.location.value
                   )}
                   placeholder={yml.left.locations_title}
                   inputId={"dropdown_academy_selector"}
-                  onChange={(value, valid) => 
-                    setVal({ ...formData, location: { value, valid } })}
-                    />
+                  onChange={(value, valid) =>
+                    setVal({ ...formData, location: { value, valid } })
+                  }
+                />
               </Div>
             )}
             {formData.referral_key.value &&
