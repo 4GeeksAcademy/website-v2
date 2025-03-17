@@ -22,7 +22,7 @@ part_time:
       - "There is always a payment plan available to help you join 4Geeks Academy."
       - "If you don't find anything that works for you here, please contact us so we can try to find other ways to help you."
     icons: 
-      - "/images/ascent_logo.jpg"
+      - "/images/ascent_logo.png"
       - "/images/climb-logo.png"
       - "/images/quotanda-logo.png"
 
@@ -36,7 +36,7 @@ part_time:
       - "There is always a payment plan available to help you join 4Geeks Academy."
       - "If you don't find anything that works for you here, please contact us so we can try to find other ways to help you."
     icons: 
-      - "/images/ascent_logo.jpg"
+      - "/images/ascent_logo.png"
       - "/images/climb-logo.png"
       - "/images/quotanda-logo.png"
 
