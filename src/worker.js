@@ -114,7 +114,7 @@ const getRegion = (shortName, regions) => {
 };
 
 const initSession = async (locationsArray, storedSession, path, seed = {}) => {
-  console.log("Initializing session");
+  // console.log("Initializing session");
   var v4 = null;
   var latitude = null;
   var longitude = null;
@@ -146,7 +146,7 @@ const initSession = async (locationsArray, storedSession, path, seed = {}) => {
   if (location) {
     location = locations.find((l) => l.breathecode_location_slug === location);
     if (!location) location = null;
-    console.log("Hardcoded location", location);
+    // console.log("Hardcoded location", location);
   } else if (storedSession && storedSession.location != null) {
     location = locations.find(
       (l) =>
@@ -158,7 +158,7 @@ const initSession = async (locationsArray, storedSession, path, seed = {}) => {
   }
 
   if (location === null && !path.includes("/landings")) {
-    console.log("Calculating nearest location because it was null...");
+    // console.log("Calculating nearest location because it was null...");
     try {
       const response = await fetch(
         `https://www.googleapis.com/geolocation/v1/geolocate?key=${GOOGLE_KEY}`,
