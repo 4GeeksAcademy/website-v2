@@ -98,8 +98,8 @@ const Apply = (props) => {
           (m.online_available == false
             ? ""
             : m.in_person_available == true
-              ? trans[pageContext.lang]["(In-person and from home available)"]
-              : trans[pageContext.lang]["(From home until further notice)"]),
+            ? trans[pageContext.lang]["(In-person and from home available)"]
+            : trans[pageContext.lang]["(From home until further notice)"]),
         value: m.active_campaign_location_slug,
         region: m.meta_info.region,
         dialCode: m.meta_info.dialCode,
@@ -596,16 +596,16 @@ const Apply = (props) => {
                   options={
                     regionVal === "online"
                       ? [
-                        {
-                          dialCode: null,
-                          label: "Online",
-                          region: "online",
-                          value: "online",
-                        },
-                      ]
+                          {
+                            dialCode: null,
+                            label: "Online",
+                            region: "online",
+                            value: "online",
+                          },
+                        ]
                       : locations?.filter(
-                        (academy) => academy.region === regionVal
-                      )
+                          (academy) => academy.region === regionVal
+                        )
                   }
                   value={locations?.find(
                     (el) => el.value === formData.location.value
