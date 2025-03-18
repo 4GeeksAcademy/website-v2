@@ -125,10 +125,10 @@ two_columns_rigo:
   background: "#FFFFFF"
   justify: "center" #start,end,center
   image:
-    style: '{"backgroundSize": "contain", "background-position": "center"}'
-    src: "/images/landing/rigobot-section.webp"
-    shadow: false
-  # video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+    style: '{"backgroundSize": "contain", "background-position": "center", "border" : "2px solid black", "border-radius": "4px"}'
+    src: "/images/landing/ai-mentor.jpg"
+    shadow: true
+  video: "6m1Jyya7eCc"
   heading: 
     text: "Our AI-powered features make all the difference!"
     font_size: ["33px", "33px", "33px", "33px", "33px"]
@@ -138,9 +138,9 @@ two_columns_rigo:
   sub_heading:
     text: "Through years of research and experience, we've perfected the strategies and tools to ensure your constant and efficient progress. To optimize your learning curve and empower you to tackle challenges with confidence, we've now incorporated the power of AI."
     font_size: ["16px","16px","16px","16px","16px"]
-    style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"600" }'
+    style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"300", "text-align": "justify" }'
   content:
-    style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"600"}'
+    style: '{ "font-size":"16px", "margin":"15px 0"}'
     text: "Experience the difference our AI-powered features make. Our tried-and-tested approach keeps you engaged, motivated, and on the fast track to achieving your coding goals!"
   bullets:
     item_style: '{ "padding": "0", "font-weight": "100", "margin":"0" }'
@@ -165,6 +165,10 @@ two_columns_rigo:
           • Structured practice.
         icon: "check" #string with icon for example ['check', 'cicle', etc]
         icon_color: '#25BF6C'
+
+staff:
+  heading: "Meet your Staff"
+  sub_heading: ""
 
 active_campaign_location_slug: "austin-usa"
 breathecode_location_slug: "austin-usa"
