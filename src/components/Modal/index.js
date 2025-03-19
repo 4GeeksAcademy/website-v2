@@ -20,7 +20,7 @@ const Close = styled.div`
   position: fixed;
   right: 25px;
   top: 15px;
-  color: white;
+  color: black;
   font-size: 50px;
   cursor: pointer;
   z-index: 1001;
@@ -36,7 +36,7 @@ const ModalBox = styled.div`
   max-width: 900px;
   height: auto;
   z-index: 1000;
-  background: #1a1a1a;
+  background: #ffffff;
   overflow-y: auto;
   border: 1px solid #000;
   border-radius: 15px;
