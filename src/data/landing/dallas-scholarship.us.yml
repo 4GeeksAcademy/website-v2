@@ -27,7 +27,7 @@ form:
   fields: ["full_name", "phone", "email"]
   heading: "Apply to our life-changing bootcamp experience!"
   motivation: "Fill out the form to receive our program details and scholarship information!"
-  button_label: SUBMIT
+  button_label: Apply Now
   redirect: "/us/thank-you/" #you can redirect to another url or entirely diffrent website
 
 apply_schollarship: # form that is displayed at the end of the landing
@@ -41,7 +41,7 @@ navbar:
   logoUrl: "#"
 
 header_data:
-  tagline: "Dallas Residents,Your New Life Starts Here!"
+  tagline: "Hey Dallas! Your life in Tech starts Here!"
   sub_heading: "Get Ready for a Tech Career with a Full Scholarship."
   background: "#ffffff"
   tagline_color: "#1c1c1c"
@@ -57,10 +57,10 @@ features:
   marginTop: 0px #<-- separation between tagline and the bullets
   text: "Apply now—don’t miss your chance!"
   bullets:
-    - "For residents of Greater Dallas ONLY."
-    - "Award-winning tech education and transformative life skills."
-    - "Get a high-paying, future-proof tech-job, right in your city."
     - "Only 25 spots- act now! "
+    - "Get a high-paying, future-proof tech-job, right in your city."
+    - "Award-winning tech education and transformative life skills."
+    - "For residents of Greater Dallas ONLY."
   styles: '{ "color": "black", "fontWeight":"400" }'
 
 short_badges:
@@ -113,8 +113,8 @@ who_is_hiring:
   background: "#fff"
   position: 15
   limit: 3
-  heading: "Who is hiring"
-  sub_heading: "These companies are hiring"
+  heading: "WHO'S HIRING OUR STUDENTS"
+  sub_heading: "Some of the companies our graduates are thriving in"
 
 program_details:
   position: 6
@@ -260,11 +260,11 @@ components:
     proportions: [6, 6]
     image:
       style: '{ "backgroundSize": "contain" }'
-      src: "/images/landing/20-million-column-4geeks.png"
+      src: "/images/landing/blonde-girl-laptop.png"
     section_heading:
       style: '{ "margin-top": "50px", "color": "black", "max-width": "900px", "font-size": "34px", "align-self": "center" }'
       text: |
-        Transform you life with 4Geeks Academy and Kosmos A Comprehensive Approach to Career Readiness
+        Transform you life with 4Geeks Academy and Kosmos: A Comprehensive Approach to Career Readiness
     heading:
       style: '{ "margin-top": "0px", "font-weight": "300"  }'
       text: "Why 4Geeks?"
@@ -303,10 +303,10 @@ components:
     proportions: [6, 6]
     image:
       style: '{ "backgroundSize": "contain" }'
-      src: "/images/landing/blonde-girl-laptop.png"
+      src: "/images/landing/20-million-column-4geeks.png"
     heading:
       style: '{ "margin-top": "0px" }'
-      text: "Why Kosmos?"
+      text: "Why are we partnering with Kosmos?"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     sub_heading:
       font_size: ["18px", "18px", "18px", "18px", "18px"]
