@@ -27,7 +27,7 @@ form:
   fields: ["full_name", "phone", "email"]
   heading: "Apply to our life-changing bootcamp experience!"
   motivation: "Fill out the form to receive our program details and scholarship information!"
-  button_label: Apply Now
+  button_label: Apply NOW
   redirect: "/us/thank-you/" #you can redirect to another url or entirely diffrent website
 
 apply_schollarship: # form that is displayed at the end of the landing
@@ -42,8 +42,10 @@ navbar:
 
 header_data:
   tagline: "Hey Dallas! Your life in Tech starts Here!"
-  sub_heading: "Get Ready for a Tech Career with a Full Scholarship."
+  sub_heading: |
+    <span style="font-size: 32px;">Get Ready for a Tech Career with a Full Scholarship.</span>
   background: "#ffffff"
+  partner_logo_url: "../../../static/images/partner/kosmoslogo.png"
   tagline_color: "#1c1c1c"
   form_styles:
     background: "#0084FF"
@@ -57,10 +59,10 @@ features:
   marginTop: 0px #<-- separation between tagline and the bullets
   text: "Apply now—don’t miss your chance!"
   bullets:
-    - "Only 25 spots- act now! "
+    - "For residents of Greater Dallas ONLY."
     - "Get a high-paying, future-proof tech-job, right in your city."
     - "Award-winning tech education and transformative life skills."
-    - "For residents of Greater Dallas ONLY."
+    - "Only 25 spots- act now! "
   styles: '{ "color": "black", "fontWeight":"400" }'
 
 short_badges:
