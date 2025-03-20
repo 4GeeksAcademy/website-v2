@@ -116,7 +116,7 @@ who_is_hiring:
   position: 15
   limit: 3
   heading: "WHO'S HIRING OUR STUDENTS"
-  sub_heading: "Some of the companies our graduates are thriving in"
+  sub_heading: "Some of the companies where our graduates are thriving"
 
 program_details:
   position: 6
@@ -274,7 +274,7 @@ components:
     sub_heading:
       font_size: ["18px", "18px", "18px", "18px", "18px"]
       style: '{ "font-weight": "100" }'
-      text: "Master  Python, React, JavaScript, and leverage cutting-edge AI tools to enhance your productivity and workflow. Gain the most sought-after skills in tech  and launch your  career as a software developer.  More information here."
+      text: "Master  Python, React, JavaScript, and leverage cutting-edge AI tools to enhance your productivity and workflow. Gain the most sought-after skills in tech  and launch your  career as a software developer."
     content:
       font_size: ["16px"]
       text: ""
