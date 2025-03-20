@@ -76,6 +76,8 @@ two_column_carousel:
   title: "Nosotros lo hacemos posible"
   text: "Nuestro programa de Job Guarantee está dando excelentes resultados. Vea algunas de las historias de nuestros graduados:"
   videos:
+    - src: "/images/testimonials/4geeks-meeting-video.webp"
+      video: "0JqAn7C790c"
     - src: "/images/testimonials/pablo-review.jpg"
       video: "OtJvrNwQw9E"
 

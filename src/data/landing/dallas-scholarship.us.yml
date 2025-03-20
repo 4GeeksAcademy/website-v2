@@ -25,10 +25,10 @@ form:
   # always the first_name, email and phone will be mandatory if added.
   # NOTE: THERE IS NO NEED TO ADD THE COURSE FIELD HERE. IT IS CONTROLLED THROUGH THE utm_course
   fields: ["full_name", "phone", "email"]
-  heading: "Join our Award-winning Coding Program"
+  heading: "Apply to our life-changing bootcamp experience!"
   motivation: "Fill out the form to receive our program details and scholarship information!"
-  button_label: SUBMIT
-  redirect: "/us/thank-you/"  #you can redirect to another url or entirely diffrent website
+  button_label: Apply Now
+  redirect: "/us/thank-you/" #you can redirect to another url or entirely diffrent website
 
 apply_schollarship: # form that is displayed at the end of the landing
   # title: "Get more info about this award-winning development course"
@@ -41,8 +41,8 @@ navbar:
   logoUrl: "#"
 
 header_data:
-  tagline: "Dallas Residents, Your Tech Career Starts Here!"
-  sub_heading: "90% Scholarship for Full-Stack Development!"
+  tagline: "Hey Dallas! Your life in Tech starts Here!"
+  sub_heading: "Get Ready for a Tech Career with a Full Scholarship."
   background: "#ffffff"
   tagline_color: "#1c1c1c"
   form_styles:
@@ -52,16 +52,15 @@ header_data:
       background: "black"
   badge: "../../../static/images/badges/course-report-best-coding-bootcamps-badge-2025.png"
   image_filter: brightness(0.3)
-  
 
 features:
   marginTop: 0px #<-- separation between tagline and the bullets
   text: "Apply now—don’t miss your chance!"
   bullets:
-  - 'For residents of Greater Dallas ONLY'
-  - 'Get 90% off our bootcamp tuition!'
-  - 'Get a high-paying, future-proof tech-job, right in your city.'
-  - 'Only 25 spots- act now! '
+    - "Only 25 spots- act now! "
+    - "Get a high-paying, future-proof tech-job, right in your city."
+    - "Award-winning tech education and transformative life skills."
+    - "For residents of Greater Dallas ONLY."
   styles: '{ "color": "black", "fontWeight":"400" }'
 
 short_badges:
@@ -93,8 +92,8 @@ short_badges:
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "No cost. No excuses. \n Join and be a part of the #MiamiTech movement."
-    text_mobile: "No cost. No excuses.\n Join and be a part of the #MiamiTech movement."
+    text: "No cost. No excuses.\n Join now"
+    text_mobile: "No cost. No excuses.\n Join now"
     # devices:   XL      LG    MD      SM    XS
     font_size: ["22px", "22px", "22px", "16px", "16px"]
   button:
@@ -103,30 +102,31 @@ follow_bar:
   phone:
     text: ""
 
-geeks_vs_others:
-  position: 7
-  heading: "4Geeks Academy vs. other bootcamps"
-  paragraph: ""
-  sub_heading: "Discover what sets us apart"
-  total_rows: 5
+# geeks_vs_others:
+#   position: 7
+#   heading: "4Geeks Academy vs. other bootcamps"
+#   paragraph: ""
+#   sub_heading: "Discover what sets us apart"
+#   total_rows: 5
 
 who_is_hiring:
   background: "#fff"
   position: 15
   limit: 3
-  heading: "Who is hiring"
-  sub_heading: "These companies are hiring"
+  heading: "WHO'S HIRING OUR STUDENTS"
+  sub_heading: "Some of the companies our graduates are thriving in"
 
 program_details:
-  position: 5
+  position: 6
   background: "#F4F9FF"
-  heading: "Lo que aprenderás"
-  sub_heading: "Las tecnologias más buscadas en el mercado laboral"
+  heading: "BECOME A FULL STACK DEVELOPER AND LAUNCH A SUCCESSFUL CAREER"
+  sub_heading: |
+    Master  Python, React, JavaScript, and leverage cutting-edge AI tools to enhance your productivity and workflow. <br>Gain the most sought-after skills in tech  and launch your  career as a software developer. <a href='https://4geeksacademy.com/us/coding-bootcamps/part-time-full-stack-developer'> More information here</a>.
 
 rating_reviews:
-  background: "veryLightBlue"
-  position: 8
-  heading: "Top rated on all available review sites"
+  background: "#fff"
+  position: 9
+  heading: "AWARDS AND RECOGNITIONS"
   rating_list:
     - alt: "Career Karma"
       image: "../../../static/images/badges/career-karma.png"
@@ -145,6 +145,11 @@ rating_reviews:
       rating: 5
       url: ""
 
+why_4geeks:
+  position: 8
+  heading: "Hear it from our students"
+  sub_heading: " "
+
 components:
   - name: why_coding
     position: 1
@@ -154,7 +159,7 @@ components:
     image:
       style: '{ "backgroundSize": "contain" }'
       src: "/images/landing/hombre-con-laptop.png"
-    section_heading: 
+    section_heading:
       text: "Why Learn to Code?"
     heading:
       text: ""
@@ -189,17 +194,17 @@ components:
   #     style: '{ "backgroundSize": "contain" }'
   #     src: "/images/landing/hombre-joven-con-laptop.webp"
   #     shadow: false
-  #   heading: 
+  #   heading:
   #     text: "Eligible Programs"
   #   sub_heading:
   #     text: "Choose the path that’s right for you."
-  #   button: 
+  #   button:
   #     text: "GET IN TOUCH"
   #     color: white
   #     hover_color: "white"
   #     background: "blue"
   #     path: "#leadform_bottom"
-  #   content: 
+  #   content:
   #     text: ""
   #     font_size: ["16px"]
   #     path: ""
@@ -228,24 +233,25 @@ components:
         color: "#0084FF"
         title: "Eligibility"
         content: "Must be a legal resident of Greater Dallas, underemployed or unemployed."
-      - icon: "presentation"
+      - icon: "briefcase-2"
+        color: "#FFB718"
         title: "Application"
-        content: "Fill out the form, interview with admissions and approve logic test."
-      - icon: "briefcase-2"
-        color: "#FFB718"
+        content: "Fill out the form and pass the assessment process."
+      - icon: "presentation"
+        color: "#d91e1e"
         title: "Onboarding Process"
-        content: "Complete pre-work and choose a financing method for the remaining 10%."
-      - icon: "briefcase-2"
-        color: "#FFB718"
+        content: "Complete pre-work and life skills training"
+      - icon: "stairswflag"
+        color: "#BE8BFF"
         title: "You’re Set!"
-        content: "Become a full stack developer, with our unlimited mentorship and career support."
+        content: "Become a full-stack developer with unlimited mentorship and career support."
     button:
       text: "4geeks vs. Others"
       path: "#geeks_vs_others"
       background: "#232323"
       color: white
       hover: white
-      style: '{font-weight: 800}'
+      style: "{font-weight: 800}"
 
   - name: two_colum_full_stack
     position: 4
@@ -255,9 +261,13 @@ components:
     image:
       style: '{ "backgroundSize": "contain" }'
       src: "/images/landing/blonde-girl-laptop.png"
+    section_heading:
+      style: '{ "margin-top": "50px", "color": "black", "max-width": "900px", "font-size": "34px", "align-self": "center" }'
+      text: |
+        Transform you life with 4Geeks Academy and Kosmos: A Comprehensive Approach to Career Readiness
     heading:
-      style: '{ "margin-top": "0px" }'
-      text: "BECOME A FULL STACK DEVELOPER AND LAUNCH A SUCCESSFUL CAREER"
+      style: '{ "margin-top": "0px", "font-weight": "300"  }'
+      text: "Why 4Geeks?"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     sub_heading:
       font_size: ["18px", "18px", "18px", "18px", "18px"]
@@ -268,13 +278,56 @@ components:
       text: ""
     bullets:
       items:
+        - text: "Industry-aligned curriculum, ahead of the latest job market trends"
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - text: "An extensive, highly active network of partners in Tech"
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
         - text: "Lifelong and readily available coding mentorship"
           icon: "check" #string with icon for example ['check', 'cicle', etc]
         - text: "Unlimited and personalized career support"
           icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - text: "Industry-aligned curriculum, ahead of the latest job market trends"
+        - text: "AI-powered support 24/7"
           icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - text: "An extensive, highly active network of partners in Tech"
+    button:
+      style: '{ "padding": "10px", "border-radius": "3px" }'
+      text: "Apply Now"
+      color: white
+      hover_color: "white"
+      background: "blue"
+      path: "#leadform_bottom"
+
+  - name: pay
+    position: 5
+    layout: two_column_left
+    background: "#F4F9FF"
+    proportions: [6, 6]
+    image:
+      style: '{ "backgroundSize": "contain" }'
+      src: "/images/landing/20-million-column-4geeks.png"
+    heading:
+      style: '{ "margin-top": "0px" }'
+      text: "Why are we partnering with Kosmos?"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      font_size: ["18px", "18px", "18px", "18px", "18px"]
+      style: '{ "font-weight": "100" }'
+      text: "Recognizing that technical skills alone aren’t enough for long-term success, Kosmos developed its proprietary ‘Switch’ workshops to equip you  with essential career and life skills, including:"
+    content:
+      font_size: ["16px"]
+      text: ""
+    bullets:
+      items:
+        - heading: "Gamified Application Process – "
+          text: "An AI-enhanced assessment helps candidates identify if they are suited for software development."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "Goal-Setting & Career Alignment – "
+          text: "A structured personal approach to ensure students are a good fit for the tech field and positioned for success."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "Financial Literacy Training – "
+          text: "Supported by leading financial institutions, it equips students with essential money management skills."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "Strength & Potential Identification – "
+          text: "Creative exercises and guest speakers help participants rewrite limiting narratives and unlock hidden talents."
           icon: "check" #string with icon for example ['check', 'cicle', etc]
     button:
       style: '{ "padding": "10px", "border-radius": "3px" }'
@@ -291,7 +344,7 @@ components:
     proportions: [5, 7]
     content:
       font_size: ["16px"]
-      text: "This is your chance to be part of it! The Texas Lone Star Scholarship covers 90% of tuition, making it possible to become an in-demand tech professional without straining your finances."
+      text: "This is your chance to be part of it! The Texas Lone Star Scholarship covers 100% of your tuition, making it possible to become an in-demand tech professional without straining your finances."
     image:
       style: '{ "backgroundSize": "contain" }'
       src: "/images/landing/community-support-2.png"
@@ -320,57 +373,21 @@ components:
         - heading: "Innovation & Community"
           text: "Dallas has a supportive tech culture, with networking events, meetups, and bootcamps helping newcomers break in and grow."
           icon: "check" #string with icon for example ['check', 'cicle', etc]
-          
-  - name: pay
-    position: 7
-    layout: two_column_right
-    background: "#F4F9FF"
-    proportions: [6, 6]
-    image:
-      style: '{ "backgroundSize": "contain" }'
-      src: "/images/landing/blonde-girl-laptop.png"
-    heading:
-      style: '{ "margin-top": "0px" }'
-      text: "Why 4Geeks?"
-      font_size: ["30px", "30px", "30px", "30px", "30px"]
-    sub_heading:
-      font_size: ["18px", "18px", "18px", "18px", "18px"]
-      style: '{ "font-weight": "100" }'
-      text: "4Geeks Academy is more than a coding school—we’re a community of innovators and code enthusiasts dedicated to helping you build a successful tech career. Based in Miami, with over 7 campuses worldwide and a vibrant network of 4,000+ students, teachers, partners, and alumni, you’ll be gaining a support network like no other, ready to assist you every step of the way—even after you graduate. Where there’s a geek, there’s a way!
-        What sets us apart:"
-    content:
-      font_size: ["16px"]
-      text: ""
-    bullets:
-      items:
-        - text: "Lifelong and readily available coding mentorship"
-          icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - text: "Unlimited and personalized career support"
-          icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - text: "AI powered support 24/07"
-          icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - text: "Industry-aligned curriculum, ahead of the latest job market trends"
-          icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - text: "An extensive, highly active network of partners in Tech"
-          icon: "check" #string with icon for example ['check', 'cicle', etc]
-    button:
-      style: '{ "padding": "10px", "border-radius": "3px" }'
-      text: "Apply Now"
-      color: white
-      hover_color: "white"
-      background: "blue"
-      path: "#leadform_bottom"
 
-  - name: testimonials
-    position: 9
-    layout: testimonials_new
-    heading:
-      style: '{ "font-weight": "400", "color": "#000" }'
-      text: "Hear it from our students"
-      font_size: ["35px", "35px", "30px", "30px", "30px"]
-    # filter_indexes: [6,7,8]
-    filter_indexes: ['azu-bota','nai-kali','cha-fabr', 'jona-ferra', 'jos-bra', 'kev-so']
-    variant: small
+
+
+
+  # - name: testimonials
+  #   position: 9
+  #   layout: testimonials_new
+  #   heading:
+  #     style: '{ "font-weight": "400", "color": "#000" }'
+  #     text: "Hear it from our students"
+  #     font_size: ["35px", "35px", "30px", "30px", "30px"]
+  #   # filter_indexes: [6,7,8]
+  #   filter_indexes:
+  #     ["azu-bota", "nai-kali", "cha-fabr", "jona-ferra", "jos-bra", "kev-so"]
+  #   variant: small
 
   # - name: MiamiTechTalentCoalition
   #   position: 7
@@ -384,7 +401,7 @@ components:
   #     src: "/images/landing/miamitech-logo-sidetext.png"
   #   heading:
   #     style: '{ "font-weight": "400", "margin-bottom": "0" }'
-  #     text: "The Miami Tech Coalition’s and 4Geeks Academy’s Mission" 
+  #     text: "The Miami Tech Coalition’s and 4Geeks Academy’s Mission"
   #     font_size: ["36px", "36px", "30px", "28px", "28px"]
   #   content:
   #     text: "Our partnership supports the Coalition's goal to cultivate Miami as a vibrant hub for innovation and an attractive destination for tech talent and companies alike. Together, we’re building a sustainable pipeline of skilled tech workers connecting South Florida employers, educators, and local talent. Through ongoing collaboration with businesses and community organizations, we ensure our training models lead directly to job opportunities, continuously expanding our positive impact on the local tech scene."
@@ -404,13 +421,13 @@ components:
   #   background: "#F4F9FF"
   #   image:
   #     style: '{ "backgroundSize": "cover", "backgroundPosition": "center" }'
-  #     shadow: true 
+  #     shadow: true
   #     src: "/images/landing/latin-woman-laptop-coffee.png"
   #   heading:
   #     text: "Don’t stress about financing your studies. \nJust focus on your career ahead!"
   #     font_size: ["28px", "28px", "28px", "26px", "26px"]
   #   sub_heading:
-  #     text: "The MTC scholarships are here to change the game for aspiring tech professionals in South Florida. Serious about launching a tech career? Don’t miss this opportunity."   
+  #     text: "The MTC scholarships are here to change the game for aspiring tech professionals in South Florida. Serious about launching a tech career? Don’t miss this opportunity."
   #   bullets:
   #     items:
   #       - text: "Apply to the Scholarship"
