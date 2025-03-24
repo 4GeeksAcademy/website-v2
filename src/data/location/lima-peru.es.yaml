@@ -119,7 +119,7 @@ two_columns_rigo:
     style: '{"backgroundSize": "contain", "background-position": "center", "border" : "2px solid black", "border-radius": "4px"}'
     src: "/images/landing/ai-mentor-esp.jpg"
     shadow: true
-  video: "NRuShbSLtg0"
+  video: "cOFm_deKj6Q"
   heading: 
     text: "¡Nuestras herramientas de IA mejoran y agilizan tu aprendizaje!"
     font_size: ["31px", "31px", "31px", "29px", "29px"]

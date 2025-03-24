@@ -39,7 +39,7 @@ with:
       is_image: false
       image: ""
       image_link: ""
-      text: "Check Financials Options"
+      text: ""
       text_link: "/us/financials"
   - name: "Joao Henrique"
     title: "You'll always have support from the  Academy"
