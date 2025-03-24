@@ -635,10 +635,9 @@ const Apply = (props) => {
                 setVal({ ...formData, referral_key: { value, valid } })
               }
             />
-            {session &&
-              session.location &&
-              formData.location.value.consents &&
-              formData.location.value.consents.map((consent, index) => {
+            {session?.location &&
+              formData.location.value &&
+              locations?.find(({ value }) => value === formData.location.value).consents?.map((consent, index) => {
                 if (consent.active)
                   return (
                     <Div position="relative" margin="10px 0 0 0">
