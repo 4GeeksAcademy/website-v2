@@ -437,6 +437,9 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
         justifyContent="space-between"
       > */}
       <TwoColumn
+        padding="60px 80px"
+        padding_md="60px 80px"
+        padding_lg="60px 80px"
         right={{ image: ymlTwoColumn.image }}
         left={{
           heading: ymlTwoColumn.heading,

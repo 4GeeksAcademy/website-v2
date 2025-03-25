@@ -17,7 +17,7 @@ const WeTrust = ({ we_trust, background, titleProps, paragraphProps }) => {
     >
       <Div
         padding="50px 30px"
-        padding_md="40px"
+        padding_md="40px 90px"
         padding_lg="40px"
         padding_tablet="40px 0"
         margin="0 auto"

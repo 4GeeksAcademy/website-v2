@@ -1,0 +1,449 @@
+meta_info:
+  slug: dallas-scholarship # <--- URL 4geeksacademy.com/us/landing/example
+
+  # This will show on social media when shared
+  title: "Launch Your Tech Career with 4Geeks Academy in Dallas"
+  description: "Coding bootcamps with full or partial scholarships available in dallas"
+  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  # This will show on social media when shared
+  image: "public/images/bg/the-academy-bg.jpg"
+  keywords: ""
+
+  template: "landing_a" # <--- choose your landing template
+  redirects: # <--- URL redirections to avoid 404 errors
+    []
+
+  # Set a particular course or location to the landing page
+  # this UTM fields will be also included in the CRM contact
+  utm_course: ["full-stack"]
+  utm_location: ["downtown-miami"]
+  automation: strong # comma separated, "soft" is the default value
+  tag: website-lead # comma separated, "request_more_info" is the default value
+
+form:
+  # posible fields: "first_name", "last_name", "full_name", "phone", "email"
+  # always the first_name, email and phone will be mandatory if added.
+  # NOTE: THERE IS NO NEED TO ADD THE COURSE FIELD HERE. IT IS CONTROLLED THROUGH THE utm_course
+  fields: ["full_name", "phone", "email"]
+  heading: "Apply to our life-changing bootcamp experience!"
+  motivation: "Fill out the form to receive our program details and scholarship information!"
+  button_label: Apply Now
+  redirect: "/us/thank-you/" #you can redirect to another url or entirely diffrent website
+
+apply_schollarship: # form that is displayed at the end of the landing
+  # title: "Get more info about this award-winning development course"
+  imageSide: "left"
+  image: "../../../static/images/landing/hombre-joven-con-laptop-senalando.webp"
+
+navbar:
+  buttonText: "Apply now"
+  buttonUrl: "#leadform_header" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+  logoUrl: "#"
+
+header_data:
+  tagline: "Hey Dallas! Your life in Tech starts Here!"
+  sub_heading: "Get Ready for a Tech Career with a Full Scholarship."
+  background: "#ffffff"
+  tagline_color: "#1c1c1c"
+  form_styles:
+    background: "#0084FF"
+    color: "white"
+    button:
+      background: "black"
+  badge: "../../../static/images/badges/course-report-best-coding-bootcamps-badge-2025.png"
+  image_filter: brightness(0.3)
+
+features:
+  marginTop: 0px #<-- separation between tagline and the bullets
+  text: "Apply now—don’t miss your chance!"
+  bullets:
+    - "Only 25 spots- act now! "
+    - "Get a high-paying, future-proof tech-job, right in your city."
+    - "Award-winning tech education and transformative life skills."
+    - "For residents of Greater Dallas ONLY."
+  styles: '{ "color": "black", "fontWeight":"400" }'
+
+short_badges:
+  - name: "Top Online Full-Stack Bootcamps Of 2024"
+    url: ""
+    image: "../../../static/images/badges/forbes-logo-award.png"
+    alt: "We have been selected as one of the Top Online Coding Bootcamps by Forbes."
+  - name: "Best for Spanish speakers Of 2024 by Fortune"
+    url: ""
+    image: "../../../static/images/badges/fortune-logo.png"
+    alt: "Recognized by Fortune as one of the Top Coding Bootcamps"
+  - name: "Top Coding Bootcamps Newsweek"
+    url: ""
+    image: "../../../static/images/badges/newsweek.webp"
+    alt: "Top Coding Bootcamps Newsweek"
+  - name: "Best Coding Bootcamp Course Report 2024"
+    url: ""
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+    alt: "Best Coding Bootcamp Course Report 2024"
+  - name: "Licensed by the Florida Department of Education"
+    url: ""
+    image: "../../../static/images/badges/licensed.png"
+    alt: "Licensed by the Florida Department of Education"
+  - name: "ARP Certificate"
+    url: ""
+    image: "../../../static/images/badges/arp-logo-certification.png"
+    alt: "ARP Certificate"
+
+follow_bar:
+  position: "top" # top, bottom, hidden
+  content:
+    text: "No cost. No excuses.\n Join now"
+    text_mobile: "No cost. No excuses.\n Join now"
+    # devices:   XL      LG    MD      SM    XS
+    font_size: ["22px", "22px", "22px", "16px", "16px"]
+  button:
+    text: "Apply Now"
+    path: "#leadform_header"
+  phone:
+    text: ""
+
+# geeks_vs_others:
+#   position: 7
+#   heading: "4Geeks Academy vs. other bootcamps"
+#   paragraph: ""
+#   sub_heading: "Discover what sets us apart"
+#   total_rows: 5
+
+who_is_hiring:
+  background: "#fff"
+  position: 15
+  limit: 3
+  heading: "WHO'S HIRING OUR STUDENTS"
+  sub_heading: "Some of the companies our graduates are thriving in"
+
+program_details:
+  position: 6
+  background: "#F4F9FF"
+  heading: "BECOME A FULL STACK DEVELOPER AND LAUNCH A SUCCESSFUL CAREER"
+  sub_heading: |
+    Master  Python, React, JavaScript, and leverage cutting-edge AI tools to enhance your productivity and workflow. <br>Gain the most sought-after skills in tech  and launch your  career as a software developer. <a href='https://4geeksacademy.com/us/coding-bootcamps/part-time-full-stack-developer'> More information here</a>.
+
+rating_reviews:
+  background: "#fff"
+  position: 9
+  heading: "AWARDS AND RECOGNITIONS"
+  rating_list:
+    - alt: "Career Karma"
+      image: "../../../static/images/badges/career-karma.png"
+      rating: 4.89
+      url: ""
+    - alt: "Switchup"
+      image: "../../../static/images/badges/switchup-img.png"
+      rating: 4.91
+      url: ""
+    - alt: "Course Report"
+      image: "../../../static/images/badges/course-report.png"
+      rating: 4.84
+      url: ""
+    - alt: "Google"
+      image: "../../../static/images/badges/google.png"
+      rating: 5
+      url: ""
+
+why_4geeks:
+  position: 8
+  heading: "Hear it from our students"
+  sub_heading: " "
+
+components:
+  - name: why_coding
+    position: 1
+    layout: two_column_left
+    background: "#fbfbfb"
+    proportions: [5, 7]
+    image:
+      style: '{ "backgroundSize": "contain" }'
+      src: "/images/landing/hombre-con-laptop.png"
+    section_heading:
+      text: "Why Learn to Code?"
+    heading:
+      text: ""
+    sub_heading:
+      text: ""
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+    button:
+      style: '{ "padding": "10px", "border-radius": "3px" }'
+      text: "Apply Now"
+      color: white
+      hover_color: "white"
+      background: "blue"
+      path: "#leadform_bottom"
+    bullets:
+      items:
+        - heading: "STRONG DEMAND"
+          text: "Demand for skilled programmers in Texas is high and expected to keep expanding"
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "HIGH-PAYING SALARIES"
+          text: "Entry level developer positions earn an average of $75,000"
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "DIVERSE CAREER OPPORTUNITIES"
+          text: "Coding skills have become essential in both tech and traditional industries due to the integration of digital tools and platforms into nearly every business."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+
+  # - name: new_design_with_bullets
+  #   position: 4
+  #   proportions: [6, 6]
+  #   layout: two_column_left
+  #   background: "#F4F9FF"
+  #   image:
+  #     style: '{ "backgroundSize": "contain" }'
+  #     src: "/images/landing/hombre-joven-con-laptop.webp"
+  #     shadow: false
+  #   heading:
+  #     text: "Eligible Programs"
+  #   sub_heading:
+  #     text: "Choose the path that’s right for you."
+  #   button:
+  #     text: "GET IN TOUCH"
+  #     color: white
+  #     hover_color: "white"
+  #     background: "blue"
+  #     path: "#leadform_bottom"
+  #   content:
+  #     text: ""
+  #     font_size: ["16px"]
+  #     path: ""
+  #   bullets:
+  #     items:
+  #     - heading: "Full Stack Development with AI"
+  #       text: |
+  #         Become a Full Stack Developer by mastering Python, React, JavaScript, and leveraging cutting-edge AI tools to enhance your workflow. <br> Gain the most sought-after skills and launch your tech career.  <a href="/us/coding-bootcamps/part-time-full-stack-developer">Find more information here</a>.
+  #       icon: "circle" #string with icon for example ['check', 'cicle', etc]
+  #     - heading: "Data Science and Machine Learning"
+  #       text: |
+  #         Learn to collect and manage data with Python. Create models and solve problems using machine learning, deep learning, and AI. <br>Strategize and develop your own AI projects from development to deployment and maintenance. <a href="/us/coding-bootcamps/datascience-machine-learning">Find more information here</a>.
+  #       icon: "circle" #string with icon for example ['check', 'cicle', etc]
+
+  - name: how-it-works
+    position: 3
+    background: "#0084FF"
+    layout: iconogram
+    swipable: True
+    heading:
+      text: "How the Scholarship Works"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+      style: '{ "color": "white" }'
+    icons:
+      - icon: "graduation-2"
+        color: "#0084FF"
+        title: "Eligibility"
+        content: "Must be a legal resident of Greater Dallas, underemployed or unemployed."
+      - icon: "briefcase-2"
+        color: "#FFB718"
+        title: "Application"
+        content: "Fill out the form and pass the assessment process."
+      - icon: "presentation"
+        color: "#d91e1e"
+        title: "Onboarding Process"
+        content: "Complete pre-work and life skills training"
+      - icon: "stairswflag"
+        color: "#BE8BFF"
+        title: "You’re Set!"
+        content: "Become a full-stack developer with unlimited mentorship and career support."
+    button:
+      text: "4geeks vs. Others"
+      path: "#geeks_vs_others"
+      background: "#232323"
+      color: white
+      hover: white
+      style: "{font-weight: 800}"
+
+  - name: two_colum_full_stack
+    position: 4
+    layout: two_column_right
+    background: "#F4F9FF"
+    proportions: [6, 6]
+    image:
+      style: '{ "backgroundSize": "contain" }'
+      src: "/images/landing/blonde-girl-laptop.png"
+    section_heading:
+      style: '{ "margin-top": "50px", "color": "black", "max-width": "900px", "font-size": "34px", "align-self": "center" }'
+      text: |
+        Transform you life with 4Geeks Academy and Kosmos: A Comprehensive Approach to Career Readiness
+    heading:
+      style: '{ "margin-top": "0px", "font-weight": "300"  }'
+      text: "Why 4Geeks?"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      font_size: ["18px", "18px", "18px", "18px", "18px"]
+      style: '{ "font-weight": "100" }'
+      text: "Master  Python, React, JavaScript, and leverage cutting-edge AI tools to enhance your productivity and workflow. Gain the most sought-after skills in tech  and launch your  career as a software developer.  More information here."
+    content:
+      font_size: ["16px"]
+      text: ""
+    bullets:
+      items:
+        - text: "Industry-aligned curriculum, ahead of the latest job market trends"
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - text: "An extensive, highly active network of partners in Tech"
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - text: "Lifelong and readily available coding mentorship"
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - text: "Unlimited and personalized career support"
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - text: "AI-powered support 24/7"
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+    button:
+      style: '{ "padding": "10px", "border-radius": "3px" }'
+      text: "Apply Now"
+      color: white
+      hover_color: "white"
+      background: "blue"
+      path: "#leadform_bottom"
+
+  - name: pay
+    position: 5
+    layout: two_column_left
+    background: "#F4F9FF"
+    proportions: [6, 6]
+    image:
+      style: '{ "backgroundSize": "contain" }'
+      src: "/images/landing/20-million-column-4geeks.png"
+    heading:
+      style: '{ "margin-top": "0px" }'
+      text: "Why are we partnering with Kosmos?"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      font_size: ["18px", "18px", "18px", "18px", "18px"]
+      style: '{ "font-weight": "100" }'
+      text: "Recognizing that technical skills alone aren’t enough for long-term success, Kosmos developed its proprietary ‘Switch’ workshops to equip you  with essential career and life skills, including:"
+    content:
+      font_size: ["16px"]
+      text: ""
+    bullets:
+      items:
+        - heading: "Gamified Application Process – "
+          text: "An AI-enhanced assessment helps candidates identify if they are suited for software development."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "Goal-Setting & Career Alignment – "
+          text: "A structured personal approach to ensure students are a good fit for the tech field and positioned for success."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "Financial Literacy Training – "
+          text: "Supported by leading financial institutions, it equips students with essential money management skills."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "Strength & Potential Identification – "
+          text: "Creative exercises and guest speakers help participants rewrite limiting narratives and unlock hidden talents."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+    button:
+      style: '{ "padding": "10px", "border-radius": "3px" }'
+      text: "Apply Now"
+      color: white
+      hover_color: "white"
+      background: "blue"
+      path: "#leadform_bottom"
+
+  - name: start_your_journey
+    position: 6
+    layout: two_column_left
+    background: "#F4F9FF"
+    proportions: [5, 7]
+    content:
+      font_size: ["16px"]
+      text: "This is your chance to be part of it! The Texas Lone Star Scholarship covers 100% of your tuition, making it possible to become an in-demand tech professional without straining your finances."
+    image:
+      style: '{ "backgroundSize": "contain" }'
+      src: "/images/landing/community-support-2.png"
+    section_heading:
+      text: "THE DALLAS TECH SCENE IS THRIVING"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      text: "Dallas is rapidly emerging as a major tech hub, attracting top companies, startups, and tech talent. As demand for skilled developers grows, it’s the perfect time to kickstart your tech career!"
+      style: '{ "font-weight": "300", "font-size": "18px", "textAlign": "justify" }'
+    button:
+      text: "Apply Now"
+      color: white
+      background: "blue"
+      path: "#leadform_bottom"
+    bullets:
+      items:
+        - heading: "Expanding Job Market"
+          text: "The Dallas-Fort Worth area is projected to add over 20,000 tech jobs by the end of 2025. Software developers are in high demand, with companies investing heavily in building web applications and digital solutions."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "Home to Tech Giants & Startups"
+          text: "Companies like Texas Instruments, AT&T, and Samsung have a strong presence, while a thriving startup ecosystem is fueled by $1.9 billion in venture capital."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "High-Paying Careers"
+          text: "Entry-level software engineers in Dallas earn an average of $75,000 per year. With experience, tech professionals can earn well above six figures, making tech a stable, future-proof career."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "Innovation & Community"
+          text: "Dallas has a supportive tech culture, with networking events, meetups, and bootcamps helping newcomers break in and grow."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+
+
+
+
+  # - name: testimonials
+  #   position: 9
+  #   layout: testimonials_new
+  #   heading:
+  #     style: '{ "font-weight": "400", "color": "#000" }'
+  #     text: "Hear it from our students"
+  #     font_size: ["35px", "35px", "30px", "30px", "30px"]
+  #   # filter_indexes: [6,7,8]
+  #   filter_indexes:
+  #     ["azu-bota", "nai-kali", "cha-fabr", "jona-ferra", "jos-bra", "kev-so"]
+  #   variant: small
+
+  # - name: MiamiTechTalentCoalition
+  #   position: 7
+  #   style: '{ "margin": "20px 0" }'
+  #   layout: two_column_left
+  #   alignment: center
+  #   proportions: [6, 6]
+  #   background: "#fbfbfb"
+  #   image:
+  #     style: '{ "backgroundSize": "contain", "height": "250px"}'
+  #     src: "/images/landing/miamitech-logo-sidetext.png"
+  #   heading:
+  #     style: '{ "font-weight": "400", "margin-bottom": "0" }'
+  #     text: "The Miami Tech Coalition’s and 4Geeks Academy’s Mission"
+  #     font_size: ["36px", "36px", "30px", "28px", "28px"]
+  #   content:
+  #     text: "Our partnership supports the Coalition's goal to cultivate Miami as a vibrant hub for innovation and an attractive destination for tech talent and companies alike. Together, we’re building a sustainable pipeline of skilled tech workers connecting South Florida employers, educators, and local talent. Through ongoing collaboration with businesses and community organizations, we ensure our training models lead directly to job opportunities, continuously expanding our positive impact on the local tech scene."
+  #     font_size: ["16px"]
+  #   button:
+  #     style: '{ "padding": "10px", "border-radius": "3px" }'
+  #     text: "APPLY NOW"
+  #     color: white
+  #     hover_color: "white"
+  #     background: "blue"
+  #     path: "#leadform_bottom"
+
+  # - name: no-worries
+  #   position: 8
+  #   layout: two_column_right
+  #   proportions: [6, 6]
+  #   background: "#F4F9FF"
+  #   image:
+  #     style: '{ "backgroundSize": "cover", "backgroundPosition": "center" }'
+  #     shadow: true
+  #     src: "/images/landing/latin-woman-laptop-coffee.png"
+  #   heading:
+  #     text: "Don’t stress about financing your studies. \nJust focus on your career ahead!"
+  #     font_size: ["28px", "28px", "28px", "26px", "26px"]
+  #   sub_heading:
+  #     text: "The MTC scholarships are here to change the game for aspiring tech professionals in South Florida. Serious about launching a tech career? Don’t miss this opportunity."
+  #   bullets:
+  #     items:
+  #       - text: "Apply to the Scholarship"
+  #         icon: circle
+  #       - text: "Enroll in the program."
+  #         icon: circle
+  #       - text: "Learn software development or data science skills."
+  #         icon: circle
+  #       - text: "Land a job."
+  #         icon: circle
+  #       - text: "Thrive in a career you love."
+  #         icon: circle
+  #   button:
+  #     style: '{ "padding-top": "10px", "border-radius": "3px" }'
+  #     text: "Apply to the Scholarship"
+  #     color: white
+  #     hover_color: "white"
+  #     background: "blue"
+  #     path: "#leadform_bottom"

@@ -688,34 +688,43 @@ faq:
           - <a class="faq-link" target="_blank" href="/es/blog-en-espanol/cuanto-gana-un-ingeniero-informatico">¿Cuánto gana un ingeniero informático?</a>.
 
 
-  # job guarantee page
+# job guarantee page
   - topic: "Preguntas Frecuentes sobre los Programas"
     slug: "job_guarantee"
     questions:
-      - question: "¿Cómo funciona la garantía laboral?"
+      - question: "¿Cómo funciona nuestra Garantía de Empleo?"
         answer: |-
-          Nuestra garantía laboral significa que conseguirás un empleo dentro de los 6 meses posteriores a tu graduación, o te devolveremos todo tu dinero. Para calificar, debes completar el programa y participar activamente en nuestro proceso de apoyo profesional de tres etapas, llamado GeekForce.
-      - question: "¿Qué necesito para calificar para la garantía laboral?"
+          Tu éxito es nuestra prioridad. Por eso, te garantizamos que conseguirás un empleo en los 6 meses siguientes a tu graduación, o te devolvemos el 100% de tu dinero.
+      
+      - question: "¿Qué necesitas para calificar?"
         answer: |-
-          Debes estar legalmente autorizado para trabajar en los EE. UU. Además, deberás demostrar compromiso manteniendo una buena asistencia y completando todas las tareas requeridas como parte del programa y del proceso de apoyo profesional.
-      - question: "¿Puedo financiar los $2,000 adicionales junto con mi saldo de matrícula?"
+          - Comprometerte con tu formación, asistiendo a clases y completando todas las tareas del programa.
+          - Participar activamente en nuestro programa de apoyo profesional GeekForce, que te guiará en cada paso hacia tu éxito laboral.
+
+      - question: "¿Cómo funciona el programa GeekForce?"
         answer: |-
-          ¡Sí, puedes agregarlo a tu plan de pago!
-      - question: "¿La garantía laboral reembolsa toda la matrícula si no consigo empleo?"
+          GeekForce es nuestro programa de apoyo profesional de tres etapas, diseñado para brindarte las herramientas y el apoyo que necesitas para destacar en el mercado laboral.
+
+      - question: "¿Puedo financiar los $2,000 adicionales del programa GeekForce junto con mi matrícula?"
         answer: |-
-          ¡Sí, lo hace!
-      - question: "¿La garantía laboral aplica para todos los cursos?"
+          ¡Sí, puedes incluirlos en tu plan de pago!
+
+      - question: "¿La Garantía de Empleo aplica para todos los cursos?"
         answer: |-
-          La garantía laboral está actualmente disponible para nuestros programas de Desarrollo de Software Full Stack, Ciencia de Datos y Machine Learning, y Ciberseguridad.
+          Actualmente, está disponible para nuestros programas de Desarrollo de Software Full Stack, Ciencia de Datos y Machine Learning, y Ciberseguridad.
+
       - question: "¿Cuánto tiempo tengo para buscar empleo antes de que se emita un reembolso si no encuentro trabajo?"
         answer: |-
-          Tienes seis meses después de graduarte para conseguir empleo. 4Geeks te ayuda durante todo el proceso con nuestro servicio de apoyo profesional personalizado y estructurado en tres etapas.
+          Tienes seis meses después de graduarte. ¡Pero no te preocupes! Estaremos contigo en cada paso del camino.
+
       - question: "¿Hay un salario mínimo para los trabajos aceptados?"
         answer: |-
-          Sí, el salario mínimo aceptable es de $35,000, aunque la mayoría de los graduados consigue empleo con salarios mucho más altos.
+          Sí, el salario mínimo aceptable es de $35,000, aunque la mayoría de nuestros graduados consiguen empleos con salarios mucho más altos.
+
       - question: "Si me ofrecen un trabajo por contrato, ¿eso cuenta como haber sido contratado?"
         answer: |-
-          Los trabajos a tiempo completo o parcial que cumplan con el requisito de salario mínimo y tengan un compromiso de tiempo concreto serán considerados.
+          Sí, los trabajos a tiempo completo o parcial que cumplan con el requisito de salario mínimo y tengan un compromiso de tiempo concreto serán considerados.
+
       - question: "¿Cuál es el tiempo promedio que tarda un graduado de 4Geeks en conseguir empleo?"
         answer: |-
-          El 84% de nuestros graduados consigue empleo dentro de los 3 a 6 meses posteriores a la graduación.
+          El 84% de nuestros graduados consiguen empleo dentro de los 3 a 6 meses posteriores a la graduación.
