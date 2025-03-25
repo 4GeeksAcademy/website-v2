@@ -45,7 +45,7 @@ header_data:
   sub_heading: |
     <span style="font-size: 32px;">Get Ready for a Tech Career with a Full Scholarship.</span>
   background: "#ffffff"
-  partner_logo_url: "../../../static/images/partner/4geeks-n-kosmos-logo.png"
+  partner_logo_url: "../../../static/images/partner/4geeks-n-kosmos-logo.webp"
   tagline_color: "#1c1c1c"
   form_styles:
     background: "#0084FF"
