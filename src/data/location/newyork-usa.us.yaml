@@ -164,9 +164,14 @@ online_available: false # important to accept online-only applicants
 consents:
   - slug: "gdpr_consent"
     name: "GDPR Consent"
-    active: true
+    active: false
     message: 'By submitting this form, I accept that my data may be used for a quote request that could result in a commercial relationship. Check out our complete <a style={{ marginLeft: "5px" }} target="_blank" rel="noopener noreferrer nofollow" className="decorated" href="/us/privacy-policy">Privacy Policy</a>'
     error_message: "You need to accept the privacy terms"
+  - slug: "wa_consent"
+    name: "WhatsApp Consent"
+    active: true
+    message: "I agree to receive information through email, WhatsApp, and/or other channels about coding workshops, events, courses, and other marketing materials. We'll never share your contact information, and you can easily opt out at any moment."
+    error_message: "You need to accept Whatsapp consent"
 
 city: "NYC"
 name: "NYC, USA"
