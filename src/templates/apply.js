@@ -651,7 +651,12 @@ const Apply = (props) => {
                 ?.consents
                 ?.filter(consent => consent.active)
                 ?.map((consent, index) => (
-                  <Div key={`consent-${index}`} position="relative" margin="10px 0 0 0">
+                  <Div
+                    key={`consent-${index}`}
+                    margin="15px 0 0 0"
+                    display="flex"
+                    alignItems="center"
+                  >
                     <input
                       required
                       type="checkbox"
@@ -670,17 +675,16 @@ const Apply = (props) => {
                         });
                       }}
                       style={{
-                        width: "24px",
-                        height: "24px",
-                        position: "relative",
-                        top: "10px",
-                        left: "7px"
+                        width: "22px",
+                        height: "22px",
+                        marginRight: "7px"
                       }}
                     />
                     <Paragraph
-                      fontSize="11px"
-                      margin="5px 0 0 5px"
-                      textAlign="left"
+                      margin="0 0 0 15px"
+                      fontSize="10px"
+                      lineHeight="15px"
+                      textAlign="justify"
                       dangerouslySetInnerHTML={{ __html: consent.message }}
                     />
                   </Div>
