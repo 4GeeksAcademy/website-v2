@@ -15,6 +15,7 @@ meta_info:
   cohort_include_regex: ['miami']
   cohort_exclude_regex: ['usa-\d{1,10}-spanish']
 
+
 seo_title: "Coding Bootcamp in Austin"
 header:
   tagline: "4Geeks Academy in Austin"

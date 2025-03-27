@@ -9,7 +9,7 @@ meta_info:
   region: "usa-canada"
   dialCode: "1"
   related_clusters: ["trends-and-tech"]
-  
+
   # ⬇️ cohort_include_regex field is used to filter cohorts on the calendar that only test successfully for a particular regex
   # for example: for this location, only show cohorts starting with usa-xx-spanish
   cohort_include_regex: ["miami"]
@@ -31,12 +31,12 @@ badges:
   # use the pipe operator ' | ' instead, like the example below
   paragraph: |
     4Geeks Academy is the place where developers grow and thrive.
-  
+
     We are licensed by the Florida Dept. of Education.
     Chosen as one of the top 35 coding bootcamps of the world and the top coding bootcamp in Atlanta according to SwitchUp.
     According to Newsweek, 4Geeks Academy has been recognized as one of the top 10 coding bootcamps in the United States.
     A community built for developers.
-    
+
 news:
   title: "4Geeks Academy Atlanta has been reviewed in:"
 upcoming:
@@ -55,7 +55,7 @@ button:
 custom_bar:
   active: true
   message: 'Change your life with Code. Pay today or with a Payment Plan for $100 p/mo <a class="customBar-link" href="/us/apply">Apply</a>'
-  button: 
+  button:
     label: "Read More"
     path: "/us/apply" #string (can be inline path using #, relative path or absolute path)
 
@@ -104,10 +104,10 @@ two_columns:
     background: "black"
     path: "/us/apply"
   bullets:
-    items: 
-    - text: "Hands-on projects fostering practical skill mastery"
-    - text: "Industry-aligned curriculum for real-world readiness"
-    - text: "Career support navigating Atlanta's thriving tech industry"
+    items:
+      - text: "Hands-on projects fostering practical skill mastery"
+      - text: "Industry-aligned curriculum for real-world readiness"
+      - text: "Career support navigating Atlanta's thriving tech industry"
 
 # Two Columns - Rigo
 two_columns_rigo:
@@ -119,7 +119,7 @@ two_columns_rigo:
     src: "/images/landing/ai-mentor.jpg"
     shadow: true
   video: "6m1Jyya7eCc"
-  heading: 
+  heading:
     text: "Our AI-powered features make all the difference!"
     font_size: ["33px", "33px", "33px", "33px", "33px"]
     style: '{ "lineHeight": "30px" }'
@@ -127,7 +127,7 @@ two_columns_rigo:
       src: "/images/rigobot-logo.png"
   sub_heading:
     text: "Through years of research and experience, we've perfected the strategies and tools to ensure your constant and efficient progress. To optimize your learning curve and empower you to tackle challenges with confidence, we've now incorporated the power of AI."
-    font_size: ["16px","16px","16px","16px","16px"]
+    font_size: ["16px", "16px", "16px", "16px", "16px"]
     style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"300", "text-align": "justify" }'
   content:
     style: '{ "font-size":"16px", "margin":"15px 0"}'
@@ -145,7 +145,7 @@ two_columns_rigo:
           <br /><br />
           It perfectly complements our human mentorship program!
         icon: "check" #string with icon for example ['check', 'cicle', etc]
-        icon_color: '#25BF6C'
+        icon_color: "#25BF6C"
       - heading: "Learnpack, our interactive learning software, provides:"
         text: |
           • There are hundreds of interactive exercises to help you master and retain skills.
@@ -154,7 +154,7 @@ two_columns_rigo:
           <br />
           • Structured practice.
         icon: "check" #string with icon for example ['check', 'cicle', etc]
-        icon_color: '#25BF6C'
+        icon_color: "#25BF6C"
 
 staff:
   heading: "Meet your Staff"
@@ -176,7 +176,6 @@ consents:
     active: true
     message: "I agree to receive information through email, WhatsApp, and/or other channels about coding workshops, events, courses, and other marketing materials. We'll never share your contact information, and you can easily opt out at any moment."
     error_message: "You need to accept Whatsapp consent"
-
 
 city: "Atlanta"
 name: "Atlanta, USA"

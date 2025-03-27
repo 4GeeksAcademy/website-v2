@@ -2,15 +2,15 @@ import React from "react";
 export default (props) => (
   <svg
     style={props.style}
-    width={props.width || "25"}
-    height={props.height || "25"}
+    width={props.width || "20"}
+    height={props.height || "20"}
     fill={props.fill || "none"}
     xmlns="https://www.w3.org/2000/svg"
-    viewBox="0 0 25 25"
+    viewBox="0 0 28 28"
   >
     <path
       d="M23.4167 0.960938H2.08333C1.34695 0.960938 0.75 1.55789 0.75 2.29427V23.6276C0.75 24.364 1.34695 24.9609 2.08333 24.9609H23.4167C24.153 24.9609 24.75 24.364 24.75 23.6276V2.29427C24.75 1.55789 24.153 0.960938 23.4167 0.960938Z"
-      fill="#117EB8"
+      fill="#000000"
     />
     <path
       fillRule="evenodd"

@@ -2,8 +2,8 @@ import React from "react";
 
 export default (props) => (
   <svg
-    width="20pt"
-    height="20pt"
+    width="21pt"
+    height="21pt"
     viewBox="0 0 512 512"
     preserveAspectRatio="xMidYMid meet"
   >
