@@ -42,10 +42,9 @@ const Home = (props) => {
 
     if (session?.language && window && window.location.pathname === "/")
       navigate(
-        `${
-          props.pageContext.translations[
-            session.language === "en" ? "us" : session.language
-          ]
+        `${props.pageContext.translations[
+        session.language === "en" ? "us" : session.language
+        ]
         }`
       );
 
@@ -372,8 +371,18 @@ const Home = (props) => {
         variant="carousel"
       />
       <TwoColumnCarousel
-        title={yml.two_column_carousel.title}
-        text={yml.two_column_carousel.text}
+        title={
+          <div
+            style={{ padding: "0 10px" }}
+            dangerouslySetInnerHTML={{ __html: yml.two_column_carousel.title }}
+          />
+        }
+        text={
+          <div
+            style={{ padding: "0 10px", textAlign: "justify" }}
+            dangerouslySetInnerHTML={{ __html: yml.two_column_carousel.text }}
+          />
+        }
         background={Colors.veryLightBlue3}
         carouselProps={{
           margin: "0px",
