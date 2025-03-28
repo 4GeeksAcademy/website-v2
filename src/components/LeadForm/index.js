@@ -551,7 +551,7 @@ const LeadForm = ({
               session.location.consents.map((consent, index) => {
                 if (consent.active)
                   return (
-                    <Div position="relative" margin="10px 0 0 0">
+                    <Div position="relative" margin="10px 0 0 0" alignItems= "center">
                       <input
                         required
                         name="isGoing"
@@ -570,15 +570,16 @@ const LeadForm = ({
                           });
                         }}
                         style={{
-                          width: "24px",
-                          height: "24px",
+                          width: "22px",
+                          height: "22px",
                           top: "10px",
                           left: "7px",
                         }}
                       />
                       <Paragraph
                         fontSize="11px"
-                        margin="5px 0 0 5px"
+                        lineHeight="15px"
+                        margin="8px 0 0 5px"
                         textAlign="left"
                         color={textColor}
                         dangerouslySetInnerHTML={{
@@ -612,6 +613,7 @@ const LeadForm = ({
                   type="submit"
                   fontSize="21px"
                   height="auto"
+                  width="100%"
                   margin={marginButton}
                   margin_tablet={marginButton_tablet}
                   width_lg={widthButton}
