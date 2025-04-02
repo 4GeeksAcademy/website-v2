@@ -41,7 +41,7 @@ navbar:
   logoUrl: "#"
 
 header_data:
-  tagline: "Hey Dallas! Your Life in Tech Starts Here!"
+  tagline: "Hey Dallasites! Your Life in Tech Starts Here!"
   sub_heading: |
     <span style="font-size: 32px;">Get Ready for a Tech Career with a Full Scholarship.</span>
   background: "#ffffff"
@@ -62,7 +62,7 @@ features:
     - "For residents of Greater Dallas ONLY."
     - "Get a high-paying, future-proof tech-job, right in your city."
     - "Award-winning tech education and transformative life skills."
-    - "Only 25 spots- act now! "
+    - "Only 23 spots- act now!"
   styles: '{ "color": "black", "fontWeight":"400" }'
 
 short_badges:
@@ -159,8 +159,9 @@ components:
     background: "#fbfbfb"
     proportions: [5, 7]
     image:
-      style: '{ "backgroundSize": "contain" }'
-      src: "/images/landing/hombre-con-laptop.png"
+      style: '{ "backgroundSize": "cover" }'
+      src: "/images/allies/kosmos-landing-img1.webp"
+      shadow: true
     section_heading:
       text: "Why Learn to Code?"
     heading:
@@ -261,8 +262,9 @@ components:
     background: "#F4F9FF"
     proportions: [6, 6]
     image:
-      style: '{ "backgroundSize": "contain" }'
-      src: "/images/landing/blonde-girl-laptop.png"
+      style: '{ "backgroundSize": "cover" }'
+      src: "/images/allies/kosmos-landing-img2.webp"
+      shadow: true
     section_heading:
       style: '{ "margin-top": "50px", "color": "black", "max-width": "900px", "font-size": "34px", "align-self": "center" }'
       text: |
@@ -304,8 +306,9 @@ components:
     background: "#F4F9FF"
     proportions: [6, 6]
     image:
-      style: '{ "backgroundSize": "contain" }'
-      src: "/images/landing/20-million-column-4geeks.png"
+      style: '{ "backgroundSize": "cover" }'
+      src: "/images/allies/kosmos-landing-img3.webp"
+      shadow: true
     heading:
       style: '{ "margin-top": "0px" }'
       text: "Why are we partnering with Kosmos?"
@@ -320,7 +323,7 @@ components:
     bullets:
       items:
         - heading: "Gamified Application Process – "
-          text: "An AI-enhanced assessment helps candidates identify if they are suited for software development."
+          text: "An engaging assessment helps you identify your best career path based on your interests & passion. The Texas Lone Star Scholarship → Workforce of the Future scholarship"
           icon: "check" #string with icon for example ['check', 'cicle', etc]
         - heading: "Goal-Setting & Career Alignment – "
           text: "A structured personal approach to ensure students are a good fit for the tech field and positioned for success."
@@ -343,13 +346,14 @@ components:
     position: 6
     layout: two_column_left
     background: "#F4F9FF"
-    proportions: [5, 7]
+    proportions: [7, 5]
     content:
       font_size: ["16px"]
       text: "This is your chance to be part of it! The Texas Lone Star Scholarship covers 100% of your tuition, making it possible to become an in-demand tech professional without straining your finances."
     image:
-      style: '{ "backgroundSize": "contain" }'
-      src: "/images/landing/community-support-2.png"
+      style: '{ "backgroundSize": "cover", "backgroundPosition": "center" }'
+      src: "/images/allies/kosmos-landing-img4.webp"
+      shadow: true
     section_heading:
       text: "THE DALLAS TECH SCENE IS THRIVING"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
