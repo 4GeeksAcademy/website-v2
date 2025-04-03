@@ -27,6 +27,7 @@ meta_info:
       "/introduccion-programacion-codigo",
     ]
   related_clusters: ["desarrollador-full-stack"]
+  template: "course-fullstack"
 
 apply_form:
   label: Full Stack Developer
@@ -67,38 +68,142 @@ course_instructors:
 
 overlaped:
   heading: "Python y JavaScript"
-  paragraph: "Nuestros programa está basado en el uso de Phyton y JavaScript. La razón? En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails. Python tiene 10 veces más trabajos que node.js. Otras herramientas que también aprenderás a usar en nuestro programa: son GitHub, CSS3, HTML5, Flask, etc."
+  paragraph: |-
+    <p style="line-height: 2; font-size: 16px;">
+      Nuestro programa está basado en el uso de 
+      <strong style="color: #007bff;">Python</strong> y 
+      <strong style="color: #007bff;">JavaScript</strong>.  
+      <br>
+      <span style="font-weight: bold;">¿Por qué?</span>  
+      En el mercado laboral,  
+      <strong style="font-weight: bold;">JavaScript</strong> tiene 
+      <span style="font-weight: bold;">
+          26 veces más vacantes
+      </span> 
+      de trabajo que <strong>Ruby on Rails</strong>.  
+      <br>
+
+      Además, <strong style="font-weight: bold;">Python</strong> tiene  
+      <span style="font-weight: bold;">
+          10 veces más oportunidades
+      </span>  
+      que Node.js.  
+      <br>
+
+      <span style="font-weight: bold;">Otras herramientas que aprenderás en nuestro programa:</span>  
+      <br>
+      <span style="color: #007bff;">GitHub</span>,  
+      <span style="color: #007bff;">Bootstrap</span>,  
+      <span style="color: #007bff;">HTML5</span>,  
+      <span style="color: #007bff;">CSS3</span>,  
+      <span style="color: #007bff;">React</span>,  
+      <span style="color: #007bff;">Flask</span>  
+      y mucho más.
+    </p>
+  image:
+    src: "/images/landing/Group-6626.webp" 
   button:
     text: "Aplicar"
     color: "blue"
     link: "/"
-  image:
-    src: "/images/landing/tres-personas-reloaded.webp"
 
-## TWO COLUMNS
-# two_columns:
-#   proportions: [6, 6]
-#   image:
-#     style: '{"border" : "3px solid black", "backgroundSize": "contain" }'
-#     src: "/static/images/staff/luisa.png"
-#     shadow: true
-#   video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
-#   heading:
-#     text: "4Geeks Academy and a story full of opportunities"
-#     font_size: ["30px", "30px", "30px", "30px", "30px"]
-#   sub_heading:
-#     text: "We are Miami based and we have been focusing in bringing on more opportunities in South Florida."
-#     font_size: ["16px", "16px", "16px", "16px", "16px"]
-#   button:
-#     text: "Apply now"
-#     color: "white"
-#     background: "black"
-#     path: "#prices_and_payment"
-#   bullets:
-#     items:
-#     - text: "There is always a full or partial scholarship open"
-#     - text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
-#     - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade County and many more."
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "3px solid black", "backgroundSize": "contain" }'
+    src: "/static/images/testimonials/diego-gomez-testimonial.webp"
+    shadow: true  
+  video: "https://www.youtube.com/watch?v=9Vm_xD49MaU&list=PLmBUv425PabWp2htZTrCU2AKkmCzjrFn3"
+  heading:
+    text: "Un camino hacia el éxito profesional en tecnología"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "Diego comparte cómo nuestro bootcamp le proporcionó todo lo que necesitaba para dar el salto al mundo laboral. Independientemente de si tienes conocimientos previos o comienzas desde cero, en 4Geeks Academy recibirás la formación y el apoyo que necesitas para destacar en la industria."
+    font_size: ["16px", "16px", "16px", "16px", "16px"]
+  button:
+    text: "Aplica ahora"
+    color: "white"
+    background: "black"
+    path: "#prices_and_payment"
+  bullets:
+    items: 
+
+
+# Two Columns - Rigo
+two_columns_rigo:
+  proportions: [7, 5]
+  background: "#FFFFFF"
+  justify: "center" #start,end,center
+  image:
+    style: '{"backgroundSize": "contain", "background-position": "center", "border" : "2px solid black", "border-radius": "4px"}'
+    src: "/images/landing/ai-mentor-esp.jpg"
+    shadow: true
+  video: "NRuShbSLtg0"
+  heading: 
+    text: "¡Nuestras herramientas de IA mejoran y agilizan tu aprendizaje!"
+    font_size: ["31px", "31px", "31px", "29px", "29px"]
+    style: '{ "lineHeight": "30px" }'
+    heading_image:
+      src: "/images/rigobot-logo.png"
+  sub_heading:
+    text: "Luego de años de investigación y experiencia, hemos perfeccionado nuestros métodos de enseñanza para optimizar tu curva de aprendizaje y tu tasa de éxito. A través de nuestra plataforma de aprendizaje 4Geeks.com, te brindamos las estrategias y herramientas para garantizar tu progreso constante y eficiente."
+    font_size: ["16px","16px","16px","16px","16px"]
+    style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"300", "text-align": "justify" }'
+  content:
+    style: '{ "font-size":"16px", "margin":"15px 0"}'
+    text: "¡Experimenta la diferencia que marcan nuestras nuevas herramientas de Inteligencia Artificial! Nuestro enfoque ha demostrado mantenerte comprometido, motivado y encaminado a lograr tus objetivos de programación."
+  bullets:
+    item_style: '{ "padding": "0", "font-weight": "100", "margin":"0" }'
+    items:
+      - heading: "Rigobot, nuestra IA personalizada, ofrece de forma ilimitada:"
+        text: |
+          • Tutoría instantánea mientras programas.
+          <br />
+          • Evaluaciones de habilidades para seguir tu progreso.
+          <br />
+          • Asistencia para corregir errores.
+          <br /><br />
+          ¡Es el complemento perfecto para nuestro programa de mentoría humana!
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+        icon_color: '#25BF6C'
+      - heading: "LearnPack, nuestro software de aprendizaje fácil de usar, proporciona:"
+        text: |
+          • Cientos de ejercicios interactivos para ayudarte a dominar y retener habilidades.
+          <br />
+          • Pruebas automatizadas para ayudarte a seguir tu progreso.
+          <br />
+          • Y mucho más…
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+        icon_color: '#25BF6C'
+
+# TWO COLUMNS INFO
+two_columns_info:
+  proportions: [6, 6]
+  image:
+    style: '{"backgroundSize": "contain", "background-position": "center"}' 
+    src: "/images/landing/grupo-ventanas.webp"
+    shadow: false 
+  section_heading:
+    text: "Diseñado para hacerte exitoso en el mundo de la programación"
+  heading:
+    text: ""
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "Soporte profesional a la medida Basado en cada oportunidad laboral"
+    font_size: ["16px", "16px", "16px", "16px", "16px"]
+  button:
+    text: "¡Aplica ahora!"
+    color: "white"
+    background: "black"
+    path: "#prices_and_payment"
+  bullets:
+    items:
+    - heading: "Todas las mentorias que necesitas"
+      text: "En línea y en persona, por el resto de tu vida, incluso para codificación de dudas laborales"
+    - heading: "TIEMPO DE RESPUESTA"
+      text: "No te quedes atascado con tu código, no te llevará más de 15 minutos para que un instructor te ayude."
+    - heading: "1:7 PROPORCIÓN PROFESOR: ESTUDIANTE"
+      text: "Encontrarás más profesores en 4Geeks que el promedio de la industria."
 
 badges:
   paragraph: "4Geeks Academy es el lugar idóneo para <a href='/es/curso-de-programacion-desde-cero'>aprender a programar desde cero</a>. Estamos avalados y autorizados por el Departamento de Educación de Florida y hemos sido reconocidos como el mejor de Miami, según SwitchUp y de los 10 mejores cursos de programación, según Newsweek. En España, hemos recibido el Premio Excelencia Educativa durante dos años consecutivos. Y a nivel global formamos parte del top 35 de cursos de programación en el mundo."
