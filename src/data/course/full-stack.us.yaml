@@ -8,6 +8,7 @@ meta_info:
   keywords: ""
   show_in_apply: true
   related_clusters: ["full-stack-developer"]
+  template: "course-fullstack"
   redirects:
     [
       "/part-time",
@@ -76,7 +77,7 @@ overlaped:
     color: "blue"  
     link: "/"
   image:
-    src: "/images/landing/tres-personas-reloaded.webp"  
+    src: "/images/landing/Group-6626.webp"  
 
 two_columns:
   proportions: [6, 6]
@@ -87,15 +88,16 @@ two_columns:
   video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
   heading:
     text: "4Geeks, Miami and a mission of creating opportunities"
-    font_size: ["30px", "30px", "30px", "30px", "30px"]
+    font_size: ["35px", "35px", "35px", "30px", "30px"]
   sub_heading:
     text: "With Miami as our home base, we're dedicated to fostering opportunities throughout South Florida."
+    style: '{"font-weight": "400" }'
     font_size: ["16px", "16px", "16px", "16px", "16px"]
-  button:
-    text: "Apply now"
-    color: "white"
-    background: "black"
-    path: "#prices_and_payment"
+  # button:
+  #   text: "Aplicar"
+  #   color: "white"
+  #   background: "black"
+  #   path: "#prices_and_payment"
   bullets:
     items: 
     - text: "Accessible scholarships, whether full or partial, are always available."
@@ -116,7 +118,7 @@ two_columns_info:
     font_size: ["40px", "34px", "34px", "25px", "20px"]
   sub_heading:
     style: '{}'
-    text: "Nuestro bootcamp de data science está enfocado en brindar todas las herramientas y el apoyo necesario para que puedas triunfar en este campo."
+    text: ""
     font_size: ["16px"]
   content:
     text: ""
@@ -139,14 +141,14 @@ two_columns_info:
 
 # Two Columns - Rigo
 two_columns_rigo:
-  proportions: [5, 7]
+  proportions: [7, 5]
   background: "#FFFFFF"
   justify: "center" #start,end,center
   image:
-    style: '{"backgroundSize": "contain", "background-position": "center"}'
-    src: "/images/landing/rigobot-section.webp"
-    shadow: false
-  # video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+    style: '{"backgroundSize": "contain", "background-position": "center", "border" : "2px solid black", "border-radius": "4px"}'
+    src: "/images/landing/ai-mentor.jpg"
+    shadow: true
+  video: "6m1Jyya7eCc"
   heading: 
     text: "Our AI-powered features make all the difference!"
     font_size: ["33px", "33px", "33px", "33px", "33px"]
@@ -156,9 +158,9 @@ two_columns_rigo:
   sub_heading:
     text: "Through years of research and experience, we've perfected the strategies and tools to ensure your constant and efficient progress. To optimize your learning curve and empower you to tackle challenges with confidence, we've now incorporated the power of AI."
     font_size: ["16px","16px","16px","16px","16px"]
-    style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"600" }'
+    style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"300", "text-align": "justify" }'
   content:
-    style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"600"}'
+    style: '{ "font-size":"16px", "margin":"15px 0"}'
     text: "Experience the difference our AI-powered features make. Our tried-and-tested approach keeps you engaged, motivated, and on the fast track to achieving your coding goals!"
   bullets:
     item_style: '{ "padding": "0", "font-weight": "100", "margin":"0" }'
@@ -183,6 +185,7 @@ two_columns_rigo:
           • Structured practice.
         icon: "check" #string with icon for example ['check', 'cicle', etc]
         icon_color: '#25BF6C'
+
 badges:
   paragraph: "Kickstart your career at 4Geeks Academy, where developers grow and thrive. Named among the world’s <a href='/us/coding-bootcamp'>best coding bootcamps of 2024 by Course Report, chosen <a href='/us/trends-and-tech/celebrating-forbes-doble-recognition'>best coding bootcamp for students on a budget in 2024 by Forbes</a>, and rated 4.92/5 on Switchup. Licensed by the Florida Department of Education, USA."
 upcoming:
@@ -290,6 +293,7 @@ geeks_vs_others:
   heading: "WHAT MAKES THIS PROGRAM STAND OUT?"
   sub_heading: "Compare with other schools"
   sub_heading_link: ""
+
 ## GEEK PAL AND GEEK FORCE BOXES
 geek_data:
   heading: "And enjoy Career Support... for Life!"

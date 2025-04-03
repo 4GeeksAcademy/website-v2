@@ -27,6 +27,7 @@ meta_info:
       "/introduccion-programacion-codigo",
     ]
   related_clusters: ["desarrollador-full-stack"]
+  template: "course-fullstack"
 
 apply_form:
   label: Full Stack Developer
@@ -100,7 +101,7 @@ overlaped:
       y mucho más.
     </p>
   image:
-    src: "/images/landing/tres-personas-reloaded.webp"
+    src: "/images/landing/Group-6626.webp" 
   button:
     text: "Aplicar"
     color: "blue"
@@ -128,87 +129,81 @@ two_columns:
     items: 
 
 
-two_columns_info:
-  proportions: [6, 6]
-  image:
-    style: '{"backgroundSize": "contain", "background-position": "center"}' 
-    shadow: false 
-    src: "/images/landing/grupo-ventanas.webp"
-  section_heading: 
-    text: "Obtén todo lo que necesitas para triunfar"
-  heading:
-    text: ""
-    font_size: ["40px", "34px", "34px", "25px", "20px"]
-  sub_heading:
-    style: '{}'
-    text: "Nuestro bootcamp de Full Stack está diseñado para brindarte todas las herramientas y el apoyo necesario para que tengas éxito en esta industria altamente demandada."
-    font_size: ["16px"]
-  content:
-    text: ""
-  button:
-    text: "Compara 4Geeks con otros bootcamps"
-    path: "/es/geeks-vs-otros"
-    color: "white"
-    background: "black"
-    hover: "lightBlue"
-  bullets:
-    items: 
-    - heading: "MENTORÍAS 1:1 BAJO DEMANDA"
-      text: "Recibe apoyo personalizado para todas tus necesidades de programación. Nuestros mentores expertos están disponibles en línea o en persona para guiarte desde el primer día y de por vida."
-    - heading: "ALTA DISPONIBILIDAD"
-      text: "No te quedes atascado con un problema de código. Nuestros instructores responderán en 30 minutos o menos."
-    - heading: "Educación 100% centrada en código"
-      text: "Nuestro enfoque está completamente dirigido a la enseñanza de la programación, garantizando una experiencia de aprendizaje profunda y enfocada."
-    - heading: "APOYO PERSONALIZADO PARA TU CARRERA"
-      text: "Obtén asesoría, orientación y formación adaptada a tu perfil y a las ofertas laborales específicas a las que apliques."
-
-
+# Two Columns - Rigo
 two_columns_rigo:
-  proportions: [5, 7]
+  proportions: [7, 5]
   background: "#FFFFFF"
   justify: "center" #start,end,center
   image:
-    style: '{"backgroundSize": "contain", "background-position": "center"}'
-    src: "/images/landing/rigobot-section.webp"
-    shadow: false
+    style: '{"backgroundSize": "contain", "background-position": "center", "border" : "2px solid black", "border-radius": "4px"}'
+    src: "/images/landing/ai-mentor-esp.jpg"
+    shadow: true
+  video: "NRuShbSLtg0"
   heading: 
-    text: "¡Nuestras herramientas con IA marcan la diferencia!"
-    font_size: ["33px", "33px", "33px", "33px", "33px"]
+    text: "¡Nuestras herramientas de IA mejoran y agilizan tu aprendizaje!"
+    font_size: ["31px", "31px", "31px", "29px", "29px"]
     style: '{ "lineHeight": "30px" }'
     heading_image:
       src: "/images/rigobot-logo.png"
   sub_heading:
-    text: "Luego de años de investigación y experiencia, hemos perfeccionado las estrategias y herramientas para garantizar tu progreso constante y eficiente. Para optimizar tu curva de aprendizaje e impulsarte a enfrentar desafíos con confianza, ahora hemos incorporado el poder de la inteligencia artificial."
-    font_size: ["18px","18px","18px","18px","18px"]
-    style: '{ "margin":"15px 0", "font-weight":"400" }'
+    text: "Luego de años de investigación y experiencia, hemos perfeccionado nuestros métodos de enseñanza para optimizar tu curva de aprendizaje y tu tasa de éxito. A través de nuestra plataforma de aprendizaje 4Geeks.com, te brindamos las estrategias y herramientas para garantizar tu progreso constante y eficiente."
+    font_size: ["16px","16px","16px","16px","16px"]
+    style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"300", "text-align": "justify" }'
   content:
-    style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"400"}'
-    text: "Descubre la diferencia que hacen nuestras herramientas con IA. Nuestro enfoque probado te mantiene comprometido, motivado y en el camino correcto para lograr tus objetivos en programación."
+    style: '{ "font-size":"16px", "margin":"15px 0"}'
+    text: "¡Experimenta la diferencia que marcan nuestras nuevas herramientas de Inteligencia Artificial! Nuestro enfoque ha demostrado mantenerte comprometido, motivado y encaminado a lograr tus objetivos de programación."
   bullets:
     item_style: '{ "padding": "0", "font-weight": "100", "margin":"0" }'
     items:
-      - heading: "Conoce a Rigobot, nuestro asistente de código con IA:"
+      - heading: "Rigobot, nuestra IA personalizada, ofrece de forma ilimitada:"
         text: |
           • Tutoría instantánea mientras programas.
           <br />
-          • Evaluaciones de habilidades para monitorear tu progreso.
+          • Evaluaciones de habilidades para seguir tu progreso.
           <br />
-          • Asistencia experta para la corrección de errores.
+          • Asistencia para corregir errores.
           <br /><br />
-          ¡Complementa perfectamente nuestro programa de mentoría humana!
-        icon: "check"
+          ¡Es el complemento perfecto para nuestro programa de mentoría humana!
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
         icon_color: '#25BF6C'
-      - heading: "Learnpack, nuestro software de aprendizaje interactivo, ofrece:"
+      - heading: "LearnPack, nuestro software de aprendizaje fácil de usar, proporciona:"
         text: |
-          • Cientos de ejercicios interactivos para que domines y retengas habilidades.
+          • Cientos de ejercicios interactivos para ayudarte a dominar y retener habilidades.
           <br />
-          • Pruebas automatizadas para hacer seguimiento a tu progreso.
+          • Pruebas automatizadas para ayudarte a seguir tu progreso.
           <br />
-          • Práctica estructurada y guiada.
-        icon: "check"
+          • Y mucho más…
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
         icon_color: '#25BF6C'
 
-
+# TWO COLUMNS INFO
+two_columns_info:
+  proportions: [6, 6]
+  image:
+    style: '{"backgroundSize": "contain", "background-position": "center"}' 
+    src: "/images/landing/grupo-ventanas.webp"
+    shadow: false 
+  section_heading:
+    text: "Diseñado para hacerte exitoso en el mundo de la programación"
+  heading:
+    text: ""
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "Soporte profesional a la medida Basado en cada oportunidad laboral"
+    font_size: ["16px", "16px", "16px", "16px", "16px"]
+  button:
+    text: "¡Aplica ahora!"
+    color: "white"
+    background: "black"
+    path: "#prices_and_payment"
+  bullets:
+    items:
+    - heading: "Todas las mentorias que necesitas"
+      text: "En línea y en persona, por el resto de tu vida, incluso para codificación de dudas laborales"
+    - heading: "TIEMPO DE RESPUESTA"
+      text: "No te quedes atascado con tu código, no te llevará más de 15 minutos para que un instructor te ayude."
+    - heading: "1:7 PROPORCIÓN PROFESOR: ESTUDIANTE"
+      text: "Encontrarás más profesores en 4Geeks que el promedio de la industria."
 
 badges:
   paragraph: "4Geeks Academy es el lugar idóneo para <a href='/es/curso-de-programacion-desde-cero'>aprender a programar desde cero</a>. Estamos avalados y autorizados por el Departamento de Educación de Florida y hemos sido reconocidos como el mejor de Miami, según SwitchUp y de los 10 mejores cursos de programación, según Newsweek. En España, hemos recibido el Premio Excelencia Educativa durante dos años consecutivos. Y a nivel global formamos parte del top 35 de cursos de programación en el mundo."
