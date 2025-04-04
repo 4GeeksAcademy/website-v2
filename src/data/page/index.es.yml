@@ -73,8 +73,11 @@ success_cases:
   content: 86% de nuestros alumnos han sido contratados
 
 two_column_carousel:
-  title: "Nosotros lo hacemos posible"
-  text: "Nuestro programa de Job Guarantee está dando excelentes resultados. Vea algunas de las historias de nuestros graduados:"
+  title: "¡Cambia tu futuro hoy! 🚀"
+  text: |
+    En 4Geeks Academy hacemos posible que consigas el trabajo de tus sueños. Nuestro programa de Job Guarantee transforma vidas. 
+    Historias reales, resultados garantizados. <br>
+    Entra a 4Geeks Academy, consigue trabajo y crea el futuro que mereces.
   videos:
     - src: "/images/testimonials/4geeks-meeting-video.webp"
       video: "0JqAn7C790c"
