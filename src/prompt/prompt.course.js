@@ -38,7 +38,7 @@ Be concise, don't add a summary at the end of the article.
 Don't take more than ${max_tokens * 2} characters.
 Here is the YML: ${raw}`,
     });
-    if(!result) return null;
+    if (!result) return null;
     const { data: answer, fromCache } = result;
     if (!answer) fail(`Error building prompt for courses plans`);
 

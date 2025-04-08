@@ -22,13 +22,13 @@ function saveCacheToFile() {
 // Generate cache key
 function generateCacheKey({ system, user, model, max_tokens }) {
   const key = `${system}-${user}-${model}-${max_tokens}`;
-  return crypto.createHash('md5').update(key).digest('hex');
+  return crypto.createHash("md5").update(key).digest("hex");
 }
 
 // Check if cache entry is expired
 function isCacheExpired(timestamp) {
   const oneMonth = 30 * 24 * 60 * 60 * 1000; // One month in milliseconds
-  return (Date.now() - timestamp) > oneMonth;
+  return Date.now() - timestamp > oneMonth;
 }
 
 async function complete({ system, user, model, max_tokens }) {
@@ -79,7 +79,7 @@ async function complete({ system, user, model, max_tokens }) {
 
     cache[cacheKey] = {
       data: interpretedContent,
-      timestamp: Date.now()
+      timestamp: Date.now(),
     };
 
     saveCacheToFile();

@@ -98,8 +98,8 @@ const Apply = (props) => {
           (m.online_available == false
             ? ""
             : m.in_person_available == true
-              ? trans[pageContext.lang]["(In-person and from home available)"]
-              : trans[pageContext.lang]["(From home until further notice)"]),
+            ? trans[pageContext.lang]["(In-person and from home available)"]
+            : trans[pageContext.lang]["(From home until further notice)"]),
         value: m.active_campaign_location_slug,
         region: m.meta_info.region,
         dialCode: m.meta_info.dialCode,
@@ -113,8 +113,11 @@ const Apply = (props) => {
 
   React.useEffect(() => {
     if (formData.location.value) {
-      const selectedLocation = locations?.find(l => l.value === formData.location.value);
-      const activeConsents = selectedLocation?.consents?.filter(c => c.active) || [];
+      const selectedLocation = locations?.find(
+        (l) => l.value === formData.location.value
+      );
+      const activeConsents =
+        selectedLocation?.consents?.filter((c) => c.active) || [];
       if (activeConsents.length !== consentValue.length) {
         setConsentValue(new Array(activeConsents.length).fill(false));
       }
@@ -603,24 +606,29 @@ const Apply = (props) => {
                 margin_tablet="11px 0 23px 0"
               >
                 {(() => {
-                  const options = regionVal === "online"
-                    ? [{ label: "Online", value: "online" }]
-                    : locations?.filter(academy => academy.region === regionVal) || [];
+                  const options =
+                    regionVal === "online"
+                      ? [{ label: "Online", value: "online" }]
+                      : locations?.filter(
+                          (academy) => academy.region === regionVal
+                        ) || [];
 
                   return (
                     <SelectRaw
                       bgColor={Colors.black}
                       options={options}
-                      value={locations?.find(el => el.value === formData.location.value)}
+                      value={locations?.find(
+                        (el) => el.value === formData.location.value
+                      )}
                       placeholder={yml.left.locations_title}
                       inputId={"dropdown_academy_selector"}
                       onChange={(value) => {
-                        setVal(prev => ({
+                        setVal((prev) => ({
                           ...prev,
                           location: {
                             value: value.value,
-                            valid: !!value.value
-                          }
+                            valid: !!value.value,
+                          },
                         }));
                       }}
                     />
@@ -645,11 +653,11 @@ const Apply = (props) => {
                 setVal({ ...formData, referral_key: { value, valid } })
               }
             />
-            {session?.location && formData.location.value && (
+            {session?.location &&
+              formData.location.value &&
               locations
-                ?.find(l => l.value === formData.location.value)
-                ?.consents
-                ?.filter(consent => consent.active)
+                ?.find((l) => l.value === formData.location.value)
+                ?.consents?.filter((consent) => consent.active)
                 ?.map((consent, index) => (
                   <Div
                     key={`consent-${index}`}
@@ -670,14 +678,14 @@ const Apply = (props) => {
                           consents: {
                             ...formData.consents,
                             value: newConsentValue,
-                            valid: newConsentValue.every(v => v)
-                          }
+                            valid: newConsentValue.every((v) => v),
+                          },
                         });
                       }}
                       style={{
                         width: "22px",
                         height: "22px",
-                        marginRight: "7px"
+                        marginRight: "7px",
                       }}
                     />
                     <Paragraph
@@ -688,8 +696,7 @@ const Apply = (props) => {
                       dangerouslySetInnerHTML={{ __html: consent.message }}
                     />
                   </Div>
-                ))
-            )}
+                ))}
             <Div width="fit-content" margin="10px auto 0 auto">
               <ReCAPTCHA
                 ref={captcha}

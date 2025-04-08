@@ -52,7 +52,7 @@ For example:
 - Income Share Agreement for full-time couses. Pay after you get a job. Price: $0
 Here is the YML: ${raw}`,
       });
-      if(!result) return null;
+      if (!result) return null;
       const { data: answer, fromCache } = result;
       if (!answer) fail(`Error building prompt for payment plans`);
 
