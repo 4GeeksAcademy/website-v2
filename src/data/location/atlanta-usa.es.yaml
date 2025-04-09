@@ -97,7 +97,7 @@ two_columns_rigo:
     src: "/images/landing/ai-mentor-esp.jpg"
     shadow: true
   video: "cOFm_deKj6Q"
-  heading: 
+  heading:
     text: "¡Nuestras herramientas de IA mejoran y agilizan tu aprendizaje!"
     font_size: ["31px", "31px", "31px", "29px", "29px"]
     style: '{ "lineHeight": "30px" }'
@@ -105,7 +105,7 @@ two_columns_rigo:
       src: "/images/rigobot-logo.png"
   sub_heading:
     text: "Luego de años de investigación y experiencia, hemos perfeccionado nuestros métodos de enseñanza para optimizar tu curva de aprendizaje y tu tasa de éxito. A través de nuestra plataforma de aprendizaje 4Geeks.com, te brindamos las estrategias y herramientas para garantizar tu progreso constante y eficiente."
-    font_size: ["16px","16px","16px","16px","16px"]
+    font_size: ["16px", "16px", "16px", "16px", "16px"]
     style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"300", "text-align": "justify" }'
   content:
     style: '{ "font-size":"16px", "margin":"15px 0"}'
@@ -123,7 +123,7 @@ two_columns_rigo:
           <br /><br />
           ¡Es el complemento perfecto para nuestro programa de mentoría humana!
         icon: "check" #string with icon for example ['check', 'cicle', etc]
-        icon_color: '#25BF6C'
+        icon_color: "#25BF6C"
       - heading: "LearnPack, nuestro software de aprendizaje fácil de usar, proporciona:"
         text: |
           • Cientos de ejercicios interactivos para ayudarte a dominar y retener habilidades.
@@ -132,7 +132,7 @@ two_columns_rigo:
           <br />
           • Y mucho más…
         icon: "check" #string with icon for example ['check', 'cicle', etc]
-        icon_color: '#25BF6C'
+        icon_color: "#25BF6C"
 
 staff:
   heading: "Conoce tu Staff"
@@ -174,6 +174,11 @@ consents:
     active: false
     message: 'Al completar este formulario acepto que mi información será utilizada para enviarme información comercial sobre 4Geeks Academy y que podría resultar una relación comercial a partir de esto. Revisa nuestra <a style={{ marginLeft: "5px" }} target="_blank" rel="noopener noreferrer nofollow" className="decorated" href="/es/privacidad">Política de Privacidad</a>'
     error_message: "Debes aceptar el consent de GDPR"
+  - slug: "wa_consent"
+    name: "WhatsApp Consent"
+    active: true
+    message: "Acepto recibir información vía email, WhatsApp y/o otros canales sobre talleres de programación, eventos, cursos y otros materiales de marketing. Nunca compartiremos tu información de contacto y puedes darte de baja fácilmente en cualquier momento."
+    error_message: "Debes aceptar el consentimiento de Whatsapp."
 
 city: "Atlanta"
 name: "Atlanta, USA"

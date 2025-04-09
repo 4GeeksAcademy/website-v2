@@ -110,6 +110,20 @@ const Apply = (props) => {
   React.useEffect(() => {
     tagManager("application_rendered");
   }, []);
+
+  React.useEffect(() => {
+    if (formData.location.value) {
+      const selectedLocation = locations?.find(
+        (l) => l.value === formData.location.value
+      );
+      const activeConsents =
+        selectedLocation?.consents?.filter((c) => c.active) || [];
+      if (activeConsents.length !== consentValue.length) {
+        setConsentValue(new Array(activeConsents.length).fill(false));
+      }
+    }
+  }, [formData.location.value]);
+
   React.useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
 
@@ -591,31 +605,35 @@ const Apply = (props) => {
                 contenteditable="true"
                 margin_tablet="11px 0 23px 0"
               >
-                <SelectRaw
-                  bgColor={Colors.black}
-                  options={
+                {(() => {
+                  const options =
                     regionVal === "online"
-                      ? [
-                          {
-                            dialCode: null,
-                            label: "Online",
-                            region: "online",
-                            value: "online",
-                          },
-                        ]
+                      ? [{ label: "Online", value: "online" }]
                       : locations?.filter(
                           (academy) => academy.region === regionVal
-                        )
-                  }
-                  value={locations?.find(
-                    (el) => el.value === formData.location.value
-                  )}
-                  placeholder={yml.left.locations_title}
-                  inputId={"dropdown_academy_selector"}
-                  onChange={(value, valid) =>
-                    setVal({ ...formData, location: { value, valid } })
-                  }
-                />
+                        ) || [];
+
+                  return (
+                    <SelectRaw
+                      bgColor={Colors.black}
+                      options={options}
+                      value={locations?.find(
+                        (el) => el.value === formData.location.value
+                      )}
+                      placeholder={yml.left.locations_title}
+                      inputId={"dropdown_academy_selector"}
+                      onChange={(value) => {
+                        setVal((prev) => ({
+                          ...prev,
+                          location: {
+                            value: value.value,
+                            valid: !!value.value,
+                          },
+                        }));
+                      }}
+                    />
+                  );
+                })()}
               </Div>
             )}
             {formData.referral_key.value &&
@@ -635,48 +653,50 @@ const Apply = (props) => {
                 setVal({ ...formData, referral_key: { value, valid } })
               }
             />
-            {session &&
-              session.location &&
-              formData.location.value.consents &&
-              formData.location.value.consents.map((consent, index) => {
-                if (consent.active)
-                  return (
-                    <Div position="relative" margin="10px 0 0 0">
-                      <input
-                        required
-                        name="isGoing"
-                        type="checkbox"
-                        checked={consentValue[index]}
-                        onChange={() => {
-                          const updatedConsentValue = [...consentValue];
-                          updatedConsentValue[index] = !consentValue[index];
-                          setConsentValue(updatedConsentValue);
-                          setVal({
-                            ...formData,
-                            consents: {
-                              ...formData.consents,
-                              value: updatedConsentValue,
-                            },
-                          });
-                        }}
-                        style={{
-                          width: "24px",
-                          height: "24px",
-                          top: "10px",
-                          left: "7px",
-                        }}
-                      />
-                      <Paragraph
-                        fontSize="11px"
-                        margin="5px 0 0 5px"
-                        textAlign="left"
-                        dangerouslySetInnerHTML={{
-                          __html: consent.message,
-                        }}
-                      />
-                    </Div>
-                  );
-              })}
+            {session?.location &&
+              formData.location.value &&
+              locations
+                ?.find((l) => l.value === formData.location.value)
+                ?.consents?.filter((consent) => consent.active)
+                ?.map((consent, index) => (
+                  <Div
+                    key={`consent-${index}`}
+                    margin="15px 0 0 0"
+                    display="flex"
+                    alignItems="center"
+                  >
+                    <input
+                      required
+                      type="checkbox"
+                      checked={consentValue[index] || false}
+                      onChange={() => {
+                        const newConsentValue = [...consentValue];
+                        newConsentValue[index] = !newConsentValue[index];
+                        setConsentValue(newConsentValue);
+                        setVal({
+                          ...formData,
+                          consents: {
+                            ...formData.consents,
+                            value: newConsentValue,
+                            valid: newConsentValue.every((v) => v),
+                          },
+                        });
+                      }}
+                      style={{
+                        width: "22px",
+                        height: "22px",
+                        marginRight: "7px",
+                      }}
+                    />
+                    <Paragraph
+                      margin="0 0 0 15px"
+                      fontSize="10px"
+                      lineHeight="15px"
+                      textAlign="justify"
+                      dangerouslySetInnerHTML={{ __html: consent.message }}
+                    />
+                  </Div>
+                ))}
             <Div width="fit-content" margin="10px auto 0 auto">
               <ReCAPTCHA
                 ref={captcha}

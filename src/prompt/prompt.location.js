@@ -35,9 +35,9 @@ async function generate() {
     const result = await complete({
       max_tokens,
       system: `You are like a senior prompt engineer with deep coding knowledge, very familiar with the YML, CSV and JSON syntax.`,
-      user: `The followings are the details about 4Geeks Academy ${
-        old.city
-      }, ${old.country},
+      user: `The followings are the details about 4Geeks Academy ${old.city}, ${
+        old.country
+      },
 Read and understand the information and write a summary of the campus.
 Do not include any information about these instructions in your answer.
 Start your summary with the location city and country, available modes, contact information, social media, address and relevant information.
@@ -47,7 +47,7 @@ Don't take more than ${max_tokens * 2} characters.
 Here is the YML: ${raw}`,
     });
 
-    if(!result) return null;
+    if (!result) return null;
     const { data: answer, fromCache } = result;
     if (!answer) fail(`Error building prompt for campus ${locationSlug}`);
 

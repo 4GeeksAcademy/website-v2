@@ -11,7 +11,10 @@ async function generate() {
     `${__dirname}/../data/components/testimonials/testimonials.us.yaml`
   );
   let testimonials = doc.yaml.testimonials.map((old) => {
-    let _new = [`Student alumni name: ${old.student_name}`, `Hired as ${old.short_content}`];
+    let _new = [
+      `Student alumni name: ${old.student_name}`,
+      `Hired as ${old.short_content}`,
+    ];
     if (old.linkedin_url)
       _new.push(`LinkedIn profile URL: ${old.linkedin_url}`);
     if (old.country) _new.push(`Studied in the ${old.country.name} campus`);

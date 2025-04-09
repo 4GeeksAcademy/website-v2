@@ -17,7 +17,11 @@ function formatCohortDates(cohorts) {
           day: "numeric",
         });
       } catch (error) {
-        console.error(`Invalid time zone specified for ${syllabus}: ${session.timezone | undefined}. Assumint UTC instead.`);
+        console.error(
+          `Invalid time zone specified for ${syllabus}: ${
+            session.timezone | undefined
+          }. Assumint UTC instead.`
+        );
         kickoffDate = new Date(session.kickoff).toLocaleDateString("en-US", {
           timeZone: "UTC",
           year: "numeric",
