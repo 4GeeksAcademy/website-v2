@@ -1,4 +1,4 @@
-# 4Geeks Academy Website 
+# 4Geeks Academy Website .
 
 - Here you can find the [website design in Figma](https://www.figma.com/file/0kfc9La5QthLyu927siuCw/Website-Project?node-id=0%3A1).
 - This website was built using Gatsby.js and Styled Components.
