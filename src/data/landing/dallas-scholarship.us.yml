@@ -249,8 +249,8 @@ components:
         title: "You’re Set!"
         content: "Become a full-stack developer with unlimited mentorship and career support."
     button:
-      text: "4geeks vs. Others"
-      path: "#geeks_vs_others"
+      text: ""
+      path: ""
       background: "#232323"
       color: white
       hover: white
