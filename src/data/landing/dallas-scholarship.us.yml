@@ -159,9 +159,9 @@ components:
     background: "#fbfbfb"
     proportions: [5, 7]
     image:
-      style: '{ "backgroundSize": "cover" }'
-      src: "/images/allies/kosmos-landing-img1.webp"
-      shadow: true
+      style: '{ "backgroundSize": "contain" }'
+      src: "/images/landing/hombre-con-laptop.png"
+      shadow: false
     section_heading:
       text: "Why Learn to Code?"
     heading:
@@ -262,9 +262,9 @@ components:
     background: "#F4F9FF"
     proportions: [6, 6]
     image:
-      style: '{ "backgroundSize": "cover" }'
-      src: "/images/allies/kosmos-landing-img2.webp"
-      shadow: true
+      style: '{ "backgroundSize": "contain" }'
+      src: "/images/landing/blonde-girl-laptop.png"
+      shadow: false
     section_heading:
       style: '{ "margin-top": "50px", "color": "black", "max-width": "900px", "font-size": "34px", "align-self": "center" }'
       text: |
@@ -306,9 +306,9 @@ components:
     background: "#F4F9FF"
     proportions: [6, 6]
     image:
-      style: '{ "backgroundSize": "cover" }'
-      src: "/images/allies/kosmos-landing-img3.webp"
-      shadow: true
+      style: '{ "backgroundSize": "contain", "backgroundPosition": "center" }'
+      src: "/images/allies/kosmos-landing-img.webp"
+      shadow: false
     heading:
       style: '{ "margin-top": "0px" }'
       text: "Why are we partnering with Kosmos?"
@@ -351,9 +351,9 @@ components:
       font_size: ["16px"]
       text: "This is your chance to be part of it! Workforce of the Future scholarship covers 100% of your tuition, making it possible to become an in-demand tech professional without straining your finances."
     image:
-      style: '{ "backgroundSize": "cover", "backgroundPosition": "center" }'
-      src: "/images/allies/kosmos-landing-img4.webp"
-      shadow: true
+      style: '{ "backgroundSize": "contain" }'
+      src: "/images/landing/community-support-2.png"
+      shadow: false
     section_heading:
       text: "THE DALLAS TECH SCENE IS THRIVING"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
