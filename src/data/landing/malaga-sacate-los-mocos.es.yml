@@ -1,0 +1,81 @@
+meta_info:
+  slug: malaga-sacate-los-mocos  # URL: 4geeksacademy.com/es/landing/sacate-los-mocos-malaga
+  
+    # This will show on social media when shared
+  title: "Data Science en Málaga: ¡Curso para sacarte los mocos!"
+  description: "Aprende a limpiar datasets como limpias tu nariz. Bootcamp intensivo de Data Science en Málaga."
+  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  # This will show on social media when shared
+  image: "/images/bg/malaga-beach.jpg"
+  keywords: "Data Science Málaga, Bootcamp datos, Python Málaga, Curso datos divertido"
+  template: "landing_a"
+  utm_course: ["datascience-ml"]
+  utm_location: ["malaga-spain"]
+  automation: soft # comma separated, "soft" is the default value
+  tag: website-lead
+
+navbar:
+  buttonText: "¡ALERGIAS A LOS DATOS? CLICA AQUÍ"
+  buttonUrl: "#leadform_bottom"
+  logoUrl: "#"
+
+form:
+  # posible fields: "first_name", "last_name", "full_name", "phone", "email"
+  # always the first_name, email and phone will be mandatory if added.
+  fields: ["full_name", "phone", "email"]
+  heading: "¡Deja que tus mocos inspiren tu código!"
+  motivation: "86% de nuestros alumnos se gradúan con empleo... y con la nariz limpia de dudas."
+  button_label: "¡RESERVA TU MOCÓMETRO!" 
+  redirect: "/es/gracias/?lang=es"
+
+header_data:
+  background: "#ffffff"
+  tagline: "Data Science en Málaga: ¡Donde los mocos se convierten en modelos predictivos!"
+  sub_heading: "Aprende Python, SQL y Machine Learning entre churros y playa. Sin llorar (mucho)."
+  tagline_color: "#1c1c1c"
+  form_styles:
+    background: "#0084FF"
+    color: "white"
+    button:
+      background: "black"
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.png"
+  image_filter: brightness(0.3)
+
+features:
+  styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px", "color": "white"}'
+  bullets:
+    - "Limpieza de datos más eficaz que un pañuelo de seda."
+    - "Mentorías 1:1: Te ayudamos hasta a estornudar en código eficiente."
+    - "Proyectos reales: Predice cuándo llegará el próximo tren de Cercanías Málaga."
+
+short_badges:
+  - name: "Premios Tecnologia Siglo XXI"
+    url: ""
+    image: "../../../static/images/awards/premios_tecnologia_sigloxxi.png"
+    alt: "Mejor centro de Coding Bootcamp"
+  - name: "Course Report"
+    url: ""
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+    alt: "Top Coding Bootcamps Course Report"
+  - name: "Switchup"
+    url: ""
+    image: "../../../static/images/badges/switchup-badge-2023.png"
+    alt: "Best coding bootcamp Switchup 2023"   
+  - name: "Florida Department of Education"
+    url: ""
+    image: "../../../static/images/badges/licensed.png"
+    alt: "Florida Department of Education"
+ 
+
+follow_bar:
+  position: "top" # top, bottom, hidden
+  content:
+    text: "Financiación sin intereses. \n Planes de pago hasta 48 cuotas."
+    text_mobile: "Financiación sin intereses. \n Hasta 48 cuotas."
+    font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
+  button:
+    text: "APLICA YA"
+    path: "#leadform_header"
+  phone:
+    text: "Llama"
+    number: "+1 234 567 890"

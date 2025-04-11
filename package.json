@@ -47,6 +47,8 @@
   "dependencies": {
     "@fontsource/archivo": "^5.0.14",
     "@loadable/component": "^5.13.2",
+    "ajv": "^8.17.1",
+    "ajv-keywords": "^5.1.0",
     "browser-monads": "^1.0.0",
     "classnames": "^2.3.1",
     "dayjs": "^1.8.29",
