@@ -189,33 +189,6 @@ components:
       background: "black"
       path: "#leadform_bottom"
 
-  - name: pricing
-    position: 7
-    layout: pricing
-    heading:
-      text: "Planes de Financiación"
-    prices:
-      - name: "Plan Básico"
-        price: "5.000€"
-        description: "Pago único con descuento"
-        features:
-          - "Acceso completo al programa"
-          - "Kit de análisis nasal"
-          - "Certificación básica"
-      - name: "Plan Premium"
-        price: "500€/mes"
-        description: "10 cuotas sin intereses"
-        features:
-          - "Todo lo del plan básico"
-          - "Mentoría personalizada"
-          - "Kit premium de análisis"
-      - name: "Plan Enterprise"
-        price: "Consultar"
-        description: "Para empresas"
-        features:
-          - "Formación corporativa"
-          - "Análisis grupal"
-          - "Consultoría personalizada"
 
 short_badges:
   - name: "Premios Tecnologia Siglo XXI"
