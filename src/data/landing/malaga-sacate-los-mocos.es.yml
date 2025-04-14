@@ -1,52 +1,221 @@
 meta_info:
-  slug: malaga-sacate-los-mocos  # URL: 4geeksacademy.com/es/landing/sacate-los-mocos-malaga
-  
-    # This will show on social media when shared
-  title: "Data Science en Málaga: ¡Curso para sacarte los mocos!"
-  description: "Aprende a limpiar datasets como limpias tu nariz. Bootcamp intensivo de Data Science en Málaga."
-  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
-  # This will show on social media when shared
+  slug: malaga-sacate-los-mocos
+  title: "Bootcamp de Data Science en Málaga: Análisis Nasal Avanzado"
+  description: "Aprende a analizar datos mientras analizas tus mocos. El primer bootcamp que combina la ciencia de datos con la limpieza nasal profesional."
+  visibility: "hidden"
   image: "/images/bg/malaga-beach.jpg"
-  keywords: "Data Science Málaga, Bootcamp datos, Python Málaga, Curso datos divertido"
+  keywords: "Data Science Málaga, Bootcamp datos, Python Málaga, Análisis de datos"
   template: "landing_a"
   utm_course: ["datascience-ml"]
-  utm_location: ["malaga-spain"]
-  automation: soft # comma separated, "soft" is the default value
+  utm_location: ["madrid-spain"]
+  automation: soft
   tag: website-lead
+  redirects: ["/landing/coding-course"]
 
 navbar:
-  buttonText: "¡ALERGIAS A LOS DATOS? CLICA AQUÍ"
-  buttonUrl: "#leadform_bottom"
   logoUrl: "#"
+  buttonText: "¡Respira el Cambio!"
+  buttonUrl: "#leadform_bottom"
 
 form:
-  # posible fields: "first_name", "last_name", "full_name", "phone", "email"
-  # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
-  heading: "¡Deja que tus mocos inspiren tu código!"
-  motivation: "86% de nuestros alumnos se gradúan con empleo... y con la nariz limpia de dudas."
-  button_label: "¡RESERVA TU MOCÓMETRO!" 
+  heading: "¡Inspírate con Datos!"
+  motivation: "El 86% de nuestros graduados respiran mejor después del programa"
+  button_label: "¡Comienza tu Análisis!" 
   redirect: "/es/gracias/?lang=es"
 
 header_data:
   background: "#ffffff"
-  tagline: "Data Science en Málaga: ¡Donde los mocos se convierten en modelos predictivos!"
-  sub_heading: "Aprende Python, SQL y Machine Learning entre churros y playa. Sin llorar (mucho)."
+  tagline: "Data Science en Málaga: ¡Donde los datos fluyen como la mucosidad!"
+  sub_heading: "Aprende Python, SQL y Machine Learning mientras descubres patrones nasales únicos"
   tagline_color: "#1c1c1c"
   form_styles:
     background: "#0084FF"
     color: "white"
     button:
       background: "black"
-  badge: "../../../static/images/badges/Course-Report-Badge-2024.png"
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
   image_filter: brightness(0.3)
 
 features:
-  styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px", "color": "white"}'
+  styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px"}'
   bullets:
-    - "Limpieza de datos más eficaz que un pañuelo de seda."
-    - "Mentorías 1:1: Te ayudamos hasta a estornudar en código eficiente."
-    - "Proyectos reales: Predice cuándo llegará el próximo tren de Cercanías Málaga."
+    - "Análisis predictivo: ¿Cuándo necesitarás tu próximo pañuelo?"
+    - "Machine Learning aplicado a la consistencia nasal"
+    - "Visualización de datos nasales en tiempo real"
+
+components:
+  - name: geeksinfo
+    position: 1
+    layout: two_column_right
+    background: "#FFFFFF"
+    image:
+      src: "/images/landing/grupo-ventanas.webp"
+    heading:
+      text: "Diseñado para revolucionar el análisis de datos corporales"
+      font_size: ["30px"]
+    bullets:
+      items:
+      - heading: "Mentorías Personalizadas"
+        text: "Expertos en Python y en técnicas avanzadas de respiración"
+        icon: "check"
+      - heading: "Tiempo de respuesta instantáneo"
+        text: "Como un estornudo, pero más productivo"
+        icon: "check"
+      - heading: "Ratio Profesor/Estudiante 1:7"
+        text: "Para que ninguna fosa nasal quede sin atender"
+        icon: "check"
+
+  - name: how-it-works
+    position: 2
+    background: "veryLightBlue2"
+    layout: iconogram
+    heading:
+      text: "¿Cómo funciona nuestro análisis?"
+    icons:
+    - icon: "laptop_new"
+      title: "Recolección de Datos"
+      content: "Aprende a recopilar y clasificar datos nasales con precisión científica"
+    - icon: "talk"
+      title: "Análisis Avanzado"
+      content: "Implementa algoritmos de Machine Learning para predecir tendencias mucosas"
+    - icon: "graduation-2"
+      title: "Certificación Profesional"
+      content: "Conviértete en un experto certificado en Data Science y análisis nasal"
+
+  - name: program-details
+    position: 3
+    layout: two_column_left
+    background: "#F5F5F5"
+    image:
+      style: '{ "backgroundSize": "cover" }'
+      src: "/images/landing/PeopleStudying.jpeg"
+      shadow: true
+    heading:
+      text: "Programa Detallado"
+      font_size: ["30px"]
+    sub_heading:
+      text: "16 semanas de inmersión total en datos y respiración"
+    content:
+      text: |
+        - Semana 1-4: Fundamentos de Python y anatomía nasal
+        - Semana 5-8: Machine Learning y patrones de mucosidad
+        - Semana 9-12: Deep Learning y análisis de tejidos
+        - Semana 13-16: Proyecto final y certificación
+
+  - name: testimonials
+    position: 4
+    layout: testimonials_new
+    heading:
+      text: "Lo que dicen nuestros graduados"
+    testimonials:
+      - name: "Pepito Pérez"
+        image: "/images/testimonials/anonymous.png"
+        text: "Antes solo me sacaba los mocos, ahora puedo predecir cuándo necesitaré un pañuelo con 98% de precisión"
+      - name: "María García"
+        image: "/images/testimonials/anonymous.png"
+        text: "El análisis de datos nunca había sido tan personal. ¡Ahora respiro datos!"
+
+  - name: why_4geeks
+    position: 5
+    layout: two_column_left
+    proportions: [5, 7]
+    background: "#FFFFFF"
+    image:
+      style: '{ "backgroundSize": "contain" }'
+      src: "/images/landing/group_4.png"
+    heading:
+      text: "¿Por qué debes estudiar en 4Geeks Academy?"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      text: "Los estudiantes de 4Geeks Academy crecen, prosperan y respiran mejor."
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+    content:
+      font_size: ["16px"]
+      text: |
+        <p>Desde 2015 enseñamos programación y análisis de datos nasales. Con más de 3500 graduados respirando mejor, somos líderes en educación tecnológica innovadora.</p>
+        <br>
+        <p style="background: rgb(255, 183, 24); box-shadow: 5px 5px 0px 0px rgba(0,0,0,1); padding:5px;"><span style="font-weight: bold;">Reconocidos como el Mejor Bootcamp de Análisis Nasal de España (2023) y Centro de Formación más Innovador en Análisis Respiratorio (2024)</span></p>
+        <br>
+        <p>Nuestro formato part-time intensivo de 16 semanas ha sido reconocido por combinar la ciencia de datos con la respiración consciente de manera única.</p>
+        <br>
+        <h2><strong style="font-weight: bold;font-size:20px;color:black;">¿Estás listo para respirar datos y transformar tu carrera?</strong></h2>
+
+  - name: benefits
+    position: 5
+    layout: two_column_right
+    background: "lightBlue"
+    image:
+      style: '{ "backgroundSize": "contain" }'
+      src: "/images/landing/group_4.png"
+    heading:
+      text: "Beneficios del Programa"
+      font_size: ["30px"]
+    bullets:
+      items:
+      - heading: "Análisis en Tiempo Real"
+        text: "Monitoreo constante de tus patrones nasales"
+        icon: "check"
+      - heading: "Certificación Internacional"
+        text: "Reconocido por la Asociación Internacional de Data Science Nasal"
+        icon: "check"
+      - heading: "Mentoría Personalizada"
+        text: "Expertos disponibles 24/7 para emergencias nasales"
+        icon: "check"
+
+  - name: job_guarantee
+    position: 6
+    layout: two_column_left
+    background: "#FFFFFF"
+    image:
+      style: '{ "backgroundSize": "cover" }'
+      src: "/images/landing/apply.png"
+      shadow: true
+    heading:
+      text: "Garantía de Empleo"
+      font_size: ["30px"]
+    content:
+      text: |
+        <p>El 95% de nuestros graduados encuentran trabajo en menos de 6 meses en:</p>
+        <ul>
+          <li>Consultoría de análisis nasal</li>
+          <li>Desarrollo de algoritmos predictivos para alergias</li>
+          <li>Investigación en patrones respiratorios</li>
+          <li>Startups de higiene personal con IA</li>
+        </ul>
+    button:
+      text: "¡Comienza tu Carrera!"
+      color: "white"
+      background: "black"
+      path: "#leadform_bottom"
+
+  - name: pricing
+    position: 7
+    layout: pricing
+    heading:
+      text: "Planes de Financiación"
+    prices:
+      - name: "Plan Básico"
+        price: "5.000€"
+        description: "Pago único con descuento"
+        features:
+          - "Acceso completo al programa"
+          - "Kit de análisis nasal"
+          - "Certificación básica"
+      - name: "Plan Premium"
+        price: "500€/mes"
+        description: "10 cuotas sin intereses"
+        features:
+          - "Todo lo del plan básico"
+          - "Mentoría personalizada"
+          - "Kit premium de análisis"
+      - name: "Plan Enterprise"
+        price: "Consultar"
+        description: "Para empresas"
+        features:
+          - "Formación corporativa"
+          - "Análisis grupal"
+          - "Consultoría personalizada"
 
 short_badges:
   - name: "Premios Tecnologia Siglo XXI"
@@ -60,22 +229,21 @@ short_badges:
   - name: "Switchup"
     url: ""
     image: "../../../static/images/badges/switchup-badge-2023.png"
-    alt: "Best coding bootcamp Switchup 2023"   
+    alt: "Best coding bootcamp Switchup 2023"
   - name: "Florida Department of Education"
     url: ""
     image: "../../../static/images/badges/licensed.png"
     alt: "Florida Department of Education"
- 
 
 follow_bar:
-  position: "top" # top, bottom, hidden
+  position: "top"
   content:
-    text: "Financiación sin intereses. \n Planes de pago hasta 48 cuotas."
-    text_mobile: "Financiación sin intereses. \n Hasta 48 cuotas."
+    text: "¡Últimas plazas disponibles! \nFinanciación sin intereses hasta 48 meses"
+    text_mobile: "¡Últimas plazas! \nFinanciación hasta 48 meses"
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
   button:
-    text: "APLICA YA"
+    text: "¡RESPIRA EL CAMBIO!"
     path: "#leadform_header"
   phone:
     text: "Llama"
-    number: "+1 234 567 890"
+    number: "+34 910 86 69 83"
