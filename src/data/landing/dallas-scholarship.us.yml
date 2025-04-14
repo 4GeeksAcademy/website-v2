@@ -268,7 +268,7 @@ components:
     section_heading:
       style: '{ "margin-top": "50px", "color": "black", "max-width": "900px", "font-size": "34px", "align-self": "center" }'
       text: |
-        Transform you life with 4Geeks Academy and Kosmos: A Comprehensive Approach to Career Readiness
+        Transform your life with 4Geeks Academy and Kosmos: A Comprehensive Approach to Career Readiness
     heading:
       style: '{ "margin-top": "0px", "font-weight": "300"  }'
       text: "Why 4Geeks?"
