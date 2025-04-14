@@ -18,8 +18,8 @@ header:
   image_logo: "/images/geekforce.png"
 
 geekForce:
-  - videoId: "ln3bQsV1BaQ"
-    image: ../../../static/images/staff/hernan-new.webp
+  - videoId: "AoUs8ZgqGMY"
+    image: ../../../static/images/staff/geekforce-video-esp.webp
 
 iconogram:
   heading:
@@ -62,10 +62,10 @@ two_columns:
   background: "#FFFFFF"
   justify: "center" #start,end,center
   image:
-    style: '{"backgroundSize": "contain", "background-position": "center"}'
-    src: "/images/landing/rigobot-section.webp"
-    shadow: false
-  # video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+    style: '{"backgroundSize": "cover", "background-position": "center", "border-radius": "4px"}'
+    src: "/images/landing/ai-mentor-esp.jpg"
+    shadow: true
+  video: "cOFm_deKj6Q"
   heading: 
     text: "¡Nuestras herramientas de IA mejoran y agilizan tu aprendizaje!"
     font_size: ["31px", "31px", "31px", "29px", "29px"]

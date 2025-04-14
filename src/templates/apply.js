@@ -452,6 +452,7 @@ const Apply = (props) => {
           gridColumn_tablet="1 / 7"
           gridRow_tablet="1 / 1"
           flexDirection="column"
+          textAlign="center"
         >
           <form
             onSubmit={async (e) => {
