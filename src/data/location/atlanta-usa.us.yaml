@@ -54,7 +54,7 @@ button:
 
 custom_bar:
   active: true
-  message: 'Change your life with Code. Pay today or with a Payment Plan for $100 p/mo <a class="customBar-link" href="/us/apply">Apply</a>'
+  message: 'Change your life with Code. Pay today or with a Payment Plan for $200 p/mo <a class="customBar-link" href="/us/apply">Apply</a>'
   button:
     label: "Read More"
     path: "/us/apply" #string (can be inline path using #, relative path or absolute path)
