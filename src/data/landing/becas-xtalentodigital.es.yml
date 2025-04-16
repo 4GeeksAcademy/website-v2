@@ -34,7 +34,7 @@ form:
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  tagline: Becas Talento Digital de la Fundación ONCE
+  tagline: Becas Por Talento Digital de Fundación ONCE
   tagline_color: #0c0c0c
   sub_heading: ""
   partner_logo_url: "../../../static/images/partner/XTalentoDigital.png"
