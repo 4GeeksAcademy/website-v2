@@ -306,8 +306,8 @@ components:
     background: "#F4F9FF"
     proportions: [6, 6]
     image:
-      style: '{ "backgroundSize": "contain", "backgroundPosition": "center" }'
-      src: "/images/allies/kosmos-landing-img.webp"
+      style: '{ "backgroundSize": "contain", "backgroundPosition": "center", "margin": "10px" }'
+      src: "/images/partner/kosmos-grid.webp"
       shadow: false
     heading:
       style: '{ "margin-top": "0px" }'
