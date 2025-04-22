@@ -36,36 +36,41 @@ const CustomBar = ({
     return date;
   };
 
+  const calculateTimer = () => {
+    const initialReferenceDate = new Date("2024-04-01");
+    const now = new Date();
+    const referenceDate = addWeeks(
+      initialReferenceDate,
+      Math.ceil(differenceInWeeks(initialReferenceDate, now) / 2) * 2
+    );
+
+    return dateDifference(referenceDate, now);
+  };
+
   useEffect(() => {
-    let interval;
-
-    interval = setInterval(() => {
-      const initialReferenceDate = new Date("2024-04-01");
-      const now = new Date();
-      let referenceDate = addWeeks(
-        initialReferenceDate,
-        Math.ceil(differenceInWeeks(initialReferenceDate, now) / 2) * 2
-      );
-
-      const intervalDurationObj = dateDifference(referenceDate, now);
-
+    const updateTimer = () => {
+      const intervalDurationObj = calculateTimer();
       setTimer({
         days: intervalDurationObj.days,
         hours: intervalDurationObj.hours,
         minutes: intervalDurationObj.minutes,
         seconds: intervalDurationObj.seconds,
       });
-    }, 1000);
+    };
+
+    updateTimer(); // Initial call to set the timer immediately
+    const interval = setInterval(updateTimer, 1000);
 
     return () => {
       clearInterval(interval);
     };
   }, []);
+
   return (
     <Div
       id="custom-bar"
-      display_md={isContentBarActive ? display_md : "none"}
-      display_xxs={isContentBarActive ? display_xxs : "none"}
+      display_md={isContentBarActive ? display_md : "block"}  // Cambia "none" por "block"
+      display_xxs={isContentBarActive ? display_xxs : "block"} // Cambia "none" por "block"
       style={{ top: "0px" }}
       width="100%"
       height="auto"
