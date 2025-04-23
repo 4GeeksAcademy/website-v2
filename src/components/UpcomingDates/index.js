@@ -402,22 +402,14 @@ const UpcomingDates = ({
                             }
                           >
                             <Paragraph textAlign="left" color={Colors.blue}>
-                              {cohort.academy.city.name}
+                              {cohort.academy.city.name === "Remote"
+                                ? `${cohort.academy.city.name} ${content.remote}`
+                                : cohort.academy.city.name}
+                              {cohort.academy.slug !== "online" &&
+                                cohort.academy.city.name !== "Remote" &&
+                                ` ${content.remote}`}
                             </Paragraph>
                           </Link>
-
-                          {cohort.academy.slug !== "online" &&
-                            cohort.academy.city.name !== "Remote" && (
-                              <Paragraph textAlign="left" margin="0 0 0 3px">
-                                {content.conector}{" "}
-                                <Link
-                                  color={Colors.blue}
-                                  to={content.online_bootcamp}
-                                >
-                                  {content.remote}
-                                </Link>
-                              </Paragraph>
-                            )}
                         </Div>
                       </Div>
 
@@ -454,20 +446,14 @@ const UpcomingDates = ({
                               }
                             >
                               <Paragraph textAlign="left" color={Colors.blue}>
-                                {cohort.academy.city.name}
+                                {cohort.academy.city.name === "Remote"
+                                  ? `${cohort.academy.city.name} ${content.remote}`
+                                  : cohort.academy.city.name}
+                                {cohort.academy.slug !== "online" &&
+                                  cohort.academy.city.name !== "Remote" &&
+                                  ` (${content.remote})`}
                               </Paragraph>
                             </Link>
-                            {cohort.academy.slug !== "online" && (
-                              <Link to={content.online_bootcamp}>
-                                <Paragraph
-                                  textAlign="left"
-                                  margin="0 0 0 3px"
-                                  color={Colors.blue}
-                                >
-                                  {`${content.conector} ${content.remote}`}
-                                </Paragraph>
-                              </Link>
-                            )}
                           </Div>
                         </Div>
                         <Div flexDirection="column" width="50%">
@@ -480,6 +466,7 @@ const UpcomingDates = ({
                           </Paragraph>
                         </Div>
                       </Div>
+
                       <Div flexDirection="column">
                         <Link to={content.info.button_link}>
                           <Button

@@ -15,6 +15,7 @@ const Overlaped = ({
 }) => {
   return (
     <Div maxWidth_tablet="1280px" margin_tablet="50px auto" width="100%">
+      {/* Desktop Version */}
       <Grid
         display_xxs="none"
         display="grid"
@@ -109,16 +110,30 @@ const Overlaped = ({
           <H2
             textAlign="start"
             margin="0 0 12px 0"
+            fontSize="35px"
+            lineHeight="38.08px"
+            fontWeight="400"
+            fontFamily="Archivo"
+            color="#2E2E38"
             dangerouslySetInnerHTML={{ __html: heading }}
           />
           {content && /<\/?[a-z0-9]+>/g.test(content) ? (
             <Paragraph
               textAlign="start"
               margin="12px 0 0 0"
+              fontFamily="Lato, sans-serif"
+              fontSize="16px"
+              color="#3A3A3A"
               dangerouslySetInnerHTML={{ __html: content }}
             />
           ) : content ? (
-            <Paragraph textAlign="start" margin="12px 0 0 0">
+            <Paragraph 
+              textAlign="start" 
+              margin="12px 0 0 0"
+              fontFamily="Lato, sans-serif"
+              fontSize="16px"
+              color="#3A3A3A"
+            >
               {content}
             </Paragraph>
           ) : null}
@@ -129,6 +144,11 @@ const Overlaped = ({
                 background={Colors[button.color]}
                 color={Colors.white}
                 margin="20px 0 0 0"
+                fontSize="12px"
+                width="fit-content"
+                borderRadius="0px"
+                display="flex"
+                alignItems="center"
                 onClick={() => {
                   if (button.path && button.path.indexOf("http") > -1)
                     window.open(transferQuerystrings(button.path, utm));
@@ -142,23 +162,24 @@ const Overlaped = ({
         </Div>
       </Grid>
 
-      {/* Version mobile */}
-
+      {/* Mobile Version */}
       <Div
         display_xxs="flex"
         display_tablet="none"
         position="relative"
-        flexDirection="Column"
+        flexDirection="column"
         width="100%"
-        margin_xxs={
-          heading?.length > 20 ? "40px 20px 65% 20px" : "40px 20px 45% 20px"
-        } // Modify the bottom margin if the floating box of the overlapped element overlaps the other component.
-        margin_sm={
-          heading?.length > 20 ? "40px 20px 45% 20px" : "40px 20px 30% 20px"
-        }
+        margin="45px 20px 400px 20px"
+        margin_xxs="45px 20px 450px 20px"
       >
         {image?.src ? (
-          <Img src={image?.src} width="33.3em" height="533px" />
+          <Img 
+            src={image?.src} 
+            width_xxs="280px"
+            width_xs="335px"
+            width_sm="385px"
+            height_xxs="450px"
+          />
         ) : (
           <StyledBackgroundSection
             width_xxs="280px"
@@ -195,31 +216,45 @@ const Overlaped = ({
           border="3px solid black"
           flexWrap="wrap"
           position="absolute"
-          top={heading?.length > 4 ? "40%" : "50%"}
+          top="50%"
           zIndex="1"
           width_xxs="90%"
           width_xs="88%"
           width_sm="89%"
-          width_tablet="100%"
           padding="20px"
-          margin="5px"
-          margin_xs="10px"
+          margin="0 auto"
+          left="0"
+          right="0"
           background={Colors.white}
-          boxShadow="20px 15px 0px 0px rgba(0,0,0,1)"
+          boxShadow="20px 10px 0px 0px rgba(0,0,0,1)"
         >
           <H2
             textAlign="start"
             margin="0 0 12px 0"
+            fontSize="35px"
+            lineHeight="38.08px"
+            fontWeight="400"
+            fontFamily="Archivo"
+            color="#2E2E38"
             dangerouslySetInnerHTML={{ __html: heading }}
           />
           {content && /<\/?[a-z0-9]+>/g.test(content) ? (
             <Paragraph
               textAlign="start"
               margin="12px 0 0 0"
+              fontFamily="Lato, sans-serif"
+              fontSize="16px"
+              color="#3A3A3A"
               dangerouslySetInnerHTML={{ __html: content }}
             />
           ) : content ? (
-            <Paragraph textAlign="start" margin="12px 0 0 0">
+            <Paragraph 
+              textAlign="start" 
+              margin="12px 0 0 0"
+              fontFamily="Lato, sans-serif"
+              fontSize="16px"
+              color="#3A3A3A"
+            >
               {content}
             </Paragraph>
           ) : null}
@@ -229,6 +264,11 @@ const Overlaped = ({
                 background={Colors[button.color]}
                 color={Colors.white}
                 margin="20px 0 0 0"
+                fontSize="12px"
+                width="fit-content"
+                borderRadius="0px"
+                display="flex"
+                alignItems="center"
               >
                 {button.text}
               </Button>
