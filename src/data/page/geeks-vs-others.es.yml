@@ -145,7 +145,7 @@ two_columns_third:
   sub_heading:
     text: |
       Tu éxito es nuestra promesa. 
-      Consigue un trabajo en los 6 meses posteriores a tu graduación o te devolveremos el dinero.
+      Consigue un trabajo en los 9 meses posteriores a tu graduación o te devolveremos el dinero.
       Así es como funciona:
     font_size: ["20px", "20px", "20px", "20px", "20px"]
     style: '{ "margin": "0", "font-weight": "400" }'

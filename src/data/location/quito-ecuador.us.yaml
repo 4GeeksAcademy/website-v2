@@ -2,7 +2,7 @@ meta_info:
   slug: "coding-bootcamp-ecuador"
   title: "4Geeks Academy in Ecuador, Quito"
   position: 36
-  description: "Get to know here all about our coding bootcamp campus in Ecuador, Quito of 4GeeksAcademy"
+  description: "Start your journey with 4Geeks Academy’s Quito Coding Bootcamp. Get a Job Guarantee, coding skills, and mentorship to launch your tech career."
   image: "/images/og-preview/quito-ecuador.us.png"
   keywords: ""
   # it will not show up on the applications forms
@@ -18,7 +18,7 @@ meta_info:
   cohort_exclude_regex: []
   home_video: "https://www.videoask.com/fyq2h2hvx"
 
-seo_title: "Coding Bootcamp Ecuador"
+seo_title: "Coding Bootcamp in Quito, Ecuador with Job Guarantee"
 header:
   tagline: "4Geeks Academy in Ecuador"
   sub_header: "All programs are taught "

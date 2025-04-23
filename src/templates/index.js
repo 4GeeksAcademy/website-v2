@@ -42,9 +42,10 @@ const Home = (props) => {
 
     if (session?.language && window && window.location.pathname === "/")
       navigate(
-        `${props.pageContext.translations[
-        session.language === "en" ? "us" : session.language
-        ]
+        `${
+          props.pageContext.translations[
+            session.language === "en" ? "us" : session.language
+          ]
         }`
       );
 

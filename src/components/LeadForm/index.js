@@ -551,7 +551,11 @@ const LeadForm = ({
               session.location.consents.map((consent, index) => {
                 if (consent.active)
                   return (
-                    <Div position="relative" margin="10px 0 0 0" alignItems= "center">
+                    <Div
+                      position="relative"
+                      margin="10px 0 0 0"
+                      alignItems="center"
+                    >
                       <input
                         required
                         name="isGoing"

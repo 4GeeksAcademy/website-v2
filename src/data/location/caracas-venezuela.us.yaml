@@ -2,7 +2,7 @@ meta_info:
   slug: "coding-bootcamp-caracas"
   title: "Coding Bootcamp Caracas"
   position: 40
-  description: "Get to know here all about our coding bootcamp campus in Caracas, Venezuela of 4GeeksAcademy"
+  description: "4Geeks Academy’s Caracas Coding Bootcamp offers a Job Guarantee. Learn coding skills and gain the experience needed to start your tech career."
   image: "/images/og-preview/caracas-venezuela.us.png"
   keywords: ""
   template: "location"
@@ -18,7 +18,7 @@ meta_info:
   cohort_exclude_regex: []
   home_video: "https://www.videoask.com/fyq2h2hvx"
 
-seo_title: "4Geeks Academy Caracas"
+seo_title: "Coding Bootcamp in Caracas with Job Guarantee"
 header:
   tagline: "4Geeks Academy in Caracas"
   sub_header: "All programs are taught "

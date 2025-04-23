@@ -286,7 +286,7 @@ part_time:
     bullets: 
       - "Inscríbete aceptando los términos y condiciones."
       - "Cumple con la carga académica y asistencia requeridas."
-      - "Si no consigues empleo en los 6 meses posteriores a la graduación, te reembolsamos el 100% de la matrícula."
+      - "Si no consigues empleo en los 9 meses posteriores a la graduación, te reembolsamos el 100% de la matrícula."
     icons: 
       # - "/images/clarkuniversity.png"
 
@@ -521,7 +521,7 @@ part_time:
     academies: ['bogota-colombia']
     recomended: true
     scholarship: "Trabajo Garantizado"
-    payment_time: "Consigue un trabajo dentro de los 6 meses posteriores a la graduación o te devolvemos tu dinero"
+    payment_time: "Consigue un trabajo dentro de los 9 meses posteriores a la graduación o te devolvemos tu dinero"
     price: "USD $3,500"
     original_price: "USD $5,000"
     offer: "40% DE DESCUENTO"

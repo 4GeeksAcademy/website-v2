@@ -2,7 +2,7 @@ meta_info:
   slug: "coding-bootcamp-lima-peru"
   title: "4Geeks Academy in Lima, Peru"
   position: 36
-  description: "Get to know here all about our coding bootcamp campus in Lima, Peru at 4GeeksAcademy"
+  description: "4Geeks Academy’s Lima Coding Bootcamp offers a Job Guarantee. Learn coding, gain real-world experience, and land your first tech job in Peru."
   image: "/images/og-preview/lima-peru.us.png"
   keywords: ""
   # it will not show up on the applications forms
@@ -18,7 +18,7 @@ meta_info:
   cohort_exclude_regex: []
   home_video: "https://www.videoask.com/fyq2h2hvx"
 
-seo_title: "Coding Bootcamp Lima, Peru"
+seo_title: "Coding Bootcamp in Lima, Peru with Job Guarantee"
 header:
   tagline: "Learn to code in Lima, Peru"
   sub_header: "All programs are taught "
