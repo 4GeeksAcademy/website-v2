@@ -2,7 +2,7 @@ meta_info:
   slug: "coding-bootcamp-orlando"
   title: "Orlando Coding Bootcamp"
   position: 2
-  description: "Get to know here all about our coding bootcamp campus in Orlando, Florida of 4GeeksAcademy"
+  description: "Start your coding journey with 4Geeks Academy’s Orlando Coding Bootcamp. Benefit from a Job Guarantee and expert guidance every step of the way."
   image: "/images/og-preview/orlando-usa.us.png"
   keywords: "null"
   redirects: []
@@ -16,7 +16,7 @@ meta_info:
   cohort_exclude_regex: ['usa-\d{1,10}-spanish']
   home_video: "https://www.videoask.com/fyq2h2hvx"
 
-seo_title: "Coding Bootcamp in Orlando"
+seo_title: "Orlando Coding Bootcamp with Job Guarantee"
 header:
   tagline: "4Geeks Academy in Orlando"
   sub_header: "Become a Full-Stack Developer, Data Scientist, or Cybersecurity Specialist in 18 weeks or less! "

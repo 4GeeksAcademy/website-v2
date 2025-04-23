@@ -422,7 +422,7 @@ part_time:
     academies: ['buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
     recomended: true
     scholarship: "Job Guarantee"
-    payment_time: "Get hired within 6 months of graduation or your money back"
+    payment_time: "Get hired within 9 months of graduation or your money back"
     price: "USD $3.500"
     original_price: "USD $5.000"
     offer: "40% OFF"
@@ -455,7 +455,7 @@ part_time:
     academies: ['bogota-colombia']
     recomended: true
     scholarship: "Job Guarantee"
-    payment_time: "Get hired within 6 months of graduation or your money back"
+    payment_time: "Get hired within 9 months of graduation or your money back"
     price: "USD $3.500"
     original_price: "USD $5.000"
     offer: "40% OFF"

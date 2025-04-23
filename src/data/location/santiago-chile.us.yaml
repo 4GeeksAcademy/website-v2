@@ -2,7 +2,7 @@ meta_info:
   slug: "coding-bootcamp-santiago"
   title: "Coding Bootcamp Santiago, Chile"
   position: 20
-  description: "Know here all about our coding bootcamp campus in Santiago, Chile"
+  description: "Start your tech career with 4Geeks Academy’s Santiago Coding Bootcamp. Enjoy a Job Guarantee and expert mentorship to guide your success."
   image: "/images/og-preview/santiago-chile.us.png"
   keywords: ""
   redirects:
@@ -23,7 +23,7 @@ meta_info:
   cohort_exclude_regex: []
   home_video: "https://www.videoask.com/fyq2h2hvx"
 
-seo_title: "Coding Bootcamp Santiago de Chile"
+seo_title: "Coding Bootcamp Santiago, Chile with Job Guarantee"
 header:
   tagline: "4Geeks Academy in Santiago de Chile"
   sub_header: "All programs are taught "

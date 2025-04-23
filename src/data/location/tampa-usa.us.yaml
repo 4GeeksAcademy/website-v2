@@ -2,7 +2,7 @@ meta_info:
   slug: "tampa-coding-bootcamp"
   title: "Tampa Coding Bootcamp"
   position: 2
-  description: "Get to know here all about our coding bootcamp campus in Tampa, Florida of 4GeeksAcademy"
+  description: "Join 4Geeks Academy’s comprehensive Tampa Coding Bootcamp with a Job Guarantee. Gain in-demand coding skills and land your first job in tech."
   image: "/images/og-preview/tampa-florida.webp"
   keywords: "null"
   redirects: []
@@ -16,7 +16,7 @@ meta_info:
   cohort_exclude_regex: ['usa-\d{1,10}-spanish']
   home_video: "https://www.videoask.com/fyq2h2hvx"
 
-seo_title: "Coding Bootcamp in Tampa"
+seo_title: "Tampa Coding Bootcamp with Job Guarantee"
 header:
   tagline: "4Geeks Academy in Tampa"
   sub_header: "Become a Full-Stack developer, Data Scientist, or Cybersecurity Specialist in 18 weeks or less! "

@@ -2,7 +2,7 @@ meta_info:
   slug: "coding-bootcamp-colombia"
   title: "4Geeks Academy in Colombia, Bogotá"
   position: 31
-  description: "Get to know here all about our coding bootcamp campus in Colombia, Bogotá of 4GeeksAcademy"
+  description: "4Geeks Academy’s Bogotá Coding Bootcamp offers a Job Guarantee. Learn coding skills and land your first job in tech with expert guidance."
   image: "/images/og-preview/bogota-colombia.us.png"
   keywords: ""
   # it will not show up on the applications forms
@@ -18,7 +18,7 @@ meta_info:
   cohort_exclude_regex: []
   home_video: "https://www.videoask.com/fyq2h2hvx"
 
-seo_title: "Coding Bootcamp Colombia"
+seo_title: "Coding Bootcamp in Colombia, Bogotá with Job Guarantee"
 header:
   tagline: "4Geeks Academy in Colombia"
   sub_header: "All programs are taught "

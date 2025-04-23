@@ -2,7 +2,7 @@ meta_info:
   slug: "coding-bootcamp-milano-italy"
   title: "Coding Bootcamp in Milano, Italy"
   position: 101
-  description: "Discover all coding bootcamps taught by 4Geeks Academy at Milano, Italy. Sign up today!"
+  description: "Join 4Geeks Academy’s Milano Coding Bootcamp with a Job Guarantee. Learn coding, gain real-world experience, and launch your tech career in Italy."
   image: "/images/og-preview/milan-italy.us.png"
   keywords: "null"
   redirects: []
@@ -16,7 +16,7 @@ meta_info:
   cohort_exclude_regex: []
   home_video: ""
 
-seo_title: "Coding Bootcamp Milano, Italy"
+seo_title: "Coding Bootcamp in Milano, Italy with Job Guarantee"
 header:
   tagline: "Learn To Code in Milano, Italy"
   sub_header: "All programs are taught "

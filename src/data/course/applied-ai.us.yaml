@@ -1,7 +1,7 @@
 meta_info:
   slug: applied-ai-course
   title: "Course in Applied Artificial Intelligence"
-  description: "Explore in detail artificial intelligence and how to apply it in different industries, roles, and your work. No previous knowledge required"
+  description: "4Geeks Academy offers an AI training course with job guarantee. Dive into artificial intelligence and open doors to future tech careers."
   bc_slug: "applied-ai"
   template: "course-applied-ai"
   image: "/images/og-preview/applied-ai-bg.jpg"
@@ -14,7 +14,7 @@ meta_info:
 apply_form:
   label: Applied AI for Professionals (no-code)
 
-seo_title: "Applied AI Course"
+seo_title: "Course in Applied Artificial Intelligence (AI) with Job Guarantee"
 header:
   title: "Excel at your job through Applied AI"
   paragraph: "Get ready to maximize your productivity in just 6 weeks!"

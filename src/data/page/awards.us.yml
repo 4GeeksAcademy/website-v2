@@ -2,12 +2,12 @@ meta_info:
   slug: awards
   title: "Awards and Recognition given to 4Geeks Academy"
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
-  description: "Compilation of some of the awads or recognitions given to 4Geeks Academy over the past few years."
+  description: "4Geeks Academy has earned numerous awards for excellence in coding education. Join a top-tier academy recognized for its results and success."
   image: null
   keywords: "4Geeks Academy Awards, 4Geeks Academy Recognition"
   redirects: []
 
-seo_title: "Awards"
+seo_title: "Awards and Recognition"
 header:
   title: "AWARDS AND RECOGNITIONS"
   paragraph: "It's fantastic to be recognized for years of effort in creating one of the best coding communities and learning ecosystems worldwide."

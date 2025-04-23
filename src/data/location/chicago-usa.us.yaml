@@ -2,7 +2,7 @@ meta_info:
   slug: "coding-bootcamp-chicago"
   title: "Chicago Coding Bootcamp"
   position: 1
-  description: "Get to know here all about our coding bootcamp campus in Chicago, Illinois of 4GeeksAcademy"
+  description: "Start your tech career with 4Geeks Academy’s Chicago Coding Bootcamp. Get a Job Guarantee and hands-on training for career success."
   image: "/images/og-preview/downtown-miami.us.png"
   keywords: "null"
   redirects: []
@@ -16,7 +16,7 @@ meta_info:
   cohort_exclude_regex: ['usa-\d{1,10}-spanish']
   home_video: "https://www.videoask.com/fyq2h2hvx"
 
-seo_title: "Coding Bootcamp in Chicago"
+seo_title: "Chicago Coding Bootcamp with Job Guarantee"
 header:
   tagline: "4Geeks Academy in Chicago"
   sub_header: "All programs are taught "

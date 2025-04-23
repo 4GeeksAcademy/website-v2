@@ -276,7 +276,7 @@ components:
   #     text: "Coding Bootcamp with Job Placement"
   #     font_size: ["40px", "40px", "40px", "40px", "40px"]
   #   sub_heading:
-  #     text: "We are all in with you, every step of the way! Secure a job within 6 months of graduation"
+  #     text: "We are all in with you, every step of the way! Secure a job within 9 months of graduation"
   #     font_size: ["16px", "16px", "16px", "16px", "16px"]
   #   button:
   #     text: "Request more info"

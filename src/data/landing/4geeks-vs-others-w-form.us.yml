@@ -77,7 +77,7 @@ features:
   # bullets:
   #   - Get career-ready with our award-winning method.
   #   - Access our unmatched career support services.
-  #   - Secure a job within 6 months of graduation, or we’ll refund your tuition
+  #   - Secure a job within 9 months of graduation, or we’ll refund your tuition
 
   # - "Part-time: Immerse yourself in a flexible schedule, perfect for busy professionals and students."
 
@@ -288,7 +288,7 @@ components:
     #   sub_heading:
     #     text: |
     #       Your success is our promise. 
-    #       Get hired within 6 months of graduation, or we’ll give you a full refund.
+    #       Get hired within 9 months of graduation, or we’ll give you a full refund.
     #       Here’s how it works:
     #     font_size: ["20px", "20px", "20px", "20px", "20px"]
     #     style: '{ "margin": "0", "font-weight": "400" }'
@@ -329,7 +329,7 @@ components:
     #     text: "How it works"
     #     font_size: ["40px", "40px", "40px", "40px", "40px"]
     #   sub_heading:
-    #     text: "These are the commitments you have to make to qualify for the job guarantee. If you complete every step and don’t get hired within 6 months of graduation, you’ll get 100% of your tuition back."
+    #     text: "These are the commitments you have to make to qualify for the job guarantee. If you complete every step and don’t get hired within 9 months of graduation, you’ll get 100% of your tuition back."
     #     font_size: ["16px", "16px", "16px", "16px", "16px"]
     #   button:
     #     text: "Get More Info"
@@ -354,7 +354,7 @@ components:
     #         icon: "circle" #string with icon for example ['check', 'cicle', etc]
     #       - heading: "Complete the career support process"
     #         icon: "circle" #string with icon for example ['check', 'cicle', etc]
-    #       - heading: "Get a job in 6 months"
+    #       - heading: "Get a job in 9 months"
     #         icon: "circle" #string with icon for example ['check', 'cicle', etc]
 
     # - name: why-4geeks-icons

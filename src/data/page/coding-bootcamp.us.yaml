@@ -1,14 +1,14 @@
 meta_info:
   slug: coding-bootcamp
   title: "Coding Bootcamp with Mentorhip set for life"
-  description: "All the details you need about the coding bootcamp. Code with others and get career support for life."
+  description: "Join a coding bootcamp at 4Geeks Academy and start your tech career today. Gain hands-on experience and expert guidance to boost your future."
   image: "/images/og-preview/coding-bootcamp.us.png"
   visibility: "visible"
   template: "coding-bootcamp"
   keywords: "coding bootcamp, full stack coding bootcamp, full-stack coding bootcamp, online coding bootcamo, remote coding bootcamp"
   redirects: ["/programming-course-from-scratch", "/coding-bootcamps"]
 
-seo_title: "coding bootcamp"
+seo_title: "Join a Coding Bootcamp and Start a New Career"
 header:
   title: "Join a Coding Bootcamp. Start a New Career."
   image: "../../../static/images/bg/python-image.png"

@@ -2,7 +2,7 @@ meta_info:
   slug: "europe-online-coding-bootcamp"
   title: "Online Coding Bootcamps in Europe"
   position: 1001
-  description: "Discover here all the online coding bootcamps taught by 4Geeks Academy in Europe Sign up today!"
+  description: "Join 4Geeks Academy’s Online Coding Bootcamps in Europe. Learn coding from anywhere with flexible schedules and a Job Guarantee for your career."
   image: "/images/og-preview/online.us.png"
   keywords: "null"
   redirects:
@@ -21,7 +21,7 @@ meta_info:
   cohort_exclude_regex: []
   home_video: ""
 
-seo_title: "Online Coding Bootcamp Europe"
+seo_title: "Online Coding Bootcamps in Europe with Job Guarantee"
 header:
   tagline: "Learn To Code in Europe"
   sub_header: "All programs are taught "

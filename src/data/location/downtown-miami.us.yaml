@@ -2,7 +2,7 @@ meta_info:
   slug: "coding-bootcamp-miami"
   title: "Miami Coding Bootcamp"
   position: 1
-  description: "Get to know here all about our coding bootcamp campus in Miami, Florida of 4GeeksAcademy"
+  description: "Launch your career with 4Geeks Academy’s Miami Coding Bootcamp. Enjoy a Job Guarantee and personalized mentorship to guide your path."
   image: "/images/og-preview/downtown-miami.us.png"
   keywords: "null"
   redirects:
@@ -23,7 +23,7 @@ meta_info:
   cohort_include_regex: []
   cohort_exclude_regex: ['usa-\d{1,10}-spanish']
 
-seo_title: "Coding Bootcamp in Miami"
+seo_title: "Miami Coding Bootcamp with Job Guarantee"
 header:
   tagline: "4Geeks Academy in Miami"
   sub_header: "All programs are taught "
