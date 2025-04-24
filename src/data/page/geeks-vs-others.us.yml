@@ -2,13 +2,13 @@ meta_info:
   slug: geeks-vs-others
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   title: "4geeks Academy vs other bootcamps"
-  description: "Compare 4geeks Academy versus other bootcamps"
+  description: "See how 4Geeks Academy compares to other bootcamps. Our job guarantee, flexible schedules, and expert mentors make us the best choice for your career."
   image: null
   keywords: "4geeks Academy vs other bootcamps"
   redirects: ["/geeks"]
 
 ## 4GEEKS VS OTHERS  HEADING
-seo_title: ""
+seo_title: "Comparison: 4Geeks vs Other Bootcamps"
 header:
   title: WHY 4GEEKS ACADEMY
   sub_title: "Find out what makes us stand out"

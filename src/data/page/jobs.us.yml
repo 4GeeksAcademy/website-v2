@@ -5,12 +5,12 @@ meta_info:
   slug: jobs
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   title: "Job opportunities in 4Geeks Academy"
-  description: "Find the job opportunity you are looking for, work with us at 4Geeks Academy"
+  description: "Explore job opportunities with 4Geeks Academy. Our coding bootcamp opens doors to a wide range of tech roles, with support to land your dream job."
   image: null
   keywords: "job, work, 4geeks Academy"
   redirects: []
 
-seo_title: Coding Bootcamp
+seo_title: Job Opportunities
 header:
   title: "OPEN JOBS AT 4GEEKS ACADEMY"
   paragraph: ""

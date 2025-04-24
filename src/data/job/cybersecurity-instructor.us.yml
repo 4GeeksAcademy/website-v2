@@ -2,7 +2,7 @@ meta_info:
   slug: "teacher-cybersecurity"
   title: "Lead Teacher Cybersecurity"
   visibility: "visible"
-  description: "Join 4Geeks Academy and train the next generation of cybersecurity experts."
+  description: "4Geeks Academy is hiring a Lead Teacher for Cybersecurity. Guide students through the latest tech trends and help them launch their careers in security."
   template: "job"
   open: true
   image: "https://storage.googleapis.com/media-breathecode/59c3afdc064670e4d0062a42cd4bf954d1b9c93720500d4fdce265b4792538ab"
@@ -10,7 +10,7 @@ meta_info:
   redirects: []
 
 ## BANNER INFO
-banner_heading: "Lead Teacher Cybersecurity"
+banner_heading: "Lead Teacher Cybersecurity Job Opportunity"
 banner_sub_heading: ""
 banner_image: "/images/bg/pricing-bg.jpg"
 link_back: "/us/jobs"

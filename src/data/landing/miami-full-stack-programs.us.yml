@@ -3,7 +3,7 @@ meta_info:
 
   # This will show on social media when shared
   title: "Coding Classes Online and In-person, learn to code and set up your professional career"
-  description: "Coding has become an essencial knowledge for every career, take coding classes, learn to code and upskill your career."
+  description: "Become a software developer with 4Geeks Academy. Boost your tech career with our comprehensive bootcamp, expert mentorship, and Job Guarantee."
   image: "/images/bg/main-bg.jpg"
   keywords: "Coding Classes, Learn to code, 4Geeks Academy"
 
@@ -39,7 +39,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  tagline: Become a Software Developer and Boost your Career in Tech
+  tagline: Become a Software Developer and Boost Your Career in Tech
   sub_heading: "Get a Career in Tech."
   background: "#ffffff"
   tagline_color: "#1c1c1c"

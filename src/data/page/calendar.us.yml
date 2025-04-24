@@ -2,12 +2,12 @@ meta_info:
   slug: next-dates
   title: "Upcoming dates, cohorts, workshops and events at 4Geeks Academy"
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
-  description: "Learn about 4Geeks Academy's upcoming cohorts and also our exciting workshops and events tailred for the local software development community"
+  description: "Stay updated on 4Geeks Academy’s upcoming dates, cohorts, workshops, and events. Start your coding journey with flexible options and expert-led sessions."
   image: ""
   keywords: null
   redirects: ["/upcoming", "/dates", "/calendar", "/us/calendar"]
 
-seo_title: "Coding Bootcamp"
+seo_title: "Upcoming Dates, Cohorts, Workshops and Events"
 show_more: Show more
 show_less: Show less
 header:

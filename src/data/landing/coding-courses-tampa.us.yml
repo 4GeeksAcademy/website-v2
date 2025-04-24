@@ -3,7 +3,7 @@ meta_info:
 
   # This will show on social media when shared
   title: "Coding Courses in Tampa | 4Geeks Academy - Top Coding Bootcamp"
-  description: "Enroll in 4Geeks Academy's coding courses in Tampa and become a Full-Stack Developer, Data Scientist, or Cybersecurity Specialist."
+  description: "Join 4Geeks Academy’s coding courses in Tampa. Learn coding from experts, get real-world experience, and start your tech career with a Job Guarantee."
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   image: "/images/bg/the-academy-bg.jpg"
   keywords: ""
@@ -42,7 +42,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 # jumbotron on the top (cannot be commented out)
 header_data:
   background: "#ffffff"
-  tagline: Coding Courses in Tampa with 4Geeks Academy
+  tagline: Coding Courses in Tampa
   tagline_color: "#1b1b1b"
   form_styles:
     background: "#0084FF"
