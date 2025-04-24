@@ -2,7 +2,7 @@ meta_info:
   slug: "online-coding-bootcamp"
   title: "Online Coding Bootcamps"
   position: 102
-  description: "Discover here all the online coding bootcamps taught by 4GeeksAcademy. Sign up today!"
+  description: "Start your career with 4Geeks Academy’s Online Coding Bootcamp. Enjoy flexible learning and a Job Guarantee, wherever you are in the world."
   image: "/images/og-preview/online.us.png"
   keywords: "null"
   redirects:
@@ -21,7 +21,7 @@ meta_info:
   cohort_exclude_regex: []
   home_video: ""
 
-seo_title: "Online Coding Bootcamp"
+seo_title: "Online Coding Bootcamps with Job Guarantee"
 header:
   tagline: "Learn To Code Online"
   sub_header: "All programs are taught "

@@ -1,7 +1,7 @@
 meta_info:
   slug: software-engineer-bootcamp
   title: "Become a Software Engineer at 4Geeks Academy"
-  description: "Our new course: Software Engineering, will help you master advanced coding techniques and get hired by the biggest tech companies"
+  description: "Become a software engineer with 4Geeks Academy’s bootcamp and job guarantee. Learn coding and land your dream job in the tech industry."
   bc_slug: "software-engineering"
   template: "course-engineering"
   image: ""
@@ -21,7 +21,7 @@ meta_info:
 apply_form:
   label: Senior Software Engineer
 
-seo_title: "Software Engineer Bootcamp"
+seo_title: "Software Engineer Bootcamp with Job Guarantee"
 header:
   title: "Senior Software Engineer"
   image: "../../../static/images/bg/apple-building.jpg"

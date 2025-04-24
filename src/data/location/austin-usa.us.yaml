@@ -2,7 +2,7 @@ meta_info:
   slug: "coding-bootcamp-austin"
   title: "Austin Coding Bootcamp"
   position: 1
-  description: "Get to know here all about our coding bootcamp campus in Austin, Texas of 4GeeksAcademy"
+  description: "Kickstart your career with 4Geeks Academy’s Austin Coding Bootcamp. Enjoy a Job Guarantee and expert mentorship every step of the way."
   image: "/images/landing/tres-personas-reloaded.webp"
   keywords: "null"
   redirects: []
@@ -16,7 +16,7 @@ meta_info:
   cohort_exclude_regex: ['usa-\d{1,10}-spanish']
 
 
-seo_title: "Coding Bootcamp in Austin"
+seo_title: "Austin Coding Bootcamp with Job Guarantee"
 header:
   tagline: "4Geeks Academy in Austin"
   sub_header: "All programs are taught "

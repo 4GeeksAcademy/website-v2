@@ -2,7 +2,7 @@ meta_info:
   slug: "coding-bootcamp-houston"
   title: "Houston Coding Bootcamp"
   position: 1
-  description: "Get to know here all about our coding bootcamp campus in Houston, Texas of 4GeeksAcademy"
+  description: "4Geeks Academy’s Houston Coding Bootcamp offers a Job Guarantee. Learn coding from experts and secure your first tech role with confidence."
   image: "/images/og-preview/downtown-miami.us.png"
   keywords: "null"
   redirects: []
@@ -16,7 +16,7 @@ meta_info:
   cohort_exclude_regex: ['usa-\d{1,10}-spanish']
   home_video: "https://www.videoask.com/fyq2h2hvx"
 
-seo_title: "Coding Bootcamp in Houston"
+seo_title: "Houston Coding Bootcamp with Job Guarantee"
 header:
   tagline: "4Geeks Academy in Houston"
   sub_header: "Become a Full-Stack Developer, Data Scientist, or Cybersecurity Specialist in 18 weeks or less "

@@ -1,8 +1,8 @@
 meta_info:
   slug: "coding-bootcamp-uruguay"
-  title: "4Geeks Academy in Uruguay, Monte Video"
+  title: "4Geeks Academy in Uruguay, Montevideo"
   position: 38
-  description: "Get to know here all about our coding bootcamp campus in Uruguay, Monte Video of 4GeeksAcademy"
+  description: "4Geeks Academy’s Montevideo Coding Bootcamp offers a Job Guarantee. Master coding and secure your first tech role in Uruguay’s growing market."
   image: "/images/og-preview/montevideo-uruguay.us.png"
   keywords: ""
   # it will not show up on the applications forms
@@ -18,7 +18,7 @@ meta_info:
   cohort_exclude_regex: []
   home_video: "https://www.videoask.com/fyq2h2hvx"
 
-seo_title: "Coding Bootcamp Uruguay"
+seo_title: "Coding Bootcamp in Montevideo, Uruguay with Job Guarantee"
 header:
   tagline: "4Geeks Academy in Uruguay"
   sub_header: "All programs are taught "
@@ -99,7 +99,7 @@ two_columns:
     text: "4Geeks Academy in Montevideo Pablo's Testimonial"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "We are in Monte Video based and we have been focusing in bringing on more opportunities."
+    text: "We are in Montevideo based and we have been focusing in bringing on more opportunities."
     font_size: ["18px", "18px", "22px", "22px", "22px"]
   button:
     text: "APPLY NOW"
@@ -181,7 +181,7 @@ consents:
     message: "I agree to receive information through email, WhatsApp, SMS and/or other channels about workshops, events, courses, and other marketing materials. We'll never share your contact information, and you can easily opt out at any moment."
     error_message: "You need to accept Whatsapp consent"
 
-city: "Monte Video"
+city: "Montevideo"
 name: "Uruguay"
 latitude: "-34.902225"
 longitude: "-56.196542"

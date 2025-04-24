@@ -120,7 +120,7 @@ badges:
 who_is_hiring:
   position: 10
   heading: "DÓNDE TRABAJAN NUESTROS ESTUDIANTES"
-  sub_heading: "Consigue un trabajo en menos de 6 meses gracias a nuestra creciente red de más de 500 partners. Accede a ofertas nacionales e internacionales y a una comunidad de más de 3500 graduados."
+  sub_heading: "Consigue un trabajo en menos de 9 meses gracias a nuestra creciente red de más de 500 partners. Accede a ofertas nacionales e internacionales y a una comunidad de más de 3500 graduados."
   featured:
     - name: "Facebook"
       image: "../../../static/images/partner/meta-logo.png"

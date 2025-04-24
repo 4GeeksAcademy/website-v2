@@ -103,7 +103,7 @@ we_trust_section:
 
 how_it_works:
   title: ¿Cómo funciona?
-  text: "Así funciona nuestra garantía de empleo: Cumple estos sencillos requisitos, y si no encuentras trabajo en 6 meses, te reembolsamos el 100% de tu matrícula."
+  text: "Así funciona nuestra garantía de empleo: Cumple estos sencillos requisitos, y si no encuentras trabajo en 9 meses, te reembolsamos el 100% de tu matrícula."
   steps:
     - icon: rocket-2
       title: Comienza el programa
@@ -117,7 +117,7 @@ how_it_works:
     - icon: handshake
       title: Participa activamente en nuestro programa de apoyo profesional.
     - icon: briefcase-2
-      title: ¡Consigue tu empleo soñado en tecnología en 6 meses!
+      title: ¡Consigue tu empleo soñado en tecnología en 9 meses!
   link:
     url: "https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/Condiciones%20y%20Requerimientos%20Job%20Guaranteed%20Program.pdf"
     label: "Condiciones y requisitos aplicables."

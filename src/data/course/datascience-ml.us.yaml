@@ -1,7 +1,7 @@
 meta_info:
   slug: datascience-machine-learning
   title: "Become a AI Machine Learning Engineer at 4Geeks Academy"
-  description: "With no previous knowledge required, start a career with your first job as a data scientist and build your first ML models."
+  description: "4Geeks Academy's Data Science and Machine Learning bootcamp offers a job guarantee. Develop in-demand skills and unlock exciting career opportunities."
   bc_slug: "datascience-ml"
   template: "course-datascience"
   image: "/images/og-preview/datascience-ml.es.png"
@@ -14,7 +14,7 @@ meta_info:
 apply_form:
   label: Datascience - Machine Learning
 
-seo_title: "data science and machine learning bootcamp"
+seo_title: "Data Science and Machine Learning Bootcamp with Job Guarantee"
 header:
   title: "Become a Data Scientist or Machine Learning Engineer"
   paragraph: "Be ready to enter tech’s highest-paying fields in just 16 weeks!"

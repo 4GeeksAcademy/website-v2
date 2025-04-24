@@ -2,7 +2,7 @@ meta_info:
   slug: "coding-bootcamp-berlin-germany"
   title: "Coding Bootcamp in Berlin, Germany"
   position: 101
-  description: "Discover all coding bootcamps taught by 4Geeks Academy at Berlin, Germany. Sign up today!"
+  description: "4Geeks Academy’s Berlin Coding Bootcamp offers a Job Guarantee. Master coding skills and land your first tech job in Germany’s thriving market."
   image: "/images/og-preview/berlin-germany.us.png"
   keywords: "null"
   redirects: []
@@ -16,7 +16,7 @@ meta_info:
   cohort_exclude_regex: []
   home_video: ""
 
-seo_title: "Coding Bootcamp Berlin, Germany"
+seo_title: "Coding Bootcamp in Berlin, Germany with Job Guarantee"
 header:
   tagline: "Learn To Code in Berlin, Germany"
   sub_header: "All programs are taught "

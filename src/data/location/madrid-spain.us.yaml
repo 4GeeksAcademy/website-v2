@@ -2,7 +2,7 @@ meta_info:
   slug: "coding-bootcamp-madrid"
   title: "Coding Bootcamp Madrid, Spain of 4GeeksAcademy"
   position: 20
-  description: "Know here all about our coding bootcamp campus in Madrid, Spain of 4GeeksAcademy"
+  description: "4Geeks Academy’s Madrid Coding Bootcamp offers a Job Guarantee. Learn coding skills and land your first tech job in the heart of Spain."
   image: "/images/og-preview/madrid-spain.us.png"
   keywords: "Coding Bootcamp, Madrid"
   redirects: []
@@ -16,7 +16,7 @@ meta_info:
   cohort_exclude_regex: []
   home_video: ""
 
-seo_title: "Coding Bootcamp Madrid"
+seo_title: "Coding Bootcamp Madrid, Spain with Job Guarantee"
 header:
   tagline: "4Geeks Academy in Madrid" 
   sub_header: "All programs are taught "

@@ -2,7 +2,7 @@ meta_info:
   slug: "coding-bootcamp-losangeles"
   title: "Los Angeles Coding Bootcamp"
   position: 1
-  description: "Get to know here all about our coding bootcamp campus in Los Angeles, Texas of 4GeeksAcademy"
+  description: "Join 4Geeks Academy’s Los Angeles Coding Bootcamp with a Job Guarantee. Learn coding, get real-world experience, and land your dream job."
   image: "/images/og-preview/downtown-miami.us.png"
   keywords: "null"
   redirects: []
@@ -16,7 +16,7 @@ meta_info:
   cohort_exclude_regex: ['usa-\d{1,10}-spanish']
   home_video: "https://www.videoask.com/fyq2h2hvx"
 
-seo_title: "Coding Bootcamp in Los Angeles"
+seo_title: "Los Angeles Coding Bootcamp with Job Guarantee"
 header:
   tagline: "4Geeks Academy in Los Angeles"
   sub_header: "All programs are taught "

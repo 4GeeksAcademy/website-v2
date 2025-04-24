@@ -2,7 +2,7 @@ meta_info:
   slug: "coding-bootcamp-dublin-ireland"
   title: "Coding Bootcamp in Dublin, Ireland"
   position: 101
-  description: "Discover all coding bootcamps taught by 4Geeks Academy at Dublin, Ireland. Sign up today!"
+  description: "Join 4Geeks Academy’s Dublin Coding Bootcamp with a Job Guarantee. Gain coding skills and secure your first tech job in Ireland’s growing industry."
   image: "/images/og-preview/dublin-ireland.us.png"
   keywords: "null"
   redirects:
@@ -21,7 +21,7 @@ meta_info:
   cohort_exclude_regex: []
   home_video: ""
 
-seo_title: "Coding Bootcamp Dublin, Ireland"
+seo_title: "Coding Bootcamp in Dublin, Ireland with Job Guarantee"
 header:
   tagline: "Learn To Code in Dublin, Ireland"
   sub_header: "All programs are taught "

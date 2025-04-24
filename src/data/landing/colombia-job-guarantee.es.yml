@@ -3,7 +3,7 @@ meta_info:
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   # This will show on social media when shared
   title: "Bootcamp de programación en Colombia, consigue empleo como programador."
-  description: "Únete a 4Geeks Academy y consigue empleo 6 meses luego de haber recibido nuestro certificado."
+  description: "Únete a 4Geeks Academy y consigue empleo 9 meses luego de haber recibido nuestro certificado."
   image: "/images/bg/main-bg.jpg"
   keywords: ""
 
@@ -170,7 +170,7 @@ components:
     heading:
       text: "Programa de Empleo Garantizado en Colombia"
     sub_heading:
-      text: "En 4Geeks Academy, estamos comprometidos con tu éxito profesional. Con nuestro Programa de Empleo Garantizado, recibirás el apoyo necesario para asegurar un trabajo en tecnología en solo 6 meses. A través de nuestras iniciativas GeekForce, te proporcionamos las herramientas esenciales para que logres tus objetivos laborales y lleves tu carrera al siguiente nivel."
+      text: "En 4Geeks Academy, estamos comprometidos con tu éxito profesional. Con nuestro Programa de Empleo Garantizado, recibirás el apoyo necesario para asegurar un trabajo en tecnología en sólo 9 meses. A través de nuestras iniciativas GeekForce, te proporcionamos las herramientas esenciales para que logres tus objetivos laborales y lleves tu carrera al siguiente nivel."
     button:
       text: "Más Información"
       color: white
@@ -178,7 +178,7 @@ components:
       background: "black"
       path: "#leadform_bottom"
     content:
-      text: "Nuestro programa de empleo garantizado te asegura conseguir trabajo en 6 meses o te devolvemos tu dinero. Da el paso hoy y conviértete en Full-Stack Developer."
+      text: "Nuestro programa de empleo garantizado te asegura conseguir trabajo en 9 meses o te devolvemos tu dinero. Da el paso hoy y conviértete en Full-Stack Developer."
       font_size: ["16px"]
     bullets:
       items:

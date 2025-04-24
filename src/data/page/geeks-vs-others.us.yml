@@ -146,7 +146,7 @@ two_columns_third:
   sub_heading:
     text: |
       Your success is our promise. 
-      Get hired within 6 months of graduation, or we’ll give you a full refund.
+      Get hired within 9 months of graduation, or we’ll give you a full refund.
       Here’s how it works:
     font_size: ["20px", "20px", "20px", "20px", "20px"]
     style: '{ "margin": "0", "font-weight": "400" }'

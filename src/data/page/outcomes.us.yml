@@ -5,12 +5,12 @@ meta_info:
   slug: outcomes
   title: "Outcomes Report"
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
-  description: "Outcomes, achievements and what we consider needs to be improved. Our way to let you know that we are working harder every time in order to get better."
+  description: "Explore 4Geeks Academy’s Academy Outcomes Report for real success stories. See how our students are landing great jobs in tech after graduation."
   image: null
   keywords: ""
   redirects: []
 
-seo_title: "Outcomes"
+seo_title: "Academy Outcomes Report"
 header:
   title: "4Geeks Academy Outcomes Report"
   paragraph: "This report is meant to show our outcomes, achievements and what we consider needs to be improved. It's our story and our way to let you know that we are working harder every time in order to get better."
