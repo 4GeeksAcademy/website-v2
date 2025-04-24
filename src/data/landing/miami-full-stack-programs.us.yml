@@ -22,7 +22,6 @@ navbar:
   buttonText: "Get more Info"
   buttonUrl: "#leadform_bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
 
-
 form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
@@ -35,7 +34,7 @@ form:
 apply_schollarship: # form that is displayed at the end of the landing
   # title: "Apoyo Profesional Ilimitado"
   imageSide: "left"
-  image: "../../../static/images/landing/hombre-con-laptop.png"  
+  image: "../../../static/images/landing/hombre-con-laptop.png"
 
 # jumbotron on the top (cannot be commented out)
 header_data:
@@ -87,7 +86,7 @@ short_badges:
   - name: "Switchup"
     url: ""
     image: "../../../static/images/badges/switchup-badge-2023.png"
-    alt: "Best coding bootcamp Switchup 2023"   
+    alt: "Best coding bootcamp Switchup 2023"
   - name: "Florida Department of Education"
     url: ""
     image: "../../../static/images/badges/licensed-inverted.png"
@@ -153,15 +152,42 @@ alumni_projects:
 components:
   - name: passion
     position: 1
-    background: "#e6f5fa"
+    background: "veryLightBlue2"
+    layout: iconogram
+    swipable: True
+    heading:
+      text: "Job guarantee commitment"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      text: ""
+      # font_size: ["16px", "16px", "16px", "16px", "16px"]
+      # style: '{ "textAlign": "center", "width": "60%" }'
+    text_link: "#"
+    button:
+      text: "Conditions apply"
+      color: black
+      # hover_color: "white"
+      # background: "black"
+      path: "https://4geeksacademy.com/us/job-guarantee"
+    icons:
+      - icon: "yellowhat"
+        title: Get a job within 180 days after graduation or get your money back.
+      - icon: "stairswflag"
+        title: Complete the stages of our career support procces.
+      - icon: "community"
+        title: Access a network of 5K hiring partners.
+      - icon: "hands"
+        title: We both commit to your future career
+
+  - name: two-columns
+    position: 3
+    background: "#FFFFFF"
     layout: two_column_left
     proportions: [6, 6]
     image:
-      style: '{ "border" : "3px solid black", "backgroundSize": "contain" }' 
-      shadow: true
-      src: "/images/landing/why-4geeks-academy-preview.png"
-      link: "https://www.switchup.org/bootcamps/4geeks-academy"
-    video: "SixRm6R8rc0"
+      style: "{}"
+      # shadow: true
+      src: "/images/landing/hombre-con-laptop.png"
     heading:
       text: "Jordan's Journey from JS and React to Python at 4Geeks Academy!"
       font_size: ["40px", "40px", "40px", "40px", "40px"]
@@ -175,21 +201,38 @@ components:
       hover_color: "#white"
       path: "#leadform_bottom"
 
-  # - name: top_coding_bootcamp
-  #   position: 8
-  #   background: "#fbfbfb"
-  #   layout: two_column_left
-  #   proportions: [4, 8]
-  #   image:
-  #     style: '{ "background-size": "contain", "height":"180px", "min-height":"auto", "background-position": "center"}'
-  #     src: "/images/badges/Course-Report-Badge-2024.webp"
-  #     link: "https://www.coursereport.com/schools/4geeks-academy"
-  #   content:
-  #     style: '{ "line-height": "30px", "textAling": "center", "padding": "0 20px"}'
-  #     text:
-  #       "We have been selected as one of the Top Coding Bootcamps globally for 3 years in a row"
-  #                   #xl      lg     md     sm       xs
-  #     font_size: ["35px", "30px", "30px", "28px", "20px"]
+  - name: top_coding_bootcamp
+    position: 8
+    background: "#fbfbfb"
+    layout: two_column_left
+    proportions: [4, 8]
+    image:
+      style: '{ "backgroundSize": "contain", "maxWidth": "250px", "margin": "0 auto"}'
+      src: "/images/badges/Course-Report-Badge-2024.webp"
+      link: "https://www.coursereport.com/schools/4geeks-academy"
+    content:
+      style: '{ "line-height": "30px", "textAling": "center", "padding": "0 20px"}'
+      text:
+        "We have been selected as one of the Top Coding Bootcamps globally for 3 years in a row"
+        #xl      lg     md     sm       xs
+      font_size: ["35px", "30px", "30px", "28px", "20px"]
+  # - name: geeksinfo
+  #   position: 1
+  #   layout: geeksInfo
+  - name: working_in_tech
+    position: 3
+    background: "#f1f1f1"
+    proportions: [4, 8]
+    layout: two_column_left
+    image:
+      style: '{ "backgroundSize": "cover" }'
+      src: "https://storage.googleapis.com/4geeks-academy-website/landing-pictures/testimonials.webp"
+      shadow: true
+    heading:
+      text:
+        "86% of our graduates are now working in the field with an average entry salary of $50,000/yr."
+        #           xl      lg     md     sm    xs
+      font_size: ["40px", "34px"]
 
   - name: geekinfo_2
     position: 3
@@ -198,9 +241,9 @@ components:
     background: ""
     image:
       style: '{ "backgroundSize": "contain" }'
-      src: "/images/landing/group_194.png"
-    section_heading: 
-      text: "Get everything you need to succeed"
+      src: "/images/landing/grupo-ventanas.png"
+    section_heading:
+      text: "Designed to make you successful in the coding world"
       style: '{ "font-size": "30px" }'
     heading:
       text: "Why coding?"
@@ -208,27 +251,27 @@ components:
     sub_heading:
       text: "Learning to code will give you access to:"
       font_size: ["16px", "16px", "16px", "16px", "16px"]
-    button: 
-      text: "Compare 4Geeks with other bootcamps"
+    button:
+      text: "APPLY NOW"
       color: white
       hover_color: "white"
       background: "black"
-      path: "#geeks_vs_others"
-    content: 
+      path: "#bottom"
+    content:
       text: ""
       font_size: ["16px"]
       path: ""
     bullets:
       items:
-      - heading: "JOB OPPORTUNITIES"
-        text: "Computer programmers are in high demand, and this demand is projected to continue increasing over the next decade."
-        icon: "circle" #string with icon for example ['check', 'cicle', etc]
-      - heading: "BETTER PAY"
-        text: "The starting salary for a Junior Software Developer in Miami is $48,000."
-        icon: "circle" #string with icon for example ['check', 'cicle', etc]
-      - heading: "CAREER FLEXIBILITY"
-        text: "Coding skills prepare you for a variety of roles in the rapidly shifting digital economy."
-        icon: "circle" #string with icon for example ['check', 'cicle', etc]
+        - heading: "JOB OPPORTUNITIES"
+          text: "Computer programmers are in high demand, and this demand is projected to continue increasing over the next decade."
+          icon: "circle" #string with icon for example ['check', 'cicle', etc]
+        - heading: "BETTER PAY"
+          text: "The starting salary for a Junior Software Developer in Miami is $48,000."
+          icon: "circle" #string with icon for example ['check', 'cicle', etc]
+        - heading: "CAREER FLEXIBILITY"
+          text: "Coding skills prepare you for a variety of roles in the rapidly shifting digital economy."
+          icon: "circle" #string with icon for example ['check', 'cicle', etc]
 
   - name: working_in_tech
     position: 5
@@ -240,14 +283,71 @@ components:
       src: "/images/landing/feliz-empresario-laptop.png"
       shadow: true
     heading:
-      style: '{ "justify-content": "center"}'
       text:
-        "86% of our graduates are now working in the field with an average entry salary of $50,000/yr."
-        #           xl      lg     md     sm    xs
-      font_size: ["40px", "34px"]
-    
+        "4Geeks, Miami and a story full of opportunities"
+        #xl      lg     md     sm    xs
+      font_size: ["40px", "34px", "34px", "25px", "20px"]
+    sub_heading:
+      text: "We are Miami based and we have been focusing in bringing on more opportunities in South Florida"
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+    content:
+      text: ""
+      font_size: ["16px"]
+    button:
+      text: "GET MORE INFO"
+      background: black
+      color: white
+      hover_color: "#white"
+      path: "#bottom"
+    bullets:
+      items:
+        - heading: ""
+          text: "There is always a full or partial scholarship open"
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: ""
+          text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beacg"
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: ""
+          text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade Counti and so manu more"
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
 
-# why_python:
-#   position: 7
-#   heading: "¿Porqué enseñamos Python?" # optional or set to white space to hide
-#   sub_heading: " " # optional or set to white space to hide
+
+  # - name: two_columns_video
+  #   position: 8
+  #   layout: two_column_right
+  #   proportions: [6, 6]
+  #   background: ""
+  #   image:
+  #     style: '{ "backgroundSize": "contain" }'
+  #     src: "/images/landing/grupo-ventanas.png"
+  #     video: "https://www.youtube.com/watch?v=uJzdQPBOvdY"
+  #   section_heading:
+  #     text: "Designed to make you successful in the coding world"
+  #     style: '{ "font-size": "30px" }'
+  #   heading:
+  #     text: "Why coding?"
+  #     font_size: ["40px", "40px", "40px", "40px", "40px"]
+  #   sub_heading:
+  #     text: "Learning to code will give you access to:"
+  #     font_size: ["16px", "16px", "16px", "16px", "16px"]
+  #   button:
+  #     text: "APPLY NOW"
+  #     color: white
+  #     hover_color: "white"
+  #     background: "black"
+  #     path: "#bottom"
+  #   content:
+  #     text: ""
+  #     font_size: ["16px"]
+  #     path: ""
+  #   bullets:
+  #     items:
+  #     - heading: "JOB OPPORTUNITIES"
+  #       text: "Computer programmers are in high demand, and this demand is projected to continue increasing over the next decade."
+  #       icon: "circle" #string with icon for example ['check', 'cicle', etc]
+  #     - heading: "BETTER PAY"
+  #       text: "The starting salary for a Junior Software Developer in Miami is $48,000."
+  #       icon: "circle" #string with icon for example ['check', 'cicle', etc]
+  #     - heading: "CAREER FLEXIBILITY"
+  #       text: "Coding skills prepare you for a variety of roles in the rapidly shifting digital economy."
+  #       icon: "circle" #string with icon for example ['check', 'cicle', etc]

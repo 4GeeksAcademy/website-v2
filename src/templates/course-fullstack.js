@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, graphql } from "gatsby";
 import BaseRender from "./_baseLayout.js";
 import { Header, Div } from "../components/Sections/index.js";
+import { H3, H2, H5, H4, Paragraph } from "../components/Heading/index.js";
 import { Button, Colors, Img } from "../components/Styling/index.js";
 import { requestSyllabus, isCustomBarActive } from "../actions.js";
 import { SessionContext } from "../session.js";
@@ -190,6 +191,24 @@ const Program = ({ data, pageContext, yml }) => {
         course={program_schedule}
       />
 
+      {/* Two Columns Rigo */}
+      <TwoColumn
+        right={{
+          image: yml.two_columns_rigo?.image,
+          video: yml.two_columns_rigo?.video,
+        }}
+        left={{
+          heading: yml.two_columns_rigo?.heading,
+          heading_image: yml.two_columns_rigo?.heading_image,
+          sub_heading: yml.two_columns_rigo?.sub_heading,
+          bullets: yml.two_columns_rigo?.bullets,
+          content: yml.two_columns_rigo?.content,
+          button: yml.two_columns_rigo?.button,
+        }}
+        proportions={yml.two_columns_rigo?.proportions}
+        session={session}
+      />
+
       {/* OVERLAPED CREAR EN EL YML*/}
       <Overlaped
         heading={yml.overlaped?.heading}
@@ -198,8 +217,34 @@ const Program = ({ data, pageContext, yml }) => {
         image={yml.overlaped?.image}
       />
 
-      {/* GEEKSINFO IS A TWOCOLUMN WITH TITLE */}
-      <GeeksInfo lang={pageContext.lang} />
+      {/* GEEKSINFO Twocolumns Info*/}
+
+      {yml.two_columns_info?.section_heading?.text && (
+        <H2
+          type="h2"
+          textAlign_tablet="center"
+          lineHeight="38px"
+          lineHeight_tablet="38px"
+          fontSize="35px"
+          margin="80px 0 0px 0"
+          style={yml.two_columns_info.section_heading.style ? JSON.parse(yml.two_columns_info.section_heading.style) : null}
+        >
+          {yml.two_columns_info.section_heading.text}
+        </H2>
+      )}
+
+      <TwoColumn
+        right={{ image: yml.two_columns_info?.image, video: yml.two_columns_info?.video }}
+        left={{
+          heading: yml.two_columns_info?.heading,
+          sub_heading: yml.two_columns_info?.sub_heading,
+          bullets: yml.two_columns_info?.bullets,
+          content: yml.two_columns_info?.content,
+          button: yml.two_columns_info?.button,
+        }}
+        proportions={yml.two_columns_info?.proportions}
+        session={session}
+      />
 
       {/* TWO COLUMN CREAR EN EL YML*/}
       <TwoColumn
@@ -222,6 +267,7 @@ const Program = ({ data, pageContext, yml }) => {
         locations={data.allLocationYaml.edges}
         showMoreRedirect
       />
+      
       <PricesAndPayment
         background={`linear-gradient(to bottom, ${Colors.white} 50%, ${Colors.lightYellow2} 50%)`}
         type={pageContext.slug}
@@ -463,6 +509,72 @@ export const query = graphql`
             }
             bullets {
               items {
+                text
+              }
+            }
+          }
+          two_columns_rigo {
+            proportions
+            image {
+              style
+              src
+              shadow
+            }
+            video
+            heading {
+              text
+              font_size
+              style
+              heading_image {
+                src
+              }
+            }
+            sub_heading {
+              text
+              font_size
+              style
+            }
+            content {
+              text
+              style
+            }
+            bullets {
+              items {
+                heading
+                text
+                icon
+                icon_color
+              }
+            }
+          }
+
+          two_columns_info {
+            proportions
+            image {
+              style
+              src
+              shadow
+            }
+            section_heading {
+              text
+            }
+            heading {
+              text
+              font_size
+            }
+            sub_heading {
+              text
+              font_size
+            }
+            button {
+              text
+              color
+              background
+              path
+            }
+            bullets {
+              items {
+                heading
                 text
               }
             }

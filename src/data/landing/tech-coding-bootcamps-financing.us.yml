@@ -15,7 +15,7 @@ meta_info:
 
     # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
-  utm_course: ["full-stack", "datascience-ml", "cybersecurity", "coding-introduction", "applied-ai"]
+  utm_course: ["full-stack", "datascience-ml", "cybersecurity", "applied-ai"]
   utm_location: ["atlanta-usa", "austin-usa", "chicago-usa", "downtown-miami", "houston-usa", "losangeles-usa", "newyork-usa", "orlando", "online"]
   automation: soft # comma separated, "soft" is the default value
   tag: request_more_info # comma separated, "request_more_info" is the default value
@@ -43,7 +43,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 header_data:
   background: "#ffffff"
   tagline: Start A Career In Tech for $40/Week
-  sub_heading: "Enjoy unlimited mentorship and lifetime access to career services."
+  sub_heading: "Step into fast-growing, high-paying tech professions with strong job prospects and future demand."
   tagline_color: "#1c1c1c"
   form_styles:
     background: "#0084FF"

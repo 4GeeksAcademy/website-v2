@@ -1,24 +1,25 @@
 import React, { useEffect, useState } from "react";
 import { Link, graphql } from "gatsby";
-import BaseRender from "./_baseLayout.js";
-import { Header, Div } from "../components/Sections/index.js";
-import { Button, Colors, Img } from "../components/Styling/index.js";
-import { requestSyllabus, isCustomBarActive } from "../actions.js";
-import { SessionContext } from "../session.js";
-import ProgramDetails from "../components/ProgramDetails/index.js";
-import ProgramDetailsMobile from "../components/ProgramDetailsMobile/index.js";
-import PricesAndPayment from "../components/PricesAndPayment/index.js";
-import Modal from "../components/Modal/index.js";
-import LeadForm from "../components/LeadForm/index.js";
-import Badges from "../components/Badges/index.js";
-import UpcomingDates from "../components/UpcomingDates/index.js";
-import JobGuaranteeSmall from "../components/JobGuaranteeSmall/index.js";
-import GeeksInfo from "../components/GeeksInfo/index.js";
-import OurPartners from "../components/OurPartners/index.js";
-import Icon from "../components/Icon/index.js";
-import Overlaped from "../components/Overlaped/index.js";
-import Loc from "../components/Loc/index.js";
-import ScholarshipProjects from "../components/ScholarshipProjects/index.js";
+import BaseRender from "./_baseLayout";
+import { H1, H2, Paragraph } from "../components/Heading";
+import { Header, Div } from "../components/Sections";
+import { Button, Colors, Img } from "../components/Styling";
+import { requestSyllabus, isCustomBarActive } from "../actions";
+import { SessionContext } from "../session";
+import ProgramDetails from "../components/ProgramDetails";
+import ProgramDetailsMobile from "../components/ProgramDetailsMobile";
+import PricesAndPayment from "../components/PricesAndPayment";
+import Modal from "../components/Modal";
+import LeadForm from "../components/LeadForm";
+import Badges from "../components/Badges";
+import UpcomingDates from "../components/UpcomingDates";
+import JobGuaranteeSmall from "../components/JobGuaranteeSmall";
+import GeeksInfo from "../components/GeeksInfo";
+import OurPartners from "../components/OurPartners";
+import Icon from "../components/Icon";
+import Overlaped from "../components/Overlaped";
+import Loc from "../components/Loc";
+import ScholarshipProjects from "../components/ScholarshipProjects";
 import TwoColumn from "../components/TwoColumn/index.js";
 
 const Program = ({ data, pageContext, yml }) => {
@@ -190,6 +191,20 @@ const Program = ({ data, pageContext, yml }) => {
         course={program_schedule}
       />
 
+      {/* TWO COLUMN CREAR EN EL YML*/}
+      <TwoColumn
+        right={{ image: yml.two_columns?.image, video: yml.two_columns?.video }}
+        left={{
+          heading: yml.two_columns?.heading,
+          sub_heading: yml.two_columns?.sub_heading,
+          bullets: yml.two_columns?.bullets,
+          content: yml.two_columns?.content,
+          button: yml.two_columns?.button,
+        }}
+        proportions={yml.two_columns?.proportions}
+        session={session}
+      />
+
       {/* OVERLAPED CREAR EN EL YML*/}
       <Overlaped
         heading={yml.overlaped?.heading}
@@ -198,20 +213,43 @@ const Program = ({ data, pageContext, yml }) => {
         image={yml.overlaped?.image}
       />
 
-      {/* GEEKSINFO IS A TWOCOLUMN WITH TITLE */}
-      <GeeksInfo lang={pageContext.lang} />
+      {/* GEEKSINFO IS A TWOCOLUMN WITH TITLE 
+      <GeeksInfo lang={pageContext.lang} /> */}
 
-      {/* TWO COLUMN CREAR EN EL YML*/}
+      {/* TWO COLUMN INFO CREAR EN EL YML*/}
+      <Div display="block" background={Colors.verylightGray2} padding="40px 0">
+        <H2 type="h2" textAlign_tablet="center">
+          {yml.two_columns_info.section_heading.text}
+        </H2>
+        <TwoColumn
+          right={{ image: yml.two_columns_info?.image }}
+          left={{
+            heading: yml.two_columns_info?.heading,
+            sub_heading: yml.two_columns_info?.sub_heading,
+            bullets: yml.two_columns_info?.bullets,
+            content: yml.two_columns_info?.content,
+            button: yml.two_columns_info?.button,
+          }}
+          proportions={yml.two_columns_info?.proportions}
+          session={session}
+        />
+      </Div>
+
+      {/* Two Columns Rigo */}
       <TwoColumn
-        left={{ image: yml.two_columns?.image, video: yml.two_columns?.video }}
-        right={{
-          heading: yml.two_columns?.heading,
-          sub_heading: yml.two_columns?.sub_heading,
-          bullets: yml.two_columns?.bullets,
-          content: yml.two_columns?.content,
-          button: yml.two_columns?.button,
+        left={{
+          image: yml.two_columns_rigo?.image,
+          video: yml.two_columns_rigo?.video,
         }}
-        proportions={yml.two_columns?.proportions}
+        right={{
+          heading: yml.two_columns_rigo?.heading,
+          heading_image: yml.two_columns_rigo?.heading_image,
+          sub_heading: yml.two_columns_rigo?.sub_heading,
+          bullets: yml.two_columns_rigo?.bullets,
+          content: yml.two_columns_rigo?.content,
+          button: yml.two_columns_rigo?.button,
+        }}
+        proportions={yml.two_columns_rigo?.proportions}
         session={session}
       />
 
@@ -464,6 +502,73 @@ export const query = graphql`
             bullets {
               items {
                 text
+              }
+            }
+          }
+          two_columns_info {
+            proportions
+            image {
+              style
+              src
+              shadow
+            }
+            section_heading {
+              text
+            }
+            heading {
+              text
+              font_size
+            }
+            sub_heading {
+              text
+              font_size
+            }
+            content {
+              text
+            }
+            button {
+              text
+              color
+              background
+              path
+            }
+            bullets {
+              items {
+                heading
+                text
+              }
+            }
+          }
+          two_columns_rigo {
+            proportions
+            image {
+              style
+              src
+              shadow
+            }
+            heading {
+              text
+              font_size
+              style
+              heading_image {
+                src
+              }
+            }
+            sub_heading {
+              text
+              font_size
+              style
+            }
+            content {
+              text
+              style
+            }
+            bullets {
+              items {
+                heading
+                text
+                icon
+                icon_color
               }
             }
           }

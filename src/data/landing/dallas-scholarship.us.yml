@@ -1,5 +1,5 @@
 meta_info:
-  slug: dallas-scholarship # <--- URL 4geeksacademy.com/us/landing/example
+  slug: dallas-scholarship # <--- URL 4geeksacademy.com/us/landing/dallas-scholarship
 
   # This will show on social media when shared
   title: "Launch Your Tech Career with 4Geeks Academy in Dallas"
@@ -164,6 +164,7 @@ components:
       shadow: false
     section_heading:
       text: "Why Learn to Code?"
+      style: '{ "font-size": "30px" }'
     heading:
       text: ""
     sub_heading:
@@ -266,9 +267,8 @@ components:
       src: "/images/landing/blonde-girl-laptop.png"
       shadow: false
     section_heading:
-      style: '{ "margin-top": "50px", "color": "black", "max-width": "900px", "font-size": "34px", "align-self": "center" }'
-      text: |
-        Transform your life with 4Geeks Academy and Kosmos: A Comprehensive Approach to Career Readiness
+      text: "Transform your life with 4Geeks Academy and Kosmos: A Comprehensive Approach to Career Readiness"
+      style: '{ "font-size": "30px" }'
     heading:
       style: '{ "margin-top": "0px", "font-weight": "300"  }'
       text: "Why 4Geeks?"
@@ -306,8 +306,8 @@ components:
     background: "#F4F9FF"
     proportions: [6, 6]
     image:
-      style: '{ "backgroundSize": "contain", "backgroundPosition": "center" }'
-      src: "/images/allies/kosmos-landing-img.webp"
+      style: '{ "backgroundSize": "contain", "backgroundPosition": "center", "margin": "10px" }'
+      src: "/images/partner/kosmos-grid.webp"
       shadow: false
     heading:
       style: '{ "margin-top": "0px" }'
@@ -356,7 +356,7 @@ components:
       shadow: false
     section_heading:
       text: "THE DALLAS TECH SCENE IS THRIVING"
-      font_size: ["30px", "30px", "30px", "30px", "30px"]
+      style: '{ "font-size": "30px" }'
     sub_heading:
       text: "Dallas is rapidly emerging as a major tech hub, attracting top companies, startups, and tech talent. As demand for skilled developers grows, it’s the perfect time to kickstart your tech career!"
       style: '{ "font-weight": "300", "font-size": "18px", "textAlign": "justify" }'
