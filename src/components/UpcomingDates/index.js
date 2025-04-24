@@ -403,11 +403,9 @@ const UpcomingDates = ({
                           >
                             <Paragraph textAlign="left" color={Colors.blue}>
                               {cohort.academy.city.name === "Remote"
-                                ? `${cohort.academy.city.name} ${content.remote}`
-                                : cohort.academy.city.name}
-                              {cohort.academy.slug !== "online" &&
-                                cohort.academy.city.name !== "Remote" &&
-                                ` ${content.remote}`}
+                                ? content.remote
+                                : `${cohort.academy.city.name} (${content.remote})`
+                              }
                             </Paragraph>
                           </Link>
                         </Div>
