@@ -40,6 +40,33 @@ features:
     - 'Limited spots — act now!'
   styles: '{ "color": "black", "fontWeight":"500" }'
 
+  two_columns_video:
+    proportions: [6, 6]
+    image:
+      style: '{"border" : "3px solid black", "backgroundSize": "contain" }'
+      src: "/static/images/landing/inteligencia-artificial-para-profesionales.jpg"
+      shadow: true  
+    video: "https://www.youtube.com/watch?v=N_oJOAfge80"
+    heading:
+      text: "FLORIDA’S TECH SCENE IS THRIVING"
+      font_size: ["40px", "34px", "34px", "25px", "20px"]
+    sub_heading:
+      style: '{}'
+      text: "The Time to Join is Now!"
+      font_size: ["16px"]
+    button:
+      text: "Apply Now"
+      color: "white"
+      background: "black"
+      path: "#prices_and_payment"
+    bullets:
+      items: 
+        - text: "Miami is projected to add approximately 650,000 tech jobs by 2030, and Orlando's tech job market is projected to grow by 27%."
+        - text: "Orlando is the fastest growing region in Florida, attracting major employers and fostering a thriving startup ecosystem."
+        - text: "Big names like Microsoft, Amazon and Lockheed Martin have moved to Florida and venture capital is booming."
+        - text: "In Orlando, entry-level positions in full-stack development, data science or cybersecurity earn around $70K/ year"
+
+    #-----REVISAR----#
 
 follow_bar:
   position: "top"
@@ -54,79 +81,6 @@ follow_bar:
     text: ""
 
 components:
-  - name: why_coding
-    position: 1
-    layout: two_column_left
-    background: "#F4F9FF"
-    proportions: [5, 7]
-    image:
-      style: '{ "backgroundSize": "contain" }'
-      src: "/images/landing/hombre-con-laptop.png"
-    section_heading: 
-      text: "Why Learn to Code?"
-    bullets:
-      items:
-        - heading: "Strong Demand"
-          text: "Demand for skilled, AI-fluent programmers is high and growing in Orlando's tech sector."
-          icon: "check"
-        - heading: "High-Paying Salaries"
-          text: "Junior software developers in Orlando start at competitive salaries with excellent growth potential."
-          icon: "check"
-        - heading: "Diverse Career Opportunities"
-          text: "Orlando's tech ecosystem offers opportunities in entertainment, simulation, healthcare, and more."
-          icon: "check"
-
-  - name: start_your_journey
-    position: 2
-    layout: two_column_right
-    background: "#F4F9FF"
-    proportions: [5, 7]
-    content:
-      font_size: ["16px"]
-      text: "Only 45 students will be accepted into the scholarship program. Don't wait!"
-    image:
-      style: '{ "backgroundSize": "contain" }'
-      src: "/images/landing/community-support-2.png"
-    heading:
-      text: "This is Your Opportunity to Join Orlando's Dynamic Tech Scene"
-      font_size: ["30px", "30px", "30px", "30px", "30px"]
-    sub_heading:
-      text: "Orlando's tech ecosystem is rapidly expanding, with opportunities in diverse sectors from entertainment and gaming to healthcare and aerospace. Our scholarship program connects aspiring tech professionals with the training they need to succeed in this growing market."
-      style: '{ "font-weight": "300", "font-size": "18px" }'
-
-  - name: new_design_with_bullets
-    position: 4
-    proportions: [6, 6]
-    layout: two_column_left
-    background: "#F4F9FF"
-    image:
-      style: '{ "backgroundSize": "contain" }'
-      src: "/images/landing/hombre-joven-con-laptop.webp"
-      shadow: false
-    heading: 
-      text: "Eligible Programs"
-    sub_heading:
-      text: "Choose the path that’s right for you."
-    button: 
-      text: "GET IN TOUCH"
-      color: white
-      hover_color: "white"
-      background: "blue"
-      path: "#leadform_bottom"
-    content: 
-      text: ""
-      font_size: ["16px"]
-      path: ""
-    bullets:
-      items:
-      - heading: "Full Stack Development with AI"
-        text: |
-          Become a Full Stack Developer by mastering Python, React, JavaScript, and leveraging cutting-edge AI tools to enhance your workflow. <br> Gain the most sought-after skills and launch your tech career.  <a href="/us/coding-bootcamps/part-time-full-stack-developer">Find more information here</a>.
-        icon: "circle"
-      - heading: "Data Science and Machine Learning"
-        text: |
-          Learn to collect and manage data with Python. Create models and solve problems using machine learning, deep learning, and AI. <br>Strategize and develop your own AI projects from development to deployment and maintenance. <a href="/us/coding-bootcamps/datascience-machine-learning">Find more information here</a>.
-        icon: "circle"
 
   - name: how-it-works
     position: 5
@@ -337,4 +291,4 @@ form:
 
 apply_schollarship:
   imageSide: "right"
-  image: "../../../static/images/landing/apply.png"  
+  image: "../../../static/images/landing/apply.png"
