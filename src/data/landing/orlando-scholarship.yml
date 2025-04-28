@@ -1,0 +1,306 @@
+meta_info:
+  slug: orlando-scholarship
+  title: "Launch Your Tech Career with 4Geeks Academy Orlando Scholarships"
+  description: "Apply for Orlando Partial Scholarships at 4Geeks Academy. Get financial support to jumpstart your coding career in the Orlando tech scene."
+  visibility: "visible"
+  image: "public/images/landing/miamitech-logo-sidetext.png"
+  keywords: ""
+  template: "landing_a"
+  redirects: []
+  utm_course: ["full-stack", "datascience-ml"]
+  utm_location: ["downtown-miami"]
+  automation: strong
+  tag: website-lead
+
+form:
+  fields: ["full_name", "phone", "email"]
+  heading: "Get more Information"
+  motivation: "Transform your life with our bootcamps! Fill out the form to receive the program details and scholarship information!"
+  button_label: SUBMIT
+  redirect: "/us/thank-you/"
+
+apply_schollarship:
+  imageSide: "left"
+  image: "../../../static/images/landing/hombre-joven-con-laptop-senalando.webp"
+
+navbar:
+  buttonText: "Apply now"
+  buttonUrl: "#leadform_header"
+  logoUrl: "#"
+
+header_data:
+  tagline: "Orlando Residents: Your Tech Career Starts Here – Get Ready with a Scholarship!"
+  sub_heading: ""
+  background: "#ffffff"
+  tagline_color: "#1c1c1c"
+  form_styles:
+    background: "#0084FF"
+    color: "white"
+    button:
+      background: "black"
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+  image_filter: brightness(0.3)
+
+features:
+  marginTop: 0px
+  text: "Apply now—don't miss your chance!"
+  bullets:
+    - 'For Greater Orlando residents only'
+    - 'Award-winning tech education and career support'
+    - 'Get a high-paying job in Florida's thriving tech scene'
+    - 'Limited spots — act now!'
+  styles: '{ "color": "black", "fontWeight":"500" }'
+
+short_badges:
+  - name: "Top Online Full-Stack Bootcamps Of 2024"
+    url: ""
+    image: "../../../static/images/badges/forbes-logo-award.png"
+    alt: "We have been selected as one of the Top Online Coding Bootcamps by Forbes."
+  - name: "Best for Spanish speakers Of 2024 by Fortune"
+    url: ""
+    image: "../../../static/images/badges/fortune-logo.png"
+    alt: "Recognized by Fortune as one of the Top Coding Bootcamps"
+  - name: "Top Coding Bootcamps Newsweek"
+    url: ""
+    image: "../../../static/images/badges/newsweek.webp"
+    alt: "Top Coding Bootcamps Newsweek"
+  - name: "Best Coding Bootcamp Course Report 2024"
+    url: ""
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+    alt: "Best Coding Bootcamp Course Report 2024"
+  - name: "Licensed by the Florida Department of Education"
+    url: ""
+    image: "../../../static/images/badges/licensed.png"
+    alt: "Licensed by the Florida Department of Education"
+  - name: "ARP Certificate"
+    url: ""
+    image: "../../../static/images/badges/arp-logo-certification.png"
+    alt: "ARP Certificate"
+
+follow_bar:
+  position: "top"
+  content:
+    text: "No cost. No excuses. \n Join and be a part of the #OrlandoTech movement."
+    text_mobile: "No cost. No excuses.\n Join and be a part of the #OrlandoTech movement."
+    font_size: ["22px", "22px", "22px", "16px", "16px"]
+  button:
+    text: "Apply Now"
+    path: "#leadform_header"
+  phone:
+    text: ""
+
+components:
+  - name: why_coding
+    position: 1
+    layout: two_column_left
+    background: "#F4F9FF"
+    proportions: [5, 7]
+    image:
+      style: '{ "backgroundSize": "contain" }'
+      src: "/images/landing/hombre-con-laptop.png"
+    section_heading: 
+      text: "Why Learn to Code?"
+    bullets:
+      items:
+        - heading: "Strong Demand"
+          text: "Demand for skilled, AI-fluent programmers is high and growing in Orlando's tech sector."
+          icon: "check"
+        - heading: "High-Paying Salaries"
+          text: "Junior software developers in Orlando start at competitive salaries with excellent growth potential."
+          icon: "check"
+        - heading: "Diverse Career Opportunities"
+          text: "Orlando's tech ecosystem offers opportunities in entertainment, simulation, healthcare, and more."
+          icon: "check"
+
+  - name: start_your_journey
+    position: 2
+    layout: two_column_right
+    background: "#F4F9FF"
+    proportions: [5, 7]
+    content:
+      font_size: ["16px"]
+      text: "Only 45 students will be accepted into the scholarship program. Don't wait!"
+    image:
+      style: '{ "backgroundSize": "contain" }'
+      src: "/images/landing/community-support-2.png"
+    heading:
+      text: "This is Your Opportunity to Join Orlando's Dynamic Tech Scene"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      text: "Orlando's tech ecosystem is rapidly expanding, with opportunities in diverse sectors from entertainment and gaming to healthcare and aerospace. Our scholarship program connects aspiring tech professionals with the training they need to succeed in this growing market."
+      style: '{ "font-weight": "300", "font-size": "18px" }'
+
+  - name: new_design_with_bullets
+    position: 4
+    proportions: [6, 6]
+    layout: two_column_left
+    background: "#F4F9FF"
+    image:
+      style: '{ "backgroundSize": "contain" }'
+      src: "/images/landing/hombre-joven-con-laptop.webp"
+      shadow: false
+    heading: 
+      text: "Eligible Programs"
+    sub_heading:
+      text: "Choose the path that’s right for you."
+    button: 
+      text: "GET IN TOUCH"
+      color: white
+      hover_color: "white"
+      background: "blue"
+      path: "#leadform_bottom"
+    content: 
+      text: ""
+      font_size: ["16px"]
+      path: ""
+    bullets:
+      items:
+      - heading: "Full Stack Development with AI"
+        text: |
+          Become a Full Stack Developer by mastering Python, React, JavaScript, and leveraging cutting-edge AI tools to enhance your workflow. <br> Gain the most sought-after skills and launch your tech career.  <a href="/us/coding-bootcamps/part-time-full-stack-developer">Find more information here</a>.
+        icon: "circle"
+      - heading: "Data Science and Machine Learning"
+        text: |
+          Learn to collect and manage data with Python. Create models and solve problems using machine learning, deep learning, and AI. <br>Strategize and develop your own AI projects from development to deployment and maintenance. <a href="/us/coding-bootcamps/datascience-machine-learning">Find more information here</a>.
+        icon: "circle"
+
+  - name: how-it-works
+    position: 5
+    background: "#0084FF"
+    layout: iconogram
+    swipable: True
+    heading:
+      text: "How it Works"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+      style: '{ "color": "white" }'
+    icons:
+      - icon: "graduation-2"
+        color: "#0084FF"
+        title: "Eligibility"
+        content: "Must be a legal resident of Greater Orlando, underemployed or unemployed."
+      - icon: "presentation"
+        title: "Application"
+        content: "Fill out the form and pass the assessment process."
+      - icon: "briefcase-2"
+        color: "#FFB718"
+        title: "Onboarding Process"
+        content: "Complete pre-work on time"
+      - icon: "stairswflag"
+        color: "#BE8BFF"
+        title: "You're Set!"
+        content: "Become a tech professional with unlimited mentorship and career support."
+    button:
+      text: "4geeks vs. Others"
+      path: "#geeks_vs_others"
+      background: "#232323"
+      color: white
+      hover: white
+      style: '{font-weight: 800}'
+
+  - name: pay
+    position: 6
+    layout: two_column_right
+    proportions: [6, 6]
+    image:
+      style: '{ "backgroundSize": "contain" }'
+      src: "/images/landing/blonde-girl-laptop.png"
+    heading:
+      style: '{ "margin-top": "0px" }'
+      text: "Why 4Geeks?"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+
+    sub_heading:
+      font_size: ["18px", "18px", "18px", "18px", "18px"]
+      style: '{ "font-weight": "100" }'
+      text: "4Geeks Academy is more than a coding school—we’re a community of innovators and code enthusiasts dedicated to helping you build a successful tech career. Based in Orlando, with over 7 campuses worldwide and a vibrant network of 4,000+ students, teachers, partners, and alumni, you’ll be gaining a support network like no other, ready to assist you every step of the way—even after you graduate. Where there’s a geek, there’s a way!
+        What sets us apart:"
+
+    content:
+      font_size: ["16px"]
+      text: ""
+    bullets:
+      items:
+        - text: "Lifelong and readily available coding mentorship"
+          icon: "check"
+        - text: "Unlimited and personalized career support"
+          icon: "check"
+        - text: "Industry-aligned curriculum, ahead of the latest job market trends"
+          icon: "check"
+        - text: "An extensive, highly active network of partners in Tech"
+          icon: "check"
+    button:
+      style: '{ "padding": "10px", "border-radius": "3px" }'
+      text: "Apply Now"
+      color: white
+      hover_color: "white"
+      background: "blue"
+      path: "#leadform_bottom"
+
+  - name: testimonials
+    position: 9
+    layout: testimonials_new
+    heading:
+      style: '{ "font-weight": "400", "color": "#3A3A3A" }'
+      text: "Hear it from our students"
+      font_size: ["35px", "35px", "30px", "30px", "30px"]
+    filter_indexes: ['azu-bota','nai-kali','cha-fabr', 'jona-ferra', 'jos-bra', 'kev-so']
+    variant: small
+
+  - name: OrlandoTechTalentCoalition
+    position: 7
+    style: '{ "margin": "20px 0" }'
+    layout: two_column_left
+    alignment: center
+    proportions: [6, 6]
+    background: "#F4F9FF"
+    image:
+      style: '{ "backgroundSize": "contain", "height": "250px"}'
+      src: "/images/landing/miamitech-logo-sidetext.png"
+    heading:
+      style: '{ "font-weight": "400", "margin-bottom": "0" }'
+      text: "The Orlando Tech Coalition’s and 4Geeks Academy’s Mission" 
+      font_size: ["36px", "36px", "30px", "28px", "28px"]
+    content:
+      text: "Our partnership supports the Coalition's goal to cultivate Orlando as a vibrant hub for innovation and an attractive destination for tech talent and companies alike. Together, we’re building a sustainable pipeline of skilled tech workers connecting Orlando employers, educators, and local talent. Through ongoing collaboration with businesses and community organizations, we ensure our training models lead directly to job opportunities, continuously expanding our positive impact on the local tech scene."
+      font_size: ["16px"]
+    button:
+      style: '{ "padding": "10px", "border-radius": "3px" }'
+      text: "APPLY NOW"
+      color: white
+      hover_color: "white"
+      background: "blue"
+      path: "#leadform_bottom"
+
+  - name: no-worries
+    position: 8
+    layout: two_column_right
+    proportions: [6, 6]
+    background: "#F4F9FF"
+    image:
+      style: '{ "backgroundSize": "cover", "backgroundPosition": "center" }'
+      shadow: true 
+      src: "/images/landing/latin-woman-laptop-coffee.png"
+    heading:
+      text: "Don’t stress about financing your studies. \nJust focus on your career ahead!"
+      font_size: ["28px", "28px", "28px", "26px", "26px"]
+    sub_heading:
+      text: "The Orlando scholarships are here to change the game for aspiring tech professionals in Orlando. Serious about launching a tech career? Don’t miss this opportunity."   
+    bullets:
+      items:
+        - text: "Apply to the Scholarship"
+          icon: circle
+        - text: "Enroll in the program."
+          icon: circle
+        - text: "Learn software development or data science skills."
+          icon: circle
+        - text: "Land a job."
+          icon: circle
+        - text: "Thrive in a career you love."
+          icon: circle
+    button:
+      style: '{ "padding-top": "10px", "border-radius": "3px" }'
+      text: "Apply to the Scholarship"
+      color: white
+      hover_color: "white"
+      background: "blue"
+      path: "#leadform_bottom"
