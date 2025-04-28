@@ -40,7 +40,52 @@ features:
     - 'Limited spots — act now!'
   styles: '{ "color": "black", "fontWeight":"500" }'
 
-  two_columns_video:
+short_badges:
+  - name: "Top Online Full-Stack Bootcamps Of 2024"
+    url: ""
+    image: "../../../static/images/badges/forbes-logo-award.png"
+    alt: "We have been selected as one of the Top Online Coding Bootcamps by Forbes."
+  - name: "Best for Spanish speakers Of 2024 by Fortune"
+    url: ""
+    image: "../../../static/images/badges/fortune-logo.png"
+    alt: "Recognized by Fortune as one of the Top Coding Bootcamps"
+  - name: "Top Coding Bootcamps Newsweek"
+    url: ""
+    image: "../../../static/images/badges/newsweek.webp"
+    alt: "Top Coding Bootcamps Newsweek"
+  - name: "Best Coding Bootcamp Course Report 2024"
+    url: ""
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+    alt: "Best Coding Bootcamp Course Report 2024"
+  - name: "Licensed by the Florida Department of Education"
+    url: ""
+    image: "../../../static/images/badges/licensed.png"
+    alt: "Licensed by the Florida Department of Education"
+  - name: "ARP Certificate"
+    url: ""
+    image: "../../../static/images/badges/arp-logo-certification.png"
+    alt: "ARP Certificate"
+
+  
+    
+    #-----REVISAR----#
+
+follow_bar:
+  position: "top"
+  content:
+    text: "No cost. No excuses. \n Join and be a part of the #OrlandoTech movement."
+    text_mobile: "No cost. No excuses.\n Join and be a part of the #OrlandoTech movement."
+    font_size: ["22px", "22px", "22px", "16px", "16px"]
+  button:
+    text: "Apply Now"
+    path: "#leadform_header"
+  phone:
+    text: ""
+
+components:
+
+  - name: leadform_header
+    layout: two_column_left
     proportions: [6, 6]
     image:
       style: '{"border" : "3px solid black", "backgroundSize": "contain" }'
@@ -66,21 +111,6 @@ features:
         - text: "Big names like Microsoft, Amazon and Lockheed Martin have moved to Florida and venture capital is booming."
         - text: "In Orlando, entry-level positions in full-stack development, data science or cybersecurity earn around $70K/ year"
 
-    #-----REVISAR----#
-
-follow_bar:
-  position: "top"
-  content:
-    text: "No cost. No excuses. \n Join and be a part of the #OrlandoTech movement."
-    text_mobile: "No cost. No excuses.\n Join and be a part of the #OrlandoTech movement."
-    font_size: ["22px", "22px", "22px", "16px", "16px"]
-  button:
-    text: "Apply Now"
-    path: "#leadform_header"
-  phone:
-    text: ""
-
-components:
 
   - name: how-it-works
     position: 5
@@ -115,7 +145,7 @@ components:
       hover: white
       style: '{font-weight: 800}'
 
-  - name: pay
+  - name: why-4geeks
     position: 6
     layout: two_column_right
     proportions: [6, 6]
@@ -188,31 +218,6 @@ components:
         link: "/us/coding-bootcamps/cybersecurity"
         text_link: "Read More"
 
-  - name: OrlandoTechTalentCoalition
-    position: 7
-    style: '{ "margin": "20px 0" }'
-    layout: two_column_left
-    alignment: center
-    proportions: [6, 6]
-    background: "#F4F9FF"
-    image:
-      style: '{ "backgroundSize": "contain", "height": "250px"}'
-      src: "/images/landing/miamitech-logo-sidetext.png"
-    heading:
-      style: '{ "font-weight": "400", "margin-bottom": "0" }'
-      text: "The Orlando Tech Coalition’s and 4Geeks Academy’s Mission" 
-      font_size: ["36px", "36px", "30px", "28px", "28px"]
-    content:
-      text: "Our partnership supports the Coalition's goal to cultivate Orlando as a vibrant hub for innovation and an attractive destination for tech talent and companies alike. Together, we’re building a sustainable pipeline of skilled tech workers connecting Orlando employers, educators, and local talent. Through ongoing collaboration with businesses and community organizations, we ensure our training models lead directly to job opportunities, continuously expanding our positive impact on the local tech scene."
-      font_size: ["16px"]
-    button:
-      style: '{ "padding": "10px", "border-radius": "3px" }'
-      text: "APPLY NOW"
-      color: white
-      hover_color: "white"
-      background: "blue"
-      path: "#leadform_bottom"
-
   - name: no-worries
     position: 8
     layout: two_column_right
@@ -256,31 +261,9 @@ components:
     filter_indexes: ['azu-bota','nai-kali','cha-fabr', 'jona-ferra', 'jos-bra', 'kev-so']
     variant: small
 
-short_badges:
-  - name: "Top Online Full-Stack Bootcamps Of 2024"
-    url: ""
-    image: "../../../static/images/badges/forbes-logo-award.png"
-    alt: "We have been selected as one of the Top Online Coding Bootcamps by Forbes."
-  - name: "Best for Spanish speakers Of 2024 by Fortune"
-    url: ""
-    image: "../../../static/images/badges/fortune-logo.png"
-    alt: "Recognized by Fortune as one of the Top Coding Bootcamps"
-  - name: "Top Coding Bootcamps Newsweek"
-    url: ""
-    image: "../../../static/images/badges/newsweek.webp"
-    alt: "Top Coding Bootcamps Newsweek"
-  - name: "Best Coding Bootcamp Course Report 2024"
-    url: ""
-    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
-    alt: "Best Coding Bootcamp Course Report 2024"
-  - name: "Licensed by the Florida Department of Education"
-    url: ""
-    image: "../../../static/images/badges/licensed.png"
-    alt: "Licensed by the Florida Department of Education"
-  - name: "ARP Certificate"
-    url: ""
-    image: "../../../static/images/badges/arp-logo-certification.png"
-    alt: "ARP Certificate"
+badges:
+  title: "8 Years empowering people to succeed in tech"
+  paragraph: "Licensed by the Florida Department of Education, recognized by Forbes as a top 5 Coding School, and consistently ranked among the world's best coding bootcamps by major independent listings."
 
 form:
   fields: ["full_name", "phone", "email"]
