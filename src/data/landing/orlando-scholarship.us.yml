@@ -1,5 +1,5 @@
 meta_info:
-  slug: orlando-scholarship
+  slug: orlando-scholarship # <--- URL: 4geeksacademy.com/us/landing/orlando-scholarship
   title: "Launch Your Tech Career with 4Geeks Academy Orlando Scholarships"
   description: "Apply for Orlando Partial Scholarships at 4Geeks Academy. Get financial support to jumpstart your coding career in the Orlando tech scene."
   visibility: "visible"
@@ -7,7 +7,7 @@ meta_info:
   keywords: ""
   template: "landing_a"
   redirects: []
-  utm_course: ["full-stack", "datascience-ml"]
+  utm_course: ["full-stack", "datascience-ml", "cybersecurity"]
   utm_location: ["downtown-miami"]
   automation: strong
   tag: website-lead
@@ -88,10 +88,9 @@ components:
     layout: two_column_left
     proportions: [6, 6]
     image:
-      style: '{"border" : "3px solid black", "backgroundSize": "contain" }'
-      src: "/static/images/landing/inteligencia-artificial-para-profesionales.jpg"
-      shadow: true  
-    video: "https://www.youtube.com/watch?v=N_oJOAfge80"
+      style: '{ "backgroundSize": "contain" }'
+      src: "/images/landing/hombre-con-laptop.png"
+      shadow: false
     heading:
       text: "FLORIDA’S TECH SCENE IS THRIVING"
       font_size: ["40px", "34px", "34px", "25px", "20px"]
@@ -262,8 +261,9 @@ components:
     variant: small
 
 badges:
-  title: "8 Years empowering people to succeed in tech"
-  paragraph: "Licensed by the Florida Department of Education, recognized by Forbes as a top 5 Coding School, and consistently ranked among the world's best coding bootcamps by major independent listings."
+  position: 10
+  heading: "8 Years empowering people to succeed in tech"
+  sub_heading: "Licensed by the Florida Department of Education, recognized by Forbes as a top 5 Coding School, and consistently ranked among the world's best coding bootcamps by major independent listings."
 
 form:
   fields: ["full_name", "phone", "email"]
