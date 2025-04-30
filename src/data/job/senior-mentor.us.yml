@@ -2,7 +2,7 @@ meta_info:
   slug: "coding-instructor"
   title: "Coding Instructor"
   visibility: "visible"
-  description: "The brightest minds have always taken time taught what they know, become a coding teacher at 4Geeks Academy."
+  description: "Join 4Geeks Academy as a Lead Full-Stack Instructor. Help students master full-stack development and launch their careers in tech with expert guidance."
   template: "job" # js component that will be handling the rendering
   open: true #if true, this job will be accepting candidates
   image: "https://storage.googleapis.com/media-breathecode/59c3afdc064670e4d0062a42cd4bf954d1b9c93720500d4fdce265b4792538ab"
@@ -10,7 +10,7 @@ meta_info:
   redirects: []
 
 ## BANNER INFO
-banner_heading: "Lead Full-Stack Instructor"
+banner_heading: "Lead Full-Stack Instructor Job Opportunity"
 banner_sub_heading: ""
 banner_image: "/images/bg/pricing-bg.jpg"
 link_back: "/us/jobs"

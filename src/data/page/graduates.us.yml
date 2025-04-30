@@ -5,13 +5,13 @@ meta_info:
   slug: graduates
   title: "4Geeks Academy graduates"
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
-  description: "Meet our 4Geeks Academy graduates"
+  description: "Discover the success stories of 4Geeks Academy graduates. Our alumni land top tech jobs, thanks to our hands-on training and career support."
   image: null
   keywords: "4Geeks Academy graduates"
   redirects: []
 
 banner:
-  tagline: "MEET OUR GRADUATES"
+  tagline: "Academy Graduates"
   sub_heading: ""
 
 about:

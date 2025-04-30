@@ -2,12 +2,12 @@ meta_info:
   slug: press
   title: "4Geeks Academy on the news"
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
-  description: "Compilation of some of the news and media mentions in the past couple of years"
+  description: "Check out the latest press coverage of 4Geeks Academy. See how we’re shaping the future of tech education with innovative bootcamp programs."
   image: "/images/og-preview/press.us.png"
   keywords: "4Geeks academy News"
   redirects: []
 
-seo_title: "Press"
+seo_title: "Press: On the News"
 header:
   title: "Press"
   paragraph: "This report is meant to show our outcomes, achievements and what we consider needs to be improved. It's our story and our way to let you know that we are working harder every time in order to get better."

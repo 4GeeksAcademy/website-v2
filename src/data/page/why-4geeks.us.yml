@@ -1,13 +1,13 @@
 meta_info:
   slug: why-4geeks
   title: "4Geeks vs Other Bootcamps"
-  description: "4Geeks is a bootcamp with highly mentored programs, aggressive scholarships and a real commitment to help you change your career and get a better living."
+  description: "Discover why 4Geeks Academy is the right choice for your coding journey. Get hands-on training, mentorship, and a Job Guarantee to launch your career."
   image: "https://storage.googleapis.com/media-breathecode/58d7775d8b51f2a58ccc9378524bb29916146cd574525592e39db3f7730e07fc-600x300"
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   keywords: ""
   redirects: []
 
-seo_title: "Coding Bootcamp"
+seo_title: "Why Choose Us"
 
 header:
   title: "Empowering Talent with coding careers"

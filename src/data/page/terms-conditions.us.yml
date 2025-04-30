@@ -1,47 +1,33 @@
 meta_info:
   slug: terms-conditions
   title: "Terms of conditions at 4Geeks Academy"
-  description: "Know the terms of conditions of use of 4Geeks Academy"
+  description: "Read 4Geeks Academy’s Terms and Conditions for full details on our services. Understand the policies behind our coding bootcamp and resources."
   image: null
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   keywords: "Terms of conditions, 4Geeks Academy"
   redirects: []
-seo_title: 4Geeks Academy
+
+seo_title: "Category Archives: Terms of Conditions"
+
 header:
-  tagline: 4Geeks Academy Terms of conditions
+  tagline: "4Geeks Academy Terms of conditions"
   sub_heading: ""
   image: ../../../static/images/bg/companies-bg.jpg
   alt: ""
 sections:
   - title: "Website owner"
-    text: "
+    text: ""
     Identity: 4GEEKS ACADEMY<br/>
     Contact address: 1801 SW 3rd Ave #100, Miami, FL 33129 <br/> 
     Contact E-mail: info@4GeeksAcademy.com <br/>
     CIF/NIF: nº 47-1915589"
 
   - title: "Purpose, scope and duration"
-    text: '
-    This Legal Notice regulates the use of the Website, as well as its access, navigation and, in general, the relationship of the owner of the Website with any person who accesses it (hereinafter referred to individually as the "User" or collectively as the "Users").
-    
-    The Website provides Users with general information about 4GEEKS and its activities (hereinafter, the "Content"), all in accordance with this Legal Notice. Being a professional page, its content is not directed to Users who are minors.
-    
-    Without prejudice to the foregoing, access to certain content or services that could be provided in the future could be subject to compliance with particular conditions that, depending on the case, will replace, complete and/or modify these general conditions and that, in contradiction with it, they will prevail.
-    
-    4GEEKS reserves the right to modify, at any time and without prior notice, the presentation, configuration and content of the Website or the conditions required for its access and/or use, as well as interrupt, suspend or terminate access to the content of the Website, with no possibility for the User to demand any compensation.
-    
-    The temporary validity of this Legal therefore coincides with the time of its exposure, until it is totally or partially modified, at which time the new legal notice made available to Users on this Website will become effective.
-    
-    Access, navigation and use of the Website by a User implies the express and unreserved acceptance of all the terms of this Legal Notice and any conditions, taking into account the same validity and effectiveness as any contract entered into in writing and signed.
-    '
+    text: 'This Legal Notice regulates the use of the Website, as well as its access, navigation and, in general, the relationship of the owner of the Website with any person who accesses it (hereinafter referred to individually as the "User" or collectively as the "Users"). The Website provides Users with general information about 4GEEKS and its activities (hereinafter, the "Content"), all in accordance with this Legal Notice. Being a professional page, its content is not directed to Users who are minors. Without prejudice to the foregoing, access to certain content or services that could be provided in the future could be subject to compliance with particular conditions that, depending on the case, will replace, complete and/or modify these general conditions and that, in contradiction with it, they will prevail. 4GEEKS reserves the right to modify, at any time and without prior notice, the presentation, configuration and content of the Website or the conditions required for its access and/or use, as well as interrupt, suspend or terminate access to the content of the Website, with no possibility for the User to demand any compensation. The temporary validity of this Legal therefore coincides with the time of its exposure, until it is totally or partially modified, at which time the new legal notice made available to Users on this Website will become effective. Access, navigation and use of the Website by a User implies the express and unreserved acceptance of all the terms of this Legal Notice and any conditions, taking into account the same validity and effectiveness as any contract entered into in writing and signed.'
 
 
   - title: "Access"
-    text: "
-    The use of the Website will be free, without prejudice to the cost of connection through the corresponding telecommunications network that the User has access to.
-    
-    4GEEKS is not responsible for damages of any kind caused to the User that cause failures or disconnections in the telecommunications networks that cause the suspension, cancellation or interruption of access to the Website.
-    "
+    text: "The use of the Website will be free, without prejudice to the cost of connection through the corresponding telecommunications network that the User has access to. 4GEEKS is not responsible for damages of any kind caused to the User that cause failures or disconnections in the telecommunications networks that cause the suspension, cancellation or interruption of access to the Website."
 
   - title: ""
     text: |

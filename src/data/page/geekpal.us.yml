@@ -2,7 +2,7 @@ meta_info:
   slug: geekpal-support
   title: "Geekpal of 4Geeks Academy"
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
-  description: "Learn about our comprehensive support system for 4Geeks Academy students and graduates"
+  description: "4Geeks Academy offers Geekpal Support to help you every step of the way. Get personalized guidance from mentors and succeed in your coding journey."
   image: null
   keywords: ""
   redirects: ["/geekpal", "/us/career-support"]
@@ -21,7 +21,7 @@ header:
     
   image_logo: "/images/geekpal.png"
 
-seo_title: "Geekpal"
+seo_title: "Geekpal Support"
 
 # Introduction Video here
 geekPal:

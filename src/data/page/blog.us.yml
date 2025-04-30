@@ -2,17 +2,17 @@ meta_info:
   slug: blog
   title: "4Geeks Academy Blog"
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
-  description: "Find resources and news for both potential and current software builders. Basic knowledge, trends, career advice and much more in 4geeks Academy blog."
+  description: "Check out 4Geeks Academy’s Coding Bootcamp Blog for the latest insights, tips, and updates on coding, bootcamps, and tech careers."
   image: null
   keywords: null
   redirects: []
 
 banner:
-  tagline: "4Geeks Academy Blog"
+  tagline: "Category Archives: Coding Bootcamp Blog"
   sub_heading: "Resources and news for both potential and current software builders."
   no_image: "https://i.imgur.com/n3V1Rqq.jpeg"
 
-seo_title: "4Geeks Academy Blog"
+seo_title: "Category Archives: Coding Bootcamp Blog"
 header:
   title: "Blog"
   paragraph: "Resources and news for both potential and current software builders."

@@ -1,7 +1,7 @@
 meta_info:
   slug: privacy-policy
   title: "Privacy Policy at 4Geeks Academy"
-  description: "Privacy is our priority. This policy document contains the types of information collected and recorded by 4Geeks Academy and how we use it."
+  description: "Review 4Geeks Academy’s Privacy Policy to understand how we protect your data. Your privacy is important to us in our coding bootcamp programs."
   image: null
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   keywords: "Privacy Policy, 4Geeks Academy"
@@ -12,7 +12,7 @@ meta_info:
 #   sub_heading: ""
 #   image: "/images/bg/pricing-bg.jpg"
 
-seo_title: "Privacy Policy for 4Geeks Academy"
+seo_title: "Privacy Policy"
 
 header:
   tagline: < Privacy Policy for 4Geeks Academy >
