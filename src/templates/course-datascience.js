@@ -395,7 +395,7 @@ export const query = graphql`
                     width: 500
                     placeholder: NONE
                     quality: 100
-                    breakpoints: [200, 340, 420, 490]
+                    breakpoints: 200
                   )
                 }
               }

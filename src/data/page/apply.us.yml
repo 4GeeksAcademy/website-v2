@@ -2,13 +2,13 @@ meta_info:
   slug: apply
   title: "Apply to 4Geeks Academy Bootcamp"
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
-  description: "Apply to one of the top coding bootcamps in the world, online or in one of our locations: Miami, Santiago de Chile, Madrid, Costa Rica, Maracaibo and Caracas."
+  description: "Ready to start your tech career? Apply to 4Geeks Academy’s coding bootcamp and take the first step toward becoming a skilled software developer."
   image: "https://4geeks-academy-main.s3-us-west-2.amazonaws.com/PresentacionBienvenidaEstudiante1.jpg"
   keywords: null
   redirects: ["/apply"]
 
 ## APPLY HEADING
-seo_title: "coding bootcamp"
+seo_title: "Apply to 4geeks Academy Bootcamp"
 header:
   title: "Apply to 4Geeks"
   image:

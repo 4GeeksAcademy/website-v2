@@ -1,13 +1,13 @@
 meta_info:
   slug: the-academy
   title: "About  4Geeks Academy"
-  description: "Get to know the outcomes, demographics, cornerstones, team and story of 4Geeks Academy"
+  description: "Learn more about 4Geeks Academy, where hands-on coding training, expert mentors, and a job guarantee help you launch your tech career."
   image: ""
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   keywords: null
   redirects: []
 
-seo_title: "coding bootcamp"
+seo_title: "The Academy"
 header:
   title: "Empowering Talent with coding careers"
   paragraph: "We are specialists of code. 4Geeks is the place were developers grow and thrive."

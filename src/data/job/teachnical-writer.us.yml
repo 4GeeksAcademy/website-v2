@@ -2,7 +2,7 @@ meta_info:
   slug: "technical-writter"
   title: "Technical Writter"
   visibility: "visible"
-  description: "Work as technical writer at 4Geeks. Help us build and create a high-quality curated list of technical questions, challenges, projects, and exercises."
+  description: "Join 4Geeks Academy as a Technical Writer. Help create educational content that empowers students to succeed in coding and tech careers."
   template: "job" # js component that will be handling the rendering
   open: false #if true, this job will be accepting candidates
   image: "https://storage.googleapis.com/media-breathecode/59c3afdc064670e4d0062a42cd4bf954d1b9c93720500d4fdce265b4792538ab"
@@ -10,7 +10,7 @@ meta_info:
   redirects: []
 
 ## BANNER INFO
-banner_heading: "Technical Writer"
+banner_heading: "Technical Writer Job Opportunity"
 banner_sub_heading: ""
 banner_image: "/images/bg/pricing-bg.jpg"
 link_back: "/us/jobs"

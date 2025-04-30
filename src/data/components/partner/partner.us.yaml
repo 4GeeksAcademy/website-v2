@@ -280,10 +280,10 @@ benefits_and_charts:
   charts:
     title: "Some Numbers worth Considering:"
     list:
-      - icon: "chart-62"
+      - icon: "job"
         description: |
           According to a study by the Society for Human Resource Management, it costs an average of $4,129 to hire a new employee, with an average of 42 days to find a suitable candidate.
-      - icon: "job"
+      - icon: "chart-62"
         description: "62% of executives believe they will need to retrain or replace more than a quarter of their workforce between now and 2023 due to advancing automation and digitization (McKinsey report, 2018)."
       - icon: "notes-2"
         description: "Coding bootcamp graduates and college graduates exhibit strikingly similar employment rates."
