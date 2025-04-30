@@ -1,32 +1,45 @@
 meta_info:
-  slug: beginner-full-stack-coding-bootcamp #<---4geeaksacademy.com/us/landing/beginner-full-stack-coding-bootcamp
-  title: "Start Your Coding Journey: Beginner-Friendly Full Stack Development Bootcamp"
-  description: "Perfect for complete beginners! Learn coding from scratch with our supportive bootcamp - no previous experience required."
+  slug: beginner-full-stack-coding-bootcamp # <--- URL 4geeksacademy.com/us/landing/example
+
+  # This will show on social media when shared
+  title: "Beginner-Friendly Full Stack Coding Bootcamp - Start Your Tech Career"
+  description: "Perfect for complete beginners! Start your coding journey with our supportive bootcamp - no previous experience required."
   image: "/images/bg/main-bg.jpg"
-  keywords: "coding for beginners, learn to code, beginner programming, beginner full stack, coding bootcamp for beginners, start coding, 4Geeks Academy"
-  visibility: "visible"
-  template: "landing_a"
+  keywords: ""
+  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  template: "landing_a" # <--- choose your landing template
   redirects: []
+
+  # Set a particular course or location to the landing page
+  # this UTM fields will be also included in the CRM contact
   utm_course: ["full-stack"]
   utm_location: ["downtown-miami"]
-  automation: soft
-  tag: request_more_info
+  automation: soft # comma separated, "soft" is the default value
+  tag: request_more_info # comma separated, "request_more_info" is the default value
 
 navbar:
   logoUrl: "#"
-  buttonText: "REQUEST MORE INFO"
-  buttonUrl: "#leadform_bottom"
+  buttonText: "PERFECT FOR BEGINNERS - GET INFO" # this modifies the button text in the navbar
+  buttonUrl: "#leadform_bottom" #accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
 
 form:
+  # posible fields: "first_name", "last_name", "full_name", "phone", "email"
+  # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
-  heading: "Start Learning to Code"
-  motivation: "New to coding? No problem! Submit the form below and our friendly advisors will guide you through everything you need to know about starting your coding journey. We'll explain our beginner-friendly approach, flexible learning formats, and how we support complete beginners in becoming successful developers."
-  button_label: START YOUR JOURNEY NOW
-  redirect: null
+  heading: "Perfect for Beginners - Get Started"
+  motivation: "New to coding? Submit the form below and our friendly advisors will guide you through everything you need to know about starting your coding journey as a complete beginner."
+  button_label: START YOUR CODING JOURNEY
+  redirect: null #you can redirect to another url or entirely diffrent website
 
+apply_schollarship: # form that is displayed at the end of the landing
+  # title: "Apoyo Profesional Ilimitado"
+  imageSide: "left"
+  image: "../../../static/images/landing/apply.png"
+
+# jumbotron on the top (cannot be commented out)
 header_data:
   tagline: "Beginner's Full Stack Coding Bootcamp"
-  sub_heading: "From Zero Experience to Professional Developer in 18 Weeks - No Programming Background Required!"
+  sub_heading: "From Complete Beginner to Professional Developer in 18 Weeks - No Experience Required!"
   background: "#ffffff"
   tagline_color: "#1c1c1c"
   form_styles:
@@ -38,148 +51,59 @@ header_data:
   image_filter: brightness(0.3)
 
 features:
-  marginTop: 0px
+  marginTop: 0px #<-- separation between tagline and the bullets
+
+  #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
-    - Designed specifically for beginners - start with the basics and build up to advanced concepts
-    - Step-by-step learning path with extra support for newcomers to programming
-    - Friendly mentors who excel at teaching complete beginners
-    - Learn at your own pace with flexible schedule options
+    - No previous experience or coding skills required.
+    - Choose the schedule and format that suits you best — part-time, online, in-person, or hybrid.
+    - Flexible payment plans starting at $150 a month, with the option to start paying after landing a job.
+    - Get lifelong access to our mentors and career support.
 
-# Rest of sections maintain the same structure but with beginner-focused content
-components:
-  - name: new_design_with_bullets
-    position: 1
-    layout: two_column_left
-    swipable: False
-    background: "#FFFFFF"
-    image:
-      style: '{"backgroundSize": "cover"}'
-      src: "/images/woman-afro-with-laptop.webp"
-      shadow: true
-    section_heading:
-      text: "Your First Step Into Tech - No Experience Needed!"
-      style: '{ "font-size": "30px"}'
-    heading:
-      text: "Turn Your Interest in Technology into a Career - Even if You've Never Coded Before!"
-    sub_heading:
-      text: "Worried about starting a tech career with zero coding experience? You're not alone! Traditional learning paths can be overwhelming for beginners. At 4Geeks Academy, we specialize in taking complete beginners and turning them into job-ready developers with our proven, beginner-friendly approach."
-    button:
-      text: "Start Your Journey Today"
-      color: white
-      hover_color: "white"
-      background: "black"
-      path: "#leadform_header"
-    bullets:
-      items:
-        - text: "BEGINNER-FRIENDLY CURRICULUM"
-          icon: "check"
-        - text: "EXTRA SUPPORT FOR NEWCOMERS"
-          icon: "check"
-        - text: "PATIENT, DEDICATED MENTORS"
-          icon: "check"
+follow_bar:
+  position: "top" # top, bottom, hidden
+  content:
+    text: "No Experience Needed! \nJoin to our Full stack Coding bootcamp"
+    text_mobile: "No Experience Needed! \nJoin to our Full stack Coding bootcamp"
+    # devices:   XL      LG    MD      SM    XS
+    font_size: ["25px", "25px", "25px", "20px", "18px"]
+  button:
+    text: "Get more information"
+    path: "#leadform_header"
+  phone:
+    text: "Call"
 
-  - name: how-it-works
-    position: 3
-    background: "#E3F9FE !important"
-    layout: iconogram
-    swipable: True
-    heading:
-      text: "3 Simple Steps to Your New Tech Career - Perfect for Beginners!"
-      font_size: ["30px", "30px", "30px", "30px", "30px"]
-    sub_heading:
-      text: 'The tech industry needs more developers, and you don''t need prior experience to start! The average entry-level developer salary is $65,000+ - let us help you start your journey to a rewarding tech career.'
-      font_size: ["16px", "16px", "16px", "16px", "16px"]
-      style: '{ "textAlign": "center", "width": "60%" }'
-    icons:
-      - icon: "graduation-2"
-        title: "Start Your Journey"
-        content: "Join 4Geeks Academy and start from the very basics. Our program is designed to take you from zero knowledge to professional developer, with extra support every step of the way."
-      - icon: "laptop_new"
-        title: "Learn Step by Step"
-        content: "Progress from basic concepts to advanced skills at your own pace. Get hands-on practice with real projects and benefit from our beginner-friendly learning environment."
-      - icon: "stairswflag"
-        title: "Land Your First Tech Job"
-        content: "Graduate with all the skills you need for an entry-level developer position. We'll help you prepare your first tech resume, build your portfolio, and connect you with companies that welcome fresh talent."
+short_badges:
+  - name: "Ebootcamp"
+    url: ""
+    image: "../../../static/images/badges/ebootcamp-top.png"
+    alt: "Top Coding Bootcamp"
+  - name: "Premios Tecnologia Siglo XXI"
+    url: ""
+    image: "../../../static/images/awards/premios_tecnologia_sigloxxi.png"
+    alt: "Mejor centro de Coding Bootcamp"
+  - name: "Course Report"
+    url: ""
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+    alt: "Top Coding Bootcamps Course Report"
+  - name: "Switchup"
+    url: ""
+    image: "../../../static/images/badges/switchup-badge-2023.png"
+    alt: "Best coding bootcamp Switchup 2023"
+  - name: "Florida Department of Education"
+    url: ""
+    image: "../../../static/images/badges/licensed.png"
+    alt: "Florida Department of Education"
 
-  - name: geekinfo_2
-    position: 4
-    layout: two_column_right
-    proportions: [6, 6]
-    background: ""
-    image:
-      style: '{ "backgroundSize": "cover" }'
-      src: "/images/landing/two-womans-and-laptop.webp"
-      shadow: true
-    section_heading:
-      text: ""
-      style: '{ "font-size": "30px" }'
-    heading:
-      text: "Why Choose 4Geeks for Your Start in Coding?"
-      font_size: ["40px", "40px", "40px", "40px", "40px"]
-    sub_heading:
-      text: "The Perfect Academy for Beginners"
-      font_size: ["16px", "16px", "16px", "16px", "16px"]
-    button:
-      text: "Compare 4Geeks Vs others"
-      color: white
-      hover_color: "white"
-      background: "black"
-      path: "#geeks_vs_others"
-    bullets:
-      items:
-        - heading: "BEGINNER-FOCUSED CURRICULUM"
-          text: "Start from zero and progress naturally through our carefully designed learning path. Master the fundamentals before moving to advanced concepts."
-          icon: "check"
-        - heading: "EXTRA SUPPORT FOR NEWCOMERS"
-          text: "Get unlimited 1:1 mentoring sessions specifically designed to help beginners overcome initial challenges."
-          icon: "check"
-        - heading: "SUPPORTIVE LEARNING ENVIRONMENT"
-          text: "Join a community that welcomes beginners and learn alongside others who are starting their coding journey."
-          icon: "check"
-        - heading: "BEGINNER-FRIENDLY PAYMENT OPTIONS"
-          text: "Focus on learning with our flexible payment plans - start for as low as $150/month or pay when you land your first tech job."
-          icon: "check"
-
-  - name: passion
-    position: 10
-    background: "#fbfbfb"
-    layout: two_column_left
-    proportions: [6, 6]
-    image:
-      style: '{ "border" : "3px solid black", "backgroundSize": "contain", "marginTop": "15px"}'
-      shadow: true
-      src: "/images/landing/alissa-video.webp"
-      link: "https://www.switchup.org/bootcamps/4geeks-academy"
-    video: "EcqasocRKHo"
-    heading:
-      text: "From Complete Beginner to Professional Developer"
-      font_size: ["40px", "40px", "40px", "40px", "40px"]
-    content:
-      text: ""
-      font_size: ["16px"]
-    button:
-      text: "START YOUR CODING JOURNEY"
-      background: black
-      color: white
-      hover_color: "#white"
-      path: "#leadform_bottom"
-    bullets:
-      items:
-        - heading: "START WITH ZERO KNOWLEDGE"
-          text: "Our program is specifically designed for complete beginners. We'll guide you through every step of your coding journey."
-          icon: "check"
-        - heading: "LEARN AT YOUR PACE"
-          text: "Choose between part-time or full-time programs. Our flexible schedules let you balance learning with your current commitments."
-          icon: "check"
-        - heading: "GET HIRED AS A JUNIOR DEVELOPER"
-          text: "Graduate with the perfect mix of fundamental knowledge and practical skills that employers look for in junior developers."
-          icon: "check"
+#
+# ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
+#
 
 program_details:
   position: 2
-  heading: "Learn the Fundamentals First"
-  sub_heading: "Start with the basics and progress to advanced concepts at your own pace"
+  heading: "Start with the Basics, Advance to Master Level"
+  sub_heading: "Learn step-by-step, from core concepts to advanced programming"
 
 badges:
   position: 5
@@ -188,7 +112,7 @@ badges:
 geeks_vs_others:
   position: 7
   heading: "Why Our Bootcamp is Perfect for Beginners"
-  paragraph: "See how we compare to other learning options"
+  paragraph: ""
   total_rows: 5
 
 rating_reviews:
@@ -214,7 +138,7 @@ rating_reviews:
 
 alumni_projects:
   position: 14
-  heading: "See What Beginners Can Build"
+  heading: "See What Our Beginners Build"
   sub_heading: "Projects created by students who started with zero coding knowledge"
 
 who_is_hiring:
@@ -222,3 +146,144 @@ who_is_hiring:
   limit: 4
   heading: "Companies That Welcome Junior Developers"
   sub_heading: "Our hiring partners actively seek fresh talent from our program"
+
+# Possible layouts: [two_column_left_image, two_column_right_image]
+components:
+  - name: new_design_with_bullets
+    position: 1
+    layout: two_column_left
+    swipable: False
+    background: "#FFFFFF"
+    image:
+      style: '{"backgroundSize": "cover"}'
+      src: "/images/woman-afro-with-laptop.webp"
+      shadow: true
+    section_heading:
+      text: "Start Your Tech Career - No Experience Needed!"
+      style: '{ "font-size": "30px"}'
+    heading:
+      text: "Transform from Complete Beginner to Professional Developer - We'll Guide You Every Step!"
+    sub_heading:
+      text: "Are you excited about switching to a tech career but worried about landing your first job? Traditional ways of learning can be costly, lengthy, and often lack the hands-on training and industry knowledge to guarantee your real-world success. Don't worry, at 4Geeks Academy we know exactly how to get you career-ready and hired!"
+    button:
+      text: "Send me more information"
+      color: white
+      hover_color: "white"
+      background: "black"
+      path: "#leadform_header"
+    content:
+      text: ""
+      font_size: ["16px"]
+      path: ""
+    bullets:
+      items:
+        - text: "CAREER RELEVANT SYLLABUS"
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - text: "PERSONALIZED CAREER SUPPORT"
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - text: "LIFELONG ACCESS TO MENTORSHIPS"
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+
+  - name: how-it-works
+    position: 3
+    background: "#E3F9FE !important"
+    layout: iconogram
+    swipable: True
+    heading:
+      text: "3 Simple Steps from Beginner to Professional Developer"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      text: 'According to the U.S. Bureau of Labor Statistics, software developers in the U.S. have a higher-than-average job outlook and earn a median salary of $110,140 a year. Here’s how to join the ranks of successful programmers!'
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+      style: '{ "textAlign": "center", "width": "60%" }'
+    text_link: "/"
+    icons:
+      - icon: "graduation-2"
+        title: "Join 4Geeks Academy"
+        content: "Develop your full techie potential! Learn industry-relevant skills from true coding experts, connect with a vibrant community, and get a support network like no other."
+      - icon: "laptop_new"
+        title: "Learn to Code"
+        content: "Experience interactive, hands-on learning with live online classes and access to recorded materials to deepen your understanding. Tackle challenging projects using the most important tools and frameworks in the tech industry."
+      - icon: "stairswflag"
+        title: "Job placement"
+        content: "Thanks to our program you’ll be equipped with the most sought-after skills in the job market and a portfolio to show it. We’ll help you prepare your professional profile, portfolio and CV like a pro, connect you with top companies, and help you land your dream job. You’ll have all you need to launch a fulfilling coding career!"
+
+  - name: geekinfo_2
+    position: 4
+    layout: two_column_right
+    proportions: [6, 6]
+    background: ""
+    image:
+      style: '{ "backgroundSize": "cover" }'
+      src: "/images/landing/two-womans-and-laptop.webp"
+      shadow: true
+    section_heading:
+      text: ""
+      style: '{ "font-size": "30px" }'
+    heading:
+      text: "Why Choose 4Geeks for Your Coding Journey?"
+      font_size: ["40px", "40px", "40px", "40px", "40px"]
+    sub_heading:
+      text: "The Perfect Academy for Complete Beginners"
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+    button:
+      text: "Compare 4Geeks Vs others"
+      color: white
+      hover_color: "white"
+      background: "black"
+      path: "#geeks_vs_others"
+    content:
+      text: ""
+      font_size: ["16px"]
+      path: ""
+    bullets:
+      items:
+        - heading: "FOCUS ON CAREER-RELEVANT SKILLS"
+          text: "Master the most in-demand skills of the tech industry. Gain real-world practical knowledge and confidence with our hands-on methodology."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "UNLIMITED 1:1 MENTORSHIP"
+          text: "Get expert assistance whenever you need it. Our mentors will always be available to support you, even after graduation."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "COMPREHENSIVE CAREER SUPPORT"
+          text: "Receive personalized guidance for preparing your profile, resume, and portfolio. Benefit from tailored practice interviews and job search tips, accessible for a lifetime."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+        - heading: "AFFORDABILITY AND FINANCIAL SUPPORT"
+          text: "Access high-quality education at the most affordable price, complemented by flexible payment plans, scholarship opportunities, ISAs, and more."
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+
+  - name: passion
+    position: 10
+    background: "#fbfbfb"
+    layout: two_column_left
+    proportions: [6, 6]
+    image:
+      style: '{ "border" : "3px solid black", "backgroundSize": "contain", "marginTop": "15px"}'
+      shadow: true
+      src: "/images/landing/alissa-video.webp"
+      link: "https://www.switchup.org/bootcamps/4geeks-academy"
+    video: "EcqasocRKHo"
+    heading:
+      text: "From Zero Experience to Professional Developer"
+      font_size: ["40px", "40px", "40px", "40px", "40px"]
+    content:
+      text: ""
+      font_size: ["16px"]
+    button:
+      text: "GET MORE INFO"
+      background: black
+      color: white
+      hover_color: "#white"
+      path: "#leadform_bottom"
+    bullets:
+      items:
+        - heading: "OVERCOME FINANCIAL BARRIERS"
+          text: "With a $20 million scholarship fund, 4Geeks is set on making high quality tech education accessible. We’ll help you find a solution that suits your needs!"
+          icon: "check"
+        - heading: "FITS YOUR LIFE"
+          text: "Our part-time programs are designed to  fit busy schedules, letting you pursue your tech goals without compromising your life"
+          icon: "check"
+        - heading: "HANDS-ON, INDUSTRY-RELEVANT SYLLABUS"
+          text: "Become a confident full-stack developer with our hands-on curriculum. Acquire the mindset and master the skills that will set you apart in the job market."
+          icon: "check"
+
+
