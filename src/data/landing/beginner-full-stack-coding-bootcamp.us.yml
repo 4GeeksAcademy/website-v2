@@ -1,0 +1,224 @@
+meta_info:
+  slug: beginner-full-stack-coding-bootcamp #<---4geeaksacademy.com/us/landing/beginner-full-stack-coding-bootcamp
+  title: "Start Your Coding Journey: Beginner-Friendly Full Stack Development Bootcamp"
+  description: "Perfect for complete beginners! Learn coding from scratch with our supportive bootcamp - no previous experience required."
+  image: "/images/bg/main-bg.jpg"
+  keywords: "coding for beginners, learn to code, beginner programming, beginner full stack, coding bootcamp for beginners, start coding, 4Geeks Academy"
+  visibility: "visible"
+  template: "landing_a"
+  redirects: []
+  utm_course: ["full-stack"]
+  utm_location: ["downtown-miami"]
+  automation: soft
+  tag: request_more_info
+
+navbar:
+  logoUrl: "#"
+  buttonText: "REQUEST MORE INFO"
+  buttonUrl: "#leadform_bottom"
+
+form:
+  fields: ["full_name", "phone", "email"]
+  heading: "Start Learning to Code"
+  motivation: "New to coding? No problem! Submit the form below and our friendly advisors will guide you through everything you need to know about starting your coding journey. We'll explain our beginner-friendly approach, flexible learning formats, and how we support complete beginners in becoming successful developers."
+  button_label: START YOUR JOURNEY NOW
+  redirect: null
+
+header_data:
+  tagline: "Beginner's Full Stack Coding Bootcamp"
+  sub_heading: "From Zero Experience to Professional Developer in 18 Weeks - No Programming Background Required!"
+  background: "#ffffff"
+  tagline_color: "#1c1c1c"
+  form_styles:
+    background: "#0084FF"
+    color: "white"
+    button:
+      background: "black"
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+  image_filter: brightness(0.3)
+
+features:
+  marginTop: 0px
+  styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
+  bullets:
+    - Designed specifically for beginners - start with the basics and build up to advanced concepts
+    - Step-by-step learning path with extra support for newcomers to programming
+    - Friendly mentors who excel at teaching complete beginners
+    - Learn at your own pace with flexible schedule options
+
+# Rest of sections maintain the same structure but with beginner-focused content
+components:
+  - name: new_design_with_bullets
+    position: 1
+    layout: two_column_left
+    swipable: False
+    background: "#FFFFFF"
+    image:
+      style: '{"backgroundSize": "cover"}'
+      src: "/images/woman-afro-with-laptop.webp"
+      shadow: true
+    section_heading:
+      text: "Your First Step Into Tech - No Experience Needed!"
+      style: '{ "font-size": "30px"}'
+    heading:
+      text: "Turn Your Interest in Technology into a Career - Even if You've Never Coded Before!"
+    sub_heading:
+      text: "Worried about starting a tech career with zero coding experience? You're not alone! Traditional learning paths can be overwhelming for beginners. At 4Geeks Academy, we specialize in taking complete beginners and turning them into job-ready developers with our proven, beginner-friendly approach."
+    button:
+      text: "Start Your Journey Today"
+      color: white
+      hover_color: "white"
+      background: "black"
+      path: "#leadform_header"
+    bullets:
+      items:
+        - text: "BEGINNER-FRIENDLY CURRICULUM"
+          icon: "check"
+        - text: "EXTRA SUPPORT FOR NEWCOMERS"
+          icon: "check"
+        - text: "PATIENT, DEDICATED MENTORS"
+          icon: "check"
+
+  - name: how-it-works
+    position: 3
+    background: "#E3F9FE !important"
+    layout: iconogram
+    swipable: True
+    heading:
+      text: "3 Simple Steps to Your New Tech Career - Perfect for Beginners!"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      text: 'The tech industry needs more developers, and you don''t need prior experience to start! The average entry-level developer salary is $65,000+ - let us help you start your journey to a rewarding tech career.'
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+      style: '{ "textAlign": "center", "width": "60%" }'
+    icons:
+      - icon: "graduation-2"
+        title: "Start Your Journey"
+        content: "Join 4Geeks Academy and start from the very basics. Our program is designed to take you from zero knowledge to professional developer, with extra support every step of the way."
+      - icon: "laptop_new"
+        title: "Learn Step by Step"
+        content: "Progress from basic concepts to advanced skills at your own pace. Get hands-on practice with real projects and benefit from our beginner-friendly learning environment."
+      - icon: "stairswflag"
+        title: "Land Your First Tech Job"
+        content: "Graduate with all the skills you need for an entry-level developer position. We'll help you prepare your first tech resume, build your portfolio, and connect you with companies that welcome fresh talent."
+
+  - name: geekinfo_2
+    position: 4
+    layout: two_column_right
+    proportions: [6, 6]
+    background: ""
+    image:
+      style: '{ "backgroundSize": "cover" }'
+      src: "/images/landing/two-womans-and-laptop.webp"
+      shadow: true
+    section_heading:
+      text: ""
+      style: '{ "font-size": "30px" }'
+    heading:
+      text: "Why Choose 4Geeks for Your Start in Coding?"
+      font_size: ["40px", "40px", "40px", "40px", "40px"]
+    sub_heading:
+      text: "The Perfect Academy for Beginners"
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+    button:
+      text: "Compare 4Geeks Vs others"
+      color: white
+      hover_color: "white"
+      background: "black"
+      path: "#geeks_vs_others"
+    bullets:
+      items:
+        - heading: "BEGINNER-FOCUSED CURRICULUM"
+          text: "Start from zero and progress naturally through our carefully designed learning path. Master the fundamentals before moving to advanced concepts."
+          icon: "check"
+        - heading: "EXTRA SUPPORT FOR NEWCOMERS"
+          text: "Get unlimited 1:1 mentoring sessions specifically designed to help beginners overcome initial challenges."
+          icon: "check"
+        - heading: "SUPPORTIVE LEARNING ENVIRONMENT"
+          text: "Join a community that welcomes beginners and learn alongside others who are starting their coding journey."
+          icon: "check"
+        - heading: "BEGINNER-FRIENDLY PAYMENT OPTIONS"
+          text: "Focus on learning with our flexible payment plans - start for as low as $150/month or pay when you land your first tech job."
+          icon: "check"
+
+  - name: passion
+    position: 10
+    background: "#fbfbfb"
+    layout: two_column_left
+    proportions: [6, 6]
+    image:
+      style: '{ "border" : "3px solid black", "backgroundSize": "contain", "marginTop": "15px"}'
+      shadow: true
+      src: "/images/landing/alissa-video.webp"
+      link: "https://www.switchup.org/bootcamps/4geeks-academy"
+    video: "EcqasocRKHo"
+    heading:
+      text: "From Complete Beginner to Professional Developer"
+      font_size: ["40px", "40px", "40px", "40px", "40px"]
+    content:
+      text: ""
+      font_size: ["16px"]
+    button:
+      text: "START YOUR CODING JOURNEY"
+      background: black
+      color: white
+      hover_color: "#white"
+      path: "#leadform_bottom"
+    bullets:
+      items:
+        - heading: "START WITH ZERO KNOWLEDGE"
+          text: "Our program is specifically designed for complete beginners. We'll guide you through every step of your coding journey."
+          icon: "check"
+        - heading: "LEARN AT YOUR PACE"
+          text: "Choose between part-time or full-time programs. Our flexible schedules let you balance learning with your current commitments."
+          icon: "check"
+        - heading: "GET HIRED AS A JUNIOR DEVELOPER"
+          text: "Graduate with the perfect mix of fundamental knowledge and practical skills that employers look for in junior developers."
+          icon: "check"
+
+program_details:
+  position: 2
+  heading: "Learn the Fundamentals First"
+  sub_heading: "Start with the basics and progress to advanced concepts at your own pace"
+
+badges:
+  position: 5
+  heading: "Join a Trusted Academy for Beginners"
+
+geeks_vs_others:
+  position: 7
+  heading: "Why Our Bootcamp is Perfect for Beginners"
+  paragraph: "See how we compare to other learning options"
+  total_rows: 5
+
+rating_reviews:
+  position: 11
+  heading: "Trusted by Thousands of Beginning Programmers"
+  rating_list:
+    - alt: "Career Karma"
+      image: "../../../static/images/badges/career-karma.png"
+      rating: 4.89
+      url: ""
+    - alt: "Switchup"
+      image: "../../../static/images/badges/switchup-img.png"
+      rating: 4.91
+      url: ""
+    - alt: "Course Report"
+      image: "../../../static/images/badges/course-report.png"
+      rating: 4.84
+      url: ""
+    - alt: "Google"
+      image: "../../../static/images/badges/google.png"
+      rating: 5
+      url: ""
+
+alumni_projects:
+  position: 14
+  heading: "See What Beginners Can Build"
+  sub_heading: "Projects created by students who started with zero coding knowledge"
+
+who_is_hiring:
+  position: 15
+  limit: 4
+  heading: "Companies That Welcome Junior Developers"
+  sub_heading: "Our hiring partners actively seek fresh talent from our program"
