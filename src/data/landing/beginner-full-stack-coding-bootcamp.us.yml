@@ -14,7 +14,7 @@ meta_info:
 
 navbar:
   logoUrl: "#"
-  buttonText: "REQUEST MORE INFO"
+  buttonText: "REQUEST MORE INFO NOW"
   buttonUrl: "#leadform_bottom"
 
 form:
