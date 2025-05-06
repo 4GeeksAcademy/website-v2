@@ -41,7 +41,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 # jumbotron on the top (cannot be commented out)
 header_data:
   background: "#ffffff"
-  tagline: Bootcamp de Programación en Costa Rica 
+  tagline: Bootcamp de programación en Costa Rica | 4Geeks Academy 
   sub_heading: ""
   tagline_color: "#1c1c1c"
   form_styles:

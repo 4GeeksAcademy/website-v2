@@ -42,7 +42,7 @@ navbar:
 header_data:
   partner_logo_url: "../../../static/images/partner/logo-de-banco-de-chile.jpg"
   background: "#ffffff"
-  tagline: Bootcamp de Programación Web
+  tagline: Bootcamp de programación en Santiago de Chile
   sub_heading: ""
   tagline_color: "#1c1c1c"
   form_styles:

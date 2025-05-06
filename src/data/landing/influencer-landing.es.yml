@@ -40,7 +40,7 @@ apply_schollarship: # form that is displayed at the end of the landing
   
 header_data:
   background: "#FFFFFF"
-  tagline: ¡Bienvenido a 4Geeks Academy! La academia de programación líder en el mundo
+  tagline: Academia de Programación Online
   sub_heading: Con más de 7 años de experiencia tenemos presencia en USA, Europa y Latinoamérica. En nuestra academia, te enseñamos habilidades y destrezas relevantes para el futuro
   tagline_color: "#1c1c1c"
   form_styles:

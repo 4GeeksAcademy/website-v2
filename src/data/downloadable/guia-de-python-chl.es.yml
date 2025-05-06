@@ -30,7 +30,7 @@ navbar:
 # jumbotron on the top (cannot be commented out)
 header_data:
   background: "black"
-  tagline: "Amazing Python: Guía rápida para principiantes"
+  tagline: "La guía que te ayudará a dar tus primeros pasos en Python"
   tagline_color: "white"
   sub_heading: ""
   partner_logo_url: "../../../static/images/techs/python-logo.png"

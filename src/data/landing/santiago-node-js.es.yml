@@ -40,7 +40,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 # jumbotron on the top (cannot be commented out)
 header_data:
   background: "#ffffff"
-  tagline: Curso de NodeJS
+  tagline: Aprende NodeJS en 6 semanas
   sub_heading: "<Continua programando tu historia/> ¡Aprende nuevas tecnologías!"
   tagline_color: "#1c1c1c"
   form_styles:
