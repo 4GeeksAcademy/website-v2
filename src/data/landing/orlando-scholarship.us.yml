@@ -68,7 +68,7 @@ short_badges:
 
 form:
   fields: ["full_name", "phone", "email"]
-  heading: "Get more information
+  heading: "Get more information"
   motivation: "Fill out the form to receive the program details and scholarship information!"
   button_label: "Apply"
   redirect: "/us/thank-you/"
@@ -90,8 +90,8 @@ follow_bar:
 components:
   - name: leadform_header
     layout: two_column_left
-    proportions: [6, 6]
-    video: "https://www.youtube.com/shorts/PUuGlIALKH4"
+    proportions: [5, 7]
+    video: "https://www.youtube.com/watch?v=PUuGlIALKH4"
     heading:
       text: "FLORIDA’S TECH SCENE IS THRIVING"
       font_size: ["40px", "34px", "34px", "25px", "20px"]
@@ -147,7 +147,7 @@ components:
       font_size: ["40px", "34px", "34px", "25px", "20px"]
 
     sub_heading:
-      font_size: ["18px", "18px", "18px", "18px", "18px"]
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
       style: '{ "font-weight": "100" }'
       text: "4Geeks Academy is more than a coding school—we’re a community of innovators and code enthusiasts dedicated to helping you build a successful tech career. Based in Orlando, with over 7 campuses worldwide and a vibrant network of 4,000+ students, teachers, partners, and alumni, you’ll be gaining a support network like no other, ready to assist you every step of the way—even after you graduate. Where there’s a geek, there’s a way!
         What sets us apart:"
@@ -214,14 +214,14 @@ components:
     background: "#F4F9FF"
     image:
       style: '{ "backgroundSize": "contain", "backgroundPosition": "center" }'
-      shadow: true 
+      shadow: false 
       src: "/images/landing/latin-woman-laptop-coffee.png"
     heading:
       text: "Take the stress out of financing your tuition"
-      font_size: ["40px", "34px", "34px", "25px", "20px"]
+      font_size: ["40px", "34px", "34px", "25px", "25px"]
     sub_heading:
       text: "The scholarship covers 30% of your bootcamp tuition, and you can finance the remaining balance with flexible payment plans. This is your chance to focus on what really matters: gaining the skills to launch a career you love."   
-      font_size: ["18px", "18px", "18px", "18px", "18px"]
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
     bullets:
       items:
         - text: "Enroll in the program."
@@ -248,7 +248,7 @@ components:
       style: '{ "font-weight": "400", "color": "#3A3A3A" }'
       text: "What our graduates say"
       font_size: ["35px", "35px", "30px", "30px", "30px"]
-    filter_indexes: ['azu-bota','nai-kali','cha-fabr', 'jona-ferra', 'jos-bra', 'kev-so']
+    filter_indexes: ['azu-bota','nai-kali','cha-fabr', 'jona-ferra', 'kev-so', 'jos-bra',]
 
 badges:
   position: 10
