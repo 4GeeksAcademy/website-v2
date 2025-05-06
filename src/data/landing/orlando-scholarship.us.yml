@@ -18,7 +18,7 @@ navbar:
   logoUrl: "#"
 
 header_data:
-  tagline: "Orlando Residents: Your Tech Career Starts Here – Get Ready with a Scholarship!"
+  tagline: "Orlando Residents: Your Tech Career Starts Here"
   sub_heading: ""
   background: "#ffffff"
   tagline_color: "#1c1c1c"
@@ -66,7 +66,12 @@ short_badges:
     image: "../../../static/images/badges/arp-logo-certification.png"
     alt: "ARP Certificate"
 
-  
+form:
+  fields: ["full_name", "phone", "email"]
+  heading: "Get more information
+  motivation: "Fill out the form to receive the program details and scholarship information!"
+  button_label: "Apply"
+  redirect: "/us/thank-you/"
     
     #-----REVISAR----#
 
@@ -83,21 +88,13 @@ follow_bar:
     text: ""
 
 components:
-
   - name: leadform_header
     layout: two_column_left
     proportions: [6, 6]
-    image:
-      style: '{ "backgroundSize": "contain" }'
-      src: "/images/landing/hombre-con-laptop.png"
-      shadow: false
+    video: "https://www.youtube.com/shorts/PUuGlIALKH4"
     heading:
       text: "FLORIDA’S TECH SCENE IS THRIVING"
       font_size: ["40px", "34px", "34px", "25px", "20px"]
-    sub_heading:
-      style: '{}'
-      text: "The Time to Join is Now!"
-      font_size: ["16px"]
     button:
       text: "Apply Now"
       color: "white"
@@ -136,13 +133,6 @@ components:
         color: "#BE8BFF"
         title: "You're Set!"
         content: "Become a tech professional with unlimited mentorship and career support."
-    button:
-      text: "4geeks vs. Others"
-      path: "#geeks_vs_others"
-      background: "#232323"
-      color: white
-      hover: white
-      style: '{font-weight: 800}'
 
   - name: why-4geeks
     position: 6
@@ -154,7 +144,7 @@ components:
     heading:
       style: '{ "margin-top": "0px" }'
       text: "Why 4Geeks?"
-      font_size: ["30px", "30px", "30px", "30px", "30px"]
+      font_size: ["40px", "34px", "34px", "25px", "20px"]
 
     sub_heading:
       font_size: ["18px", "18px", "18px", "18px", "18px"]
@@ -223,14 +213,15 @@ components:
     proportions: [6, 6]
     background: "#F4F9FF"
     image:
-      style: '{ "backgroundSize": "cover", "backgroundPosition": "center" }'
+      style: '{ "backgroundSize": "contain", "backgroundPosition": "center" }'
       shadow: true 
       src: "/images/landing/latin-woman-laptop-coffee.png"
     heading:
       text: "Take the stress out of financing your tuition"
-      font_size: ["28px", "28px", "28px", "26px", "26px"]
+      font_size: ["40px", "34px", "34px", "25px", "20px"]
     sub_heading:
       text: "The scholarship covers 30% of your bootcamp tuition, and you can finance the remaining balance with flexible payment plans. This is your chance to focus on what really matters: gaining the skills to launch a career you love."   
+      font_size: ["18px", "18px", "18px", "18px", "18px"]
     bullets:
       items:
         - text: "Enroll in the program."
@@ -258,19 +249,11 @@ components:
       text: "What our graduates say"
       font_size: ["35px", "35px", "30px", "30px", "30px"]
     filter_indexes: ['azu-bota','nai-kali','cha-fabr', 'jona-ferra', 'jos-bra', 'kev-so']
-    variant: small
 
 badges:
   position: 10
   heading: "8 Years empowering people to succeed in tech"
   sub_heading: "Licensed by the Florida Department of Education, recognized by Forbes as a top 5 Coding School, and consistently ranked among the world's best coding bootcamps by major independent listings."
-
-form:
-  fields: ["full_name", "phone", "email"]
-  heading: "Join our Award-Winning Coding Program"
-  motivation: "Fill out the form and get started!"
-  button_label: SUBMIT
-  redirect: "/us/thank-you/"
 
 apply_schollarship:
   imageSide: "right"
