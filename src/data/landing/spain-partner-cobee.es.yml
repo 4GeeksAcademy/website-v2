@@ -41,7 +41,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 # jumbotron on the top (cannot be commented out)
 header_data:
   background: "#ffffff"
-  tagline: Cobee y 4Geeks se unen para impulsar tu carrera en Tech 
+  tagline: Cobee y 4Geeks Academy se unen para darte un super descuento 
   sub_heading: Conviértete en Full-Stack Developer o Data Scientist. Disfruta de beneficios que no encontrarás en ningún otro lugar.
   tagline_color: "#1c1c1c"
   form_styles:

@@ -6,7 +6,7 @@ meta_info:
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   keywords: "términos y condiciones, 4Geeks Academy"
   redirects: []
-seo_title: 4Geeks Academy
+seo_title: AVISO LEGAL Y CONDICIONES DE USO
 header:
   tagline: < Aviso Legal 4Geeks Academy >
   sub_heading: ""

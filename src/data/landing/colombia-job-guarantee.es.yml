@@ -40,7 +40,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 # jumbotron on the top (cannot be commented out)
 header_data:
   background: "#ffffff"
-  tagline: Empleo Garantizado en Colombia
+  tagline: Bootcamp de programación en Colombia, consigue empleo como programador.
   tagline_color: "#1c1c1c"
   form_styles:
     background: "#0084FF"

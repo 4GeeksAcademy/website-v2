@@ -11,11 +11,11 @@ meta_info:
   redirects: []
 
 banner:
-  tagline: "CONOCE A NUESTROS GRADUADOS"
+  tagline: "Graduados de 4geeks Academy"
   sub_heading: ""
 
 about:
-  heading: "MÁS SOBRE 4GEEKS ACADEMY"
+  heading: "Más sobre 4Geeks Academy"
   sub_heading: ""
   about_image:
     image: ../../../static/images/our-story.png
