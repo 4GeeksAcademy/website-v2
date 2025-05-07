@@ -4,7 +4,7 @@ meta_info:
   # This will show on social media when shared
   title: "Bootcamp de programación con Math2Me | 4Geeks Academy"
   description: "Únete a 4Geeks Academy y Math2Me para aprender programación. El único coding bootcamp que te ofrece mentorías ilimitadas de por vida."
-  image: "../../../static/images/influencers/math2me.webp"
+  image: "../../../static/images/bg/math2me.webp"
   keywords: "Bootcamp de Programación, Math2Me, Bootcamp de python, Bootcamp de React y Javascript, Bootcamp de Informática, Coding Bootcamp, 4Geeks Academy"
 
   template: "landing_a" # <--- choose your landing template
@@ -107,7 +107,7 @@ who_is_hiring:
   sub_heading: "Nos encanta ver crecer a nuestros estudiantes, es por eso que nos esforzamos cada día por tener más aliados, para que puedas trabajar en empresas que te ayuden a seguir creciendo profesionalmente."
 
 components:
-  - name: aprender_a_programar
+  - name: leadform_header
     position: 1
     layout: two_column_left
     proportions: [6, 6]
