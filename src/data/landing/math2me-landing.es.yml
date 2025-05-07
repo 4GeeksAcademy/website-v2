@@ -4,7 +4,7 @@ meta_info:
   # This will show on social media when shared
   title: "Bootcamp de programación con Math2Me | 4Geeks Academy"
   description: "Únete a 4Geeks Academy y Math2Me para aprender programación. El único coding bootcamp que te ofrece mentorías ilimitadas de por vida."
-  image: "../../../static/images/bg/main-bg.jpg"
+  image: "../../../static/images/influencers/math2me.webp"
   keywords: "Bootcamp de Programación, Math2Me, Bootcamp de python, Bootcamp de React y Javascript, Bootcamp de Informática, Coding Bootcamp, 4Geeks Academy"
 
   template: "landing_a" # <--- choose your landing template
@@ -107,16 +107,16 @@ who_is_hiring:
   sub_heading: "Nos encanta ver crecer a nuestros estudiantes, es por eso que nos esforzamos cada día por tener más aliados, para que puedas trabajar en empresas que te ayuden a seguir creciendo profesionalmente."
 
 components:
-  - name: name
+  - name: aprender_a_programar
     position: 1
     layout: two_column_left
     proportions: [6, 6]
     background: "#edfafc"
     image:
-      style: '{ "backgroundSize": "contain"}'
+      style: '{ "backgroundSize": "contain", "background-position": "center"}'
       src: "/images/landing/hombre-joven-con-laptop.webp"
     heading:
-      text: "Aprende programación con el método Math2Me y 4Geeks Academy"
+      text: "Aprende programación con Math2Me y 4Geeks Academy"
       font_size: ["24px", "24px", "24px", "24px", "24px"]
     sub_heading:
       text: "¿Quieres convertirte en un desarrollador web cotizado? Math2Me y 4Geeks Academy te ofrecen el Coding Bootcamp #1 de Latinoamérica, donde aprenderás las habilidades más demandadas por las empresas en solo 18 semanas."
@@ -138,12 +138,11 @@ components:
     proportions: [6, 6]
     background: ""
     image:
-      style: '{ "backgroundSize": "contain" }'
       src: "/images/landing/Group-6626-with-border.webp"
-      shadow: false
+      style: '{ "backgroundSize": "contain", "background-position": "center"}'
     heading:
       text: "Math2Me y 4Geeks Academy: La combinación perfecta para tu futuro en tecnología"
-      font_size: ["40px", "40px", "40px", "40px", "40px"]
+      font_size: ["40px", "40px", "40px", "34px", "34px"]
     sub_heading:
       text: "Aprende las tecnologías más demandadas por la industria con el método de enseñanza de Math2Me y la experiencia de 4Geeks Academy en el mundo tech."
       font_size: ["16px", "16px", "16px", "16px", "16px"]
