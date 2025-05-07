@@ -40,7 +40,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 # jumbotron on the top (cannot be commented out)
 header_data:
   background: "#ffffff"
-  tagline: Clases de Data Science y Machine Learning
+  tagline: Clases de Data Science en Santiago de Chile, aprende ciencia de datos en 15 semanas y consigue trabajo como científico de datos.
   sub_heading: "Domina Data Science y Machine Learning desde cero y accede a oportunidades como Data Scientist Junior"
   tagline_color: "#1c1c1c"
   form_styles:

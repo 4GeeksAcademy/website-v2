@@ -33,7 +33,7 @@ form:
 
 # jumbotron on the top (cannot be commented out)
 header_data:
-  tagline: +1.000.000€ in scholarshipsh
+  tagline: ¡Obtén tu beca!
   sub_heading: ""
   partner_logo_url: "../../../static/images/partner/landing-jobs-black.png"
   # background_image: "../../../static/images/Happy-People-Landing-4Geeks-ES.jpg"
