@@ -69,7 +69,7 @@ const CustomBar = ({
   return (
     <Div
       id="custom-bar"
-      display_md={isContentBarActive ? display_md : "block"}  // Cambia "none" por "block"
+      display_md={isContentBarActive ? display_md : "block"} // Cambia "none" por "block"
       display_xxs={isContentBarActive ? display_xxs : "block"} // Cambia "none" por "block"
       style={{ top: "0px" }}
       width="100%"

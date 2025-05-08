@@ -254,7 +254,7 @@ components:
       text: "¡Paga solo cuando consigas trabajo!"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
     sub_heading:
-      text: "No tienes que pagar absolutamente nada para apuntarte al programa. Solo cuando consigas un trabajo en el que ganes más de 16.000 € al año pagarás tu formación. Sin intereses, sin incrementos, sin trucos. Es el Income Share Agreement (ISA) más económico que conseguirás."
+      text: "No tienes que pagar absolutamente nada para apuntarte al programa. Solo cuando consigas un trabajo en el que ganes más de 16.000 € al año pagarás tu formación. Sin intereses, sin incrementos, sin trucos. Es el Income Share Agreement (ISA) más económico que conseguirás." #ISA para eliminación o revisión
       font_size: ["18px", "18px", "18px", "18px", "18px"]
     button:
       color: white
