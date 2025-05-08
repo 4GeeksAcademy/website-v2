@@ -13,7 +13,7 @@ meta_info:
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
   utm_course: ["full-stack"]
-  utm_location: ["bogota-colombia", "buenosaires-argentina", "caracas-venezuela", "costa-rica", "lapaz-bolivia", "lima-peru", "mexicocity-mexico", "montevideo-uruguay", "panamacity-panama", "quito-ecuador", "santiago-chile"]
+  utm_location: ["mexicocity-mexico", "bogota-colombia", "buenosaires-argentina", "caracas-venezuela", "costa-rica", "lapaz-bolivia", "lima-peru", "montevideo-uruguay", "panamacity-panama", "quito-ecuador", "santiago-chile"]
   automation: soft
   tag: website-lead
 
@@ -36,6 +36,7 @@ header_data:
   background: "#FFFFFF"
   tagline: "Aprende a programar con 4Geeks Academy"
   tagline_color: "#1b1b1b"
+  partner_logo_url: "../../../static/images/partner/math2me-logo.png"
   sub_heading: "El bootcamp de programación #1 en Latinoamérica se une a Math2Me para brindarte la mejor experiencia de aprendizaje"
   form_styles:
     background: "#0084FF"
