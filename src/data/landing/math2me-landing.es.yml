@@ -13,22 +13,20 @@ meta_info:
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
   utm_course: ["full-stack"]
-  utm_location: ["mexicocity-mexico", "bogota-colombia", "buenosaires-argentina", "caracas-venezuela", "costa-rica", "lapaz-bolivia", "lima-peru", "montevideo-uruguay", "panamacity-panama", "quito-ecuador", "santiago-chile"]
-  automation: strong # comma separated, "soft" is the default value
-  tag: website-lead # comma separated, "request_more_info" is the default value
+  utm_location: ["bogota-colombia", "buenosaires-argentina", "caracas-venezuela", "costa-rica", "lapaz-bolivia", "lima-peru", "mexicocity-mexico", "montevideo-uruguay", "panamacity-panama", "quito-ecuador", "santiago-chile"]
+  automation: soft
+  tag: website-lead
 
 navbar:
-  logoUrl: "#" # relative(/apply), absolute(https://google.com) or id(#componentName)
+  logoUrl: "#"
   buttonText: "Obtener más información"
-  buttonUrl: "#leadform_bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+  buttonUrl: "#leadform_bottom"
 
 form:
-  # posible fields: "first_name", "last_name", "full_name", "phone", "email"
-  # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
   heading: "Conoce más información"
   button_label: Obtén más información
-  redirect: "/es/gracias" #you can redirect to another url or entirely diffrent website
+  redirect: "/es/gracias"
     
 apply_schollarship: # form that is displayed at the end of the landing
   imageSide: "left"
@@ -36,7 +34,7 @@ apply_schollarship: # form that is displayed at the end of the landing
   
 header_data:
   background: "#FFFFFF"
-  tagline: "Aprende a programar con Math2Me y 4Geeks Academy"
+  tagline: "Aprende a programar con 4Geeks Academy"
   tagline_color: "#1b1b1b"
   sub_heading: "El bootcamp de programación #1 en Latinoamérica se une a Math2Me para brindarte la mejor experiencia de aprendizaje"
   form_styles:
@@ -47,12 +45,9 @@ header_data:
   image_filter: brightness(0.4)
 
 features:
-  marginTop: 0px #<-- separation between tagline and the bullets
+  marginTop: 0px
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
-  bullets:
-    - "Clases en vivo y grabadas con el método de enseñanza de Math2Me"
-    - "No necesitas experiencia previa para comenzar nuestro curso de programación"
-    - "Aprende a crear una aplicación web completa desde cero"
+  text: Al aprender a programar con 4Geeks Academy tendrás clases online completamente en vivo, la oportunidad de certificarte internacionalmente en poco tiempo y de conseguir tu primer empleo como programador con nuestro apoyo. Descubre cómo puede ser tu vida como un profesional en programación con 4Geeks Academy, ¡comienza ahora!
 
 short_badges:
   - name: "Top Online Full-Stack Bootcamps Of 2024"
@@ -73,7 +68,7 @@ short_badges:
     alt: "Licensed by the Florida Department of Education"
 
 follow_bar:
-  position: "top" # top, bottom, hidden
+  position: "top"
   content:
     text: "Rellena el formulario \ny comienza tu futuro"
     text_mobile: "Rellena el formulario \ny comienza tu futuro"
@@ -88,6 +83,11 @@ program_details:
   position: 2
   heading: "Domina Python, JS y React"
   sub_heading: "Un curso de programación sobre las tecnologías más usadas del mundo"
+
+why_4geeks:
+  position: 4
+  heading: "¿Por qué 4Geeks?"
+  sub_heading: " "
 
 geeks_vs_others:
   position: 5
@@ -110,59 +110,47 @@ components:
   - name: name
     position: 1
     layout: two_column_left
-    proportions: [6, 6]
-    background: "#edfafc"
+    proportions: [5, 7]
+    background: "#FFF8E8"
     image:
-      style: '{ "backgroundSize": "contain"}'
+      style: '{ "backgroundSize": "contain", "width": "auto"}'
       src: "/images/landing/hombre-joven-con-laptop.webp"
     heading:
-      text: "Aprende programación con el método Math2Me y 4Geeks Academy"
-      font_size: ["24px", "24px", "24px", "24px", "24px"]
+      text: "¿Cómo Funciona?"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
     sub_heading:
-      text: "¿Quieres convertirte en un desarrollador web cotizado? Math2Me y 4Geeks Academy te ofrecen el Coding Bootcamp #1 de Latinoamérica, donde aprenderás las habilidades más demandadas por las empresas en solo 18 semanas."
+      text: ""
       font_size: ["16px", "16px", "16px", "16px", "16px"]
     button:
-      text: "¡Obtener información!"
+      text: "¡Únete a la academia!"
       color: white
       hover_color: "white"
       background: "black"
       hover: "veryLightBlue2"
       path: "#leadform_header"
-    content:
-      font_size: ["16px"]
-      text: ""
-
-  - name: geekinfo_2
-    position: 4
-    layout: two_column_right
-    proportions: [6, 6]
-    background: ""
-    image:
-      style: '{ "backgroundSize": "contain" }'
-      src: "/images/landing/Group-6626-with-border.webp"
-      shadow: false
-    heading:
-      text: "Math2Me y 4Geeks Academy: La combinación perfecta para tu futuro en tecnología"
-      font_size: ["40px", "40px", "40px", "40px", "40px"]
-    sub_heading:
-      text: "Aprende las tecnologías más demandadas por la industria con el método de enseñanza de Math2Me y la experiencia de 4Geeks Academy en el mundo tech."
-      font_size: ["16px", "16px", "16px", "16px", "16px"]
-    button:
-      text: "Solicitar información"
-      color: white
-      hover_color: "white"
-      background: "black"
-      path: "#leadform_bottom"
-    content:
-      text: ""
-      font_size: ["16px"]
     bullets:
       items:
-        - text: "¡Conviértete en un desarrollador Web Full Stack en solo 18 semanas!"
+        - text: "¡Conviértete en un FullStack developer en tan solo 18 semanas!"
           icon: "check"
-        - text: "Desarrolla habilidades en frontend y backend con el método Math2Me."
+        - text: "Desarrollo de habilidades altamente valoradas en el mercado profesional."
           icon: "check"
-        - text: "Aprende a programar con ayuda de nuestros instructores de forma ilimitada y de por vida."
+        - text: "Acceso a oportunidades laborales al momento de la graduación."
           icon: "check"
-        - text: "Creemos que una educación de calidad debe ser accesible para todo el mundo. Aplica hoy a la academia y pregunta por nuestros distintos planes de financiamiento."
-          icon: "check" 
+    content:
+      font_size: ["16px"]
+      text: |
+        Imagina certificarte a nivel internacional en un tiempo récord, abriendo las puertas a nuevas oportunidades laborales. Y lo mejor de todo, no estarás solo en este camino. <br>Nuestro apoyo no termina con la certificación; estamos comprometidos contigo hasta que consigas tu primer empleo como programador. <br>
+        <strong style="font-weight: bold;">Descubre cómo puede ser tu vida como un profesional en programación con 4Geeks Academy, ¡comienza ahora! </strong>
+
+  - name: top_coding_bootcamp
+    position: 3
+    layout: two_column_left
+    proportions: [4, 8]
+    background: "#f1f1f1"
+    image:
+      style: '{ "backgroundSize": "contain" }'
+      src: "/images/badges/Course-Report-Badge-2024.webp"
+      link: "https://www.coursereport.com/schools/4geeks-academy"
+    heading:
+      text: "Tenemos 3 años consecutivos siendo seleccionados como uno de los mejores coding bootcamps del mundo"
+      font_size: ["38px", "36px", "32px", "30px", "30px"] 
