@@ -90,6 +90,9 @@ follow_bar:
   button:
     text: "¡Solicita tu Beca!"
     path: "#leadform_header"
+  phone:
+    text: ""
+    number: " "
 
 #
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇

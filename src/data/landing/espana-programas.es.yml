@@ -71,6 +71,9 @@ follow_bar:
   button:
     text: "Solicita tu plaza"
     path: "#leadform_bottom"
+  phone:
+    text: ""
+    number: " "
 
 short_badges:
   - name: "ARP Certificate"

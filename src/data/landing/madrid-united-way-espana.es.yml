@@ -91,8 +91,11 @@ follow_bar:
     font_size: ["25px", "25px", "25px", "20px", "18px"]
   position: "top" # top, bottom, hidden
   button:
-    text: "Solicita tu Plaza"
+    text: "Solicita tu plaza"
     path: "#leadform_header"
+  phone:
+    text: ""
+    number: " "
 
 components:
 

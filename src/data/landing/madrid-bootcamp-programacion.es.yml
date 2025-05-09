@@ -83,7 +83,7 @@ short_badges:
     url: ""
     image: "../../../static/images/badges/licensed-es.png"
     alt: "Dpto. Educacion Florida."     
-
+    
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
@@ -94,6 +94,9 @@ follow_bar:
   button:
     text: "¡Solicita tu Plaza!"
     path: "#leadform_header"
+  phone:
+    text: ""
+    number: " "
 
 #
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇

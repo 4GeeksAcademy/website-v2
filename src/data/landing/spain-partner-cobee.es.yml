@@ -90,6 +90,9 @@ follow_bar:
     text_mobile: "Financiación sin intereses. \n Hasta 48 cuotas."
     # devices:    XL      LG      MD      SM       XS
     font_size: ["25px", "25px", "25px", "18px", "4.3vw"]
+  phone:
+    text: ""
+    number: " "
   button:
     text: "APLICA YA"
     path: "#leadform_header"
