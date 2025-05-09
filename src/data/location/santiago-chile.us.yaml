@@ -105,6 +105,7 @@ two_columns:
     text: "Luisa Glum's Experience at 4Geeks Academy in Santiago, Chile"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
+    # ISA para eliminación o revisión
     text: "Transformative Journeys and the Income Share Agreement, Elevate Your Tech Skills from Santiago, Chile"
     font_size: ["18px", "18px", "22px", "22px", "22px"]
   button:
@@ -115,6 +116,7 @@ two_columns:
   bullets:
     items: 
     - text: "Luisa Glum shares her personal journey and how 4Geeks Academy transformed her career path in Santiago's evolving tech landscape"
+    # ISA para eliminación o revisión
     - text: "Learn about the innovative Income Share Agreement (ISA) model, a pioneering approach where tuition is paid after securing a job, ensuring access to quality education"
     - text: "With a 95% job placement rate within six months of graduation, our programs ensure tangible outcomes for career advancement"
 

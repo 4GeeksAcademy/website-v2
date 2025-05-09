@@ -112,6 +112,7 @@ full_time:
   - slug: 'spain-isa-fs-ft'
     academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
     recomended: true
+    # ISA para eliminación o revisión
     scholarship: "Income Share Agreement (ISA)"
     payment_time: "Pay only after you find a job"
     price: "0 €*"
@@ -271,6 +272,7 @@ part_time:
   - slug: 'north-europe-isa-fs-pt'
     academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany', 'munich-germany']
     recomended: false
+    # ISA para eliminación o revisión
     scholarship: "Income Share Agreement (ISA)"
     payment_time: "Pay only when you work"
     price: "€0*"
@@ -314,6 +316,7 @@ part_time:
   - slug: 'south-europe-isa-fs-pt'
     academies: ['lisbon-portugal','milan-italy','rome-italy']
     recomended: false
+    # ISA para eliminación o revisión
     scholarship: "Income Share Agreement (ISA)"
     payment_time: "Pay only when you work"
     price: "€0*"
@@ -363,6 +366,7 @@ part_time:
   - slug: 'spain-isa-fs-pt'
     academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain']
     recomended: false
+    # ISA para eliminación o revisión
     scholarship: "Income Share Agreement (ISA)"
     payment_time: "Pay only when you work"
     price: "€0*"

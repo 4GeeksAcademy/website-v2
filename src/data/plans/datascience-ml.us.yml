@@ -141,12 +141,14 @@ part_time:
   - slug: 'spain-isa-ds-pt'
     academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain']
     recomended: false
+    # ISA para eliminación o revisión
     scholarship: "Income Share Agreement (ISA)"
     payment_time: "Pay only when you work"
     price: "€0*"
     bullets: 
       - "You only have to pay when your income exceeds €16,000 per year"
       - "*Pay a small part of your salary when you find a job - SCHOLARSHIPS SUBJECT TO AVAILABILITY!"
+      # ISA para eliminación o revisión
       - "To obtain the ISA you must meet some academic requirements"
     icons: 
       - "/images/bcas.png"
@@ -184,12 +186,14 @@ part_time:
   - slug: 'north-europe-isa-ds-pt'
     academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany', 'munich-germany']
     recomended: false
+    # ISA para eliminación o revisión
     scholarship: "Income Share Agreement (ISA)"
     payment_time: "Pay only when you work"
     price: "€0*"
     bullets: 
       - "You only have to pay when your income exceeds €16,000 per year"
       - "*Pay a small part of your salary when you find a job - SCHOLARSHIPS SUBJECT TO AVAILABILITY!"
+      # ISA para eliminación o revisión
       - "To obtain the ISA you must meet some academic requirements"
     icons: 
       - "/images/bcas.png"     
@@ -227,12 +231,14 @@ part_time:
   - slug: 'south-europe-isa-ds-pt'
     academies: ['lisbon-portugal','milan-italy','rome-italy']
     recomended: false
+    # ISA para eliminación o revisión
     scholarship: "Income Share Agreement (ISA)"
     payment_time: "Pay only when you work"
     price: "€0*"
     bullets: 
       - "You only have to pay when your income exceeds €16,000 per year"
       - "*Pay a small part of your salary when you find a job - SCHOLARSHIPS SUBJECT TO AVAILABILITY!"
+      # ISA para eliminación o revisión
       - "To obtain the ISA you must meet some academic requirements"
     icons: 
       - "/images/bcas.png"

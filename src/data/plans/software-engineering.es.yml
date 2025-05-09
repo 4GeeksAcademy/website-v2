@@ -73,6 +73,7 @@ part_time:
   - slug: 'plan-3'
     academies: ['downtown-miami', 'orlando']
     recomended: false
+    # ISA para eliminación o revisión
     scholarship: "Income Share Agreement"
     payment_time: "Pay after you get a job"
     price: "$0"

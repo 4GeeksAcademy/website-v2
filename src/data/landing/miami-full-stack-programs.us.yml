@@ -64,7 +64,8 @@ features:
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "Join 4Geeks Academy with an Income Share Agreement, Finance Your Future" #ISA para eliminación o revisión
+    # ISA para eliminación o revisión
+    text: "Join 4Geeks Academy with an Income Share Agreement, Finance Your Future"
     text_mobile: "ENROLL NOW and get $1,500 off when you use our code LABOR in our apply form"
     # devices:   XL      LG    MD      SM    XS
     font_size: ["25px", "25px", "25px", "20px", "18px"]

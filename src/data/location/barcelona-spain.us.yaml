@@ -162,6 +162,10 @@ two_columns_rigo:
           • Structured practice.
         icon: "check" #string with icon for example ['check', 'cicle', etc]
         icon_color: '#25BF6C'
+      - icon: "partner"
+        title: "Easy payment"
+        # ISA para eliminación o revisión
+        description: "Paga el programa después de que te gradues y encuentra trabajo, aplica al ISA (Income Share Agreement)"
 
   title: "Related articles"
   stories:

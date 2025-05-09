@@ -49,6 +49,7 @@ Be concise, don't add a summary at the end of the article.
 Don't take more than ${max_tokens * 2} characters.
 For example: 
 - Scholarship for part-time courses. Pay today or in 3 parts. Price: $6999
+// ISA para eliminación o revisión
 - Income Share Agreement for full-time couses. Pay after you get a job. Price: $0
 Here is the YML: ${raw}`,
       });
