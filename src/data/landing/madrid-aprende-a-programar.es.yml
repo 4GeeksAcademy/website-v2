@@ -69,7 +69,8 @@ follow_bar:
     text: "Solicitar plaza"
     path: "#leadform_header"
   phone:
-    text: "Llama "
+    text: ""
+    number: ""
 
 short_badges:
   - name: "Top Online Full-Stack Bootcamps Of 2024"

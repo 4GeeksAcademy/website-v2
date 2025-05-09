@@ -66,14 +66,13 @@ follow_bar:
     # devices:    XL      LG      MD      SM      XS
     font_size: ["24px", "24px", "24px", "18px", "4.3vw"]
   button:
-
     text: "Solicita Tu plaza"
     path: "#leadform_header" #top, #bottom, #anotherComponentId
     # ├──if path is empty("") it point to top per default ("#" -> points to top)
     # └── path accepts: relative(/example/path), absolute(https://google.com) or id(#idName)
   phone:
-    text: "Llama "
-    number: null # change only if need to customize
+    text: ""
+    number: ""
 
 short_badges:
   - name: "Premios Tecnologia Siglo XXI"
