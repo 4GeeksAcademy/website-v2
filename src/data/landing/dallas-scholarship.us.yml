@@ -307,7 +307,7 @@ components:
     proportions: [6, 6]
     image:
       style: '{ "backgroundSize": "contain", "backgroundPosition": "center", "margin": "10px" }'
-      src: "/images/partner/kosmos-grid.webp"
+      src: "/images/partner/kosmos-work.webp"
       shadow: false
     heading:
       style: '{ "margin-top": "0px" }'
