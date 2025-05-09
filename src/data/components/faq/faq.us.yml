@@ -189,6 +189,27 @@ faq:
         priority: 1
         answer: |-
           In Quito, Ecuador, 4Geeks Academy offers flexible payment options, including one-time payments and financing up to 24 months. We tailor to your needs – schedule a call with admissions to find your perfect fit! For more details, visit our <a class="faq-link" target="_blank" href="/us/financials">financials page</a>.
+
+      - question: "Can I pay after I get a job?" #LATAM
+        locations:
+          [
+            "bogota-colombia",
+            "buenosaires-argentina",
+            "costa-rica",
+            "lapaz-bolivia",
+            "lima-peru",
+            "mexicocity-mexico",
+            "montevideo-uruguay",
+            "panamacity-panama",
+            "quito-ecuador",
+          ]
+        priority: 1
+        answer: |-
+          # ISA para eliminación o revisión
+          At 4Geeks Academy in Latin America, we offer payment options such as Income Share Agreements (ISA) or Deferred Tuition plans, allowing you to pay after securing employment.
+          These models are designed to support your learning journey, enabling you to focus on education before repaying once you're employed. However, terms and conditions vary based on your chosen program and location.
+          For further details and eligibility criteria, please discuss these options with our admissions team.
+
       ## // how do I pay for my tuition? //
       ## Does 4Geeks offer career support?
       - question: "Does 4Geeks Academy offer professional support?" # all locations

@@ -228,9 +228,10 @@ faq:
         templates: ["faq"]
         priority: 0
         answer: |-
-          En 4Geeks Academy, ofrecemos opciones de pago como Acuerdos de Participación en Ingresos (ISA) o planes de Matrícula Diferida, que te permiten pagar después de asegurar empleo. <br>
-          Estos modelos están diseñados para apoyar tu proceso de aprendizaje, permitiéndote enfocarte en la educación antes de comenzar a pagar una vez que estés empleado. Sin embargo, los términos y condiciones varían según el programa y la ubicación elegidos.<br>
-          Para obtener más detalles y criterios de elegibilidad, discute estas opciones con nuestro <a class="faq-link" href="mailto:admission@4geeksacademy.com">equipo de admisiones</a>.
+          # ISA para eliminación o revisión
+          En 4Geeks Academy, ofrecemos opciones de pago como Income Share Agreements (ISA) o planes de matrícula diferida, que te permiten pagar después de conseguir empleo.
+          Estos modelos están diseñados para apoyar tu trayectoria de aprendizaje, permitiéndote centrarte en la educación antes de empezar a pagar una vez que estés empleado. Sin embargo, los términos y condiciones varían según el programa y la ubicación que elijas.
+          Para más detalles y criterios de elegibilidad, por favor discute estas opciones con nuestro equipo de admisiones.
 
       # - question: "¿Puedo pagar después de conseguir un trabajo?" #USA
       #   locations: ["atlanta-usa", "austin-usa", "chicago-usa", "downtown-miami", "houston-usa", "losangeles-usa", "newyork-usa", "orlando", "online", "online-spanish-usa"]
