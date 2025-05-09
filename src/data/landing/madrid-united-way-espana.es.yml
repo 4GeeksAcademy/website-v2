@@ -94,7 +94,8 @@ follow_bar:
     text: "Solicita tu Plaza"
     path: "#leadform_header"
   phone:
-    text: "¡Llama ya!"
+    text: ""
+    number: ""
 
 components:
 
