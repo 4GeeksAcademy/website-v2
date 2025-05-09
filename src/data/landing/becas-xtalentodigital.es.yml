@@ -62,8 +62,6 @@ follow_bar:
   button:
     text: "Solicitar"
     path: "#leadform_header"
-  phone:
-    text: "Llama "
 
 short_badges:
   - name: "Premios Tecnologia Siglo XXI"

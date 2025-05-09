@@ -93,8 +93,6 @@ follow_bar:
   button:
     text: "APLICA YA"
     path: "#leadform_header"
-  phone:
-    text: "Llama "
 
 #
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇

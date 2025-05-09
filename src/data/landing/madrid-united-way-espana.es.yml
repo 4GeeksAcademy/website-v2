@@ -93,8 +93,6 @@ follow_bar:
   button:
     text: "Solicita tu Plaza"
     path: "#leadform_header"
-  phone:
-    text: "¡Llama ya!"
 
 components:
 

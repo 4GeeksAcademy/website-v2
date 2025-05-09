@@ -93,8 +93,6 @@ follow_bar:
   button:
     text: "¡Quiero asistir!"
     path: "#leadform_header"
-  phone:
-    text: "Llámanos"
 
 #
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
