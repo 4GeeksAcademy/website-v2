@@ -2,11 +2,10 @@ meta_info:
   slug: math2me-curso-de-programacion # <--- URL 4geeksacademy.com/es/landing/math2me-curso-de-programacion
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   # This will show on social media when shared
-  title: "Bootcamp de programación con Math2Me | 4Geeks Academy"
-  description: "Únete a 4Geeks Academy y Math2Me para aprender programación. El único coding bootcamp que te ofrece mentorías ilimitadas de por vida."
+  title: "Bootcamp de programación | 4Geeks Academy"
+  description: "Únete a 4Geeks Academy con Math2Me para aprender programación. El único coding bootcamp que te ofrece mentorías ilimitadas de por vida."
   image: "../../../static/images/bg/math2me.webp"
-  keywords: "Bootcamp de Programación, Math2Me, Bootcamp de python, Bootcamp de React y Javascript, Bootcamp de Informática, Coding Bootcamp, 4Geeks Academy"
-
+  keywords: ""
   template: "landing_a" # <--- choose your landing template
   redirects: [] # <--- URL redirections to avoid 404 errors
 
@@ -37,7 +36,7 @@ header_data:
   tagline: "Aprende a programar con 4Geeks Academy"
   tagline_color: "#1b1b1b"
   partner_logo_url: "../../../static/images/partner/math2me-logo.png"
-  sub_heading: "El bootcamp de programación #1 en Latinoamérica se une a Math2Me para brindarte la mejor experiencia de aprendizaje"
+  sub_heading: "El bootcamp de programación #1 en Latinoamérica te ofrece la experiencia de aprendizaje más completa y personalizada"
   form_styles:
     background: "#0084FF"
     color: "white"
@@ -131,7 +130,7 @@ components:
       path: "#leadform_header"
     bullets:
       items:
-        - text: "¡Conviértete en un FullStack developer en tan solo 18 semanas!"
+        - text: "¡Conviértete en un Full-Stack developer en tan solo 18 semanas!"
           icon: "check"
         - text: "Desarrollo de habilidades altamente valoradas en el mercado profesional."
           icon: "check"
