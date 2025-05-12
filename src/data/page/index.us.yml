@@ -120,10 +120,10 @@ two_columns:
 two_columns_rigo:
   proportions: [7, 5]
   justify: "center" #start,end,center
-  #image:
-   # style: '{"backgroundSize": "contain", "background-position": "center"}'
-    #src: "/images/landing/rigobot-section.webp"
-    #shadow: false
+  image:
+    style: '{"backgroundSize": "contain", "background-position": "center", "border" : "2px solid black", "border-radius": "4px"}'
+    src: "/images/landing/ai-mentor.jpg"
+    shadow: true
   video: "6m1Jyya7eCc"
   heading: 
     text: "Why 4Geeks?"
