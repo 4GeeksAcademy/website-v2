@@ -1,0 +1,15 @@
+meta_info:
+  slug: cybersecurity
+  title: "Cybersecurity Guide: Learn Essential Security Skills with 4Geeks Academy"
+  visibility: "visible"
+  description: "Master cybersecurity with 4Geeks Academy. Learn essential security skills and best practices to protect systems and data in today's digital world."
+  image: ""
+  keywords: "Cybersecurity, Information Security, Network Security, Ethical Hacking"
+  redirects: []
+
+seo_title: "Cybersecurity"
+header:
+    title: Cybersecurity - Blog
+    paragraph: "Welcome to 4Geeks Academy's Cybersecurity resource center! 🔒 In today's digital landscape, cybersecurity knowledge is more crucial than ever. Our expert instructors and experienced staff have curated this collection of articles to help you navigate the complex world of information security. Whether you're interested in ethical hacking, network security, or data protection, our content covers everything from fundamental security concepts to advanced threat detection techniques. Learn about the latest security trends, best practices, and career opportunities in cybersecurity. Our goal is to provide you with practical, up-to-date information that you can apply immediately. Join us on this journey to become a cybersecurity professional and help make the digital world a safer place! 🛡️"
+    image: "../../../static/images/blog/Blog-header.png"
+    image_alt: "cybersecurity" 

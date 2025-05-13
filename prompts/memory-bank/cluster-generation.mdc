@@ -1,0 +1,107 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Cluster Generation Rules
+
+## File Structure
+- Clusters must be defined in YAML files located in `src/data/cluster/`
+- File naming convention: `{slug}.{language}.yml` (e.g., `python-bootcamp.us.yml`)
+- Language codes:
+  - `.us.yml` for English content (e.g., `career-growth.us.yml`)
+  - `.es.yml` for Spanish content (e.g., `aprender-a-programar.es.yml`)
+- Each cluster must have both language versions with identical slugs but different language codes
+
+## Required Fields and Validation Rules
+
+### Meta Information Section
+```yml
+meta_info:
+  slug: string          # Required: Unique identifier for the cluster
+  title: string         # Required: SEO-friendly title
+  visibility: string    # Required: One of ["visible", "hidden", "unlisted"]
+  description: string   # Required: SEO description
+  image: string         # Required: Path to image (can be empty string)
+  keywords: string      # Optional: SEO keywords
+  redirects: array      # Required: Array of redirects (can be empty)
+```
+
+### SEO Section
+```yml
+seo_title: string      # Required: SEO title for the page
+```
+
+### Header Section
+```yml
+header:
+  title: string        # Required: Main title for the cluster
+  paragraph: string    # Required: Main description text
+  image: string        # Required: Path to header image
+  image_alt: string    # Required: Alt text for header image
+```
+
+## Content Guidelines
+
+### Title Guidelines
+- Should be descriptive and SEO-friendly
+- Include relevant keywords naturally
+- Keep it under 60 characters for optimal SEO
+
+### Description Guidelines
+- Should be clear and concise
+- Include main keywords naturally
+- Keep it between 150-160 characters for optimal SEO
+- Should accurately describe the cluster's content
+
+### Header Paragraph Guidelines
+- Should be informative and engaging
+- Include relevant emojis where appropriate
+- Should explain the purpose and value of the cluster
+- Keep it between 200-300 words
+- Should mention 4Geeks Academy and its role
+
+### Image Guidelines
+- Header image path should be relative to the static directory
+- Default path: "../../../static/images/blog/Blog-header.png"
+- Image alt text should be descriptive and match the cluster slug
+
+## Validation Rules
+1. All required fields must be present and non-empty
+2. Slug must be unique across all clusters
+3. Visibility must be one of the allowed values
+4. Image paths must be valid
+5. SEO title must be present and non-empty
+6. Header section must contain all required fields
+7. Language code must be valid:
+   - Must end with either `.us.yml` (English) or `.es.yml` (Spanish)
+   - Must match the content language of the cluster
+   - Language code must be consistent with the content language
+
+## Best Practices
+1. Use consistent formatting across all clusters
+2. Include relevant keywords in titles and descriptions
+3. Write engaging and informative header paragraphs
+4. Use proper image alt text for accessibility
+5. Keep content up-to-date and relevant
+6. Ensure proper language localization for each version
+7. Follow SEO best practices for all text content
+
+## Example Structure
+```yml
+meta_info:
+  slug: example-cluster
+  title: "Example Cluster Title"
+  visibility: "visible"
+  description: "Example cluster description"
+  image: ""
+  keywords: "Example Keywords"
+  redirects: []
+
+seo_title: "Example SEO Title"
+header:
+  title: "Example Header Title"
+  paragraph: "Example header paragraph with relevant information..."
+  image: "../../../static/images/blog/Blog-header.png"
+  image_alt: "example-cluster"
+```
