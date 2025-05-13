@@ -105,3 +105,10 @@ header:
   image: "../../../static/images/blog/Blog-header.png"
   image_alt: "example-cluster"
 ```
+
+## Post-Generation Verification
+After generating a new cluster, always run the following command to verify that the cluster meets all SEO and content rules:
+```bash
+npm run test
+```
+This step ensures that the generated cluster is valid and follows all the required guidelines.
