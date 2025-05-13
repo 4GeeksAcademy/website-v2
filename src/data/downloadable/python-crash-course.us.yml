@@ -2,7 +2,7 @@ meta_info:
   slug: python-crash-course # <--- URL 4geeksacademy.com/us/landing/example
   # This will show on social media when shared
   title: "Python Crash course for beginners in PDF"
-  description: "Learn the basics of python in a quick PDF guide meant as the ideal introduction for beginners."
+  description: "Download the 4Geeks Academy Python Crash Course for Beginners in PDF. Start coding today with this comprehensive guide for aspiring programmers."
   image: "/images/bg/remote.jpeg"
   keywords: "Python crash course pdf, Python course, Python 101"
   template: "landing_a" # <--- choose your landing template
@@ -31,7 +31,7 @@ navbar:
 header_data:
   # background: "black"
   color: "white"
-  tagline: "Amazing Python:\nCrash Course for beginners"
+  tagline: "Python Crash Course for Beginners in Pdf"
   sub_heading: ""
   partner_logo_url: "../../../static/images/techs/python-logo.png"
   background_image: "../../../static/images/program-bg.png"

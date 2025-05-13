@@ -1,15 +1,14 @@
 meta_info:
   slug: contact
   title: "Contact 4Geeks Academy"
-  description: "Contact 4Geeks Academy here"
+  description: "Get in touch with 4Geeks Academy. Whether you have questions or need support, we’re here to help you on your journey to a tech career."
   image: null
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   keywords: "Contact, 4Geeks Academy"
   redirects: []
 
 ## CONTACT-US HEADING
-greetings: < Hello >
-tagline: Contact 4Geeks Academy
+tagline: Contact
 sub_heading: "Do you have any questions? We will be happy to respond as soon as possible. We also invite you to review our"
 sub_headingFAQ: "Frequently Asked Questions page"
 pathFAQ: "faq"

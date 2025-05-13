@@ -41,7 +41,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 # jumbotron on the top (cannot be commented out)
 header_data:
   background: "#ffffff"
-  tagline: Conviértete en Full-Stack Developer en 18 semanas
+  tagline: Curso de programación en remoto y presencial, aprende a programar e impulsa tu carrera profesional
   sub_heading: "El 86% de nuestros alumnos ya han empezado su carrera en el sector tech con un salario medio de 22.000€ al año. Desarrolla proyectos reales y recibe mentorías de programadores senior."
   tagline_color: "#1c1c1c"
   form_styles:

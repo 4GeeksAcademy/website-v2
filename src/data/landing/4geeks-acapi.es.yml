@@ -1,6 +1,6 @@
 meta_info:
   slug: 4geeks-acapi
-  title: "Conviértete en Full Stack Developer o Data Scientist con ACAPI & 4Geeks Academy"
+  title: "Conviértete en Full Stack Developer o Data Scientist con Conviértete en Full Stack Developer o Data Scientist con ACAPI & 4Geeks Academy"
   description: "Un programa intensivo para impulsar tu futuro en tecnología."
   image: "/images/bg/main-bg.jpg"
   keywords: "Bootcamp de programación, Full Stack Developer, Data Science, 4Geeks Academy, ACAPI, Desarrollo Web, Ciencia de Datos"
@@ -33,7 +33,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 header_data:
   background: "#ffffff"
   partner_logo_url: "../../../static/images/partner/acapi-logo.png"
-  tagline: "ACAPI & 4Geeks Academy"
+  tagline: "Conviértete en Full Stack Developer o Data Scientist con ACAPI & 4Geeks Academy"
   sub_heading: "Conviértete en Full Stack Developer o Data Scientist "
   tagline_color: "#1c1c1c"
   form_styles:

@@ -1,0 +1,259 @@
+meta_info:
+  slug: orlando-scholarship # <--- URL: 4geeksacademy.com/us/landing/orlando-scholarship
+  title: "Launch Your Tech Career with 4Geeks Academy Orlando Scholarships"
+  description: "Apply for Orlando Partial Scholarships at 4Geeks Academy. Get financial support to jumpstart your coding career in the Orlando tech scene."
+  visibility: "visible"
+  image: "public/images/landing/miamitech-logo-sidetext.png"
+  keywords: ""
+  template: "landing_a"
+  redirects: []
+  utm_course: ["full-stack", "datascience-ml", "cybersecurity"]
+  utm_location: ["downtown-miami"]
+  automation: strong
+  tag: website-lead
+
+navbar:
+  buttonText: "Apply now"
+  buttonUrl: "#leadform_header"
+  logoUrl: "#"
+
+header_data:
+  tagline: "Orlando: Your Tech Career Starts Here"
+  sub_heading: ""
+  background: "#ffffff"
+  tagline_color: "#1c1c1c"
+  form_styles:
+    background: "#0084FF"
+    color: "white"
+    button:
+      background: "black"
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+  image_filter: brightness(0.3)
+
+features:
+  marginTop: 0px
+  text: "Apply now—don't miss your chance!"
+  bullets:
+    - 'Scholarships available for Greater Orlando residents only'
+    - 'Award-winning tech education and career support'
+    - "Get a high-paying job in Florida's thriving tech scene"
+    - 'Limited spots — act now!'
+  styles: '{ "color": "black", "fontWeight":"500" }'
+
+short_badges:
+  - name: "Top Online Full-Stack Bootcamps Of 2024"
+    url: ""
+    image: "../../../static/images/badges/forbes-logo-award.png"
+    alt: "We have been selected as one of the Top Online Coding Bootcamps by Forbes."
+  - name: "Best for Spanish speakers Of 2024 by Fortune"
+    url: ""
+    image: "../../../static/images/badges/fortune-logo.png"
+    alt: "Recognized by Fortune as one of the Top Coding Bootcamps"
+  - name: "Top Coding Bootcamps Newsweek"
+    url: ""
+    image: "../../../static/images/badges/newsweek.webp"
+    alt: "Top Coding Bootcamps Newsweek"
+  - name: "Best Coding Bootcamp Course Report 2024"
+    url: ""
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+    alt: "Best Coding Bootcamp Course Report 2024"
+  - name: "Licensed by the Florida Department of Education"
+    url: ""
+    image: "../../../static/images/badges/licensed.png"
+    alt: "Licensed by the Florida Department of Education"
+  - name: "ARP Certificate"
+    url: ""
+    image: "../../../static/images/badges/arp-logo-certification.png"
+    alt: "ARP Certificate"
+
+form:
+  fields: ["full_name", "phone", "email"]
+  heading: "Get more information"
+  motivation: "Fill out the form to receive the program details and scholarship information!"
+  button_label: "Apply"
+  redirect: "/us/thank-you/"
+    
+    #-----REVISAR----#
+
+follow_bar:
+  position: "top"
+  content:
+    text: "Be a part of the Orlando Tech movement."
+    text_mobile: "Be a part of the Orlando Tech movement."
+    font_size: ["22px", "22px", "22px", "16px", "16px"]
+  button:
+    text: "Apply Now"
+    path: "#leadform_header"
+  phone:
+    text: ""
+
+components:
+  - name: leadform_header
+    layout: two_column_left
+    proportions: [5, 7]
+    video: "PUuGlIALKH4"
+    heading:
+      text: "FLORIDA’S TECH SCENE IS THRIVING"
+      font_size: ["40px", "34px", "34px", "25px", "25px"]
+    button:
+      text: "Apply Now"
+      color: "white"
+      background: "black"
+      path: "#prices_and_payment"
+    bullets:
+      items: 
+        - text: "Orlando is the fastest growing region in Florida, attracting major employers and fostering a thriving startup ecosystem."
+        - text: "Miami is projected to add approximately 650,000 tech jobs by 2030, and Orlando's tech job market is projected to grow by 27%."
+        - text: "Big names like Microsoft, Amazon and Lockheed Martin have moved to Florida and venture capital is booming."
+        - text: "In Orlando, entry-level positions in full-stack development, data science or cybersecurity earn around $70K/ year"
+
+
+  - name: how-it-works
+    position: 5
+    background: "#0084FF"
+    layout: iconogram
+    swipable: True
+    heading:
+      text: "How it Works"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+      style: '{ "color": "white" }'
+    icons:
+      - icon: "graduation-2"
+        color: "#0084FF"
+        title: "Eligibility"
+        content: "Must be a legal resident of Greater Orlando, underemployed or unemployed."
+      - icon: "presentation"
+        title: "Application"
+        content: "Fill out the form and pass the assessment process."
+      - icon: "briefcase-2"
+        color: "#FFB718"
+        title: "Onboarding Process"
+        content: "Complete pre-work on time"
+      - icon: "stairswflag"
+        color: "#BE8BFF"
+        title: "You're Set!"
+        content: "Become a tech professional with unlimited mentorship and career support."
+
+  - name: why-4geeks
+    position: 6
+    layout: two_column_right
+    proportions: [6, 6]
+    image:
+      style: '{ "backgroundSize": "contain" }'
+      src: "/images/landing/blonde-girl-laptop.png"
+    heading:
+      style: '{ "margin-top": "0px" }'
+      text: "Why 4Geeks?"
+      font_size: ["40px", "34px", "34px", "25px", "25px"]
+
+    sub_heading:
+      font_size: ["16px", "16px", "16px", "14px", "14px"]
+      style: '{ "font-weight": "100" }'
+      text: "Join Orlando's premier tech education hub. With 7+ global campuses and 4,000+ alumni, we offer more than just coding—we provide a lifelong support network for your tech career success. Where there's a geek, there's a way! \n What sets us apart:"
+
+    content:
+      font_size: ["16px"]
+      text: ""
+    bullets:
+      items:
+        - text: "Industry-aligned curriculum, ahead of the latest job market trends"
+          icon: "check"
+        - text: "An extensive, highly active network of partners in Tech"
+          icon: "check"
+        - text: "Lifelong and readily available coding mentorship"
+          icon: "check"
+        - text: "Unlimited and personalized career support"
+          icon: "check"
+        - text: "AI-powered support 24/7"
+          icon: "check"
+    button:
+      style: '{ "padding": "10px", "border-radius": "3px" }'
+      text: "Apply Now"
+      color: white
+      hover_color: "white"
+      background: "blue"
+      path: "#leadform_bottom"
+
+  - name: "chooseYourProgram"
+    layout: choose_your_program
+    background: "veryLightBlue2"
+    position: 7
+    heading:
+      text: "Choose Your Program"
+    content:
+      text: "Choose the path that's right for you"
+      font_size: ["16px"]
+      path: ""
+    programs:
+      - title: "Coding Bootcamp"
+        sub_title: "Full Stack"
+        description: "Become a Full Stack software developer using Python, React, and Javascript. Master the most sought-after- skills and land a job as a developer."
+        icon: "fullstack_2"
+        link: "/us/coding-bootcamps/part-time-full-stack-developer"
+        text_link: "Read More"
+
+      - title: "Data Science and ML"
+        sub_title: "With Python"
+        description: "Learn Python to collect and manage data. Create models and solve problems using Machine Learning, Deep Learning, and AI."
+        icon: "machine_2"
+        link: "/us/coding-bootcamps/datascience-machine-learning"
+        text_link: "Read More"
+
+      - title: "CyberSecurity Bootcamp"
+        sub_title: "For Windows & Linux"
+        description: "Become a cybersecurity specialist, equipped to identify, manage, and mitigate system vulnerabilities in compliance with ISO and other standards."
+        icon: "cyber-security"
+        link: "/us/coding-bootcamps/cybersecurity"
+        text_link: "Read More"
+
+  - name: no-worries
+    position: 8
+    layout: two_column_right
+    proportions: [6, 6]
+    background: "#F4F9FF"
+    image:
+      style: '{ "backgroundSize": "contain", "backgroundPosition": "center" }'
+      shadow: false 
+      src: "/images/landing/latin-woman-laptop-coffee.png"
+    heading:
+      text: "Take the stress out of financing your tuition"
+      font_size: ["40px", "34px", "34px", "25px", "25px"]
+    sub_heading:
+      text: "The scholarship covers 30% of your bootcamp tuition, and you can finance the remaining balance with flexible payment plans. This is your chance to focus on what really matters: gaining the skills to launch a career you love."   
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+    bullets:
+      items:
+        - text: "Enroll in the program."
+          icon: circle
+        - text: "Learn software development, data science or cybersecurity skills."
+          icon: circle
+        - text: "Land a job."
+          icon: circle
+        - text: "Thrive in a future-proof career."
+          icon: circle
+    button:
+      style: '{ "padding-top": "10px", "border-radius": "3px" }'
+      text: "Apply to the Scholarship"
+      color: white
+      hover_color: "white"
+      background: "blue"
+      path: "#leadform_bottom"
+      
+
+  - name: testimonials
+    position: 9
+    layout: testimonials_new
+    heading:
+      style: '{ "font-weight": "400", "color": "#3A3A3A" }'
+      text: "What our graduates say"
+      font_size: ["35px", "35px", "30px", "30px", "30px"]
+    filter_indexes: ['nai-kali','jona-ferra', 'kev-so']
+
+badges:
+  position: 10
+  heading: "8 Years empowering people to succeed in tech"
+  sub_heading: "Licensed by the Florida Department of Education, recognized by Forbes as a top 5 Coding School, and consistently ranked among the world's best coding bootcamps by major independent listings."
+
+apply_schollarship:
+  imageSide: "right"
+  image: "../../../static/images/landing/apply.png"

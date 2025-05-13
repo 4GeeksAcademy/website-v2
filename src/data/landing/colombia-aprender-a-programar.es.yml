@@ -40,7 +40,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 # jumbotron on the top (cannot be commented out)
 header_data:
   background: "#ffffff"
-  tagline: Si no consigues empleo te devolveremos TODO tu dinero.
+  tagline: Bootcamp de programación en Colombia. Aprende a programar y consigue empleo como programador.
   sub_heading: Da el paso hoy y Conviértete en Full-Stack Developer.
   tagline_color: "#1b1b1b"
   form_styles:

@@ -2,7 +2,7 @@ meta_info:
   slug: "data-science-ml-instructor"
   title: "Data Science and Machine Learning Instructor"
   visibility: "visible"
-  description: "Join 4Geeks Academy and inspire the next generation of data scientists and machine learning experts."
+  description: "Become a Lead Data Science and Machine Learning Instructor at 4Geeks Academy. Teach the next generation of tech experts and shape the future of AI."
   template: "job"
   open: true
   image: "https://storage.googleapis.com/media-breathecode/59c3afdc064670e4d0062a42cd4bf954d1b9c93720500d4fdce265b4792538ab"
@@ -10,7 +10,7 @@ meta_info:
   redirects: []
 
 ## BANNER INFO
-banner_heading: "Lead Data Science and Machine Learning Instructor"
+banner_heading: "Lead Data Science and Machine Learning Instructor Job Opportunity"
 banner_sub_heading: ""
 banner_image: "/images/bg/pricing-bg.jpg"
 link_back: "/us/jobs"

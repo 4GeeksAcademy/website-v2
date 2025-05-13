@@ -40,7 +40,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 # jumbotron on the top (cannot be commented out)
 header_data:
   background: "#ffffff"
-  tagline: Clases de Programación Web
+  tagline: Clases de programación en Santiago de Chile, aprende a programar en 10 o 16 sem y consigue trabajo como programador.
   sub_heading: "Aprende a programar desde cero y consigue trabajo como Full Stack Developer Junior"
   tagline_color: "#1c1c1c"
   form_styles:

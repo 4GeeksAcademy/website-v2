@@ -4,7 +4,7 @@ meta_info:
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   # This will show on social media when shared
   title: "Elevate your career with Blacks In Technology and 4Geeks Academy Scholarship!"
-  description: "Thanks to Blacks In Technology we are giving away $30,000 in scholarships to celebrate black history month. Any African descent person can apply!"
+  description: "4Geeks Academy offers over $30k in scholarships to help you afford your coding education. Apply today and take the first step toward a tech career."
   image: "/images/bg/remote.jpeg"
   keywords: "Learn to code, 4Geeks academy, scholarship"
 
