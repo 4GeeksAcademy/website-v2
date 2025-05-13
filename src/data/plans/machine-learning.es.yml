@@ -126,17 +126,6 @@ part_time:
       - "/images/nemuru.png"
       - "/images/quotanda-logo.png" 
 
-  # - slug: 'spain-isa-ds-pt'
-  #   academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain']
-  #   recomended: true
-  #   scholarship: "Acuerdo de Ingresos Comparsidos (ISA)"
-  #   payment_time: "Paga sólo cuando trabajes"
-  #   price: "0 €*"
-  #   bullets: 
-  #     - "Solo tendrás que pagar cuando tus ingresos sean superiores a 16.000 € al año"
-  #     - "*Paga una pequeña parte de tu salario cuando encuentres trabajo. ¡SIN INTERESES!"
-  #   icons: 
-  #     - "/images/bcas.png"
 
   - slug: 'north-europe-upfront-ds-pt'
     academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany','munich-germany']
@@ -166,17 +155,6 @@ part_time:
     icons: 
       - "/images/quotanda-logo.png"
           
-  # - slug: 'north-europe-isa-ds-pt'
-  #   academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany', 'munich-germany']
-  #   recomended: true
-  #   scholarship: "Acuerdo de Ingresos Compartidos (ISA)"
-  #   payment_time: "Paga sólo cuando trabajes"
-  #   price: "0 €*"
-  #   bullets: 
-  #     - "Solo tendrás que pagar cuando tus ingresos sean superiores a 22.000 € al año"
-  #     - "*Paga una pequeña parte de tu salario cuando encuentres trabajo"
-  #   icons: 
-  #     - "/images/stepex.png"     
 
   - slug: 'south-europe-upfront-ds-pt'
     academies: ['lisbon-portugal','milan-italy','rome-italy']
@@ -206,17 +184,6 @@ part_time:
     icons: 
       - "/images/quotanda-logo.png"
 
-  # - slug: 'south-europe-isa-ds-pt'
-  #   academies: ['lisbon-portugal','milan-italy','rome-italy']
-  #   recomended: true
-  #   scholarship: "Acuerdo de Ingresos Compartidos (ISA)"
-  #   payment_time: "Paga sólo cuando trabajes"
-  #   price: "0 €*"
-  #   bullets: 
-  #     - "Solo tendrás que pagar cuando tus ingresos sean superiores a 16.000 € al año"
-  #     - "*Paga una pequeña parte de tu salario cuando encuentres trabajo"
-  #   icons: 
-  #     - "/images/stepex.png"     
 
 ## Chile
 

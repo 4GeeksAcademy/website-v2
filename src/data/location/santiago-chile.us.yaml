@@ -105,7 +105,6 @@ two_columns:
     text: "Luisa Glum's Experience at 4Geeks Academy in Santiago, Chile"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    # ISA para eliminación o revisión
     text: "Transformative Journeys and the Income Share Agreement, Elevate Your Tech Skills from Santiago, Chile"
     font_size: ["18px", "18px", "22px", "22px", "22px"]
   button:

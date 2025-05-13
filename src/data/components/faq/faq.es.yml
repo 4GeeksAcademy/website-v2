@@ -228,20 +228,10 @@ faq:
         templates: ["faq"]
         priority: 0
         answer: |-
-          # ISA para eliminación o revisión
-          En 4Geeks Academy, ofrecemos opciones de pago como Income Share Agreements (ISA) o planes de matrícula diferida, que te permiten pagar después de conseguir empleo.
+          En 4Geeks Academy, ofrecemos opciones de pago como planes de matrícula diferida, que te permiten pagar después de conseguir empleo.
           Estos modelos están diseñados para apoyar tu trayectoria de aprendizaje, permitiéndote centrarte en la educación antes de empezar a pagar una vez que estés empleado. Sin embargo, los términos y condiciones varían según el programa y la ubicación que elijas.
           Para más detalles y criterios de elegibilidad, por favor discute estas opciones con nuestro equipo de admisiones.
 
-      # - question: "¿Puedo pagar después de conseguir un trabajo?" #USA
-      #   locations: ["atlanta-usa", "austin-usa", "chicago-usa", "downtown-miami", "houston-usa", "losangeles-usa", "newyork-usa", "orlando", "online", "online-spanish-usa"]
-      #   priority: 1
-      #   answer: |-
-      #     ¡Sí! Con nuestro Acuerdo de Participación en Ingresos (ISA) en Estados Unidos, solo pagarás $1,000 por adelantado por el bootcamp. La matrícula restante se paga solo después de que consigas un trabajo que te reporte más de $35,000 al año. Si no eres contratado, no pagarás nada. Además, si pierdes tu trabajo por cualquier razón, tus pagos se pausarán hasta que vuelvas a estar empleado.
-
-      ## ¿Puedo pagar después de conseguir un trabajo?
-
-      ##  ¿4Geeks Academy Ofrece  mentorías?
       - question: "¿4Geeks Academy Ofrece mentorías?" # Europe + Latam + Chile
         locations: ["barcelona-spain", "berlin-germany", "dublin-ireland", "europe", "hamburg-germany", "lisbon-portugal", "madrid-spain", "malaga-spain", "milan-italy", "munich-germany", "rome-italy", "valencia-spain", "bogota-colombia", "buenosaires-argentina", "caracas-venezuela", "costa-rica", "lapaz-bolivia", "lima-peru", "mexicocity-mexico", "montevideo-uruguay", "panamacity-panama", "quito-ecuador", "santiago-chile"]
         templates: ["faq"]

@@ -64,19 +64,6 @@ full_time:
     icons: 
       - "/images/landing/miamitech-logo.png"  
 
-  # - slug: 'usa-isa-ft'
-  #   academies: ['toronto-canada', 'downtown-miami', 'orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
-  #   recomended: false
-  #   scholarship: "Income Share Agreement"
-  #   payment_time: "Pay only when you get a job. Ask for living stipends."
-  #   job_guarantee_price: "USD $4000"
-  #   price: "$0"
-  #   bullets: 
-  #     - "8.5% of your salary until paid in full, only if you get a job in tech."
-  #     - "Only start making payments after you find a Job"
-  #   icons: 
-  #     -  "/images/clarkuniversity.png"
-
 
 ## España & Europe
 
@@ -109,18 +96,6 @@ full_time:
       - "/images/sequra.png"
       - "/images/nemuru.png"
 
-  - slug: 'spain-isa-fs-ft'
-    academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
-    recomended: true
-    # ISA para eliminación o revisión
-    scholarship: "Income Share Agreement (ISA)"
-    payment_time: "Pay only after you find a job"
-    price: "0 €*"
-    bullets: 
-      - "Only pay while your job salary is above €16,000 / year."
-      - "*Pay using a small portion of your salary. NO INTEREST!"
-    icons: 
-      - "/images/bcas.png"   
 
 ## Chile
 
@@ -150,17 +125,7 @@ full_time:
     icons:
       - "/images/flevo-new.png"
                        
-  # - slug: 'chile-isa-fs-ft'
-  #   academies: ['santiago-chile']
-  #   recomended: false
-  #   scholarship: "Income Share Agreement (ISA)"
-  #   payment_time: ""
-  #   price: "0 CLP*"
-  #   bullets: 
-  #     - "*You pay 16% of your salary when you get a job until you paid in full"
-  #     - "Only if you get a job in tech" 
-  #   icons: 
-  #   - "/images/lumni.png"
+
 
 part_time:
 
@@ -223,19 +188,7 @@ part_time:
       - "Fulfill required coursework and attendance."
       - "Get hired within 9 months of graduation or we’ll refund 100% of your tuition."
     icons: 
-      # - "/images/clarkuniversity.png"
-
-  # - slug: 'usa-isa-pt'
-  #   academies: ['orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa','toronto-canada']
-  #   recomended: false
-  #   scholarship: "Income Share Agreement"
-  #   payment_time: "Start making payments only when you get a job"
-  #   price: "$0"
-  #   bullets: 
-  #     - "Focus on your career and not how to afford your education"
-  #     - "8.5% of your salary until paid in full (1.5x revenue cap), only if you get a job in tech."
-  #   icons: 
-  #     - "/images/miashare.png"    
+      # - "/images/clarkuniversity.png" 
 
 ##  EUROPE Part-time
 
@@ -268,21 +221,7 @@ part_time:
       - "Scholarships available up to €1,900. Pay from €4,900* instead of €6,800. SCHOLARSHIPS SUBJECT TO AVAILABILITY!"         
     icons: 
       - "/images/bcas.png"
-                       
-  - slug: 'north-europe-isa-fs-pt'
-    academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany', 'munich-germany']
-    recomended: false
-    # ISA para eliminación o revisión
-    scholarship: "Income Share Agreement (ISA)"
-    payment_time: "Pay only when you work"
-    price: "€0*"
-    bullets: 
-      - "You only have to pay when your income exceeds €16,000 per year"
-      - "*Pay a small part of your salary when you find a job - SCHOLARSHIPS SUBJECT TO AVAILABILITY!"
-      - "To obtain the ISA you must meet some academic requirements"
-    icons: 
-      - "/images/bcas.png"
-
+                      
   - slug: 'south-europe-upfront-fs-pt'
     academies: ['lisbon-portugal','milan-italy','rome-italy']
     recomended: true
@@ -310,20 +249,6 @@ part_time:
       - "Pay in monthly installments. Starting at €150"
       - "Customized financing, with or without interest, from 4 to 48 months (conditions apply)"
       - "Scholarships available up to €1,900. Pay from €4,900* instead of €6,800. SCHOLARSHIPS SUBJECT TO AVAILABILITY!"
-    icons: 
-      - "/images/bcas.png"
-
-  - slug: 'south-europe-isa-fs-pt'
-    academies: ['lisbon-portugal','milan-italy','rome-italy']
-    recomended: false
-    # ISA para eliminación o revisión
-    scholarship: "Income Share Agreement (ISA)"
-    payment_time: "Pay only when you work"
-    price: "€0*"
-    bullets: 
-      - "You only have to pay when your income exceeds €16,000 per year"
-      - "*Pay a small part of your salary when you find a job - SCHOLARSHIPS SUBJECT TO AVAILABILITY!"
-      - "To obtain the ISA you must meet some academic requirements"
     icons: 
       - "/images/bcas.png"
 
@@ -362,19 +287,6 @@ part_time:
       - "/images/nemuru.png"
       - "/images/bcas.png"
 
-  - slug: 'spain-isa-fs-pt'
-    academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain']
-    recomended: false
-    # ISA para eliminación o revisión
-    scholarship: "Income Share Agreement (ISA)"
-    payment_time: "Pay only when you work"
-    price: "€0*"
-    bullets: 
-      - "You only have to pay when your income exceeds €16,000 per year"
-      - "*Pay a small part of your salary when you find a job - SCHOLARSHIPS SUBJECT TO AVAILABILITY!"
-      - "To obtain the ISA you must meet some academic requirements"
-    icons: 
-      - "/images/bcas.png"
 
 ## Chile part-time
 
