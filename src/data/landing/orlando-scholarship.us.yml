@@ -18,7 +18,7 @@ navbar:
   logoUrl: "#"
 
 header_data:
-  tagline: "Orlando Residents: Your Tech Career Starts Here"
+  tagline: "Orlando: Your Tech Career Starts Here"
   sub_heading: ""
   background: "#ffffff"
   tagline_color: "#1c1c1c"
@@ -34,7 +34,7 @@ features:
   marginTop: 0px
   text: "Apply now—don't miss your chance!"
   bullets:
-    - 'For Greater Orlando residents only'
+    - 'Scholarships available for Greater Orlando residents only'
     - 'Award-winning tech education and career support'
     - "Get a high-paying job in Florida's thriving tech scene"
     - 'Limited spots — act now!'
@@ -78,8 +78,8 @@ form:
 follow_bar:
   position: "top"
   content:
-    text: "Join and be a part of the Orlando Tech movement."
-    text_mobile: "Join and be a part of the Orlando Tech movement."
+    text: "Be a part of the Orlando Tech movement."
+    text_mobile: "Be a part of the Orlando Tech movement."
     font_size: ["22px", "22px", "22px", "16px", "16px"]
   button:
     text: "Apply Now"
@@ -102,8 +102,8 @@ components:
       path: "#prices_and_payment"
     bullets:
       items: 
-        - text: "Miami is projected to add approximately 650,000 tech jobs by 2030, and Orlando's tech job market is projected to grow by 27%."
         - text: "Orlando is the fastest growing region in Florida, attracting major employers and fostering a thriving startup ecosystem."
+        - text: "Miami is projected to add approximately 650,000 tech jobs by 2030, and Orlando's tech job market is projected to grow by 27%."
         - text: "Big names like Microsoft, Amazon and Lockheed Martin have moved to Florida and venture capital is booming."
         - text: "In Orlando, entry-level positions in full-stack development, data science or cybersecurity earn around $70K/ year"
 
@@ -149,8 +149,7 @@ components:
     sub_heading:
       font_size: ["16px", "16px", "16px", "14px", "14px"]
       style: '{ "font-weight": "100" }'
-      text: "Join Orlando's premier tech education hub. With 7+ global campuses and 4,000+ alumni, we offer more than just coding—we provide a lifelong support network for your tech career success. Where there's a geek, there's a way!
-        What sets us apart:"
+      text: "Join Orlando's premier tech education hub. With 7+ global campuses and 4,000+ alumni, we offer more than just coding—we provide a lifelong support network for your tech career success. Where there's a geek, there's a way! \n What sets us apart:"
 
     content:
       font_size: ["16px"]
@@ -248,7 +247,7 @@ components:
       style: '{ "font-weight": "400", "color": "#3A3A3A" }'
       text: "What our graduates say"
       font_size: ["35px", "35px", "30px", "30px", "30px"]
-    filter_indexes: ['azu-bota','nai-kali','cha-fabr', 'jona-ferra', 'kev-so']
+    filter_indexes: ['nai-kali','jona-ferra', 'kev-so']
 
 badges:
   position: 10
