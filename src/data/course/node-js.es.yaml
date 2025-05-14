@@ -1,5 +1,5 @@
 meta_info:
-  slug: curso-de-node-js-backend
+  slug: curso-de-node-js-backend   #<----URL: https://4geeksacademy.com/es/coding-bootcamps/curso-de-node-js-backend
   title: "Aprende sobre backend en Node-Js at 4Geeks Academy"
   description: "Descripcion del curso node-js"
   bc_slug: "node-js"

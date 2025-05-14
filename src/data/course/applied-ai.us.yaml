@@ -1,5 +1,5 @@
 meta_info:
-  slug: applied-ai-course
+  slug: applied-ai-course   #<----URL: https://4geeksacademy.com/us/coding-bootcamps/applied-ai-course
   title: "Course in Applied Artificial Intelligence"
   description: "4Geeks Academy offers an AI training course with job guarantee. Dive into artificial intelligence and open doors to future tech careers."
   bc_slug: "applied-ai"
@@ -52,7 +52,7 @@ course_instructors:
     #   linkedin: "https://www.linkedin.com/in/sayyednezhadi"
 
 badges:
-  paragraph: "Boost your career at 4Geeks Academy, where developers grow and thrive.  Listed among the world’s best coding bootcamps of 2024 by Course Report, the 5 best <a href='/us/coding-bootcamp'>coding bootcamp</a> in 2024 by Forbes, named best center for coding bootcamps 2023 by Premios de Excelencia Educativa in Spain, rated 4.92/5 on Switchup and more. Licensed by the Florida Department of Education, USA"
+  paragraph: "Boost your career at 4Geeks Academy, where developers grow and thrive.  Listed among the world's best coding bootcamps of 2024 by Course Report, the 5 best <a href='/us/coding-bootcamp'>coding bootcamp</a> in 2024 by Forbes, named best center for coding bootcamps 2023 by Premios de Excelencia Educativa in Spain, rated 4.92/5 on Switchup and more. Licensed by the Florida Department of Education, USA"
 
 upcoming:
   no_dates_message: "Currently, there are no upcoming dates for this program"
@@ -67,7 +67,7 @@ upcoming:
 
 overlaped:
   heading: |-
-    "A.I. won’t take your job, it’s somebody USING A.I. that’ll take your job." <br> <span style="font-size:13px; line-height: 10px;">Economist James Baldwin at the World Economic Forum.</span>
+    "A.I. won't take your job, it's somebody USING A.I. that'll take your job." <br> <span style="font-size:13px; line-height: 10px;">Economist James Baldwin at the World Economic Forum.</span>
   paragraph: "AI can boost human productivity to the point that only AI-proficient professionals will be hired in the future. Do more with less. Don't get left behind."
   # button:
   #   text: "LEARN MORE"
@@ -81,7 +81,7 @@ details:
   about:
     title: "About this program"
     sub_title: |-
-      Our comprehensive Applied AI course is tailored for professionals eager to leverage the power of AI within their current roles. Over six dynamic weeks, you’ll gain a deep understanding of AI and its real-world applications. From understanding the various types of generative AI to mastering key elements like context, prompts, and models, this course will equip you with essential tools and best practices to optimize AI integration. <br>
+      Our comprehensive Applied AI course is tailored for professionals eager to leverage the power of AI within their current roles. Over six dynamic weeks, you'll gain a deep understanding of AI and its real-world applications. From understanding the various types of generative AI to mastering key elements like context, prompts, and models, this course will equip you with essential tools and best practices to optimize AI integration. <br>
       You'll be ready to strategically implement AI and significantly  enhance your workplace capabilities by course completion. Don't just adapt to the future – lead the way by leveraging AI to your advantage!
 
     list:
@@ -271,7 +271,7 @@ two_columns_second:
     - heading: "LEARN FROM THE EXPERTS:"
       text: "Access cutting-edge insights on how to best leverage AI, gained from hands-on experience training our own internal custom AI."
     - heading: "1:1 MENTORING ON DEMAND:"
-      text: "Our mentors will be available to assist you online or in-person throughout the duration of the course. Ask away, there’s no limit to the number of sessions!"
+      text: "Our mentors will be available to assist you online or in-person throughout the duration of the course. Ask away, there's no limit to the number of sessions!"
     - heading: "TAILORED CAREER SUPPORT:"
       text: "Receive customized advice and guidance, tailored to your unique professional profile."
 
