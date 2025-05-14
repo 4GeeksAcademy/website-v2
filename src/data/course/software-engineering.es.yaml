@@ -65,9 +65,9 @@ two_columns:
   proportions: [6, 6]
   image:
     style: '{"border" : "3px solid black", "backgroundSize": "contain" }'
-    src: "/static/images/staff/luisa.png"
+    src: "/static/images/staff/hernan-new.webp"
     shadow: true  
-  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  video: "ln3bQsV1BaQ"
   heading:
     text: "4Geeks, Miami and a story full of opportunities"
     font_size: ["30px", "30px", "30px", "30px", "30px"]

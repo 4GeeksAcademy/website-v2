@@ -2,7 +2,7 @@ meta_info:
   slug: "coding-bootcamp-malaga-spain"
   title: "Coding Bootcamp Málaga, Spain with 4GeeksAcademy"
   position: 20
-  description: "Start your career with 4Geeks Academy’s Málaga Coding Bootcamp. Get a Job Guarantee, personalized mentorship, and the skills to launch your tech career."
+  description: "Start your career with 4Geeks Academy's Málaga Coding Bootcamp. Get a Job Guarantee, personalized mentorship, and the skills to launch your tech career."
   image: "/images/og-preview/malaga-spain.us.png"
   keywords: "Coding Bootcamp Malaga"
   redirects: ["/location/malaga", "/us/location/malaga-spain"]
@@ -94,11 +94,11 @@ two_columns:
   proportions: [6, 6]
   image:
     style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
-    src: "/static/images/staff/luisa.png"
+    src: "/static/images/staff/hernan-new.webp"
     shadow: true  
-  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  video: "https://www.youtube.com/watch?v=ln3bQsV1BaQ"
   heading:
-    text: "Luisa Glum's Journey with 4GeeksAcademy"
+    text: "Hernán García's Experience at 4Geeks Academy in Malaga"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
     text: "Expert Guidance and Mentorship in Malaga Driving Professional Development within the Tech Community"

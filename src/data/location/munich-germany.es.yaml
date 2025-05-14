@@ -86,11 +86,11 @@ two_columns:
   proportions: [6, 6]
   image:
     style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
-    src: "/static/images/staff/luisa.png"
+    src: "/static/images/staff/hernan-new.webp"
     shadow: true  
-  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  video: "https://www.youtube.com/watch?v=ln3bQsV1BaQ"
   heading:
-    text: "Explorando 4Geeks Academy en Munich"
+    text: "La Experiencia de Hernán García en 4Geeks Academy en Munich"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
     text: "Únete a nosotros para explorar el aprendizaje práctico, interactuar con líderes de la industria y forjar tu camino en el próspero ámbito tecnológico de Munich."

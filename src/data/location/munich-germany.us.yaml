@@ -2,7 +2,7 @@ meta_info:
   slug: "coding-bootcamp-munich-germany"
   title: "Coding Bootcamp in Munich, Germany"
   position: 101
-  description: "4Geeks Academy’s Munich Coding Bootcamp offers a Job Guarantee. Master coding skills and land your first job in Germany’s growing tech industry."
+  description: "4Geeks Academy's Munich Coding Bootcamp offers a Job Guarantee. Master coding skills and land your first job in Germany's growing tech industry."
   image: "/images/og-preview/munchen-germany.us.png"
   keywords: "null"
   redirects: []
@@ -89,9 +89,9 @@ two_columns:
   proportions: [6, 6]
   image:
     style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
-    src: "/static/images/staff/luisa.png"
+    src: "/static/images/staff/hernan-new.webp"
     shadow: true  
-  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  video: "https://www.youtube.com/watch?v=ln3bQsV1BaQ"
   heading:
     text: "Exploring 4Geeks Academy in Munich"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
