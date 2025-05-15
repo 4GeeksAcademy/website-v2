@@ -1,0 +1,96 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# SEO Validation Rules
+
+## File Structure Validation
+- Files must be located in the `src/data/` directory
+- Only `.yml` or `.yaml` files are processed
+- Excluded directories and files:
+  - `/components/`
+  - `/plans/`
+  - `additional-redirects.yml`
+  - `call-to-actions.yml`
+
+## Meta Information Requirements
+The following properties are required in the `meta_info` section:
+
+### Required Properties
+1. `slug` (string, mandatory)
+   - Must be unique across all files
+   - Cannot be duplicated within the same entity type
+   - Used for URL generation
+
+2. `title` (string, mandatory)
+   - SEO-friendly title
+   - Must be present and non-empty
+
+3. `description` (string, mandatory)
+   - Maximum length: 160 characters (including spaces)
+   - Must be unique across all files
+   - Cannot be empty or undefined
+   - Used for meta description tag
+
+### Optional Properties
+1. `image` (string)
+   - Path to the image file
+   - Can be empty string
+
+2. `keywords` (string)
+   - SEO keywords
+   - Optional field
+
+3. `redirects` (array)
+   - Array of redirect URLs
+   - Can be empty array
+   - Must be an array type if present
+
+## Image Alt Text Requirements
+The following sections must have non-empty `image_alt` properties:
+- `python_banner.image_alt`
+- `community_banner.image_alt`
+- `header.image_alt`
+- `what_is_4geeks.image_alt`
+
+## Validation Rules
+1. YAML Syntax
+   - Files must have valid YAML syntax
+   - Invalid syntax will cause validation failure
+
+2. Meta Information
+   - `meta_info` section must be present
+   - All mandatory properties must be present
+   - Property types must match their definitions
+   - Array properties must be actual arrays
+
+3. Description Uniqueness
+   - Descriptions must be unique across all files
+   - Duplicate descriptions will cause validation failure
+
+4. Property Type Validation
+   - String properties must be strings
+   - Array properties must be arrays
+   - Optional properties can be null or undefined
+   - Mandatory properties cannot be null or undefined
+
+## Error Handling
+The validation process will:
+1. Fail if any mandatory requirements are not met
+2. Warn about missing image alt texts
+3. Success message when all validations pass
+
+## Example of Valid Structure
+```yml
+meta_info:
+  slug: "example-slug"
+  title: "Example Title"
+  description: "Example description under 160 characters"
+  image: ""
+  keywords: "Example Keywords"
+  redirects: []
+
+header:
+  image_alt: "example-alt-text"
+```
