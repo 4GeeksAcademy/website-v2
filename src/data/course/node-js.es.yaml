@@ -1,7 +1,7 @@
 meta_info:
   slug: curso-de-node-js-backend
-  title: "Aprende sobre backend en Node-Js at 4Geeks Academy"
-  description: "Descripcion del curso node-js"
+  title: "Aprende sobre desarrollo backend con Node.js en 4Geeks Academy"
+  description: "Domina el desarrollo backend con Node.js en nuestro curso completo. Aprende a construir aplicaciones del lado del servidor escalables y eficientes utilizando el entorno de ejecución JavaScript más popular."
   bc_slug: "node-js"
   template: "course-engineering"
   image: ""
@@ -15,7 +15,7 @@ apply_form:
   label: Node-js Backend
 
 header:
-  title: "Node Js Backend Development"
+  title: "Desarrollo Backend con Node.js"
   image_alt: "Node JS"
   paragraph: ""
 
@@ -48,21 +48,21 @@ badges:
 #     shadow: true  
 #   video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
 #   heading:
-#     text: "4Geeks, Miami and a story full of opportunities"
+#     text: "4Geeks, Miami y una historia llena de oportunidades"
 #     font_size: ["30px", "30px", "30px", "30px", "30px"]
 #   sub_heading:
-#     text: "We are Miami based and we have been focusing in bringing on more opportunities in South Florida."
+#     text: "Estamos ubicados en Miami y nos hemos enfocado en traer más oportunidades al sur de Florida."
 #     font_size: ["16px", "16px", "16px", "16px", "16px"]
 #   button:
-#     text: "Apply now"
+#     text: "Aplicar ahora"
 #     color: "white"
 #     background: "black"
 #     path: "#"
 #   bullets:
 #     items: 
-#     - text: "There is always a full or partial scholarship open"
-#     - text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
-#     - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade County and many more."
+#     - text: "Siempre hay becas completas o parciales disponibles"
+#     - text: "Siempre hay oportunidades para todos en el condado de Miami-Dade, Broward y Palm Beach"
+#     - text: "Tenemos alianzas continuas con Miami Dade College, Miami Tech Coalition, UWM, la Ciudad de Miami, el Condado de Miami-Dade y muchos más."
 
 
 prices:

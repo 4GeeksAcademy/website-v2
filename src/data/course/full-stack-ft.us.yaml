@@ -1,7 +1,7 @@
 meta_info:
   slug: full-time-full-stack-developer
-  title: "Desarrollador Full Stack estudiando full-time, durante 10 semanas."
-  description: "Conviértete en Desarrollador Full Stack en tan solo 10 semanas, estudia full-time para acelerar tu aprendizaje y cambia tu vida lo más rápido posible."
+  title: "Full Stack Developer studying full-time, for 18 weeks."
+  description: "Become a Full Stack Developer in just 18 weeks, study full-time to accelerate your learning and change your life as quickly as possible."
   image: "/images/og-preview/full-stack-ft.us.png"
   bc_slug: "full-stack-ft"
   visibility: "unlisted"
@@ -43,21 +43,6 @@ course_instructors:
   header:
     title: "Meet our instructors"
     paragraph: ""
-
-  # instructors:
-  #   - name: "Roldolfo Campos"
-  #     sub_title: "Co fundador de 4geeks y director de educación"
-  #     image: "../../../static/images/instructors/example.png"
-  #     bio: "Currently working as a Senior Solutions Architect at VMware, Rodolfo Campos is a Software Engineer with 17 years of experience in Linux, Java, SQL, Blockchain, etc. Master in Computer Science and passionate about Big Data and Entrepreneurship."
-  #     github: ""
-  #     linkedin: "https://www.linkedin.com/"
-
-  #   - name: "Gabriel Salinas"
-  #     sub_title: "Sophisticated Software Systems Engineer"
-  #     image: "../../../static/images/instructors/example.png"
-  #     bio: "Currently working as a Senior Solutions Architect at VMware"
-  #     github: ""
-  #     linkedin: "https://www.linkedin.com/"
 
 badges:
   paragraph: "4Geeks Academy only focuses in coding skills, the defacto <a href='/us/coding-bootcamp'>coding bootcamp</a>. We are licensed by the USA F. Dep. of Education. Chosen as one of the top 35 bootcamps of the world and top coding bootcamp in Miami according to SwitchUp. Recognized as the top 10 coding bootcamps in the United States according to Newsweek.."

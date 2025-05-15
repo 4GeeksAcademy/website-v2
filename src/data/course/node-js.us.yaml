@@ -1,7 +1,7 @@
 meta_info:
   slug: node-js-backend-development
-  title: "Lear About Node-Js backend at 4Geeks Academy"
-  description: "Description of the node-js course"
+  title: "Learn About Node.js Backend at 4Geeks Academy"
+  description: "Master Node.js backend development with our comprehensive course. Learn to build scalable, efficient server-side applications using the most popular JavaScript runtime environment."
   bc_slug: "node-js"
   template: "course-engineering"
   image: ""
