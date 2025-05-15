@@ -1,7 +1,7 @@
 meta_info:
   slug: curso-de-node-js-backend
   title: "Aprende sobre desarrollo backend con Node.js en 4Geeks Academy"
-  description: "Domina el desarrollo backend con Node.js en nuestro curso completo. Aprende a construir aplicaciones del lado del servidor escalables y eficientes utilizando el entorno de ejecución JavaScript más popular."
+  description: "Aprende desarrollo backend con Node.js. Construye aplicaciones del lado del servidor escalables y eficientes con el entorno de ejecución JavaScript más popular."
   bc_slug: "node-js"
   template: "course-engineering"
   image: ""
