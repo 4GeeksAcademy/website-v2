@@ -65,20 +65,6 @@ full_time:
     icons: 
       - "/images/landing/miamitech-logo.png" 
 
-  # - slug: 'usa-isa-ft'
-  #   academies: ['downtown-miami', 'orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
-  #   recomended: false
-  #   scholarship: "Income Share Agreement"
-  #   payment_time: "Pay after you get a job"
-  #   job_guarantee_price: "USD $4000"
-  #   price: "$0"
-  #   bullets: 
-  #     - "With $400 p/ week living stipends"
-  #     - "9% of your salary until paid in full, only if you get a job in tech."
-  #   icons: 
-  #     - "/images/ascent_logo.png"
-  #     - "/images/climb-logo.png"
-  #     - "/images/quotanda-logo.png"
 
 ## España & Europe
   - slug: 'spain-upfront-fs-ft'
@@ -110,17 +96,7 @@ full_time:
       - "/images/sequra.png"
       - "/images/nemuru.png" 
                        
-  - slug: 'spain-isa-fs-ft'
-    academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
-    recomended: true
-    scholarship: "Acuerdo de Ingresos Compartidos (ISA)"
-    payment_time: "Paga sólo cuando trabajes"
-    price: "0 €*"
-    bullets: 
-      - "Solo tendrás que pagar cuando tus ingresos sean superiores a 16.000 € al año"
-      - "*Paga una pequeña parte de tu salario cuando encuentres trabajo. ¡SIN INTERESES!"
-    icons: 
-      - "/images/bcas.png"   
+
 
   - slug: 'north-europe-upfront-fs-pt'
     academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany','munich-germany']
@@ -205,17 +181,7 @@ full_time:
     icons:
       - "/images/flevo-new.png"
                        
-  # - slug: 'chile-isa-fs-ft'
-  #   academies: ['santiago-chile']
-  #   recomended: false
-  #   scholarship: "Acuerdo de Ingresos Compartidos (ISA)"
-  #   payment_time: ""
-  #   price: "0 CLP*"
-  #   bullets: 
-  #     - "*Pagas el 16% de tu salario cuando consigas empleo hasta pagarlo todo"
-  #     - "Sólo si consigues trabajo en el área de tecnología" 
-  #   icons: 
-  #   - "/images/lumni.png"
+
 
   - slug: 'venezuela-scholarship-pt'
     academies: ['caracas-venezuela']
@@ -333,19 +299,7 @@ part_time:
       - "Becas disponibles de hasta 1.900 €. Paga desde 4.900 €* en vez de 6.800 €. ¡BECAS SUJETAS A DISPONIBILIDAD!"         
     icons: 
       - "/images/bcas.png"
-                       
-  - slug: 'north-europe-isa-fs-pt'
-    academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany', 'munich-germany']
-    recomended: false
-    scholarship: "Acuerdo de Ingresos Compartidos (ISA)"
-    payment_time: "Paga sólo cuando trabajes"
-    price: "0 €*"
-    bullets: 
-      - "Solo tendrás que pagar cuando tus ingresos sean superiores a 16.000 € al año"
-      - "*Paga una pequeña parte de tu salario cuando encuentres trabajo - ¡BECAS SUJETAS A DISPONIBILIDAD!"
-      - "Para obtener el ISA debes cumplir con algunos requisitos académicos"
-    icons: 
-      - "/images/bcas.png"     
+                         
 
   - slug: 'south-europe-upfront-fs-pt'
     academies: ['lisbon-portugal','milan-italy','rome-italy']
@@ -377,18 +331,6 @@ part_time:
     icons: 
       - "/images/bcas.png"
 
-  - slug: 'south-europe-isa-fs-pt'
-    academies: ['lisbon-portugal','milan-italy','rome-italy']
-    recomended: false
-    scholarship: "Acuerdo de Ingresos Compartidos (ISA)"
-    payment_time: "Paga sólo cuando trabajes"
-    price: "0 €*"
-    bullets: 
-      - "Solo tendrás que pagar cuando tus ingresos sean superiores a 16.000 € al año"
-      - "*Paga una pequeña parte de tu salario cuando encuentres trabajo - ¡BECAS SUJETAS A DISPONIBILIDAD!"
-      - "Para obtener el ISA debes cumplir con algunos requisitos académicos"
-    icons: 
-      - "/images/bcas.png"     
 
 # España
 
@@ -425,18 +367,6 @@ part_time:
       - "/images/nemuru.png"
       - "/images/bcas.png"
 
-  - slug: 'spain-isa-fs-pt'
-    academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain']
-    recomended: false
-    scholarship: "Acuerdo de Ingresos Compartidos (ISA)"
-    payment_time: "Paga sólo cuando trabajes"
-    price: "0 €*"
-    bullets: 
-      - "Solo tendrás que pagar cuando tus ingresos sean superiores a 16.000 € al año"
-      - "*Paga una pequeña parte de tu salario cuando encuentres trabajo - ¡BECAS SUJETAS A DISPONIBILIDAD!"
-      - "Para obtener el ISA debes cumplir con algunos requisitos académicos"
-    icons: 
-      - "/images/bcas.png" 
 
 ## Chile 
 

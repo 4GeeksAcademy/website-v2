@@ -2,7 +2,7 @@ meta_info:
   slug: "coding-bootcamp-dublin-ireland"
   title: "Coding Bootcamp in Dublin, Ireland"
   position: 101
-  description: "Join 4Geeks Academy’s Dublin Coding Bootcamp with a Job Guarantee. Gain coding skills and secure your first tech job in Ireland’s growing industry."
+  description: "Join 4Geeks Academy's Dublin Coding Bootcamp with a Job Guarantee. Gain coding skills and secure your first tech job in Ireland's growing industry."
   image: "/images/og-preview/dublin-ireland.us.png"
   keywords: "null"
   redirects:
@@ -95,11 +95,11 @@ two_columns:
   proportions: [6, 6]
   image:
     style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
-    src: "/static/images/staff/luisa.png"
+    src: "/static/images/staff/hernan-new.webp"
     shadow: true  
-  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  video: "https://www.youtube.com/watch?v=ln3bQsV1BaQ"
   heading:
-    text: "Insights with 4GeeksAcademy"
+    text: "Hernán García's Experience with 4Geeks Academy in Dublin"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
     text: "Navigating Dublin's Expansive Tech Realm for Career Success"

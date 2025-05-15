@@ -11,13 +11,7 @@ why:
     video: "https://www.youtube.com/watch?v=ln3bQsV1BaQ" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
     # video: "ln3bQsV1BaQ"
     icon: address
-  - title: "Financiamos tu carrera"
-    description: "No pagues nada desde el día uno hasta conseguir trabajo como programador con Income Share Agreement (ISA)."
-    image: "../../../../static/images/why2.jpg"
-    alt: ""
-    video: "https://www.youtube.com/watch?v=MBXqEnhodx0" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
-    # video: "MBXqEnhodx0"
-    icon: handmoney
+ 
   - title: "Nunca programes solo otra vez"
     description: "Ilimitado y para siempre: Mentorías, ejercicios, chatroom permanente, salones de clase reales, incluso luego de conseguir trabajo."
     image: "../../../../static/images/why1.jpg"

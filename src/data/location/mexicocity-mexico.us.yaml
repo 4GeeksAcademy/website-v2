@@ -2,7 +2,7 @@ meta_info:
   slug: "coding-bootcamp-mexico"
   title: "4Geeks Academy in Mexico, Mexico City"
   position: 32
-  description: "Join 4Geeks Academy’s Mexico City Coding Bootcamp with a Job Guarantee. Master coding skills and secure your first tech job in Mexico."
+  description: "Join 4Geeks Academy's Mexico City Coding Bootcamp with a Job Guarantee. Master coding skills and secure your first tech job in Mexico."
   image: "/images/og-preview/mexicocity-mexico.us.png"
   keywords: ""
   # it will not show up on the applications forms
@@ -92,11 +92,11 @@ two_columns:
   proportions: [6, 6]
   image:
     style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
-    src: "/static/images/staff/luisa.png"
+    src: "/static/images/staff/hernan-new.webp"
     shadow: true  
-  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  video: "https://www.youtube.com/watch?v=ln3bQsV1BaQ"
   heading:
-    text: "4Geeks Academy in Mexico City Luisa's Choice"
+    text: "Hernán García's Experience at 4Geeks Academy in Mexico City"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
     text: "Empowering Tech Journeys and Innovations"

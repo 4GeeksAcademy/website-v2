@@ -1,5 +1,5 @@
 meta_info:
-  slug: "coding-bootcamp-lima-peru"
+  slug: coding-bootcamp-lima-peru
   title: "4Geeks Academy in Lima, Peru"
   position: 36
   description: "4Geeks Academy’s Lima Coding Bootcamp offers a Job Guarantee. Learn coding, gain real-world experience, and land your first tech job in Peru."
@@ -92,11 +92,11 @@ two_columns:
   proportions: [6, 6]
   image:
     style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
-    src: "/static/images/staff/luisa.png"
+    src: "/static/images/staff/hernan-new.webp"
     shadow: true  
-  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  video: "https://www.youtube.com/watch?v=ln3bQsV1BaQ"
   heading:
-    text: "Insights by Luisa Glum: 4Geeks Academy in Peru"
+    text: "Hernán García's Insight with 4GeeksAcademy"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
     text: "Empowering Tech Journeys and Innovations"
@@ -108,7 +108,7 @@ two_columns:
     path: "/us/apply"
   bullets:
     items: 
-    - text: "Luisa Glum reflects on the unique qualities of 4GeeksAcademy's programs and their alignment "
+    - text: "Hernán landed a job in tech within one month of starting his job search"
     - text: "Learn about our innovative teaching methodologies designed to equip learners with industry-relevant skills"
     - text: "Discover the impact of our programs in shaping tech careers and fostering innovation within Peru tech industry"
 

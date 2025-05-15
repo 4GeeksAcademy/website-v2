@@ -2,7 +2,7 @@ meta_info:
   slug: "coding-bootcamp-argentina-buenos-aires"
   title: "4Geeks Academy in Argentina, Buenos Aires"
   position: 33
-  description: "Join 4Geeks Academy’s Buenos Aires Coding Bootcamp with a Job Guarantee. Learn coding and secure your first tech job in Argentina’s growing market."
+  description: "Join 4Geeks Academy's Buenos Aires Coding Bootcamp with a Job Guarantee. Learn coding and secure your first tech job in Argentina's growing market."
   image: "/images/og-preview/buenosaires-argentina.us.png"
   keywords: ""
   # it will not show up on the applications forms
@@ -87,9 +87,9 @@ two_columns:
   proportions: [6, 6]
   image:
     style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
-    src: "/static/images/staff/luisa.png"
+    src: "/static/images/staff/hernan-new.webp"
     shadow: true  
-  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  video: "https://www.youtube.com/watch?v=ln3bQsV1BaQ"
   heading:
     text: "4Geeks, Argentina and a story full of opportunities"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
@@ -103,7 +103,7 @@ two_columns:
     path: "/us/apply"
   bullets:
     items: 
-    - text: "Luisa Glum shares her personal journey and how 4Geeks Academy transformed her career path in Santiago's evolving tech landscape"
+    - text: "Hernán García shares his personal journey and how 4Geeks Academy transformed his career path in Santiago's evolving tech landscape"
     - text: "With a 95% job placement rate within six months of graduation, our programs ensure tangible outcomes for career advancement"
     - text: "Flexible learning options, including part-time and immersive courses, cater to diverse schedules and learning preferences"
 

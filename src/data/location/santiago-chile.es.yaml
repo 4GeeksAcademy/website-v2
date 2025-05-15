@@ -91,9 +91,9 @@ two_columns:
   proportions: [6, 6]
   image:
     style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
-    src: "/static/images/testimonials/joshua-bravo-testimonial.jpg"
+    src: "/static/images/staff/hernan-new.webp"
     shadow: true  
-  video: "https://www.youtube.com/watch?v=rtpfwwfE0yY"
+  video: "ln3bQsV1BaQ"
   heading:
     text: "La Experiencia de Joshua Bravo en 4Geeks Academy Chile"
     font_size: ["30px", "30px", "30px", "30px", "30px"]

@@ -2,7 +2,7 @@ meta_info:
   slug: "coding-bootcamp-ecuador"
   title: "4Geeks Academy in Ecuador, Quito"
   position: 36
-  description: "Start your journey with 4Geeks Academy’s Quito Coding Bootcamp. Get a Job Guarantee, coding skills, and mentorship to launch your tech career."
+  description: "Start your journey with 4Geeks Academy's Quito Coding Bootcamp. Get a Job Guarantee, coding skills, and mentorship to launch your tech career."
   image: "/images/og-preview/quito-ecuador.us.png"
   keywords: ""
   # it will not show up on the applications forms
@@ -92,11 +92,11 @@ two_columns:
   proportions: [6, 6]
   image:
     style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
-    src: "/static/images/staff/luisa.png"
+    src: "/static/images/staff/hernan-new.webp"
     shadow: true  
-  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  video: "https://www.youtube.com/watch?v=ln3bQsV1BaQ"
   heading:
-    text: "Insights by Luisa Glum 4Geeks Academy in Ecuador"
+    text: "Hernán García's Experience at 4Geeks Academy in Ecuador"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
     text: "Elevate Your Tech Skills from Anywhere in Quito, Ecuador"
@@ -108,7 +108,7 @@ two_columns:
     path: "/us/apply"
   bullets:
     items: 
-    - text: "Luisa Glum reflects on the unique qualities of 4GeeksAcademy's programs and their alignment "
+    - text: "Hernán García reflects on the unique qualities of 4GeeksAcademy's programs and their alignment "
     - text: "Learn about our innovative teaching methodologies designed to equip learners with industry-relevant skills"
     - text: "Discover the impact of our programs in shaping tech careers and fostering innovation within Ecuador tech industry"
 

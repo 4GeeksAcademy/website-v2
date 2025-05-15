@@ -65,17 +65,6 @@ part_time:
       - "/images/bitcoin_logo.png"  
       - "/images/ethereum.png"    
 
-  # - slug: 'spain-isa-cs-pt'
-  #   academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain']
-  #   recomended: true
-  #   scholarship: "Acuerdo de Ingresos Comparsidos (ISA)"
-  #   payment_time: "Paga sólo cuando trabajes"
-  #   price: "0 €*"
-  #   bullets: 
-  #     - "Solo tendrás que pagar cuando tus ingresos sean superiores a 16.000 € al año"
-  #     - "*Paga una pequeña parte de tu salario cuando encuentres trabajo. ¡SIN INTERESES!"
-  #   icons: 
-  #     - "/images/bcas.png" 
 
   - slug: 'north-europe-scholarships-cs-pt'
     academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany','munich-germany']
@@ -109,18 +98,7 @@ part_time:
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
       - "/images/ethereum.png"    
-                       
-  # - slug: 'north-europe-isa-cs-pt'
-  #   academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany', 'munich-germany']
-  #   recomended: true
-  #   scholarship: "Acuerdo de Ingresos Compartidos (ISA)"
-  #   payment_time: "Paga sólo cuando trabajes"
-  #   price: "0 €*"
-  #   bullets: 
-  #     - "Solo tendrás que pagar cuando tus ingresos sean superiores a 16.000 € al año"
-  #     - "*Paga una pequeña parte de tu salario cuando encuentres trabajo"
-  #   icons: 
-  #     - "/images/stepex.png"     
+
 
   - slug: 'south-europe-scholarships-cs-pt'
     academies: ['lisbon-portugal','milan-italy','rome-italy']
@@ -154,18 +132,7 @@ part_time:
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
       - "/images/ethereum.png"
-
-  # - slug: 'south-europe-isa-cs-pt'
-  #   academies: ['lisbon-portugal','milan-italy','rome-italy']
-  #   recomended: true
-  #   scholarship: "Acuerdo de Ingresos Compartidos (ISA)"
-  #   payment_time: "Paga sólo cuando trabajes"
-  #   price: "0 €*"
-  #   bullets: 
-  #     - "Solo tendrás que pagar cuando tus ingresos sean superiores a 16.000 € al año"
-  #     - "*Paga una pequeña parte de tu salario cuando encuentres trabajo"
-  #   icons: 
-  #     - "/images/stepex.png"     
+  
 
 ##  Chile
 

@@ -2,7 +2,7 @@ meta_info:
   slug: "coding-bootcamp-santiago"
   title: "Coding Bootcamp Santiago, Chile"
   position: 20
-  description: "Start your tech career with 4Geeks Academy’s Santiago Coding Bootcamp. Enjoy a Job Guarantee and expert mentorship to guide your success."
+  description: "Start your tech career with 4Geeks Academy's Santiago Coding Bootcamp. Enjoy a Job Guarantee and expert mentorship to guide your success."
   image: "/images/og-preview/santiago-chile.us.png"
   keywords: ""
   redirects:
@@ -98,14 +98,14 @@ two_columns:
   proportions: [6, 6]
   image:
     style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
-    src: "/static/images/staff/luisa.png"
+    src: "/static/images/staff/hernan-new.webp"
     shadow: true  
-  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  video: "ln3bQsV1BaQ"
   heading:
-    text: "Luisa Glum's Experience at 4Geeks Academy in Santiago, Chile"
+    text: "Hernán García's Experience at 4Geeks Academy in Santiago, Chile"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "Transformative Journeys and the Income Share Agreement, Elevate Your Tech Skills from Santiago, Chile"
+    text: "Transformative Journeys and the Deferred Payment Plan, Elevate Your Tech Skills from Santiago, Chile"
     font_size: ["18px", "18px", "22px", "22px", "22px"]
   button:
     text: "APPLY NOW"
@@ -114,8 +114,8 @@ two_columns:
     path: "/us/apply"
   bullets:
     items: 
-    - text: "Luisa Glum shares her personal journey and how 4Geeks Academy transformed her career path in Santiago's evolving tech landscape"
-    - text: "Learn about the innovative Income Share Agreement (ISA) model, a pioneering approach where tuition is paid after securing a job, ensuring access to quality education"
+    - text: "Hernán García shares his personal journey and how 4Geeks Academy transformed his career path in Santiago's evolving tech landscape"
+    - text: "Learn about our Deferred Payment Plan, a flexible approach where tuition is paid after securing a job, ensuring access to quality education"
     - text: "With a 95% job placement rate within six months of graduation, our programs ensure tangible outcomes for career advancement"
 
 # Two Columns - Rigo

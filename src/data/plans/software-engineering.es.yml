@@ -23,19 +23,7 @@ full_time:
       - "/images/ascent_logo.png"
       - "/images/climb-logo.png"
       - "/images/quotanda-logo.png"
-  - slug: 'plan-3'
-    academies: ['downtown-miami', 'orlando']
-    recomended: false
-    scholarship: "Income Share Agreement"
-    payment_time: "Pay after you get a job"
-    price: "$0"
-    bullets: 
-      - "With $400 p/ week living stipends"
-      - "9% of your salary until paid in full, only if you get a job in tech."
-    icons: 
-      - "/images/ascent_logo.png"
-      - "/images/climb-logo.png"
-      - "/images/quotanda-logo.png"
+
   - slug: 'plan-4'
     academies: ['downtown-miami', 'orlando']
     recomended: false
@@ -70,19 +58,7 @@ part_time:
       - "/images/ascent_logo.png"
       - "/images/climb-logo.png"
       - "/images/quotanda-logo.png"
-  - slug: 'plan-3'
-    academies: ['downtown-miami', 'orlando']
-    recomended: false
-    scholarship: "Income Share Agreement"
-    payment_time: "Pay after you get a job"
-    price: "$0"
-    bullets: 
-      - "With $400 p/ week living stipends"
-      - "9% of your salary until paid in full, only if you get a job in tech."
-    icons: 
-      - "/images/ascent_logo.png"
-      - "/images/climb-logo.png"
-      - "/images/quotanda-logo.png"
+  
   - slug: 'plan-4'
     recomended: false
     academies: ['downtown-miami', 'orlando']

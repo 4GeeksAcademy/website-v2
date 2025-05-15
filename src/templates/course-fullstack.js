@@ -227,14 +227,21 @@ const Program = ({ data, pageContext, yml }) => {
           lineHeight_tablet="38px"
           fontSize="35px"
           margin="80px 0 0px 0"
-          style={yml.two_columns_info.section_heading.style ? JSON.parse(yml.two_columns_info.section_heading.style) : null}
+          style={
+            yml.two_columns_info.section_heading.style
+              ? JSON.parse(yml.two_columns_info.section_heading.style)
+              : null
+          }
         >
           {yml.two_columns_info.section_heading.text}
         </H2>
       )}
 
       <TwoColumn
-        right={{ image: yml.two_columns_info?.image, video: yml.two_columns_info?.video }}
+        right={{
+          image: yml.two_columns_info?.image,
+          video: yml.two_columns_info?.video,
+        }}
         left={{
           heading: yml.two_columns_info?.heading,
           sub_heading: yml.two_columns_info?.sub_heading,
@@ -267,7 +274,7 @@ const Program = ({ data, pageContext, yml }) => {
         locations={data.allLocationYaml.edges}
         showMoreRedirect
       />
-      
+
       <PricesAndPayment
         background={`linear-gradient(to bottom, ${Colors.white} 50%, ${Colors.lightYellow2} 50%)`}
         type={pageContext.slug}

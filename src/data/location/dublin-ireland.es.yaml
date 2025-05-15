@@ -86,9 +86,9 @@ two_columns:
   proportions: [6, 6]
   image:
     style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
-    src: "/static/images/staff/luisa.png"
+    src: "/static/images/staff/hernan-new.webp"
     shadow: true  
-  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  video: "https://www.youtube.com/watch?v=ln3bQsV1BaQ"
   heading:
     text: "Perspectivas con 4GeeksAcademy"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
@@ -99,7 +99,7 @@ two_columns:
     text: "¡Únete ahora!"
     color: "white"
     background: "black"
-    path: "/us/apply"
+    path: "/es/aplica"
   bullets:
     items: 
     - text: "La industria tecnológica de Dublín anticipa un crecimiento del 15% en roles de desarrolladores en los próximos tres años, reflejando el crecimiento del ecosistema tecnológico de la ciudad"

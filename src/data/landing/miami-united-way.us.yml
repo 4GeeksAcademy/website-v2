@@ -254,8 +254,8 @@ components:
     image:
       style: '{ "border" : "3px solid black", "backgroundSize": "contain"  }'
       shadow: true
-      src: "/static/images/staff/luisa.png"
-    video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+      src: "/static/images/staff/hernan-new.webp"
+    video: "ln3bQsV1BaQ"
     heading:
       text: "Now you don't need to be worried about payment. Only about your career ahead"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
