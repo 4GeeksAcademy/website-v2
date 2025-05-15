@@ -1,5 +1,5 @@
 meta_info:
-  slug: curso-datascience-machine-learning
+  slug: curso-datascience-machine-learning   #<----URL: https://4geeksacademy.com/es/coding-bootcamps/curso-datascience-machine-learning
   title: "Estudia Data Science y Machine Learning en 4Geeks Academy"
   description: "Sin conocimientos previos, empieza una carrera en el mundo del Data Science y escribe tus primeros modelos de Machine Learning"
   bc_slug: "datascience-ml"

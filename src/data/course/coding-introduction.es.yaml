@@ -1,5 +1,5 @@
 meta_info:
-  slug: introduccion-a-la-programacion
+  slug: introduccion-a-la-programacion   #<----URL: https://4geeksacademy.com/es/coding-bootcamps/introduccion-a-la-programacion
   title: "Curso de Introducción a la Programación por 4Geeks Academy, Domina los Fundamentos del Desarrollo Web"
   bc_slug: "coding-introduction"
   template: "course-code-introduction"

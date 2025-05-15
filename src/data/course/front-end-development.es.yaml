@@ -1,5 +1,5 @@
 meta_info:
-  slug: "programador-front-end"
+  slug: "programador-front-end"   #<----URL: https://4geeksacademy.com/es/coding-bootcamps/programador-front-end
   title: "Curso de Desarrollo Frontend en 4Geeks Academy chile"
   description: "¡Conviértete en un desarrollador web exitoso con el programa de Frontend en 4Geeks Academy! Adquiere habilidades en HTML, CSS y JavaScript."
   image: "/images/og-preview/full-stack.es.png"
