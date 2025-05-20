@@ -18,7 +18,7 @@ navbar:
   logoUrl: "#"
 
 header_data:
-  tagline: "Orlando: Your Tech Career Starts Here"
+  tagline: "Orlando: Your Tech Career Starts Here - Get Ready with a Scholarship"
   sub_heading: ""
   background: "#ffffff"
   tagline_color: "#1c1c1c"
@@ -91,6 +91,10 @@ components:
   - name: leadform_header
     layout: two_column_left
     proportions: [5, 7]
+    image:
+      style: '{"backgroundSize": "cover"}'
+      src: "../../../../static/images/landing/marcelo-tampa.webp"
+      shadow: true
     video: "PUuGlIALKH4"
     heading:
       text: "FLORIDA’S TECH SCENE IS THRIVING"
