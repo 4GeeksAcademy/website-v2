@@ -1,5 +1,5 @@
 meta_info:
-  slug: desarrollador-full-stack-mas-accesible
+  slug: desarrollador-full-stack-mas-accesible   #<----URL: https://4geeksacademy.com/es/coding-bootcamps/desarrollador-full-stack-mas-accesible
   title: "Curso de Desarrollador Full Stack en 4Geeks Academy"
   description: "Descubre el programa Full Stack A Tu Propio Ritmo. Construye sitios web dinamicos, adaptándose a tu tiempo y tu disponibilidad."
   image: "/images/og-preview/full-stack.es.png"
@@ -57,31 +57,6 @@ overlaped:
     link: "/"
   image:
     src: "/images/landing/tres-personas-reloaded.webp"  
-
-## TWO COLUMNS
-# two_columns:
-#   proportions: [6, 6]
-#   image:
-#     style: '{"border" : "3px solid black", "backgroundSize": "contain" }'
-#     src: "/static/images/staff/luisa.png"
-#     shadow: true  
-#   video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
-#   heading:
-#     text: "4Geeks Academy and a story full of opportunities"
-#     font_size: ["30px", "30px", "30px", "30px", "30px"]
-#   sub_heading:
-#     text: "We are Miami based and we have been focusing in bringing on more opportunities in South Florida."
-#     font_size: ["16px", "16px", "16px", "16px", "16px"]
-#   button:
-#     text: "Apply now"
-#     color: "white"
-#     background: "black"
-#     path: "#prices_and_payment"
-#   bullets:
-#     items: 
-#     - text: "There is always a full or partial scholarship open"
-#     - text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
-#     - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade County and many more."
 
 
 badges:

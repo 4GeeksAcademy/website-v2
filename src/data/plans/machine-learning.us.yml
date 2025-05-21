@@ -44,20 +44,6 @@ full_time:
       - "/images/climb-logo.png"
       - "/images/quotanda-logo.png"
 
-  # - slug: 'plan-3'
-  #   academies: ['downtown-miami', 'orlando']
-  #   recomended: false
-  #   scholarship: "Income Share Agreement"
-  #   payment_time: "Pay after you get a job"
-  #   price: "$0"
-  #   bullets: 
-  #     - "With $400 p/ week living stipends"
-  #     - "9% of your salary until paid in full, only if you get a job in tech."
-  #   icons: 
-  #     - "/images/ascent_logo.png"
-  #     - "/images/climb-logo.png"
-  #     - "/images/quotanda-logo.png"
-
 part_time:
 
 ## USA Part-Time 
@@ -139,18 +125,6 @@ part_time:
       - "/images/sequra.png"
       - "/images/nemuru.png"
       - "/images/quotanda-logo.png"
-
-  # - slug: 'spain-isa-ds-pt'
-  #   academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
-  #   recomended: true
-  #   scholarship: "Income Share Agreemen (ISA)"
-  #   payment_time: "Pay only when you work"
-  #   price: "€0*"
-  #   bullets: 
-  #     - "You will only have to pay when your income is greater than €16000 per year"
-  #     - "*Pay a small part of your salary when you find a job. NO INTEREST!"
-  #   icons: 
-  #     - "/images/bcas.png" 
   
   - slug: 'north-europe-upfront-ds-pt'
     academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany','munich-germany']
@@ -180,17 +154,7 @@ part_time:
     icons: 
       - "/images/quotanda-logo.png"
                        
-  # - slug: 'north-europe-isa-ds-pt'
-  #   academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany', 'munich-germany']
-  #   recomended: true
-  #   scholarship: "Income Share Agreemen (ISA)"
-  #   payment_time: "Pay only when find a job"
-  #   price: "€0*"
-  #   bullets: 
-  #     - "You will only have to pay when your income is greater than €22000 per year"
-  #     - "*Pay a small part of your salary when you find a job"
-  #   icons: 
-  #     - "/images/stepex.png"
+
   - slug: 'south-europe-upfront-ds-pt'
     academies: ['lisbon-portugal','milan-italy','rome-italy']
     recomended: true
@@ -218,20 +182,6 @@ part_time:
       - "Scholarships available up to €2400. From €5400 instead of €7800"     
     icons: 
       - "/images/quotanda-logo.png"
-
-  # - slug: 'south-europe-isa-ds-pt'
-  #   academies: ['lisbon-portugal','milan-italy','rome-italy']
-  #   recomended: true
-  #   scholarship: "Income Share Agreemen (ISA)"
-  #   payment_time: "Pay only when find a job"
-  #   price: "€0*"
-  #   bullets: 
-  #     - "You will only have to pay when your income is greater than €16000 per year"
-  #     - "*Pay a small part of your salary when you find a job"
-  #   icons: 
-  #     - "/images/stepex.png"
-
- ## Chile  
 
   - slug: 'chile-ds-gf-pt'
     academies: ['santiago-chile']

@@ -1,5 +1,5 @@
 meta_info:
-  slug: "programador-front-end"
+  slug: "programador-front-end"   #<----URL: https://4geeksacademy.com/es/coding-bootcamps/programador-front-end
   title: "Curso de Desarrollo Frontend en 4Geeks Academy chile"
   description: "¡Conviértete en un desarrollador web exitoso con el programa de Frontend en 4Geeks Academy! Adquiere habilidades en HTML, CSS y JavaScript."
   image: "/images/og-preview/full-stack.es.png"
@@ -57,32 +57,6 @@ overlaped:
     link: "/"
   image:
     src: "/images/landing/tres-personas-reloaded.webp"  
-
-## TWO COLUMNS
-# two_columns:
-#   proportions: [6, 6]
-#   image:
-#     style: '{"border" : "3px solid black", "backgroundSize": "contain" }'
-#     src: "/static/images/staff/luisa.png"
-#     shadow: true  
-#   video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
-#   heading:
-#     text: "4Geeks Academy and a story full of opportunities"
-#     font_size: ["30px", "30px", "30px", "30px", "30px"]
-#   sub_heading:
-#     text: "We are Miami based and we have been focusing in bringing on more opportunities in South Florida."
-#     font_size: ["16px", "16px", "16px", "16px", "16px"]
-#   button:
-#     text: "Apply now"
-#     color: "white"
-#     background: "black"
-#     path: "#prices_and_payment"
-#   bullets:
-#     items: 
-#     - text: "There is always a full or partial scholarship open"
-#     - text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
-#     - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade County and many more."
-
 
 badges:
   paragraph: "4Geeks Academy es el lugar idóneo para <a href='/es/curso-de-programacion-desde-cero'>aprender a programar desde cero</a>. Estamos avalados y autorizados por el Departamento de Educación de Florida y hemos sido reconocidos como el mejor de Miami, según SwitchUp y de los 10 mejores cursos de programación, según Newsweek. En España, hemos recibido el Premio Excelencia Educativa durante dos años consecutivos. Y a nivel global formamos parte del top 35 de cursos de programación en el mundo."

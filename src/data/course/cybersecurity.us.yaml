@@ -1,5 +1,5 @@
 meta_info:
-  slug: cybersecurity
+  slug: cybersecurity   #<----URL: https://4geeksacademy.com/us/coding-bootcamps/cybersecurity
   title: "Cybersecurity Bootcamp with Job Guarantee"
   description: "Enroll in 4Geeks Academy's Cybersecurity Bootcamp with a job guarantee. Gain the skills needed to protect digital assets and secure your career."
   bc_slug: "cybersecurity"
@@ -52,7 +52,7 @@ instructors:
     linkedin: "https://www.linkedin.com/in/daniela-maissi-43045510b/"
 
 badges:
-  paragraph: "Kickstart your career at 4Geeks Academy, where developers grow and thrive. Listed among the world’s <a href='/us/coding-bootcamp'>best coding bootcamps</a> of 2024 by Course Report, one of the top 5 coding bootcamps of 2024 according to Forbes, named best center for coding bootcamps 2023 by Premios de Excelencia Educativa in Spain, rated 4.92/5 on Switchup and more. Licensed by the Florida Department of Education, USA. "
+  paragraph: "Kickstart your career at 4Geeks Academy, where developers grow and thrive. Listed among the world's <a href='/us/coding-bootcamp'>best coding bootcamps</a> of 2024 by Course Report, one of the top 5 coding bootcamps of 2024 according to Forbes, named best center for coding bootcamps 2023 by Premios de Excelencia Educativa in Spain, rated 4.92/5 on Switchup and more. Licensed by the Florida Department of Education, USA. "
 
 two_columns_first:
   proportions: [6, 6]

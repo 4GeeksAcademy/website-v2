@@ -42,19 +42,6 @@ full_time:
       - "/images/ascent_logo.png"
       - "/images/climb-logo.png"
 
-  # - slug: 'plan-3'
-  #   academies: ['downtown-miami', 'orlando']
-  #   recomended: false
-  #   scholarship: "Income Share Agreement"
-  #   payment_time: "Pay after you get a job"
-  #   price: "$0"
-  #   bullets: 
-  #     - "With $400 p/ week living stipends"
-  #     - "9% of your salary until paid in full, only if you get a job in tech."
-  #   icons: 
-  #     - "/images/ascent_logo.png"
-  #     - "/images/climb-logo.png"
-
 part_time:
 
 ## USA Part-Time 
@@ -138,19 +125,6 @@ part_time:
       - "/images/nemuru.png"
       - "/images/bcas.png" 
 
-  - slug: 'spain-isa-ds-pt'
-    academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain']
-    recomended: false
-    scholarship: "Income Share Agreement (ISA)"
-    payment_time: "Pay only when you work"
-    price: "€0*"
-    bullets: 
-      - "You only have to pay when your income exceeds €16,000 per year"
-      - "*Pay a small part of your salary when you find a job - SCHOLARSHIPS SUBJECT TO AVAILABILITY!"
-      - "To obtain the ISA you must meet some academic requirements"
-    icons: 
-      - "/images/bcas.png"
-
   - slug: 'north-europe-upfront-ds-pt'
     academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany','munich-germany']
     recomended: true
@@ -181,18 +155,7 @@ part_time:
     icons: 
       - "/images/bcas.png"
           
-  - slug: 'north-europe-isa-ds-pt'
-    academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany', 'munich-germany']
-    recomended: false
-    scholarship: "Income Share Agreement (ISA)"
-    payment_time: "Pay only when you work"
-    price: "€0*"
-    bullets: 
-      - "You only have to pay when your income exceeds €16,000 per year"
-      - "*Pay a small part of your salary when you find a job - SCHOLARSHIPS SUBJECT TO AVAILABILITY!"
-      - "To obtain the ISA you must meet some academic requirements"
-    icons: 
-      - "/images/bcas.png"     
+  
 
   - slug: 'south-europe-upfront-ds-pt'
     academies: ['lisbon-portugal','milan-italy','rome-italy']
@@ -221,19 +184,6 @@ part_time:
       - "Pay in monthly installments. Starting at €200"
       - "Customized financing, with or without interest, from 4 to 48 months (conditions apply)"
       - "Scholarships available up to €2,391. Pay from €5,409 instead of €7,800. Scholarships subject to availability!" 
-    icons: 
-      - "/images/bcas.png"
-
-  - slug: 'south-europe-isa-ds-pt'
-    academies: ['lisbon-portugal','milan-italy','rome-italy']
-    recomended: false
-    scholarship: "Income Share Agreement (ISA)"
-    payment_time: "Pay only when you work"
-    price: "€0*"
-    bullets: 
-      - "You only have to pay when your income exceeds €16,000 per year"
-      - "*Pay a small part of your salary when you find a job - SCHOLARSHIPS SUBJECT TO AVAILABILITY!"
-      - "To obtain the ISA you must meet some academic requirements"
     icons: 
       - "/images/bcas.png"
 

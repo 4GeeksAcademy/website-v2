@@ -127,8 +127,8 @@ const Overlaped = ({
               dangerouslySetInnerHTML={{ __html: content }}
             />
           ) : content ? (
-            <Paragraph 
-              textAlign="start" 
+            <Paragraph
+              textAlign="start"
               margin="12px 0 0 0"
               fontFamily="Lato, sans-serif"
               fontSize="16px"
@@ -173,8 +173,8 @@ const Overlaped = ({
         margin_xxs="45px 20px 450px 20px"
       >
         {image?.src ? (
-          <Img 
-            src={image?.src} 
+          <Img
+            src={image?.src}
             width_xxs="280px"
             width_xs="335px"
             width_sm="385px"
@@ -248,8 +248,8 @@ const Overlaped = ({
               dangerouslySetInnerHTML={{ __html: content }}
             />
           ) : content ? (
-            <Paragraph 
-              textAlign="start" 
+            <Paragraph
+              textAlign="start"
               margin="12px 0 0 0"
               fontFamily="Lato, sans-serif"
               fontSize="16px"
