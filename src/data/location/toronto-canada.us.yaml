@@ -2,7 +2,7 @@ meta_info:
   slug: "coding-bootcamp-toronto-canada"
   title: "Toronto Coding Bootcamp in Canada"
   position: 2
-  description: "Join 4Geeks Academy’s Toronto Coding Bootcamp with a Job Guarantee. Learn coding and secure your first tech job in Canada with expert guidance."
+  description: "Join 4Geeks Academy's Toronto Coding Bootcamp with a Job Guarantee. Learn coding and secure your first tech job in Canada with expert guidance."
   image: "/images/og-preview/toronto-canada.us.png"
   keywords: "null"
   redirects: []
@@ -85,11 +85,11 @@ two_columns:
   proportions: [6, 6]
   image:
     style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
-    src: "/static/images/staff/luisa.png"
+    src: "/static/images/staff/hernan-new.webp"
     shadow: true  
-  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  video: "https://www.youtube.com/watch?v=ln3bQsV1BaQ"
   heading:
-    text: "Luisa's Experience at 4Geeks Academy in Toronto, Canada"
+    text: "Hernán García's Experience at 4Geeks Academy in Toronto"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
     text: "Empower Your Tech Journey in Toronto's Thriving Scene"

@@ -116,33 +116,27 @@ two_columns:
       title: "1465"
       text: Beneficiaries so far
 
-
-
-
-
-
-
 # Two Columns - Rigo
 two_columns_rigo:
   proportions: [7, 5]
   justify: "center" #start,end,center
   image:
-    style: '{"backgroundSize": "contain", "background-position": "center"}'
-    src: "/images/landing/rigobot-section.webp"
-    shadow: false
-  # video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+    style: '{"backgroundSize": "contain", "background-position": "center", "border" : "2px solid black", "border-radius": "4px"}'
+    src: "/images/landing/ai-mentor.jpg"
+    shadow: true
+  video: "6m1Jyya7eCc"
   heading: 
-    text: "Our AI-powered features make all the difference!"
+    text: "Why 4Geeks?"
     font_size: ["33px", "33px", "33px", "33px", "33px"]
     style: '{ "lineHeight": "30px" }'
     heading_image:
       src: "/images/rigobot-logo.png"
   sub_heading:
-    text: "Through years of research and experience, we've perfected the strategies and tools to ensure your constant and efficient progress. To optimize your learning curve and empower you to tackle challenges with confidence, we've now incorporated the power of AI."
+    text: "Hyperpersonalized Learning - Progress Like Never Before"
     font_size: ["16px","16px","16px","16px","16px"]
   content:
     style: '{ "font-size":"16px", "margin":"15px 0" }'
-    text: "Experience the difference our AI-powered features make. Our tried-and-tested approach keeps you engaged, motivated, and on the fast track to achieving your coding goals!"
+    text: "We're all different—yet education has always been one-size-fits-all. But there's a better way to learn: one that's built around you. Our custom-built AI tracks your activity to understand your strengths and weaknesses, tailoring its feedback to your progress in real time. And whenever you need extra clarity and support, our human mentors are always available for 1:1 sessions, ready to guide you through whatever's holding you back. \nYou'll move faster, learn smarter, and gain confidence like never before."
   bullets:
     item_style: '{ "padding": "0", "font-weight": "100", "margin":"0" }'
     items:

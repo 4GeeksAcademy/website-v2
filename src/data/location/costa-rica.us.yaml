@@ -2,7 +2,7 @@ meta_info:
   slug: "coding-bootcamp-costa-rica"
   title: "4Geeks Academy Costa Rica"
   position: 34
-  description: "Join 4Geeks Academy’s Costa Rica Coding Bootcamp with a Job Guarantee. Master coding and secure your first job in the thriving tech industry."
+  description: "Join 4Geeks Academy's Costa Rica Coding Bootcamp with a Job Guarantee. Master coding and secure your first job in the thriving tech industry."
   image: "/images/og-preview/costa-rica.us.png"
   keywords: ""
   # it will not show up on the applications forms
@@ -92,11 +92,11 @@ two_columns:
   proportions: [6, 6]
   image:
     style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
-    src: "/static/images/staff/luisa.png"
+    src: "/static/images/staff/hernan-new.webp"
     shadow: true  
-  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  video: "https://www.youtube.com/watch?v=ln3bQsV1BaQ"
   heading:
-    text: "Insights by Luisa Glum about 4Geeks Academy Tech Career Transformation with 4Geeks Academy in Costa Rica"
+    text: "Insights by Hernán García about 4Geeks Academy Tech Career Transformation with 4Geeks Academy in Costa Rica"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
     text: "Empowering Tech Journeys and Innovations"
@@ -108,7 +108,7 @@ two_columns:
     path: "/us/apply"
   bullets:
     items: 
-    - text: "Luisa Glum reflects on the unique qualities of 4GeeksAcademy's programs and their alignment "
+    - text: "Hernán García reflects on the unique qualities of 4GeeksAcademy's programs and their alignment "
     - text: "Learn about our innovative teaching methodologies designed to equip learners with industry-relevant skills"
     - text: "Discover the impact of our programs in shaping tech careers and fostering innovation within Costa Rica's tech industry"
 

@@ -1,5 +1,5 @@
 meta_info:
-  slug: part-time-full-stack-developer
+  slug: part-time-full-stack-developer   #<----URL: https://4geeksacademy.com/us/coding-bootcamps/part-time-full-stack-developer
   title: "Full Stack Developer Bootcamp | 4Geeks Academy"
   bc_slug: "full-stack"
   description: "Master full stack development with 4Geeks Academy's bootcamp and job guarantee. Secure a future in tech with our expert-led program."
@@ -83,9 +83,9 @@ two_columns:
   proportions: [6, 6]
   image:
     style: '{"border" : "3px solid black", "backgroundSize": "contain" }'
-    src: "/static/images/staff/luisa.png"
+    src: "/static/images/staff/hernan-new.webp"
     shadow: true  
-  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  video: "https://www.youtube.com/watch?v=ln3bQsV1BaQ"
   heading:
     text: "4Geeks, Miami and a mission of creating opportunities"
     font_size: ["35px", "35px", "35px", "30px", "30px"]
@@ -93,11 +93,6 @@ two_columns:
     text: "With Miami as our home base, we're dedicated to fostering opportunities throughout South Florida."
     style: '{"font-weight": "400" }'
     font_size: ["16px", "16px", "16px", "16px", "16px"]
-  # button:
-  #   text: "Aplicar"
-  #   color: "white"
-  #   background: "black"
-  #   path: "#prices_and_payment"
   bullets:
     items: 
     - text: "Accessible scholarships, whether full or partial, are always available."
@@ -187,7 +182,7 @@ two_columns_rigo:
         icon_color: '#25BF6C'
 
 badges:
-  paragraph: "Kickstart your career at 4Geeks Academy, where developers grow and thrive. Named among the world’s <a href='/us/coding-bootcamp'>best coding bootcamps of 2024 by Course Report, chosen <a href='/us/trends-and-tech/celebrating-forbes-doble-recognition'>best coding bootcamp for students on a budget in 2024 by Forbes</a>, and rated 4.92/5 on Switchup. Licensed by the Florida Department of Education, USA."
+  paragraph: "Kickstart your career at 4Geeks Academy, where developers grow and thrive. Named among the world's <a href='/us/coding-bootcamp'>best coding bootcamps of 2024 by Course Report, chosen <a href='/us/trends-and-tech/celebrating-forbes-doble-recognition'>best coding bootcamp for students on a budget in 2024 by Forbes</a>, and rated 4.92/5 on Switchup. Licensed by the Florida Department of Education, USA."
 upcoming:
   no_dates_message: "There are currently no upcoming dates for this program"
   actionMessage: "Let me know when dates are available"

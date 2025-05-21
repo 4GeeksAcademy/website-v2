@@ -85,11 +85,11 @@ two_columns:
   proportions: [6, 6]
   image:
     style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
-    src: "/static/images/staff/luisa.png"
+    src: "/static/images/staff/hernan-new.webp"
     shadow: true  
-  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  video: "https://www.youtube.com/watch?v=ln3bQsV1BaQ"
   heading:
-    text: "Insights by Luisa Glum: 4Geeks Academy in la Paz"
+    text: "Hernán García's Experience at 4Geeks Academy in La Paz"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
     text: "Empowering Tech Journeys and Innovations"

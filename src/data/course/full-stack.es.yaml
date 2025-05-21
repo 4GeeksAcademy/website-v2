@@ -1,5 +1,5 @@
 meta_info:
-  slug: desarrollador-full-stack
+  slug: desarrollador-full-stack   #<----URL: https://4geeksacademy.com/es/coding-bootcamps/desarrollador-full-stack
   title: "Curso de Desarrollador Full Stack en 4Geeks Academy"
   description: "Conoce los detalles de uno de los cursos full stack más reconocidos a nivel mundial. Convertirte en programador con trabajo Garantizado."
   image: "/images/og-preview/full-stack.es.png"
@@ -69,37 +69,15 @@ course_instructors:
 overlaped:
   heading: "Python y JavaScript"
   paragraph: |-
-    <p style="line-height: 2; font-size: 16px;">
-      Nuestro programa está basado en el uso de 
-      <strong style="color: #007bff;">Python</strong> y 
-      <strong style="color: #007bff;">JavaScript</strong>.  
-      <br>
-      <span style="font-weight: bold;">¿Por qué?</span>  
-      En el mercado laboral,  
-      <strong style="font-weight: bold;">JavaScript</strong> tiene 
-      <span style="font-weight: bold;">
-          26 veces más vacantes
-      </span> 
-      de trabajo que <strong>Ruby on Rails</strong>.  
-      <br>
+    Nuestro programa está basado en el uso de Python y JavaScript.
 
-      Además, <strong style="font-weight: bold;">Python</strong> tiene  
-      <span style="font-weight: bold;">
-          10 veces más oportunidades
-      </span>  
-      que Node.js.  
-      <br>
+    ¿Por qué?
+    En el mercado laboral, JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails.
 
-      <span style="font-weight: bold;">Otras herramientas que aprenderás en nuestro programa:</span>  
-      <br>
-      <span style="color: #007bff;">GitHub</span>,  
-      <span style="color: #007bff;">Bootstrap</span>,  
-      <span style="color: #007bff;">HTML5</span>,  
-      <span style="color: #007bff;">CSS3</span>,  
-      <span style="color: #007bff;">React</span>,  
-      <span style="color: #007bff;">Flask</span>  
-      y mucho más.
-    </p>
+    Además, Python tiene 10 veces más oportunidades que Node.js.
+
+    Otras herramientas que aprenderás en nuestro programa:
+    GitHub, Bootstrap, HTML5, CSS3, React, Flask y mucho más.
   image:
     src: "/images/landing/Group-6626.webp" 
   button:
@@ -138,7 +116,6 @@ two_columns_rigo:
     style: '{"backgroundSize": "contain", "background-position": "center", "border" : "2px solid black", "border-radius": "4px"}'
     src: "/images/landing/ai-mentor-esp.jpg"
     shadow: true
-  video: "NRuShbSLtg0"
   heading: 
     text: "¡Nuestras herramientas de IA mejoran y agilizan tu aprendizaje!"
     font_size: ["31px", "31px", "31px", "29px", "29px"]

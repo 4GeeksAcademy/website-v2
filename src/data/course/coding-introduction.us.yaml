@@ -1,5 +1,5 @@
 meta_info:
-  slug: coding-introduction
+  slug: coding-introduction   #<----URL: https://4geeksacademy.com/us/coding-bootcamps/coding-introduction
   title: "Coding Introduction Course by 4Geeks Academy, Master the Basics of Web Development"
   bc_slug: "coding-introduction"
   template: "course-code-introduction"
@@ -88,7 +88,7 @@ two_columns_info:
       - heading: "Self-Paced Learning"
         text: "You can complete the pre-work at your own pace, allowing you to balance it with your other commitments."
       - heading: "Access to Resources"
-        text: "You’ll have access to a variety of resources, including tutorials and exercises, to help you grasp the material effectively."
+        text: "You'll have access to a variety of resources, including tutorials and exercises, to help you grasp the material effectively."
 
 
 two_columns:
