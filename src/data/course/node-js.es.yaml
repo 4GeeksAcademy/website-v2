@@ -1,7 +1,7 @@
 meta_info:
-  slug: curso-de-node-js-backend   #<----URL: https://4geeksacademy.com/es/coding-bootcamps/curso-de-node-js-backend
-  title: "Aprende sobre backend en Node-Js at 4Geeks Academy"
-  description: "Descripcion del curso node-js"
+  slug: curso-de-node-js-backend
+  title: "Aprende sobre desarrollo backend con Node.js en 4Geeks Academy"
+  description: "Aprende desarrollo backend con Node.js. Construye aplicaciones del lado del servidor escalables y eficientes con el entorno de ejecución JavaScript más popular."
   bc_slug: "node-js"
   template: "course-engineering"
   image: ""
@@ -15,7 +15,7 @@ apply_form:
   label: Node-js Backend
 
 header:
-  title: "Node Js Backend Development"
+  title: "Desarrollo Backend con Node.js"
   image_alt: "Node JS"
   paragraph: ""
 
@@ -28,7 +28,6 @@ button:
 
 badges:
   paragraph: ""
-
 
 
 prices:
