@@ -1,5 +1,6 @@
 meta_info:
-  slug: beginner-full-stack-coding-bootcamp # <--- URL 4geeksacademy.com/us/landing/example
+
+  slug: beginner-full-stack-coding-bootcamp # <--- URL 4geeksacademy.com/us/landing/beginner-full-stack-coding-bootcamp
 
   # This will show on social media when shared
   title: "Learn to Code: Full Stack Development for Newcomers - Start Your Tech Career"
@@ -27,8 +28,8 @@ form:
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
   heading: "Start Learning Today"
-  motivation: "New to coding? Submit the form below and our advisors will guide you through everything you need to know about starting your coding journey as a complete beginner."
-  button_label: "REQUEST MORE INFO NOW"
+  motivation: "New to coding? Fill out the form and our advisors will contact you with everything you need to know about starting your coding journey as a complete beginner."
+  button_label: "MORE INFO NOW"
   redirect: null #you can redirect to another url or entirely diffrent website
 
 apply_schollarship: # form that is displayed at the end of the landing
@@ -56,9 +57,10 @@ features:
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
     - Start from scratch - absolutely no technical background required
-    - Study your way with flexible schedules with online, in-person, or hybrid options
-    - Accessible financing with monthly payments from $150, pay after employment option
-    - Ongoing support and lifetime access to mentorship and career guidance
+    - Flexible schedules and formats, with online, in-person, and hybrid options
+    - Financing plans starting at $150/ month, including the option of paying only once hired.
+    - Unlimited and lifelong access to 1:1 mentorship and career guidance.
+
 
 follow_bar:
   position: "top" # top, bottom, hidden
@@ -161,11 +163,13 @@ components:
       text: "Start Your Tech Career - No Experience Needed!"
       style: '{ "font-size": "30px"}'
     heading:
-      text: "Transform from Complete Beginner to Professional Developer - We'll Guide You Every Step!"
+      text: "Go from Complete Beginner to Professional Developer in Record Time - We'll Guide You Every Step!
+"
     sub_heading:
-      text: "Dreaming of a career in technology but unsure where to start? Traditional education paths can be overwhelming and often miss the mark on practical skills. At 4Geeks Academy, we've crafted the perfect roadmap to transform your passion into expertise."
+      text: "Dreaming of a career in technology but unsure where to start? Traditional education paths can be overwhelming and often miss the mark on practical skills. At 4Geeks Academy, we've created the perfect method to transform your passion into expertise.
+"
     button:
-      text: "Send me more information"
+      text: "More information"
       color: white
       hover_color: "white"
       background: "black"
@@ -202,10 +206,11 @@ components:
         content: "Develop your full techie potential! Learn industry-relevant skills from true coding experts, connect with a vibrant community, and get a support network like no other."
       - icon: "laptop_new"
         title: "Learn to Code"
-        content: "Experience interactive, hands-on learning with live online classes and access to recorded materials to deepen your understanding. Tackle challenging projects using the most important tools and frameworks in the tech industry."
+        content: "Experience interactive, hands-on learning with live online classes, 1:1 mentorship and AI-powered feedback. Tackle challenging projects using AI-integrating tools and the most in-demand frameworks in tech."
       - icon: "stairswflag"
         title: "Job placement"
-        content: "Thanks to our program you’ll be equipped with the most sought-after skills in the job market and a portfolio to show it. We’ll help you prepare your professional profile, portfolio and CV like a pro, connect you with top companies, and help you land your dream job. You’ll have all you need to launch a fulfilling coding career!"
+        content: "We’ll help you prepare your professional profile, portfolio and CV, connect you with top companies, and get you ready to ace your interviews. You’ll have everything you need to launch a successful coding career!
+"
 
   - name: geekinfo_2
     position: 4
@@ -246,8 +251,9 @@ components:
         - heading: "COMPREHENSIVE CAREER SUPPORT"
           text: "Receive personalized guidance for preparing your profile, resume, and portfolio. Benefit from tailored practice interviews and job search tips, accessible for a lifetime."
           icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - heading: "AFFORDABILITY AND FINANCIAL SUPPORT"
-          text: "Access high-quality education at the most affordable price, complemented by flexible payment plans, scholarship opportunities, ISAs, and more."
+        - heading: "PERSONALIZED LEARNING"
+          text: "Benefit from AI-powered feedback tailored to your learning journey and available 24/7.
+"
           icon: "check" #string with icon for example ['check', 'cicle', etc]
 
   - name: passion
@@ -275,14 +281,13 @@ components:
       path: "#leadform_bottom"
     bullets:
       items:
-        - heading: "OVERCOME FINANCIAL BARRIERS"
-          text: "With a $20 million scholarship fund, 4Geeks is set on making high quality tech education accessible. We’ll help you find a solution that suits your needs!"
+        - heading: "HANDS-ON, INDUSTRY-RELEVANT SYLLABUS"
+          text: "Become a confident full-stack developer with our hands-on, AI integrated curriculum. Acquire the mindset and master the skills that will set you apart in the job market."
+          icon: "check"
+        - heading: "AFFORDABILITY AND FINANCIAL SUPPORT"
+          text: "Access high-quality education at the most affordable price, complemented by flexible payment plans, scholarship opportunities."
           icon: "check"
         - heading: "FITS YOUR LIFE"
-          text: "Our part-time programs are designed to  fit busy schedules, letting you pursue your tech goals without compromising your life"
+          text: "Our part-time programs are designed to fit busy schedules, so you can reach your tech goals without compromising your life."
           icon: "check"
-        - heading: "HANDS-ON, INDUSTRY-RELEVANT SYLLABUS"
-          text: "Become a confident full-stack developer with our hands-on curriculum. Acquire the mindset and master the skills that will set you apart in the job market."
-          icon: "check"
-
-
+      
