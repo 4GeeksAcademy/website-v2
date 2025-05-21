@@ -18,7 +18,7 @@ navbar:
   logoUrl: "#"
 
 header_data:
-  tagline: "Orlando: Your Tech Career Starts Here - Get Ready with a Scholarship"
+  tagline: "Orlando: Your Tech Career Starts Here - Get Ready with a Scholarship!"
   sub_heading: ""
   background: "#ffffff"
   tagline_color: "#1c1c1c"
@@ -34,7 +34,7 @@ features:
   marginTop: 0px
   text: "Apply now—don't miss your chance!"
   bullets:
-    - 'Scholarships available for Greater Orlando residents only'
+    - 'For Greater Orlando residents only'
     - 'Award-winning tech education and career support'
     - "Get a high-paying job in Florida's thriving tech scene"
     - 'Limited spots — act now!'
