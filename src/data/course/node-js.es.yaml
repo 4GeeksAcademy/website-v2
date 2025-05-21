@@ -29,41 +29,6 @@ button:
 badges:
   paragraph: ""
 
-# overlaped:
-#   heading: "Python y Javascript"
-#   paragraph: "Nuestros programa está basado en el uso de Phyton y Javascript. La razón?En el mercado laboral JavaScript tiene 26 veces más vacantes de trabajo que Ruby on Rails. Python tiene 10 veces más trabajos que node.js. Otras herramientas que también aprenderás a usar en nuestro programa: son GitHub, CSS3, HTML5, Flask, etc."
-#   button:
-#     text: "Aplicar"
-#     color: "blue"  
-#     link: "/"
-#   image:
-#     src: "/images/landing/tres-personas-reloaded.webp"  
-
-# ## TWO COLUMNS
-# two_columns:
-#   proportions: [6, 6]
-#   image:
-#     style: '{"border" : "3px solid black", "backgroundSize": "contain" }'
-#     src: "/static/images/staff/luisa.png"
-#     shadow: true  
-#   video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
-#   heading:
-#     text: "4Geeks, Miami y una historia llena de oportunidades"
-#     font_size: ["30px", "30px", "30px", "30px", "30px"]
-#   sub_heading:
-#     text: "Estamos ubicados en Miami y nos hemos enfocado en traer más oportunidades al sur de Florida."
-#     font_size: ["16px", "16px", "16px", "16px", "16px"]
-#   button:
-#     text: "Aplicar ahora"
-#     color: "white"
-#     background: "black"
-#     path: "#"
-#   bullets:
-#     items: 
-#     - text: "Siempre hay becas completas o parciales disponibles"
-#     - text: "Siempre hay oportunidades para todos en el condado de Miami-Dade, Broward y Palm Beach"
-#     - text: "Tenemos alianzas continuas con Miami Dade College, Miami Tech Coalition, UWM, la Ciudad de Miami, el Condado de Miami-Dade y muchos más."
-
 
 prices:
   heading: "PRECIOS Y PAGOS"

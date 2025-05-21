@@ -1,5 +1,5 @@
 meta_info:
-  slug: datascience-machine-learning
+  slug: datascience-machine-learning   #<----URL: https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning
   title: "Become a AI Machine Learning Engineer at 4Geeks Academy"
   description: "4Geeks Academy's Data Science and Machine Learning bootcamp offers a job guarantee. Develop in-demand skills and unlock exciting career opportunities."
   bc_slug: "datascience-ml"
@@ -17,7 +17,7 @@ apply_form:
 seo_title: "Data Science and Machine Learning Bootcamp with Job Guarantee"
 header:
   title: "Become a Data Scientist or Machine Learning Engineer"
-  paragraph: "Be ready to enter tech’s highest-paying fields in just 16 weeks!"
+  paragraph: "Be ready to enter tech's highest-paying fields in just 16 weeks!"
   image: "../../../static/images/bg/circles.jpg"
   image_alt: "circles"
 
@@ -139,7 +139,7 @@ details:
       sub_title: |
         Learn Python, SQL, Looker (Google Data Studio), Streamlit, and Statistics and become a professional Data Analyst, ready to contribute to any data-driven team at any company.
         Create predictive models using Python, Pandas, Numpy, and other powerful libraries. Explore algorithms like Close Neighbors, Decision Trees, and more. Work with supervised and unsupervised learning models.
-        Practice solving real-life cases, and learn to tackle the type of challenges you’ll encounter in your career. Master the use of industry-standard tools.
+        Practice solving real-life cases, and learn to tackle the type of challenges you'll encounter in your career. Master the use of industry-standard tools.
         Strategize and develop your own A.I. projects, following the complete lifecycle from development to deployment and maintenance, ensuring privacy and security.
 
       list:

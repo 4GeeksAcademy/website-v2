@@ -1,7 +1,7 @@
 meta_info:
-  slug: full-time-full-stack-developer
-  title: "Full Stack Developer studying full-time, for 18 weeks."
-  description: "Become a Full Stack Developer in just 18 weeks, study full-time to accelerate your learning and change your life as quickly as possible."
+  slug: full-time-full-stack-developer   #<----URL: https://4geeksacademy.com/us/coding-bootcamps/full-time-full-stack-developer
+  title: "Desarrollador Full Stack estudiando full-time, durante 10 semanas."
+  description: "Conviértete en Desarrollador Full Stack en tan solo 10 semanas, estudia full-time para acelerar tu aprendizaje y cambia tu vida lo más rápido posible."
   image: "/images/og-preview/full-stack-ft.us.png"
   bc_slug: "full-stack-ft"
   visibility: "unlisted"
@@ -71,9 +71,9 @@ two_columns:
   proportions: [6, 6]
   image:
     style: '{"border" : "3px solid black", "backgroundSize": "contain" }'
-    src: "/static/images/staff/luisa.png"
+    src: "/static/images/staff/hernan-new.webp"
     shadow: true  
-  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  video: "ln3bQsV1BaQ"
   heading:
     text: "4Geeks, Miami and a story full of opportunities"
     font_size: ["30px", "30px", "30px", "30px", "30px"]

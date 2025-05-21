@@ -126,18 +126,6 @@ part_time:
       - "/images/nemuru.png"
       - "/images/bcas.png" 
 
-  - slug: 'spain-isa-ds-pt'
-    academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain']
-    recomended: false
-    scholarship: "Acuerdo de Ingresos Comparsidos (ISA)"
-    payment_time: "Paga sólo cuando trabajes"
-    price: "0 €*"
-    bullets: 
-      - "Solo tendrás que pagar cuando tus ingresos sean superiores a 16.000 € al año"
-      - "*Paga una pequeña parte de tu salario cuando encuentres trabajo - ¡BECAS SUJETAS A DISPONIBILIDAD!"
-      - "Para obtener el ISA debes cumplir con algunos requisitos académicos"
-    icons: 
-      - "/images/bcas.png"
 
   - slug: 'north-europe-upfront-ds-pt'
     academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany','munich-germany']
@@ -168,19 +156,6 @@ part_time:
       - "Becas disponibles de hasta 2.391 €. Paga desde 5.409 € en vez de 7.800 €. ¡Becas sujetas a disponibilidad!"      
     icons: 
       - "/images/bcas.png"
-          
-  - slug: 'north-europe-isa-ds-pt'
-    academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany', 'munich-germany']
-    recomended: true
-    scholarship: "Acuerdo de Ingresos Compartidos (ISA)"
-    payment_time: "Paga sólo cuando trabajes"
-    price: "0 €*"
-    bullets: 
-      - "Solo tendrás que pagar cuando tus ingresos sean superiores a 16.000 € al año"
-      - "*Paga una pequeña parte de tu salario cuando encuentres trabajo - ¡BECAS SUJETAS A DISPONIBILIDAD!"
-      - "Para obtener el ISA debes cumplir con algunos requisitos académicos"
-    icons: 
-      - "/images/bcas.png"     
 
   - slug: 'south-europe-upfront-ds-pt'
     academies: ['lisbon-portugal','milan-italy','rome-italy']
@@ -211,19 +186,6 @@ part_time:
       - "Becas disponibles de hasta 2.391 €. Paga desde 5.409 € en vez de 7.800 €. ¡Becas sujetas a disponibilidad!"  
     icons: 
       - "/images/bcas.png"
-
-  - slug: 'south-europe-isa-ds-pt'
-    academies: ['lisbon-portugal','milan-italy','rome-italy']
-    recomended: false
-    scholarship: "Acuerdo de Ingresos Compartidos (ISA)"
-    payment_time: "Paga sólo cuando trabajes"
-    price: "0 €*"
-    bullets: 
-      - "Solo tendrás que pagar cuando tus ingresos sean superiores a 16.000 € al año"
-      - "*Paga una pequeña parte de tu salario cuando encuentres trabajo - ¡BECAS SUJETAS A DISPONIBILIDAD!"
-      - "Para obtener el ISA debes cumplir con algunos requisitos académicos"
-    icons: 
-      - "/images/bcas.png"     
 
 ## Chile
 
