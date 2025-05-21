@@ -1,7 +1,7 @@
 meta_info:
-  slug: software-engineer-bootcamp
+  slug: software-engineer-bootcamp   #<----URL: https://4geeksacademy.com/us/coding-bootcamps/software-engineer-bootcamp
   title: "Become a Software Engineer at 4Geeks Academy"
-  description: "Become a software engineer with 4Geeks Academy’s bootcamp and job guarantee. Learn coding and land your dream job in the tech industry."
+  description: "Become a software engineer with 4Geeks Academy's bootcamp and job guarantee. Learn coding and land your dream job in the tech industry."
   bc_slug: "software-engineering"
   template: "course-engineering"
   image: ""
@@ -68,9 +68,9 @@ two_columns:
   proportions: [6, 6]
   image:
     style: '{"border" : "3px solid black", "backgroundSize": "contain" }'
-    src: "/static/images/staff/luisa.png"
+    src: "/static/images/staff/hernan-new.webp"
     shadow: true  
-  video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
+  video: "ln3bQsV1BaQ"
   heading:
     text: "4Geeks, Miami and a story full of opportunities"
     font_size: ["30px", "30px", "30px", "30px", "30px"]

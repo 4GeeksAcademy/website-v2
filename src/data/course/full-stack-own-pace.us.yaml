@@ -1,5 +1,5 @@
 meta_info:
-  slug: full-stack-developer-at-your-own-pace
+  slug: full-stack-developer-at-your-own-pace   #<----URL: https://4geeksacademy.com/us/coding-bootcamps/full-stack-developer-at-your-own-pace
   title: "Full Stack Developer Course at 4Geeks Academy"
   description: "Discover our Full Stack At Your Own Pace program. Learn software development and web applications with flexibility, adapting to your availability."
   image: "/images/og-preview/full-stack.es.png"
@@ -57,31 +57,6 @@ overlaped:
     link: "/"
   image:
     src: "/images/landing/tres-personas-reloaded.webp"
-
-## TWO COLUMNS
-# two_columns:
-#   proportions: [6, 6]
-#   image:
-#     style: '{"border" : "3px solid black", "backgroundSize": "contain" }'
-#     src: "/static/images/staff/luisa.png"
-#     shadow: true  
-#   video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
-#   heading:
-#     text: "4Geeks Academy and a story full of opportunities"
-#     font_size: ["30px", "30px", "30px", "30px", "30px"]
-#   sub_heading:
-#     text: "We are Miami based and we have been focusing in bringing on more opportunities in South Florida."
-#     font_size: ["16px", "16px", "16px", "16px", "16px"]
-#   button:
-#     text: "Apply now"
-#     color: "white"
-#     background: "black"
-#     path: "#prices_and_payment"
-#   bullets:
-#     items: 
-#     - text: "There is always a full or partial scholarship open"
-#     - text: "There is always opportunities for everyone in Miami-Dade County, Broward and Palm Beach"
-#     - text: "We have ongoing partnerships with Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade County and many more."
 
 badges:
   paragraph: "4Geeks Academy is the ideal place to <a href='/en/programming-course-from-scratch'>learn to program from scratch</a>. We are endorsed and authorized by the Florida Department of Education and have been recognized as the best in Miami by SwitchUp and one of the top 10 programming courses by Newsweek. In Spain, we have received the Educational Excellence Award for two consecutive years. And globally, we are part of the top 35 programming courses in the world."
