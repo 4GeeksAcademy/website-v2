@@ -1,0 +1,320 @@
+meta_info:
+  slug: vibe-coding-es
+  title: "Bootcamp de Vibe Coding | Programación Creativa y Desarrollo en Estado de Flujo"
+  bc_slug: "vibe-coding"
+  description: "Domina la programación creativa y el desarrollo en estado de flujo. Aprende a programar con máxima creatividad y productividad en nuestro bootcamp innovador."
+  image: "/images/og-preview/full-stack.es.png"
+  visibility: "visible"
+  keywords: "vibe coding, programación en estado de flujo, programación creativa, desarrollo ambiental"
+  show_in_apply: true
+  related_clusters: ["programacion-creativa"]
+  template: "course-fullstack"
+  redirects:
+    []
+
+apply_form:
+  label: Desarrollador Vibe Coding
+
+seo_title: "Bootcamp de Vibe Coding - Programación Creativa y Desarrollo en Estado de Flujo"
+
+header:
+  title: "Desarrollador Vibe Coding"
+  image: "../../../static/images/bg/program-bg.png"
+  image_alt: "programacion-creativa-estado-de-flujo"
+  paragraph: "¡Transforma tu experiencia de programación a través de la programación creativa y la optimización del estado de flujo. ¡Domina el arte de programar en un estado de creatividad y productividad óptimas!"
+
+button:
+  syllabus_heading: "Descargar Detalles del Curso"
+  syllabus_btn_label: "Descarga Instantánea"
+  syllabus_motivation: "En 2 min. recibirás en tu buzón de correo un PDF con información detallada sobre nuestra metodología, tecnologías y el curso."
+  apply_button_text: "Aplicar"
+  apply_button_link: "/es/aplica"
+
+course_instructors:
+  header:
+    title: "Conoce a nuestros instructores"
+    paragraph: ""
+
+  instructors:
+    - name: "Roldolfo Campos"
+      sub_title: "Co fundador de 4geeks y director de educación"
+      image: "../../../static/images/instructors/example.png"
+      bio: "Currently working as a Senior Solutions Architect at VMware, Rodolfo Campos is a Software Engineer with 17 years of experience in Linux, Java, SQL, Blockchain, etc. Master in Computer Science and passionate about Big Data and Entrepreneurship."
+      github: ""
+      linkedin: "https://www.linkedin.com/"
+
+    - name: "Gabriel Salinas"
+      sub_title: "Sophisticated Software Systems Engineer"
+      image: "../../../static/images/instructors/example.png"
+      bio: "Currently working as a Senior Solutions Architect at VMware"
+      github: ""
+      linkedin: "https://www.linkedin.com/"
+
+partners:
+  limit: 4
+  heading: "¿Quién está contratando a nuestros estudiantes?"
+  sub_heading: "550+ empresas asociadas y 50+ ofertas de trabajo actualmente para desarrolladores creativos"
+
+overlaped:
+  heading: "Por qué importan la Programación Creativa y el Estado de Flujo"
+  paragraph: "La programación creativa y el desarrollo en estado de flujo están revolucionando el desarrollo de software. Las empresas buscan activamente desarrolladores que puedan mantener niveles óptimos de productividad y creatividad. Nuestros graduados reportan consistentemente tasas de productividad 40% más altas y 60% mayor satisfacción laboral en comparación con enfoques tradicionales de desarrollo."
+  button:
+    text: "SABER MÁS"
+    color: "blue"
+    link: "/"
+  image:
+    src: "/images/landing/Group-6626.webp"
+
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "3px solid black", "backgroundSize": "contain" }'
+    src: "/static/images/staff/hernan-new.webp"
+    shadow: true
+  video: "https://www.youtube.com/watch?v=ln3bQsV1BaQ"
+  heading:
+    text: "4Geeks: Pioneros en Educación de Programación Creativa"
+    font_size: ["35px", "35px", "35px", "30px", "30px"]
+  sub_heading:
+    text: "Estamos revolucionando cómo los desarrolladores aprenden y trabajan a través de la programación creativa y la optimización del estado de flujo."
+    style: '{"font-weight": "400" }'
+    font_size: ["16px", "16px", "16px", "16px", "16px"]
+  bullets:
+    items:
+    - text: "Becas accesibles para entusiastas de la programación creativa, ya sean completas o parciales."
+    - text: "Oportunidades exclusivas para desarrolladores que buscan mejorar su flujo creativo."
+    - text: "Alianzas continuas con empresas tecnológicas creativas y centros de innovación."
+
+two_columns_info:
+  proportions: [6, 6]
+  image:
+    style: '{"backgroundSize": "contain", "background-position": "center"}'
+    shadow: false
+    src: "/images/landing/grupo-ventanas.webp"
+  section_heading:
+    text: "Obtén todo lo que necesitas para triunfar en la programación creativa"
+  heading:
+    text: ""
+    font_size: ["40px", "34px", "34px", "25px", "20px"]
+  sub_heading:
+    style: '{}'
+    text: ""
+    font_size: ["16px"]
+  content:
+    text: ""
+  button:
+    text: "Compara 4Geeks con otros bootcamps"
+    path: "/es/geeks-vs-others"
+    color: "white"
+    background: "black"
+    hover: "lightBlue"
+  bullets:
+    items:
+    - heading: "MENTORÍA EN ESTADO DE FLUJO"
+      text: "Recibe orientación personalizada para lograr y mantener estados de flujo creativo óptimos mientras programas."
+    - heading: "ENTORNO CREATIVO"
+      text: "Accede a espacios especialmente diseñados para programación creativa y logro de estado de flujo."
+    - heading: "CURRÍCULUM INNOVADOR"
+      text: "Aprende técnicas de vanguardia para mantener la creatividad y productividad en el desarrollo."
+    - heading: "COMUNIDAD PERMANENTE"
+      text: "Únete a una red de desarrolladores creativos comprometidos con la excelencia en programación."
+
+two_columns_rigo:
+  proportions: [7, 5]
+  background: "#FFFFFF"
+  justify: "center"
+  image:
+    style: '{"backgroundSize": "contain", "background-position": "center", "border" : "2px solid black", "border-radius": "4px"}'
+    src: "/images/landing/ai-mentor-esp.jpg"
+    shadow: true
+  video: "6m1Jyya7eCc"
+  heading:
+    text: "Soporte de Programación Creativa con IA"
+    font_size: ["33px", "33px", "33px", "33px", "33px"]
+    style: '{ "lineHeight": "30px" }'
+    heading_image:
+      src: "/images/rigobot-logo.png"
+  sub_heading:
+    text: "Nuestras herramientas de IA están diseñadas específicamente para mejorar tu experiencia de programación creativa y ayudarte a lograr estados de flujo óptimos. A través de años de investigación en programación creativa, hemos desarrollado sistemas que apoyan tu camino para convertirte en un desarrollador en estado de flujo."
+    font_size: ["16px","16px","16px","16px","16px"]
+    style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"300", "text-align": "justify" }'
+  content:
+    style: '{ "font-size":"16px", "margin":"15px 0"}'
+    text: "¡Experimenta cómo nuestras funciones impulsadas por IA mejoran tu viaje de programación creativa!"
+  bullets:
+    item_style: '{ "padding": "0", "font-weight": "100", "margin":"0" }'
+    items:
+      - heading: "Asistente de Flujo Creativo:"
+        text: |
+          • Sugerencias de optimización de estado de flujo en tiempo real
+          <br />
+          • Reconocimiento de patrones de programación creativa
+          <br />
+          • Información personalizada sobre productividad
+          <br /><br />
+          ¡Complemento perfecto para nuestro programa de mentoría humana!
+        icon: "check"
+        icon_color: '#25BF6C'
+      - heading: "Plataforma de Aprendizaje Interactiva:"
+        text: |
+          • Ejercicios y desafíos de programación creativa
+          <br />
+          • Seguimiento del logro del estado de flujo
+          <br />
+          • Técnicas de desarrollo ambiental
+        icon: "check"
+        icon_color: '#25BF6C'
+
+badges:
+  paragraph: "Únete al innovador programa de programación creativa de 4Geeks Academy. Reconocido como uno de los mejores bootcamps de programación del mundo en 2024 por Course Report, elegido mejor bootcamp para desarrolladores creativos por Forbes, y calificado con 4.92/5 en Switchup. Licenciado por el Departamento de Educación de Florida, EE.UU."
+
+upcoming:
+  no_dates_message: "Actualmente no hay próximas fechas para este programa"
+  actionMessage: "Avísame cuando haya fechas disponibles"
+
+credentials:
+  heading: "Este Programa en Números"
+  paragraph: "Nuestros resultados hablan por sí solos"
+
+details:
+  about:
+    title: "Acerca del programa"
+    sub_title: "Domina el arte de la programación creativa y el desarrollo en estado de flujo. Aprende a programar en un estado óptimo de creatividad y productividad, mientras desarrollas aplicaciones del mundo real. Nuestro programa combina habilidades técnicas con desarrollo de mentalidad creativa, preparándote para una carrera en desarrollo de software innovador."
+    list:
+      - label: "Duración"
+        content: "16+2 semanas"
+        icon: "duration-icon"
+      - label: "Clases"
+        content: "3 clases semanales"
+        icon: "book-2"
+      - label: "Tamaño de la clase"
+        content: "Ratio de 1 profesor por cada 7 estudiantes"
+        icon: "people"
+      - label: "Certificado"
+        content: "Programación Creativa y Desarrollo en Estado de Flujo"
+        link_text: "Ver ejemplo"
+        link: "https://certificate.breatheco.de/4ae7a46bba78dc19b823e124fea120c17b45e044"
+        icon: "certification"
+      - label: "Requisitos"
+        content: "No se requieren conocimientos previos de programación. Mente abierta y creatividad esenciales."
+        icon: "contract-checked"
+      - label: "Idioma"
+        content: "Puedes elegir entre inglés y español para el plan de estudios y el contenido. Las clases se imparten en el idioma oficial de tu campus."
+        icon: "language"
+
+  heading: "Bootcamp de Programación Creativa y Desarrollo en Estado de Flujo"
+  weeks: 18
+  week_unit: "sem"
+  sub_heading: "Domina la programación creativa a través de proyectos inmersivos. Aprende a programar en un estado óptimo de creatividad y productividad."
+  left_labels:
+    description: "DESCRIPCIÓN:"
+    projects: "PROYECTOS:"
+    duration: "DURACIÓN:"
+    skills: "Habilidades / Semanas:"
+  details_modules:
+    - module_name: "PREWORK"
+      title: "Configuración del Entorno y Preparación Mental"
+      description: "Comienza tu viaje con herramientas esenciales y preparación mental. Aprende a crear un entorno de programación óptimo y desarrolla el marco mental para la programación creativa.
+
+        Durante el prework, configurarás tu entorno de desarrollo, explorarás herramientas de programación creativa y comenzarás a desarrollar la mentalidad necesaria para la programación en estado de flujo."
+      projects: "Configuración de Entorno Creativo, Diario de Mentalidad, Ejercicios Iniciales de Estado de Flujo"
+      slug: "prework"
+      duration: "~ 60 horas"
+      step: 0
+    - module_name: "FUNDAMENTOS"
+      title: "Fundamentos de Programación Creativa"
+      description: "Domina los conceptos básicos de la programación creativa: Aprende a pensar creativamente, comprender los estados de flujo y desarrollar tu estilo único de programación."
+      projects: "Portafolio Creativo, Diario de Estado de Flujo, Configuración de Desarrollo Ambiental"
+      slug: "fundamentos"
+      duration: "2 semanas"
+      step: 1
+    - module_name: "ESTADO DE FLUJO"
+      title: "Optimización del Estado de Flujo"
+      description: "Aprende técnicas para lograr y mantener estados de flujo óptimos mientras programas. Domina el arte de la resolución creativa de problemas."
+      projects: "Seguimiento de Estado de Flujo, Ejercicios de Resolución Creativa de Problemas"
+      slug: "estado-de-flujo"
+      duration: "2 semanas"
+      step: 2
+    - module_name: "DESARROLLO CREATIVO"
+      title: "Resolución Creativa de Problemas"
+      description: "Desarrolla soluciones innovadoras a través de la programación creativa. Aprende a abordar problemas desde perspectivas únicas."
+      projects: "Muestra de Soluciones Creativas, Portafolio de Innovación"
+      slug: "desarrollo-creativo"
+      duration: "2 semanas"
+      step: 3
+    - module_name: "DESARROLLO AMBIENTAL"
+      title: "Técnicas de Desarrollo Ambiental"
+      description: "Domina el arte de programar en diversos entornos. Aprende a mantener la creatividad y la productividad en cualquier lugar."
+      projects: "Guía de Desarrollo Ambiental, Ejercicios de Adaptación al Entorno"
+      slug: "desarrollo-ambiental"
+      duration: "2 semanas"
+      step: 4
+    - module_name: "DE POR VIDA"
+      title: "De por vida"
+      description: "Seguirás recibiendo la ayuda de la academia de por vida, mantendrás el acceso a los contenidos, soporte profesional (career support) y disfrutarás de mentorías ilimitadas, incluso cuando comiences tu primer empleo: ¡nunca más estarás solo!"
+      projects: "Consigue tu primer empleo en el sector tecnológico y empieza a ganar dinero como un programador y sigue desarrollándote hasta convertirte en un programador Senior."
+      slug: "lifelong-learning"
+      duration: "Para siempre"
+      step: 5 
+
+syllabus:
+  heading: Descarga toda la información sobre este programa
+  button_label: Descargar
+
+## 4GEEKS VS OTHERS SECTION
+geeks_vs_others:
+  heading: "EN NÚMEROS: 4GEEKS VS OTROS"
+  sub_heading: ""
+  sub_heading_link: ""
+
+why_4geeks:
+  heading: Por qué 4Geeks Academy
+  sub_heading: ""
+
+## GEEK PAL AND GEEK FORCE BOXES
+geek_data:
+  heading: ¡Career Support de por vida!
+  geek_pal:
+    - Aprenderás Python, JavaScript y React. Los Lenguajes más buscados.
+    - Un profesor cada siete estudiantes (1:7).
+    - Sesiones ilimitadas de tutoría 1-1 por demanda, en persona o en línea.
+    - Miles de ejercicios interactivos y autoevaluados.
+    - Soluciones en video para una retroalimentación instantánea.
+    - Chat de apoyo en línea 12 horas al día.
+    - Transmisión en línea de las clases.
+    - Grabación de las clases para su posterior revisión.
+  geek_force:
+    - Construcción de CV y LinkedIn.
+    - Construcción del perfil de GitHub y portafolio desde el día 1.
+    - Career Week para dedicación exclusiva a tu perfil profesional.
+    - Preparación de simulación de entrevistas.
+    - Sesión de preparación de entrevistas personalizadas para trabajos específicos.
+    - Entrenamiento de marca personal.
+    - Prácticas y ejercicios de programación posteriores a la graduación.
+    - Coaching SEMANAL hasta que consigas trabajo.
+
+## PRICES AND PAYMENTS SECTION
+prices:
+  heading: "Planes y Precios"
+  sub_heading: "Selecciona la sede o modalidad de tu curso para ver los precios y planes de pago"
+  selector:
+    top_label: Sede
+    placeholder: Selecciona una sede
+  button:
+    text: Ver planes / precios
+    link: ""
+## ALUMNI SECTION
+alumni:
+  heading: "Conoce a los graduados y sus proyectos"
+  sub_heading:
+    "La última fase del curso debes construir un proyecto final que tú mismo escogerás,
+    puede ser un emprendimiento o trabajarás directamente en un proyecto de la vida real en
+    colaboración con nuestros hiring partners."
+
+## SIDEBAR
+sidebar:
+  membership: "MEMBRESÍA"
+  program: "PROGRAMA"
+  geeks_vs_other: "4GEEKS vs OTROS"
+  pricing: "PRECIO"
+  alumni: "GRADUADOS"
