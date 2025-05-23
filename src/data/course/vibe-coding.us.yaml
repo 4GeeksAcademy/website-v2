@@ -1,0 +1,340 @@
+meta_info:
+  slug: vibe-coding-us
+  title: "Vibe Coding Bootcamp | Creative Programming & Flow State Development"
+  bc_slug: "vibe-coding"
+  description: "Master creative coding and flow state programming with our innovative bootcamp. Learn to code in a state of optimal creativity and productivity."
+  image: "/images/og-preview/full-stack.us.png"
+  visibility: "visible"
+  keywords: "vibe coding, flow state programming, creative coding, ambient development"
+  show_in_apply: true
+  related_clusters: ["creative-coding"]
+  template: "course-fullstack"
+  redirects:
+    []
+
+apply_form:
+  label: Vibe Coding Developer
+
+seo_title: "Vibe Coding Bootcamp - Creative Programming & Flow State Development"
+header:
+  title: "Vibe Coding Developer"
+  image: "../../../static/images/bg/program-bg.png"
+  image_alt: "creative-coding-flow-state-development"
+  paragraph: "Transform your coding experience through creative programming and flow state optimization. Master the art of coding in a state of peak creativity and productivity!"
+
+button:
+  syllabus_heading: "Download Syllabus"
+  syllabus_btn_label: "Instant Download"
+  syllabus_motivation: "Get it in just a few seconds"
+  apply_button_text: "Apply now"
+  apply_button_link: "/us/apply"
+
+course_instructors:
+  header:
+    title: "Meet our instructors"
+    paragraph: ""
+
+  instructors:
+    - name: "Roldolfo Campos"
+      sub_title: "Co fundador de 4geeks y director de educación"
+      image: "../../../static/images/instructors/example.png"
+      bio: "Currently working as a Senior Solutions Architect at VMware, Rodolfo Campos is a Software Engineer with 17 years of experience in Linux, Java, SQL, Blockchain, etc. Master in Computer Science and passionate about Big Data and Entrepreneurship."
+      github: ""
+      linkedin: "https://www.linkedin.com/"
+
+    - name: "Gabriel Salinas"
+      sub_title: "Sophisticated Software Systems Engineer"
+      image: "../../../static/images/instructors/example.png"
+      bio: "Currently working as a Senior Solutions Architect at VMware"
+      github: ""
+      linkedin: "https://www.linkedin.com/"
+
+partners:
+  limit: 4
+  heading: "Who is hiring our students?"
+  sub_heading: "550+ hiring partners, and 50+ job openings right now for creative developers"
+
+overlaped:
+  heading: "Why Creative Coding and Flow State Programming Matter"
+  paragraph: "Creative coding and flow state programming are revolutionizing software development. Companies are actively seeking developers who can maintain peak productivity and creativity. Our graduates consistently report 40% higher productivity rates and 60% greater job satisfaction compared to traditional development approaches."
+  button:
+    text: "LEARN MORE"
+    color: "blue"
+    link: "/"
+  image:
+    src: "/images/landing/Group-6626.webp"
+
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "3px solid black", "backgroundSize": "contain" }'
+    src: "/static/images/staff/hernan-new.webp"
+    shadow: true
+  video: "https://www.youtube.com/watch?v=ln3bQsV1BaQ"
+  heading:
+    text: "4Geeks: Pioneering Creative Coding Education"
+    font_size: ["35px", "35px", "35px", "30px", "30px"]
+  sub_heading:
+    text: "We're revolutionizing how developers learn and work through creative programming and flow state optimization."
+    style: '{"font-weight": "400" }'
+    font_size: ["16px", "16px", "16px", "16px", "16px"]
+  bullets:
+    items:
+    - text: "Accessible scholarships for creative coding enthusiasts, whether full or partial."
+    - text: "Exclusive opportunities for developers seeking to enhance their creative workflow."
+    - text: "Ongoing partnerships with creative tech companies and innovation hubs."
+
+two_columns_info:
+  proportions: [6, 6]
+  image:
+    style: '{"backgroundSize": "contain", "background-position": "center"}'
+    shadow: false
+    src: "/images/landing/grupo-ventanas.webp"
+  section_heading:
+    text: "Get everything you need to succeed in creative coding"
+  heading:
+    text: ""
+    font_size: ["40px", "34px", "34px", "25px", "20px"]
+  sub_heading:
+    style: '{}'
+    text: ""
+    font_size: ["16px"]
+  content:
+    text: ""
+  button:
+    text: "Compare 4Geeks with other bootcamps"
+    path: "/us/geeks-vs-others"
+    color: "white"
+    background: "black"
+    hover: "lightBlue"
+  bullets:
+    items:
+    - heading: "FLOW STATE MENTORING"
+      text: "Get personalized guidance to achieve and maintain optimal creative flow states while coding."
+    - heading: "CREATIVE ENVIRONMENT"
+      text: "Access specially designed spaces optimized for creative coding and flow state achievement."
+    - heading: "INNOVATIVE CURRICULUM"
+      text: "Learn cutting-edge techniques for maintaining creativity and productivity in development."
+    - heading: "LIFELONG COMMUNITY"
+      text: "Join a network of creative developers committed to flow state programming excellence."
+
+two_columns_rigo:
+  proportions: [7, 5]
+  background: "#FFFFFF"
+  justify: "center"
+  image:
+    style: '{"backgroundSize": "contain", "background-position": "center", "border" : "2px solid black", "border-radius": "4px"}'
+    src: "/images/landing/ai-mentor.jpg"
+    shadow: true
+  video: "6m1Jyya7eCc"
+  heading:
+    text: "AI-Powered Creative Coding Support"
+    font_size: ["33px", "33px", "33px", "33px", "33px"]
+    style: '{ "lineHeight": "30px" }'
+    heading_image:
+      src: "/images/rigobot-logo.png"
+  sub_heading:
+    text: "Our AI tools are specifically designed to enhance your creative coding experience and help you achieve optimal flow states. Through years of research in creative programming, we've developed systems that support your journey to becoming a flow state developer."
+    font_size: ["16px","16px","16px","16px","16px"]
+    style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"300", "text-align": "justify" }'
+  content:
+    style: '{ "font-size":"16px", "margin":"15px 0"}'
+    text: "Experience how our AI-powered features enhance your creative coding journey!"
+  bullets:
+    item_style: '{ "padding": "0", "font-weight": "100", "margin":"0" }'
+    items:
+      - heading: "Creative Flow Assistant:"
+        text: |
+          • Real-time flow state optimization suggestions
+          <br />
+          • Creative coding pattern recognition
+          <br />
+          • Personalized productivity insights
+          <br /><br />
+          Perfect complement to our human mentorship program!
+        icon: "check"
+        icon_color: '#25BF6C'
+      - heading: "Interactive Learning Platform:"
+        text: |
+          • Creative coding exercises and challenges
+          <br />
+          • Flow state achievement tracking
+          <br />
+          • Ambient development techniques
+        icon: "check"
+        icon_color: '#25BF6C'
+
+badges:
+  paragraph: "Join 4Geeks Academy's innovative creative coding program. Named among the world's best coding bootcamps of 2024 by Course Report, chosen best coding bootcamp for creative developers by Forbes, and rated 4.92/5 on Switchup. Licensed by the Florida Department of Education, USA."
+
+upcoming:
+  no_dates_message: "There are currently no upcoming dates for this program"
+  actionMessage: "Let me know when dates are available"
+
+credentials:
+  heading: "This Program By The Numbers"
+  paragraph: "Our results speak for themselves"
+
+details:
+  about:
+    title: "About the program"
+    sub_title: "Master the art of creative coding and flow state programming. Learn to code in a state of optimal creativity and productivity, while developing real-world applications. Our program combines technical skills with creative mindset development, preparing you for a career in innovative software development."
+    list:
+      - label: "Duration"
+        content: "16+2 Weeks"
+        icon: "duration-icon"
+      - label: "Classes"
+        content: "3 classes weekly"
+        icon: "book-2"
+      - label: "Size of the Class"
+        content: "Ratio of 1 teacher per 7 students"
+        icon: "people"
+      - label: "Certificate"
+        content: "Creative Coding & Flow State Developer"
+        link_text: "See example"
+        link: "https://certificate.breatheco.de/4ae7a46bba78dc19b823e124fea120c17b45e044"
+        icon: "certification"
+      - label: "Requisites"
+        content: "No previous coding skills required. Open mind and creativity essential."
+        icon: "contract-checked"
+      - label: "Language"
+        content: "You can choose between English and Spanish for the syllabus and content. Live classes are taught in the language of your campus."
+        icon: "language"
+
+  heading: "Creative Coding & Flow State Development Bootcamp"
+  weeks: 18
+  week_unit: "wks"
+  sub_heading: "Master creative programming through immersive projects. Learn to code in a state of optimal creativity and productivity."
+  left_labels:
+    description: "DESCRIPTION:"
+    projects: "PROJECTS:"
+    duration: "DURATION:"
+    skills: "Skills / Weeks:"
+  details_modules:
+    - module_name: "PREWORK"
+      title: "Environment Setup & Mindset Preparation"
+      description: "Begin your journey with essential tools and mindset preparation. Learn to create an optimal coding environment and develop the mental framework for creative programming.
+
+        During the prework, you'll set up your development environment, explore creative coding tools, and begin developing the mindset needed for flow state programming."
+      projects: "Creative Environment Setup, Mindset Journal, Initial Flow State Exercises"
+      slug: "prework"
+      duration: "~ 60 hours"
+      step: 0
+    - module_name: "FOUNDATIONS"
+      title: "Creative Coding Fundamentals"
+      description: "Master the basics of creative coding: Learn to think creatively, understand flow states, and develop your unique coding style."
+      projects: "Creative Portfolio, Flow State Journal, Ambient Development Setup"
+      slug: "foundations"
+      duration: "2 weeks"
+      step: 1
+    - module_name: "FLOW STATE"
+      title: "Flow State Optimization"
+      description: "Learn techniques to achieve and maintain optimal flow states while coding. Master the art of creative problem-solving."
+      projects: "Flow State Tracker, Creative Problem-Solving Exercises"
+      slug: "flow-state"
+      duration: "2 weeks"
+      step: 2
+    - module_name: "CREATIVE DEVELOPMENT"
+      title: "Creative Problem-Solving"
+      description: "Develop innovative solutions through creative coding. Learn to approach problems from unique perspectives."
+      projects: "Creative Solution Showcase, Innovation Portfolio"
+      slug: "creative-dev"
+      duration: "2 weeks"
+      step: 3
+    - module_name: "AMBIENT DEVELOPMENT"
+      title: "Ambient Development Techniques"
+      description: "Master the art of coding in various environments. Learn to maintain creativity and productivity anywhere."
+      projects: "Ambient Development Guide, Environment Adaptation Exercises"
+      slug: "ambient-dev"
+      duration: "2 weeks"
+      step: 4
+    - module_name: "LIFELONG SUPPORT"
+      title: "Community Access & Mentorship"
+      description: "Join our creative coding community. Get lifelong access to mentors and resources for continuous growth."
+      projects: "Community Integration, Mentorship Program Setup"
+      slug: "lifelong-support"
+      duration: "Ongoing"
+      step: 5 
+
+syllabus:
+  heading: Get all the information about the syllabus
+  button_label: Download
+
+## 4GEEKS VS OTHERS SECTION
+geeks_vs_others:
+  heading: "WHAT MAKES THIS PROGRAM STAND OUT?"
+  sub_heading: "Compare with other schools"
+  sub_heading_link: ""
+
+## GEEK PAL AND GEEK FORCE BOXES
+geek_data:
+  heading: "And enjoy Career Support... for Life!"
+  geek_pal:
+    - One teacher every seven students (1:7).
+    - Unlimited on-demand in-person or online mentoring sessions.
+    - Thousands of auto-graded exercises.
+    - Interactive and auto-graded tutorials.
+    - Video solutions for instant feedback.
+    - Online support chat 12 hours a day.
+    - Online streaming of classes.
+    - Recording of classes for later review.
+  geek_force:
+    - Resume building
+    - Github profile building
+    - Mock interview preparation
+    - Customized interview preparation session for targeted jobs
+    - Personal Branding coaching
+    - Post-graduation coding practices and exercises
+
+## PRICES AND PAYMENTS SECTION
+prices:
+  heading: "Prices and Payments"
+  sub_heading: "Select the bootcamp location to see the prices and payment plans"
+  selector:
+    top_label: Location
+    placeholder: Select a location
+  button:
+    text: Check Prices and Plans
+    link: ""
+
+typical:
+  heading: ""
+  sub_heading: ""
+  schedule:
+    - title: ""
+      time: ""
+      icon: ""
+      content: ""
+    - title: ""
+      time: ""
+      icon: ""
+      content: ""
+    - title: ""
+      time: ""
+      icon: ""
+      content: ""
+    - title: ""
+      time: ""
+      icon: ""
+      content: ""
+    - title: ""
+      time: ""
+      icon: ""
+      content: ""
+    - title: ""
+      time: ""
+      icon: ""
+      content: ""
+
+## ALUMNI SECTION
+alumni:
+  heading: "Meet Our Alumni and Their Projects"
+  sub_heading: "The last phase of the course you must build a final project that you will choose yourself, it can be an undertaking or you will work directly on a real life project in collaboration with our hiring partners"
+
+## SIDEBAR
+sidebar:
+  membership: "MEMBERSHIPS"
+  program: "PROGRAM"
+  geeks_vs_other: "4GEEKS vs OTHERS"
+  pricing: "PRICING"
+  alumni: "THE ALUMNI"

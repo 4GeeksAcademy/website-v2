@@ -20,4 +20,4 @@ public
 .now
 .vercel
 cypress/videos
-cypress/screenshots
+cypress/screenshots*.swp
