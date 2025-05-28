@@ -1,7 +1,8 @@
 meta_info:
-  slug: node-js-backend-development   #<----URL: https://4geeksacademy.com/us/coding-bootcamps/node-js-backend-development
-  title: "Lear About Node-Js backend at 4Geeks Academy"
-  description: "Description of the node-js course"
+  slug: node-js-backend-development
+  title: "Learn About Node.js Backend at 4Geeks Academy"
+  description: "Master Node.js backend development. Build scalable, efficient server-side apps with the most popular JavaScript runtime."
+
   bc_slug: "node-js"
   template: "course-engineering"
   image: ""
