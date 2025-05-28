@@ -29,7 +29,8 @@ follow_bar:
     text: "Solicita tu plaza"
     path: "#leadform_header"
   phone:
-    text: "Llama "
+    text: ""
+    number: ""
 
 navbar:
   buttonText: "Solicita tu plaza"
