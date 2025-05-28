@@ -1,0 +1,203 @@
+meta_info:
+  slug: "coding-bootcamp-dallas"
+  title: "Dallas Coding Bootcamp"
+  position: 1
+  description: "Join 4Geeks Academy's Dallas Coding Bootcamp with a Job Guarantee. Gain in-demand tech skills and land your first job in the industry."
+  image: "/images/og-preview/dallas-usa.webp"
+  keywords: "null"
+  redirects: []
+  region: "usa-canada"
+  dialCode: "1"
+  related_clusters: ["trends-and-tech"]
+
+  # ⬇️ cohort_include_regex field is used to filter cohorts on the calendar that only test successfully for a particular regex
+  # for example: for this location, only show cohorts starting with usa-xx-spanish
+  cohort_include_regex: ["miami"]
+  cohort_exclude_regex: ['usa-\d{1,10}-spanish']
+  home_video: "https://www.videoask.com/fyq2h2hvx"
+
+seo_title: "Dallas Coding Bootcamp with Job Guarantee"
+header:
+  tagline: "4Geeks Academy in Dallas"
+  sub_header: "Transform into a Full-Stack Developer, Data Scientist, or Cybersecurity Specialist in 18 weeks or less "
+  sub_header_highlighted: "All programs are taught online"
+  paragraph: ""
+  image: "../../../static/images/locations/dallas-usa.webp"
+  alt: "4Geeks Academy online coding bootcamp in Dallas, Texas"
+
+badges:
+  title: ""
+  paragraph: |
+    4Geeks Academy is the place where developers grow and thrive.
+
+    We are licensed by the Florida Dept. of Education.
+    Chosen as one of the top 35 coding bootcamps of the world and the top coding bootcamp in Dallas according to SwitchUp.
+    According to Newsweek, 4Geeks Academy has been recognized as one of the top 10 coding bootcamps in the United States.
+    A community built for developers.
+
+news:
+  title: "4Geeks Academy Dallas has been reviewed in:"
+upcoming:
+  no_dates_message: "There are currently no upcoming dates for this campus"
+  actionMessage: "Let me know when dates are available"
+button_header:
+  button_text: See Programs
+  button_link: "#programs"
+button:
+  syllabus_button_text: "DOWNLOAD SYLLABUS" # <-- this will show everywhere in the website
+  apply_button_text: "APPLY NOW" # <-- this will show everywhere in the website
+  syllabus_submit_text: "DOWNLOAD"
+  apply_button_link: "/apply"
+  cohort_more_details_text: "DETAILS"
+
+custom_bar:
+  active: true
+  message: 'Change your life with Code. Pay today or with a Payment Plan for $200 p/mo <a class="customBar-link" href="/us/apply">Apply</a>'
+  button:
+    label: "Read More"
+    path: "/us/apply" #string (can be inline path using #, relative path or absolute path)
+
+info_box:
+  heading: "Find us in Dallas"
+  address: ""
+  iframeMapUrl: ""
+  contact_heading: "Contacts"
+  phone: "(786) 416-6640"
+  email: "info@4GeeksAcademy.com"
+images_box:
+  heading: "What you should know about this location: "
+  content: "Dallas's tech ecosystem is thriving with a growing number of tech companies and startups. The city has become a hub for innovation and technology, with major corporations establishing their presence. As Dallas continues to expand its tech sector, coding bootcamps play a crucial role in developing the next generation of tech talent to meet the increasing demand for skilled developers in the region."
+  images:
+    - path: "../../../static/images/locations/dallas-usa.webp"
+      alt: "Dallas city"
+    - path: "../../../static/images/ownpeoplecoding2.webp"
+      alt: "4Geeks Own People Coding"
+    - path: "../../../static/images/ownmancoding.webp"
+      alt: "Remote-Coding-Bootcamp"
+    - path: "../../../static/images/locations/miami-old.jpg"
+      alt: "4Geeeks miami location"
+    - path: "../../../static/images/locations/miami-people.jpeg"
+      alt: "4Geeeks miami lab"
+  layout_horizontal: true #false == "mode mosaic"
+
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "5px solid black", "backgroundSize": "contain" }'
+    src: "/images/landing/alissa-video.webp"
+    shadow: true
+  video: "EcqasocRKHo"
+  heading:
+    text: "Unlocking Dallas's Coding Potential"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "Receive unlimited guidance and support from experienced mentors throughout your journey, even after graduation. Master in-demand skills and launch your coding career with confidence."
+    font_size: ["18px", "18px", "18px", "18px", "18px"]
+  button:
+    text: "APPLY NOW"
+    color: "white"
+    background: "black"
+    path: "/us/apply"
+  bullets:
+    items:
+      - text: "Hands-on projects fostering practical skill mastery"
+      - text: "Industry-aligned curriculum for real-world readiness"
+      - text: "Career support navigating Dallas's thriving tech industry"
+
+# Two Columns - Rigo
+two_columns_rigo:
+  proportions: [7, 5]
+  background: "#FFFFFF"
+  justify: "center" #start,end,center
+  image:
+    style: '{"backgroundSize": "contain", "background-position": "center", "border" : "2px solid black", "border-radius": "4px"}'
+    src: "/images/landing/ai-mentor.jpg"
+    shadow: true
+  video: "6m1Jyya7eCc"
+  heading:
+    text: "Our AI-powered features make all the difference!"
+    font_size: ["33px", "33px", "33px", "33px", "33px"]
+    style: '{ "lineHeight": "30px" }'
+    heading_image:
+      src: "/images/rigobot-logo.png"
+  sub_heading:
+    text: "Through years of research and experience, we've perfected the strategies and tools to ensure your constant and efficient progress. To optimize your learning curve and empower you to tackle challenges with confidence, we've now incorporated the power of AI."
+    font_size: ["16px", "16px", "16px", "16px", "16px"]
+    style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"300", "text-align": "justify" }'
+  content:
+    style: '{ "font-size":"16px", "margin":"15px 0"}'
+    text: "Experience the difference our AI-powered features make. Our tried-and-tested approach keeps you engaged, motivated, and on the fast track to achieving your coding goals!"
+  bullets:
+    item_style: '{ "padding": "0", "font-weight": "100", "margin":"0" }'
+    items:
+      - heading: "Meet Rigobot, our AI coding assistant:"
+        text: |
+          • Instant tutoring as you code.
+          <br />
+          • Skill evaluations to track your progress.
+          <br />
+          • Expert bug fixing assistance.
+          <br /><br />
+          It perfectly complements our human mentorship program!
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+        icon_color: "#25BF6C"
+      - heading: "Learnpack, our interactive learning software, provides:"
+        text: |
+          • There are hundreds of interactive exercises to help you master and retain skills.
+          <br />
+          • Automated tests to help track your progress.
+          <br />
+          • Structured practice.
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+        icon_color: "#25BF6C"
+
+staff:
+  heading: "Meet your Staff"
+  sub_heading: ""
+
+active_campaign_location_slug: "dallas-usa"
+breathecode_location_slug: "dallas-usa"
+in_person_available: false # important to not accept in-person applicants
+online_available: true # important to accept online-only applicants
+
+consents:
+  - slug: "gdpr_consent"
+    name: "GDPR Consent"
+    active: false
+    message: 'By submitting this form, I accept that my data may be used for a quote request that could result in a commercial relationship. Check out our complete <a style={{ marginLeft: "5px" }} target="_blank" rel="noopener noreferrer nofollow" className="decorated" href="/us/privacy-policy">Privacy Policy</a>'
+    error_message: "You need to accept the privacy terms"
+  - slug: "wa_consent"
+    name: "WhatsApp Consent"
+    active: true
+    message: "I agree to receive information through email, WhatsApp, SMS and/or other channels about workshops, events, courses, and other marketing materials. We'll never share your contact information, and you can easily opt out at any moment."
+    error_message: "You need to accept Whatsapp consent"
+
+city: "Dallas"
+name: "Dallas, USA"
+latitude: "32.776664"
+longitude: "-96.796988"
+phone: "+1 (786) 416-6640"
+address: ""
+zip_code: ""
+state: "Texas"
+country: "USA"
+country_shortname: "us"
+socials:
+  - name: "Facebook"
+    icon: "facebook"
+    link: "https://www.facebook.com/4geeksacademy"
+  - name: "Twitter"
+    icon: "x-logo"
+    link: "https://www.twitter.com/4geeksacademy"
+  - name: "Instagram"
+    icon: "instagram"
+    link: "https://www.instagram.com/4geeksacademy/"
+  - name: "Linkedin"
+    icon: "linkedin-new"
+    link: "https://www.linkedin.com/school/4geeksacademy/"
+courses:
+  - "Full-Time"
+  - "Part-Time"
+flag_icon: ""
+value: "Dallas"
+defaultLanguage: "us" # All lead marketing communications will arrive on this language 
