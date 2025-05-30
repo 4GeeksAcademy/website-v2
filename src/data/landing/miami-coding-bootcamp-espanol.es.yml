@@ -1,8 +1,6 @@
 meta_info:
-  slug: usa-coding-bootcamp-en-espanol # <--- URL 4geeksacademy.com/us/landing/example
-
-  # This will show on social media when shared
-  title: "Coding Classes Online and In-person, learn to code and set up your professional career"
+  slug: usa-coding-bootcamp-en-espanol
+  title: "Clases de programación online y presenciales, aprende a programar y establece tu carrera profesional"
   description: "El primer coding bootcamp en español"
   image: "/images/bg/main-bg.jpg"
   keywords: ""
@@ -188,8 +186,7 @@ components:
       link: "https://www.coursereport.com/schools/4geeks-academy"
     content:
       style: '{ "line-height": "30px", "textAling": "center", "padding": "0 20px", "justifyContent":"center"}'
-      text: "hemos sido seleccionados como uno de los mejores bootcamps de codificación a nivel mundial durante cuatro años consecutivo"
-                    #xl      lg     md     sm       xs
+      text: "Hemos sido seleccionados como uno de los mejores bootcamps de codificación a nivel mundial durante cuatro años consecutivos"
       font_size: ["35px", "30px", "30px", "28px", "20px"]
   # - name: geeksinfo
   #   position: 1
