@@ -1,7 +1,7 @@
 meta_info:
   slug: curso-ciberseguridad   #<----URL: https://4geeksacademy.com/es/coding-bootcamps/curso-ciberseguridad
   title: "Curso de Ciberseguridad en 4Geeks Academy"
-  description: "Sin conocimientos previos, haz un curso de ciberseguridad que te convierta en especialista, consigue trabajo, únete al mundo tech y protege el futuro digital"
+  description: "Sin conocimientos previos, haz un curso de ciberseguridad que te convierta en profesional junior, consigue trabajo, únete al mundo tech y protege el futuro digital"
   bc_slug: "cybersecurity"
   template: "course-cybersecurity"
   image: "/images/og-preview/cybersecurity-bg-es.jpg"
@@ -12,12 +12,12 @@ meta_info:
   related_clusters: ["trends-and-tech"]
 
 apply_form:
-  label: Especialista en Ciberseguridad
+  label: Profesional junior en Ciberseguridad
 
 seo_title: "Curso de Ciberseguridad"
 header:
-  title: "Conviértete en un Especialista en Ciberseguridad"
-  paragraph: "La demanda de profesionales especialistas en el campo de la ciberseguridad se ha disparado en los últimos 6 años, con un aumento del 300% en comparación con el mercado laboral TI en general."
+  title: "Conviértete en un profesional junior en Ciberseguridad"
+  paragraph: "La demanda de profesionales profesionales junior en el campo de la ciberseguridad se ha disparado en los últimos 6 años, con un aumento del 300% en comparación con el mercado laboral TI en general."
   image: "../../../static/images/bg/apple-building.jpg"
   image_alt: "apple-building"
 
@@ -146,7 +146,7 @@ two_columns:
     src: "../../images/staff/chema-daniela.webp"  
     shadow: false
   heading:
-    text: "Conviértete en un especialista con nuestro curso en ciberseguridad"
+    text: "Conviértete en un profesional junior con nuestro curso en ciberseguridad"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
     text: "Adquiere los conocimientos para proteger sistemas contra amenazas cibernéticas. Este curso intensivo te brindará las habilidades necesarias para identificar, analizar y prevenir ataques, usando herramientas como Nessus, Nmap, Wireshark y Metasploit. Este programa de estudios fue cocreado por Daniela Maissi, una hacker ética del EC-Council, investigadora de malware y desarrolladora web experta en ciberseguridad con más de 5 años de experiencia y 12+ certificaciones en computación en la nube, OSINT y soluciones de TI." 
