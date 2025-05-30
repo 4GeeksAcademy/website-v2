@@ -154,7 +154,7 @@ const SchemaOrg = ({
 
   const schemaOrg = {
     "@context": "https://schema.org",
-    "@type": "School",
+    "@type": "EducationalOrganization",
     name: "4Geeks Academy",
     url: `https://4geeksacademy.com`,
     logo: "https://storage.googleapis.com/media-breathecode/b25a096eb14565c0c5e75d72442f888c17ac06fcfec7282747bf6c87baaf559c",
@@ -177,17 +177,14 @@ const SchemaOrg = ({
   return (
     <Helmet>
       {/* Schema.org tags */}
+      <script type="application/ld+json">
+        {JSON.stringify(schemaOrg)}
+      </script>
       {type in schemaType && (
         <script type="application/ld+json">
           {JSON.stringify(schemaType[type])}
         </script>
       )}
-      {context.defaultTemplate === "index" ||
-        (type === "location" && (
-          <script type="application/ld+json">
-            {JSON.stringify(schemaOrg)}
-          </script>
-        ))}
       {context.filePath?.includes("data/blog/") && (
         <script type="application/ld+json">{JSON.stringify(blog)}</script>
       )}
