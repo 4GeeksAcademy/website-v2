@@ -128,7 +128,7 @@ export const NavbarMobile = ({
   currentURL,
   myLocations,
 }) => {
-  const { session } = useContext(SessionContext);
+  const { session, setSession } = useContext(SessionContext);
   const [status, setStatus] = useState({
     toggle: false,
     hovered: false,
@@ -277,10 +277,12 @@ export const NavbarMobile = ({
         margin="1px 0"
       >
         <Div alignItems="center">
-          <BurgerIcon
-            style={{ marginRight: "16px", cursor: "pointer" }}
-            onClick={() => setStatus({ ...status, toggle: !status.toggle })}
-          />
+          {lang !== 'es' && (
+            <BurgerIcon
+              style={{ marginRight: "16px", cursor: "pointer" }}
+              onClick={() => setStatus({ ...status, toggle: !status.toggle })}
+            />
+          )}
           <Link to={lang == "es" ? "/es/inicio" : "/"}>
             <GatsbyImage
               // fadeIn={false}
@@ -305,6 +307,32 @@ export const NavbarMobile = ({
           lang={lang}
         />
         <Div alignItems="center" justifyContent="between">
+          {lang === 'es' && (
+            <Link
+              onClick={() =>
+                setSession({
+                  ...session,
+                  language: langDictionary[lang],
+                  locations,
+                })
+              }
+              to={
+                session && session.pathsDictionary && currentURL
+                  ? `${session.pathsDictionary[currentURL] || ""}${
+                      languageButton.link
+                    }`
+                  : "/?lang=en#home"
+              }
+              style={{ marginRight: "16px" }}
+            >
+              <Paragraph
+                dangerouslySetInnerHTML={{ __html: languageButton.text }}
+                fontSize="13px"
+                fontWeight="400"
+                lineHeight="16px"
+              />
+            </Link>
+          )}
           <Link onClick={onToggle} to={button.button_link || "#"}>
             <Button
               variant="full"
@@ -420,6 +448,12 @@ export const MegaMenu = ({
   lang,
 }) => {
   const { setSession } = useContext(SessionContext);
+  
+  // Don't render the menu for Spanish pages
+  if (lang === 'es') {
+    return null;
+  }
+
   return (
     <>
       {status.toggle && (
