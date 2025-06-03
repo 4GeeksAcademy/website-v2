@@ -132,7 +132,8 @@ export const NavbarMobile = ({
   setSession,
   locations: propLocations,
 }) => {
-  const { session: contextSession, setSession: setContextSession } = useContext(SessionContext);
+  const { session: contextSession, setSession: setContextSession } =
+    useContext(SessionContext);
   const [status, setStatus] = useState({
     toggle: false,
     hovered: false,
@@ -144,11 +145,7 @@ export const NavbarMobile = ({
     query {
       file(relativePath: { eq: "images/4geeksacademy-logo-old.png" }) {
         childImageSharp {
-          gatsbyImageData(
-            layout: FULL_WIDTH
-            width: 300
-            placeholder: NONE
-          )
+          gatsbyImageData(layout: FULL_WIDTH, width: 300, placeholder: NONE)
         }
       }
       allLocationYaml {
@@ -230,7 +227,10 @@ export const NavbarMobile = ({
     return false;
   };
 
-  let city = contextSession && contextSession.location ? contextSession.location.city : [];
+  let city =
+    contextSession && contextSession.location
+      ? contextSession.location.city
+      : [];
 
   const [contentBar, setContentBar] = useState({});
   const [buttonText, setButtonText] = useState("");
@@ -284,7 +284,7 @@ export const NavbarMobile = ({
         margin="1px 0"
       >
         <Div alignItems="center">
-          {lang !== 'es' && (
+          {lang !== "es" && (
             <BurgerIcon
               style={{ marginRight: "16px", cursor: "pointer" }}
               onClick={() => setStatus({ ...status, toggle: !status.toggle })}
@@ -313,7 +313,7 @@ export const NavbarMobile = ({
           lang={lang}
         />
         <Div alignItems="center" justifyContent="between">
-          {lang === 'es' && (
+          {lang === "es" && (
             <Link
               onClick={() =>
                 setContextSession({
@@ -462,9 +462,9 @@ export const MegaMenu = ({
   lang,
 }) => {
   const { setSession } = useContext(SessionContext);
-  
+
   // Don't render the menu for Spanish pages
-  if (lang === 'es') {
+  if (lang === "es") {
     return null;
   }
 

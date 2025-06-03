@@ -130,7 +130,8 @@ export const Navbar = ({
   locations,
   langDictionary = defaultLangDictionary,
 }) => {
-  const { session: globalSession, setSession: setGlobalSession } = useContext(SessionContext);
+  const { session: globalSession, setSession: setGlobalSession } =
+    useContext(SessionContext);
   const [status, setStatus] = useState({
     toggle: false,
     hovered: false,
@@ -254,9 +255,11 @@ export const Navbar = ({
       <CustomBar
         isContentBarActive={isContentBarActive}
         contentBar={contentBar}
-        discountContent={data.allCustomBarYaml.edges.find(
-          (item) => item.node.fields.lang === lang
-        )?.node}
+        discountContent={
+          data.allCustomBarYaml.edges.find(
+            (item) => item.node.fields.lang === lang
+          )?.node
+        }
         showDiscount={showDiscount}
         display_md="flex"
         display_xxs="none"

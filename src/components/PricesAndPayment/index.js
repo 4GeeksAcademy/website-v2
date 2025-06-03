@@ -30,10 +30,12 @@ const PricingCard = ({
   const handleApplyClick = (e) => {
     e.preventDefault();
     e.stopPropagation();
-    if (lang === 'es') {
+    if (lang === "es") {
       setShowApplyModal(true);
     } else {
-      window.location.href = `/${lang}/${lang === 'us' ? 'apply' : 'aplica'}?utm_plan=${slug}`;
+      window.location.href = `/${lang}/${
+        lang === "us" ? "apply" : "aplica"
+      }?utm_plan=${slug}`;
     }
   };
 
@@ -276,10 +278,12 @@ const PricingCard = ({
                     utm: { ...session.utm, utm_plan: selectedPlan },
                   });
                 }
-                if (lang === 'es') {
+                if (lang === "es") {
                   setShowApplyModal(true);
                 } else {
-                  window.location.href = `/${lang}/${lang === 'us' ? 'apply' : 'aplica'}?utm_plan=${selectedPlan}`;
+                  window.location.href = `/${lang}/${
+                    lang === "us" ? "apply" : "aplica"
+                  }?utm_plan=${selectedPlan}`;
                 }
               }}
             >
@@ -287,7 +291,7 @@ const PricingCard = ({
             </Button>
           </Link>
           <ApplyModal
-            show={showApplyModal && lang === 'es'}
+            show={showApplyModal && lang === "es"}
             onClose={() => setShowApplyModal(false)}
             lang={lang}
             button={info?.apply_button || { label: "APPLY", link: "/apply" }}
@@ -634,10 +638,12 @@ const PricesAndPayment = (props) => {
         utm: { ...session.utm, utm_plan: selectedPlan },
       });
     }
-    if (props.lang === 'es') {
+    if (props.lang === "es") {
       setShowApplyModal(true);
     } else {
-      window.location.href = `/${props.lang}/${props.lang === 'us' ? 'apply' : 'aplica'}?utm_plan=${selectedPlan}`;
+      window.location.href = `/${props.lang}/${
+        props.lang === "us" ? "apply" : "aplica"
+      }?utm_plan=${selectedPlan}`;
     }
   };
 
@@ -696,7 +702,11 @@ const PricesAndPayment = (props) => {
             color={Colors.black}
             padding="0 0 16px 0"
           >
-            {info?.select_2 && info?.select ? (props.financial ? info.select_2 : info.select) : "Select your location and plan"}
+            {info?.select_2 && info?.select
+              ? props.financial
+                ? info.select_2
+                : info.select
+              : "Select your location and plan"}
           </H3>
         </Div>
         {/* SELECT COUNTRY */}
@@ -851,8 +861,10 @@ const PricesAndPayment = (props) => {
             textAlign="center"
             dangerouslySetInnerHTML={{
               __html: jobGuarantee
-                ? info?.not_available_job_guarantee || '<p>Job guarantee is not available for this program in this location.</p><p>Please contact us for more information.</p>'
-                : info?.not_available || '<p>No payment information found for this program in this country.</p><p>Please contact us for more information.</p>',
+                ? info?.not_available_job_guarantee ||
+                  "<p>Job guarantee is not available for this program in this location.</p><p>Please contact us for more information.</p>"
+                : info?.not_available ||
+                  "<p>No payment information found for this program in this country.</p><p>Please contact us for more information.</p>",
             }}
           />
         ) : (
@@ -888,7 +900,8 @@ const PricesAndPayment = (props) => {
                     </H4>
                   </Div>
                   <Paragraph textAlign="left" color={Colors.black}>
-                    {info?.job_guarantee?.description || "We commit to your future career (we refund if you don't make it)."}
+                    {info?.job_guarantee?.description ||
+                      "We commit to your future career (we refund if you don't make it)."}
                   </Paragraph>
                 </Div>
               )}
@@ -991,10 +1004,12 @@ const PricesAndPayment = (props) => {
                             utm: { ...session.utm, utm_plan: selectedPlan },
                           });
                         }
-                        if (props.lang === 'es') {
+                        if (props.lang === "es") {
                           setShowApplyModal(true);
                         } else {
-                          window.location.href = `/${props.lang}/${props.lang === 'us' ? 'apply' : 'aplica'}?utm_plan=${selectedPlan}`;
+                          window.location.href = `/${props.lang}/${
+                            props.lang === "us" ? "apply" : "aplica"
+                          }?utm_plan=${selectedPlan}`;
                         }
                       }}
                     >
@@ -1041,7 +1056,8 @@ const PricesAndPayment = (props) => {
         </Div>
       </GridContainer>
       <Paragraph margin_xxs="15px 0" margin_tablet="0 0 0 0">
-        {info?.get_notified + " " || "Ask about our Scholarships. We are always working and partnering to offer you better options. "}
+        {info?.get_notified + " " ||
+          "Ask about our Scholarships. We are always working and partnering to offer you better options. "}
         <Link
           to={
             session && session?.location && session?.location.phone
@@ -1055,7 +1071,7 @@ const PricesAndPayment = (props) => {
         </Link>
       </Paragraph>
       <ApplyModal
-        show={showApplyModal && props.lang === 'es'}
+        show={showApplyModal && props.lang === "es"}
         onClose={() => setShowApplyModal(false)}
         lang={props.lang}
         button={info?.apply_button || { label: "APPLY", link: "/apply" }}

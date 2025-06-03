@@ -49,14 +49,14 @@ const ApplyModal = ({
   // Agregar efecto para manejar la tecla ESC
   useEffect(() => {
     const handleEscKey = (event) => {
-      if (event.key === 'Escape' && show) {
+      if (event.key === "Escape" && show) {
         onClose();
       }
     };
 
-    window.addEventListener('keydown', handleEscKey);
+    window.addEventListener("keydown", handleEscKey);
     return () => {
-      window.removeEventListener('keydown', handleEscKey);
+      window.removeEventListener("keydown", handleEscKey);
     };
   }, [show, onClose]);
 
@@ -104,11 +104,11 @@ const ApplyModal = ({
           course: selectedCourse,
           language: lang,
           utm: session?.utm || {},
-          marketing_consent: marketingConsent
+          marketing_consent: marketingConsent,
         };
 
         const response = await apply(formPayload, session);
-        
+
         if (response) {
           // Actualizar el estado de la sesión si es necesario
           if (session) {
@@ -117,14 +117,16 @@ const ApplyModal = ({
               email: formData.email,
             });
           }
-          
+
           // Cerrar el modal y mostrar mensaje de éxito
           onClose();
           // Aquí podrías mostrar un mensaje de éxito usando un toast o similar
         }
       } catch (error) {
         console.error("Error submitting form:", error);
-        setSubmitError("Hubo un error al enviar el formulario. Por favor, intenta de nuevo.");
+        setSubmitError(
+          "Hubo un error al enviar el formulario. Por favor, intenta de nuevo."
+        );
       } finally {
         setIsSubmitting(false);
       }
@@ -133,26 +135,26 @@ const ApplyModal = ({
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
     // Limpiar error cuando el usuario empieza a escribir
     if (errors[name]) {
-      setErrors(prev => ({
+      setErrors((prev) => ({
         ...prev,
-        [name]: ""
+        [name]: "",
       }));
     }
   };
 
   const handlePhoneChange = (e) => {
     const { value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      phone: value
+      phone: value,
     }));
-    
+
     // Verificar si el código de país del teléfono coincide con la ubicación seleccionada
     if (selectedLocation && value) {
       const phoneCountryCode = value.match(/^\+\d+/)?.[0];
@@ -198,7 +200,9 @@ const ApplyModal = ({
                       error={errors.first_name}
                       disabled={isSubmitting}
                     />
-                    {errors.first_name && <ErrorMessage>{errors.first_name}</ErrorMessage>}
+                    {errors.first_name && (
+                      <ErrorMessage>{errors.first_name}</ErrorMessage>
+                    )}
                   </InputGroup>
 
                   <InputGroup>
@@ -211,7 +215,9 @@ const ApplyModal = ({
                       error={errors.last_name}
                       disabled={isSubmitting}
                     />
-                    {errors.last_name && <ErrorMessage>{errors.last_name}</ErrorMessage>}
+                    {errors.last_name && (
+                      <ErrorMessage>{errors.last_name}</ErrorMessage>
+                    )}
                   </InputGroup>
 
                   <InputGroup>
@@ -224,7 +230,9 @@ const ApplyModal = ({
                       error={errors.email}
                       disabled={isSubmitting}
                     />
-                    {errors.email && <ErrorMessage>{errors.email}</ErrorMessage>}
+                    {errors.email && (
+                      <ErrorMessage>{errors.email}</ErrorMessage>
+                    )}
                   </InputGroup>
 
                   <InputGroup>
@@ -237,10 +245,14 @@ const ApplyModal = ({
                       error={errors.phone}
                       disabled={isSubmitting}
                     />
-                    {errors.phone && <ErrorMessage>{errors.phone}</ErrorMessage>}
+                    {errors.phone && (
+                      <ErrorMessage>{errors.phone}</ErrorMessage>
+                    )}
                     {showPhoneWarning && (
                       <WarningMessage>
-                        ¡Oye! Notamos que tu número de teléfono no es del mismo campus que seleccionó. No hay problema. Solo queríamos avisarte.
+                        ¡Oye! Notamos que tu número de teléfono no es del mismo
+                        campus que seleccionó. No hay problema. Solo queríamos
+                        avisarte.
                       </WarningMessage>
                     )}
                   </InputGroup>
@@ -255,7 +267,9 @@ const ApplyModal = ({
                       disabled={isSubmitting}
                     />
                     <HelpText>
-                      Si tienes un código, o te ha referido alguien que estudia o ha estudiado en 4Geeks, tendrás un beneficio adicional usando su código de invitación.
+                      Si tienes un código, o te ha referido alguien que estudia
+                      o ha estudiado en 4Geeks, tendrás un beneficio adicional
+                      usando su código de invitación.
                     </HelpText>
                   </InputGroup>
 
@@ -269,8 +283,10 @@ const ApplyModal = ({
                         disabled={isSubmitting}
                       />
                       <CheckboxLabel htmlFor="marketing-consent">
-                        {findCity?.node?.consents?.find(c => c.slug === "wa_consent")?.message || 
-                         "Acepto recibir información vía email, WhatsApp y/o otros canales sobre talleres de programación, eventos, cursos y otros materiales de marketing. Nunca compartiremos tu información de contacto y puedes darte de baja fácilmente en cualquier momento."}
+                        {findCity?.node?.consents?.find(
+                          (c) => c.slug === "wa_consent"
+                        )?.message ||
+                          "Acepto recibir información vía email, WhatsApp y/o otros canales sobre talleres de programación, eventos, cursos y otros materiales de marketing. Nunca compartiremos tu información de contacto y puedes darte de baja fácilmente en cualquier momento."}
                       </CheckboxLabel>
                     </CheckboxContainer>
                   </InputGroup>
@@ -283,7 +299,9 @@ const ApplyModal = ({
                       textColor={Colors.white}
                       disabled={isSubmitting}
                     >
-                      {isSubmitting ? "Enviando..." : (buttonText || button.apply_button_text)}
+                      {isSubmitting
+                        ? "Enviando..."
+                        : buttonText || button.apply_button_text}
                     </Button>
                   </ButtonContainer>
                 </Form>
@@ -362,11 +380,11 @@ const CloseButton = styled.button`
   align-items: center;
   justify-content: center;
   padding: 0;
-  
+
   &:hover {
     background: #f2f2f2;
   }
-  
+
   svg {
     width: 13px;
     height: 13px;
@@ -393,13 +411,13 @@ const InputGroup = styled.div`
 const Input = styled.input`
   width: 100%;
   padding: 12px;
-  border: 1px solid ${props => props.error ? Colors.red : '#ccc'};
+  border: 1px solid ${(props) => (props.error ? Colors.red : "#ccc")};
   border-radius: 3px;
   font-size: 16px;
   font-family: "Lato", sans-serif;
   &:focus {
     outline: none;
-    border-color: ${props => props.error ? Colors.red : Colors.blue};
+    border-color: ${(props) => (props.error ? Colors.red : Colors.blue)};
   }
 `;
 
@@ -466,4 +484,4 @@ const ButtonContainer = styled.div`
   display: flex;
   justify-content: flex-end;
   margin-top: 20px;
-`; 
+`;
