@@ -34,12 +34,43 @@ const SchemaOrg = ({
           }
         }
       }
+      allCourseYaml {
+        edges {
+          node {
+            meta_info {
+              title
+              description
+              slug
+            }
+            details {
+              about {
+                title
+                sub_title
+              }
+            }
+            fields {
+              lang
+            }
+          }
+        }
+      }
     }
   `);
 
   const faqs = dataQuery.allFaqYaml.edges
     .find(({ node }) => node.fields.lang === context.lang)
     ?.node.faq.flatMap((elem) => elem.questions);
+
+  const courses = dataQuery.allCourseYaml.edges
+    .filter(({ node }) => node.fields.lang === context.lang)
+    .map(({ node }) => ({
+      "@type": "Course",
+      name: node.meta_info.title,
+      description: node.meta_info.description,
+      url: `https://4geeksacademy.com/${context.lang}/coding-bootcamps/${node.meta_info.slug}`,
+      timeToComplete: "PT18W", // 18 weeks in ISO 8601 duration format
+      jobGuarantee: true
+    }));
 
   const campusLocation = context.locations.find(
     ({ node }) => node.meta_info.slug === context.slug
@@ -56,6 +87,25 @@ const SchemaOrg = ({
       name: title,
     },
   ];
+
+  const educationalOrganizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    name: "4Geeks Academy",
+    description: "4Geeks Academy is a coding bootcamp that offers comprehensive programming education with a focus on practical skills and job placement.",
+    url: "https://4geeksacademy.com",
+    logo: "https://storage.googleapis.com/media-breathecode/b25a096eb14565c0c5e75d72442f888c17ac06fcfec7282747bf6c87baaf559c",
+    sameAs: [
+      "https://twitter.com/4GeeksAcademy",
+      "https://www.instagram.com/4geeksacademy/",
+      "https://www.facebook.com/4geeksacademy",
+      "https://4geeksacademy.com/",
+      "https://www.youtube.com/@4GeeksAcademy",
+    ],
+    offers: courses,
+    jobGuarantee: true
+  };
+
   const page = [...baseSchema];
   const location = [
     ...baseSchema,
@@ -177,6 +227,9 @@ const SchemaOrg = ({
   return (
     <Helmet>
       {/* Schema.org tags */}
+      <script type="application/ld+json">
+        {JSON.stringify(educationalOrganizationSchema)}
+      </script>
       {type in schemaType && (
         <script type="application/ld+json">
           {JSON.stringify(schemaType[type])}
