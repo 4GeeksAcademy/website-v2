@@ -158,7 +158,7 @@ const Location = ({ data, pageContext, yml }) => {
                 alignItems="center"
                 fontWeight="700"
                 lineHeight="22px"
-                maxWidth="155px"
+                maxWidth="250px"
                 flexShrink="0"
               >
                 {yml.info_box.whatsapp && yml.info_box.whatsapp_link ? (
