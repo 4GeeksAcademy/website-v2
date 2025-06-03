@@ -191,16 +191,43 @@ const SchemaOrg = ({
     url: `https://4geeksacademy.com`,
   };
 
-  const schemaCourse = {
-    "@context": "https://schema.org",
-    "@type": "Course",
-    name: seoTitle,
-    description,
-    provider: {
-      "@type": "Organization",
-      name: "4Geeks Academy",
-      sameAs: "https://4geeksacademy.com/",
-    },
+  const schemaType = {
+    page,
+    location,
+    landing: page,
+    course: [
+      ...baseSchema,
+      {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        name: seoTitle,
+        description,
+        provider: {
+          "@type": "Organization",
+          name: "4Geeks Academy",
+          sameAs: "https://4geeksacademy.com/",
+        },
+        timeToComplete: "PT18W",
+        jobGuarantee: true,
+        url: url,
+        image: {
+          "@type": "ImageObject",
+          url: image,
+        },
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: faqsFilteredByLocation?.map((faq) => ({
+          "@type": "Question",
+          name: faq.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: faq.answer,
+          },
+        })) || [],
+      },
+    ],
   };
 
   const schemaOrg = {
@@ -216,13 +243,6 @@ const SchemaOrg = ({
       "https://4geeksacademy.com/",
       "https://www.youtube.com/@4GeeksAcademy",
     ],
-  };
-
-  const schemaType = {
-    page,
-    location,
-    landing: page,
-    course: schemaCourse,
   };
 
   return (
