@@ -69,7 +69,7 @@ const SchemaOrg = ({
       description: node.meta_info.description,
       url: `https://4geeksacademy.com/${context.lang}/coding-bootcamps/${node.meta_info.slug}`,
       timeToComplete: "PT18W", // 18 weeks in ISO 8601 duration format
-      jobGuarantee: true
+      jobGuarantee: true,
     }));
 
   const campusLocation = context.locations.find(
@@ -92,7 +92,8 @@ const SchemaOrg = ({
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
     name: "4Geeks Academy",
-    description: "4Geeks Academy is a coding bootcamp that offers comprehensive programming education with a focus on practical skills and job placement.",
+    description:
+      "4Geeks Academy is a coding bootcamp that offers comprehensive programming education with a focus on practical skills and job placement.",
     url: "https://4geeksacademy.com",
     logo: "https://storage.googleapis.com/media-breathecode/b25a096eb14565c0c5e75d72442f888c17ac06fcfec7282747bf6c87baaf559c",
     sameAs: [
@@ -103,7 +104,7 @@ const SchemaOrg = ({
       "https://www.youtube.com/@4GeeksAcademy",
     ],
     offers: courses,
-    jobGuarantee: true
+    jobGuarantee: true,
   };
 
   const page = [...baseSchema];
