@@ -11,6 +11,7 @@ import { NavItem } from "../Navbar";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import CustomBar from "../CustomBar";
 import { locByLanguage } from "../../actions";
+import ApplyModal from "../ApplyModal";
 
 const MegaMenuContainer = styled(Div)`
   top: 70px;
@@ -100,6 +101,11 @@ export const isTestMode = parsedUrl
   ? parsedUrl.searchParams.get("test") === "true"
   : false;
 
+const defaultLangDictionary = {
+  us: "es",
+  es: "us",
+};
+
 //This Function prevents troubles when component renders during cypress test process
 export const isDevelopment = () => {
   if (!process.env.NODE_ENV || process.env.NODE_ENV === "development") {
@@ -119,8 +125,12 @@ export const Navbar = ({
   languageButton,
   onLocationChange,
   myLocations,
+  session,
+  setSession,
+  locations,
+  langDictionary = defaultLangDictionary,
 }) => {
-  const { session, setSession } = useContext(SessionContext);
+  const { session: globalSession, setSession: setGlobalSession } = useContext(SessionContext);
   const [status, setStatus] = useState({
     toggle: false,
     hovered: false,
@@ -131,6 +141,7 @@ export const Navbar = ({
   const [buttonText, setButtonText] = useState("");
   const [contentBar, setContentBar] = useState({});
   const [showDiscount, setShowDiscount] = useState(false);
+  const [showApplyModal, setShowApplyModal] = useState(false);
   /* In case of want change the Button text "Aplica" search the key 
        "apply_button_text" in /src/data/location/locationfile.yaml
     */
@@ -222,16 +233,14 @@ export const Navbar = ({
 
   const isContentBarActive = contentBar.active || isDevelopment();
 
-  const langDictionary = {
-    us: "es",
-    es: "us",
+  const handleApplyClick = (e) => {
+    e.preventDefault();
+    if (lang === "us") {
+      window.location.href = "/us/apply";
+    } else {
+      setShowApplyModal(true);
+    }
   };
-
-  const locations = locByLanguage(data.allLocationYaml, langDictionary[lang]);
-
-  const myCustomBar = data.allCustomBarYaml.edges.find(
-    (item) => item.node.fields.lang === lang
-  );
 
   return (
     <Div
@@ -245,7 +254,9 @@ export const Navbar = ({
       <CustomBar
         isContentBarActive={isContentBarActive}
         contentBar={contentBar}
-        discountContent={myCustomBar?.node}
+        discountContent={data.allCustomBarYaml.edges.find(
+          (item) => item.node.fields.lang === lang
+        )?.node}
         showDiscount={showDiscount}
         display_md="flex"
         display_xxs="none"
@@ -324,15 +335,15 @@ export const Navbar = ({
         <Div alignItems="center" justifyContent="between">
           <Link
             onClick={() =>
-              setSession({
-                ...session,
+              setGlobalSession({
+                ...globalSession,
                 language: langDictionary[lang],
                 locations,
               })
             }
             to={
-              session && session.pathsDictionary && currentURL
-                ? `${session.pathsDictionary[currentURL] || ""}${
+              globalSession && globalSession.pathsDictionary && currentURL
+                ? `${globalSession.pathsDictionary[currentURL] || ""}${
                     languageButton.link
                   }`
                 : "/?lang=en#home"
@@ -346,7 +357,7 @@ export const Navbar = ({
               lineHeight="16px"
             />
           </Link>
-          <Link onClick={onToggle} to={button.button_link || "#"}>
+          <Link onClick={handleApplyClick} to={button.button_link || "#"}>
             <Button
               variant="full"
               width="fit-content"
@@ -358,6 +369,14 @@ export const Navbar = ({
           </Link>
         </Div>
       </Nav>
+      <ApplyModal
+        show={showApplyModal}
+        onClose={() => setShowApplyModal(false)}
+        lang={lang}
+        button={button}
+        myLocations={myLocations}
+        currentURL={currentURL}
+      />
     </Div>
   );
 };

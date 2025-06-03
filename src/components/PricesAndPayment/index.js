@@ -9,6 +9,7 @@ import { H2, H3, H4, H5, Paragraph } from "../Heading";
 import { Button, Colors, RoundImage, Img } from "../Styling";
 import { SessionContext } from "../../session";
 import { isWindow } from "../../utils/utils";
+import ApplyModal from "../ApplyModal";
 
 const PricingCard = ({
   data,
@@ -17,10 +18,25 @@ const PricingCard = ({
   setSelectedPlan,
   buttonText,
   jobGuarantee,
+  session,
+  lang,
+  myLocations,
+  currentURL,
 }) => {
-  const { session, setSession } = useContext(SessionContext);
   const { recomended, scholarship, payment_time, slug } = data;
   const isSelected = selectedPlan === slug;
+  const [showApplyModal, setShowApplyModal] = useState(false);
+
+  const handleApplyClick = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (lang === 'es') {
+      setShowApplyModal(true);
+    } else {
+      window.location.href = `/${lang}/${lang === 'us' ? 'apply' : 'aplica'}?utm_plan=${slug}`;
+    }
+  };
+
   return (
     <>
       <Div
@@ -80,7 +96,7 @@ const PricingCard = ({
               lineHeight="17px"
               opacity="1"
             >
-              {info.recomended}
+              {info?.recomended || "Recommended"}
             </Paragraph>
           </Div>
         )}
@@ -210,7 +226,7 @@ const PricingCard = ({
           borderRadius="4px"
         >
           <H3 textAlign="center" margin="0 0 15px 0">
-            {info.plan_details}
+            {info?.plan_details || "Plan Details"}
           </H3>
           {data.bullets &&
             data.bullets.map((bullet) => (
@@ -239,9 +255,8 @@ const PricingCard = ({
               marginTop: "21px",
               display: "block",
             }}
-            to={`${info.apply_button.link}${
-              selectedPlan ? `?utm_plan=${selectedPlan}` : ""
-            }`}
+            onClick={handleApplyClick}
+            to="#"
           >
             <Button
               variant="full"
@@ -252,18 +267,33 @@ const PricingCard = ({
               margin="auto"
               textAlign="center"
               display="block"
-              onClick={() => {
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
                 if (selectedPlan) {
                   setSession({
                     ...session,
                     utm: { ...session.utm, utm_plan: selectedPlan },
                   });
                 }
+                if (lang === 'es') {
+                  setShowApplyModal(true);
+                } else {
+                  window.location.href = `/${lang}/${lang === 'us' ? 'apply' : 'aplica'}?utm_plan=${selectedPlan}`;
+                }
               }}
             >
               {buttonText || info.apply_button.label}
             </Button>
           </Link>
+          <ApplyModal
+            show={showApplyModal && lang === 'es'}
+            onClose={() => setShowApplyModal(false)}
+            lang={lang}
+            button={info?.apply_button || { label: "APPLY", link: "/apply" }}
+            myLocations={myLocations}
+            currentURL={currentURL}
+          />
         </Div>
       )}
     </>
@@ -432,6 +462,12 @@ const PricesAndPayment = (props) => {
     ({ node }) => node.fields.lang === props.lang
   );
   if (info) info = info.node;
+  else {
+    // Si no se encuentra la información para el idioma seleccionado, usar la información en inglés como fallback
+    info = data.content.edges.find(
+      ({ node }) => node.fields.lang === "en"
+    )?.node;
+  }
 
   function phoneNumberClean(phoneNumber) {
     if (phoneNumber) {
@@ -453,6 +489,7 @@ const PricesAndPayment = (props) => {
   const [schedule, setSchedule] = useState("part_time");
   const [availablePlans, setAvailablePlans] = useState([]);
   const [courseArrayFiltered, setCourseArrayFiltered] = useState([]);
+  const [showApplyModal, setShowApplyModal] = useState(false);
 
   const getCurrentPlans = () => {
     let _plans = data.allPlansYaml.edges
@@ -589,6 +626,21 @@ const PricesAndPayment = (props) => {
     }
   }, [currentLocation]);
 
+  const handleApplyClick = (e) => {
+    e.preventDefault();
+    if (selectedPlan) {
+      setSession({
+        ...session,
+        utm: { ...session.utm, utm_plan: selectedPlan },
+      });
+    }
+    if (props.lang === 'es') {
+      setShowApplyModal(true);
+    } else {
+      window.location.href = `/${props.lang}/${props.lang === 'us' ? 'apply' : 'aplica'}?utm_plan=${selectedPlan}`;
+    }
+  };
+
   return (
     <Div
       ref={mainContainer}
@@ -614,7 +666,7 @@ const PricesAndPayment = (props) => {
         width="100%"
         margin="0 0 20px 0"
       >
-        {info?.plans_title}
+        {info?.plans_title || "Plans and Prices"}
       </H2>
       <Grid
         gridTemplateColumns_lg={
@@ -644,7 +696,7 @@ const PricesAndPayment = (props) => {
             color={Colors.black}
             padding="0 0 16px 0"
           >
-            {props.financial ? info.select_2 : info.select}
+            {info?.select_2 && info?.select ? (props.financial ? info.select_2 : info.select) : "Select your location and plan"}
           </H3>
         </Div>
         {/* SELECT COUNTRY */}
@@ -678,7 +730,7 @@ const PricesAndPayment = (props) => {
                   label: l.node.name,
                   value: l.node.active_campaign_location_slug,
                 }))}
-                placeholder={info.top_label}
+                placeholder={info?.top_label || "Select location"}
                 value={{
                   label: currentLocation?.name,
                   value: currentLocation?.active_campaign_location_slug,
@@ -733,7 +785,7 @@ const PricesAndPayment = (props) => {
                   bgColor={Colors.white}
                   single={props.financial ? false : true}
                   options={currentLocation && courseArrayFiltered}
-                  placeholder={info.top_label_2}
+                  placeholder={info?.top_label_2 || "Select program"}
                   value={course}
                   onChange={(opt) => setCourse(opt)}
                   style={{
@@ -799,8 +851,8 @@ const PricesAndPayment = (props) => {
             textAlign="center"
             dangerouslySetInnerHTML={{
               __html: jobGuarantee
-                ? info.not_available_job_guarantee
-                : info.not_available,
+                ? info?.not_available_job_guarantee || '<p>Job guarantee is not available for this program in this location.</p><p>Please contact us for more information.</p>'
+                : info?.not_available || '<p>No payment information found for this program in this country.</p><p>Please contact us for more information.</p>',
             }}
           />
         ) : (
@@ -832,11 +884,11 @@ const PricesAndPayment = (props) => {
                       fontSize_xs="16px"
                       margin="0 0 0 10px"
                     >
-                      {info.job_guarantee.title}
+                      {info?.job_guarantee?.title || "Job Guarantee"}
                     </H4>
                   </Div>
                   <Paragraph textAlign="left" color={Colors.black}>
-                    {info.job_guarantee.description}
+                    {info?.job_guarantee?.description || "We commit to your future career (we refund if you don't make it)."}
                   </Paragraph>
                 </Div>
               )}
@@ -854,7 +906,7 @@ const PricesAndPayment = (props) => {
                   gridRow_tablet="2"
                 >
                   <H3 textAlign="center" margin="0 0 16px 0">
-                    {info.plan_details}
+                    {info?.plan_details || "Plan Details"}
                   </H3>
                   <hr style={{ border: "1px solid #ebebeb", width: "60%" }} />
                   {selected?.bullets &&
@@ -897,6 +949,10 @@ const PricesAndPayment = (props) => {
                       setSelectedPlan={setSelectedPlan}
                       buttonText={buttonText}
                       jobGuarantee={jobGuarantee}
+                      session={session}
+                      lang={props.lang}
+                      myLocations={props.locations}
+                      currentURL={props.currentURL}
                     />
                   ))}
               </Div>
@@ -914,9 +970,8 @@ const PricesAndPayment = (props) => {
                     style={{
                       display: "block",
                     }}
-                    to={`${info.apply_button.link}${
-                      selectedPlan ? `?utm_plan=${selectedPlan}` : ""
-                    }`}
+                    onClick={handleApplyClick}
+                    to="#"
                   >
                     <Button
                       variant="full"
@@ -928,16 +983,22 @@ const PricesAndPayment = (props) => {
                       textAlign="center"
                       display="block"
                       borderRadius="4px"
-                      onClick={() => {
+                      onClick={(e) => {
+                        e.preventDefault();
                         if (selectedPlan) {
                           setSession({
                             ...session,
                             utm: { ...session.utm, utm_plan: selectedPlan },
                           });
                         }
+                        if (props.lang === 'es') {
+                          setShowApplyModal(true);
+                        } else {
+                          window.location.href = `/${props.lang}/${props.lang === 'us' ? 'apply' : 'aplica'}?utm_plan=${selectedPlan}`;
+                        }
                       }}
                     >
-                      {buttonText || info.apply_button.label}
+                      {buttonText || info?.apply_button?.label || "APPLY"}
                     </Button>
                   </Link>
                 </Div>
@@ -962,7 +1023,7 @@ const PricesAndPayment = (props) => {
             width="fit-content"
             color={Colors.darkGray}
           >
-            {info.we_accept}{" "}
+            {info?.we_accept || "We accept:"}{" "}
           </H4>
           <RoundImage
             url="/images/bitcoin.png"
@@ -980,19 +1041,27 @@ const PricesAndPayment = (props) => {
         </Div>
       </GridContainer>
       <Paragraph margin_xxs="15px 0" margin_tablet="0 0 0 0">
-        {info.get_notified + " "}
+        {info?.get_notified + " " || "Ask about our Scholarships. We are always working and partnering to offer you better options. "}
         <Link
           to={
             session && session?.location && session?.location.phone
               ? `https://wa.me/${phoneNumberClean(session?.location?.phone)}`
               : session?.email
               ? `mailto:${session?.email}`
-              : `${info?.contact_link}`
+              : `${info?.contact_link || "/contact"}`
           }
         >
-          {info.contact_carrer_advisor}
+          {info?.contact_carrer_advisor || "Contact us for more information"}
         </Link>
       </Paragraph>
+      <ApplyModal
+        show={showApplyModal && props.lang === 'es'}
+        onClose={() => setShowApplyModal(false)}
+        lang={props.lang}
+        button={info?.apply_button || { label: "APPLY", link: "/apply" }}
+        myLocations={props.locations}
+        currentURL={props.currentURL}
+      />
     </Div>
   );
 };

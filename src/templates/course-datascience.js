@@ -22,11 +22,13 @@ import TwoColumn from "../components/TwoColumn/index.js";
 import Overlaped from "../components/Overlaped";
 import JobGuaranteeSmall from "../components/JobGuaranteeSmall";
 import Loc from "../components/Loc";
+import ApplyModal from "../components/ApplyModal";
 
 const DataScience = ({ data, pageContext, yml }) => {
   const { session } = React.useContext(SessionContext);
   const courseDetails = data.allCourseYaml.edges[0].node;
   const [open, setOpen] = React.useState(false);
+  const [showApplyModal, setShowApplyModal] = useState(false);
 
   const defaultCourse = "machine-learning";
   const program_type = yml.meta_info.slug.includes("full-time")
@@ -39,6 +41,16 @@ const DataScience = ({ data, pageContext, yml }) => {
   const handleClose = () => {
     setOpen(false);
   };
+
+  const handleApplyClick = (e) => {
+    e.preventDefault();
+    if (pageContext.lang === "us") {
+      window.location.href = "/us/apply";
+    } else {
+      setShowApplyModal(true);
+    }
+  };
+
   const hiring = data.allPartnerYaml.edges[0].node;
   const landingHiring = yml.partners;
 
@@ -116,6 +128,7 @@ const DataScience = ({ data, pageContext, yml }) => {
           <Link
             to={yml.button.apply_button_link}
             state={{ course: yml.meta_info.bc_slug }}
+            onClick={handleApplyClick}
           >
             <Button
               variant="full"
@@ -288,6 +301,15 @@ const DataScience = ({ data, pageContext, yml }) => {
       />
 
       <Loc lang={pageContext.lang} allLocationYaml={data.allLocationYaml} />
+
+      <ApplyModal
+        show={showApplyModal}
+        onClose={() => setShowApplyModal(false)}
+        lang={pageContext.lang}
+        button={{ button_link: yml.button.apply_button_link }}
+        myLocations={data.allLocationYaml.edges}
+        currentURL={""}
+      />
 
       {/* <RelatedPosts
         lang={pageContext.lang}

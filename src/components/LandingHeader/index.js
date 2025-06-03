@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import LeadForm from "../LeadForm";
 import { H1, H2, Paragraph } from "../Heading";
@@ -10,11 +10,13 @@ import LandingContainer from "../LandingContainer";
 import Marquee_v2 from "../Marquee_v2";
 import { SessionContext } from "../../session.js";
 import { processFormEntry } from "../../actions";
+import ApplyModal from "../ApplyModal";
 
 const LandingHeader = (props) => {
   const { setLocation } = React.useContext(SessionContext);
   const { pageContext, yml, preData, locations, programs, hideForm } = props;
   const [inLocation, setInLocation] = React.useState("");
+  const [showApplyModal, setShowApplyModal] = useState(false);
 
   useEffect(() => {
     if (yml.meta_info && yml.meta_info.utm_location)
@@ -25,6 +27,11 @@ const LandingHeader = (props) => {
     if (_inLoc && _inLoc != "")
       setInLocation(_inLoc.replace(/^\w/, (c) => c.toUpperCase()) + " ");
   }, []);
+
+  const handleApplyClick = (e) => {
+    e.preventDefault();
+    setShowApplyModal(true);
+  };
 
   const bulletIcons = [
     {
@@ -94,7 +101,6 @@ const LandingHeader = (props) => {
             display_tablet="flex"
             flexDirection="column"
             width="100%"
-            //margin="0 auto"
             padding_xs="0"
             height="auto"
             padding_tablet="40px 0 0 0"
@@ -214,6 +220,7 @@ const LandingHeader = (props) => {
             {yml.features.button && (
               <a
                 href={yml.features.button.path || "#"}
+                onClick={handleApplyClick}
                 target="_blank"
                 rel="noopener noreferrer"
                 id="features_button"
@@ -373,7 +380,6 @@ const LandingHeader = (props) => {
                 selectLocation={locations}
                 margin="18px 0"
                 marginTop_tablet="50px"
-                // marginTop_xs="20px"
                 style={{
                   zIndex: "1",
                   minHeight: "350px",
@@ -414,7 +420,6 @@ const LandingHeader = (props) => {
                 width_tablet="100%"
                 width="100%"
                 zIndex="10"
-                // h_sm="250px"
                 backgroundSize="contain"
               />
             )}
@@ -450,6 +455,14 @@ const LandingHeader = (props) => {
           </Div>
         </Grid>
       </LandingContainer>
+      <ApplyModal
+        show={showApplyModal}
+        onClose={() => setShowApplyModal(false)}
+        lang={pageContext.lang}
+        button={{ button_link: yml.features?.button?.path }}
+        myLocations={locations}
+        currentURL={""}
+      />
     </>
   );
 };

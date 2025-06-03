@@ -7,6 +7,7 @@ import ChooseProgram from "../ChooseProgram";
 import Card from "../Card";
 import { Colors, Button, Anchor, Link } from "../Styling";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import ApplyModal from "../ApplyModal";
 
 // const MegaMenuContainer =
 
@@ -271,6 +272,14 @@ export const RightNav = ({
       close_button_text: "Cerrar",
     },
   };
+
+  const [showApplyModal, setShowApplyModal] = useState(false);
+
+  const handleApplyClick = (e) => {
+    e.preventDefault();
+    setShowApplyModal(true);
+  };
+
   return (
     <Div open={open}>
       <Link to={"/"}>
@@ -322,7 +331,7 @@ export const RightNav = ({
             )
           )}
       </Ul>
-      <Link onClick={onToggle} to={button.button_link || "#"}>
+      <Link onClick={handleApplyClick} to={button.button_link || "#"}>
         <Button
           m_xs="10px 0"
           m_sm="10px 0"
@@ -333,6 +342,14 @@ export const RightNav = ({
           {button.apply_button_text || "Apply Now"}
         </Button>
       </Link>
+      <ApplyModal
+        show={showApplyModal}
+        onClose={() => setShowApplyModal(false)}
+        lang={lang}
+        button={button}
+        myLocations={[]}
+        currentURL={""}
+      />
     </Div>
   );
 };

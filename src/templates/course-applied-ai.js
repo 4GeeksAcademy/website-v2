@@ -18,11 +18,13 @@ import Overlaped from "../components/Overlaped";
 import Loc from "../components/Loc";
 import ScholarshipProjects from "../components/ScholarshipProjects";
 import TwoColumn from "../components/TwoColumn/index.js";
+import ApplyModal from "../components/ApplyModal";
 
 const ApliedAi = ({ data, pageContext, yml }) => {
   const { session } = React.useContext(SessionContext);
   const courseDetails = data.allCourseYaml.edges[0].node;
   const [open, setOpen] = React.useState(false);
+  const [showApplyModal, setShowApplyModal] = useState(false);
   const hiring = data.allPartnerYaml.edges[0].node;
   const landingHiring = yml.partners;
 
@@ -37,6 +39,11 @@ const ApliedAi = ({ data, pageContext, yml }) => {
 
   const handleClose = () => {
     setOpen(false);
+  };
+
+  const handleApplyClick = (e) => {
+    e.preventDefault();
+    setShowApplyModal(true);
   };
 
   const [applyButtonText, setApplyButtonText] = useState("");
@@ -104,6 +111,7 @@ const ApliedAi = ({ data, pageContext, yml }) => {
           <Link
             to={yml.button.apply_button_link}
             state={{ course: yml.meta_info.bc_slug }}
+            onClick={handleApplyClick}
           >
             <Button
               variant="full"
@@ -115,7 +123,6 @@ const ApliedAi = ({ data, pageContext, yml }) => {
               textColor="white"
             >
               {applyButtonText || apply_button_text}
-              {/* {applyButtonText} */}
             </Button>
           </Link>
           <Button
@@ -287,6 +294,15 @@ const ApliedAi = ({ data, pageContext, yml }) => {
       />
 
       <Loc lang={pageContext.lang} allLocationYaml={data.allLocationYaml} />
+
+      <ApplyModal
+        show={showApplyModal}
+        onClose={() => setShowApplyModal(false)}
+        lang={pageContext.lang}
+        button={{ button_link: yml.button.apply_button_link }}
+        myLocations={data.allLocationYaml.edges}
+        currentURL={""}
+      />
     </>
   );
 };

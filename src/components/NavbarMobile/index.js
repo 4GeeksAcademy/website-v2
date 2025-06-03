@@ -10,6 +10,7 @@ import Icon from "../Icon";
 import { locByLanguage } from "../../actions";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import CustomBar from "../CustomBar";
+import ApplyModal from "../ApplyModal";
 
 const BurgerIcon = (props) => (
   <svg
@@ -127,54 +128,26 @@ export const NavbarMobile = ({
   onLocationChange,
   currentURL,
   myLocations,
+  session,
+  setSession,
+  locations: propLocations,
 }) => {
-  const { session, setSession } = useContext(SessionContext);
+  const { session: contextSession, setSession: setContextSession } = useContext(SessionContext);
   const [status, setStatus] = useState({
     toggle: false,
     hovered: false,
     itemIndex: null,
   });
-
-  //This Function prevents troubles when component renders during cypress test process
-  const isDevelopment = () => {
-    if (!process.env.NODE_ENV || process.env.NODE_ENV === "development") {
-      return true;
-      // dev code
-    }
-    return false;
-  };
-  // let buttonText = session.location ? session.location.button.apply_button_text : button.apply_button_text
-
-  let city = session && session.location ? session.location.city : [];
-
-  const [contentBar, setContentBar] = useState({});
-
-  const [buttonText, setButtonText] = useState("");
-  const [showDiscount, setShowDiscount] = useState(false);
-
-  /* In case of want change the Button text "Aplica" search the key 
-        "apply_button_text" in /src/data/location/locationfile.yaml
-    */
-  let findCity = myLocations?.find((loc) => loc.node?.city === city);
-
-  const isContentBarActive = contentBar.active || isDevelopment();
-
-  useEffect(() => {
-    if (findCity !== undefined && findCity.node) {
-      setButtonText(findCity.node.button.apply_button_text);
-      setContentBar(findCity?.node.custom_bar);
-      if (findCity.node.custom_bar.discounts) setShowDiscount(true);
-    }
-  }, [findCity]);
+  const [showApplyModal, setShowApplyModal] = useState(false);
 
   const data = useStaticQuery(graphql`
     query {
       file(relativePath: { eq: "images/4geeksacademy-logo-old.png" }) {
         childImageSharp {
           gatsbyImageData(
-            layout: FULL_WIDTH # --> CONSTRAINED || FIXED || FULL_WIDTH
+            layout: FULL_WIDTH
             width: 300
-            placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+            placeholder: NONE
           )
         }
       }
@@ -245,10 +218,44 @@ export const NavbarMobile = ({
   `);
 
   const locations = locByLanguage(data.allLocationYaml, langDictionary[lang]);
-
   const myCustomBar = data.allCustomBarYaml.edges.find(
     (item) => item.node.fields.lang === lang
   );
+
+  //This Function prevents troubles when component renders during cypress test process
+  const isDevelopment = () => {
+    if (!process.env.NODE_ENV || process.env.NODE_ENV === "development") {
+      return true;
+    }
+    return false;
+  };
+
+  let city = contextSession && contextSession.location ? contextSession.location.city : [];
+
+  const [contentBar, setContentBar] = useState({});
+  const [buttonText, setButtonText] = useState("");
+  const [showDiscount, setShowDiscount] = useState(false);
+
+  let findCity = myLocations?.find((loc) => loc.node?.city === city);
+
+  const isContentBarActive = contentBar.active || isDevelopment();
+
+  useEffect(() => {
+    if (findCity !== undefined && findCity.node) {
+      setButtonText(findCity.node.button.apply_button_text);
+      setContentBar(findCity?.node.custom_bar);
+      if (findCity.node.custom_bar.discounts) setShowDiscount(true);
+    }
+  }, [findCity]);
+
+  const handleApplyClick = (e) => {
+    e.preventDefault();
+    if (lang === "us") {
+      window.location.href = "/us/apply";
+    } else {
+      setShowApplyModal(true);
+    }
+  };
 
   return (
     <Div
@@ -285,7 +292,6 @@ export const NavbarMobile = ({
           )}
           <Link to={lang == "es" ? "/es/inicio" : "/"}>
             <GatsbyImage
-              // fadeIn={false}
               loading="eager"
               image={getImage(data.file.childImageSharp.gatsbyImageData)}
               alt="4Geeks Logo"
@@ -300,25 +306,25 @@ export const NavbarMobile = ({
           status={status}
           setStatus={setStatus}
           menu={menu}
-          session={session}
+          session={contextSession}
           currentURL={currentURL}
           languageButton={languageButton}
-          locations={locations}
+          locations={propLocations}
           lang={lang}
         />
         <Div alignItems="center" justifyContent="between">
           {lang === 'es' && (
             <Link
               onClick={() =>
-                setSession({
-                  ...session,
+                setContextSession({
+                  ...contextSession,
                   language: langDictionary[lang],
-                  locations,
+                  locations: propLocations,
                 })
               }
               to={
-                session && session.pathsDictionary && currentURL
-                  ? `${session.pathsDictionary[currentURL] || ""}${
+                contextSession && contextSession.pathsDictionary && currentURL
+                  ? `${contextSession.pathsDictionary[currentURL] || ""}${
                       languageButton.link
                     }`
                   : "/?lang=en#home"
@@ -333,7 +339,7 @@ export const NavbarMobile = ({
               />
             </Link>
           )}
-          <Link onClick={onToggle} to={button.button_link || "#"}>
+          <Link onClick={handleApplyClick} to={button.button_link || "#"}>
             <Button
               variant="full"
               color={Colors.black}
@@ -344,6 +350,14 @@ export const NavbarMobile = ({
           </Link>
         </Div>
       </Nav>
+      <ApplyModal
+        show={showApplyModal}
+        onClose={() => setShowApplyModal(false)}
+        lang={lang}
+        button={button}
+        myLocations={myLocations}
+        currentURL={currentURL}
+      />
     </Div>
   );
 };

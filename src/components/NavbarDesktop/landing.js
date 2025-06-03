@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { useStaticQuery, graphql } from "gatsby";
 import { Devices } from "../Responsive";
 import { Colors, Button, Link } from "../Styling";
 import { Div } from "../Sections";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import ApplyModal from "../ApplyModal";
 
 const Nav = styled.nav`
   height: 71px;
@@ -39,9 +40,12 @@ const Nav = styled.nav`
 `;
 
 const LandingNavbar = ({ lang, onToggle, buttonUrl, logoUrl, buttonText }) => {
-  /* In case of want change the Button text "Aplica" search the key 
-       "apply_button_text" in /src/data/location/locationfile.yaml
-    */
+  const [showApplyModal, setShowApplyModal] = useState(false);
+
+  const handleApplyClick = (e) => {
+    e.preventDefault();
+    setShowApplyModal(true);
+  };
 
   const data = useStaticQuery(graphql`
     query {
@@ -67,7 +71,7 @@ const LandingNavbar = ({ lang, onToggle, buttonUrl, logoUrl, buttonText }) => {
           />
         </Link>
         <Div alignItems="center" justifyContent="between">
-          <Link onClick={onToggle} to={buttonUrl || "#"}>
+          <Link onClick={handleApplyClick} to={buttonUrl || "#"}>
             <Button
               variant="full"
               width="fit-content"
@@ -79,6 +83,14 @@ const LandingNavbar = ({ lang, onToggle, buttonUrl, logoUrl, buttonText }) => {
           </Link>
         </Div>
       </Nav>
+      <ApplyModal
+        show={showApplyModal}
+        onClose={() => setShowApplyModal(false)}
+        lang={lang}
+        button={{ button_link: buttonUrl }}
+        myLocations={[]}
+        currentURL={""}
+      />
     </>
   );
 };
