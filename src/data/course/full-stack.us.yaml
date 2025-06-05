@@ -35,7 +35,7 @@ header:
   title: "Full Stack Developer"
   image: "../../../static/images/bg/program-bg.png"
   image_alt: "how-to-become-a-full-stack-developer-"
-  paragraph: "Go from zero to getting paid as a Full-Stack Developer in just 18 weeks! Master the most sought-after skills, get hired in tech, and give your life a boost!"
+  paragraph: "4Geeks Academy is a global coding bootcamp offering full-stack development training with a 9-month job guarantee. Go from zero to getting paid as a Full-Stack Developer in just 18 weeks!"
 
 button:
   syllabus_heading: "Download Syllabus"
@@ -273,7 +273,7 @@ details:
       step: 8
     - module_name: "LIFELONG SUPPORT"
       title: "Lifelong Support"
-      description: "Keep evolving in your career with the academy's help - we’re your learning partners for life. You’ll have access to 1:1 mentorships for all your coding needs throughout the bootcamp and beyond. Our expert career coaches will help you prepare for a successful job search and will continue to be there for you throughout your career."
+      description: "Keep evolving in your career with the academy's help - we're your learning partners for life. You'll have access to 1:1 mentorships for all your coding needs throughout the bootcamp and beyond. Our expert career coaches will help you prepare for a successful job search and will continue to be there for you throughout your career."
       projects: "Get paid to keep learning and raise your income gradually as you become a Senior Developer. Enjoy and build software for life."
       slug: "lifelong-learning"
       duration: "forever"

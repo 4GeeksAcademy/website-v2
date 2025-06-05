@@ -17,7 +17,7 @@ apply_form:
 seo_title: "Curso Data Science and Machine Learning"
 header:
   title: "Conviértete en un ingeniero de Data Science y Machine Learning"
-  paragraph: "Una de las profesiones mejor pagadas del mundo."
+  paragraph: "4Geeks ofrece un programa especializado en Data Science y Machine Learning para crear modelos predictivos. Tendrás formación práctica en Python, SQL y algoritmos de ML para convertirte en científico de datos profesional."
   image: "../../../static/images/bg/apple-building.jpg"
   image_alt: "apple-building"
 

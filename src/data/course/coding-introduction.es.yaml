@@ -19,8 +19,8 @@ seo_title: "Curso de Introducción a la Programación"
 header:
   title: "Introducción a la Programación"
   image: "../../../static/images/bg/program-bg.png"
-  image_alt: "comienza-tu-viaje-como-desarrollador"
-  paragraph: "Embarca en tu carrera de desarrollo web con nuestro curso de Introducción a la Programación. Aprende HTML, CSS y JavaScript, y prepárate para construir sitios web interactivos y responsivos en solo semanas!"
+  image_alt: "comienza-tu-viaje-como-desarrolador"
+  paragraph: "4Geeks Academy ofrece un curso de Introducción a la Programación para ayudarte a iniciar tu carrera en desarrollo web. Aprende HTML, CSS y JavaScript, y prepárate para construir sitios web interactivos en solo semanas!"
 
 button:
   syllabus_heading: "Descargar Programa"

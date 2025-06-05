@@ -16,10 +16,10 @@ apply_form:
 
 seo_title: "Desarrollador Full Stack a tu propio ritmo"
 header:
-  title: "Full Stack Developer a tu propio ritmo"
+  title: "Desarrollador Full Stack a tu propio ritmo"
   image: "../../../static/images/bg/program-bg.png"
-  image_alt: "Programa"
-  paragraph: "De cero a tener tu primer trabajo como programador, aprende todo lo necesario, recibe soporte de por vida y consigue un trabajo después de 32 semanas de estudio."
+  image_alt: "Full stack at your own pace"
+  paragraph: "4Geeks Academy ofrece un programa flexible de full-stack para que puedas aprender a tu propio ritmo. Ve desde cero hasta tu primer trabajo como programador en solo 32 semanas."
 
 button:
   syllabus_heading: "Descargar Detalles del Curso"
