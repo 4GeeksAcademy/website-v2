@@ -16,8 +16,8 @@ button:
 
 seo_title: "Job Guarantee"
 header:
-  title: "GET HIRED IN TECH OR YOUR MONEY BACK"
-  sub_title: "Your success is our mission"
+  title: "GET INTO TECH WITH OUR JOB GUARANTEE"
+  sub_title: "Your success is our mission — Get hired within 9 months of graduation, or we’ll refund your tuition."
   paragraph: |
     <ul style="list-style-type: disc; padding-left: 20px;">
       <li style="color: #000; font-size: 18px; margin-bottom: 8px; display: flex; align-items: left; justify-content: center;">
@@ -40,26 +40,24 @@ two_column_left:
     style: '{ "backgroundSize": "contain", "background-position": "center" }'
     src: "/images/landing/hombre-joven-con-laptop.webp"
   heading:
-    text: "Why do we offer a job guarantee?"
+    text: "Who’s Eligible?"
     font_size: ["42px", "34px", "34px", "34px", "34px"]
     style: '{ "font-weight": "600", "text-align": "center", "color": "#000", "padding": "10px" }'
   sub_heading:
-    text: "Our bootcamps go beyond teaching relevant skills; they are designed to launch rewarding tech careers."
+    text: "You'll qualify for  the  Job Guarantee if you:"
     font_size: ["22px", "22px", "22px", "20px", "18px"]
     style: '{ "font-weight": "400", "text-align": "justify", "color": "#333", "padding": "10px"}'
   content:
     text: |
       From our industry-aligned syllabus to our comprehensive, personalized career support service, every one of our features has been tried and tested to optimize your learning journey.
       <br><br>
-      <span style="color: #0097CD; ">✓  - </span> Proven effectiveness of our program
+      <span style="color: #0097CD; ">✓  - </span> Have U.S. work authorization
       <br><br>
-      <span style="color: #0097CD; ">✓  - </span> The tech industry is booming
+      <span style="color: #0097CD; ">✓  - </span> Pass our logic test 
       <br><br>
-      <span style="color: #0097CD; ">✓  - </span> We trust the process
+      <span style="color: #0097CD; ">✓  - </span> Complete all coursework and projects
       <br><br>
-      <span style="color: #0097CD; ">✓  - </span> We trust you
-      <br><br>
-      <span style=" color: #000;">Let’s shape your future together!</span>
+      <span style="color: #0097CD; ">✓  - </span> Follow our career team’s guidance
     font_size: ["20px", "20px", "18px", "16px", "14px"]
     style: '{ "text-align": "left", "color": "#444", "line-height": "1.1", "padding": "10px"}'
   button:
@@ -125,13 +123,15 @@ two_columns_video:
     shadow: false
   video: "z8L4yGdP5xM"
   heading:
-    text: "Daniel Pena's Journey with 4Geeks Academy"
+    text: "See How One Graduate Turned Our Job Guarantee Into a Real Career"
     font_size: ["30px", "30px", "24px", "24px", "24px"] # De mayor a menor (Desktop → Móvil)
     style: '{"font-weight": "bold", "color": "#333", "text-align": "center"}'
   sub_heading:
     text: |
-      Daniel Pena shares his experience at 4Geeks Academy, where he transitioned into tech through the Full Stack Developer program. With a curriculum covering both front-end and back-end development, he gained the confidence and skills needed to land a job he loves.
-      Thanks to hands-on projects, expert instructors, and the job guarantee program, Daniel was fully prepared to apply for tech positions and successfully launched his career.
+      Daniel Peña transitioned to a tech career through 4Geeks Academy’s Full-Stack Developer program. With our industry-aligned curriculum that covers front-end and back-end development, he built real-world skills through hands-on projects and expert mentorship.
+      Most importantly, he followed all the steps in our Job Guarantee — and it paid off. Daniel landed a tech job he loves and launched a new career with confidence.
+      Watch his story to see what’s possible when commitment meets support.
+
     font_size: ["20px", "18px", "16px", "15px", "14px"]
     style: '{"color": "#2a2a2a", "text-align": "justify", "line-height": "1.6", "max-width": "800px", "margin": "0 auto", "font-weight":"200" }'
   button:
