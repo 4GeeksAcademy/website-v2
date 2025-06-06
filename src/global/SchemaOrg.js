@@ -104,6 +104,9 @@ const SchemaOrg = ({
       "https://www.youtube.com/@4GeeksAcademy",
     ],
     offers: courses,
+    "@context": {
+      "jobGuarantee": "https://4geeksacademy.com/schema#jobGuarantee"
+    },
     jobGuarantee: true,
   };
 
@@ -208,6 +211,9 @@ const SchemaOrg = ({
           sameAs: "https://4geeksacademy.com/",
         },
         timeToComplete: "PT18W",
+        "@context": {
+          "jobGuarantee": "https://4geeksacademy.com/schema#jobGuarantee",
+        },
         jobGuarantee: true,
         url: url,
         image: {
