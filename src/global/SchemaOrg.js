@@ -105,7 +105,7 @@ const SchemaOrg = ({
     ],
     offers: courses,
     "@context": {
-      "jobGuarantee": "https://4geeksacademy.com/schema#jobGuarantee"
+      jobGuarantee: "https://4geeksacademy.com/schema#jobGuarantee",
     },
     jobGuarantee: true,
   };
@@ -212,7 +212,7 @@ const SchemaOrg = ({
         },
         timeToComplete: "PT18W",
         "@context": {
-          "jobGuarantee": "https://4geeksacademy.com/schema#jobGuarantee",
+          jobGuarantee: "https://4geeksacademy.com/schema#jobGuarantee",
         },
         jobGuarantee: true,
         url: url,
@@ -224,14 +224,15 @@ const SchemaOrg = ({
       {
         "@context": "https://schema.org",
         "@type": "FAQPage",
-        mainEntity: faqsFilteredByLocation?.map((faq) => ({
-          "@type": "Question",
-          name: faq.question,
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: faq.answer,
-          },
-        })) || [],
+        mainEntity:
+          faqsFilteredByLocation?.map((faq) => ({
+            "@type": "Question",
+            name: faq.question,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: faq.answer,
+            },
+          })) || [],
       },
     ],
   };
