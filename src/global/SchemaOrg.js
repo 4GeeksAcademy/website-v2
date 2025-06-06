@@ -42,12 +42,6 @@ const SchemaOrg = ({
               description
               slug
             }
-            details {
-              about {
-                title
-                sub_title
-              }
-            }
             fields {
               lang
             }
@@ -59,7 +53,7 @@ const SchemaOrg = ({
 
   const faqs = dataQuery.allFaqYaml.edges
     .find(({ node }) => node.fields.lang === context.lang)
-    ?.node.faq.flatMap((elem) => elem.questions);
+    ?.node.faq.flatMap((elem) => elem.questions) || [];
 
   const courses = dataQuery.allCourseYaml.edges
     .filter(({ node }) => node.fields.lang === context.lang)
@@ -68,7 +62,10 @@ const SchemaOrg = ({
       name: node.meta_info.title,
       description: node.meta_info.description,
       url: `https://4geeksacademy.com/${context.lang}/coding-bootcamps/${node.meta_info.slug}`,
-      timeToComplete: "PT18W", // 18 weeks in ISO 8601 duration format
+      timeToComplete: "PT18W",
+      "@context": {
+        "jobGuarantee": "https://4geeksacademy.com/schema#jobGuarantee",
+      },
       jobGuarantee: true,
     }));
 
@@ -102,10 +99,11 @@ const SchemaOrg = ({
       "https://www.facebook.com/4geeksacademy",
       "https://4geeksacademy.com/",
       "https://www.youtube.com/@4GeeksAcademy",
+      "https://4geeksacademy.com/us/job-guarantee",
     ],
     offers: courses,
     "@context": {
-      jobGuarantee: "https://4geeksacademy.com/schema#jobGuarantee",
+      "jobGuarantee": "https://4geeksacademy.com/schema#jobGuarantee",
     },
     jobGuarantee: true,
   };
@@ -187,13 +185,6 @@ const SchemaOrg = ({
     },
   ];
 
-  const schemaWebsite = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: "4Geeks Academy",
-    url: `https://4geeksacademy.com`,
-  };
-
   const schemaType = {
     page,
     location,
@@ -210,9 +201,15 @@ const SchemaOrg = ({
           name: "4Geeks Academy",
           sameAs: "https://4geeksacademy.com/",
         },
+        offers: {
+          "@type": "Offer",
+          priceCurrency: "USD",
+          availability: "https://schema.org/InStock",
+          url: url,
+        },
         timeToComplete: "PT18W",
         "@context": {
-          jobGuarantee: "https://4geeksacademy.com/schema#jobGuarantee",
+          "jobGuarantee": "https://4geeksacademy.com/schema#jobGuarantee",
         },
         jobGuarantee: true,
         url: url,
@@ -224,31 +221,15 @@ const SchemaOrg = ({
       {
         "@context": "https://schema.org",
         "@type": "FAQPage",
-        mainEntity:
-          faqsFilteredByLocation?.map((faq) => ({
-            "@type": "Question",
-            name: faq.question,
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: faq.answer,
-            },
-          })) || [],
+        mainEntity: (faqsFilteredByLocation.length > 0 ? faqsFilteredByLocation : faqs).map((faq) => ({
+          "@type": "Question",
+          name: faq.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: faq.answer,
+          },
+        })),
       },
-    ],
-  };
-
-  const schemaOrg = {
-    "@context": "https://schema.org",
-    "@type": "School",
-    name: "4Geeks Academy",
-    url: `https://4geeksacademy.com`,
-    logo: "https://storage.googleapis.com/media-breathecode/b25a096eb14565c0c5e75d72442f888c17ac06fcfec7282747bf6c87baaf559c",
-    sameAs: [
-      "https://twitter.com/4GeeksAcademy",
-      "https://www.instagram.com/4geeksacademy/",
-      "https://www.facebook.com/4geeksacademy",
-      "https://4geeksacademy.com/",
-      "https://www.youtube.com/@4GeeksAcademy",
     ],
   };
 
@@ -263,12 +244,6 @@ const SchemaOrg = ({
           {JSON.stringify(schemaType[type])}
         </script>
       )}
-      {context.defaultTemplate === "index" ||
-        (type === "location" && (
-          <script type="application/ld+json">
-            {JSON.stringify(schemaOrg)}
-          </script>
-        ))}
       {context.filePath?.includes("data/blog/") && (
         <script type="application/ld+json">{JSON.stringify(blog)}</script>
       )}
@@ -278,6 +253,7 @@ const SchemaOrg = ({
     </Helmet>
   );
 };
+
 SchemaOrg.defaultProps = {
   title: null,
   description: null,
@@ -287,4 +263,5 @@ SchemaOrg.defaultProps = {
   article: false,
   author: "",
 };
+
 export default React.memo(SchemaOrg);
