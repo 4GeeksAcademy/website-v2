@@ -24,7 +24,7 @@ navbar:
             - text: "Ver Programa"
               link: "/es/coding-bootcamps/curso-datascience-machine-learning"
               
-        - title: "Especialista en seguridad informática"
+        - title: "Seguridad informática"
           level: "Desde cero"
           icon: "cyber-security"
           paragraph: "Conviértete en un hacker ético y aprende a detectar, corregir y protegerte de ataques y vulnerabilidades en sistemas informáticos "

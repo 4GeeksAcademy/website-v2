@@ -84,7 +84,7 @@ our_partners:
 
 custom_bar:
   active: true
-  message: 'Transform Your Future with Code for Just $120/Month. <a class="customBar-link" href="/us/apply">Apply</a>'
+  message: 'Transform Your Future with Code for Just $120/Month.  '
   discounts: true
   button: 
     label: "" # leave empty to hide button

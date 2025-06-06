@@ -23,23 +23,6 @@ with:
       image_link: "/us/geekforce-career-support"
       text: ""
       text_link: ""
-
-  - name: "Luisa Glum"
-    title: "The school was as invested as I was"
-    open_in_modal: true
-    description: "Luisa enrolled in our program using one of our many financing methods and successfully paid for the program after graduation."
-    image: ../../../../static/images/staff/hernan-new.webp
-    alt: ""
-    video: "https://www.youtube.com/watch?v=ln3bQsV1BaQ" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
-    video_height: 173px
-    location: ["all"]
-    icon: address
-    footer:
-      is_image: false
-      image: ""
-      image_link: ""
-      text: ""
-      text_link: "/us/financials"
       
   - name: "Joao Henrique"
     title: "You'll always have support from the  Academy"
@@ -50,6 +33,23 @@ with:
     video_height: 173px
     location: ["downtown-miami", "all"]
     video: "https://www.youtube.com/watch?v=MBXqEnhodx0" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    icon: address
+    footer:
+      is_image: true
+      image: "/images/geekpal-logo-new.png"
+      image_link: "/us/geekpal-support"
+      text: ""
+      text_link: ""
+
+  - name: "Jonathan Ferragut"
+    title: "Taking a course like this benefits us in a lot of different ways."
+    open_in_modal: true
+    description: "Jonathan shares how the program helped him build confidence and create projects from scratch."
+    image: ../../../../static/images/testimonials/jonathan-ferragut.jpg
+    alt: ""
+    video: "https://www.youtube.com/watch?v=oeX_ocy6zv4" # VIDEO URL --- LEAVE EMPTY "" IF YOU HAVEN'T THE VIDEO URL
+    video_height: 173px
+    location: ["all"]
     icon: address
     footer:
       is_image: true
