@@ -51,9 +51,10 @@ const SchemaOrg = ({
     }
   `);
 
-  const faqs = dataQuery.allFaqYaml.edges
-    .find(({ node }) => node.fields.lang === context.lang)
-    ?.node.faq.flatMap((elem) => elem.questions) || [];
+  const faqs =
+    dataQuery.allFaqYaml.edges
+      .find(({ node }) => node.fields.lang === context.lang)
+      ?.node.faq.flatMap((elem) => elem.questions) || [];
 
   const courses = dataQuery.allCourseYaml.edges
     .filter(({ node }) => node.fields.lang === context.lang)
@@ -64,7 +65,7 @@ const SchemaOrg = ({
       url: `https://4geeksacademy.com/${context.lang}/coding-bootcamps/${node.meta_info.slug}`,
       timeToComplete: "PT18W",
       "@context": {
-        "jobGuarantee": "https://4geeksacademy.com/schema#jobGuarantee",
+        jobGuarantee: "https://4geeksacademy.com/schema#jobGuarantee",
       },
       jobGuarantee: true,
     }));
@@ -103,7 +104,7 @@ const SchemaOrg = ({
     ],
     offers: courses,
     "@context": {
-      "jobGuarantee": "https://4geeksacademy.com/schema#jobGuarantee",
+      jobGuarantee: "https://4geeksacademy.com/schema#jobGuarantee",
     },
     jobGuarantee: true,
   };
@@ -209,7 +210,7 @@ const SchemaOrg = ({
         },
         timeToComplete: "PT18W",
         "@context": {
-          "jobGuarantee": "https://4geeksacademy.com/schema#jobGuarantee",
+          jobGuarantee: "https://4geeksacademy.com/schema#jobGuarantee",
         },
         jobGuarantee: true,
         url: url,
@@ -221,7 +222,10 @@ const SchemaOrg = ({
       {
         "@context": "https://schema.org",
         "@type": "FAQPage",
-        mainEntity: (faqsFilteredByLocation.length > 0 ? faqsFilteredByLocation : faqs).map((faq) => ({
+        mainEntity: (faqsFilteredByLocation.length > 0
+          ? faqsFilteredByLocation
+          : faqs
+        ).map((faq) => ({
           "@type": "Question",
           name: faq.question,
           acceptedAnswer: {
