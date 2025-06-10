@@ -87,7 +87,8 @@ we_trust_section:
 
 how_it_works:
   title: How it works
-  text: These are the commitments you have to make to qualify for the job guarantee. If you complete every step and don’t get hired within 9 months of graduation, you’ll get 100% of your tuition back.
+  text: |
+    These are the commitments you have to make to qualify for the job guarantee. If you complete every step and don’t get hired within 9 months of graduation, you’ll get 100% of your tuition back.
   steps:
     - icon: rocket-2
       title: Start the program
