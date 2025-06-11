@@ -63,7 +63,12 @@ const SchemaOrg = ({
       name: node.meta_info.title,
       description: node.meta_info.description,
       url: `https://4geeksacademy.com/${context.lang}/coding-bootcamps/${node.meta_info.slug}`,
-      timeToComplete: "PT18W",
+      timeRequired: "P18W",
+      provider: {
+        "@type": "EducationalOrganization",
+        name: "4Geeks Academy",
+        sameAs: "https://4geeksacademy.com/",
+      },
       "@context": {
         jobGuarantee: "https://4geeksacademy.com/schema#jobGuarantee",
       },
@@ -87,7 +92,10 @@ const SchemaOrg = ({
   ];
 
   const educationalOrganizationSchema = {
-    "@context": "https://schema.org",
+    "@context": {
+      "@vocab": "https://schema.org/",
+      jobGuarantee: "https://4geeksacademy.com/schema#jobGuarantee"
+    },
     "@type": "EducationalOrganization",
     name: "4Geeks Academy",
     description:
@@ -102,10 +110,6 @@ const SchemaOrg = ({
       "https://www.youtube.com/@4GeeksAcademy",
       "https://4geeksacademy.com/us/job-guarantee",
     ],
-    offers: courses,
-    "@context": {
-      jobGuarantee: "https://4geeksacademy.com/schema#jobGuarantee",
-    },
     jobGuarantee: true,
   };
 
@@ -193,12 +197,15 @@ const SchemaOrg = ({
     course: [
       ...baseSchema,
       {
-        "@context": "https://schema.org",
+        "@context": {
+          "@vocab": "https://schema.org/",
+          jobGuarantee: "https://4geeksacademy.com/schema#jobGuarantee",
+        },
         "@type": "Course",
         name: seoTitle,
         description,
         provider: {
-          "@type": "Organization",
+          "@type": "EducationalOrganization",
           name: "4Geeks Academy",
           sameAs: "https://4geeksacademy.com/",
         },
@@ -206,17 +213,14 @@ const SchemaOrg = ({
           "@type": "Offer",
           priceCurrency: "USD",
           availability: "https://schema.org/InStock",
-          url: url,
+          url: `https://4geeksacademy.com/${context.lang}/coding-bootcamps/${context.slug}`,
         },
-        timeToComplete: "PT18W",
-        "@context": {
-          jobGuarantee: "https://4geeksacademy.com/schema#jobGuarantee",
-        },
+        timeRequired: "P18W",
         jobGuarantee: true,
-        url: url,
+        url: `https://4geeksacademy.com/${context.lang}/coding-bootcamps/${context.slug}`,
         image: {
           "@type": "ImageObject",
-          url: image,
+          url: image || "https://4geeksacademy.com/path/to/default-image.jpg", // Fallback
         },
       },
       {
