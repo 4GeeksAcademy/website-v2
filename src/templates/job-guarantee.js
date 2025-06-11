@@ -574,17 +574,6 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           ))}
         </Div>
 
-        <Container
-          margin="0"
-          padding="0"
-          padding_tablet="0"
-          id="faq-card-section"
-        >
-          <FaqCard
-            faqs={data.allFaqYaml.edges[0].node.faq}
-            topicSlug="job_guarantee"
-          />
-        </Container>
 
         {yml.how_it_works.link && (
           <Paragraph
@@ -726,6 +715,18 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
         height="1px"
         margin="20px"
       />
+
+      <Container
+          margin="0"
+          padding="0"
+          padding_tablet="0"
+          id="faq-card-section"
+        >
+          <FaqCard
+            faqs={data.allFaqYaml.edges[0].node.faq}
+            topicSlug="job_guarantee"
+          />
+      </Container>
       <GridContainer
         columns_tablet="12"
         padding="0 17px 40px 17px"
@@ -758,6 +759,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           />
         </Div>
       </GridContainer>
+
     </>
   );
 };
