@@ -20,7 +20,7 @@ programs:
 
   - title: "Curso de Ciberseguridad"
     sub_title: "Para Windows y Linux"
-    description: "Conviértete en un especialista en ciberseguridad, preparado para identificar, gestionar y mitigar las vulnerabilidades del sistema de acuerdo con las normas ISO y otros estándares."  # Translated description
+    description: "Conviértete en un Profesional junior en ciberseguridad, preparado para identificar, gestionar y mitigar las vulnerabilidades del sistema de acuerdo con las normas ISO y otros estándares."  # Translated description
     description_mobile: "En línea, presencial y flexible"
     icon: "cyber-security"
     link: "/es/coding-bootcamps/curso-ciberseguridad"
