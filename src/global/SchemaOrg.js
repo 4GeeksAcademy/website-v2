@@ -244,9 +244,6 @@ const SchemaOrg = ({
   return (
     <Helmet>
       {/* Schema.org tags */}
-      <script type="application/ld+json">
-        {JSON.stringify(educationalOrganizationSchema)}
-      </script>
       {type in schemaType && (
         <script type="application/ld+json">
           {JSON.stringify(schemaType[type])}
