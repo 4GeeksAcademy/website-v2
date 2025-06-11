@@ -42,7 +42,7 @@ header_data:
   background: "#fff"
   tagline: Welcome to 4Geeks Academy!
   tagline_color: "#1b1b1b"
-  sub_heading: "Just $100 will ensure your participation. Fill out the form to reserve your spot."
+  sub_heading: "Just $250 will ensure your participation. Fill out the form to reserve your spot."
   form_styles:
     background: "#E3F9FE"
     color: "black"
@@ -58,7 +58,7 @@ features:
   button:
       text: "Save Your Spot Now!"
       color: "white"
-      path: "https://buy.stripe.com/4gw4gu8Lt2pqaekeVa"
+      path: "https://buy.stripe.com/fZu4gy21Odgo8Wf5Iwdby0v"
       background: "blue"
       hover_color: "darkBlue"
   bullets:
