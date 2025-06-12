@@ -18,7 +18,7 @@ navbar:
   logoUrl: "#"
 
 header_data:
-  tagline: "Become an AI- Powered Full Stack Software Engineer"
+  tagline: "Become an AI - Powered Full Stack Software Engineer"
   sub_heading: "Get the skills to succeed in a tech world transformed by AI — with full-time training and real support."
   background: "#ffffff"
   tagline_color: "#1c1c1c"
@@ -35,8 +35,8 @@ features:
   text: "Apply now—secure your spot!"
   bullets:
     - "Master future-proof, AI-integrated skills in 12 intensive weeks."
-    - "Unlimited mentorship and a community that’s with you for life."
-    - "Job Guarantee included: Get hired within 9 months of graduating — or we’ll return the full tuition (conditions apply)."
+    - "Unlimited mentorship and a community that's with you for life."
+    - "Job Guarantee included: Get hired within 9 months of graduating — or we'll return the full tuition (conditions apply)."
 
 short_badges:
   - name: "Top Online Full-Stack Bootcamps Of 2024"
@@ -67,7 +67,7 @@ short_badges:
 form:
   fields: ["full_name", "phone", "email"]
   heading: "Get Full Course Details"
-  motivation: "Click ‘Apply’ to receive the full course overview by email and choose how you'd like our admissions team to contact you."
+  motivation: "Click 'Apply' to receive the full course overview by email and choose how you'd like our admissions team to contact you."
   button_label: "Apply for more info"
   redirect: "/us/thank-you/"
 
@@ -83,56 +83,94 @@ follow_bar:
   phone:
     text: ""
 
+program_details:
+  position: 5
+  heading: "Build Your Tech Career Step by Step"
+  sub_heading: "From Core Programming Fundamentals to Advanced Development Skills"
+
 components:
   - name: leadform_header
     layout: two_column_left
     proportions: [5, 7]
     image:
-      style: '{"backgroundSize": "cover"}'
-      src: "../../../../static/images/landing/ai-mentor.jpg"
-      shadow: true
-    video: "6m1Jyya7eCc"
+      style: '{ "backgroundSize": "contain", "width": "auto"}'
+      src: "/images/landing/hombre-con-laptop.png"
     heading:
       text: "What Sets 4Geeks Apart: AI-integrated Skills, Unlimited Mentorship and Career Support"
-      font_size: ["40px", "34px", "34px", "25px", "25px"]
+      font_size: ["34px", "34px", "34px", "25px", "25px"]
     button:
       text: "Apply Now"
       color: "white"
       background: "black"
-      path: "#prices_and_payment"
+      path: "#leadform_header"
     bullets:
       items:
         - text: "Get ahead of the curve with next-gen tech skills. Master industry-relevant, AI-powered tools guided by a cutting-edge curriculum."
         - text: "Access unlimited mentorship and career support. No need to learn alone — get 1:1 support from expert human mentors whenever you need it, for life."
         - text: "Experience hyperpersonalized learning, at every level. Move faster and smarter with AI-powered feedback tailored to your journey, plus an unmatched student-to-teacher ratio."
-        - text: "Join an active tech community. Stay connected and supported through our Slack channels — with peers, mentors, and alumni ready to help you grow.
-"
+        - text: "Join an active tech community. Stay connected and supported through our Slack channels — with peers, mentors, and alumni ready to help you grow."
+
+  - name: program_details
+    position: 3
+    layout: two_column_right
+    proportions: [6, 6]
+    background: "#ffffff"
+    image:
+      style: '{ "backgroundSize": "cover" }'
+      src: "/images/landing/two-womans-and-laptop.webp"
+      shadow: true
+    heading:
+      text: "Master AI-Powered Full Stack Development"
+      font_size: ["40px", "34px", "34px", "25px", "25px"]
+    sub_heading:
+      text: "Our comprehensive program combines traditional full-stack development with cutting-edge AI integration, preparing you for the future of tech."
+      font_size: ["16px", "16px", "16px", "14px", "14px"]
+    bullets:
+      items:
+        - heading: "AI-INTEGRATED CURRICULUM"
+          text: "Learn to build and deploy AI-powered applications using the latest tools and frameworks."
+          icon: "check"
+        - heading: "FULL STACK FUNDAMENTALS"
+          text: "Master Python, JavaScript, React, and other essential technologies for modern web development."
+          icon: "check"
+        - heading: "REAL-WORLD PROJECTS"
+          text: "Build a portfolio of AI-enhanced applications that showcase your skills to potential employers."
+          icon: "check"
+        - heading: "CAREER-FOCUSED TRAINING"
+          text: "Develop the skills and mindset needed to succeed in today's AI-driven tech industry."
+          icon: "check"
+    button:
+      text: "Learn More"
+      color: "white"
+      background: "black"
+      path: "#leadform_header"
 
   - name: how-it-works
-    position: 5
+    position: 4
     background: "#0084FF"
     layout: iconogram
     swipable: true
     heading:
-      text: "How It Works"
+      text: "Do our Bootcamps Deliver Results You Can Count On?"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
       style: '{ "color": "white" }'
+    sub_heading:
+      text: 'Yes — and we’ve got the numbers to back it up.'
+      font_size: ["20px", "20px", "16px", "16px", "16px"]
+      style: '{ "textAlign": "center", "width": "60%", "color": "white"}'
     icons:
       - icon: "graduation-2"
         color: "#0084FF"
-        title: "Eligibility"
-        content: "U.S. residents, no prior coding experience needed."
-      - icon: "presentation"
-        title: "Application"
-        content: "Complete the form and pass the assessment."
+        title: "Job Placement Rate"
+        content: "84% of graduates were hired"
       - icon: "briefcase-2"
-        color: "#FFB718"
-        title: "Training Process"
-        content: "Master AI skills in 12 weeks."
+        color: "#FF0000"
+        title: "Avergage time to get hired"
+        content: "140 days after graduation"
       - icon: "stairswflag"
         color: "#BE8BFF"
-        title: "Job Ready!"
-        content: "Get hired within 9 months or get a full refund."
+        title: "Salary Increase"
+        content: "55% increase after graduation"
 
   - name: why-4geeks
     position: 6
@@ -148,22 +186,51 @@ components:
     sub_heading:
       font_size: ["16px", "16px", "16px", "14px", "14px"]
       style: '{ "font-weight": "100" }'
-      text: "Our goal is more than teaching skills — we’re here to launch successful tech careers. With a cutting edge curriculum that’s aligned with the latest AI developments, hands-on teaching methodology  and personalized career support, our program has a proven track record of preparing students for the tech job market"
+      text: "Our goal is more than teaching skills — we're here to launch successful tech careers. With a cutting edge curriculum that's aligned with the latest AI developments, hands-on teaching methodology  and personalized career support, our program has a proven track record of preparing students for the tech job market"
     content:
       text: "Join a global leader in AI tech education. With 7+ campuses and 4,000+ alumni, we offer AI-powered learning and lifelong career support."
     bullets:
       items:
-        - text: "AI-integrated curriculum for next-gen skills"
-        - text: "Unlimited mentorship with human and AI support"
-        - text: "Hyperpersonalized learning with a 7:1 ratio"
-        - text: "Active tech community via Slack"
+        - text: "Our program’s effectiveness is backed by strong hiring and retention rates"
+        - text: "We know how tech is evolving and prepare you to thrive in the new job market"
+        - text: "We believe in our teaching approach and your commitment to succeed "
     button:
       style: '{ "padding": "10px", "border-radius": "3px" }'
       text: "Apply Now"
       color: "white"
       hover_color: "white"
-      background: "blue"
+      background: "black"
       path: "#leadform_bottom"
+
+  - name: some_id
+    position: 7
+    proportions: [5, 7]
+    background: "#FFFFFF" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9 .
+    layout: two_column_left
+    image:
+      style: '{"backgroundSize": "cover"}'
+      src: "../../../../static/images/landing/ai-mentor.jpg"
+      shadow: true
+    video: "6m1Jyya7eCc"
+    heading:
+      text: "Learn AI-powered Full Stack Development Faster — With Hyper-Personalized Support That Adapts to You"
+        #           xl      lg      md      sm      xs
+      font_size: ["30px", "30px", "28px", "28px", "24px"]
+    sub_heading:
+      text: |-
+        In-person instruction, unlimited mentorship, and AI tools built for smarter, faster progress.
+    content:
+      text: ""
+      font_size: ["16px"]
+   
+    bullets:
+      items:
+      - text: "Rigobot, our custom-built AI coding assistant, follows your progress and gives tailored feedback exactly when you need it."
+        icon: "check" 
+      - text: "Get unmatched personal attention with our 7:1 student teacher ratio, plus unlimited access to 1:1 sessions with our expert mentors and career coaches"
+        icon: "check" 
+      - text: "With the combined support of our human mentors and AI tools, you’ll master AI-integrated full stack development faster, smarter, and with more confidence than ever."
+        icon: "check"
 
   - name: no-worries
     position: 9
@@ -182,15 +249,15 @@ components:
       font_size: ["16px", "16px", "16px", "16px", "16px"]
     bullets:
       items:
-        - text: "Includes Job Guarantee. If you don’t get hired within 9 months of graduation we’ll return the full tuition! Conditions apply."
+        - text: "Includes Job Guarantee. If you don't get hired within 9 months of graduation we'll return the full tuition! Conditions apply."
         - text: "We're fully committed to making our education as accessible as possible and offer multiple payment plans, starting at $394 per month."
-        - text: "Get in touch and we’ll help you find the option that suits you best! "        
+        - text: "Get in touch and we'll help you find the option that suits you best! "        
     button:
       style: '{ "padding-top": "10px", "border-radius": "3px" }'
       text: "Apply Now"
       color: "white"
       hover_color: "white"
-      background: "blue"
+      background: "black"
       path: "#leadform_bottom"
 
   - name: testimonials
