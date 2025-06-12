@@ -3,7 +3,7 @@ meta_info:
   title: "AI-Powered Full Stack Bootcamp | 4Geeks Academy"
   description: "Launch your tech career with our AI-powered full stack bootcamp. Master AI-integrated skills in 12 weeks"
   visibility: "visible"
-  image: ""
+  image: "/images/bg/remote.jpeg"
   keywords: 
   template: "landing_a"
   redirects: []
@@ -110,7 +110,7 @@ components:
         - text: "Experience hyperpersonalized learning, at every level. Move faster and smarter with AI-powered feedback tailored to your journey, plus an unmatched student-to-teacher ratio."
         - text: "Join an active tech community. Stay connected and supported through our Slack channels — with peers, mentors, and alumni ready to help you grow."
 
-  - name: program_details
+  - name: ai-powered
     position: 3
     layout: two_column_right
     proportions: [6, 6]
