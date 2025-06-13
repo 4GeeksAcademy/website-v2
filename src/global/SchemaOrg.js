@@ -42,6 +42,7 @@ const SchemaOrg = ({
               title
               description
               slug
+              duration
             }
             fields {
               lang
@@ -64,7 +65,7 @@ const SchemaOrg = ({
       name: node.meta_info.title,
       description: node.meta_info.description,
       url: `https://4geeksacademy.com/${context.lang}/coding-bootcamps/${node.meta_info.slug}`,
-      timeRequired: "P18W",
+      timeRequired: node.meta_info.duration || "P16W",
       provider: {
         "@type": "EducationalOrganization",
         name: "4Geeks Academy",
@@ -95,7 +96,7 @@ const SchemaOrg = ({
   const educationalOrganizationSchema = {
     "@context": {
       "@vocab": "https://schema.org/",
-      jobGuarantee: "https://4geeksacademy.com/schema#jobGuarantee"
+      jobGuarantee: "https://4geeksacademy.com/schema#jobGuarantee",
     },
     "@type": "EducationalOrganization",
     name: "4Geeks Academy",
@@ -217,7 +218,7 @@ const SchemaOrg = ({
           availability: "https://schema.org/InStock",
           url: `https://4geeksacademy.com/${context.lang}/coding-bootcamps/${context.slug}`,
         },
-        timeRequired: "P18W",
+        timeRequired: context?.meta_info?.duration || context?.duration || "P16W",
         jobGuarantee: true,
         url: `https://4geeksacademy.com/${context.lang}/coding-bootcamps/${context.slug}`,
         image: {

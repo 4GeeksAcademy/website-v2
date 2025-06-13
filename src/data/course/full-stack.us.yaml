@@ -9,6 +9,7 @@ meta_info:
   show_in_apply: true
   related_clusters: ["full-stack-developer"]
   template: "course-fullstack"
+  duration: "P18W"  # 18 weeks duration in ISO 8601 format
   redirects:
     [
       "/part-time",
@@ -273,7 +274,7 @@ details:
       step: 8
     - module_name: "LIFELONG SUPPORT"
       title: "Lifelong Support"
-      description: "Keep evolving in your career with the academy's help - we’re your learning partners for life. You’ll have access to 1:1 mentorships for all your coding needs throughout the bootcamp and beyond. Our expert career coaches will help you prepare for a successful job search and will continue to be there for you throughout your career."
+      description: "Keep evolving in your career with the academy's help - we're your learning partners for life. You'll have access to 1:1 mentorships for all your coding needs throughout the bootcamp and beyond. Our expert career coaches will help you prepare for a successful job search and will continue to be there for you throughout your career."
       projects: "Get paid to keep learning and raise your income gradually as you become a Senior Developer. Enjoy and build software for life."
       slug: "lifelong-learning"
       duration: "forever"

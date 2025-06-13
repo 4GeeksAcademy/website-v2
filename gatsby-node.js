@@ -90,9 +90,12 @@ exports.onCreateNode = ({ node, getNode, actions, ...rest }) => {
       // Calculate wordCount for blog posts
       if (node.rawMarkdownBody) {
         // Remove URLs but keep markdown symbols
-        const textWithoutUrls = node.rawMarkdownBody.replace(/https?:\/\/\S+/g, '');
+        const textWithoutUrls = node.rawMarkdownBody.replace(
+          /https?:\/\/\S+/g,
+          ""
+        );
         const wordCount = textWithoutUrls.trim().split(/\s+/).length;
-        
+
         createNodeField({
           node,
           name: "wordCount",
@@ -715,6 +718,19 @@ exports.createSchemaCustomization = ({ actions }) => {
     }
     type ReadingTime {
       text: String
+    }
+    type CourseYaml implements Node {
+      meta_info: MetaInfo
+    }
+    type MetaInfo {
+      duration: String
+      slug: String
+      title: String
+      description: String
+      template: String
+      visibility: String
+      redirects: [String]
+      related_clusters: [String]
     }
   `;
   createTypes(typeDefs);
