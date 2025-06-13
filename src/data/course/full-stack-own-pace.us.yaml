@@ -10,12 +10,7 @@ meta_info:
   redirects: []
   related_clusters: [""]
   template: "course-fullstack-at-your-own"
-  visibility: "hidden"
-  keywords: ""
-  show_in_apply: false
-  related_clusters: [""]
   duration: "P18W"  # 18 weeks duration in ISO 8601 format
-  redirects: []
 
 apply_form:
   label: Full Stack Developer Course at Your Own Pace

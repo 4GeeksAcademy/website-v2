@@ -218,7 +218,8 @@ const SchemaOrg = ({
           availability: "https://schema.org/InStock",
           url: `https://4geeksacademy.com/${context.lang}/coding-bootcamps/${context.slug}`,
         },
-        timeRequired: context?.meta_info?.duration || context?.duration || "P16W",
+        timeRequired:
+          context?.meta_info?.duration || context?.duration || "P16W",
         jobGuarantee: true,
         url: `https://4geeksacademy.com/${context.lang}/coding-bootcamps/${context.slug}`,
         image: {

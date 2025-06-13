@@ -1,14 +1,14 @@
 meta_info:
-  slug: node-js   #<----URL: https://4geeksacademy.com/es/coding-bootcamps/node-js
+  slug: curso-de-node-js-backend   #<----URL: https://4geeksacademy.com/es/coding-bootcamps/node-js
   title: "Bootcamp de Node.js | 4Geeks Academy"
-  bc_slug: "node-js"
-  description: "Domina el desarrollo con Node.js con el bootcamp de 4Geeks Academy y garantía de empleo. Asegura tu futuro en tecnología con nuestro programa dirigido por expertos."
+  description: "Domina el desarrollo con Node.js con el bootcamp de 4Geeks Academy y garantía de empleo."
   image: "/images/og-preview/node-js.es.png"
+  bc_slug: "node-js"
+  template: "course-node-js"
   visibility: "hidden"
   keywords: ""
   show_in_apply: true
-  related_clusters: ["trends-and-tech"]
-  template: "course-engineering"
+  related_clusters: [""]
   duration: "P8W"  # 8 weeks duration in ISO 8601 format
   redirects: []
 

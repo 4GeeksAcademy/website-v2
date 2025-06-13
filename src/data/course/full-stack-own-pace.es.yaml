@@ -5,15 +5,10 @@ meta_info:
   image: "/images/og-preview/full-stack.es.png"
   bc_slug: "full-stack-own-pace"
   visibility: "hidden"
-  keywords: null
-  show_in_apply: false
-  redirects: []
-  related_clusters: [""]
-  template: "course-fullstack-at-your-own"
-  visibility: "hidden"
   keywords: ""
   show_in_apply: false
   related_clusters: [""]
+  template: "course-fullstack-at-your-own"
   duration: "P18W"  # 18 weeks duration in ISO 8601 format
   redirects: []
 
