@@ -14,6 +14,7 @@ const SchemaOrg = ({
   url,
   seoTitle,
   context,
+  wordCount = 0,
 }) => {
   const dataQuery = useStaticQuery(graphql`
     {
@@ -148,7 +149,7 @@ const SchemaOrg = ({
     },
     {
       "@context": "https://schema.org",
-      "@type": "BlogPosting",
+      "@type": "Article",
       url,
       name: title,
       headline: title,
@@ -172,6 +173,7 @@ const SchemaOrg = ({
         "@id": canonicalUrl,
       },
       datePublished,
+      wordCount,
     },
   ];
 
