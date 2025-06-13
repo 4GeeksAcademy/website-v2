@@ -113,7 +113,7 @@ components:
     proportions: [6, 6]
     background: "#ffffff"
     image:
-      style: '{ "backgroundSize": "cover" }'
+      style: '{ "backgroundSize": "contain", "width": "auto"}'
       src: "/images/landing/two-womans-and-laptop.webp"
       shadow: true
     heading:
