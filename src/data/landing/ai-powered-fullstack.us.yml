@@ -67,7 +67,7 @@ short_badges:
 form:
   fields: ["full_name", "phone", "email"]
   heading: "Get Full Course Details"
-  motivation: "Click 'Apply' to receive the full course overview by email and choose how you'd like our admissions team to contact you."
+  motivation: "Click 'Apply' to receive the course details by e-mail and choose how you'd like our admissions team to contact you."
   button_label: "Apply for more info"
   redirect: "/us/thank-you/"
 
@@ -141,7 +141,7 @@ components:
         - heading: "Certificate: Recognized by the FL Department of Education"
           text: ""
           icon: "circle"
-        - heading: "Prerequisites: Monday-Friday 9am-5:30pm"
+        - heading: "Prerequisites: No previous experience is needed"
           text: ""
           icon: "circle"
         - heading: "Language: English"
@@ -265,7 +265,7 @@ components:
       items:
       - text: "Rigobot, our custom-built AI coding assistant, follows your progress and gives tailored feedback exactly when you need it."
         icon: "check" 
-      - text: "Get unmatched personal attention with our 7:1 student teacher ratio, plus unlimited access to 1:1 sessions with our expert mentors and career coaches"
+      - text: "Get unmatched personal attention with our 7:1 student teacher ratio, plus unlimited access to 1:1 sessions with our expert mentors and career coaches."
         icon: "check" 
       - text: "With the combined support of our human mentors and AI tools, you’ll master AI-integrated full stack development faster, smarter, and with more confidence than ever."
         icon: "check"
@@ -280,16 +280,16 @@ components:
       shadow: false
       src: "/images/landing/latin-woman-laptop-coffee.png"
     heading:
-      text: "Take the Stress Out of Financing Your Tuition"
+      text: "Tuition, Job Guarantee, and Flexible Payment Options"
       font_size: ["40px", "34px", "34px", "25px", "25px"]
     sub_heading:
-      text: "Our bootcamp costs $14,999 with flexible payment plans starting at $394/month. Includes a job guarantee—get hired in 9 months or receive a full refund."
+      text: "Our full-time Software Engineering with AI bootcamp costs $14,999 and includes a job guarantee to back your investment. We also offer a variety of financing plans and loan options to make this opportunity as accessible as possible."
       font_size: ["16px", "16px", "16px", "16px", "16px"]
     bullets:
       items:
-        - text: "Includes Job Guarantee. If you don't get hired within 9 months of graduation we'll return the full tuition! Conditions apply."
-        - text: "We're fully committed to making our education as accessible as possible and offer multiple payment plans, starting at $394 per month."
-        - text: "Get in touch and we'll help you find the option that suits you best! "        
+        - text: "Includes Job Guarantee: If you’re not hired within 9 months of graduation, you’ll get a 100% refund of your tuition. (Conditions apply.)"
+        - text: "Financing Plans Available: Choose from multiple monthly payment options starting at $394/month."
+        - text: "We’re Here to Help: Get in touch and we’ll help you find the plan that works best for you."        
     button:
       style: '{ "padding-top": "10px", "border-radius": "3px" }'
       text: "Apply Now"
