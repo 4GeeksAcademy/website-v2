@@ -67,7 +67,7 @@ short_badges:
 form:
   fields: ["full_name", "phone", "email"]
   heading: "Get Full Course Details"
-  motivation: "Click 'Apply' to receive the course details by e-mail and choose how you'd like our admissions team to contact you."
+  motivation: "Apply below to receive the course overview by e-mail and choose how you'd like our admissions team to contact you."
   button_label: "Apply for more info"
   redirect: "/us/thank-you/"
 
