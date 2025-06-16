@@ -68,7 +68,7 @@ form:
   fields: ["full_name", "phone", "email"]
   heading: "Get Full Course Details"
   motivation: "Apply below to receive the course overview by e-mail and choose how you'd like our admissions team to contact you."
-  button_label: "Get in touch"
+  button_label: "Apply for more info"
   redirect: "/us/thank-you/"
 
 follow_bar:
@@ -292,7 +292,7 @@ components:
         - text: "We’re Here to Help: Get in touch and we’ll help you find the plan that works best for you."        
     button:
       style: '{ "padding-top": "10px", "border-radius": "3px" }'
-      text: "Apply Now"
+      text: "Get in touch"
       color: "white"
       hover_color: "white"
       background: "black"
