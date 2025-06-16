@@ -109,33 +109,44 @@ components:
 
   - name: ai-powered
     position: 4
-    layout: two_column_right
+    layout: two_column_left
     proportions: [6, 6]
     background: "#ffffff"
     image:
       style: '{ "backgroundSize": "contain", "width": "auto"}'
       src: "/images/landing/two-womans-and-laptop.webp"
-      shadow: true
+      shadow: false
     heading:
       text: "About the program"
       font_size: ["40px", "34px", "34px", "25px", "25px"]
     sub_heading:
       text: "Master the most in-demand technologies and learn to build modern applications using AI. Learn algorithm scripting and build awesome apps using front-end libraries. Utilize APIs to consume data and enhance your app's functionality. Develop and present your own project, gaining game-changing hands-on experience. Learn to code alongside AI to unlock a faster, more creative way to build real apps from day one. Collaborate with powerful tools like Cursor to generate, debug,  iterate and ship with speed and precision. Reshape your mindset and embrace the programming, logic, and research skills to succeed in today’s tech industry."
       font_size: ["16px", "16px", "16px", "14px", "14px"]
+      style: '{ "font-weight": "100" }'
     bullets:
+      item_style: '{ "padding": 0, "font-weight": "100" }'
       items:
-        - heading: "Duration"
-          text: "Learn to build and deploy AI-powered applications using the latest tools and frameworks."
-          icon: "clock"
-        - heading: "FULL STACK FUNDAMENTALS"
-          text: "Master Python, JavaScript, React, and other essential technologies for modern web development."
-          icon: "check"
-        - heading: "REAL-WORLD PROJECTS"
-          text: "Build a portfolio of AI-enhanced applications that showcase your skills to potential employers."
-          icon: "check"
-        - heading: "CAREER-FOCUSED TRAINING"
-          text: "Develop the skills and mindset needed to succeed in today's AI-driven tech industry."
-          icon: "check"
+        - heading: "Duration: 12 Weeks"
+          text: ""
+          icon: "circle"
+        - heading: "Location: 4Geeks Academy Headquarters, Miami"
+          text: ""
+          icon: "circle"
+        - heading: "Start Date: July 14"
+          text: ""
+          icon: "circle"
+        - heading: "Schedule: Monday-Friday 9am-5:30pm"
+          text: ""
+          icon: "circle"
+        - heading: "Certificate: Recognized by the FL Department of Education"
+          text: ""
+          icon: "circle"
+        - heading: "Prerequisites: Monday-Friday 9am-5:30pm"
+          text: ""
+          icon: "circle"
+        - heading: "Language: English"
+          text: ""
+          icon: "circle"
     button:
       text: "Learn More"
       color: "white"
@@ -154,7 +165,7 @@ components:
     sub_heading:
       text: 'Yes — and we’ve got the numbers to back it up.'
       font_size: ["20px", "20px", "16px", "16px", "16px"]
-      style: '{ "textAlign": "center", "width": "60%", "color": "white"}'
+      style: '{ "textAlign": "center", "width": "60%", "color": "white"}'      
     icons:
       - icon: "graduation-2"
         color: "#0084FF"
@@ -171,11 +182,11 @@ components:
   
   - name: program-details
     position: 3
-    layout: two_column_left
+    layout: two_column_right
     proportions: [6, 6]
     image:
       style: '{ "backgroundSize": "contain" }'
-      src: "/images/landing/blonde-girl-laptop.png"
+      src: "/images/landing/grupo-ventanas.png"
     heading:
       style: '{ "margin-top": "0px" }'
       text: "Launch your AI-Powered Tech Career"
