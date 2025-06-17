@@ -58,7 +58,7 @@ features:
   button:
       text: "Save Your Spot Now!"
       color: "white"
-      path: "https://buy.stripe.com/4gw4gu8Lt2pqaekeVa"
+      path: "https://buy.stripe.com/fZu4gy21Odgo8Wf5Iwdby0v"
       background: "blue"
       hover_color: "darkBlue"
   bullets:
