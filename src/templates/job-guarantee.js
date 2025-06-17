@@ -577,7 +577,6 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           ))}
         </Div>
 
-
         {yml.how_it_works.link && (
           <Paragraph
             margin="30px 0 0 0"
@@ -744,15 +743,39 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
       />
 
       <Container
-          margin="0"
-          padding="0"
-          padding_tablet="0"
-          id="faq-card-section"
-        >
-          <FaqCard
-            faqs={data.allFaqYaml.edges[0].node.faq}
-            topicSlug="job_guarantee"
-          />
+        id="two_column_geek_section"
+        flexDirection="column"
+        margin="0"
+        padding="80px 0"
+        padding_tablet="0"
+        padding_md="0 50px"
+        padding_lg="0"
+      >
+        <TwoColumn
+          left={{
+            image: yml.two_column_geek?.image,
+          }}
+          right={{
+            heading: yml.two_column_geek?.heading,
+            sub_heading: yml.two_column_geek?.sub_heading,
+            content: yml.two_column_geek?.content,
+            button: yml.two_column_geek?.button,
+          }}
+          proportions={yml.two_column_geek?.proportions}
+          session={session}
+        />
+      </Container>
+
+      <Container
+        margin="0"
+        padding="0"
+        padding_tablet="0"
+        id="faq-card-section"
+      >
+        <FaqCard
+          faqs={data.allFaqYaml.edges[0].node.faq}
+          topicSlug="job_guarantee"
+        />
       </Container>
       <GridContainer
         columns_tablet="12"
@@ -786,7 +809,6 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           />
         </Div>
       </GridContainer>
-
     </>
   );
 };
@@ -893,6 +915,36 @@ export const query = graphql`
               text
               color
               background
+              path
+            }
+          }
+
+          two_column_geek {
+            proportions
+            image {
+              style
+              src
+            }
+            heading {
+              text
+              font_size
+              style
+            }
+            sub_heading {
+              text
+              font_size
+              style
+            }
+            content {
+              text
+              font_size
+              style
+            }
+            button {
+              text
+              color
+              background
+              hover_color
               path
             }
           }
