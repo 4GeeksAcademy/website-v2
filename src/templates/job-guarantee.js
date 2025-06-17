@@ -491,8 +491,8 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           width="300px"
           width_tablet="fit-content"
           width_md="auto"
-          gap_tablet="30px"
-          gap_md="40px"
+          gap_tablet="60px"
+          gap_md="60px"
           flexDirection="column"
           flexDirection_tablet="row"
           justifyContent="center"
@@ -500,9 +500,9 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           {yml.how_it_works.steps.map((step, i) => (
             <Div
               width="100%"
-              width_tablet="90px"
-              width_md="130px"
-              height_tablet="300px"
+              width_tablet="120px"
+              width_md="160px"
+              height_tablet="350px"
               position="relative"
             >
               {i !== yml.how_it_works.steps.length - 1 && (
@@ -511,14 +511,14 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
                   position="absolute"
                   left_tablet="50%"
                   left="90px"
-                  top_md={i % 2 === 0 ? "30px" : "5px"}
-                  top_tablet="30px"
+                  top_md={i % 2 === 0 ? "40px" : "15px"}
+                  top_tablet="40px"
                   top="80px"
                   rotate_tablet={i % 2 !== 0 && "123deg"}
                   rotate={i % 2 !== 0 && "-45deg"}
                   alt="Dashed line"
-                  width_tablet="150px"
-                  width_md="200px"
+                  width_tablet="180px"
+                  width_md="240px"
                   width="150px"
                   height="69px"
                   height_tablet="69px"
@@ -533,7 +533,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
                 flexDirection_tablet="column"
                 alignItems="center"
                 position_tablet="absolute"
-                top={i % 2 !== 0 && "70px"}
+                top={i % 2 !== 0 && "90px"}
                 zIndex="5"
                 width="100%"
                 width_tablet="auto"
@@ -541,31 +541,34 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
                 <Div
                   flexDirection="column"
                   justifyContent="center"
-                  width="120px"
-                  width_tablet="90px"
-                  width_md="120px"
-                  height="120px"
-                  height_tablet="90px"
-                  height_md="120px"
+                  width="140px"
+                  width_tablet="110px"
+                  width_md="100px"
+                  height="140px"
+                  height_tablet="110px"
+                  height_md="100px"
                   border={`4px solid #FFB718`}
                   background="#FFF1D1"
-                  borderRadius="60px"
+                  borderRadius="70px"
                 >
                   <Icon
                     style={{ margin: "auto" }}
                     color="#FFB718"
                     icon={step.icon}
-                    width="45px"
-                    height="45px"
+                    width="60px"
+                    height="60px"
                   />
                 </Div>
                 <Paragraph
-                  fontSize={step.highlight ? "20px" : "18px"}
+                  fontSize={step.highlight ? "16px" : "14px"}
+                  fontSize_tablet={step.highlight ? "22px" : "20px"}
+                  fontSize_md={step.highlight ? "22px" : "20px"}
                   color={step.highlight ? "#FFB718" : "#000"}
                   opacity="1"
-                  maxWidth="130px"
-                  maxWidth_tablet="90px"
-                  maxWidth_md="130px"
+                  maxWidth="100px"
+                  maxWidth_tablet="120px"
+                  maxWidth_md="180px"
+                  margin="15px 0 0 0"
                 >
                   {`${i + 1}. ${step.title}`}
                 </Paragraph>
@@ -688,11 +691,11 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
         padding_lg="0"
       >
         <TwoColumn
-          left={{
+          right={{
             image: yml.two_columns_video?.image,
             video: yml.two_columns_video?.video,
           }}
-          right={{
+          left={{
             heading: yml.two_columns_video?.heading,
             sub_heading: yml.two_columns_video?.sub_heading,
             bullets: yml.two_columns_video?.bullets,
@@ -701,6 +704,30 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
             button: yml.two_columns_video?.button,
           }}
           proportions={yml.two_columns_video?.proportions}
+          session={session}
+        />
+      </Container>
+
+      <Container
+        id="two_column_right_section"
+        flexDirection="column"
+        margin="0"
+        padding="80px 0"
+        padding_tablet="0"
+        padding_md="0 50px"
+        padding_lg="0"
+      >
+        <TwoColumn
+          left={{
+            image: yml.two_column_right?.image,
+          }}
+          right={{
+            heading: yml.two_column_right?.heading,
+            sub_heading: yml.two_column_right?.sub_heading,
+            content: yml.two_column_right?.content,
+            button: yml.two_column_right?.button,
+          }}
+          proportions={yml.two_column_right?.proportions}
           session={session}
         />
       </Container>
@@ -787,6 +814,35 @@ export const query = graphql`
             syllabus_motivation
           }
           two_column_left {
+            proportions
+            image {
+              style
+              src
+            }
+            heading {
+              text
+              font_size
+            }
+            sub_heading {
+              text
+              font_size
+              style
+            }
+            content {
+              text
+              font_size
+              style
+            }
+            button {
+              text
+              color
+              background
+              hover_color
+              path
+            }
+          }
+
+          two_column_right {
             proportions
             image {
               style

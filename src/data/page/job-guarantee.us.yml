@@ -18,27 +18,27 @@ seo_title: "Job Guarantee"
 header:
   title: "GET INTO TECH WITH OUR JOB GUARANTEE"
   sub_title: "Your success is our mission — Get hired within 9 months of graduation, or we’ll refund your tuition."
-  paragraph: |
-    <ul style="list-style-type: disc; padding-left: 20px;">
-      <li style="color: #000; font-size: 18px; margin-bottom: 8px; display: flex; align-items: left; justify-content: center;">
-        <span style="color: #ffb718; font-size: 22px; font-weight: bold; margin-right: 10px; ">•</span>
-        Get career-ready with our award-winning method.
-      </li>
-      <li style="color: #000; font-size: 18px; margin-bottom: 8px; display: flex; align-items: left; justify-content: center;">
-        <span style="color: #ffb718; font-size: 22px; font-weight: bold; margin-right: 10px;">•</span>
-        Access our unmatched career support services.
-      </li>
-      <li style="color: #000; font-size: 18px; margin-bottom: 8px; display: flex; align-items: left; justify-content: center;">
-        <span style="color: #ffb718; font-size: 22px; font-weight: bold; margin-right: 10px;">•</span>
-        Secure a job within 9 months of graduation, or we’ll refund your tuition.
-      </li>
-    </ul>
+  paragraph: ""
+    #<ul style="list-style-type: disc; padding-left: 20px;">
+     # <li style="color: #000; font-size: 18px; margin-bottom: 8px; display: flex; align-items: left; justify-content: center;">
+      #  <span style="color: #ffb718; font-size: 22px; font-weight: bold; margin-right: 10px; ">•</span>
+       # Get career-ready with our award-winning method.
+      #</li>
+      #<li style="color: #000; font-size: 18px; margin-bottom: 8px; display: flex; align-items: left; justify-content: center;">
+       # <span style="color: #ffb718; font-size: 22px; font-weight: bold; margin-right: 10px;">•</span>
+       # Access our unmatched career support services.
+      #</li>
+      #<li style="color: #000; font-size: 18px; margin-bottom: 8px; display: flex; align-items: left; justify-content: center;">
+       # <span style="color: #ffb718; font-size: 22px; font-weight: bold; margin-right: 10px;">•</span>
+       # Secure a job within 9 months of graduation, or we’ll refund your tuition.
+      # </li>
+   # </ul>
 
 two_column_left:
   proportions: [6, 6]
   image:
     style: '{ "backgroundSize": "contain", "background-position": "center" }'
-    src: "/images/landing/hombre-joven-con-laptop.webp"
+    src: "/images/landing/job-guarantee-1.png"
   heading:
     text: "Who’s Eligible?"
     font_size: ["42px", "34px", "34px", "34px", "34px"]
@@ -49,8 +49,6 @@ two_column_left:
     style: '{ "font-weight": "400", "text-align": "justify", "color": "#333", "padding": "10px"}'
   content:
     text: |
-      From our industry-aligned syllabus to our comprehensive, personalized career support service, every one of our features has been tried and tested to optimize your learning journey.
-      <br><br>
       <span style="color: #0097CD; ">✓  - </span> Have U.S. work authorization
       <br><br>
       <span style="color: #0097CD; ">✓  - </span> Pass our logic test 
@@ -68,44 +66,68 @@ two_column_left:
     path: "/us/apply"
 
 we_trust_section:
-  title: Why choose 4Geeks?
+  title: Does the Job Guarantee Deliver Results You Can Count On?
   text: |
-    With a proven track record of success and industry recognition, our program empowers students to turn their career goals into reality
-    <br>
-    <br>
-    The numbers speak for themselves:
+    Yes — and we’ve got the numbers to back it up    
+    <br><br>
+    These stats reflect our full graduate community and demonstrate the proven impact of our programs across the board.
+    <br><br>
+    We don’t just teach you how to code — we help you build a career you’re proud of.
   boxes:
     - icon: briefcase-2
-      title: "84%"
+      title: "85%"
       text: Job placement rate
-    - icon: chart
-      title: "60K"
-      text: Avg. Income at a new job
     - icon: graduation-2
-      title: "130"
-      text: Average days to get hired
+      title: "140"
+      text: Days in avg. to get hired
+    - icon: chart
+      title: "55%"
+      text: Salary increase after graduation
 
 how_it_works:
-  title: How it works
+  title: How the Refund Works
   text: |
-    These are the commitments you have to make to qualify for the job guarantee. If you complete every step and don’t get hired within 9 months of graduation, you’ll get 100% of your tuition back.
+    We’ve made it simple: if you complete all the required steps, and you don't land a qualifying job within 9 months after graduation, we’ll refund 100% of your tuition.    
   steps:
-    - icon: rocket-2
-      title: Start the program
-    - icon: assignment
-      title: Comply with assignments and attendance
-    - icon: folder
-      title: Approve the final project
-    - icon: graduation-2
-      title: Graduate
-      highlight: True
-    - icon: handshake
-      title: Complete the career support process
     - icon: briefcase-2
-      title: Get a job in 9 months
+      title: You were not hired into a qualifying role within 9 months of graduation.
+    - icon: assignment
+      title: Our team verifies that you met all Job Guarantee requirements
+    - icon: folder
+      title: Receive the full refund within 30 days.
   link:
     url: https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/Conditions%20Job%20Guaranteed%20Program.pdf
     label: Conditions Apply.
+
+two_column_right:
+  proportions: [6, 6]
+  image:
+    style: '{ "backgroundSize": "contain", "background-position": "center" }'
+    src: "/images/landing/hombre-joven-con-laptop.webp"
+  heading:
+    text: "Why We Have the Confidence to Offer a Job Guarantee"
+    font_size: ["42px", "34px", "34px", "34px", "34px"]
+    style: '{ "font-weight": "600", "text-align": "center", "color": "#000", "padding": "10px" }'
+  sub_heading:
+    text: "Our goal is more than teaching skills — we’re here to launch successful tech careers. With an industry-aligned curriculum, hands-on teaching methodology  and personalized career support, we have a proven track record of preparing students for the tech job market."
+    font_size: ["20px", "20px", "18px", "18px", "16px"]
+    style: '{ "font-weight": "400", "text-align": "justify", "color": "#333", "padding": "10px"}'
+  content:
+    text: |
+      <span style="color: #0097CD; ">✓  - </span> Our program’s effectiveness is backed by strong placement rates
+      <br><br>
+      <span style="color: #0097CD; ">✓  - </span> The tech industry continues to grow with high demand for talent
+      <br><br>
+      <span style="color: #0097CD; ">✓  - </span> We believe in our teaching approach and your commitment to succeed
+      <br><br>
+    font_size: ["20px", "20px", "18px", "16px", "14px"]
+    style: '{ "text-align": "left", "color": "#444", "line-height": "1.1", "padding": "10px"}'
+  button:
+    text: "Apply"
+    color: "white"
+    background: "black"
+    hover_color: "white"
+    path: "/us/apply"
 
 successful_stories:
   title: Success stories
