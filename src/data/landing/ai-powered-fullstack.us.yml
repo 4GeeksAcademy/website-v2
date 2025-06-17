@@ -1,0 +1,322 @@
+meta_info:
+  slug: ai-powered-fullstack
+  title: "AI-Powered Full Stack Bootcamp | 4Geeks Academy"
+  description: "Launch your tech career with our AI-powered full stack bootcamp. Master AI-integrated skills in 12 weeks"
+  visibility: "visible"
+  image: "/images/bg/remote.jpeg"
+  keywords: 
+  template: "landing_a"
+  redirects: []
+  utm_course: ["full-stack"]
+  utm_location: ["downtown-miami"]
+  automation: strong
+  tag: website-lead
+
+navbar:
+  buttonText: "Apply now"
+  buttonUrl: "#leadform_header"
+  logoUrl: "#"
+
+header_data:
+  tagline: "Become an AI - Powered Full Stack Software Engineer"
+  sub_heading: "Get the skills to succeed in a tech world transformed by AI — with full-time training and real support."
+  background: "#ffffff"
+  tagline_color: "#1c1c1c"
+  form_styles:
+    background: "#0084FF"
+    color: "white"
+    button:
+      background: "black"
+  badge: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+  image_filter: brightness(0.3)
+
+features:
+  marginTop: 0px
+  text: "Apply now—secure your spot!"
+  bullets:
+    - "Master future-proof, AI-integrated skills in 12 intensive weeks."
+    - "Unlimited mentorship and a community that's with you for life."
+    - "Job Guarantee included: Get hired within 9 months of graduating — or we'll return the full tuition (conditions apply)."
+
+short_badges:
+  - name: "Top Online Full-Stack Bootcamps Of 2024"
+    url: ""
+    image: "../../../static/images/badges/forbes-logo-award.png"
+    alt: "We have been selected as one of the Top Online Coding Bootcamps by Forbes."
+  - name: "Best for Spanish speakers Of 2024 by Fortune"
+    url: ""
+    image: "../../../static/images/badges/fortune-logo.png"
+    alt: "Recognized by Fortune as one of the Top Coding Bootcamps"
+  - name: "Top Coding Bootcamps Newsweek"
+    url: ""
+    image: "../../../static/images/badges/newsweek.webp"
+    alt: "Top Coding Bootcamps Newsweek"
+  - name: "Best Coding Bootcamp Course Report 2024"
+    url: ""
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+    alt: "Best Coding Bootcamp Course Report 2024"
+  - name: "Licensed by the Florida Department of Education"
+    url: ""
+    image: "../../../static/images/badges/licensed.png"
+    alt: "Licensed by the Florida Department of Education"
+  - name: "ARP Certificate"
+    url: ""
+    image: "../../../static/images/badges/arp-logo-certification.png"
+    alt: "ARP Certificate"
+
+form:
+  fields: ["full_name", "phone", "email"]
+  heading: "Get Full Course Details"
+  motivation: "Apply below to receive the course overview by e-mail and choose how you'd like our admissions team to contact you."
+  button_label: "Apply for more info"
+  redirect: "/us/thank-you/"
+
+follow_bar:
+  position: "top"
+  content:
+    text: "Join the AI tech revolution with 4Geeks."
+    text_mobile: "Join the AI tech revolution."
+    font_size: ["22px", "22px", "22px", "16px", "16px"]
+  button:
+    text: "Apply Now"
+    path: "#leadform_header"
+  phone:
+    text: ""
+
+
+
+components:
+  - name: leadform_header
+    layout: two_column_left
+    proportions: [5, 7]
+    image:
+      style: '{ "backgroundSize": "contain", "width": "auto"}'
+      src: "/images/landing/hombre-con-laptop.png"
+    heading:
+      text: "What Sets 4Geeks Apart: AI-integrated Skills, Unlimited Mentorship and Career Support"
+      font_size: ["34px", "34px", "34px", "25px", "25px"]
+    button:
+      text: "Apply Now"
+      color: "white"
+      background: "black"
+      path: "#leadform_header"
+    bullets:
+      items:
+        - text: "Get ahead of the curve with next-gen tech skills. Master industry-relevant, AI-powered tools guided by a cutting-edge curriculum."
+        - text: "Access unlimited mentorship and career support. No need to learn alone — get 1:1 support from expert human mentors whenever you need it, for life."
+        - text: "Experience hyperpersonalized learning, at every level. Move faster and smarter with AI-powered feedback tailored to your journey, plus an unmatched student-to-teacher ratio."
+        - text: "Join an active tech community. Stay connected and supported through our Slack channels — with peers, mentors, and alumni ready to help you grow."
+
+  - name: ai-powered
+    position: 4
+    layout: two_column_left
+    proportions: [6, 6]
+    background: "#ffffff"
+    image:
+      style: '{ "backgroundSize": "contain", "width": "auto"}'
+      src: "/images/landing/two-womans-and-laptop.webp"
+      shadow: false
+    heading:
+      text: "About the program"
+      font_size: ["40px", "34px", "34px", "25px", "25px"]
+    sub_heading:
+      text: "Master the most in-demand technologies and learn to build modern applications using AI. Learn algorithm scripting and build awesome apps using front-end libraries. Utilize APIs to consume data and enhance your app's functionality. Develop and present your own project, gaining game-changing hands-on experience. Learn to code alongside AI to unlock a faster, more creative way to build real apps from day one. Collaborate with powerful tools like Cursor to generate, debug,  iterate and ship with speed and precision. Reshape your mindset and embrace the programming, logic, and research skills to succeed in today’s tech industry."
+      font_size: ["16px", "16px", "16px", "14px", "14px"]
+      style: '{ "font-weight": "100" }'
+    bullets:
+      item_style: '{ "padding": 0, "font-weight": "100" }'
+      items:
+        - heading: "Duration: 12 Weeks"
+          text: ""
+          icon: "circle"
+        - heading: "Location: 4Geeks Academy Headquarters, Miami"
+          text: ""
+          icon: "circle"
+        - heading: "Start Date: July 14"
+          text: ""
+          icon: "circle"
+        - heading: "Schedule: Monday-Friday 9am-5:30pm"
+          text: ""
+          icon: "circle"
+        - heading: "Certificate: Recognized by the FL Department of Education"
+          text: ""
+          icon: "circle"
+        - heading: "Prerequisites: No previous experience is needed"
+          text: ""
+          icon: "circle"
+        - heading: "Language: English"
+          text: ""
+          icon: "circle"
+    button:
+      text: "Learn More"
+      color: "white"
+      background: "black"
+      path: "#leadform_header"
+
+  - name: how-it-works
+    position: 5
+    background: "#0084FF"
+    layout: iconogram
+    swipable: true
+    heading:
+      text: "Do our Bootcamps Deliver Results You Can Count On?"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+      style: '{ "color": "white" }'
+    sub_heading:
+      text: 'Yes — and we’ve got the numbers to back it up.'
+      font_size: ["20px", "20px", "16px", "16px", "16px"]
+      style: '{ "textAlign": "center", "width": "60%", "color": "white"}'      
+    icons:
+      - icon: "graduation-2"
+        color: "#0084FF"
+        title: "Job Placement Rate"
+        content: "84% of graduates were hired"
+      - icon: "briefcase-2"
+        color: "#FF0000"
+        title: "Avergage time to get hired"
+        content: "140 days after graduation"
+      - icon: "stairswflag"
+        color: "#BE8BFF"
+        title: "Salary Increase"
+        content: "55% increase after graduation"
+  
+  - name: program-details
+    position: 3
+    layout: two_column_right
+    proportions: [6, 6]
+    image:
+      style: '{ "backgroundSize": "contain" }'
+      src: "/images/landing/grupo-ventanas.png"
+    heading:
+      style: '{ "margin-top": "0px" }'
+      text: "Launch your AI-Powered Tech Career"
+      font_size: ["40px", "34px", "34px", "25px", "25px"]
+    sub_heading:
+      font_size: ["16px", "16px", "16px", "14px", "14px"]
+      style: '{ "font-weight": "100" }'
+      text: "FULL-TIME, IN-PERSON 12-WEEK INTENSIVE"
+    content:
+      text: "Ready to future-proof your career? Enroll now and master AI-powered software engineering!"
+    bullets:
+      items:
+        - text: "Comprehensive training: Our Software Engineering with AI bootcamp equips you with the skills and tools needed to thrive in today’s and tomorrow’s tech job market."
+        - text: "Career-ready focus: This course prepares you for a successful tech career with in-depth training in programming fundamentals, frontend and backend development enhanced by AI."
+        - text: "Cutting-edge advantage: Master vibe coding—AI-driven software engineering for fast-track product launches—giving you a competitive edge."
+    button:
+      style: '{ "padding": "10px", "border-radius": "3px" }'
+      text: "Apply Now"
+      color: "white"
+      hover_color: "white"
+      background: "black"
+      path: "#leadform_bottom"
+
+  - name: why-4geeks
+    position: 6
+    layout: two_column_right
+    proportions: [6, 6]
+    image:
+      style: '{ "backgroundSize": "contain" }'
+      src: "/images/landing/blonde-girl-laptop.png"
+    heading:
+      style: '{ "margin-top": "0px" }'
+      text: "Why we offer the added security of a Job Guarantee"
+      font_size: ["40px", "34px", "34px", "25px", "25px"]
+    sub_heading:
+      font_size: ["16px", "16px", "16px", "14px", "14px"]
+      style: '{ "font-weight": "100" }'
+      text: "Our goal is more than teaching skills — we're here to launch successful tech careers. With a cutting edge curriculum that's aligned with the latest AI developments, hands-on teaching methodology  and personalized career support, our program has a proven track record of preparing students for the tech job market"
+    content:
+      text: "Join a global leader in AI tech education. With 7+ campuses and 4,000+ alumni, we offer AI-powered learning and lifelong career support."
+    bullets:
+      items:
+        - text: "Our program’s effectiveness is backed by strong hiring and retention rates"
+        - text: "We know how tech is evolving and prepare you to thrive in the new job market"
+        - text: "We believe in our teaching approach and your commitment to succeed "
+    button:
+      style: '{ "padding": "10px", "border-radius": "3px" }'
+      text: "Apply Now"
+      color: "white"
+      hover_color: "white"
+      background: "black"
+      path: "#leadform_bottom"
+
+  - name: some_id
+    position: 7
+    proportions: [5, 7]
+    background: "#FFFFFF" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9 .
+    layout: two_column_left
+    image:
+      style: '{"backgroundSize": "cover"}'
+      src: "../../../../static/images/landing/ai-mentor.jpg"
+      shadow: true
+    video: "6m1Jyya7eCc"
+    heading:
+      text: "Learn AI-powered Full Stack Development Faster — With Hyper-Personalized Support That Adapts to You"
+        #           xl      lg      md      sm      xs
+      font_size: ["30px", "30px", "28px", "28px", "24px"]
+    sub_heading:
+      text: |-
+        In-person instruction, unlimited mentorship, and AI tools built for smarter, faster progress.
+    content:
+      text: ""
+      font_size: ["16px"]
+   
+    bullets:
+      items:
+      - text: "Rigobot, our custom-built AI coding assistant, follows your progress and gives tailored feedback exactly when you need it."
+        icon: "check" 
+      - text: "Get unmatched personal attention with our 7:1 student teacher ratio, plus unlimited access to 1:1 sessions with our expert mentors and career coaches."
+        icon: "check" 
+      - text: "With the combined support of our human mentors and AI tools, you’ll master AI-integrated full stack development faster, smarter, and with more confidence than ever."
+        icon: "check"
+
+  - name: no-worries
+    position: 9
+    layout: two_column_left
+    proportions: [6, 6]
+    background: "#F4F9FF"
+    image:
+      style: '{ "backgroundSize": "contain", "backgroundPosition": "center" }'
+      shadow: false
+      src: "/images/landing/latin-woman-laptop-coffee.png"
+    heading:
+      text: "Tuition, Job Guarantee, and Flexible Payment Options"
+      font_size: ["40px", "34px", "34px", "25px", "25px"]
+    sub_heading:
+      text: "Our full-time Software Engineering with AI bootcamp costs $14,999 and includes a job guarantee to back your investment. We also offer a variety of financing plans and loan options to make this opportunity as accessible as possible."
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+    bullets:
+      items:
+        - text: "Includes Job Guarantee: If you’re not hired within 9 months of graduation, you’ll get a 100% refund of your tuition. (Conditions apply.)"
+        - text: "Financing Plans Available: Choose from multiple monthly payment options starting at $394/month."
+        - text: "We’re Here to Help: Get in touch and we’ll help you find the plan that works best for you."        
+    button:
+      style: '{ "padding-top": "10px", "border-radius": "3px" }'
+      text: "Get in touch"
+      color: "white"
+      hover_color: "white"
+      background: "black"
+      path: "#leadform_bottom"
+
+  - name: testimonials
+    position: 8
+    layout: testimonials_new
+    heading:
+      style: '{ "font-weight": "400", "color": "#3A3A3A" }'
+      text: "Real Stories of Real Career Change"
+      font_size: ["35px", "35px", "30px", "30px", "26px"]
+    sub_heading:
+      text: "Thousands of graduates have used our programs to break into tech. Here are just a few of their stories, from salary increases to total career reinventions."
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+    filter_indexes: ["nai-kali", "jona-ferra", "kev-so"]
+
+
+apply_schollarship:
+  imageSide: "right"
+  image: "../../../static/images/landing/apply.png"
+
+who_is_hiring:
+  position: 11
+  limit: 4
+  heading: "Who is hiring our students?"
+  sub_heading: "550+ hiring partners, and 50+ job openings right now for software development"
