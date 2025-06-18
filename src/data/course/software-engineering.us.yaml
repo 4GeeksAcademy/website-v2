@@ -9,7 +9,7 @@ meta_info:
   keywords: ""
   show_in_apply: false
   related_clusters: ["software-engineering"]
-  duration: "P16W"  # 16 weeks duration in ISO 8601 format
+  duration: "P18W"  # 18 weeks duration in ISO 8601 format
   redirects: [
     "/software-engineering", 
     "/us/software-engineering",
