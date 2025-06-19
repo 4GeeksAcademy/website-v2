@@ -117,6 +117,7 @@ const SEO = (props) => {
           logo: `${siteUrl}/${logo}`,
           name: name,
         }}
+        wordCount={props.wordCount}
       />
       <Helmet
         title={title || defaultTitle}
