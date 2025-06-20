@@ -168,6 +168,10 @@ form:
   title: "Become a 4Geeks Partner"
   paragraph: "Contact us today to join our network and start benefiting from the opportunities we offer.  Let us help you choose the right track to achieve your goals. Get in touch!"
 
+choose_program:
+  title: "Choose your program"
+  paragraph: "Find the path that's right for you."
+
 two_column_geek:
   proportions: [6, 6]
   image:

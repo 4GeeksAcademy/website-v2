@@ -27,6 +27,7 @@ import TwoColumnCarousel from "../components/TwoColumnCarousel";
 import TwoColumn from "../components/TwoColumn/index.js";
 import WeTrust from "../components/WeTrust/index.js";
 import FaqCard from "../components/FaqCard";
+import ChooseYourProgram from "../components/ChooseYourProgram";
 
 const JobGuarantee = ({ data, pageContext, yml }) => {
   const { session } = useContext(SessionContext);
@@ -425,17 +426,14 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           </Modal>
         </Container>
       </Div>
-      {/* <Container
-        margin="40px 0"
-        margin_tablet="40px 0"
-        padding="40px 0"
-        padding_tablet="20px 0"
-        display="flex"
-        flexDirection="row"
-        flexWrap="nowrap"
-        alignItems="center"
-        justifyContent="space-between"
-      > */}
+      <ChooseYourProgram
+        lang={pageContext.lang}
+        programs={data.allChooseYourProgramYaml.edges[0].node.programs.filter(
+          p => p.title === "Coding Bootcamp" || p.title === "Data Science and ML"
+        )}
+        title={yml.choose_program?.title}
+        paragraph={yml.choose_program?.paragraph}
+      />
       <TwoColumn
         padding="60px 80px"
         padding_md="60px 80px"
@@ -451,10 +449,6 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
         proportions={ymlTwoColumn.proportions}
         session={session}
       />
-
-      {/* <Container margin="40px 0" padding="0" padding_tablet="0 90px" padding_lg="0">
-        <WeTrust we_trust={yml.we_trust_section} />
-      </Container> */}
 
       <div>
         <WeTrust
@@ -592,93 +586,6 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           </Paragraph>
         )}
       </Container>
-      {/* <TwoColumnCarousel
-        background="#FAFAFA"
-        title={yml.successful_stories.title}
-        text={yml.successful_stories.text}
-      >
-        {testimonials.map((testimonial) => {
-          return (
-            <Div display="block" key={testimonial.student_name}>
-              <Div
-                background={Colors.veryLightBlue}
-                margin="0"
-                border="2px solid black"
-                display="block"
-                display_md="flex"
-                height_tablet="548px"
-                height_md="368px"
-              >
-                <StyledBackgroundSection
-                  image={
-                    testimonial.student_thumb.childImageSharp.gatsbyImageData
-                  }
-                  alt={testimonial.student_name}
-                  width="300px"
-                  width_tablet="100%"
-                  width_md="200px"
-                  height="340px"
-                  height_tablet="240px"
-                  height_md="100%"
-                  backgroundSize="contain"
-                  flexShrink="0"
-                />
-                <Div padding="10px" display="block">
-                  <H4 textAlign="left" fontWeight="700">
-                    {testimonial.student_name}
-                  </H4>
-                  <Div gap="10px" alignItems="center" margin="0 0 10px 0">
-                    {testimonial.country && (
-                      <Div>
-                        <Div
-                          className="react-tel-input"
-                          margin="0"
-                          width="25px"
-                        >
-                          <div className={`flag ${testimonial.country.iso}`} />
-                        </Div>
-                        <Paragraph
-                          margin="0 0 0 5px"
-                          textAlign="left"
-                          color={Colors.black}
-                        >
-                          {testimonial.country.name}
-                        </Paragraph>
-                      </Div>
-                    )}
-                    {testimonial.linkedin_url && (
-                      <Img
-                        src="/images/linkedin.png"
-                        onClick={() => {
-                          if (testimonial.linkedin_url.indexOf("http") > -1)
-                            window.open(testimonial.linkedin_url);
-                          else navigate(testimonial.linkedin_url);
-                        }}
-                        style={{
-                          cursor: "pointer",
-                        }}
-                        alt="Linkedin profile"
-                        height="20px"
-                        width="60px"
-                        backgroundSize="contain"
-                      />
-                    )}
-                  </Div>
-                  <HR
-                    background="#A4A4A4"
-                    width="100%"
-                    height="1px"
-                    margin="5px 0"
-                  />
-                  <Paragraph textAlign="left" opacity="1" color={Colors.black}>
-                    {testimonial.content}
-                  </Paragraph>
-                </Div>
-              </Div>
-            </Div>
-          );
-        })}
-      </TwoColumnCarousel> */}
 
       <Container
         id="two_column_right"
@@ -980,6 +887,10 @@ export const query = graphql`
             title
             paragraph
           }
+          choose_program {
+            title
+            paragraph
+          }
         }
       }
     }
@@ -1138,6 +1049,21 @@ export const query = graphql`
           }
           fields {
             lang
+          }
+        }
+      }
+    }
+    allChooseYourProgramYaml(filter: { fields: { lang: { eq: $lang } } }) {
+      edges {
+        node {
+          programs {
+            title
+            sub_title
+            description
+            description_mobile
+            link
+            icon
+            text_link
           }
         }
       }
