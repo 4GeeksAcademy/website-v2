@@ -173,29 +173,33 @@ choose_program:
   paragraph: "Find the path that's right for you."
 
 two_column_geek:
-  proportions: [6, 6]
+  proportions: [5, 7]
   image:
-    style: '{ "backgroundSize": "contain", "background-position": "center" }'
-    src: "/images/landing/feliz-empresario-laptop.png"
+    style: '{ "backgroundSize": "contain", "background-position": "center", "margin": "10px" }'
+    src: "/images/landing/feliz-empresario-laptop-3.png"
   heading:
     text: "What Sets 4Geeks Apart: AI-Forward Skills, Unlimited Mentorship and Career Support"
-    font_size: ["42px", "34px", "34px", "34px", "34px"]
+    font_size: ["38px", "34px", "34px", "34px", "34px"]
     style: '{ "font-weight": "600", "text-align": "center", "color": "#000", "padding": "10px" }'
   sub_heading:
     text: "Everything You Need to Launch and Grow a Career in Tech"
-    font_size: ["22px", "22px", "22px", "20px", "18px"]
+    font_size: ["22px", "22px", "20px", "20px", "18px"]
     style: '{ "font-weight": "400", "text-align": "justify", "color": "#333", "padding": "10px"}'
-  content:
-    text: |
-      <span style="color: #0097CD; font-weight: bold;">✓  - </span>  Get ahead of the curve with next-gen tech skills. Master industry-relevant, AI-powered tools guided by a cutting-edge curriculum. 
-      <br><br>
-      <span style="color: #0097CD; font-weight: bold;">✓  - </span>  Access unlimited mentorship and career support. No need to learn alone — get 1:1 support from expert human mentors whenever you need it, for life. 
-      <br><br>
-      <span style="color: #0097CD; font-weight: bold;">✓  - </span>  Enjoy hyperpersonalized learning, at every level. Move faster and smarter with AI-powered feedback tailored to your journey, plus an unmatched student-to-teacher ratio. 
-      <br><br>
-      <span style="color: #0097CD; font-weight: bold;">✓  - </span>  Join an active tech community. Stay connected and supported through our Slack channels — with peers, mentors, and alumni ready to help you grow. 
-    font_size: ["20px", "20px", "18px", "16px", "14px"]
-    style: '{ "text-align": "left", "color": "#444", "line-height": "1.1", "padding": "10px"}'
+  bullets:
+    item_style: '{ "padding": "0 0 0 10px", "font-weight": "100" }'
+    items:
+      - heading: "Get ahead of the curve with next-gen tech skills."
+        text: "Master industry-relevant, AI-powered tools guided by a cutting-edge curriculum."
+        icon: "check"
+      - heading: "Access unlimited mentorship and career support."
+        text: "No need to learn alone — get 1:1 support from expert human mentors whenever you need it, for life."
+        icon: "check"
+      - heading: "Enjoy hyperpersonalized learning, at every level."
+        text: "Move faster and smarter with AI-powered feedback tailored to your journey, plus an unmatched student-to-teacher ratio."
+        icon: "check"
+      - heading: "Join an active tech community."
+        text: "Stay connected and supported through our Slack channels — with peers, mentors, and alumni ready to help you grow."
+        icon: "check"
   button:
     text: "Learn More"
     color: "white"

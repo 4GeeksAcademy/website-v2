@@ -429,7 +429,10 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
       <ChooseYourProgram
         lang={pageContext.lang}
         programs={data.allChooseYourProgramYaml.edges[0].node.programs.filter(
-          p => p.title === "Coding Bootcamp" || p.title === "Data Science and ML" || p.title === "CyberSecurity Bootcamp"
+          (p) =>
+            p.title === "Coding Bootcamp" ||
+            p.title === "Data Science and ML" ||
+            p.title === "CyberSecurity Bootcamp"
         )}
         title={yml.choose_program?.title}
         paragraph={yml.choose_program?.paragraph}
@@ -665,7 +668,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           right={{
             heading: yml.two_column_geek?.heading,
             sub_heading: yml.two_column_geek?.sub_heading,
-            content: yml.two_column_geek?.content,
+            bullets: yml.two_column_geek?.bullets,
             button: yml.two_column_geek?.button,
           }}
           proportions={yml.two_column_geek?.proportions}
@@ -842,10 +845,13 @@ export const query = graphql`
               font_size
               style
             }
-            content {
-              text
-              font_size
-              style
+            bullets {
+              item_style
+              items{
+                heading
+                text
+                icon
+              }
             }
             button {
               text
