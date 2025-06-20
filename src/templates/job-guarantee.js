@@ -426,17 +426,6 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           </Modal>
         </Container>
       </Div>
-      <ChooseYourProgram
-        lang={pageContext.lang}
-        programs={data.allChooseYourProgramYaml.edges[0].node.programs.filter(
-          (p) =>
-            p.title === "Coding Bootcamp" ||
-            p.title === "Data Science and ML" ||
-            p.title === "CyberSecurity Bootcamp"
-        )}
-        title={yml.choose_program?.title}
-        paragraph={yml.choose_program?.paragraph}
-      />
       <TwoColumn
         padding="60px 80px"
         padding_md="60px 80px"
@@ -616,6 +605,17 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           session={session}
         />
       </Container>
+      <ChooseYourProgram
+        lang={pageContext.lang}
+        programs={data.allChooseYourProgramYaml.edges[0].node.programs.filter(
+          (p) =>
+            p.title === "Coding Bootcamp" ||
+            p.title === "Data Science and ML" ||
+            p.title === "CyberSecurity Bootcamp"
+        )}
+        title={yml.choose_program?.title}
+        paragraph={yml.choose_program?.paragraph}
+      />
 
       <Container
         id="two_column_right_section"
@@ -687,38 +687,6 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           topicSlug="job_guarantee"
         />
       </Container>
-      <GridContainer
-        columns_tablet="12"
-        padding="0 17px 40px 17px"
-        padding_tablet="0"
-        margin_tablet="0 auto 81px auto"
-        childMargin="auto"
-        childMaxWidth="1280px"
-      >
-        <Div gridColumn_tablet="1 / 7" flexDirection="column">
-          <H2 textAlign_md="left" margin="0 0 30px 0">
-            {yml.form.title}
-          </H2>
-          {yml.form.paragraph.split("\n").map((m, i) => (
-            <Paragraph
-              key={i}
-              margin="7px 0"
-              textAlign_md="left"
-              dangerouslySetInnerHTML={{ __html: m }}
-            />
-          ))}
-        </Div>
-        <Div flexDirection="column" gridColumn_tablet="7 / 13">
-          <LeadForm
-            formHandler={beHiringPartner}
-            // handleClose={handleClose}
-            enableAreaCodes={false}
-            lang={pageContext.lang}
-            inputBgColor={Colors.white}
-            fields={["full_name", "email", "phone"]}
-          />
-        </Div>
-      </GridContainer>
     </>
   );
 };
@@ -847,7 +815,7 @@ export const query = graphql`
             }
             bullets {
               item_style
-              items{
+              items {
                 heading
                 text
                 icon
@@ -888,10 +856,6 @@ export const query = graphql`
             title
             text
             testimonials
-          }
-          form {
-            title
-            paragraph
           }
           choose_program {
             title

@@ -114,11 +114,11 @@ two_column_right:
     style: '{ "font-weight": "400", "text-align": "justify", "color": "#333", "padding": "10px"}'
   content:
     text: |
-      <span style="color: #0097CD; ">✓  - </span> Our program's effectiveness is backed by strong placement rates
+      <span style="color: #0097CD; ">✓   </span> Our program's effectiveness is backed by strong placement rates
       <br><br>
-      <span style="color: #0097CD; ">✓  - </span> The tech industry continues to grow with high demand for talent
+      <span style="color: #0097CD; ">✓   </span> The tech industry continues to grow with high demand for talent
       <br><br>
-      <span style="color: #0097CD; ">✓  - </span> We believe in our teaching approach and your commitment to succeed
+      <span style="color: #0097CD; ">✓   </span> We believe in our teaching approach and your commitment to succeed
       <br><br>
     font_size: ["20px", "20px", "18px", "16px", "14px"]
     style: '{ "text-align": "left", "color": "#444", "line-height": "1.1", "padding": "10px"}'
@@ -164,13 +164,9 @@ two_columns_video:
     path: "/us/apply"
     style: '{"padding": "20px 48px", "border-radius": "5px"}'
 
-form:
-  title: "Become a 4Geeks Partner"
-  paragraph: "Contact us today to join our network and start benefiting from the opportunities we offer.  Let us help you choose the right track to achieve your goals. Get in touch!"
-
 choose_program:
-  title: "Choose your program"
-  paragraph: "Find the path that's right for you."
+  title: "Explore our top tech programs"
+  paragraph: "Choose the program that best fits your career golas. Our most popular tracks are designed to get you job-ready in tech."
 
 two_column_geek:
   proportions: [5, 7]
