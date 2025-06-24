@@ -42,9 +42,10 @@ const Home = (props) => {
 
     if (session?.language && window && window.location.pathname === "/")
       navigate(
-        `${props.pageContext.translations[
-        session.language === "en" ? "us" : session.language
-        ]
+        `${
+          props.pageContext.translations[
+            session.language === "en" ? "us" : session.language
+          ]
         }`
       );
 
@@ -345,6 +346,18 @@ const Home = (props) => {
         />
       </Div>
 
+      {yml.choose_program && (
+        <ChooseYourProgram
+          chooseProgramRef={chooseProgramRef}
+          id="choose-program"
+          lang={pageContext.lang}
+          programs={data.allChooseYourProgramYaml.edges[0].node.programs}
+          title={yml.choose_program.title}
+          paragraph={yml.choose_program.paragraph}
+          background={Colors.veryLightBlue3}
+        />
+      )}
+
       <GeeksVsOthers
         lang={pageContext.lang}
         mainBackround={Colors.white}
@@ -377,7 +390,9 @@ const Home = (props) => {
           title={
             <div
               style={{ padding: "0 10px" }}
-              dangerouslySetInnerHTML={{ __html: yml.two_column_carousel.title }}
+              dangerouslySetInnerHTML={{
+                __html: yml.two_column_carousel.title,
+              }}
             />
           }
           text={
@@ -412,17 +427,6 @@ const Home = (props) => {
         </TwoColumnCarousel>
       )}
 
-      {yml.choose_program && (
-        <ChooseYourProgram
-          chooseProgramRef={chooseProgramRef}
-          id="choose-program"
-          lang={pageContext.lang}
-          programs={data.allChooseYourProgramYaml.edges[0].node.programs}
-          title={yml.choose_program.title}
-          paragraph={yml.choose_program.paragraph}
-          background={Colors.veryLightBlue3}
-        />
-      )}
       {/* TWO COLUMN CREAR EN EL YML*/}
       <Div display="block" background={Colors.veryLightBlue3} padding="40px 0">
         <H2 type="h2" textAlign_tablet="center">
