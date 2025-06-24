@@ -86,26 +86,28 @@ const Apply = (props) => {
   ];
 
   const locationContext = session && session.location;
-  const locations =
-    session &&
-    session.locations &&
-    session.locations
-      .sort((a, b) => (a.meta_info.position > b.meta_info.position ? 1 : -1))
-      .map((m) => ({
-        label:
-          m.name +
-          " " +
-          (m.online_available == false
-            ? ""
-            : m.in_person_available == true
-            ? trans[pageContext.lang]["(In-person and from home available)"]
-            : trans[pageContext.lang]["(From home until further notice)"]),
-        value: m.active_campaign_location_slug,
-        region: m.meta_info.region,
-        dialCode: m.meta_info.dialCode,
-        country: m.country,
-        consents: m.consents,
-      }));
+  const locations = React.useMemo(
+    () =>
+      data.allLocationYaml.edges
+        .map((l) => l.node)
+        .sort((a, b) => (a.meta_info.position > b.meta_info.position ? 1 : -1))
+        .map((m) => ({
+          label:
+            m.name +
+            " " +
+            (m.online_available == false
+              ? ""
+              : m.in_person_available == true
+              ? trans[pageContext.lang]["(In-person and from home available)"]
+              : trans[pageContext.lang]["(From home until further notice)"]),
+          value: m.active_campaign_location_slug,
+          region: m.meta_info.region,
+          dialCode: m.meta_info.dialCode,
+          country: m.country,
+          consents: m.consents,
+        })),
+    [data.allLocationYaml, pageContext.lang]
+  );
 
   React.useEffect(() => {
     tagManager("application_rendered");
@@ -116,13 +118,26 @@ const Apply = (props) => {
       const selectedLocation = locations?.find(
         (l) => l.value === formData.location.value
       );
+      if (!selectedLocation) {
+        // Reset location and consents if location is not found in new language
+        setVal((prev) => ({
+          ...prev,
+          location: { value: '', valid: false },
+          consents: { value: [], valid: true },
+        }));
+        setConsentValue([]);
+        return;
+      }
       const activeConsents =
         selectedLocation?.consents?.filter((c) => c.active) || [];
       if (activeConsents.length !== consentValue.length) {
         setConsentValue(new Array(activeConsents.length).fill(false));
       }
+    } else {
+      // If no location is selected, reset consents
+      setConsentValue([]);
     }
-  }, [formData.location.value]);
+  }, [formData.location.value, locations, pageContext.lang]);
 
   React.useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
@@ -824,6 +839,28 @@ const Apply = (props) => {
 };
 export const query = graphql`
   query ApplyQuery($file_name: String!, $lang: String!) {
+    allLocationYaml(filter: { fields: { lang: { eq: $lang } } }) {
+      edges {
+        node {
+          name
+          consents {
+            active
+            message
+            slug
+          }
+          active_campaign_location_slug
+          breathecode_location_slug
+          in_person_available
+          online_available
+          country
+          meta_info {
+            region
+            dialCode
+            position
+          }
+        }
+      }
+    }
     privacy: allPageYaml(
       filter: { fields: { file_name: { regex: "/privacy-policy/" } } }
     ) {

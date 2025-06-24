@@ -315,12 +315,23 @@ const LeadForm = ({
         const cleanedData = clean(fields, formData);
 
         // Validate all consents, including SMS
-        const nonSmsConsents = session?.location?.consents?.filter(c => c.active && c.slug !== 'sms_consent') || [];
-        const allNonSmsChecked = consentValue.length === nonSmsConsents.length && consentValue.every(Boolean);
-        const smsConsentObj = session?.location?.consents?.find(c => c.slug === 'sms_consent' && c.active);
+        const nonSmsConsents =
+          session?.location?.consents?.filter(
+            (c) => c.active && c.slug !== "sms_consent"
+          ) || [];
+        const allNonSmsChecked =
+          consentValue.length === nonSmsConsents.length &&
+          consentValue.every(Boolean);
+        const smsConsentObj = session?.location?.consents?.find(
+          (c) => c.slug === "sms_consent" && c.active
+        );
         const smsConsentValid = smsConsentObj ? smsConsentChecked : true;
 
-        if (!formIsValid(cleanedData) || !allNonSmsChecked || !smsConsentValid) {
+        if (
+          !formIsValid(cleanedData) ||
+          !allNonSmsChecked ||
+          !smsConsentValid
+        ) {
           setFormStatus({ status: "error", msg: yml.messages.error });
           return;
         }
@@ -558,91 +569,107 @@ const LeadForm = ({
               session.location &&
               session.location.consents &&
               // Render non-SMS consents
-              session.location.consents.filter(consent => consent.active && consent.slug !== 'sms_consent').map((consent, index) => (
-                <Div
-                  key={`consent-${index}`}
-                  position="relative"
-                  margin="10px 0 0 0"
-                  alignItems="center"
-                >
-                  <input
-                    required
-                    name={`consent-${consent.slug}`}
-                    type="checkbox"
-                    checked={consentValue[index]}
-                    onChange={() => {
-                      const updatedConsentValue = [...consentValue];
-                      updatedConsentValue[index] = !consentValue[index];
-                      setConsentValue(updatedConsentValue);
-                      setVal({
-                        ...formData,
-                        consents: {
-                          ...formData.consents,
-                          value: updatedConsentValue,
-                        },
-                      });
-                    }}
-                    style={{
-                      width: "22px",
-                      height: "22px",
-                      top: "10px",
-                      left: "7px",
-                    }}
-                  />
-                  <Paragraph
-                    fontSize="11px"
-                    lineHeight="15px"
-                    margin="8px 0 0 5px"
-                    textAlign="left"
-                    color={textColor}
-                    dangerouslySetInnerHTML={{
-                      __html: consent.message,
-                    }}
-                  />
-                </Div>
-              ))}
+              session.location.consents
+                .filter(
+                  (consent) => consent.active && consent.slug !== "sms_consent"
+                )
+                .map((consent, index) => (
+                  <Div
+                    key={`consent-${index}`}
+                    position="relative"
+                    margin="10px 0 0 0"
+                    alignItems="center"
+                  >
+                    <input
+                      required
+                      name={`consent-${consent.slug}`}
+                      type="checkbox"
+                      checked={consentValue[index]}
+                      onChange={() => {
+                        const updatedConsentValue = [...consentValue];
+                        updatedConsentValue[index] = !consentValue[index];
+                        setConsentValue(updatedConsentValue);
+                        setVal({
+                          ...formData,
+                          consents: {
+                            ...formData.consents,
+                            value: updatedConsentValue,
+                          },
+                        });
+                      }}
+                      style={{
+                        width: "22px",
+                        height: "22px",
+                        top: "10px",
+                        left: "7px",
+                      }}
+                    />
+                    <Paragraph
+                      fontSize="11px"
+                      lineHeight="15px"
+                      margin="8px 0 0 5px"
+                      textAlign="left"
+                      color={textColor}
+                      dangerouslySetInnerHTML={{
+                        __html: consent.message,
+                      }}
+                    />
+                  </Div>
+                ))}
             {/* Render SMS consent in a visually distinct section */}
             {session &&
               session.location &&
               session.location.consents &&
-              session.location.consents.some(consent => consent.slug === 'sms_consent' && consent.active) && (
-                <Div className="sms-consent-section" position="relative" margin="10px 0 0 0" alignItems="center">
-                  {session.location.consents.filter(consent => consent.slug === 'sms_consent' && consent.active).map((consent, idx) => (
-                    <React.Fragment key={`sms-consent-${idx}`}>
-                      <input
-                        required
-                        name="smsConsent"
-                        type="checkbox"
-                        checked={smsConsentChecked}
-                        onChange={() => {
-                          setSmsConsentChecked(!smsConsentChecked);
-                          setVal({
-                            ...formData,
-                            sms_consent: {
-                              value: !smsConsentChecked,
-                              valid: !smsConsentChecked,
-                            },
-                          });
-                        }}
-                        style={{
-                          width: "22px",
-                          height: "22px",
-                          top: "10px",
-                          left: "7px",
-                        }}
-                      />
-                      <Paragraph
-                        fontSize="11px"
-                        lineHeight="15px"
-                        margin="8px 0 0 5px"
-                        textAlign="left"
-                        color={textColor}
-                        dangerouslySetInnerHTML={{
-                          __html: consent.message,
-                        }}
-                      />
-                    </React.Fragment>
-                  ))}
+              session.location.consents.some(
+                (consent) => consent.slug === "sms_consent" && consent.active
+              ) && (
+                <Div
+                  className="sms-consent-section"
+                  position="relative"
+                  margin="10px 0 0 0"
+                  alignItems="center"
+                >
+                  {session.location.consents
+                    .filter(
+                      (consent) =>
+                        consent.slug === "sms_consent" && consent.active
+                    )
+                    .map((consent, idx) => (
+                      <React.Fragment key={`sms-consent-${idx}`}>
+                        <input
+                          required
+                          name="smsConsent"
+                          type="checkbox"
+                          checked={smsConsentChecked}
+                          onChange={() => {
+                            setSmsConsentChecked(!smsConsentChecked);
+                            setVal({
+                              ...formData,
+                              sms_consent: {
+                                value: !smsConsentChecked,
+                                valid: !smsConsentChecked,
+                              },
+                            });
+                          }}
+                          style={{
+                            width: "22px",
+                            height: "22px",
+                            top: "10px",
+                            left: "7px",
+                          }}
+                        />
+                        <Paragraph
+                          fontSize="11px"
+                          lineHeight="15px"
+                          margin="8px 0 0 5px"
+                          textAlign="left"
+                          color={textColor}
+                          dangerouslySetInnerHTML={{
+                            __html: consent.message,
+                          }}
+                        />
+                      </React.Fragment>
+                    ))}
                 </Div>
               )}
             {formStatus.status === "error" && (
