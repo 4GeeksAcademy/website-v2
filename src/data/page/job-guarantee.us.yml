@@ -174,13 +174,15 @@ two_column_geek:
     style: '{ "backgroundSize": "contain", "background-position": "center", "margin": "10px" }'
     src: "/images/landing/feliz-empresario-laptop-3.png"
   heading:
-    text: "What Sets 4Geeks Apart: AI-Forward Skills, Unlimited Mentorship and Career Support"
+    text: |-
+      What Sets 4Geeks Apart: 
+      AI-Forward Skills, Unlimited Mentorship and Career Support
     font_size: ["38px", "34px", "34px", "34px", "34px"]
     style: '{ "font-weight": "600", "text-align": "center", "color": "#000", "padding": "10px" }'
   sub_heading:
     text: "Everything You Need to Launch and Grow a Career in Tech"
-    font_size: ["22px", "22px", "20px", "20px", "18px"]
-    style: '{ "font-weight": "400", "text-align": "justify", "color": "#333", "padding": "10px"}'
+    font_size: ["26px", "26px", "24px", "24px", "22px"]
+    style: '{ "font-weight": "600", "text-align": "justify", "color": "#000", "padding": "10px"}'
   bullets:
     item_style: '{ "padding": "0 0 0 10px", "font-weight": "100" }'
     items:
