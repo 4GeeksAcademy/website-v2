@@ -209,8 +209,8 @@ consents:
   - slug: "wa_consent"
     name: "WhatsApp Consent"
     active: true
-    message: "I consent to be contacted by 4Geeks Academy via email, phone, or other provided communication methods for updates, promotions, and related information."
-    error_message: "You need to accept Whatsapp consent"
+    message: "I agree to receive information through email, WhatsApp, SMS and/or other channels about workshops, events, courses, and other marketing materials. We'll never share your contact information, and you can easily opt out at any moment."
+    error_message: "You need to accept the marketing consent"
 
 city: "Miami"
 name: "Miami, USA"
