@@ -36,7 +36,9 @@ button:
 
 ## BADGES SECTION /components/Badges
 badges:
-  title: "8 Years empowering people to succeed in tech"
+  title: |-
+    Ranked Among the World’s Top Coding Bootcamps. 
+    Trusted by Thousands.
   paragraph: "Licensed by the Florida Department of Education, recognized by Forbes as a top 5 Coding School, and consistently ranked among the world's best coding bootcamps by major independent listings."
 
 ## CHOOSE YOUR PROGRAM /components/ChooseYourProgram
@@ -126,7 +128,7 @@ two_columns_rigo:
   content:
     style: '{ "font-size":"16px", "margin":"15px 0" }'
     text: |
-      <p>We're all different—yet education has always been one-size-fits-all. At 4Geeks, we've built a better way to learn: <strong>one that adapts to you.</strong></p>
+      <p>We're all different—yet education has always been one-size-fits-all. At 4Geeks, we've built a better way to learn: <strong style="text-decoration: none; color: #000000; font-weight: 700;">one that adapts to you.</strong></p>
       <br />
       <ul>
         <li><strong style="text-decoration: none; color: #000000; font-weight: 700;">✓ Our custom-built AI</strong>, Rigobot, tracks your activity and identifies your strengths, struggles, and gaps—delivering real-time feedback tailored to maximize your learning.</li>
