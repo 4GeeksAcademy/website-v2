@@ -139,7 +139,9 @@ const Home = (props) => {
                 fontWeight="400"
                 color={Colors.black}
               >
-                {pageContext.lang === "es" && city ? `${city} ${yml.header_data.tagline}` : yml.header_data.tagline}
+                {pageContext.lang === "es" && city
+                  ? `${city} ${yml.header_data.tagline}`
+                  : yml.header_data.tagline}
               </H2>
 
               {yml.header_data.sub_heading && (
@@ -148,7 +150,9 @@ const Home = (props) => {
                   color={Colors.black}
                   fontSize="16px"
                   margin="10px 0 0 0"
-                  dangerouslySetInnerHTML={{ __html: yml.header_data.sub_heading }}
+                  dangerouslySetInnerHTML={{
+                    __html: yml.header_data.sub_heading,
+                  }}
                 />
               )}
 
