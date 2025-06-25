@@ -122,7 +122,7 @@ const Home = (props) => {
                 textAlign_xxs="start"
                 fontSize="40px"
                 fontSize_tablet="55px"
-                margin="20px 0 0 0"
+                margin="20px 0 12px 0"
                 lineHeight_xxs="45px"
                 lineHeight_tablet="60px"
                 width_tablet="100%"
@@ -139,8 +139,18 @@ const Home = (props) => {
                 fontWeight="400"
                 color={Colors.black}
               >
-                {yml.header_data.tagline}
+                {pageContext.lang === "es" && city ? `${city} ${yml.header_data.tagline}` : yml.header_data.tagline}
               </H2>
+
+              {yml.header_data.sub_heading && (
+                <Paragraph
+                  textAlign="left"
+                  color={Colors.black}
+                  fontSize="16px"
+                  margin="10px 0 0 0"
+                  dangerouslySetInnerHTML={{ __html: yml.header_data.sub_heading }}
+                />
+              )}
 
               <Div display="block" margin="20px 0">
                 {yml.header_data.bullets.map((bullet) => (
@@ -457,6 +467,7 @@ const Home = (props) => {
         }
         playerHeight="600px"
         title={yml.with_4geeks.title}
+        subtitle={yml.with_4geeks.sub_title}
       />
 
       <OurPartners
@@ -649,6 +660,7 @@ export const query = graphql`
           }
           with_4geeks {
             title
+            sub_title
           }
         }
       }

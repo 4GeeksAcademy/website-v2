@@ -81,20 +81,21 @@ two_columns:
   section_heading:
     text: "Finance your future"
   heading:
-    text: "Invest in your Career with Flexible Payment Plans and a Guarantee"
-    style: '{ "fontWeight": 200, "marginBottom": "24px", "marginTop": "0px" }'
+    text: "Invest in your Career with Flexible Payment Plans and a Job Guarantee"
+    style: '{ "fontWeight": 200, "marginBottom": "24px", "marginTop": "0px", "fontSize": "22px" }'
   content:
     text: |
       <p>We want you to focus on what matters: learning, growing, and launching your tech career—not stressing about how to pay for it.</p>
+      <br/>
       <p> That's why we make financing your education as simple and flexible as possible:</p>
       <br/>
       <ul>
-        <li>• Among the most affordable tuitions for a top bootcamp</li>
-        <li>• Payment plans starting under $299/month</li>
-        <li>• Job Guarantee available (with qualifying terms)</li>
+        <li>✓ Among the most affordable tuitions for a top bootcamp</li>
+        <li>✓ Payment plans starting under $299/month</li>
+        <li>✓ Job Guarantee available (with qualifying terms)</li>
       </ul>
       <br/>
-      <p>And if you need one more reason to feel confident: In 2024, Forbes named us the best bootcamp for students on a budget—recognizing our commitment to keeping tech education accessible.</p>
+      <p>And if you need one more reason to feel confident: In 2024, <strong style="text-decoration: none; color: #000000; font-weight: 700;">Forbes</strong> named us the <a href="https://4geeksacademy.com/us/trends-and-tech/celebrating-forbes-doble-recognition" style="text-decoration: none; color: #000000; font-weight: 700;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">best bootcamp for students on a budget<span style="font-size: 0.8em;">↗</span></a>—recognizing our commitment to keeping tech education accessible.</p>
       <p><strong style="text-decoration: none; color: #000000; font-weight: 700;">Have questions?</strong> Our admissions team will help you find your best-fit financing plan.</p>
     path: "/us/apply"
   button:
@@ -128,10 +129,10 @@ two_columns_rigo:
       <p>We're all different—yet education has always been one-size-fits-all. At 4Geeks, we've built a better way to learn: <strong>one that adapts to you.</strong></p>
       <br />
       <ul>
-        <li><strong style="text-decoration: none; color: #000000; font-weight: 700;">• Our custom-built AI</strong>, Rigobot, tracks your activity and identifies your strengths, struggles, and gaps—delivering real-time feedback tailored to maximize your learning.</li>
-        <li><strong style="text-decoration: none; color: #000000; font-weight: 700;">• Unlimited 1:1 sessions with expert mentors</strong> give you live human support whenever you need it—so you never get stuck or lose momentum.</li>
-        <li><strong style="text-decoration: none; color: #000000; font-weight: 700;">• Career coaches work with you individually</strong> to build your confidence and strategy—helping you stand out on paper, in interviews, and on AI-filtered platforms like ATS systems and LinkedIn.</li>
-        <li><strong style="text-decoration: none; color: #000000; font-weight: 700;">• 1:7 teacher-student ratio in live classes</strong> means you get real attention—so your questions get answered and your learning stays on track.</li>
+        <li><strong style="text-decoration: none; color: #000000; font-weight: 700;">✓ Our custom-built AI</strong>, Rigobot, tracks your activity and identifies your strengths, struggles, and gaps—delivering real-time feedback tailored to maximize your learning.</li>
+        <li><strong style="text-decoration: none; color: #000000; font-weight: 700;">✓ Unlimited 1:1 sessions with expert mentors</strong> give you live human support whenever you need it—so you never get stuck or lose momentum.</li>
+        <li><strong style="text-decoration: none; color: #000000; font-weight: 700;">✓ Career coaches work with you individually</strong> to build your confidence and strategy—helping you stand out on paper, in interviews, and on AI-filtered platforms like ATS systems and LinkedIn.</li>
+        <li><strong style="text-decoration: none; color: #000000; font-weight: 700;">✓ 1:7 teacher-student ratio in live classes</strong> means you get real attention—so your questions get answered and your learning stays on track.</li>
       </ul>
       <br />
       <p>That's the power of hyperpersonalized learning: you move faster, learn smarter, and gain the kind of real confidence that lasts beyond graduation.</p>
@@ -140,22 +141,22 @@ two_columns_rigo:
     items:
       - heading: "Meet Rigobot, our AI coding assistant:"
         text: |
-          • Instant tutoring as you code.
+          ✓ Instant tutoring as you code.
           <br />
-          • Skill evaluations to track your progress.
+          ✓ Skill evaluations to track your progress.
           <br />
-          • Expert bug fixing assistance.
+          ✓ Expert bug fixing assistance.
           <br /><br />
           It perfectly complements our human mentorship program!
         icon: "check" #string with icon for example ['check', 'cicle', etc]
         icon_color: '#25BF6C'
       - heading: "Learnpack, our interactive learning software, provides:"
         text: |
-          • There are hundreds of interactive exercises to help you master and retain skills.
+          ✓ There are hundreds of interactive exercises to help you master and retain skills.
           <br />
-          • Automated tests to help track your progress.
+          ✓ Automated tests to help track your progress.
           <br />
-          • Structured practice.
+          ✓ Structured practice.
         icon: "check" #string with icon for example ['check', 'cicle', etc]
         icon_color: '#25BF6C'
 
@@ -180,7 +181,7 @@ iconogram:
       content_style: '{ "fontSize": "24px" }'
     - icon: "briefcase-new"
       color: "#7D79FF"
-      content: "86% hired"
+      content: "84% hired"
       content_style: '{ "fontSize": "24px" }'
     - icon: "star-2"
       color: "#0084FF"
@@ -188,7 +189,8 @@ iconogram:
       content_style: '{ "fontSize": "24px" }'
 
 with_4geeks:
-  title: Hear it from our students
+  title: Real Stories of Real Career Change
+  sub_title: "Thousands of graduates have used our programs to break into tech. Here are just a few of their stories, from salary increases to total career reinventions."
 
 ## JOIN 4GEEKS SECTION DATA
 join_geeks:

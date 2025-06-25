@@ -26,7 +26,7 @@ const Side = ({
   side,
 }) => {
   const [isClient, setIsClient] = useState(false);
-  
+
   useEffect(() => {
     setIsClient(true);
   }, []);
@@ -224,7 +224,9 @@ const Side = ({
                     )}
                     <Paragraph
                       textAlign="left"
-                      {...(isClient ? { dangerouslySetInnerHTML: { __html: bullet.text } } : { children: bullet.text })}
+                      {...(isClient
+                        ? { dangerouslySetInnerHTML: { __html: bullet.text } }
+                        : { children: bullet.text })}
                     />
                   </Div>
                 )}
@@ -250,7 +252,9 @@ const Side = ({
             if (e.target.tagName === "A" && content.path)
               smartRedirecting(e, content.path);
           }}
-          {...(isClient ? { dangerouslySetInnerHTML: { __html: content.text } } : { children: content.text })}
+          {...(isClient
+            ? { dangerouslySetInnerHTML: { __html: content.text } }
+            : { children: content.text })}
         />
       ) : (
         content &&
@@ -284,7 +288,9 @@ const Side = ({
           margin="10px 0"
           fontSize="13px"
           style={disclosure.style ? JSON.parse(disclosure.style) : null}
-          {...(isClient ? { dangerouslySetInnerHTML: { __html: disclosure.text } } : { children: disclosure.text })}
+          {...(isClient
+            ? { dangerouslySetInnerHTML: { __html: disclosure.text } }
+            : { children: disclosure.text })}
           onClick={(e) => {
             if (e.target.tagName === "A" && disclosure.path)
               smartRedirecting(e, disclosure.path);
