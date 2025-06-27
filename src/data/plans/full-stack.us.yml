@@ -41,7 +41,7 @@ full_time:
     recomended: false
     scholarship: "Financed"
     payment_time: "24 months payment"
-    price: "from $200/mo"
+    price: "from $299/mo"
     bullets: 
       - "Affordable long term loans based on credit score."
       - "Loan terms displayed are effective as of 3/11/2025. To see full repayment examples, visit <a href=\"https://partner.ascentfunding.com/4geeksacademy/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\" style=\"color: #007bff; \">link to Ascent partnership page</a>."
@@ -49,6 +49,23 @@ full_time:
       - "/images/ascent_logo.png"
       - "/images/tfc-logo.png"
       - "/images/climb-logo.png"
+
+  - slug: 'usa-clark-scholarship-pt'
+    academies: ['']
+    recomended: false
+    scholarship: "Scholarship"
+    payment_time: "Full or partial funding if you qualify"
+    price: ""
+    original_price: ""
+    warning_message: "Limited availability!"
+    bullets: 
+      - "Ask about your region! We're part of several special workforce development incentives."
+      - "If you're earning less than your potential or unemployed, there are options for you!"
+      - "Any remaining balance can be financed."
+      - "Get in touch and we’ll help you with the application process!"
+      # - "<a href=\"https://4geeksacademy.com/us/contact\" target=\"_blank\" style=\"color: #007bff; \">Contact us</a> to check your eligibility."
+    icons: 
+      # - "/images/clarkuniversity.png"
 
   - slug: 'usa-fs-ft'
     academies: ['downtown-miami']
@@ -132,7 +149,7 @@ part_time:
 #USA Part-time
   - slug: 'usa-upfront-pt'
     recomended: true
-    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
+    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada', 'tampa-usa', 'dallas-usa']
     scholarship: "Pay upfront"
     payment_time: "Get a 10% discount"
     price: "$9,000"
@@ -143,11 +160,11 @@ part_time:
       - Regular tuition is $ 9,999 and can be financed interest free-up to 6 months.
 
   - slug: 'usa-financed-pt'
-    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'tampa-usa', 'toronto-canada']
+    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'tampa-usa', 'toronto-canada', 'dallas-usa']
     recomended: false
     scholarship: "Financed"
     payment_time: "Pay in 3, 4 or 5 years"
-    price: "from $150/mo"
+    price: "from $299/mo"
     bullets: 
       - "Choose among short or long term financing plans."
       - "Affordable long term loans based on credit score."
@@ -158,25 +175,9 @@ part_time:
       - "/images/tfc-logo.png"
       - "/images/climb-logo.png"
 
-  - slug: 'usa-clark-scholarship-pt'
-    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
-    recomended: false
-    scholarship: "Scholarship"
-    payment_time: "Full or partial funding if you qualify"
-    price: ""
-    original_price: ""
-    warning_message: "Limited availability!"
-    bullets: 
-      - "Ask about your region! We're part of several special workforce development incentives."
-      - "If you're earning less than your potential or unemployed, there are options for you!"
-      - "Any remaining balance can be financed."
-      - "Get in touch and we’ll help you with the application process!"
-      # - "<a href=\"https://4geeksacademy.com/us/contact\" target=\"_blank\" style=\"color: #007bff; \">Contact us</a> to check your eligibility."
-    icons: 
-      # - "/images/clarkuniversity.png"
 
   - slug: 'usa-job-guarantee-pt'
-    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'tampa-usa']
+    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'tampa-usa', 'dallas-usa']
     recomended: false
     scholarship: "Job Guarantee"
     payment_time: "Get hired or your money back"
