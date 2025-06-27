@@ -37,7 +37,7 @@ button:
 ## BADGES SECTION /components/Badges
 badges:
   title: |-
-    Ranked Among the World’s Top Coding Bootcamps. 
+    Ranked Among the World's Top Coding Bootcamps. 
     Trusted by Thousands.
   paragraph: "Licensed by the Florida Department of Education, recognized by Forbes as a top 5 Coding School, and consistently ranked among the world's best coding bootcamps by major independent listings."
 
@@ -112,7 +112,7 @@ two_columns_rigo:
   proportions: [7, 5]
   justify: "center" #start,end,center
   image:
-    style: '{"backgroundSize": "contain", "background-position": "center", "border" : "2px solid black", "border-radius": "4px"}'
+    style: '{"backgroundSize": "contain", "background-position": "center", "border" : "10px solid black", "border-radius": "4px"}'
     src: "/images/landing/ai-mentor.jpg"
     shadow: true
   video: "6m1Jyya7eCc"
@@ -131,10 +131,10 @@ two_columns_rigo:
       <p>We're all different—yet education has always been one-size-fits-all. At 4Geeks, we've built a better way to learn: <strong style="text-decoration: none; color: #000000; font-weight: 700;">one that adapts to you.</strong></p>
       <br />
       <ul>
-        <li><strong style="text-decoration: none; color: #000000; font-weight: 700;">✓ Our custom-built AI</strong>, Rigobot, tracks your activity and identifies your strengths, struggles, and gaps—delivering real-time feedback tailored to maximize your learning.</li>
-        <li><strong style="text-decoration: none; color: #000000; font-weight: 700;">✓ Unlimited 1:1 sessions with expert mentors</strong> give you live human support whenever you need it—so you never get stuck or lose momentum.</li>
-        <li><strong style="text-decoration: none; color: #000000; font-weight: 700;">✓ Career coaches work with you individually</strong> to build your confidence and strategy—helping you stand out on paper, in interviews, and on AI-filtered platforms like ATS systems and LinkedIn.</li>
-        <li><strong style="text-decoration: none; color: #000000; font-weight: 700;">✓ 1:7 teacher-student ratio in live classes</strong> means you get real attention—so your questions get answered and your learning stays on track.</li>
+        <li style="margin-bottom: 8px;"><strong style="text-decoration: none; color: #000000; font-weight: 700; ">✓ Our custom-built AI</strong>, Rigobot, tracks your activity and identifies your strengths, struggles, and gaps—delivering real-time feedback tailored to maximize your learning.</li>
+        <li style="margin-bottom: 8px;"><strong style="text-decoration: none; color: #000000; font-weight: 700;">✓ Unlimited 1:1 sessions with expert mentors</strong> give you live human support whenever you need it—so you never get stuck or lose momentum.</li>
+        <li style="margin-bottom: 8px;"><strong style="text-decoration: none; color: #000000; font-weight: 700;">✓ Career coaches work with you individually</strong> to build your confidence and strategy—helping you stand out on paper, in interviews, and on AI-filtered platforms like ATS systems and LinkedIn.</li>
+        <li style="margin-bottom: 8px;"><strong style="text-decoration: none; color: #000000; font-weight: 700;">✓ 1:7 teacher-student ratio in live classes</strong> means you get real attention—so your questions get answered and your learning stays on track.</li>
       </ul>
       <br />
       <p>That's the power of hyperpersonalized learning: you move faster, learn smarter, and gain the kind of real confidence that lasts beyond graduation.</p>
