@@ -170,8 +170,13 @@ consents:
   - slug: "wa_consent"
     name: "WhatsApp Consent"
     active: true
-    message: "I agree to receive information through email, WhatsApp, SMS and/or other channels about workshops, events, courses, and other marketing materials. We'll never share your contact information, and you can easily opt out at any moment."
+    message: "I agree to receive information through email, WhatsApp and/or other channels about workshops, events, courses, and other marketing materials. We'll never share your contact information, and you can easily opt out at any moment."
     error_message: "You need to accept Whatsapp consent"
+  - slug: "sms_consent"
+    name: "SMS Consent"
+    active: true
+    message: "I agree to receive SMS/text messages about workshops, events, courses, and other marketing materials. Message and data rates may apply. Reply STOP to unsubscribe, HELP for help. You may receive up to 4–6 text messages per month. We will never share your contact information, and you can easily opt out at any moment."
+    error_message: "You need to accept the SMS consent"
 
 city: "Houston"
 name: "Houston, USA"
