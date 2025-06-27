@@ -172,6 +172,11 @@ consents:
     active: true
     message: 'Acepto recibir información vía email, WhatsApp y/o otros canales sobre talleres de programación, eventos, cursos y otros materiales de marketing. Nunca compartiremos tu información de contacto y puedes darte de baja fácilmente en cualquier momento.'
     error_message: "Debes aceptar el consentimiento de Whatsapp."
+  - slug: "sms_consent"
+    name: "Consentimiento SMS"
+    active: true
+    message: "Acepto recibir mensajes SMS/texto sobre talleres, eventos, cursos y otros materiales de marketing. Pueden aplicarse tarifas de mensajes y datos. Responde STOP para cancelar, HELP para ayuda. Recibirás hasta 4–6 mensajes de texto por mes. Nunca compartiremos tu información de contacto y puedes darte de baja fácilmente en cualquier momento."
+    error_message: "Debes aceptar el consentimiento de SMS"
 
 city: "Chicago"
 name: "Chicago, USA"

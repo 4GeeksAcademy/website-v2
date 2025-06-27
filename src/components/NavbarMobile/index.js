@@ -259,7 +259,7 @@ export const NavbarMobile = ({
       opacity="1"
       zIndex="100"
     >
-      <CustomBar
+      {/*<CustomBar
         isContentBarActive={isContentBarActive}
         contentBar={contentBar}
         discountContent={myCustomBar?.node}
@@ -267,7 +267,7 @@ export const NavbarMobile = ({
         display_md="none"
         display_xxs="flex"
         position="static"
-      />
+      />*/}
       <Nav
         display_md="none"
         display="flex"
