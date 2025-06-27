@@ -165,8 +165,8 @@ two_columns_video:
     style: '{"padding": "20px 48px", "border-radius": "5px"}'
 
 choose_program:
-  title: "Explore our top tech programs"
-  paragraph: "Choose the program that best fits your career golas. Our most popular tracks are designed to get you job-ready in tech."
+  title: "Our Job Guarantee is Available for Our Top Tech Programs "
+  paragraph: "Choose your career path. Master the skills and get hired."
 
 two_column_geek:
   proportions: [5, 7]
