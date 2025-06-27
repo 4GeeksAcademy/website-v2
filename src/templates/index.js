@@ -118,6 +118,20 @@ const Home = (props) => {
             >
               <H1
                 type="h1"
+                textAlign_tablet="start"
+                textAlign_xxs="start"
+                fontSize="40px"
+                fontSize_tablet="55px"
+                margin="20px 0 12px 0"
+                lineHeight_xxs="45px"
+                lineHeight_tablet="60px"
+                width_tablet="100%"
+                fontFamily="Archivo-Black"
+                color={Colors.black}
+                dangerouslySetInnerHTML={{ __html: yml.header_data.title }}
+              />
+              <H2
+                type="h2"
                 textAlign="left"
                 textShadow="none"
                 fontSize="21px"
@@ -125,23 +139,23 @@ const Home = (props) => {
                 fontWeight="400"
                 color={Colors.black}
               >
-                {city} {yml.header_data.tagline}
-              </H1>
-              <H2
-                type="h2"
-                textAlign_tablet="start"
-                textAlign_xxs="start"
-                fontSize="40px"
-                fontSize_tablet="55px"
-                margin="20px 0 0 0"
-                lineHeight_xxs="45px"
-                lineHeight_tablet="60px"
-                width_tablet="100%"
-                fontFamily="Archivo-Black"
-                color={Colors.black}
-              >
-                {`${yml.header_data.title}`}
+                {pageContext.lang === "es" && city
+                  ? `${city} ${yml.header_data.tagline}`
+                  : yml.header_data.tagline}
               </H2>
+
+              {yml.header_data.sub_heading && (
+                <Paragraph
+                  textAlign="left"
+                  color={Colors.black}
+                  fontSize="16px"
+                  margin="10px 0 0 0"
+                  dangerouslySetInnerHTML={{
+                    __html: yml.header_data.sub_heading,
+                  }}
+                />
+              )}
+
               <Div display="block" margin="20px 0">
                 {yml.header_data.bullets.map((bullet) => (
                   <Div alignItems="center" margin="0 0 15px 0" gap="5px">
@@ -346,6 +360,18 @@ const Home = (props) => {
         />
       </Div>
 
+      {yml.choose_program && (
+        <ChooseYourProgram
+          chooseProgramRef={chooseProgramRef}
+          id="choose-program"
+          lang={pageContext.lang}
+          programs={data.allChooseYourProgramYaml.edges[0].node.programs}
+          title={yml.choose_program.title}
+          paragraph={yml.choose_program.paragraph}
+          background={Colors.veryLightBlue3}
+        />
+      )}
+
       <GeeksVsOthers
         lang={pageContext.lang}
         mainBackround={Colors.white}
@@ -363,61 +389,58 @@ const Home = (props) => {
         paragraph={yml.geeks_vs_others.sub_heading}
         link
       />
-      <Testimonials
-        lang={data.allTestimonialsYaml.edges}
-        background={Colors.veryLightBlue3}
-        heading={yml.success_cases.title}
-        content={yml.success_cases.content}
-        margin="0"
-        variant="carousel"
-      />
-      <TwoColumnCarousel
-        title={
-          <div
-            style={{ padding: "0 10px" }}
-            dangerouslySetInnerHTML={{ __html: yml.two_column_carousel.title }}
-          />
-        }
-        text={
-          <div
-            style={{ padding: "0 10px", textAlign: "justify" }}
-            dangerouslySetInnerHTML={{ __html: yml.two_column_carousel.text }}
-          />
-        }
-        background={Colors.veryLightBlue3}
-        carouselProps={{
-          margin: "0px",
-          margin_tablet: "0px",
-        }}
-      >
-        {yml.two_column_carousel.videos.map((elem) => (
-          <Div
-            key={elem.video}
-            borderRadius="4px"
-            border={`1px solid ${Colors.black}`}
-          >
-            <ReactPlayer
-              margin_tablet="0px 0px"
-              thumb={elem.src}
-              id={elem.video}
-              width="100%"
-              width_tablet="100%"
-              style={{ height: "400px", width: "100%" }}
-              videoHeight="400px"
+      {yml.success_cases && (
+        <Testimonials
+          lang={data.allTestimonialsYaml.edges}
+          background={Colors.veryLightBlue3}
+          heading={yml.success_cases.title}
+          content={yml.success_cases.content}
+          margin="0"
+          variant="carousel"
+        />
+      )}
+      {yml.two_column_carousel && (
+        <TwoColumnCarousel
+          title={
+            <div
+              style={{ padding: "0 10px" }}
+              dangerouslySetInnerHTML={{
+                __html: yml.two_column_carousel.title,
+              }}
             />
-          </Div>
-        ))}
-      </TwoColumnCarousel>
+          }
+          text={
+            <div
+              style={{ padding: "0 10px", textAlign: "justify" }}
+              dangerouslySetInnerHTML={{ __html: yml.two_column_carousel.text }}
+            />
+          }
+          background={Colors.veryLightBlue3}
+          carouselProps={{
+            margin: "0px",
+            margin_tablet: "0px",
+          }}
+        >
+          {yml.two_column_carousel.videos.map((elem) => (
+            <Div
+              key={elem.video}
+              borderRadius="4px"
+              border={`1px solid ${Colors.black}`}
+            >
+              <ReactPlayer
+                margin_tablet="0px 0px"
+                thumb={elem.src}
+                id={elem.video}
+                width="100%"
+                width_tablet="100%"
+                style={{ height: "400px", width: "100%" }}
+                videoHeight="400px"
+              />
+            </Div>
+          ))}
+        </TwoColumnCarousel>
+      )}
 
-      <ChooseYourProgram
-        chooseProgramRef={chooseProgramRef}
-        id="choose-program"
-        lang={pageContext.lang}
-        programs={data.allChooseYourProgramYaml.edges[0].node.programs}
-        title={yml.choose_program.title}
-        paragraph={yml.choose_program.paragraph}
-        background={Colors.veryLightBlue3}
-      />
       {/* TWO COLUMN CREAR EN EL YML*/}
       <Div display="block" background={Colors.veryLightBlue3} padding="40px 0">
         <H2 type="h2" textAlign_tablet="center">
@@ -448,6 +471,7 @@ const Home = (props) => {
         }
         playerHeight="600px"
         title={yml.with_4geeks.title}
+        subtitle={yml.with_4geeks.sub_title}
       />
 
       <OurPartners
@@ -640,6 +664,7 @@ export const query = graphql`
           }
           with_4geeks {
             title
+            sub_title
           }
         }
       }

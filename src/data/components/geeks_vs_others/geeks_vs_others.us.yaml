@@ -2,13 +2,13 @@
 ## THIS COMPONENT IS USED IN "/home" AND "/course/..."
 ## THE HEADINGS ALLOW YOU TO SET DIFFERENT HEADINGS IN "/home" AND "/the-academy" TEMPLATES.
 titles:
-  featured: "FEATURES"
+  featured: "FEATURE"
   at_geeks: "AT 4GEEKS"
   average: "INDUSTRY AVERAGE"
   logo: "/images/rigobot-logo.png"
 globe_text: Click me!
 info:
-  - features: "Career Support"
+  - features: "Personalized Career Support"
     at4_Geeks: "Forever"
     industry_average: "Until you get a job"
     why_important: "Meet hiring partners during Demo Day (GeekTALKS), attend the CareerWeek™️, build your resume, mock interviews and tailored training. And keep coming back! GeekPAL services are available for life."
@@ -20,9 +20,9 @@ info:
     why_important: "It is really easy to get stuck when you are learning to code: You need personal mentorship. That is why you will find more teachers at 4Geeks than the industry average."
     icon: ""
 
-  - features: "Response Time"
-    at4_Geeks: "30 min"
-    industry_average: "Not measured"
+  - features: "AI-POWERED FEEDBACK"
+    at4_Geeks: "Tailored to your progress and profile"
+    industry_average: "Generic or non-existent"
     why_important: "Getting stuck is the 1st reason that leads to both frustration and to loss of motivation. That is why we have created the \"30 min rule\" to keep you going. Someone will always be available to help you."
     icon: ""
 
@@ -32,9 +32,9 @@ info:
     why_important: "Appointment system where you can request 1-on-1 mentorships from 9am - 9pm. Online and in-person, for the rest of your life."
     icon: ""
 
-  - features: "Interview Preparation"
-    at4_Geeks: "Tailored to each interview"
-    industry_average: "Generic"
+  - features: "Curriculum"
+    at4_Geeks: "Constantly updated"
+    industry_average: "Slow to adapt"
     why_important: "Our interview preparation is tailored for each opportunity that you face, our mentors will recommend specific tutorials and other priorities, and our coaching does not end until you find a job."
     icon: ""
 
