@@ -3,10 +3,10 @@ meta_info:
   title: "Cursos de Programación en España - 4Geeks Academy"
   description: "Aprende programación en Madrid con nuestros bootcamps de desarrollo web. Cursos presenciales y online con garantía de empleo."
   image: "/images/bg/main-bg.jpg"
-  keywords: "programación madrid, bootcamp programación españa, desarrollo web"
+  keywords: ""
   visibility: "visible"
   template: "landing_a"
-  redirects: []
+  redirects: ["/programas-espana"]
   utm_course: ["full-stack", "datascience-ml", "cybersecurity"]
   utm_location: ["madrid-spain"]
   automation: "soft"
