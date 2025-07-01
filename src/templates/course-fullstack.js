@@ -286,10 +286,12 @@ const Program = ({ data, pageContext, yml }) => {
         paragraph={yml.prices.sub_heading}
       />
 
-      <ScholarshipProjects
-        content={data.allScholarshipProjectsYaml.edges[0].node}
-        lang={pageContext.lang}
-      />
+      {pageContext.lang === "es" && (
+        <ScholarshipProjects
+          content={data.allScholarshipProjectsYaml.edges[0].node}
+          lang={pageContext.lang}
+        />
+      )}
 
       {/*<OurPartners images={hiring.partners.images} marquee/>*/}
 
