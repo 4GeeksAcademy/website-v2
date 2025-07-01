@@ -1,0 +1,253 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Landing Page YML Generation Rules
+
+## File Naming and Structure
+- **File Extension**: `.yml` (not .yaml)
+- **Naming Convention**: lowercase with underscores (e.g., `miami-coding-bootcamp.es.yml`)
+- **Language Support**: Both English (`.us.yml`) and Spanish (`.es.yml`) versions required
+- **Location**: Files must be saved in `src/data/landing/`
+
+## Required Top-Level Sections
+
+### meta_info (Required)
+- `slug`: URL slug for the landing page
+- `title`: Browser tab title and SEO title
+- `description`: Meta description (under 160 characters)
+- `image`: Social media preview image (use existing image routes)
+- `keywords`: SEO keywords (none by default)
+- `visibility`: "visible" (default), "hidden", or "unlisted"
+- `template`: Must be "landing_a"
+- `redirects`: Array of URL redirections
+- `utm_course`: Array of course slugs ["full-stack", "software-engineering", "machine-learning-engineering"]
+- `utm_location`: Array of location slugs (see supported locations below)
+- `automation`: Default "soft"
+- `tag`: Default "request_more_info"
+
+### form (Required)
+- `fields`: Array of form fields ["first_name", "last_name", "full_name", "phone", "email"]
+- `heading`: Form title
+- `motivation`: Form subtitle/motivation text
+- `button_label`: Submit button text
+- `redirect`: Optional redirect URL
+- `hide_form`: Boolean to hide the form
+
+### header_data (Required)
+- `tagline`: Main headline
+- `sub_heading`: Subtitle
+- `background`: Background color
+- `tagline_color`: Text color
+- `form_styles`: Form styling object
+- `background_image`: Hero background image
+- `badge`: Optional badge image
+- `image_filter`: CSS filter for background image
+
+### follow_bar (Required)
+- `position`: "top", "bottom", or "hidden"
+- `content.text`: Desktop text content
+- `content.text_mobile`: Mobile text content
+- `content.font_size`: Array of font sizes for different devices
+- `button.text`: Button text
+- `button.path`: Button link
+- `phone.text`: Phone label
+- `phone.number`: Phone number
+
+### features (Required)
+- `bullets`: Array of feature bullet points
+- `styles`: Optional CSS styles
+- `marginTop`: Optional margin
+
+## Optional Top-Level Sections
+
+### navbar
+- `logoUrl`: Logo image URL
+- `buttonText`: Navbar button text
+- `buttonUrl`: Navbar button link
+
+### apply_schollarship
+- `imageSide`: "left" or "right"
+- `image`: Form image
+
+### short_badges
+- Array of badge objects with `name`, `url`, `image`, `alt`
+
+### components (Array)
+Each component must have:
+- `name`: Unique component identifier
+- `position`: Numeric position for ordering
+- `layout`: Component layout type
+- Optional properties based on layout type
+
+## Supported Component Layouts
+
+### two_column_left / two_column_right
+- `background`: Background color
+- `proportions`: Array of column proportions [6, 6]
+- `image.src`: Image URL
+- `image.style`: CSS styles
+- `image.shadow`: Boolean for shadow
+- `image.link`: Optional link
+- `video`: Optional video URL
+- `heading.text`: Heading text
+- `heading.font_size`: Array of font sizes
+- `heading.style`: CSS styles
+- `sub_heading.text`: Subheading text
+- `sub_heading.font_size`: Array of font sizes
+- `content.text`: Content text
+- `content.font_size`: Array of font sizes
+- `button.text`: Button text
+- `button.color`: Button text color
+- `button.background`: Button background
+- `button.path`: Button link
+- `bullets.items`: Array of bullet items
+
+### iconogram
+- `swipable`: Boolean
+- `heading.text`: Heading text
+- `heading.font_size`: Array of font sizes
+- `sub_heading.text`: Subheading text
+- `sub_heading.font_size`: Array of font sizes
+- `icons`: Array of icon objects with `icon`, `title`, `content`
+
+### cards_carousel
+- `heading.text`: Heading text
+- `heading.font_size`: Array of font sizes
+- `sub_heading.text`: Subheading text
+- `content.text`: Content text
+- `button.text`: Button text
+- `button.path`: Button link
+- `cards`: Array of card objects
+
+### testimonials_new
+- `heading.text`: Heading text
+- `filter_indexes`: Array of testimonial indexes
+- `variant`: "small" or other variants
+
+### faq
+- `topic`: FAQ topic identifier
+
+## Supported UTM Location Values
+
+### United States
+- `austin-usa`
+- `atlanta-usa`
+- `chicago-usa`
+- `dallas-usa`
+- `downtown-miami`
+- `houston-usa`
+- `losangeles-usa`
+- `newyork-usa`
+- `orlando`
+- `tampa-usa`
+- `online-spanish-usa`
+
+### Europe
+- `barcelona-spain`
+- `berlin-germany`
+- `dublin-ireland`
+- `europe`
+- `hamburg-germany`
+- `lisbon-portugal`
+- `madrid-spain`
+- `malaga-spain`
+- `milan-italy`
+- `munich-germany`
+- `rome-italy`
+- `toronto-canada`
+- `valencia-spain`
+
+### Latin America
+- `bogota-colombia`
+- `buenosaires-argentina`
+- `caracas-venezuela`
+- `costa-rica`
+- `lapaz-bolivia`
+- `lima-peru`
+- `mexicocity-mexico`
+- `montevideo-uruguay`
+- `online`
+- `panamacity-panama`
+- `quito-ecuador`
+- `santiago-chile`
+
+## Additional Optional Sections
+
+### program_details
+- `position`: Numeric position
+- `heading`: Section heading
+- `background`: Background color
+- `sub_heading`: Section subheading
+
+### geeks_vs_others
+- `position`: Numeric position
+- `heading`: Section heading
+- `paragraph`: Description text
+- `total_rows`: Number of comparison rows
+
+### why_4geeks
+- `position`: Numeric position
+- `heading`: Section heading
+- `sub_heading`: Section subheading
+- `footer.text`: Footer text
+- `footer.text_link`: Footer link
+
+### who_is_hiring
+- `position`: Numeric position
+- `heading`: Section heading
+- `sub_heading`: Section subheading
+- `limit`: Number of companies to show
+- `featured`: Array of featured companies
+
+### alumni_projects
+- `position`: Numeric position
+- `heading`: Section heading
+- `sub_heading`: Section subheading
+
+### rating_reviews
+- `position`: Numeric position
+- `heading`: Section heading
+- `background`: Background color
+- `rating_list`: Array of rating objects
+
+### about4Geeks
+- `position`: Numeric position
+- `heading`: Section heading
+- `sub_heading`: Section subheading
+- `list`: Array of list items
+- `paragraph`: Description text
+- `button_text`: Button text
+- `button_link`: Button link
+- `image`: Main image
+- `image_mobile`: Mobile image
+
+### in_the_news
+- `heading`: Section heading
+- `position`: Numeric position
+- `filter`: Optional filter
+
+### why_python
+- `position`: Numeric position
+- `heading`: Section heading
+- `sub_heading`: Section subheading
+
+## Image Requirements
+- All images must use relative paths starting with `/images/` or `../../../static/images/`
+- Images support `childImageSharp.gatsbyImageData` for optimization
+- Image objects can include `src`, `style`, `shadow`, `link` properties
+
+## Component Positioning
+- Components are rendered in order based on `position` field (ascending)
+- Lower position numbers appear first on the page
+- Position values should be spaced (e.g., 1, 2, 5, 10) to allow for future insertions
+
+## Language-Specific Requirements
+
+- Files must use the language specified by the user (e.g., English for .us.yml, Spanish for .es.yml).
+- English files (.us.yml): Use English text and "us" language context.
+-  Spanish files (.es.yml): Use Spanish text and "es" language context.
+-  Each file must follow the structure defined, with no requirement for dual-language versions unless explicitly requested.
+
+
