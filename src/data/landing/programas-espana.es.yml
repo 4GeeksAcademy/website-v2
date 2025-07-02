@@ -97,12 +97,7 @@ components:
     content:
       text: ""
       font_size: ["16px"]
-    button:
-      text: "¡Únete a la Academia!"
-      path: "#leadform_bottom"
-      color: "white"
-      background: "black"
-      hover_color: "lightBlue"
+
     bullets:
       items:
         - heading: "Enfoque en las necesidades del mercado"
