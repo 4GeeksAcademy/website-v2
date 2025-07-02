@@ -117,7 +117,7 @@ const Overlaped = ({
             color="#2E2E38"
             dangerouslySetInnerHTML={{ __html: heading }}
           />
-          {content && /<\/?[a-z0-9]+>/g.test(content) ? (
+          {content && (
             <Paragraph
               textAlign="start"
               margin="12px 0 0 0"
@@ -126,17 +126,7 @@ const Overlaped = ({
               color="#3A3A3A"
               dangerouslySetInnerHTML={{ __html: content }}
             />
-          ) : content ? (
-            <Paragraph
-              textAlign="start"
-              margin="12px 0 0 0"
-              fontFamily="Lato, sans-serif"
-              fontSize="16px"
-              color="#3A3A3A"
-            >
-              {content}
-            </Paragraph>
-          ) : null}
+          )}
 
           {button?.text && (
             <Link to={button.path}>
@@ -238,7 +228,7 @@ const Overlaped = ({
             color="#2E2E38"
             dangerouslySetInnerHTML={{ __html: heading }}
           />
-          {content && /<\/?[a-z0-9]+>/g.test(content) ? (
+          {content && (
             <Paragraph
               textAlign="start"
               margin="12px 0 0 0"
@@ -247,17 +237,7 @@ const Overlaped = ({
               color="#3A3A3A"
               dangerouslySetInnerHTML={{ __html: content }}
             />
-          ) : content ? (
-            <Paragraph
-              textAlign="start"
-              margin="12px 0 0 0"
-              fontFamily="Lato, sans-serif"
-              fontSize="16px"
-              color="#3A3A3A"
-            >
-              {content}
-            </Paragraph>
-          ) : null}
+          )}
           {button?.text && (
             <Link to={button.path}>
               <Button
