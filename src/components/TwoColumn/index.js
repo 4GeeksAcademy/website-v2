@@ -142,7 +142,18 @@ const Side = ({
             margin="30px 0 20px 0"
             style={heading.style ? JSON.parse(heading.style) : null}
           >
-            {heading.text}
+            {heading.text.includes("\n")
+              ? heading.text.split("\n").map((line, idx, arr) =>
+                  idx < arr.length - 1 ? (
+                    <React.Fragment key={idx}>
+                      {line}
+                      <br />
+                    </React.Fragment>
+                  ) : (
+                    line
+                  )
+                )
+              : heading.text}
           </H2>
         </Div>
       )}
