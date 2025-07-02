@@ -25,7 +25,7 @@ form:
   redirect: /es/gracias
 
 header_data:
-  tagline: Descubre por qué somos la mejor bootcamp en España
+  tagline: Descubre por qué somos el mejor bootcamp en España
   sub_heading: ""
   background: "#ffffff"
   tagline_color: "#1c1c1c"
@@ -34,30 +34,27 @@ header_data:
     color: white
     button:
       background: black
-  background_image: /images/4geeks-main.jpg
-  badge: /images/badges/switchup.png
 
 follow_bar:
-  position: top
+  position: "top"
   content:
-    text: Solicita tu plaza en 4Geeks España \n y comienza tu carrera en tecnología"
-    text_mobile: Solicita tu plaza en 4Geeks España \n y comienza tu carrera en tecnología"
+    text: "Solicita tu plaza en 4Geeks España y comienza tu carrera en tecnología"
+    text_mobile: "Solicita tu plaza en 4Geeks España"
     font_size: ["25px", "25px", "25px", "18px", "18px"]
   button:
-    text: Más información
+    text: "Más información"
     path: "#leadform_bottom"
   phone:
     text: ""
     number: ""
 
-
 features:
   bullets:
-    - ¡Conviértete en full stack developer, data scientist o consultor en
-      ciberseguridad!
+    - ¡Conviértete en full stack developer, data scientist o consultor en ciberseguridad!
     - Mentorías ilimitadas y con apoyo profesional de por vida
     - Programas 100% en remoto y en directo a medio tiempo
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
+
 apply_schollarship:
   imageSide: left
   image: ../../../static/images/bg/main.png
@@ -69,7 +66,7 @@ why_4geeks:
 
 geeks_vs_others:
   position: 8
-  heading: Compara a 4Geeks con otros Bootcamps
+  heading: "Compara a 4Geeks con otros Bootcamps"
   paragraph: ""
 
 who_is_hiring:
@@ -111,7 +108,7 @@ components:
           text: Alrededor del 90% de nuestros graduados encuentran trabajo en los primeros 6 meses.
           icon: circle
 
-  - name: two_columns
+  - name: the-academy
     position: 2
     layout: two_column_right
     proportions: [6, 6]
