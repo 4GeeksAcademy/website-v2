@@ -1,35 +1,29 @@
----
 meta_info:
   slug: programas-espana
-  title: Cursos de Programación en España - 4Geeks Academy
-  description: Aprende programación en Madrid con nuestros bootcamps de desarrollo
-    web. Cursos presenciales y online con garantía de empleo.
-  image: /images/bg/main-bg.jpg
+  title: "Cursos de Programación en España - 4Geeks Academy"
+  description: "Aprende programación en Madrid con nuestros bootcamps de desarrollo web. Cursos presenciales y online con garantía de empleo."
+  image: "/images/bg/main-bg.jpg"
   keywords: ""
-  visibility: visible
-  template: landing_a
-  redirects:
-    - /espana-programas
-  utm_course:
-    - full-stack
-    - datascience-ml
-    - cybersecurity
-  utm_location:
-    - madrid-spain
+  visibility: "visible"
+  template: "landing_a"
+  redirects: ["/espana-programas"]
+  utm_course: ["full-stack", "datascience-ml", "cybersecurity"]
+  utm_location: ["madrid-spain"]
   automation: soft
   tag: request_more_info
+
+navbar:
+  logoUrl: "#"
+  buttonText: "Solicita tu plaza" # this modifies the button text in the navbar
+  buttonUrl: "#leadform_bottom" #accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+
 form:
-  fields:
-    - full_name
-    - phone
-    - email
-  heading: Solicita información
-  motivation: Una vez completado el formulario, recibirás una confirmación por
-    correo con detalles del programa, financiación y apoyo para tomar decisiones
-    informadas sobre tu carrera
+  fields: ["full_name", "phone", "email"]
+  heading: "Solicita información"
+  motivation: "Una vez completado el formulario, recibirás una confirmación por correo con detalles del programa, financiación y apoyo para tomar decisiones informadas sobre tu carrera"
   button_label: Solicita información
   redirect: /es/gracias
-  hide_form: false
+
 header_data:
   tagline: Descubre por qué somos la mejor bootcamp en España
   sub_heading: ""
@@ -42,24 +36,21 @@ header_data:
       background: black
   background_image: /images/4geeks-main.jpg
   badge: /images/badges/switchup.png
-  image_filter: brightness(0.4)
+
 follow_bar:
   position: top
   content:
-    text: ¡Aprende programación! Becas y financiamiento disponible.
-    text_mobile: ¡Aprende programación! Becas y financiamiento disponible.
-    font_size:
-      - 25px
-      - 25px
-      - 25px
-      - 18px
-      - 4.3vw
+    text: Solicita tu plaza en 4Geeks España \n y comienza tu carrera en tecnología"
+    text_mobile: Solicita tu plaza en 4Geeks España \n y comienza tu carrera en tecnología"
+    font_size: ["25px", "25px", "25px", "18px", "18px"]
   button:
     text: Más información
     path: "#leadform_bottom"
   phone:
     text: ""
     number: ""
+
+
 features:
   bullets:
     - ¡Conviértete en full stack developer, data scientist o consultor en
@@ -70,15 +61,17 @@ features:
 apply_schollarship:
   imageSide: left
   image: ../../../static/images/bg/main.png
+
 why_4geeks:
   position: 6
   heading: Por qué 4Geeks
   sub_heading: ""
+
 geeks_vs_others:
   position: 8
   heading: Compara a 4Geeks con otros Bootcamps
   paragraph: ""
-  total_rows: 5
+
 who_is_hiring:
   position: 10
   limit: 4
@@ -87,54 +80,41 @@ who_is_hiring:
     Gracias a nuestra creciente lista de aliados, tenemos ofertas de
     trabajo locales e internacionales para nuestros estudiantes a diario.
     Junto con nuestro servicio GeekFORCE (Career Support), nos complace tener ~ 86% de nuestros estudiantes contratados dentro de los 100 días o menos desde el día de graduación.
+
 components:
   - name: first-section
     position: 1
     layout: two_column_left
-    proportions:
-      - 6
-      - 6
+    proportions: [6, 6]
     background: "#fbfbfb"
     image:
       style: '{ "border" : "3px solid black" }'
       src: /images/landing/4Geeks-Espana.jpg
       shadow: true
     section_heading:
-      text: ¿Por qué elegir 4Geeks Academy como uno de los mejores bootcamps de
-        España?
+      text: ¿Por qué elegir 4Geeks Academy como uno de los mejores bootcamps de España?
     heading:
       text: Las razones por las que somos el mejor bootcamp de programación en España
-      font_size:
-        - 24px
-        - 24px
-        - 24px
-        - 18px
-        - 18px
+      font_size: ["24px", "24px", "24px", "18px", "18px", ]
     content:
       text: ""
-      font_size:
-        - 16px
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
     bullets:
       items:
         - heading: Enfoque en las necesidades del mercado
-          text: Nuestro programa se basa en las habilidades y tecnologías más demandadas
-            por las empresas, lo que te asegura una formación práctica y útil.
+          text: Nuestro programa se basa en las habilidades y tecnologías más demandadas por las empresas, lo que te asegura una formación práctica y útil.
           icon: circle
         - heading: Mentorías personalizadas e ilimitadas
-          text: Recibe el apoyo individual de mentores expertos en cada etapa de tu
-            carrera, desde la elección de tu camino profesional hasta la
-            búsqueda de empleo.
+          text: Recibe el apoyo individual de mentores expertos en cada etapa de tu carrera, desde la elección de tu camino profesional hasta la búsqueda de empleo.
           icon: circle
         - heading: Inserción laboral
-          text: Alrededor del 90% de nuestros graduados encuentran trabajo en los primeros
-            6 meses.
+          text: Alrededor del 90% de nuestros graduados encuentran trabajo en los primeros 6 meses.
           icon: circle
+
   - name: two_columns
     position: 2
     layout: two_column_right
-    proportions:
-      - 6
-      - 6
+    proportions: [6, 6]
     image:
       style: '{"border" : "3px solid black", "backgroundSize": "contain" }'
       src: /static/images/testimonials/diego-gomez-testimonial.webp
@@ -142,31 +122,16 @@ components:
     video: https://www.youtube.com/watch?v=9Vm_xD49MaU&list=PLmBUv425PabWp2htZTrCU2AKkmCzjrFn3
     heading:
       text: Un camino hacia el éxito profesional en tecnología
-      font_size:
-        - 30px
-        - 30px
-        - 30px
-        - 30px
-        - 30px
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
     sub_heading:
-      text: Diego comparte cómo nuestro bootcamp le proporcionó todo lo que necesitaba
-        para dar el salto al mundo laboral. Independientemente de si tienes
-        conocimientos previos o comienzas desde cero, en 4Geeks Academy
-        recibirás la formación y el apoyo que necesitas para destacar en la
-        industria.
-      font_size:
-        - 16px
-        - 16px
-        - 16px
-        - 16px
-        - 16px
+      text: Diego comparte cómo nuestro bootcamp le proporcionó todo lo que necesitaba para dar el salto al mundo laboral. Independientemente de si tienes conocimientos previos o comienzas desde cero, en 4Geeks Academy recibirás la formación y el apoyo que necesitas para destacar en la industria.
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
     button:
       text: Solicita información
       color: white
       background: black
       path: "#leadform_bottom"
-    bullets:
-      items: []
+
   - name: courses
     position: 4
     background: veryLightBlue2
@@ -174,21 +139,11 @@ components:
     swipable: true
     heading:
       text: Descubre tu potencial en 4Geeks Academy
-      font_size:
-        - 30px
-        - 30px
-        - 30px
-        - 30px
-        - 30px
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
     sub_heading:
       text: Programas para convertirte en un experto en programación y complementar tu
         perfil profesional
-      font_size:
-        - 16px
-        - 16px
-        - 16px
-        - 16px
-        - 16px
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
       style: '{ "textAlign": "center", "width": "90%" }'
     icons:
       - icon: fullstack

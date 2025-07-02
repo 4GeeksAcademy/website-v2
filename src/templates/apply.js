@@ -122,7 +122,7 @@ const Apply = (props) => {
         // Reset location and consents if location is not found in new language
         setVal((prev) => ({
           ...prev,
-          location: { value: '', valid: false },
+          location: { value: "", valid: false },
           consents: { value: [], valid: true },
         }));
         setConsentValue([]);
