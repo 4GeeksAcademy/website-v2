@@ -9,13 +9,14 @@ meta_info:
   redirects: ["/home", "/us/home", "/en/home", "/us"]
 
 header_data:
-  tagline: Coding Bootcamp
-  title: Empower Your Life With Coding Skills
-  sub_heading: Lifelong coding mentorship, endless career support, and a tech-driven community of developers.
+  title: "AI is here.<br/>So are we."
+  tagline: Build your new tech career
+  sub_heading: We are a global coding bootcamp training the next generation of tech professionals. With career oriented training, AI-powered tools, and unlimited human mentorship, we prepare you to launch a lasting tech career.
   bullets:
-    - Lifelong coding mentorship, unlimited career support, and a tech-driven community of developers.
-    - 'Job Guarantee: Get a job within 9 months of graduation or your money back, <a href="https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/Conditions%20Job%20Guaranteed%20Program.pdf" style="text-decoration: none; color: #000000; font-weight: 700;"> conditions apply. </a>'
-    - Learn anywhere, anytime, you choose the format.
+    - Hyperpersonalized learning experience
+    - Unlimited career support for today's AI-driven job market
+    - Gain future-proof skills and the mindset recruiters are looking for
+    - '<strong style="text-decoration: none; color: #000000; font-weight: 700;"> Job Guarantee</strong>: Get hired within 9 months of graduating — or your money back (conditions apply)'
   join_button_text: CHOOSE A PROGRAM
   join_button_path: "#choose-program"
   free_button_text: TAKE A FREE TRIAL AT NO COST
@@ -35,26 +36,15 @@ button:
 
 ## BADGES SECTION /components/Badges
 badges:
-  title: "8 Years empowering people to succeed in tech"
+  title: |-
+    Ranked Among the World's Top Coding Bootcamps. 
+    Trusted by Thousands.
   paragraph: "Licensed by the Florida Department of Education, recognized by Forbes as a top 5 Coding School, and consistently ranked among the world's best coding bootcamps by major independent listings."
-
-success_cases:
-  title: Success stories
-  content: 86% of our students get hired
-
-two_column_carousel:
-  title: "We make it possible"
-  text: "Find out how we help you succeed."
-  videos:
-    - src: "/images/landing/alissa-video.webp"
-      video: "EcqasocRKHo"
-    # - src: "/images/landing/alissa-video.webp"
-    #   video: "EcqasocRKHo"
 
 ## CHOOSE YOUR PROGRAM /components/ChooseYourProgram
 choose_program:
-  title: Choose your program
-  paragraph: Find the path that’s right for you
+  title: BUILD YOUR FUTURE IN TECH
+  paragraph:  Choose your program. Master the skills. Get hired.
 
 why_4geeks:
   proportions: [6, 6]
@@ -63,13 +53,12 @@ why_4geeks:
     src: "/images/landing/hombre-con-laptop-2.png"
     shadow: false
   heading:
-    text: "Be part of a vibrant community"
+    text: "Succeed in Tech With AI-Powered Tools and Lifelong Human Support"
     style: '{ "fontWeight": 400}'
   sub_heading:
-    text: "Join our international community of over 4000 students, teachers, partners, and alumni. Connect through various channels like Slack, GitHub, social media, and our exclusive platform 4Geeks.com. Where there’s a geek, there’s a way! What sets us apart:"
+    text: "With 7+ global campuses, 4,000+ alumni, and expert mentors always within reach, 4Geeks offers more than just the latest coding skills—we provide a lifelong support system for your tech career."
   content:
-    text: |-
-      Belong to a community of like-minded people who genuinely support each other. Gain lifetime access to our online learning platform and mentorship services. We’ll always be there for you, even after you graduate.
+    text: " "
   button:
     text: "Apply now"
     color: "white"
@@ -77,15 +66,12 @@ why_4geeks:
     path: "/us/apply"
   bullets:
     items:
-    - text: "Lifelong and readily available coding mentorship"
+    - text: '<strong style="text-decoration: none; color: #000000; font-weight: 700;">Personalized Learning at Every Level:</strong> Benefit from an unmatched student-to-teacher ratio, unlimited access to human mentors, plus AI-powered coaching tailored to your learning journey.'
       icon: "check"
-    - text: "Unlimited and personalized career support"
+    - text: '<strong style="text-decoration: none; color: #000000; font-weight: 700;">Lifelong Mentorship & Career Support:</strong> Get 1:1 guidance from expert human mentors and career coaches whenever you need it, for life.'
       icon: "check"
-    - text: "Award-winning syllabus and methodology"
+    - text: '<strong style="text-decoration: none; color: #000000; font-weight: 700;">AI-integrated Curriculum and Learning Tools:</strong> Master the latest AI tools and stay ahead of job market trends.'
       icon: "check"
-    - text: "An extensive network of partners in tech"
-      icon: "check"
-
 ## TWO COLUMNS
 two_columns:
   proportions: [6, 6]
@@ -97,67 +83,82 @@ two_columns:
   section_heading:
     text: "Finance your future"
   heading:
-    text: "$20 million in scholarships"
-    style: '{ "fontWeight": 400, "marginBottom": "32px", "marginTop": "0px" }'
+    text: "Invest in your Career with Flexible Payment Plans and a Job Guarantee"
+    style: '{ "fontWeight": 200, "marginBottom": "24px", "marginTop": "0px", "fontSize": "22px" }'
   content:
     text: |
-      "1,456 people from all walks of life have benefited from our scholarship programs." <a style="color: black; cursor:pointer; text-decoration: underline; opacity: 0.8;">read here</a> stories of the beneficiaries and projects.
-    path: "/us/20-million"
+      <p>We want you to focus on what matters: learning, growing, and launching your tech career—not stressing about how to pay for it.</p>
+      <br/>
+      <p> That's why we make financing your education as simple and flexible as possible:</p>
+      <br/>
+      <ul>
+        <li>✓ Among the most affordable tuitions for a top bootcamp</li>
+        <li>✓ Payment plans starting under $299/month</li>
+        <li>✓ Job Guarantee available (with qualifying terms)</li>
+      </ul>
+      <br/>
+      <p>And if you need one more reason to feel confident: In 2024, <strong style="text-decoration: none; color: #000000; font-weight: 700;">Forbes</strong> named us the <a href="https://4geeksacademy.com/us/trends-and-tech/celebrating-forbes-doble-recognition" style="text-decoration: none; color: #000000; font-weight: 700;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">best bootcamp for students on a budget<span style="font-size: 0.8em;">↗</span></a>—recognizing our commitment to keeping tech education accessible.</p>
+      <p><strong style="text-decoration: none; color: #000000; font-weight: 700;">Have questions?</strong> Our admissions team will help you find your best-fit financing plan.</p>
+    path: "/us/apply"
   button:
-    text: "See all financing options"
+    text: "GET IN TOUCH"
     color: "white"
     background: "blue"
-    path: "/us/financials#prices_and_payment"
-  boxes:
-    - icon: rocket-2
-      title: "14"
-      text: Projects completed
-    - icon: handsheart
-      title: "1465"
-      text: Beneficiaries so far
+    path: "/us/apply"
+ 
 
 # Two Columns - Rigo
 two_columns_rigo:
   proportions: [7, 5]
   justify: "center" #start,end,center
   image:
-    style: '{"backgroundSize": "contain", "background-position": "center", "border" : "2px solid black", "border-radius": "4px"}'
+    style: '{"backgroundSize": "contain", "background-position": "center", "border" : "10px solid black", "border-radius": "4px"}'
     src: "/images/landing/ai-mentor.jpg"
     shadow: true
   video: "6m1Jyya7eCc"
   heading: 
-    text: "Why 4Geeks?"
+    text: "Welcome to Hyperpersonalized Learning"
     font_size: ["33px", "33px", "33px", "33px", "33px"]
     style: '{ "lineHeight": "30px" }'
     heading_image:
       src: "/images/rigobot-logo.png"
   sub_heading:
-    text: "Hyperpersonalized Learning - Progress Like Never Before"
+    text: "Progress Like Never Before"
     font_size: ["16px","16px","16px","16px","16px"]
   content:
     style: '{ "font-size":"16px", "margin":"15px 0" }'
-    text: "We're all different—yet education has always been one-size-fits-all. But there's a better way to learn: one that's built around you. Our custom-built AI tracks your activity to understand your strengths and weaknesses, tailoring its feedback to your progress in real time. And whenever you need extra clarity and support, our human mentors are always available for 1:1 sessions, ready to guide you through whatever's holding you back. \nYou'll move faster, learn smarter, and gain confidence like never before."
-  bullets:
+    text: |
+      <p>We're all different—yet education has always been one-size-fits-all. At 4Geeks, we've built a better way to learn: <strong style="text-decoration: none; color: #000000; font-weight: 700;">one that adapts to you.</strong></p>
+      <br />
+      <ul>
+        <li style="margin-bottom: 8px;"><strong style="text-decoration: none; color: #000000; font-weight: 700; ">✓ Our custom-built AI</strong>, Rigobot, tracks your activity and identifies your strengths, struggles, and gaps—delivering real-time feedback tailored to maximize your learning.</li>
+        <li style="margin-bottom: 8px;"><strong style="text-decoration: none; color: #000000; font-weight: 700;">✓ Unlimited 1:1 sessions with expert mentors</strong> give you live human support whenever you need it—so you never get stuck or lose momentum.</li>
+        <li style="margin-bottom: 8px;"><strong style="text-decoration: none; color: #000000; font-weight: 700;">✓ Career coaches work with you individually</strong> to build your confidence and strategy—helping you stand out on paper, in interviews, and on AI-filtered platforms like ATS systems and LinkedIn.</li>
+        <li style="margin-bottom: 8px;"><strong style="text-decoration: none; color: #000000; font-weight: 700;">✓ 1:7 teacher-student ratio in live classes</strong> means you get real attention—so your questions get answered and your learning stays on track.</li>
+      </ul>
+      <br />
+      <p>That's the power of hyperpersonalized learning: you move faster, learn smarter, and gain the kind of real confidence that lasts beyond graduation.</p>
+    bullets:
     item_style: '{ "padding": "0", "font-weight": "100", "margin":"0" }'
     items:
       - heading: "Meet Rigobot, our AI coding assistant:"
         text: |
-          • Instant tutoring as you code.
+          ✓ Instant tutoring as you code.
           <br />
-          • Skill evaluations to track your progress.
+          ✓ Skill evaluations to track your progress.
           <br />
-          • Expert bug fixing assistance.
+          ✓ Expert bug fixing assistance.
           <br /><br />
           It perfectly complements our human mentorship program!
         icon: "check" #string with icon for example ['check', 'cicle', etc]
         icon_color: '#25BF6C'
       - heading: "Learnpack, our interactive learning software, provides:"
         text: |
-          • There are hundreds of interactive exercises to help you master and retain skills.
+          ✓ There are hundreds of interactive exercises to help you master and retain skills.
           <br />
-          • Automated tests to help track your progress.
+          ✓ Automated tests to help track your progress.
           <br />
-          • Structured practice.
+          ✓ Structured practice.
         icon: "check" #string with icon for example ['check', 'cicle', etc]
         icon_color: '#25BF6C'
 
@@ -182,7 +183,7 @@ iconogram:
       content_style: '{ "fontSize": "24px" }'
     - icon: "briefcase-new"
       color: "#7D79FF"
-      content: "86% hired"
+      content: "84% hired"
       content_style: '{ "fontSize": "24px" }'
     - icon: "star-2"
       color: "#0084FF"
@@ -190,7 +191,8 @@ iconogram:
       content_style: '{ "fontSize": "24px" }'
 
 with_4geeks:
-  title: Hear it from our students
+  title: Real Stories of Real Career Change
+  sub_title: "Thousands of graduates have used our programs to break into tech. Here are just a few of their stories, from salary increases to total career reinventions."
 
 ## JOIN 4GEEKS SECTION DATA
 join_geeks:

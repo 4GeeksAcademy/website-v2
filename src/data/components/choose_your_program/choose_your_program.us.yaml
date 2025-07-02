@@ -1,9 +1,9 @@
 title: Choose your program
 paragraph: Find the path that’s right for you.
 programs:
-  - title: "Coding Bootcamp"
+  - title: "Full Stack Development with AI"
     sub_title: "Full Stack"
-    description: "Become a Full Stack software developer using Python, React, and Javascript. Master the most sought-after- skills and land a job as a developer."
+    description: " Become an AI-fluent software engineer using Python, React and in-demand Vibe Coding tools like Cursor. Master cutting-edge skills and launch a future-proof career."
     description_mobile: "Online, face-to-face and flexible"
     icon: "fullstack_2"
     link: "/us/coding-bootcamps/part-time-full-stack-developer"
@@ -25,11 +25,11 @@ programs:
     link: "/us/coding-bootcamps/cybersecurity"
     text_link: "Read More"
 
-  - title: "Applied AI"
-    sub_title: "No code"
-    description: "Explore how to leverage artificial intelligence to advance your career.  Learn best practices to use generative AI to your advantage and become more productive."
-    description_mobile: "Online, face-to-face and flexible"
-    icon: "applied-ai"
-    link: "/us/coding-bootcamps/applied-ai-course"
-    text_link: "Read More"
+  #- title: "Applied AI"
+    #sub_title: "No code"
+    #description: "Explore how to leverage artificial intelligence to advance your career.  Learn best practices to use generative AI to your advantage and become more productive."
+    #description_mobile: "Online, face-to-face and flexible"
+    #icon: "applied-ai"
+    #link: "/us/coding-bootcamps/applied-ai-course"
+    #text_link: "Read More"
 

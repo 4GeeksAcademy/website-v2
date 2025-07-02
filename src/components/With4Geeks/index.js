@@ -92,14 +92,15 @@ const With4Geeks = ({
           <H2 margin_tablet="0 0 15px 0" margin_xs="0px" textAlign="center">
             {title || info?.header?.title}
           </H2>
-          {paragraph && (
-            <SubTitle
-              letterSpacing="0.05em"
-              padding="0"
-              padding_tablet="0 12% 4% 12%"
+          {subtitle && (
+            <Paragraph
+              textAlign="center"
+              color={Colors.darkGray}
+              fontSize="20px"
+              margin="16px 0 0 16px"
             >
-              {subtitle || info.header.paragraph}
-            </SubTitle>
+              {subtitle}
+            </Paragraph>
           )}
         </Div>
       )}
@@ -209,7 +210,7 @@ const With4Geeks = ({
                       fontFamily="Archivo"
                       margin="0"
                     >
-                      {`“${element.title}”`}
+                      {`"${element.title}"`}
                     </H3>
                   )}
                   {element.description && (

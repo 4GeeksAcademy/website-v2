@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import ReactPlayer from "../ReactPlayer";
 import { H2, Paragraph, H3 } from "../Heading";
 import Icon from "../Icon";
@@ -25,6 +25,12 @@ const Side = ({
   padding_tablet,
   side,
 }) => {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   const utm = session && session.utm;
   if (video)
     return (
@@ -218,7 +224,9 @@ const Side = ({
                     )}
                     <Paragraph
                       textAlign="left"
-                      dangerouslySetInnerHTML={{ __html: bullet.text }}
+                      {...(isClient
+                        ? { dangerouslySetInnerHTML: { __html: bullet.text } }
+                        : { children: bullet.text })}
                     />
                   </Div>
                 )}
@@ -244,7 +252,9 @@ const Side = ({
             if (e.target.tagName === "A" && content.path)
               smartRedirecting(e, content.path);
           }}
-          dangerouslySetInnerHTML={{ __html: content.text }}
+          {...(isClient
+            ? { dangerouslySetInnerHTML: { __html: content.text } }
+            : { children: content.text })}
         />
       ) : (
         content &&
@@ -278,7 +288,9 @@ const Side = ({
           margin="10px 0"
           fontSize="13px"
           style={disclosure.style ? JSON.parse(disclosure.style) : null}
-          dangerouslySetInnerHTML={{ __html: disclosure.text }}
+          {...(isClient
+            ? { dangerouslySetInnerHTML: { __html: disclosure.text } }
+            : { children: disclosure.text })}
           onClick={(e) => {
             if (e.target.tagName === "A" && disclosure.path)
               smartRedirecting(e, disclosure.path);
