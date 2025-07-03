@@ -1,0 +1,157 @@
+meta_info:
+  slug: programas-espana
+  title: "Cursos de Programación en España - 4Geeks Academy"
+  description: "Aprende programación en Madrid con nuestros bootcamps de desarrollo web. Cursos presenciales y online con garantía de empleo."
+  image: "/images/bg/main-bg.jpg"
+  keywords: ""
+  visibility: "visible"
+  template: "landing_a"
+  redirects: ["/espana-programas"]
+  utm_course: ["full-stack", "datascience-ml", "cybersecurity"]
+  utm_location: ["madrid-spain"]
+  automation: soft
+  tag: request_more_info
+
+navbar:
+  logoUrl: "#"
+  buttonText: "Solicita tu plaza" # this modifies the button text in the navbar
+  buttonUrl: "#leadform_bottom" #accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+
+form:
+  fields: ["full_name", "phone", "email"]
+  heading: "Solicita información"
+  motivation: "Una vez completado el formulario, recibirás una confirmación por correo con detalles del programa, financiación y apoyo para tomar decisiones informadas sobre tu carrera"
+  button_label: Solicita información
+  redirect: /es/gracias
+
+header_data:
+  tagline: Descubre por qué somos el mejor bootcamp en España
+  sub_heading: ""
+  background: "#ffffff"
+  tagline_color: "#1c1c1c"
+  form_styles:
+    background: "#0084FF"
+    color: white
+    button:
+      background: black
+
+follow_bar:
+  position: "top"
+  content:
+    text: "Solicita tu plaza en 4Geeks España y comienza tu carrera en tecnología"
+    text_mobile: "Solicita tu plaza en 4Geeks España"
+    font_size: ["25px", "25px", "25px", "18px", "18px"]
+  button:
+    text: "Más información"
+    path: "#leadform_bottom"
+  phone:
+    text: ""
+    number: ""
+
+features:
+  bullets:
+    - ¡Conviértete en full stack developer, data scientist o consultor en ciberseguridad!
+    - Mentorías ilimitadas y con apoyo profesional de por vida
+    - Programas 100% en remoto y en directo a medio tiempo
+  styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
+
+apply_schollarship:
+  imageSide: left
+  image: ../../../static/images/bg/main.png
+
+why_4geeks:
+  position: 6
+  heading: Por qué 4Geeks
+  sub_heading: ""
+
+geeks_vs_others:
+  position: 8
+  heading: "Compara a 4Geeks con otros Bootcamps"
+  paragraph: ""
+
+who_is_hiring:
+  position: 10
+  limit: 4
+  heading: ¿Quién contrata a nuestros alumnos?
+  sub_heading: |-
+    Gracias a nuestra creciente lista de aliados, tenemos ofertas de
+    trabajo locales e internacionales para nuestros estudiantes a diario.
+    Junto con nuestro servicio GeekFORCE (Career Support), nos complace tener ~ 86% de nuestros estudiantes contratados dentro de los 100 días o menos desde el día de graduación.
+
+components:
+  - name: first-section
+    position: 1
+    layout: two_column_left
+    proportions: [6, 6]
+    background: "#fbfbfb"
+    image:
+      style: '{ "border" : "3px solid black" }'
+      src: /images/landing/4Geeks-Espana.jpg
+      shadow: true
+    section_heading:
+      text: ¿Por qué elegir 4Geeks Academy como uno de los mejores bootcamps de España?
+    heading:
+      text: Las razones por las que somos el mejor bootcamp de programación en España
+      font_size: ["24px", "24px", "24px", "18px", "18px", ]
+    content:
+      text: ""
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+    bullets:
+      items:
+        - heading: Enfoque en las necesidades del mercado
+          text: Nuestro programa se basa en las habilidades y tecnologías más demandadas por las empresas, lo que te asegura una formación práctica y útil.
+          icon: circle
+        - heading: Mentorías personalizadas e ilimitadas
+          text: Recibe el apoyo individual de mentores expertos en cada etapa de tu carrera, desde la elección de tu camino profesional hasta la búsqueda de empleo.
+          icon: circle
+        - heading: Inserción laboral
+          text: Alrededor del 90% de nuestros graduados encuentran trabajo en los primeros 6 meses.
+          icon: circle
+
+  - name: the-academy
+    position: 2
+    layout: two_column_right
+    proportions: [6, 6]
+    image:
+      style: '{"border" : "3px solid black", "backgroundSize": "contain" }'
+      src: /static/images/testimonials/diego-gomez-testimonial.webp
+      shadow: true
+    video: https://www.youtube.com/watch?v=9Vm_xD49MaU&list=PLmBUv425PabWp2htZTrCU2AKkmCzjrFn3
+    heading:
+      text: Un camino hacia el éxito profesional en tecnología
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      text: Diego comparte cómo nuestro bootcamp le proporcionó todo lo que necesitaba para dar el salto al mundo laboral. Independientemente de si tienes conocimientos previos o comienzas desde cero, en 4Geeks Academy recibirás la formación y el apoyo que necesitas para destacar en la industria.
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+    button:
+      text: Solicita información
+      color: white
+      background: black
+      path: "#leadform_bottom"
+
+  - name: courses
+    position: 4
+    background: veryLightBlue2
+    layout: iconogram
+    swipable: true
+    heading:
+      text: Descubre tu potencial en 4Geeks Academy
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      text: Programas para convertirte en un experto en programación y complementar tu
+        perfil profesional
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+      style: '{ "textAlign": "center", "width": "90%" }'
+    icons:
+      - icon: fullstack
+        title: Full-Stack Dev
+        content: Aprende a crear aplicaciones web completas, dominando tanto el frontend
+          como el backend de un proyecto.
+      - icon: machine
+        title: Data Science
+        content: Entra al mundo de la ciencia de datos y el machine learning,
+          adquiriendo habilidades para analizar y visualizar información.
+      - icon: cibersecurity
+        title: Ciberseguridad
+        content: Conviértete en un profesional junior ciberseguridad y prepárate contra
+          posibles ataques en sistemas como Windows o Linux.
