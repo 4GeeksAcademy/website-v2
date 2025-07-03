@@ -61,7 +61,7 @@ navbar:
             - title: "Awards"
               link_to: "/us/awards"
             - title: "Outcomes"
-              link_to: "/us/outcomes"
+              link_to: "/us/career-growth/outcomes-report-2024"
             - title: "4Geeks Vs Others"
               link_to: "/us/geeks-vs-others"
         - title: "Pricing"
