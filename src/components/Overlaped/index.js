@@ -7,6 +7,7 @@ import { transferQuerystrings } from "../../utils/utils";
 
 const Overlaped = ({
   heading,
+  subtitle,
   content,
   button,
   background,
@@ -117,6 +118,17 @@ const Overlaped = ({
             color="#2E2E38"
             dangerouslySetInnerHTML={{ __html: heading }}
           />
+          {subtitle && (
+            <Paragraph
+              textAlign="start"
+              margin="0 0 12px 0"
+              fontFamily="Lato, sans-serif"
+              fontSize="18px"
+              color="#3A3A3A"
+              style={{ fontStyle: 'italic' }}
+              dangerouslySetInnerHTML={{ __html: subtitle }}
+            />
+          )}
           {content && (
             <Paragraph
               textAlign="start"
@@ -228,6 +240,16 @@ const Overlaped = ({
             color="#2E2E38"
             dangerouslySetInnerHTML={{ __html: heading }}
           />
+          {subtitle && (
+            <Paragraph
+              textAlign="start"
+              margin="0 0 12px 0"
+              fontFamily="Lato, sans-serif"
+              fontSize="18px"
+              color="#3A3A3A"
+              dangerouslySetInnerHTML={{ __html: subtitle }}
+            />
+          )}
           {content && (
             <Paragraph
               textAlign="start"

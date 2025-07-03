@@ -212,6 +212,7 @@ const Program = ({ data, pageContext, yml }) => {
       {/* OVERLAPED CREAR EN EL YML*/}
       <Overlaped
         heading={yml.overlaped?.heading}
+        subtitle={yml.overlaped?.subtitle}
         content={yml.overlaped?.paragraph}
         button={yml.overlaped?.button}
         image={yml.overlaped?.image}
@@ -485,6 +486,7 @@ export const query = graphql`
           }
           overlaped {
             heading
+            subtitle
             paragraph
             button {
               text

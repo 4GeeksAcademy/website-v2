@@ -71,7 +71,8 @@ partners:
 
 overlaped:
   heading: "Why learning Vibe Coding is essential"
-  paragraph: 'Vibe Coding—where you give high-level prompts and let AI generate the code—is the cutting edge of development. Coined by Andrej Karpathy and now gaining real traction, this workflow helps developers turn ideas into working software up to 4× faster than traditional methods, using tools like <strong style="text-decoration: none; color: #000000; font-weight: 700;">Cursor</strong> and <strong style="text-decoration: none; color: #000000; font-weight: 700;">Vercel v0</strong>. As AI continues to transform the industry, companies are prioritizing developers who know how to collaborate with intelligent tools. Learning Vibe Coding gives you a clear edge—and a skillset that keeps you relevant as the future of software evolves.'
+  subtitle: "Get ahead with AI-powered development that’s reshaping how software is built—and what modern teams expect."
+  paragraph: 'Vibe Coding—where you give high-level prompts and let AI generate the code—is the cutting edge of development. Coined by Andrej Karpathy and now gaining real traction, this workflow helps developers turn ideas into working software up to 4× faster than traditional methods, using tools like <strong style="text-decoration: none; color: #000000; font-weight: 700;">Cursor</strong> and <strong style="text-decoration: none; color: #000000; font-weight: 700;">Vercel v0</strong>. Companies are already prioritizing developers who know how to collaborate with AI. Learning Vibe Coding gives you a clear edge—and keeps you relevant in the rapidly evolving tech industry.'
   button:
     text: "LEARN MORE"
     color: "blue"  
@@ -151,23 +152,22 @@ two_columns_rigo:
     heading_image:
       src: "/images/rigobot-logo.png"
   sub_heading:
-    text: ""
+    text: "In-person instruction, unlimited mentorship, and AI tools built for smarter, faster progress."
     font_size: ["24px","24px","22px","22px","20px"]
     style: '{"margin":"0", "font-weight":"300", "text-align": "justify" }'
   content:
     style: '{ "font-size":"18px", "margin":"0"}'
     text: "With the combined support of our human mentors and AI tools, you'll master AI-integrated full stack development faster, smarter, and with more confidence than ever."
   bullets:
-    item_style: '{ "padding": "15px", "font-weight": "100", "margin":"0", "font-size":"16px" }'
+    item_style: '{"font-weight": "100", "margin":"0", "font-size":"18px" }'
     items:
-      - heading: "In-person instruction, unlimited mentorship, and AI tools built for smarter, faster progress."
+      - heading: ""
         text: |
           • <strong style="text-decoration: none; color: #000000; font-weight: 700;">Rigobot</strong>, our custom-built <strong style="text-decoration: none; color: #000000; font-weight: 700;">AI coding assistant</strong>, follows your progress and gives tailored feedback exactly when and how  you need it.
           <br />
           • Get unmatched personal attention with our <strong style="text-decoration: none; color: #000000; font-weight: 700;">7:1 student teacher ratio</strong>, plus <strong style="text-decoration: none; color: #000000; font-weight: 700;">unlimited access to 1:1 sessions</strong> with our expert mentors and career coaches.
           <br />
-        icon: "" #string with icon for example ['check', 'cicle', etc]
-        icon_color: '#008000'
+     
     
 
 badges:
